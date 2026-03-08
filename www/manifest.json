@@ -1,7 +1,7 @@
 {
-  "name": "Italiano per Vacanza",
-  "short_name": "Italiano",
-  "description": "Leer Italiaans voor je vakantie - A1/A2 niveau",
+  "name": "Vocado",
+  "short_name": "Vocado",
+  "description": "Leer een taal voor je vakantie — Italiaans A1/A2/B1",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#1a1a2e",

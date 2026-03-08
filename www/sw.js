@@ -1,4 +1,4 @@
-const CACHE_NAME = 'italiano-v5';
+const CACHE_NAME = 'vocado-v1';
 const ASSETS = [
   './',
   './index.html',

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build script — Italiano per Vacanza
+Build script — Vocado
 ====================================
 Genereert één zelfstandig HTML-bestand met alle data en code ingebakken.
 Geen server nodig. Deelbaar via AirDrop, WhatsApp, iMessage, e-mail.
@@ -9,7 +9,7 @@ Gebruik:
     python3 build.py
 
 Uitvoer:
-    italiano-per-vacanza.html  (~100 KB, werkt offline)
+    vocado.html  (~100 KB, werkt offline)
 """
 
 import json
@@ -22,7 +22,7 @@ from datetime import datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 WWW  = os.path.join(BASE, 'www')
-OUT  = os.path.join(BASE, 'italiano-per-vacanza.html')
+OUT  = os.path.join(BASE, 'vocado.html')
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
@@ -184,7 +184,7 @@ if replaced == 0:
 # ── 5. Meta-info toevoegen ─────────────────────────────────────────────────────
 
 build_date = datetime.now().strftime('%Y-%m-%d %H:%M')
-meta_comment = f'<!-- Italiano per Vacanza — standalone build {build_date} -->\n'
+meta_comment = f'<!-- Vocado — standalone build {build_date} -->\n'
 html = meta_comment + html
 
 
@@ -196,7 +196,7 @@ with open(OUT, 'w', encoding='utf-8') as f:
 size_kb = os.path.getsize(OUT) / 1024
 
 print()
-print(f'✅  Klaar! → italiano-per-vacanza.html')
+print(f'✅  Klaar! → vocado.html')
 print(f'📏  Bestandsgrootte: {size_kb:.0f} KB')
 print()
 print('📤  Distributiemethoden:')
