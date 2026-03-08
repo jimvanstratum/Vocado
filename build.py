@@ -36,42 +36,53 @@ def load_json(path):
         return json.load(f)
 
 
-# ── 0. Iconen genereren (Italiaanse vlag) ──────────────────────────────────────
+# ── 0. Iconen genereren (avocado + V) via Pillow ───────────────────────────────
 
-def _make_png(width, height, pixels):
-    """Genereer een minimaal geldig PNG-bestand vanuit een lijst van (r,g,b) tuples."""
-    def chunk(name, data):
-        c = name + data
-        return struct.pack('>I', len(data)) + c + struct.pack('>I', zlib.crc32(c) & 0xFFFFFFFF)
-    raw = bytearray()
-    for y in range(height):
-        raw.append(0)  # filter None
-        for x in range(width):
-            raw.extend(pixels[y * width + x])
-    sig  = b'\x89PNG\r\n\x1a\n'
-    ihdr = chunk(b'IHDR', struct.pack('>IIBBBBB', width, height, 8, 2, 0, 0, 0))
-    idat = chunk(b'IDAT', zlib.compress(bytes(raw)))
-    iend = chunk(b'IEND', b'')
-    return sig + ihdr + idat + iend
+def _draw_avocado_icon(size):
+    """Tekent het Vocado avocado-icoon met Pillow."""
+    from PIL import Image, ImageDraw
+    img = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+    d   = ImageDraw.Draw(img)
+    s   = size / 512  # schaalfactor
 
-def _make_flag_icon(size):
-    """Vierkant icoon: Italiaanse vlag (groen | wit | rood) met afgeronde achtergrond."""
-    green = (0, 146, 70)
-    white = (255, 255, 255)
-    red   = (206, 43, 55)
-    t = size // 3
-    pixels = []
-    for y in range(size):
-        for x in range(size):
-            pixels.append(green if x < t else (white if x < 2 * t else red))
-    return _make_png(size, size, pixels)
+    # Afgeronde achtergrond
+    d.rounded_rectangle([0, 0, size-1, size-1],
+                        radius=int(114*s), fill=(26, 58, 40, 255))
+    # Avocado schil
+    ox, oy = int(256*s), int(260*s)
+    ow, oh = int(306*s), int(396*s)
+    d.ellipse([ox-ow//2, oy-oh//2, ox+ow//2, oy+oh//2], fill=(46, 107, 62, 255))
+    d.ellipse([ox-int(60*s), int(55*s), ox+int(60*s), int(190*s)],
+              fill=(26, 58, 40, 255))
+    # Avocado vlees
+    fw, fh = int(228*s), int(322*s)
+    fy = int(259*s)
+    d.ellipse([ox-fw//2, fy-fh//2, ox+fw//2, fy+fh//2], fill=(212, 232, 156, 255))
+    d.ellipse([ox-int(36*s), int(90*s), ox+int(36*s), int(195*s)],
+              fill=(26, 58, 40, 255))
+    # Pit
+    px, py = int(256*s), int(296*s)
+    prx, pry = int(76*s), int(92*s)
+    d.ellipse([px-prx, py-pry, px+prx, py+pry], fill=(122, 79, 50, 255))
+    # Witte V
+    v_pts = [
+        (int(208*s), int(264*s)),
+        (int(234*s), int(264*s)),
+        (int(256*s), int(322*s)),
+        (int(278*s), int(264*s)),
+        (int(304*s), int(264*s)),
+        (int(256*s), int(346*s)),
+    ]
+    d.polygon(v_pts, fill=(255, 255, 255, 255))
+    return img
 
 print('🖼️   Iconen genereren...')
-for size, name in [(192, 'icon-192.png'), (512, 'icon-512.png')]:
-    icon_path = os.path.join(WWW, name)
-    with open(icon_path, 'wb') as f:
-        f.write(_make_flag_icon(size))
-    print(f'    ✓ {name} ({size}×{size})')
+try:
+    for size, name in [(192, 'icon-192.png'), (512, 'icon-512.png')]:
+        _draw_avocado_icon(size).save(os.path.join(WWW, name), 'PNG')
+        print(f'    ✓ {name} ({size}×{size})')
+except Exception as e:
+    print(f'    ⚠️  Pillow niet beschikbaar ({e}) — installeer met: pip install pillow')
 
 
 # ── 1. Data inladen ────────────────────────────────────────────────────────────

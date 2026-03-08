@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Zachte schaduw op de pit -->
+    <radialGradient id="pitGrad" cx="45%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="#9B6845"/>
+      <stop offset="100%" stop-color="#5C3620"/>
+    </radialGradient>
+    <!-- Glans op het vruchtvlees -->
+    <radialGradient id="fleshGrad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#E8F5A3"/>
+      <stop offset="100%" stop-color="#B8D45A"/>
+    </radialGradient>
+    <!-- Ronde clip voor maskable -->
+    <clipPath id="roundClip">
+      <rect width="512" height="512" rx="114"/>
+    </clipPath>
+  </defs>
+
+  <!-- Achtergrond (donker groen) -->
+  <rect width="512" height="512" rx="114" fill="#1A3A28"/>
+
+  <!-- Avocado schil (buitenste vorm) -->
+  <path clip-path="url(#roundClip)"
+    d="M256,58
+       C305,58 412,148 412,284
+       C412,420 330,458 256,458
+       C182,458 100,420 100,284
+       C100,148 207,58 256,58 Z"
+    fill="#2E6B3E"/>
+
+  <!-- Avocado vruchtvlees (binnenste) -->
+  <path clip-path="url(#roundClip)"
+    d="M256,96
+       C296,96 374,174 374,280
+       C374,386 316,422 256,422
+       C196,422 138,386 138,280
+       C138,174 216,96 256,96 Z"
+    fill="url(#fleshGrad)"/>
+
+  <!-- Pit (avocadokern) -->
+  <ellipse cx="256" cy="296" rx="76" ry="92"
+    fill="url(#pitGrad)"/>
+
+  <!-- Kleine glansstreep op pit -->
+  <ellipse cx="237" cy="260" rx="18" ry="12"
+    fill="white" opacity="0.18"/>
+
+  <!-- Vette V op de pit -->
+  <path d="M208,264
+           L234,264
+           L256,322
+           L278,264
+           L304,264
+           L256,346 Z"
+    fill="white"/>
+</svg>

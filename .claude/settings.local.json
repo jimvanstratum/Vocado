@@ -14,7 +14,12 @@
       "Bash(node --check:*)",
       "Bash(md5 \"/Users/jim.van.stratum/Applications/Taal app/www/netlify-test.html\")",
       "Bash(md5 \"/Users/jim.van.stratum/Applications/Taal app/italiano-per-vacanza.html\")",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(pip3 install cairosvg)",
+      "Bash(brew install cairo)",
+      "Bash(/opt/homebrew/bin/brew install cairo)",
+      "Bash(pip3 install svglib reportlab)",
+      "Bash(pip3 install svglib)"
     ]
   }
 }
