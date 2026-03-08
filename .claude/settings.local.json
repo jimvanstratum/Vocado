@@ -19,7 +19,11 @@
       "Bash(brew install cairo)",
       "Bash(/opt/homebrew/bin/brew install cairo)",
       "Bash(pip3 install svglib reportlab)",
-      "Bash(pip3 install svglib)"
+      "Bash(pip3 install svglib)",
+      "Bash(ls ~/Downloads/*.svg)",
+      "Bash(ls \"/Users/jim.van.stratum/Applications/Taal app/www/\"*.svg)",
+      "Bash(ls -la \"/Users/jim.van.stratum/Applications/Taal app/www/\"*.svg)",
+      "Bash(ls -lt \"/Users/jim.van.stratum/Applications/Taal app/www/\"*.svg)"
     ]
   }
 }

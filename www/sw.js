@@ -1,9 +1,11 @@
-const CACHE_NAME = 'vocado-v2';
+const CACHE_NAME = 'vocado-v4';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './icon.svg',
+  './avocado.svg',
+  './woordlogo.svg',
   './icon-192.png',
   './icon-512.png',
   './js/app.js',
