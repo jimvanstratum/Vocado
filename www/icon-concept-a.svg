@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- CONCEPT A: PRAATBAL — Gespreksbel met V -->
+  <!-- Achtergrond -->
+  <rect width="512" height="512" rx="114" fill="#0D1A11"/>
+
+  <!-- Gespreksballetje staart (punt linksonder) -->
+  <polygon points="148,356 88,445 210,356" fill="#FFFFFF"/>
+
+  <!-- Gespreksbel (groot, wit, afgerond) -->
+  <rect x="68" y="68" width="376" height="298" rx="62" fill="#FFFFFF"/>
+
+  <!-- V in avocadogroen in de bel -->
+  <path d="M158,140
+           L192,140
+           L256,278
+           L320,140
+           L354,140
+           L256,310 Z"
+        fill="#3D9A52"/>
+
+  <!-- Drie stipjes rechtsboven in bel (taalgevoel: "..." van typen) -->
+  <circle cx="340" cy="282" r="9" fill="#C4D9C9"/>
+  <circle cx="367" cy="282" r="9" fill="#C4D9C9"/>
+  <circle cx="394" cy="282" r="9" fill="#C4D9C9"/>
+</svg>

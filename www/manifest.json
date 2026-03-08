@@ -4,8 +4,8 @@
   "description": "Leer een taal voor je vakantie — Italiaans A1/A2/B1",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#1a1a2e",
-  "theme_color": "#ce2b37",
+  "background_color": "#0D1A11",
+  "theme_color": "#0D1A11",
   "orientation": "portrait",
   "icons": [
     {

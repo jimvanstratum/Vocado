@@ -1,56 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <defs>
-    <!-- Zachte schaduw op de pit -->
-    <radialGradient id="pitGrad" cx="45%" cy="38%" r="60%">
-      <stop offset="0%" stop-color="#9B6845"/>
-      <stop offset="100%" stop-color="#5C3620"/>
-    </radialGradient>
-    <!-- Glans op het vruchtvlees -->
-    <radialGradient id="fleshGrad" cx="40%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#E8F5A3"/>
-      <stop offset="100%" stop-color="#B8D45A"/>
-    </radialGradient>
-    <!-- Ronde clip voor maskable -->
-    <clipPath id="roundClip">
-      <rect width="512" height="512" rx="114"/>
-    </clipPath>
-  </defs>
+  <!-- Vocado app icon — avocado half met V op pit -->
+  <!-- Witte iOS-stijl achtergrond -->
+  <rect width="512" height="512" rx="113" fill="#FFFFFF"/>
 
-  <!-- Achtergrond (donker groen) -->
-  <rect width="512" height="512" rx="114" fill="#1A3A28"/>
+  <!-- Avocado schil (donker bosgroen buitenring) -->
+  <path d="M256,40 C338,40 447,170 447,308
+           C447,432 376,474 256,476
+           C136,478 65,432 65,308
+           C65,170 174,40 256,40 Z"
+        fill="#17492C"/>
 
-  <!-- Avocado schil (buitenste vorm) -->
-  <path clip-path="url(#roundClip)"
-    d="M256,58
-       C305,58 412,148 412,284
-       C412,420 330,458 256,458
-       C182,458 100,420 100,284
-       C100,148 207,58 256,58 Z"
-    fill="#2E6B3E"/>
+  <!-- Avocado mid-laag (olijfgroen) -->
+  <path d="M256,58 C332,58 426,182 426,310
+           C426,420 360,457 256,459
+           C152,461 86,420 86,310
+           C86,182 180,58 256,58 Z"
+        fill="#88BF42"/>
 
-  <!-- Avocado vruchtvlees (binnenste) -->
-  <path clip-path="url(#roundClip)"
-    d="M256,96
-       C296,96 374,174 374,280
-       C374,386 316,422 256,422
-       C196,422 138,386 138,280
-       C138,174 216,96 256,96 Z"
-    fill="url(#fleshGrad)"/>
+  <!-- Avocado vruchtvlees (licht geelgroen) -->
+  <path d="M256,76 C326,76 406,193 406,311
+           C406,410 346,441 256,443
+           C166,443 106,410 106,311
+           C106,193 186,76 256,76 Z"
+        fill="#CCDA6E"/>
 
-  <!-- Pit (avocadokern) -->
-  <ellipse cx="256" cy="296" rx="76" ry="92"
-    fill="url(#pitGrad)"/>
+  <!-- Pit buitenrand (zeer donkerbruin) -->
+  <circle cx="256" cy="314" r="95" fill="#5E2C06"/>
 
-  <!-- Kleine glansstreep op pit -->
-  <ellipse cx="237" cy="260" rx="18" ry="12"
-    fill="white" opacity="0.18"/>
+  <!-- Pit hoofdvlak (zadelbruin) -->
+  <circle cx="256" cy="314" r="86" fill="#884213"/>
 
-  <!-- Vette V op de pit -->
-  <path d="M208,264
-           L234,264
-           L256,322
-           L278,264
-           L304,264
-           L256,346 Z"
-    fill="white"/>
+  <!-- Pit glans (warm halftransparant highlight) -->
+  <ellipse cx="228" cy="284" rx="28" ry="19" fill="#A55E2A" opacity="0.55"/>
+
+  <!-- Witte V (vet, gecentreerd op pit) -->
+  <path d="M203,264 L228,264 L256,334 L284,264 L309,264 L256,353 Z"
+        fill="white"/>
 </svg>

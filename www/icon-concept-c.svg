@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- CONCEPT C: WOORDSTREPEN — V opgebouwd uit horizontale tekstregels -->
+  <!-- Achtergrond -->
+  <rect width="512" height="512" rx="114" fill="#0D1A11"/>
+
+  <!-- De V-vorm als clippad -->
+  <defs>
+    <clipPath id="v-shape">
+      <!-- Brede V: van boven breed, smal punt onderaan -->
+      <path d="M108,92 L156,92 L256,368 L356,92 L404,92 L256,418 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Horizontale strepen zichtbaar alleen binnen de V-vorm -->
+  <g clip-path="url(#v-shape)">
+    <rect x="0" y="100"  width="512" height="20" fill="#E8F5EB"/>
+    <rect x="0" y="138"  width="512" height="20" fill="#E8F5EB"/>
+    <rect x="0" y="176"  width="512" height="20" fill="#E8F5EB"/>
+    <rect x="0" y="214"  width="512" height="20" fill="#E8F5EB"/>
+    <rect x="0" y="252"  width="512" height="20" fill="#6ECF7E"/>
+    <rect x="0" y="290"  width="512" height="20" fill="#E8F5EB"/>
+    <rect x="0" y="328"  width="512" height="20" fill="#E8F5EB"/>
+    <rect x="0" y="366"  width="512" height="20" fill="#E8F5EB"/>
+    <rect x="0" y="400"  width="512" height="20" fill="#6ECF7E" opacity="0.6"/>
+  </g>
+
+  <!-- Subtiele bovenlijst (als een zin boven de V: "VOCADO") -->
+  <rect x="108" y="58" width="296" height="10" rx="5" fill="#2D4D35"/>
+</svg>

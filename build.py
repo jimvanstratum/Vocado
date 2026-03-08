@@ -36,45 +36,114 @@ def load_json(path):
         return json.load(f)
 
 
-# ── 0. Iconen genereren (avocado + V) via Pillow ───────────────────────────────
+# ── 0. Iconen genereren (avocado + V) via Pillow met 4× supersampling ──────────
 
 def _draw_avocado_icon(size):
-    """Tekent het Vocado avocado-icoon met Pillow."""
+    """
+    Tekent het Vocado avocado-icoon — flat cartoon stijl.
+    Gebruikt 4× supersampling voor vloeiende randen (anti-aliasing).
+    Kleuren & vormen gebaseerd op het officiële Vocado-icoon.
+    """
     from PIL import Image, ImageDraw
-    img = Image.new('RGBA', (size, size), (0, 0, 0, 0))
-    d   = ImageDraw.Draw(img)
-    s   = size / 512  # schaalfactor
 
-    # Afgeronde achtergrond
-    d.rounded_rectangle([0, 0, size-1, size-1],
-                        radius=int(114*s), fill=(26, 58, 40, 255))
-    # Avocado schil
-    ox, oy = int(256*s), int(260*s)
-    ow, oh = int(306*s), int(396*s)
-    d.ellipse([ox-ow//2, oy-oh//2, ox+ow//2, oy+oh//2], fill=(46, 107, 62, 255))
-    d.ellipse([ox-int(60*s), int(55*s), ox+int(60*s), int(190*s)],
-              fill=(26, 58, 40, 255))
-    # Avocado vlees
-    fw, fh = int(228*s), int(322*s)
-    fy = int(259*s)
-    d.ellipse([ox-fw//2, fy-fh//2, ox+fw//2, fy+fh//2], fill=(212, 232, 156, 255))
-    d.ellipse([ox-int(36*s), int(90*s), ox+int(36*s), int(195*s)],
-              fill=(26, 58, 40, 255))
-    # Pit
-    px, py = int(256*s), int(296*s)
-    prx, pry = int(76*s), int(92*s)
-    d.ellipse([px-prx, py-pry, px+prx, py+pry], fill=(122, 79, 50, 255))
-    # Witte V
+    SUPER = 4                  # supersampling factor
+    SS    = size * SUPER       # tekeningresolutie (b.v. 2048 voor 512-icoon)
+    s     = SS / 512           # schaalfactor (referentie: 512 px coördinatenstelsel)
+
+    img = Image.new('RGBA', (SS, SS), (0, 0, 0, 0))
+    d   = ImageDraw.Draw(img)
+
+    # ── Hulpfuncties ──────────────────────────────────────────────────────────
+
+    def p(x, y):
+        """Coördinaat in 512-ruimte → schermcoördinaat."""
+        return (x * s, y * s)
+
+    def cubic_bezier(p0, p1, p2, p3, n=100):
+        """Bereken n+1 punten langs een kubische bezier-curve (512-ruimte → scherm)."""
+        pts = []
+        for i in range(n + 1):
+            t  = i / n
+            mt = 1 - t
+            x = mt**3*p0[0] + 3*mt**2*t*p1[0] + 3*mt*t**2*p2[0] + t**3*p3[0]
+            y = mt**3*p0[1] + 3*mt**2*t*p1[1] + 3*mt*t**2*p2[1] + t**3*p3[1]
+            pts.append((x * s, y * s))
+        return pts
+
+    def avocado_poly(top_y, right_x, wide_y, bot_y, n=100):
+        """
+        Genereert polygoonpunten voor de avocado-peervorm.
+        Symmetrisch rond x=256 in 512-coördinatenruimte.
+        Kubische bezier, G1-continue joins aan top en bodem.
+        """
+        cx = 256
+        # Rechts boven (top → breedste punt)
+        r1 = cubic_bezier(
+            (cx, top_y),
+            (cx + (right_x - cx) * 0.82, top_y),   # tangent horizontaal aan top
+            (right_x, (top_y + wide_y) * 0.56),
+            (right_x, wide_y), n=n)
+        # Rechts onder (breedste → bodem)
+        r2 = cubic_bezier(
+            (right_x, wide_y),
+            (right_x, wide_y + (bot_y - wide_y) * 0.74),
+            (cx + (right_x - cx) * 0.49, bot_y - 4),
+            (cx, bot_y), n=n)
+        # Links (gespiegeld)
+        left_bot = [(2 * cx * s - x, y) for x, y in reversed(r2[:-1])]
+        left_top = [(2 * cx * s - x, y) for x, y in reversed(r1)]
+        return r1 + r2[1:] + left_bot + left_top[1:]
+
+    # ── Witte iOS-stijl achtergrond ───────────────────────────────────────────
+    r_bg = int(113 * s)
+    d.rounded_rectangle([0, 0, SS - 1, SS - 1],
+                        radius=r_bg, fill=(255, 255, 255, 255))
+
+    # ── Avocado schil (donker bosgroen) ───────────────────────────────────────
+    d.polygon(avocado_poly(top_y=40,  right_x=447, wide_y=308, bot_y=476),
+              fill=(23, 73, 44, 255))   # #17492C
+
+    # ── Avocado mid-laag (olijfgroen) ─────────────────────────────────────────
+    d.polygon(avocado_poly(top_y=58,  right_x=426, wide_y=310, bot_y=459),
+              fill=(136, 191, 66, 255))  # #88BF42
+
+    # ── Avocado vruchtvlees (licht geelgroen) ─────────────────────────────────
+    d.polygon(avocado_poly(top_y=76,  right_x=406, wide_y=311, bot_y=443),
+              fill=(204, 218, 110, 255)) # #CCDA6E
+
+    # ── Pit buitenrand (zeer donkerbruin) ─────────────────────────────────────
+    cx_p, cy_p = int(256 * s), int(314 * s)
+    r_out = int(95 * s)
+    d.ellipse([cx_p - r_out, cy_p - r_out, cx_p + r_out, cy_p + r_out],
+              fill=(94, 44, 6, 255))     # #5E2C06
+
+    # ── Pit hoofdvlak (zadelbruin) ────────────────────────────────────────────
+    r_in = int(86 * s)
+    d.ellipse([cx_p - r_in, cy_p - r_in, cx_p + r_in, cy_p + r_in],
+              fill=(136, 66, 19, 255))   # #884213
+
+    # ── Pit glans (warm halftransparant highlight) ────────────────────────────
+    hx, hy = int(228 * s), int(284 * s)
+    hrx, hry = int(28 * s), int(19 * s)
+    # Teken glans als halfransparant overlay (blend via alpha)
+    glow = Image.new('RGBA', (SS, SS), (0, 0, 0, 0))
+    gd   = ImageDraw.Draw(glow)
+    gd.ellipse([hx - hrx, hy - hry, hx + hrx, hy + hry],
+               fill=(165, 94, 42, 140))  # #A55E2A @ ~55%
+    img = Image.alpha_composite(img, glow)
+    d   = ImageDraw.Draw(img)             # reset draw handle
+
+    # ── Witte V ──────────────────────────────────────────────────────────────
     v_pts = [
-        (int(208*s), int(264*s)),
-        (int(234*s), int(264*s)),
-        (int(256*s), int(322*s)),
-        (int(278*s), int(264*s)),
-        (int(304*s), int(264*s)),
-        (int(256*s), int(346*s)),
+        p(203, 264), p(228, 264),
+        p(256, 334),
+        p(284, 264), p(309, 264),
+        p(256, 353),
     ]
     d.polygon(v_pts, fill=(255, 255, 255, 255))
-    return img
+
+    # ── Schaal naar doelgrootte (LANCZOS = beste kwaliteit) ───────────────────
+    return img.resize((size, size), Image.LANCZOS)
 
 print('🖼️   Iconen genereren...')
 try:

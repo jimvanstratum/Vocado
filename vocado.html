@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-08 09:24 -->
+<!-- Vocado — standalone build 2026-03-08 16:45 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -7,68 +7,73 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Italiano">
-  <meta name="theme-color" content="#ce2b37">
+  <meta name="theme-color" content="#0D1A11">
   <link rel="apple-touch-icon" href="./icon-192.png">
   <title>Vocado — Italiaans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     :root {
-      --bg:           #0d0d1a;
-      --surface:      #1a1a2e;
-      --surface2:     #252540;
-      --border:       #2e2e50;
-      --text:         #f0f0f5;
-      --muted:        #7070a0;
-      --accent:       #f5a623;
-      --green:        #00c851;
-      --red:          #ff3b30;
-      --blue:         #4fc3f7;
-      --it-red:       #ce2b37;
-      --it-green:     #009246;
+      --bg:           #0D1A11;
+      --surface:      #162419;
+      --surface2:     #1E3322;
+      --border:       #2D4D35;
+      --text:         #E8F5EB;
+      --muted:        #8BBF92;
+      --accent:       #6ECF7E;
+      --green:        #52C97A;
+      --red:          #FF6B6B;
+      --blue:         #5BB8D4;
+      --it-red:       #F5A623;
+      --it-green:     #6ECF7E;
       --radius:       16px;
       --safe-t:       env(safe-area-inset-top, 0px);
       --safe-b:       env(safe-area-inset-bottom, 0px);
-      --header-grad:  linear-gradient(180deg, #1a0a0f 0%, var(--bg) 100%);
+      --header-grad:  linear-gradient(180deg, #060E08 0%, var(--bg) 100%);
     }
     @media (prefers-color-scheme: light) {
       :root {
-        --bg:           #f2f2f7;
-        --surface:      #ffffff;
-        --surface2:     #e5e5ea;
-        --border:       #c8c8d4;
-        --text:         #1c1c2e;
-        --muted:        #6060a0;
-        --accent:       #d4880a;
-        --green:        #00a844;
-        --blue:         #0a68c4;
-        --header-grad:  linear-gradient(180deg, #fff0e0 0%, var(--bg) 100%);
+        --bg:           #F2F7F3;
+        --surface:      #FFFFFF;
+        --surface2:     #E3EDE5;
+        --border:       #C4D9C9;
+        --text:         #152018;
+        --muted:        #5A7D62;
+        --accent:       #3D9A52;
+        --green:        #2E9955;
+        --blue:         #0A80C4;
+        --it-red:       #D4880A;
+        --it-green:     #3D9A52;
+        --header-grad:  linear-gradient(180deg, #E2F0E5 0%, var(--bg) 100%);
       }
-      .lesson-card.done   { background: rgba(0,168,68,0.06); }
-      .intro-card         { background: linear-gradient(160deg, #fff6e6 0%, #f0fff4 100%) !important; }
-      .grammar-card       { background: linear-gradient(135deg, #f0fafa, #fafaf0) !important; }
+      .lesson-card.done   { background: rgba(61,154,82,0.06); }
+      .intro-card         { background: linear-gradient(160deg, #f0fff4 0%, #f5fff7 100%) !important; }
+      .grammar-card       { background: linear-gradient(135deg, #f0faf2, #f5faee) !important; }
       html, body          { color-scheme: light; }
-      /* Sprint 12: home-title override staat na de basisregel (zie verderop) */
     }
 
-    /* Sprint 10: Handmatig licht thema (data-theme="light") */
+    /* Handmatig licht thema (data-theme="light") */
     [data-theme="light"] {
-      --bg:           #f2f2f7;
-      --surface:      #ffffff;
-      --surface2:     #e5e5ea;
-      --border:       #c8c8d4;
-      --text:         #1c1c2e;
-      --muted:        #6060a0;
-      --accent:       #d4880a;
-      --green:        #00a844;
-      --blue:         #0a68c4;
-      --header-grad:  linear-gradient(180deg, #fff0e0 0%, var(--bg) 100%);
+      --bg:           #F2F7F3;
+      --surface:      #FFFFFF;
+      --surface2:     #E3EDE5;
+      --border:       #C4D9C9;
+      --text:         #152018;
+      --muted:        #5A7D62;
+      --accent:       #3D9A52;
+      --green:        #2E9955;
+      --blue:         #0A80C4;
+      --it-red:       #D4880A;
+      --it-green:     #3D9A52;
+      --header-grad:  linear-gradient(180deg, #E2F0E5 0%, var(--bg) 100%);
       color-scheme: light;
     }
-    [data-theme="light"] .lesson-card.done   { background: rgba(0,168,68,0.06); }
-    [data-theme="light"] .intro-card         { background: linear-gradient(160deg, #fff6e6 0%, #f0fff4 100%) !important; }
-    [data-theme="light"] .grammar-card       { background: linear-gradient(135deg, #f0fafa, #fafaf0) !important; }
-    /* Sprint 12: handmatig licht thema — donker→oranje gradiënt */
+    [data-theme="light"] .lesson-card.done   { background: rgba(61,154,82,0.06); }
+    [data-theme="light"] .intro-card         { background: linear-gradient(160deg, #f0fff4 0%, #f5fff7 100%) !important; }
+    [data-theme="light"] .grammar-card       { background: linear-gradient(135deg, #f0faf2, #f5faee) !important; }
     [data-theme="light"] .home-title {
       background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
       -webkit-background-clip: text;
@@ -77,29 +82,31 @@
       color: var(--text);
     }
 
-    /* Sprint 10: Handmatig donker thema (data-theme="dark") — forceer donker ook op lichte systemen */
+    /* Handmatig donker thema (data-theme="dark") */
     [data-theme="dark"] {
-      --bg:           #0d0d1a;
-      --surface:      #1a1a2e;
-      --surface2:     #252540;
-      --border:       #2e2e50;
-      --text:         #f0f0f5;
-      --muted:        #7070a0;
-      --accent:       #f5a623;
-      --green:        #00c851;
-      --header-grad:  linear-gradient(180deg, #1a0a0f 0%, var(--bg) 100%);
+      --bg:           #0D1A11;
+      --surface:      #162419;
+      --surface2:     #1E3322;
+      --border:       #2D4D35;
+      --text:         #E8F5EB;
+      --muted:        #8BBF92;
+      --accent:       #6ECF7E;
+      --green:        #52C97A;
+      --it-red:       #F5A623;
+      --it-green:     #6ECF7E;
+      --header-grad:  linear-gradient(180deg, #060E08 0%, var(--bg) 100%);
       color-scheme: dark;
     }
-    [data-theme="dark"] .lesson-card.done   { background: rgba(0,200,81,0.04); }
-    [data-theme="dark"] .intro-card         { background: linear-gradient(160deg, #0d1a0d, #0d0d1a) !important; }
-    [data-theme="dark"] .grammar-card       { background: linear-gradient(135deg, #0d1a1a, #1a1a0d) !important; }
+    [data-theme="dark"] .lesson-card.done   { background: rgba(110,207,126,0.06); }
+    [data-theme="dark"] .intro-card         { background: linear-gradient(160deg, #0D1A11, #0A1A0D) !important; }
+    [data-theme="dark"] .grammar-card       { background: linear-gradient(135deg, #0D1A14, #131A0D) !important; }
     [data-theme="dark"] .home-title {
-      background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+      background: linear-gradient(135deg, #E8F5EB 0%, var(--accent) 100%);
       -webkit-background-clip: text;
       background-clip: text;
     }
     html, body { height: 100%; background: var(--bg); color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       overflow: hidden; }
 
     .screen { display: none; flex-direction: column; height: 100dvh; height: var(--app-height, 100dvh); overflow: hidden; }
@@ -116,8 +123,8 @@
     .home-header { padding: calc(var(--safe-t) + 20px) 20px 4px; background: var(--header-grad); }
     .flag-bar { display: flex; height: 5px; border-radius: 3px; overflow: hidden; width: 60px; margin-bottom: 14px; }
     .flag-bar div { flex: 1; }
-    .flag-g { background: var(--it-green); } .flag-w { background: #fff; } .flag-r { background: var(--it-red); }
-    .home-title { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, #fff 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .flag-g { background: #009246; } .flag-w { background: #ffffff; } .flag-r { background: #ce2b37; }
+    .home-title { font-size: 28px; font-weight: 900; background: linear-gradient(135deg, #E8F5EB 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     /* Sprint 12: lichte modus — donker→oranje gradiënt (staat ná basisregel zodat cascade klopt) */
     @media (prefers-color-scheme: light) {
       .home-title { background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--text); }
@@ -882,7 +889,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.17 · Italiaans · 90 lessen · 720 woorden</div>
+    <div class="settings-version">Vocado · v1.18 · Italiaans · 90 lessen · 720 woorden</div>
   </div>
 </div>
 
