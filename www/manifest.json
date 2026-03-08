@@ -2,7 +2,7 @@
   "name": "Italiano per Vacanza",
   "short_name": "Italiano",
   "description": "Leer Italiaans voor je vakantie - A1/A2 niveau",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#1a1a2e",
   "theme_color": "#ce2b37",
