@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Italiano">
+  <meta name="theme-color" content="#ce2b37">
+  <link rel="manifest" href="manifest.json">
+  <title>Italiano per Vacanza</title>
+  <style>
+    :root {
+      --it-red: #ce2b37;
+      --it-green: #009246;
+      --it-white: #f8f8f8;
+      --bg: #0f0f1a;
+      --surface: #1e1e30;
+      --surface2: #2a2a40;
+      --text: #f0f0f0;
+      --text-muted: #8888aa;
+      --accent: #f5a623;
+      --radius: 16px;
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+    }
+
+    /* ── SCREENS ── */
+    .screen { display: none; flex-direction: column; min-height: 100dvh; }
+    .screen.active { display: flex; }
+
+    /* ── HOME ── */
+    #home {
+      background: linear-gradient(160deg, #0f0f1a 0%, #1a0a0f 50%, #0a1a0f 100%);
+    }
+    .home-header {
+      padding: calc(var(--safe-top) + 24px) 24px 0;
+      text-align: center;
+    }
+    .flag-strip {
+      display: flex;
+      height: 6px;
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 0 auto 20px;
+      width: 80px;
+    }
+    .flag-strip div { flex: 1; }
+    .flag-strip .g { background: var(--it-green); }
+    .flag-strip .w { background: #fff; }
+    .flag-strip .r { background: var(--it-red); }
+    .home-title {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .home-subtitle { color: var(--text-muted); font-size: 14px; margin-top: 6px; margin-bottom: 4px; }
+    .level-badge {
+      display: inline-block;
+      background: var(--it-green);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+
+    /* ── PROGRESS OVERVIEW ── */
+    .progress-card {
+      margin: 0 20px 24px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .progress-card-title { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .progress-bar-wrap { background: var(--surface2); border-radius: 10px; height: 8px; overflow: hidden; }
+    .progress-bar { height: 100%; background: linear-gradient(90deg, var(--it-green), var(--accent)); border-radius: 10px; transition: width 0.5s ease; }
+    .progress-stats { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--text-muted); }
+
+    /* ── TOPIC GRID ── */
+    .section-title { font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; padding: 0 20px; margin-bottom: 12px; }
+    .topic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+    .topic-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      cursor: pointer;
+      transition: transform 0.15s, background 0.15s;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    .topic-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .topic-card:active { transform: scale(0.96); }
+    .topic-card .emoji { font-size: 32px; margin-bottom: 10px; display: block; }
+    .topic-card .topic-name { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+    .topic-card .topic-count { font-size: 12px; color: var(--text-muted); }
+    .topic-card .topic-progress { margin-top: 10px; }
+    .topic-mini-bar { height: 3px; background: var(--surface2); border-radius: 2px; overflow: hidden; margin-top: 4px; }
+    .topic-mini-fill { height: 100%; border-radius: 2px; transition: width 0.3s; }
+
+    /* Colors per topic */
+    .t0::before { background: #FF6B6B; } .t0 .topic-mini-fill { background: #FF6B6B; }
+    .t1::before { background: #4ECDC4; } .t1 .topic-mini-fill { background: #4ECDC4; }
+    .t2::before { background: #45B7D1; } .t2 .topic-mini-fill { background: #45B7D1; }
+    .t3::before { background: #96CEB4; } .t3 .topic-mini-fill { background: #96CEB4; }
+    .t4::before { background: #FFEAA7; } .t4 .topic-mini-fill { background: #FFEAA7; }
+    .t5::before { background: #DDA0DD; } .t5 .topic-mini-fill { background: #DDA0DD; }
+    .t6::before { background: #F0A500; } .t6 .topic-mini-fill { background: #F0A500; }
+    .t7::before { background: #FF8B94; } .t7 .topic-mini-fill { background: #FF8B94; }
+
+    /* ── BOTTOM NAV ── */
+    .bottom-nav {
+      margin-top: auto;
+      display: flex;
+      background: var(--surface);
+      border-top: 1px solid var(--surface2);
+      padding-bottom: var(--safe-bottom);
+    }
+    .nav-btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 10px;
+      gap: 3px;
+      transition: color 0.15s;
+    }
+    .nav-btn.active { color: var(--accent); }
+    .nav-btn svg { width: 22px; height: 22px; }
+
+    /* ── TOPIC SCREEN ── */
+    #topic-screen { background: var(--bg); }
+    .topic-header {
+      display: flex;
+      align-items: center;
+      padding: calc(var(--safe-top) + 16px) 20px 16px;
+      gap: 12px;
+    }
+    .back-btn {
+      width: 40px; height: 40px;
+      background: var(--surface);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .back-btn svg { width: 20px; height: 20px; }
+    .topic-header-info { flex: 1; }
+    .topic-header-emoji { font-size: 28px; }
+    .topic-header-name { font-size: 20px; font-weight: 800; }
+    .topic-header-sub { font-size: 12px; color: var(--text-muted); }
+
+    /* Mode tabs */
+    .mode-tabs {
+      display: flex;
+      gap: 8px;
+      padding: 0 20px 16px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .mode-tabs::-webkit-scrollbar { display: none; }
+    .mode-tab {
+      flex-shrink: 0;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: var(--surface);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: var(--text-muted);
+    }
+    .mode-tab.active { background: var(--accent); color: #000; }
+
+    /* ── FLASHCARD ── */
+    .flashcard-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 10px 20px 20px; }
+    .card-counter { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+    .flashcard-scene { width: 100%; perspective: 1000px; cursor: pointer; margin-bottom: 24px; }
+    .flashcard {
+      width: 100%;
+      min-height: 220px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: var(--radius);
+    }
+    .flashcard.flipped { transform: rotateY(180deg); }
+    .card-face {
+      position: absolute; width: 100%; min-height: 220px;
+      border-radius: var(--radius);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 24px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .card-front { background: var(--surface); border: 2px solid var(--surface2); }
+    .card-back { background: linear-gradient(135deg, #1a2a1a, #1a1a2a); border: 2px solid var(--it-green); transform: rotateY(180deg); }
+    .card-hint { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .card-nl { font-size: 26px; font-weight: 700; text-align: center; }
+    .card-it { font-size: 30px; font-weight: 800; color: var(--accent); text-align: center; margin-bottom: 8px; }
+    .card-phonetic { font-size: 14px; color: var(--text-muted); font-style: italic; text-align: center; }
+    .card-example { font-size: 13px; color: #aaa; text-align: center; margin-top: 12px; font-style: italic; }
+    .card-tap-hint { font-size: 11px; color: var(--text-muted); margin-top: 8px; }
+
+    .card-actions { display: flex; gap: 12px; width: 100%; }
+    .card-btn {
+      flex: 1; padding: 16px; border-radius: 14px;
+      font-size: 15px; font-weight: 700; cursor: pointer;
+      border: none; transition: all 0.15s; color: #fff;
+    }
+    .card-btn.wrong { background: #c0392b; }
+    .card-btn.right { background: var(--it-green); }
+    .card-btn:active { transform: scale(0.96); }
+
+    .card-nav { display: flex; gap: 12px; width: 100%; margin-top: 12px; }
+    .card-nav-btn {
+      flex: 1; padding: 14px; border-radius: 14px;
+      background: var(--surface); font-size: 14px; font-weight: 600;
+      cursor: pointer; border: none; color: var(--text); transition: all 0.15s;
+    }
+    .card-nav-btn:active { transform: scale(0.96); background: var(--surface2); }
+
+    /* ── QUIZ ── */
+    .quiz-wrap { flex: 1; padding: 10px 20px 20px; display: flex; flex-direction: column; }
+    .quiz-progress-bar { height: 4px; background: var(--surface2); border-radius: 2px; margin-bottom: 20px; overflow: hidden; }
+    .quiz-progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.3s; }
+    .quiz-question-num { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+    .quiz-question { font-size: 22px; font-weight: 800; margin-bottom: 6px; line-height: 1.3; }
+    .quiz-question-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+    .quiz-options { display: flex; flex-direction: column; gap: 10px; }
+    .quiz-option {
+      padding: 16px 20px;
+      background: var(--surface);
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+      text-align: left;
+    }
+    .quiz-option:active { transform: scale(0.98); }
+    .quiz-option.correct { background: rgba(0,146,70,0.2); border-color: var(--it-green); color: #4fff9a; }
+    .quiz-option.wrong { background: rgba(206,43,55,0.2); border-color: var(--it-red); color: #ff8888; }
+    .quiz-option.disabled { pointer-events: none; }
+    .quiz-feedback {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 14px;
+      display: none;
+    }
+    .quiz-feedback.show { display: block; }
+    .quiz-feedback.correct { background: rgba(0,146,70,0.15); color: #4fff9a; }
+    .quiz-feedback.wrong { background: rgba(206,43,55,0.15); color: #ff8888; }
+    .quiz-next-btn {
+      margin-top: 16px;
+      width: 100%;
+      padding: 16px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      display: none;
+      transition: all 0.15s;
+    }
+    .quiz-next-btn.show { display: block; }
+    .quiz-next-btn:active { transform: scale(0.98); }
+
+    /* ── QUIZ RESULT ── */
+    .quiz-result { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; text-align: center; }
+    .result-emoji { font-size: 64px; margin-bottom: 16px; }
+    .result-score { font-size: 52px; font-weight: 900; color: var(--accent); }
+    .result-label { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .result-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+    .result-btn {
+      padding: 16px 32px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 12px;
+      width: 100%;
+    }
+    .result-btn.secondary { background: var(--surface); color: var(--text); }
+    .result-btn:active { transform: scale(0.98); }
+
+    /* ── PHRASEBOOK ── */
+    .phrases-wrap { flex: 1; padding: 10px 20px 20px; overflow-y: auto; }
+    .phrase-item {
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.15s;
+      border-left: 3px solid transparent;
+    }
+    .phrase-item:active { transform: scale(0.99); background: var(--surface2); }
+    .phrase-it { font-size: 17px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+    .phrase-nl { font-size: 13px; color: var(--text-muted); }
+    .phrase-phonetic { font-size: 12px; color: #666; margin-top: 3px; font-style: italic; }
+    .phrase-item.playing { border-left-color: var(--it-green); }
+
+    /* ── STATS SCREEN ── */
+    #stats-screen { background: var(--bg); }
+    .stats-header {
+      padding: calc(var(--safe-top) + 24px) 20px 20px;
+    }
+    .stats-title { font-size: 26px; font-weight: 800; margin-bottom: 4px; }
+    .stats-sub { font-size: 13px; color: var(--text-muted); }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 20px 20px; }
+    .stat-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .stat-num { font-size: 36px; font-weight: 900; color: var(--accent); }
+    .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    .topic-progress-list { padding: 0 20px; }
+    .tpl-title { font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .tpl-item { background: var(--surface); border-radius: 14px; padding: 14px 16px; margin-bottom: 8px; }
+    .tpl-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .tpl-name { font-size: 14px; font-weight: 600; }
+    .tpl-pct { font-size: 13px; color: var(--accent); font-weight: 700; }
+    .tpl-bar { height: 4px; background: var(--surface2); border-radius: 2px; overflow: hidden; }
+    .tpl-fill { height: 100%; border-radius: 2px; background: var(--accent); transition: width 0.5s; }
+    .reset-btn {
+      margin: 20px;
+      padding: 14px;
+      background: rgba(206,43,55,0.15);
+      color: var(--it-red);
+      border: 1px solid var(--it-red);
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      width: calc(100% - 40px);
+    }
+
+    /* ── SETTINGS / TIPS ── */
+    #tips-screen { background: var(--bg); }
+    .tips-header { padding: calc(var(--safe-top) + 24px) 20px 20px; }
+    .tips-title { font-size: 26px; font-weight: 800; margin-bottom: 4px; }
+    .tips-body { padding: 0 20px; overflow-y: auto; flex: 1; }
+    .tip-section { margin-bottom: 24px; }
+    .tip-section-title { font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .tip-card { background: var(--surface); border-radius: 14px; padding: 16px; margin-bottom: 8px; }
+    .tip-card-title { font-size: 15px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+    .tip-card-body { font-size: 13px; color: #ccc; line-height: 1.5; }
+    .grammar-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .grammar-table th { background: var(--surface2); padding: 8px 12px; text-align: left; color: var(--accent); font-weight: 700; }
+    .grammar-table td { padding: 8px 12px; border-bottom: 1px solid var(--surface2); }
+    .grammar-table tr:last-child td { border-bottom: none; }
+
+    /* ── TOAST ── */
+    .toast {
+      position: fixed; bottom: calc(var(--safe-bottom) + 80px); left: 50%; transform: translateX(-50%) translateY(20px);
+      background: var(--surface2); color: var(--text);
+      padding: 10px 20px; border-radius: 20px; font-size: 14px; font-weight: 600;
+      opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
+      z-index: 100;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ── STREAK BADGE ── */
+    .streak-badge {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surface); border-radius: 20px;
+      padding: 6px 14px; margin: 0 auto 16px;
+      width: fit-content;
+      font-size: 14px; font-weight: 700;
+    }
+    .streak-fire { font-size: 18px; }
+
+    /* Animations */
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .pop-in { animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .slide-up { animation: slideUp 0.3s ease; }
+
+    /* Scrollable content area */
+    .scroll-content { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
+  </style>
+</head>
+<body>
+
+<!-- HOME SCREEN -->
+<div id="home" class="screen active">
+  <div class="scroll-content">
+    <div class="home-header">
+      <div class="flag-strip"><div class="g"></div><div class="w"></div><div class="r"></div></div>
+      <h1 class="home-title">Italiano per Vacanza</h1>
+      <p class="home-subtitle">Leer Italiaans voor je vakantie</p>
+      <span class="level-badge">A1 · A2</span>
+    </div>
+
+    <div class="streak-badge">
+      <span class="streak-fire">🔥</span>
+      <span id="streak-text">0 dagen op rij</span>
+    </div>
+
+    <div class="progress-card">
+      <div class="progress-card-title">Totale voortgang</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="total-progress-bar" style="width: 0%"></div>
+      </div>
+      <div class="progress-stats">
+        <span id="learned-count">0 woorden geleerd</span>
+        <span id="total-count">0% compleet</span>
+      </div>
+    </div>
+
+    <div class="section-title">Onderwerpen</div>
+    <div class="topic-grid" id="topic-grid"></div>
+  </div>
+
+  <nav class="bottom-nav">
+    <div class="nav-btn active" onclick="showScreen('home')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span>Home</span>
+    </div>
+    <div class="nav-btn" onclick="showScreen('stats')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/><path d="M5 17h14v-1H5v1zm0-4h14v-1H5v1zm0-4h14V8H5v1z" opacity="0"/><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg>
+      <span>Voortgang</span>
+    </div>
+    <div class="nav-btn" onclick="showScreen('tips')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      <span>Tips</span>
+    </div>
+  </nav>
+</div>
+
+<!-- TOPIC SCREEN -->
+<div id="topic-screen" class="screen">
+  <div class="topic-header">
+    <div class="back-btn" onclick="goBack()">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    </div>
+    <div style="flex:1">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span class="topic-header-emoji" id="topic-emoji"></span>
+        <div>
+          <div class="topic-header-name" id="topic-name"></div>
+          <div class="topic-header-sub" id="topic-sub"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mode-tabs">
+    <div class="mode-tab active" onclick="switchMode('flashcard')">Flashcards</div>
+    <div class="mode-tab" onclick="switchMode('quiz')">Quiz</div>
+    <div class="mode-tab" onclick="switchMode('phrases')">Zinnen</div>
+  </div>
+
+  <!-- FLASHCARD MODE -->
+  <div id="mode-flashcard" class="flashcard-wrap">
+    <div class="card-counter"><span id="card-current">1</span> / <span id="card-total">10</span></div>
+    <div class="flashcard-scene" onclick="flipCard()">
+      <div class="flashcard" id="flashcard">
+        <div class="card-face card-front">
+          <div class="card-hint">Nederlands</div>
+          <div class="card-nl" id="card-nl-text">Loading...</div>
+          <div class="card-tap-hint">Tik om te omdraaien</div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-hint">Italiaans</div>
+          <div class="card-it" id="card-it-text"></div>
+          <div class="card-phonetic" id="card-phonetic"></div>
+          <div class="card-example" id="card-example"></div>
+        </div>
+      </div>
+    </div>
+    <div id="card-result-btns" style="display:none; width:100%;">
+      <div class="card-actions">
+        <button class="card-btn wrong" onclick="rateCard(false)">✗ Opnieuw</button>
+        <button class="card-btn right" onclick="rateCard(true)">✓ Geweten</button>
+      </div>
+    </div>
+    <div id="card-nav-btns" class="card-nav">
+      <button class="card-nav-btn" onclick="prevCard()">← Vorige</button>
+      <button class="card-nav-btn" onclick="nextCard()">Volgende →</button>
+    </div>
+  </div>
+
+  <!-- QUIZ MODE -->
+  <div id="mode-quiz" class="quiz-wrap" style="display:none;">
+    <div id="quiz-game">
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-prog-fill"></div></div>
+      <div class="quiz-question-num" id="quiz-qnum"></div>
+      <div class="quiz-question" id="quiz-question"></div>
+      <div class="quiz-question-sub" id="quiz-qsub">Kies het juiste Italiaanse woord:</div>
+      <div class="quiz-options" id="quiz-options"></div>
+      <div class="quiz-feedback" id="quiz-feedback"></div>
+      <button class="quiz-next-btn" id="quiz-next" onclick="nextQuestion()">Volgende vraag →</button>
+    </div>
+    <div id="quiz-result-wrap" style="display:none;">
+      <div class="quiz-result pop-in">
+        <div class="result-emoji" id="result-emoji"></div>
+        <div class="result-score" id="result-score"></div>
+        <div class="result-label" id="result-label"></div>
+        <div class="result-sub" id="result-sub"></div>
+        <button class="result-btn" onclick="restartQuiz()">Opnieuw spelen</button>
+        <button class="result-btn secondary" onclick="goBack()">Terug naar onderwerp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHRASES MODE -->
+  <div id="mode-phrases" class="phrases-wrap" style="display:none;"></div>
+</div>
+
+<!-- STATS SCREEN -->
+<div id="stats-screen" class="screen">
+  <div class="stats-header">
+    <div class="stats-title">Voortgang</div>
+    <div class="stats-sub">Jouw leerstatistieken</div>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num" id="stat-learned">0</div>
+      <div class="stat-label">Geleerde woorden</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-quizzes">0</div>
+      <div class="stat-label">Quizzen gemaakt</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-streak">0</div>
+      <div class="stat-label">Huidige reeks</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-accuracy">0%</div>
+      <div class="stat-label">Nauwkeurigheid</div>
+    </div>
+  </div>
+  <div class="topic-progress-list">
+    <div class="tpl-title">Per onderwerp</div>
+    <div id="topic-progress-list"></div>
+  </div>
+  <button class="reset-btn" onclick="confirmReset()">Voortgang resetten</button>
+
+  <nav class="bottom-nav">
+    <div class="nav-btn" onclick="showScreen('home')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span>Home</span>
+    </div>
+    <div class="nav-btn active" onclick="showScreen('stats')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg>
+      <span>Voortgang</span>
+    </div>
+    <div class="nav-btn" onclick="showScreen('tips')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      <span>Tips</span>
+    </div>
+  </nav>
+</div>
+
+<!-- TIPS SCREEN -->
+<div id="tips-screen" class="screen">
+  <div class="tips-header">
+    <div class="tips-title">Taaltips</div>
+    <div style="font-size:13px; color:var(--text-muted)">Uitspraak & grammatica</div>
+  </div>
+  <div class="tips-body scroll-content">
+
+    <div class="tip-section">
+      <div class="tip-section-title">Uitspraak</div>
+      <div class="tip-card">
+        <div class="tip-card-title">C en G</div>
+        <div class="tip-card-body">
+          <b>Ce/Ci</b> = tsjeh/tsji (zacht) — <i>ciao</i> = "tsjao"<br>
+          <b>Ca/Co/Cu</b> = ka/ko/ku (hard) — <i>cosa</i> = "koza"<br>
+          <b>Ge/Gi</b> = dzjeh/dzji (zacht) — <i>gelato</i> = "dzjelaato"<br>
+          <b>Ga/Go/Gu</b> = ga/go/gu (hard) — <i>grazie</i> = "gratsyeh"
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-title">Klinkers zijn altijd helder</div>
+        <div class="tip-card-body">
+          In Italiaans spreek je alle klinkers duidelijk uit:<br>
+          <b>A</b> = "a" (nooit "e") • <b>E</b> = "e" of "eh"<br>
+          <b>I</b> = "ie" • <b>O</b> = "o" • <b>U</b> = "oe"
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-title">Dubbele medeklinkers</div>
+        <div class="tip-card-body">
+          Dubbele medeklinkers worden langer uitgesproken:<br>
+          <i>penne</i> = "pen-neh" (niet "penneh")<br>
+          <i>cappuccino</i> = "kap-poe-tsjieno"
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-title">SCH en GLI en GN</div>
+        <div class="tip-card-body">
+          <b>SCH</b> = sk — <i>schiena</i> = "skiena"<br>
+          <b>GLI</b> = lj (als in "jul") — <i>figlio</i> = "fieljo"<br>
+          <b>GN</b> = nj (als in "oranje") — <i>gnocchi</i> = "njokki"
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-section">
+      <div class="tip-section-title">Essentiële grammatica</div>
+      <div class="tip-card">
+        <div class="tip-card-title">Lidwoorden (de/het/een)</div>
+        <div class="tip-card-body" style="padding:0; overflow-x: auto;">
+          <table class="grammar-table">
+            <tr><th></th><th>Mannelijk</th><th>Vrouwelijk</th></tr>
+            <tr><td>bepaald enkv.</td><td>il / lo</td><td>la</td></tr>
+            <tr><td>bepaald meervoud</td><td>i / gli</td><td>le</td></tr>
+            <tr><td>onbepaald</td><td>un / uno</td><td>una</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-title">Essere (zijn) — onthoudt dit!</div>
+        <div class="tip-card-body" style="padding:0; overflow-x: auto;">
+          <table class="grammar-table">
+            <tr><th>Persoon</th><th>Italiaans</th><th>Nederlands</th></tr>
+            <tr><td>io</td><td>sono</td><td>ik ben</td></tr>
+            <tr><td>tu</td><td>sei</td><td>jij bent</td></tr>
+            <tr><td>lui/lei</td><td>è</td><td>hij/zij is</td></tr>
+            <tr><td>noi</td><td>siamo</td><td>wij zijn</td></tr>
+            <tr><td>voi</td><td>siete</td><td>jullie zijn</td></tr>
+            <tr><td>loro</td><td>sono</td><td>zij zijn</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-title">Avere (hebben)</div>
+        <div class="tip-card-body" style="padding:0; overflow-x: auto;">
+          <table class="grammar-table">
+            <tr><th>Persoon</th><th>Italiaans</th><th>Nederlands</th></tr>
+            <tr><td>io</td><td>ho</td><td>ik heb</td></tr>
+            <tr><td>tu</td><td>hai</td><td>jij hebt</td></tr>
+            <tr><td>lui/lei</td><td>ha</td><td>hij/zij heeft</td></tr>
+            <tr><td>noi</td><td>abbiamo</td><td>wij hebben</td></tr>
+            <tr><td>voi</td><td>avete</td><td>jullie hebben</td></tr>
+            <tr><td>loro</td><td>hanno</td><td>zij hebben</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-section">
+      <div class="tip-section-title">Vakantie overlevingstips</div>
+      <div class="tip-card">
+        <div class="tip-card-title">In een restaurant</div>
+        <div class="tip-card-body">
+          Altijd "per favore" toevoegen = beleefd<br>
+          "Il conto, per favore" = rekening alstublieft<br>
+          "Sono allergico/a a..." = ik ben allergisch voor...<br>
+          Italianen eten pas om 20:00-21:00 avondeten
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-title">Beleefdheid</div>
+        <div class="tip-card-body">
+          Gebruik <b>Lei</b> (formeel U) voor onbekenden<br>
+          <b>tu</b> is informeel (vrienden, kinderen)<br>
+          Begin altijd met <b>Buongiorno</b> in winkels
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-title">Getallen onthouden</div>
+        <div class="tip-card-body">
+          1-10: uno, due, tre, quattro, cinque,<br>sei, sette, otto, nove, dieci<br>
+          11-19: aggiunge -dici (undici, dodici...)<br>
+          Tientallen: venti, trenta, quaranta, cinquanta
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 100px;"></div>
+  </div>
+
+  <nav class="bottom-nav">
+    <div class="nav-btn" onclick="showScreen('home')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span>Home</span>
+    </div>
+    <div class="nav-btn" onclick="showScreen('stats')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg>
+      <span>Voortgang</span>
+    </div>
+    <div class="nav-btn active" onclick="showScreen('tips')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      <span>Tips</span>
+    </div>
+  </nav>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════
+const TOPICS = [
+  {
+    id: 't0', emoji: '👋', name: 'Begroetingen', color: '#FF6B6B',
+    words: [
+      { nl: 'Hallo', it: 'Ciao', ph: 'tsjao', ex: 'Ciao Maria!' },
+      { nl: 'Goedemorgen', it: 'Buongiorno', ph: 'bwon-dzhorno', ex: 'Buongiorno, come va?' },
+      { nl: 'Goedemiddag', it: 'Buon pomeriggio', ph: 'bwon pome-rieddzjo', ex: 'Buon pomeriggio!' },
+      { nl: 'Goedenavond', it: 'Buonasera', ph: 'bwona-sera', ex: 'Buonasera, signore.' },
+      { nl: 'Goedenacht', it: 'Buonanotte', ph: 'bwona-notte', ex: 'Buonanotte a tutti!' },
+      { nl: 'Tot ziens', it: 'Arrivederci', ph: 'arri-ve-dertsi', ex: 'Arrivederci domani!' },
+      { nl: 'Tot snel', it: 'A presto', ph: 'a presto', ex: 'A presto, amico!' },
+      { nl: 'Hoe gaat het?', it: 'Come stai?', ph: 'kome staj', ex: 'Ciao! Come stai?' },
+      { nl: 'Goed, dank je', it: 'Bene, grazie', ph: 'bene gratsje', ex: 'Bene, grazie. E tu?' },
+      { nl: 'Alsjeblieft', it: 'Per favore', ph: 'per fa-vore', ex: 'Un caffè, per favore.' },
+      { nl: 'Dank je wel', it: 'Grazie', ph: 'gratsje', ex: 'Grazie mille!' },
+      { nl: 'Dank je wel heel erg', it: 'Grazie mille', ph: 'gratsje mille', ex: 'Grazie mille per tutto!' },
+      { nl: 'Geen dank / Alsjeblieft', it: 'Prego', ph: 'prego', ex: 'Prego, si accomodi.' },
+      { nl: 'Pardon / Sorry', it: 'Scusi', ph: 'skoezi', ex: 'Scusi, dov\'è il bagno?' },
+      { nl: 'Het spijt me', it: 'Mi dispiace', ph: 'mi dis-pjatse', ex: 'Mi dispiace tanto.' },
+      { nl: 'Ik begrijp het niet', it: 'Non capisco', ph: 'non ka-pisko', ex: 'Non capisco, può ripetere?' },
+      { nl: 'Spreekt u Nederlands?', it: 'Parla olandese?', ph: 'parla olan-dese', ex: 'Parla olandese o inglese?' },
+      { nl: 'Ik spreek een beetje Italiaans', it: 'Parlo un po\' italiano', ph: 'parlo un po italiano', ex: 'Parlo un po\' italiano.' },
+      { nl: 'Ja', it: 'Sì', ph: 'sie', ex: 'Sì, certo!' },
+      { nl: 'Nee', it: 'No', ph: 'no', ex: 'No, grazie.' },
+    ],
+    phrases: [
+      { it: 'Ciao, come ti chiami?', nl: 'Hoi, hoe heet je?', ph: 'tsjao, kome ti kjami' },
+      { it: 'Mi chiamo Marco.', nl: 'Ik heet Marco.', ph: 'mi kjamo Marco' },
+      { it: 'Piacere di conoscerti!', nl: 'Aangenaam kennis te maken!', ph: 'pjatsjere di konoshterti' },
+      { it: 'Di dove sei?', nl: 'Waar kom jij vandaan?', ph: 'di dove sei' },
+      { it: 'Sono olandese.', nl: 'Ik ben Nederlands.', ph: 'sono olan-dese' },
+      { it: 'Quanti anni hai?', nl: 'Hoe oud ben je?', ph: 'kwanti anni ai' },
+      { it: 'Ho trent\'anni.', nl: 'Ik ben dertig jaar oud.', ph: 'o trent\'anni' },
+    ]
+  },
+  {
+    id: 't1', emoji: '🍕', name: 'Restaurant & Eten', color: '#4ECDC4',
+    words: [
+      { nl: 'Een tafel voor twee', it: 'Un tavolo per due', ph: 'un tavolo per due', ex: 'Un tavolo per due, per favore.' },
+      { nl: 'De menukaart', it: 'Il menù', ph: 'il me-noe', ex: 'Il menù, per favore.' },
+      { nl: 'Ik wil bestellen', it: 'Voglio ordinare', ph: 'voljo ordi-nare', ex: 'Siamo pronti per ordinare.' },
+      { nl: 'De rekening', it: 'Il conto', ph: 'il konto', ex: 'Il conto, per favore.' },
+      { nl: 'Ontbijt', it: 'La colazione', ph: 'la kola-tsione', ex: 'La colazione è inclusa?' },
+      { nl: 'Lunch', it: 'Il pranzo', ph: 'il prandzo', ex: 'Il pranzo è pronto.' },
+      { nl: 'Avondeten', it: 'La cena', ph: 'la tsjena', ex: 'La cena è alle otto.' },
+      { nl: 'Water', it: 'L\'acqua', ph: 'l\'akwa', ex: 'Un\'acqua frizzante, per favore.' },
+      { nl: 'Wijn', it: 'Il vino', ph: 'il vino', ex: 'Un bicchiere di vino rosso.' },
+      { nl: 'Koffie', it: 'Il caffè', ph: 'il kaffe', ex: 'Un caffè, per favore.' },
+      { nl: 'Bier', it: 'La birra', ph: 'la birra', ex: 'Una birra fredda, per favore.' },
+      { nl: 'Brood', it: 'Il pane', ph: 'il pane', ex: 'Ancora del pane?' },
+      { nl: 'Vlees', it: 'La carne', ph: 'la karne', ex: 'Senza carne, per favore.' },
+      { nl: 'Vis', it: 'Il pesce', ph: 'il pesje', ex: 'Il pesce del giorno.' },
+      { nl: 'Pizza', it: 'La pizza', ph: 'la pittsa', ex: 'Una pizza margherita.' },
+      { nl: 'Pasta', it: 'La pasta', ph: 'la pasta', ex: 'La pasta al pomodoro.' },
+      { nl: 'IJs', it: 'Il gelato', ph: 'il dzjelato', ex: 'Un gelato al cioccolato.' },
+      { nl: 'Ik ben vegetariër', it: 'Sono vegetariano/a', ph: 'sono vedzjeta-rjano', ex: 'Sono vegetariana.' },
+      { nl: 'Ik ben allergisch voor...', it: 'Sono allergico/a a...', ph: 'sono allergiko a', ex: 'Sono allergico alle noci.' },
+      { nl: 'Heerlijk!', it: 'Delizioso!', ph: 'deli-tsjozo', ex: 'Che bello! Delizioso!' },
+    ],
+    phrases: [
+      { it: 'Avete un tavolo libero?', nl: 'Hebt u een vrije tafel?', ph: 'avete un tavolo libero' },
+      { it: 'Cosa mi consiglia?', nl: 'Wat raadt u mij aan?', ph: 'koza mi konsilja' },
+      { it: 'Vorrei la specialità della casa.', nl: 'Ik wil graag de specialiteit van het huis.', ph: 'vorei la spetsjalita della kaza' },
+      { it: 'Senza glutine, per favore.', nl: 'Zonder gluten, alsjeblieft.', ph: 'sentsa gloe-tine per favore' },
+      { it: 'Possiamo pagare separatamente?', nl: 'Kunnen we apart betalen?', ph: 'possjamo pagare separatamente' },
+      { it: 'Accettate carte di credito?', nl: 'Accepteert u creditcards?', ph: 'atsjettate karte di kredito' },
+      { it: 'È incluso il servizio?', nl: 'Is de bediening inbegrepen?', ph: 'e inkluso il servitsjo' },
+    ]
+  },
+  {
+    id: 't2', emoji: '🚌', name: 'Transport & Weg', color: '#45B7D1',
+    words: [
+      { nl: 'Het vliegveld', it: 'L\'aeroporto', ph: 'l\'aeroporto', ex: 'Dov\'è l\'aeroporto?' },
+      { nl: 'Het treinstation', it: 'La stazione', ph: 'la statsione', ex: 'La stazione è lontana?' },
+      { nl: 'De bus', it: 'L\'autobus', ph: 'l\'autobus', ex: 'Quale autobus va al centro?' },
+      { nl: 'De taxi', it: 'Il taxi', ph: 'il taxi', ex: 'Chiami un taxi, per favore.' },
+      { nl: 'Het kaartje', it: 'Il biglietto', ph: 'il bi-ljetto', ex: 'Un biglietto di andata e ritorno.' },
+      { nl: 'Heen en terug', it: 'Andata e ritorno', ph: 'andata e ritorno', ex: 'Un biglietto andata e ritorno.' },
+      { nl: 'Enkeltje', it: 'Solo andata', ph: 'solo andata', ex: 'Un biglietto solo andata.' },
+      { nl: 'Wanneer vertrekt de trein?', it: 'Quando parte il treno?', ph: 'kwando parte il treno', ex: 'Quando parte il prossimo treno?' },
+      { nl: 'Links', it: 'A sinistra', ph: 'a sinistra', ex: 'Giri a sinistra.' },
+      { nl: 'Rechts', it: 'A destra', ph: 'a destra', ex: 'Giri a destra.' },
+      { nl: 'Rechtdoor', it: 'Dritto', ph: 'dritto', ex: 'Vada sempre dritto.' },
+      { nl: 'Dichtbij', it: 'Vicino', ph: 'vitsjieno', ex: 'È molto vicino.' },
+      { nl: 'Ver weg', it: 'Lontano', ph: 'lontano', ex: 'Non è lontano.' },
+      { nl: 'Waar is...?', it: 'Dov\'è...?', ph: 'dove', ex: 'Dov\'è il centro storico?' },
+      { nl: 'Hoe kom ik bij...?', it: 'Come arrivo a...?', ph: 'kome arrivo a', ex: 'Come arrivo al museo?' },
+      { nl: 'Hoeveel kost het?', it: 'Quanto costa?', ph: 'kwanto kosta', ex: 'Quanto costa il biglietto?' },
+      { nl: 'Benzine', it: 'La benzina', ph: 'la bentsjiena', ex: 'Dove posso fare benzina?' },
+      { nl: 'Parkeren', it: 'Parcheggiare', ph: 'parke-djare', ex: 'Dove posso parcheggiare?' },
+      { nl: 'De kaart / GPS', it: 'La mappa', ph: 'la mappa', ex: 'Ho la mappa sul telefono.' },
+      { nl: 'Verloren / Verdwaald', it: 'Perso/a', ph: 'perso', ex: 'Mi sono perso!' },
+    ],
+    phrases: [
+      { it: 'Mi può portare a questo indirizzo?', nl: 'Kunt u me naar dit adres brengen?', ph: 'mi pwo portare a kwesto indirittso' },
+      { it: 'Fermi qui, per favore.', nl: 'Stop hier, alsjeblieft.', ph: 'fermi kwi per favore' },
+      { it: 'A che ora arriva il treno?', nl: 'Hoe laat komt de trein aan?', ph: 'a ke ora arriva il treno' },
+      { it: 'È in ritardo?', nl: 'Is hij vertraagd?', ph: 'e in ritardo' },
+      { it: 'Da quale binario parte?', nl: 'Van welk perron vertrekt hij?', ph: 'da kwale binario parte' },
+      { it: 'Devo cambiare?', nl: 'Moet ik overstappen?', ph: 'devo kambjare' },
+      { it: 'Ho perso il treno.', nl: 'Ik heb de trein gemist.', ph: 'o perso il treno' },
+    ]
+  },
+  {
+    id: 't3', emoji: '🏨', name: 'Hotel & Verblijf', color: '#96CEB4',
+    words: [
+      { nl: 'Een kamer reserveren', it: 'Prenotare una camera', ph: 'prenotare una kamera', ex: 'Voglio prenotare una camera.' },
+      { nl: 'Eenpersoonskamer', it: 'Camera singola', ph: 'kamera singola', ex: 'Avete una camera singola?' },
+      { nl: 'Tweepersoonskamer', it: 'Camera doppia', ph: 'kamera doppja', ex: 'Vorrei una camera doppia.' },
+      { nl: 'Inchecken', it: 'Il check-in', ph: 'il tsjek-in', ex: 'A che ora è il check-in?' },
+      { nl: 'Uitchecken', it: 'Il check-out', ph: 'il tsjek-awt', ex: 'Il check-out è alle undici.' },
+      { nl: 'De sleutel', it: 'La chiave', ph: 'la kjave', ex: 'La chiave della camera.' },
+      { nl: 'De lift', it: 'L\'ascensore', ph: 'l\'ashensore', ex: 'Dov\'è l\'ascensore?' },
+      { nl: 'Het ontbijt', it: 'La colazione', ph: 'la kolatsione', ex: 'La colazione è inclusa?' },
+      { nl: 'De wifi', it: 'Il wifi', ph: 'il wai-fai', ex: 'Qual è la password del wifi?' },
+      { nl: 'Airconditioning', it: 'Il condizionatore', ph: 'il konditsjonatores', ex: 'Il condizionatore non funziona.' },
+      { nl: 'De handdoek', it: 'L\'asciugamano', ph: 'l\'ashugamano', ex: 'Posso avere più asciugamani?' },
+      { nl: 'Het bad / de douche', it: 'Il bagno / la doccia', ph: 'il banjo / la dottsja', ex: 'La doccia non funziona.' },
+      { nl: 'Kamer schoonmaken', it: 'Pulizia della camera', ph: 'pulitsja della kamera', ex: 'La pulizia della camera, per favore.' },
+      { nl: 'Per nacht', it: 'A notte', ph: 'a notte', ex: 'Quanto costa a notte?' },
+      { nl: 'Het zwembad', it: 'La piscina', ph: 'la pisjiena', ex: 'Dov\'è la piscina?' },
+      { nl: 'Parkeerplaats', it: 'Il parcheggio', ph: 'il parkeddjo', ex: 'C\'è un parcheggio?' },
+      { nl: 'Probleem met de kamer', it: 'Problema con la camera', ph: 'problema kon la kamera', ex: 'Ho un problema con la camera.' },
+      { nl: 'Ik heb een reservering', it: 'Ho una prenotazione', ph: 'o una prenotatzione', ex: 'Ho una prenotazione a nome...' },
+      { nl: 'Vroeg/laat uitchecken', it: 'Check-out anticipato/tardivo', ph: 'tsjek-awt anti-cipato', ex: 'È possibile un check-out tardivo?' },
+      { nl: 'Bagage opslaan', it: 'Depositare i bagagli', ph: 'depositare i bagalji', ex: 'Posso depositare i bagagli?' },
+    ],
+    phrases: [
+      { it: 'Ho una prenotazione a nome Van Stratum.', nl: 'Ik heb een reservering op naam Van Stratum.', ph: 'o una prenotatzione a nome Van Stratum' },
+      { it: 'La camera non è pulita.', nl: 'De kamer is niet schoon.', ph: 'la kamera non e pulita' },
+      { it: 'C\'è troppo rumore.', nl: 'Er is te veel lawaai.', ph: 'tsje troppo rumore' },
+      { it: 'Posso avere un\'altra camera?', nl: 'Kan ik een andere kamer krijgen?', ph: 'posso avere un altra kamera' },
+      { it: 'A che ora è la colazione?', nl: 'Hoe laat is het ontbijt?', ph: 'a ke ora e la kolatsione' },
+      { it: 'Vorrei sveglia alle sette.', nl: 'Ik wil graag een wekservice om zeven uur.', ph: 'vorei svelja alle sette' },
+      { it: 'Posso lasciare le valigie?', nl: 'Kan ik mijn koffers laten staan?', ph: 'posso lashare le validzsje' },
+    ]
+  },
+  {
+    id: 't4', emoji: '🛍️', name: 'Winkelen', color: '#FFEAA7',
+    words: [
+      { nl: 'Hoeveel kost dit?', it: 'Quanto costa?', ph: 'kwanto kosta', ex: 'Quanto costa questa borsa?' },
+      { nl: 'Te duur', it: 'Troppo caro', ph: 'troppo karo', ex: 'È troppo caro per me.' },
+      { nl: 'Kan het goedkoper?', it: 'Può farmi uno sconto?', ph: 'pwo farmi uno skonto', ex: 'Può farmi uno sconto?' },
+      { nl: 'Ik neem het', it: 'Lo prendo', ph: 'lo prendo', ex: 'Va bene, lo prendo.' },
+      { nl: 'De supermarkt', it: 'Il supermercato', ph: 'il supermer-kato', ex: 'Dov\'è il supermercato?' },
+      { nl: 'De markt', it: 'Il mercato', ph: 'il merkato', ex: 'C\'è un mercato vicino?' },
+      { nl: 'De apotheek', it: 'La farmacia', ph: 'la farmatsjia', ex: 'Dov\'è la farmacia?' },
+      { nl: 'De bakker', it: 'Il forno / la panetteria', ph: 'il forno', ex: 'C\'è un forno qui vicino?' },
+      { nl: 'Maat (kleding)', it: 'La taglia', ph: 'la talja', ex: 'Che taglia porta?' },
+      { nl: 'Kleine maat', it: 'Taglia piccola', ph: 'talja pikkola', ex: 'Ho la taglia piccola.' },
+      { nl: 'Grote maat', it: 'Taglia grande', ph: 'talja grande', ex: 'Avete la taglia grande?' },
+      { nl: 'Passen (kleding)', it: 'Provare', ph: 'provare', ex: 'Posso provarlo?' },
+      { nl: 'Contant betalen', it: 'Pagare in contanti', ph: 'pagare in kontanti', ex: 'Pago in contanti.' },
+      { nl: 'Pinnen', it: 'Pagare con carta', ph: 'pagare kon karta', ex: 'Posso pagare con carta?' },
+      { nl: 'De bon', it: 'Lo scontrino', ph: 'lo skontrino', ex: 'Posso avere lo scontrino?' },
+      { nl: 'Uitverkoop', it: 'I saldi', ph: 'i saldi', ex: 'Quando iniziano i saldi?' },
+      { nl: 'Korting', it: 'Lo sconto', ph: 'lo skonto', ex: 'C\'è uno sconto?' },
+      { nl: 'Een cadeau', it: 'Un regalo', ph: 'un regalo', ex: 'È per un regalo.' },
+      { nl: 'Ruilrecht', it: 'Il cambio', ph: 'il kambjo', ex: 'Posso fare un cambio?' },
+      { nl: 'De ingang', it: 'L\'entrata', ph: 'l\'entrata', ex: 'Dov\'è l\'entrata?' },
+    ],
+    phrases: [
+      { it: 'Sto solo guardando, grazie.', nl: 'Ik kijk alleen maar, dank u.', ph: 'sto solo gwardando gratsje' },
+      { it: 'Avete questo in un\'altra taglia?', nl: 'Heeft u dit in een andere maat?', ph: 'avete kwesto in un altra talja' },
+      { it: 'Dov\'è il camerino?', nl: 'Waar is de paskamer?', ph: 'dove il kamerino' },
+      { it: 'Accettate carte di credito?', nl: 'Accepteert u creditcards?', ph: 'atsjettate karte di kredito' },
+      { it: 'Ho bisogno di un sacchetto.', nl: 'Ik heb een tasje nodig.', ph: 'o bizonjo di un sakketto' },
+      { it: 'Questo è rotto.', nl: 'Dit is kapot.', ph: 'kwesto e rotto' },
+      { it: 'Vorrei restituirlo.', nl: 'Ik wil het terugbrengen.', ph: 'vorei restituirlo' },
+    ]
+  },
+  {
+    id: 't5', emoji: '🏥', name: 'Noodgevallen', color: '#DDA0DD',
+    words: [
+      { nl: 'Help!', it: 'Aiuto!', ph: 'ajuto', ex: 'Aiuto! Chiami la polizia!' },
+      { nl: 'Bel een ambulance', it: 'Chiami un\'ambulanza', ph: 'kjami un ambulantsa', ex: 'Chiami un\'ambulanza, per favore!' },
+      { nl: 'De politie', it: 'La polizia', ph: 'la politsia', ex: 'Devo chiamare la polizia.' },
+      { nl: 'Het ziekenhuis', it: 'L\'ospedale', ph: 'l\'ospedale', ex: 'Dove\'è l\'ospedale?' },
+      { nl: 'De dokter', it: 'Il medico', ph: 'il mediko', ex: 'Ho bisogno di un medico.' },
+      { nl: 'Ik voel me niet goed', it: 'Non mi sento bene', ph: 'non mi sento bene', ex: 'Non mi sento bene.' },
+      { nl: 'Ik heb pijn in...', it: 'Ho un dolore a...', ph: 'o un dolore a', ex: 'Ho un dolore alla schiena.' },
+      { nl: 'Koorts', it: 'La febbre', ph: 'la febre', ex: 'Ho la febbre.' },
+      { nl: 'Misselijk', it: 'Nausea', ph: 'nawzea', ex: 'Ho la nausea.' },
+      { nl: 'Mijn paspoort is gestolen', it: 'Mi hanno rubato il passaporto', ph: 'mi anno rubato il passaporto', ex: 'Mi hanno rubato il passaporto!' },
+      { nl: 'Ik ben bestolen', it: 'Sono stato derubato', ph: 'sono stato derubato', ex: 'Sono stato derubato!' },
+      { nl: 'Ik heb mijn tas verloren', it: 'Ho perso la borsa', ph: 'o perso la borsa', ex: 'Ho perso la borsa!' },
+      { nl: 'Medicijn', it: 'La medicina', ph: 'la meditsjiena', ex: 'Ho bisogno di una medicina.' },
+      { nl: 'Allergisch voor', it: 'Allergico/a a', ph: 'allergiko a', ex: 'Sono allergica alla penicillina.' },
+      { nl: 'Eerste hulp', it: 'Il pronto soccorso', ph: 'il pronto sokkrso', ex: 'Dov\'è il pronto soccorso?' },
+      { nl: 'Tandarts', it: 'Il dentista', ph: 'il dentista', ex: 'Ho bisogno di un dentista.' },
+      { nl: 'Brand!', it: 'Al fuoco!', ph: 'al fwoko', ex: 'Al fuoco! Tutti fuori!' },
+      { nl: 'Noodgeval', it: 'Un\'emergenza', ph: 'un emerdzsenza', ex: 'È un\'emergenza!' },
+      { nl: 'Verzekering', it: 'L\'assicurazione', ph: 'l\'asikuratsione', ex: 'Ho l\'assicurazione medica.' },
+      { nl: 'Ambassade', it: 'L\'ambasciata', ph: 'l\'ambashata', ex: 'Dove\'è l\'ambasciata olandese?' },
+    ],
+    phrases: [
+      { it: 'Chiamate la polizia!', nl: 'Bel de politie!', ph: 'kjamate la politsia' },
+      { it: 'Ho bisogno di un medico urgentemente.', nl: 'Ik heb dringend een dokter nodig.', ph: 'o bizonjo di un mediko urdzjentemente' },
+      { it: 'Sono diabetico/a.', nl: 'Ik ben diabetisch.', ph: 'sono djabe-tiko' },
+      { it: 'Prendo questi farmaci.', nl: 'Ik gebruik deze medicijnen.', ph: 'prendo kwesti farmatsji' },
+      { it: 'Dove\'è la farmacia di turno?', nl: 'Waar is de dienstdoende apotheek?', ph: 'dove la farmatsjia di turno' },
+      { it: 'Ho bisogno di un interprete.', nl: 'Ik heb een tolk nodig.', ph: 'o bizonjo di un interprete' },
+      { it: 'Numero di emergenza: 112', nl: 'Noodnummer: 112', ph: 'numero di emerdzsenza: centodoodici' },
+    ]
+  },
+  {
+    id: 't6', emoji: '🔢', name: 'Cijfers & Tijd', color: '#F0A500',
+    words: [
+      { nl: 'Nul', it: 'Zero', ph: 'dzjero', ex: 'Zero gradi.' },
+      { nl: 'Eén', it: 'Uno', ph: 'uno', ex: 'Uno, due, tre.' },
+      { nl: 'Twee', it: 'Due', ph: 'due', ex: 'Due biglietti.' },
+      { nl: 'Drie', it: 'Tre', ph: 'tre', ex: 'Tre giorni.' },
+      { nl: 'Vier', it: 'Quattro', ph: 'kwattro', ex: 'Quattro persone.' },
+      { nl: 'Vijf', it: 'Cinque', ph: 'tsjienkwe', ex: 'Cinque euro.' },
+      { nl: 'Zes', it: 'Sei', ph: 'sei', ex: 'Sei notti.' },
+      { nl: 'Zeven', it: 'Sette', ph: 'sette', ex: 'Sette ore.' },
+      { nl: 'Acht', it: 'Otto', ph: 'otto', ex: 'Otto gradi.' },
+      { nl: 'Negen', it: 'Nove', ph: 'nove', ex: 'Nove persone.' },
+      { nl: 'Tien', it: 'Dieci', ph: 'djetsji', ex: 'Dieci minuti.' },
+      { nl: 'Twintig', it: 'Venti', ph: 'venti', ex: 'Venti euro.' },
+      { nl: 'Dertig', it: 'Trenta', ph: 'trenta', ex: 'Trenta minuti.' },
+      { nl: 'Honderd', it: 'Cento', ph: 'tsjento', ex: 'Cento euro.' },
+      { nl: 'Hoe laat is het?', it: 'Che ora è?', ph: 'ke ora e', ex: 'Scusi, che ora è?' },
+      { nl: 'Nu', it: 'Adesso', ph: 'adesso', ex: 'Adesso è mezzogiorno.' },
+      { nl: 'Morgen', it: 'Domani', ph: 'domani', ex: 'A domani!' },
+      { nl: 'Gisteren', it: 'Ieri', ph: 'jeri', ex: 'Ieri era bello.' },
+      { nl: 'Vandaag', it: 'Oggi', ph: 'oddzji', ex: 'Oggi è lunedì.' },
+      { nl: 'Week', it: 'La settimana', ph: 'la settimana', ex: 'La prossima settimana.' },
+    ],
+    phrases: [
+      { it: 'Sono le tre e mezza.', nl: 'Het is half vier.', ph: 'sono le tre e medza' },
+      { it: 'A che ora apre?', nl: 'Hoe laat opent het?', ph: 'a ke ora apre' },
+      { it: 'A che ora chiude?', nl: 'Hoe laat sluit het?', ph: 'a ke ora kjude' },
+      { it: 'Lunedì, martedì, mercoledì...', nl: 'Maandag, dinsdag, woensdag...', ph: 'lunedi martedi merkoledi' },
+      { it: 'Gennaio, febbraio, marzo...', nl: 'Januari, februari, maart...', ph: 'dzjennaio febraio martso' },
+      { it: 'Quanto tempo ci vuole?', nl: 'Hoe lang duurt het?', ph: 'kwanto tempo tsji vwole' },
+      { it: 'È tardi / È presto.', nl: 'Het is laat / vroeg.', ph: 'e tardi / e presto' },
+    ]
+  },
+  {
+    id: 't7', emoji: '🏖️', name: 'Vakantie & Activiteiten', color: '#FF8B94',
+    words: [
+      { nl: 'Het strand', it: 'La spiaggia', ph: 'la spjaddzja', ex: 'Andiamo alla spiaggia!' },
+      { nl: 'Het museum', it: 'Il museo', ph: 'il moozeeo', ex: 'Il museo è aperto?' },
+      { nl: 'De kerk', it: 'La chiesa', ph: 'la kjeeza', ex: 'La chiesa è bellissima.' },
+      { nl: 'Het kasteel', it: 'Il castello', ph: 'il kastello', ex: 'Il castello medievale.' },
+      { nl: 'Het centrum', it: 'Il centro storico', ph: 'il tsjentro storiko', ex: 'Andiamo al centro storico.' },
+      { nl: 'De berg', it: 'La montagna', ph: 'la montanja', ex: 'La montagna è alta.' },
+      { nl: 'Het meer', it: 'Il lago', ph: 'il lago', ex: 'Il lago di Como è bellissimo.' },
+      { nl: 'De rivier', it: 'Il fiume', ph: 'il fjume', ex: 'Il fiume Tevere.' },
+      { nl: 'Rondleiding', it: 'La visita guidata', ph: 'la vizita gwidata', ex: 'C\'è una visita guidata?' },
+      { nl: 'Fotoleggen', it: 'Fare una foto', ph: 'fare una foto', ex: 'Posso fare una foto?' },
+      { nl: 'Mooi', it: 'Bello/a', ph: 'bello', ex: 'Che bello!' },
+      { nl: 'Het weer', it: 'Il tempo', ph: 'il tempo', ex: 'Che tempo fa oggi?' },
+      { nl: 'Warm', it: 'Caldo', ph: 'kaldo', ex: 'Fa molto caldo!' },
+      { nl: 'Zon', it: 'Il sole', ph: 'il sole', ex: 'C\'è il sole.' },
+      { nl: 'Regen', it: 'La pioggia', ph: 'la pjoddzja', ex: 'Piove molto.' },
+      { nl: 'De zonsondergang', it: 'Il tramonto', ph: 'il tramonto', ex: 'Che bel tramonto!' },
+      { nl: 'Vakantiehuis', it: 'La villa / l\'appartamento', ph: 'la villa', ex: 'Abbiamo una villa.' },
+      { nl: 'Zwemmen', it: 'Nuotare', ph: 'nwotare', ex: 'Voglio nuotare.' },
+      { nl: 'Wandelen', it: 'Camminare', ph: 'kaminare', ex: 'Andiamo a camminare.' },
+      { nl: 'Genieten', it: 'Godersi', ph: 'godersi', ex: 'Godiamoci le vacanze!' },
+    ],
+    phrases: [
+      { it: 'Che bella vista!', nl: 'Wat een prachtig uitzicht!', ph: 'ke bella vista' },
+      { it: 'Può farci una foto?', nl: 'Kunt u een foto van ons maken?', ph: 'pwo fartsjie una foto' },
+      { it: 'È aperto oggi?', nl: 'Is het vandaag open?', ph: 'e aperto oddzji' },
+      { it: 'Quanto costa l\'ingresso?', nl: 'Hoeveel kost de entree?', ph: 'kwanto kosta l ingresso' },
+      { it: 'C\'è uno sconto per bambini?', nl: 'Is er korting voor kinderen?', ph: 'tsje uno skonto per bambini' },
+      { it: 'Dove posso noleggiare una bicicletta?', nl: 'Waar kan ik een fiets huren?', ph: 'dove posso noleddzjare una bitsjicletta' },
+      { it: 'Che tempo farà domani?', nl: 'Wat voor weer wordt het morgen?', ph: 'ke tempo fara domani' },
+    ]
+  }
+];
+
+// ═══════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════
+let state = {
+  learned: {}, // topicId -> Set of word indices
+  quizStats: { total: 0, correct: 0 },
+  quizCount: 0,
+  streak: 0,
+  lastActiveDate: null,
+};
+
+let currentTopic = null;
+let currentMode = 'flashcard';
+let cardIndex = 0;
+let cardFlipped = false;
+let quizState = { questions: [], current: 0, score: 0, answered: false };
+
+// ═══════════════════════════════════════════
+// PERSISTENCE
+// ═══════════════════════════════════════════
+function saveState() {
+  const toSave = {
+    ...state,
+    learned: Object.fromEntries(Object.entries(state.learned).map(([k, v]) => [k, [...v]])),
+    lastSaved: Date.now()
+  };
+  localStorage.setItem('italiano_state', JSON.stringify(toSave));
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem('italiano_state');
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    state.quizStats = saved.quizStats || { total: 0, correct: 0 };
+    state.quizCount = saved.quizCount || 0;
+    state.streak = saved.streak || 0;
+    state.lastActiveDate = saved.lastActiveDate || null;
+    state.learned = {};
+    for (const [k, v] of Object.entries(saved.learned || {})) {
+      state.learned[k] = new Set(v);
+    }
+    updateStreak();
+  } catch (e) { console.warn('Load error', e); }
+}
+
+function updateStreak() {
+  const today = new Date().toDateString();
+  if (state.lastActiveDate === today) return;
+  const yesterday = new Date(Date.now() - 86400000).toDateString();
+  if (state.lastActiveDate === yesterday) {
+    state.streak++;
+  } else if (state.lastActiveDate !== today) {
+    state.streak = state.lastActiveDate ? 0 : 0;
+  }
+  state.lastActiveDate = today;
+  saveState();
+}
+
+function markActive() {
+  const today = new Date().toDateString();
+  if (state.lastActiveDate !== today) {
+    const yesterday = new Date(Date.now() - 86400000).toDateString();
+    state.streak = (state.lastActiveDate === yesterday) ? state.streak + 1 : 1;
+    state.lastActiveDate = today;
+    saveState();
+  }
+}
+
+// ═══════════════════════════════════════════
+// SCREENS
+// ═══════════════════════════════════════════
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(name + '-screen' === 'home-screen' ? 'home' : name + '-screen').classList.add('active');
+  // Fix: home has id="home"
+  if (name === 'home') {
+    document.getElementById('home').classList.add('active');
+    renderHome();
+  } else if (name === 'stats') {
+    document.getElementById('stats-screen').classList.add('active');
+    renderStats();
+  } else if (name === 'tips') {
+    document.getElementById('tips-screen').classList.add('active');
+  }
+  // Update nav buttons
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+}
+
+function goBack() {
+  showScreen('home');
+}
+
+// ═══════════════════════════════════════════
+// HOME
+// ═══════════════════════════════════════════
+function renderHome() {
+  // Streak
+  const s = state.streak;
+  document.getElementById('streak-text').textContent = s === 0 ? 'Begin vandaag!' : `${s} dag${s !== 1 ? 'en' : ''} op rij`;
+
+  // Total progress
+  let totalWords = 0, learnedWords = 0;
+  TOPICS.forEach(t => {
+    totalWords += t.words.length;
+    learnedWords += (state.learned[t.id] || new Set()).size;
+  });
+  const pct = totalWords > 0 ? Math.round(learnedWords / totalWords * 100) : 0;
+  document.getElementById('total-progress-bar').style.width = pct + '%';
+  document.getElementById('learned-count').textContent = `${learnedWords} woorden geleerd`;
+  document.getElementById('total-count').textContent = `${pct}% compleet`;
+
+  // Topic grid
+  const grid = document.getElementById('topic-grid');
+  grid.innerHTML = '';
+  TOPICS.forEach((t, i) => {
+    const learned = (state.learned[t.id] || new Set()).size;
+    const pct = Math.round(learned / t.words.length * 100);
+    const card = document.createElement('div');
+    card.className = `topic-card t${i}`;
+    card.innerHTML = `
+      <span class="emoji">${t.emoji}</span>
+      <div class="topic-name">${t.name}</div>
+      <div class="topic-count">${t.words.length} woorden</div>
+      <div class="topic-progress">
+        <div style="font-size:11px; color:var(--text-muted)">${learned}/${t.words.length} • ${pct}%</div>
+        <div class="topic-mini-bar"><div class="topic-mini-fill" style="width:${pct}%"></div></div>
+      </div>
+    `;
+    card.onclick = () => openTopic(t);
+    grid.appendChild(card);
+  });
+}
+
+// ═══════════════════════════════════════════
+// TOPIC
+// ═══════════════════════════════════════════
+function openTopic(topic) {
+  currentTopic = topic;
+  cardIndex = 0;
+  cardFlipped = false;
+
+  document.getElementById('topic-emoji').textContent = topic.emoji;
+  document.getElementById('topic-name').textContent = topic.name;
+  document.getElementById('topic-sub').textContent = `${topic.words.length} woorden • ${topic.phrases.length} zinnen`;
+
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('topic-screen').classList.add('active');
+
+  switchMode('flashcard');
+  markActive();
+}
+
+function switchMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+  event && event.target && event.target.classList.add('active');
+  // Fallback: select by index
+  const tabs = document.querySelectorAll('.mode-tab');
+  const modeIndex = { flashcard: 0, quiz: 1, phrases: 2 }[mode];
+  tabs.forEach((t, i) => t.classList.toggle('active', i === modeIndex));
+
+  document.getElementById('mode-flashcard').style.display = mode === 'flashcard' ? 'flex' : 'none';
+  document.getElementById('mode-quiz').style.display = mode === 'quiz' ? 'flex' : 'none';
+  document.getElementById('mode-phrases').style.display = mode === 'phrases' ? 'block' : 'none';
+
+  if (mode === 'flashcard') initFlashcards();
+  else if (mode === 'quiz') initQuiz();
+  else if (mode === 'phrases') renderPhrases();
+}
+
+// ═══════════════════════════════════════════
+// FLASHCARDS
+// ═══════════════════════════════════════════
+function initFlashcards() {
+  cardIndex = 0;
+  cardFlipped = false;
+  renderCard();
+}
+
+function renderCard() {
+  if (!currentTopic) return;
+  const words = currentTopic.words;
+  const word = words[cardIndex];
+  document.getElementById('card-current').textContent = cardIndex + 1;
+  document.getElementById('card-total').textContent = words.length;
+  document.getElementById('card-nl-text').textContent = word.nl;
+  document.getElementById('card-it-text').textContent = word.it;
+  document.getElementById('card-phonetic').textContent = word.ph ? `[${word.ph}]` : '';
+  document.getElementById('card-example').textContent = word.ex || '';
+
+  const fc = document.getElementById('flashcard');
+  fc.classList.remove('flipped');
+  cardFlipped = false;
+  document.getElementById('card-result-btns').style.display = 'none';
+}
+
+function flipCard() {
+  if (!cardFlipped) {
+    document.getElementById('flashcard').classList.add('flipped');
+    cardFlipped = true;
+    document.getElementById('card-result-btns').style.display = 'block';
+  }
+}
+
+function rateCard(known) {
+  if (!currentTopic) return;
+  if (known) {
+    if (!state.learned[currentTopic.id]) state.learned[currentTopic.id] = new Set();
+    state.learned[currentTopic.id].add(cardIndex);
+    saveState();
+    showToast('✓ Geweten!');
+  } else {
+    showToast('→ Nog even oefenen');
+  }
+  nextCard();
+}
+
+function nextCard() {
+  if (!currentTopic) return;
+  if (cardIndex < currentTopic.words.length - 1) {
+    cardIndex++;
+    renderCard();
+  } else {
+    const learned = (state.learned[currentTopic.id] || new Set()).size;
+    showToast(`🎉 Klaar! ${learned}/${currentTopic.words.length} geleerd`);
+    cardIndex = 0;
+    renderCard();
+  }
+}
+
+function prevCard() {
+  if (cardIndex > 0) {
+    cardIndex--;
+    renderCard();
+  }
+}
+
+// ═══════════════════════════════════════════
+// QUIZ
+// ═══════════════════════════════════════════
+function initQuiz() {
+  if (!currentTopic) return;
+  const words = [...currentTopic.words];
+  // Shuffle
+  for (let i = words.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [words[i], words[j]] = [words[j], words[i]];
+  }
+  const questions = words.slice(0, Math.min(10, words.length)).map(w => {
+    // Get 3 wrong answers from other words
+    const others = currentTopic.words.filter(x => x.it !== w.it);
+    const shuffled = others.sort(() => Math.random() - 0.5).slice(0, 3);
+    const options = [...shuffled.map(x => x.it), w.it].sort(() => Math.random() - 0.5);
+    return { question: w.nl, answer: w.it, options, phonetic: w.ph };
+  });
+
+  quizState = { questions, current: 0, score: 0, answered: false };
+  document.getElementById('quiz-game').style.display = 'block';
+  document.getElementById('quiz-result-wrap').style.display = 'none';
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const { questions, current } = quizState;
+  if (current >= questions.length) return showQuizResult();
+  const q = questions[current];
+
+  document.getElementById('quiz-prog-fill').style.width = (current / questions.length * 100) + '%';
+  document.getElementById('quiz-qnum').textContent = `Vraag ${current + 1} van ${questions.length}`;
+  document.getElementById('quiz-question').textContent = q.question;
+  document.getElementById('quiz-qsub').textContent = 'Kies het juiste Italiaanse woord:';
+
+  const optContainer = document.getElementById('quiz-options');
+  optContainer.innerHTML = '';
+  q.options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-option';
+    btn.textContent = opt;
+    btn.onclick = () => answerQuestion(opt, btn);
+    optContainer.appendChild(btn);
+  });
+
+  document.getElementById('quiz-feedback').className = 'quiz-feedback';
+  document.getElementById('quiz-feedback').textContent = '';
+  document.getElementById('quiz-next').className = 'quiz-next-btn';
+  quizState.answered = false;
+}
+
+function answerQuestion(answer, btn) {
+  if (quizState.answered) return;
+  quizState.answered = true;
+  const q = quizState.questions[quizState.current];
+  const correct = answer === q.answer;
+
+  document.querySelectorAll('.quiz-option').forEach(b => {
+    b.classList.add('disabled');
+    if (b.textContent === q.answer) b.classList.add('correct');
+    else if (b === btn) b.classList.add('wrong');
+  });
+
+  const fb = document.getElementById('quiz-feedback');
+  if (correct) {
+    quizState.score++;
+    state.quizStats.correct++;
+    if (!state.learned[currentTopic.id]) state.learned[currentTopic.id] = new Set();
+    state.learned[currentTopic.id].add(quizState.current);
+    fb.textContent = `✓ Correct! ${q.phonetic ? '[' + q.phonetic + ']' : ''}`;
+    fb.className = 'quiz-feedback correct show';
+  } else {
+    fb.textContent = `✗ Het juiste antwoord is: "${q.answer}" ${q.phonetic ? '[' + q.phonetic + ']' : ''}`;
+    fb.className = 'quiz-feedback wrong show';
+  }
+
+  state.quizStats.total++;
+  saveState();
+  document.getElementById('quiz-next').className = 'quiz-next-btn show';
+}
+
+function nextQuestion() {
+  quizState.current++;
+  if (quizState.current >= quizState.questions.length) {
+    showQuizResult();
+  } else {
+    renderQuestion();
+  }
+}
+
+function showQuizResult() {
+  state.quizCount++;
+  saveState();
+
+  const { score, questions } = quizState;
+  const pct = Math.round(score / questions.length * 100);
+  let emoji = '😢', label = 'Blijf oefenen!';
+  if (pct >= 90) { emoji = '🏆'; label = 'Uitstekend!'; }
+  else if (pct >= 70) { emoji = '🌟'; label = 'Goed gedaan!'; }
+  else if (pct >= 50) { emoji = '👍'; label = 'Redelijk goed!'; }
+
+  document.getElementById('quiz-game').style.display = 'none';
+  document.getElementById('quiz-result-wrap').style.display = 'block';
+  document.getElementById('result-emoji').textContent = emoji;
+  document.getElementById('result-score').textContent = `${score}/${questions.length}`;
+  document.getElementById('result-label').textContent = label;
+  document.getElementById('result-sub').textContent = `${pct}% correct — ${questions.length - score} ${questions.length - score === 1 ? 'fout' : 'fouten'}`;
+}
+
+function restartQuiz() {
+  initQuiz();
+}
+
+// ═══════════════════════════════════════════
+// PHRASES
+// ═══════════════════════════════════════════
+function renderPhrases() {
+  if (!currentTopic) return;
+  const container = document.getElementById('mode-phrases');
+  container.innerHTML = '';
+  currentTopic.phrases.forEach(p => {
+    const item = document.createElement('div');
+    item.className = 'phrase-item';
+    item.innerHTML = `
+      <div class="phrase-it">${p.it}</div>
+      <div class="phrase-nl">${p.nl}</div>
+      <div class="phrase-phonetic">[${p.ph}]</div>
+    `;
+    item.onclick = () => speakIt(p.it, item);
+    container.appendChild(item);
+  });
+}
+
+function speakIt(text, el) {
+  try {
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'it-IT';
+    utter.rate = 0.85;
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utter);
+    if (el) {
+      el.classList.add('playing');
+      utter.onend = () => el.classList.remove('playing');
+    }
+    showToast('🔊 Wordt afgespeeld...');
+  } catch(e) {
+    showToast('Spraak niet beschikbaar');
+  }
+}
+
+// ═══════════════════════════════════════════
+// STATS
+// ═══════════════════════════════════════════
+function renderStats() {
+  let totalLearned = 0;
+  TOPICS.forEach(t => { totalLearned += (state.learned[t.id] || new Set()).size; });
+  const accuracy = state.quizStats.total > 0 ? Math.round(state.quizStats.correct / state.quizStats.total * 100) : 0;
+
+  document.getElementById('stat-learned').textContent = totalLearned;
+  document.getElementById('stat-quizzes').textContent = state.quizCount;
+  document.getElementById('stat-streak').textContent = state.streak;
+  document.getElementById('stat-accuracy').textContent = accuracy + '%';
+
+  const list = document.getElementById('topic-progress-list');
+  list.innerHTML = '';
+  TOPICS.forEach(t => {
+    const learned = (state.learned[t.id] || new Set()).size;
+    const pct = Math.round(learned / t.words.length * 100);
+    const item = document.createElement('div');
+    item.className = 'tpl-item';
+    item.innerHTML = `
+      <div class="tpl-top">
+        <span class="tpl-name">${t.emoji} ${t.name}</span>
+        <span class="tpl-pct">${pct}%</span>
+      </div>
+      <div class="tpl-bar"><div class="tpl-fill" style="width:${pct}%"></div></div>
+    `;
+    list.appendChild(item);
+  });
+}
+
+function confirmReset() {
+  if (confirm('Weet je zeker dat je je voortgang wilt resetten?')) {
+    state = { learned: {}, quizStats: { total: 0, correct: 0 }, quizCount: 0, streak: 0, lastActiveDate: null };
+    localStorage.removeItem('italiano_state');
+    renderStats();
+    showToast('Voortgang gereset');
+  }
+}
+
+// ═══════════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════════
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// ═══════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════
+loadState();
+renderHome();
+
+// Register service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(() => {});
+}
+
+// iOS PWA fix: prevent bounce scroll on body
+document.body.addEventListener('touchmove', e => {
+  if (e.target === document.body) e.preventDefault();
+}, { passive: false });
+</script>
+</body>
+</html>

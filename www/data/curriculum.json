@@ -1,0 +1,1892 @@
+[
+  {
+    "id": 1,
+    "title": "Begroetingen",
+    "emoji": "👋",
+    "level": "A1",
+    "description": "Leer hoe je iemand begroet en gedag zegt in Italië.",
+    "words": [
+      "w001",
+      "w002",
+      "w003",
+      "w004",
+      "w005",
+      "w006",
+      "w007",
+      "w008"
+    ],
+    "grammar": {
+      "title": "Lei vs. tu — formeel of informeel?",
+      "body": "In Italië gebruik je 'tu' voor vrienden, familie en kinderen. 'Lei' (formeel 'u') gebruik je voor onbekenden, winkeliers en oudere mensen. Begin altijd met 'Lei' — dat is veiliger en beleefd!"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Stel je voor",
+    "emoji": "🤝",
+    "level": "A1",
+    "description": "Vertel wie je bent en vraag hoe het gaat.",
+    "words": [
+      "w009",
+      "w010",
+      "w011",
+      "w012",
+      "w013",
+      "w014",
+      "w015",
+      "w016"
+    ],
+    "grammar": {
+      "title": "Essere — het werkwoord 'zijn'",
+      "body": "Sono (ik ben) · Sei (jij bent) · È (hij/zij is) · Siamo (wij zijn). Voorbeeld: 'Io sono olandese' = Ik ben Nederlands. Let op: in Italiaans laat je het voornaamwoord (io, tu) vaak weg!"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Cijfers 1-10",
+    "emoji": "🔢",
+    "level": "A1",
+    "description": "De basisgetallen die je overal nodig hebt.",
+    "words": [
+      "w017",
+      "w018",
+      "w019",
+      "w020",
+      "w021",
+      "w022",
+      "w023",
+      "w024",
+      "w025",
+      "w026"
+    ],
+    "grammar": {
+      "title": "Getallen gebruiken",
+      "body": "'Un' (één) wordt 'una' voor vrouwelijke woorden: 'un caffè' maar 'una pizza'. Getallen veranderen verder niet mee met het geslacht van het woord."
+    }
+  },
+  {
+    "id": 4,
+    "title": "Hogere cijfers & prijzen",
+    "emoji": "💶",
+    "level": "A1",
+    "description": "Grotere getallen en vragen naar de prijs.",
+    "words": [
+      "w027",
+      "w028",
+      "w029",
+      "w030",
+      "w031",
+      "w032",
+      "w033",
+      "w034"
+    ],
+    "grammar": {
+      "title": "Samengestelde getallen",
+      "body": "21 = ventuno, 22 = ventidue, 25 = venticinque. Getallen met 'uno' en 'otto' laten de laatste klinker van het tientalwoord weg: vent'uno, trent'otto. Maar: ventisette (27) behoudt de e."
+    }
+  },
+  {
+    "id": 5,
+    "title": "Kleuren",
+    "emoji": "🎨",
+    "level": "A1",
+    "description": "Beschrijf de wereld om je heen met kleuren.",
+    "words": [
+      "w035",
+      "w036",
+      "w037",
+      "w038",
+      "w039",
+      "w040",
+      "w041",
+      "w042"
+    ],
+    "grammar": {
+      "title": "Bijvoeglijke naamwoorden passen zich aan",
+      "body": "Bijvoeglijke naamwoorden veranderen mee met het geslacht: 'un gatto nero' (een zwarte kat, mannelijk) maar 'una borsa nera' (een zwarte tas, vrouwelijk). Uitzonderingen: blu, rosa, viola veranderen nooit!"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Familie",
+    "emoji": "👨‍👩‍👧‍👦",
+    "level": "A1",
+    "description": "Praat over je familieleden.",
+    "words": [
+      "w043",
+      "w044",
+      "w045",
+      "w046",
+      "w047",
+      "w048",
+      "w049",
+      "w050"
+    ],
+    "grammar": {
+      "title": "Bezittelijke voornaamwoorden",
+      "body": "Mio/mia (mijn): 'mio padre' maar 'mia madre'. Let op: voor 'familieleden in enkelvoud' gebruik je geen lidwoord! Niet 'il mio padre' maar gewoon 'mio padre'. Met meervoud wél: 'i miei fratelli'."
+    }
+  },
+  {
+    "id": 7,
+    "title": "Het lichaam",
+    "emoji": "🫀",
+    "level": "A1",
+    "description": "Lichaamsdelen — handig voor de dokter en noodgevallen.",
+    "words": [
+      "w051",
+      "w052",
+      "w053",
+      "w054",
+      "w055",
+      "w056",
+      "w057",
+      "w058"
+    ],
+    "grammar": {
+      "title": "Lidwoorden: il, la, l', lo",
+      "body": "'Il' voor mannelijke woorden (il naso). 'La' voor vrouwelijke woorden (la bocca). 'L'' voor woorden die beginnen met een klinker (l'occhio, l'orecchio). 'Lo' voor woorden die beginnen met s+medeklinker of z (lo stomaco)."
+    }
+  },
+  {
+    "id": 8,
+    "title": "Thuis",
+    "emoji": "🏠",
+    "level": "A1",
+    "description": "Kamers en onderdelen van het huis.",
+    "words": [
+      "w059",
+      "w060",
+      "w061",
+      "w062",
+      "w063",
+      "w064",
+      "w065",
+      "w066"
+    ],
+    "grammar": {
+      "title": "Er is / Er zijn — C'è en Ci sono",
+      "body": "'C'è' = er is (enkelvoud): 'C'è un problema.' 'Ci sono' = er zijn (meervoud): 'Ci sono due camere.' Vraagvorm: 'C'è il bagno?' (Is er een badkamer?)"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Eten & drinken",
+    "emoji": "🍝",
+    "level": "A1",
+    "description": "Basis eten en drinken — overleef elk Italiaans restaurant.",
+    "words": [
+      "w067",
+      "w068",
+      "w069",
+      "w070",
+      "w071",
+      "w072",
+      "w073",
+      "w074"
+    ],
+    "grammar": {
+      "title": "Onbepaald lidwoord: un, una, un'",
+      "body": "'Un' voor mannelijke woorden (un caffè, un vino). 'Una' voor vrouwelijke woorden (una pizza, una birra). 'Un'' voor vrouwelijke woorden die beginnen met een klinker (un'acqua, un'arancia)."
+    }
+  },
+  {
+    "id": 10,
+    "title": "In het restaurant",
+    "emoji": "🍽️",
+    "level": "A1",
+    "description": "Alles wat je nodig hebt om te bestellen en te betalen.",
+    "words": [
+      "w075",
+      "w076",
+      "w077",
+      "w078",
+      "w079",
+      "w080",
+      "w081",
+      "w082"
+    ],
+    "grammar": {
+      "title": "Voorkeuren uitdrukken met 'vorrei'",
+      "body": "'Vorrei' (ik zou graag willen) is de beleefde manier om iets te vragen in een restaurant. Formeler dan 'voglio' (ik wil). Gebruik altijd: 'Vorrei una pizza, per favore.' ipv 'Voglio una pizza.'"
+    }
+  },
+  {
+    "id": 11,
+    "title": "Winkelen",
+    "emoji": "🛍️",
+    "level": "A1",
+    "description": "Prijzen vragen, onderhandelen en betalen.",
+    "words": [
+      "w083",
+      "w084",
+      "w085",
+      "w086",
+      "w087",
+      "w088",
+      "w089",
+      "w090"
+    ],
+    "grammar": {
+      "title": "Demonstratieve voornaamwoorden: questo / quello",
+      "body": "'Questo' = dit (dichtbij): 'Quanto costa questo?' 'Quello' = dat (verder weg): 'Quanto costa quello?' Aanpassing aan geslacht: questa borsa / quel vestito. Handig in winkels!"
+    }
+  },
+  {
+    "id": 12,
+    "title": "Kleding",
+    "emoji": "👗",
+    "level": "A1",
+    "description": "Kleding benoemen en je maat aangeven.",
+    "words": [
+      "w091",
+      "w092",
+      "w093",
+      "w094",
+      "w095",
+      "w096",
+      "w097",
+      "w098"
+    ],
+    "grammar": {
+      "title": "Meervoud van zelfstandige naamwoorden",
+      "body": "Mannelijke woorden op -o worden -i: vestito → vestiti. Vrouwelijke woorden op -a worden -e: scarpa → scarpe. Woorden op -e (man. én vrouw.) worden -i: cameriere → camerieri."
+    }
+  },
+  {
+    "id": 13,
+    "title": "Transport",
+    "emoji": "🚌",
+    "level": "A1",
+    "description": "Vervoersmiddelen en reizen met het openbaar vervoer.",
+    "words": [
+      "w099",
+      "w100",
+      "w101",
+      "w102",
+      "w103",
+      "w104",
+      "w105",
+      "w106"
+    ],
+    "grammar": {
+      "title": "Voorzetsels: in, con, a",
+      "body": "'In' voor vervoermiddelen: 'vado in treno / in macchina / in aereo.' 'A piedi' = te voet. 'Con il taxi' = met de taxi. 'In bicicletta' = op de fiets. Leer deze als vaste combinaties."
+    }
+  },
+  {
+    "id": 14,
+    "title": "In de stad",
+    "emoji": "🏛️",
+    "level": "A1",
+    "description": "Gebouwen en plaatsen vinden in een Italiaanse stad.",
+    "words": [
+      "w107",
+      "w108",
+      "w109",
+      "w110",
+      "w111",
+      "w112",
+      "w113",
+      "w114"
+    ],
+    "grammar": {
+      "title": "Waar is...? — Dov'è en Dove sono",
+      "body": "'Dov'è' = waar is (enkelvoud): 'Dov'è la farmacia?' 'Dove sono' = waar zijn (meervoud): 'Dove sono i bagni?' De apostrof in 'dov'' is een afkorting van 'dove è'."
+    }
+  },
+  {
+    "id": 15,
+    "title": "Het weer",
+    "emoji": "⛅",
+    "level": "A1",
+    "description": "Praat over het weer — altijd een goed gespreksonderwerp!",
+    "words": [
+      "w115",
+      "w116",
+      "w117",
+      "w118",
+      "w119",
+      "w120",
+      "w121",
+      "w122"
+    ],
+    "grammar": {
+      "title": "Weer uitdrukken met 'fa' en 'c'è'",
+      "body": "'Fa caldo/freddo' = het is warm/koud (letterlijk: het maakt warm). 'C'è il sole/la pioggia' = er is zon/regen. 'Piove' = het regent. 'Nevica' = het sneeuwt. Dit zijn onpersoonlijke werkwoorden: geen onderwerp nodig!"
+    }
+  },
+  {
+    "id": 16,
+    "title": "Tijdsaanduidingen",
+    "emoji": "⏰",
+    "level": "A1",
+    "description": "Zeg wanneer iets gebeurt — dagdelen, gisteren en morgen.",
+    "words": [
+      "w123",
+      "w124",
+      "w125",
+      "w126",
+      "w127",
+      "w128",
+      "w129",
+      "w130"
+    ],
+    "grammar": {
+      "title": "Hoe laat is het? — Che ora è?",
+      "body": "'Sono le tre' = het is drie uur. 'È l'una' = het is één uur (alleen met 'è'!). 'Sono le tre e mezza' = half vier. 'Sono le tre e un quarto' = kwart over drie. 'Sono le tre meno un quarto' = kwart voor drie."
+    }
+  },
+  {
+    "id": 17,
+    "title": "Dagen van de week",
+    "emoji": "📅",
+    "level": "A1",
+    "description": "De zeven dagen — maak afspraken in Italië.",
+    "words": [
+      "w131",
+      "w132",
+      "w133",
+      "w134",
+      "w135",
+      "w136",
+      "w137",
+      "w138"
+    ],
+    "grammar": {
+      "title": "Dagen gebruiken zonder lidwoord",
+      "body": "Voor eenmalige gebeurtenissen: geen lidwoord. 'Lunedì vado al cinema' = maandag ga ik naar de bioscoop (die ene keer). Met lidwoord = elke week: 'Il lunedì vado in palestra' = elke maandag ga ik sporten. Dagen schrijf je in Italiaans met kleine letter."
+    }
+  },
+  {
+    "id": 18,
+    "title": "Maanden & seizoenen",
+    "emoji": "🌸",
+    "level": "A1",
+    "description": "Maanden en jaargetijden in het Italiaans.",
+    "words": [
+      "w139",
+      "w140",
+      "w141",
+      "w142",
+      "w143",
+      "w144",
+      "w145",
+      "w146"
+    ],
+    "grammar": {
+      "title": "In + maand / seizoen",
+      "body": "'In' gebruiken voor maanden en seizoenen: 'in gennaio' (in januari), 'in estate' (in de zomer). Uitzondering: 'd'estate' en 'd'inverno' zijn ook correct en veel gebruikt. Maanden schrijf je met kleine letter in Italiaans."
+    }
+  },
+  {
+    "id": 19,
+    "title": "Vrije tijd & hobby's",
+    "emoji": "🎭",
+    "level": "A1",
+    "description": "Praat over wat je leuk vindt in je vrije tijd.",
+    "words": [
+      "w147",
+      "w148",
+      "w149",
+      "w150",
+      "w151",
+      "w152",
+      "w153",
+      "w154"
+    ],
+    "grammar": {
+      "title": "Mi piace — ik vind het leuk",
+      "body": "'Mi piace' + enkelvoud: 'Mi piace la musica.' 'Mi piacciono' + meervoud: 'Mi piacciono i film.' 'Mi piace molto' = ik vind het erg leuk. 'Non mi piace' = ik vind het niet leuk. Let op: het werkwoord past zich aan het object aan, niet aan de persoon!"
+    }
+  },
+  {
+    "id": 20,
+    "title": "Sport & natuur",
+    "emoji": "⛵",
+    "level": "A1",
+    "description": "Sportactiviteiten en de natuur beschrijven.",
+    "words": [
+      "w155",
+      "w156",
+      "w157",
+      "w158",
+      "w159",
+      "w160",
+      "w161",
+      "w162"
+    ],
+    "grammar": {
+      "title": "Fare sport — sport doen",
+      "body": "'Fare' (doen/maken) + sport: 'Faccio nuoto' = ik zwem. 'Faccio calcio' = ik voetbal. 'Fare una passeggiata' = een wandeling maken. Fare is een onregelmatig werkwoord: faccio, fai, fa, facciamo, fate, fanno."
+    }
+  },
+  {
+    "id": 21,
+    "title": "De markt",
+    "emoji": "🛒",
+    "level": "A1",
+    "description": "Boodschappen doen op de Italiaanse markt — vers eten kopen.",
+    "words": [
+      "w481",
+      "w482",
+      "w483",
+      "w484",
+      "w485",
+      "w486",
+      "w487",
+      "w488"
+    ],
+    "grammar": {
+      "title": "Partitief lidwoord: del, della, degli…",
+      "body": "Voor een onbepaalde hoeveelheid gebruik je het partitieve lidwoord: 'Vorrei del pane' (ik wil wat brood). 'Del' voor mannelijk (del vino), 'della' voor vrouwelijk (della frutta), 'dell'' voor klinker (dell'olio), 'degli' voor mv mannelijk (degli spinaci). Op de markt: 'Un chilo di...' of 'Due etti di...' (twee ons van...)."
+    }
+  },
+  {
+    "id": 22,
+    "title": "Meer kleuren",
+    "emoji": "🎨",
+    "level": "A1",
+    "description": "Uitgebreider kleurenpalet — beschrijf alles om je heen.",
+    "words": [
+      "w489",
+      "w490",
+      "w491",
+      "w492",
+      "w493",
+      "w494",
+      "w495",
+      "w496"
+    ],
+    "grammar": {
+      "title": "Kleuradjectieven die nooit veranderen",
+      "body": "Sommige kleuren zijn onveranderlijk: blu, rosa, viola, beige, arancione — deze passen zich NIET aan aan het geslacht of getal: 'un vestito rosa', 'due vestiti rosa'. Andere kleuren veranderen wel: bianco/bianca/bianchi/bianche. Patronen: 'a righe' (gestreept), 'a quadri' (geruit), 'a pois' (gestippeld)."
+    }
+  },
+  {
+    "id": 23,
+    "title": "Kleding 2",
+    "emoji": "👗",
+    "level": "A1",
+    "description": "Meer kledingstukken en accessoires — compleet gekleed op vakantie.",
+    "words": [
+      "w497",
+      "w498",
+      "w499",
+      "w500",
+      "w501",
+      "w502",
+      "w503",
+      "w504"
+    ],
+    "grammar": {
+      "title": "Reflexieve werkwoorden: vestirsi, mettersi",
+      "body": "'Vestirsi' (zich aankleden): mi vesto, ti vesti, si veste. 'Mettersi' (aantrekken): mi metto il cappotto (ik trek de jas aan). Reflexieve werkwoorden hebben altijd een reflexief voornaamwoord (mi, ti, si, ci, vi, si) vóór het werkwoord. In de winkel: 'Posso provare?' (mag ik passen?)."
+    }
+  },
+  {
+    "id": 24,
+    "title": "Het lichaam 2",
+    "emoji": "🫁",
+    "level": "A1",
+    "description": "Meer lichaamsdelen — handig bij klachten aan de dokter.",
+    "words": [
+      "w505",
+      "w506",
+      "w507",
+      "w508",
+      "w509",
+      "w510",
+      "w511",
+      "w512"
+    ],
+    "grammar": {
+      "title": "Pijn uitdrukken: ho male a + lichaamsdeel",
+      "body": "'Ho male a...' = ik heb pijn aan...: 'Ho male al ginocchio' (kniepijn), 'Ho male alla schiena' (rugpijn). Let op de samensmelting: a + il = al, a + la = alla, a + l' = all'. Alternatief: 'Mi fa male il piede' (mijn voet doet pijn). 'Stanco' (moe) en 'stordito' (duizelig) zijn ook handige klachtenwoorden."
+    }
+  },
+  {
+    "id": 25,
+    "title": "Het weer 2",
+    "emoji": "🌤️",
+    "level": "A1",
+    "description": "Meer weersuitdrukkingen — van wolken tot onweer.",
+    "words": [
+      "w513",
+      "w514",
+      "w515",
+      "w516",
+      "w517",
+      "w518",
+      "w519",
+      "w520"
+    ],
+    "grammar": {
+      "title": "Onpersoonlijke werkwoorden voor het weer",
+      "body": "Werkwoorden zonder onderwerp: 'Piove' (het regent), 'Nevica' (het sneeuwt), 'Grandina' (het hagelt), 'Tuona' (het dondert). Met 'fare': 'Fa caldo/freddo/bel tempo'. Met 'esserci': 'C'è il sole/la nebbia/il vento'. 'Che tempo fa domani?' — vraag naar de weersvoorspelling."
+    }
+  },
+  {
+    "id": 26,
+    "title": "Hobby's 2",
+    "emoji": "🎵",
+    "level": "A1",
+    "description": "Meer activiteiten in je vrije tijd — van muziek tot tuinieren.",
+    "words": [
+      "w521",
+      "w522",
+      "w523",
+      "w524",
+      "w525",
+      "w526",
+      "w527",
+      "w528"
+    ],
+    "grammar": {
+      "title": "Mi piace + infinitief of zelfstandig naamwoord",
+      "body": "'Mi piace' + infinitief = ik vind het leuk om te...: 'Mi piace leggere' (ik lees graag). 'Mi piace' + zelfstandig naamwoord enkelvoud: 'Mi piace la musica'. 'Mi piacciono' + meervoud: 'Mi piacciono i libri'. Versterking: 'Mi piace molto' / 'Mi piace tantissimo'. Ontkenning: 'Non mi piace per niente'."
+    }
+  },
+  {
+    "id": 27,
+    "title": "Vervoer 2",
+    "emoji": "🚌",
+    "level": "A1",
+    "description": "Tickets kopen, vertrekken en aankomen — reis slim door Italië.",
+    "words": [
+      "w529",
+      "w530",
+      "w531",
+      "w532",
+      "w533",
+      "w534",
+      "w535",
+      "w536"
+    ],
+    "grammar": {
+      "title": "Andare a/in + bestemming of vervoermiddel",
+      "body": "'Andare a' voor steden: 'Vado a Roma'. 'Andare in' voor landen en vervoer: 'Vado in Italia', 'vado in treno'. 'Andare a piedi' = te voet gaan. 'Prendere' = nemen: 'prendo il treno/bus/taxi'. Onthoud: Italiaanse treinen valideer je vóór instap — anders boete!"
+    }
+  },
+  {
+    "id": 28,
+    "title": "Huis & meubels",
+    "emoji": "🏠",
+    "level": "A1",
+    "description": "Meubels en kamers beschrijven — thuis voel je je overal.",
+    "words": [
+      "w537",
+      "w538",
+      "w539",
+      "w540",
+      "w541",
+      "w542",
+      "w543",
+      "w544"
+    ],
+    "grammar": {
+      "title": "Voorzetsels van plaats: sul, nel, sotto, davanti a…",
+      "body": "Voorzetsels + lidwoorden versmelten: in + il = nel, su + il = sul, su + la = sulla. 'Il libro è sul tavolo' (op tafel). 'La chiave è nella borsa' (in de tas). 'Il gatto è sotto il letto' (onder het bed). 'Davanti a' (voor), 'dietro a' (achter), 'accanto a' (naast) versmelten niet."
+    }
+  },
+  {
+    "id": 29,
+    "title": "Kalender & afspraken",
+    "emoji": "📅",
+    "level": "A1",
+    "description": "Data en afspraken maken — plan je Italiaanse avontuur.",
+    "words": [
+      "w545",
+      "w546",
+      "w547",
+      "w548",
+      "w549",
+      "w550",
+      "w551",
+      "w552"
+    ],
+    "grammar": {
+      "title": "Data uitdrukken: il + rangtelwoord + maand",
+      "body": "'Il primo maggio' (1 mei — alleen 'primo' voor de eerste). Daarna: 'il due giugno', 'il quindici agosto'. 'Quanti ne abbiamo oggi?' = welke datum is het? 'Ne abbiamo il tre' = het is de derde. Voor verjaardagen: 'Il mio compleanno è il venti marzo'."
+    }
+  },
+  {
+    "id": 30,
+    "title": "Gevoelens",
+    "emoji": "😊",
+    "level": "A1",
+    "description": "Uitdrukken hoe je je voelt — essentieel voor elk gesprek.",
+    "words": [
+      "w553",
+      "w554",
+      "w555",
+      "w556",
+      "w557",
+      "w558",
+      "w559",
+      "w560"
+    ],
+    "grammar": {
+      "title": "Essere + bijvoeglijk naamwoord voor gemoedstoestand",
+      "body": "'Sono felice/triste/stanco/arrabbiato' = ik ben gelukkig/verdrietig/moe/boos. Bijvoeglijke naamwoorden passen zich aan: 'Sono stanca' (vrouw), 'Sono stanchi' (mannen mv). 'Mi sento' (ik voel me) klinkt gevoeliger: 'Mi sento un po' triste'. Gefeliciteerd — je kent nu 240 A1-woorden!"
+    }
+  },
+  {
+    "id": 31,
+    "title": "Hotel & verblijf",
+    "emoji": "🏨",
+    "level": "A2",
+    "description": "Inchecken, je kamer vinden en vragen wat je nodig hebt.",
+    "words": [
+      "w163",
+      "w164",
+      "w165",
+      "w166",
+      "w167",
+      "w168",
+      "w169",
+      "w170"
+    ],
+    "grammar": {
+      "title": "Potalis — 'potere' voor verzoeken",
+      "body": "'Posso' = mag ik / kan ik (ik + mogelijkheid): 'Posso avere un asciugamano?' 'Può' = kunt u (formeel verzoek): 'Può chiamare un taxi?' Dit zijn de twee meest gebruikte vormen van 'potere' in een hotel."
+    }
+  },
+  {
+    "id": 32,
+    "title": "Noodgevallen",
+    "emoji": "🚨",
+    "level": "A2",
+    "description": "Cruciale woorden voor noodsituaties — hoop dat je ze niet nodig hebt!",
+    "words": [
+      "w171",
+      "w172",
+      "w173",
+      "w174",
+      "w175",
+      "w176",
+      "w177",
+      "w178"
+    ],
+    "grammar": {
+      "title": "Noodgeval: gebruik de imperatief",
+      "body": "'Chiami' (bel! — formeel): 'Chiami la polizia!' 'Chiama' (bel! — informeel). In een noodgeval gebruik je de formele imperatief omdat je met onbekenden praat. Onthoud: 112 = Europees noodnummer (werkt in heel Italië)."
+    }
+  },
+  {
+    "id": 33,
+    "title": "Gezondheid",
+    "emoji": "🏥",
+    "level": "A2",
+    "description": "Symptomen beschrijven bij de dokter of apotheek.",
+    "words": [
+      "w179",
+      "w180",
+      "w181",
+      "w182",
+      "w183",
+      "w184",
+      "w185",
+      "w186"
+    ],
+    "grammar": {
+      "title": "Pijn uitdrukken — Ho mal di...",
+      "body": "'Ho mal di...' = ik heb pijn aan...: 'Ho mal di testa' (hoofdpijn), 'Ho mal di stomaco' (buikpijn), 'Ho mal di schiena' (rugpijn), 'Ho mal di denti' (kiespijn). 'Ho un dolore a...' = ik heb een pijn in/aan..."
+    }
+  },
+  {
+    "id": 34,
+    "title": "Beschrijvingen",
+    "emoji": "✨",
+    "level": "A2",
+    "description": "Dingen en mensen beschrijven met bijvoeglijke naamwoorden.",
+    "words": [
+      "w187",
+      "w188",
+      "w189",
+      "w190",
+      "w191",
+      "w192",
+      "w193",
+      "w194"
+    ],
+    "grammar": {
+      "title": "Bijvoeglijk naamwoord na het zelfstandig naamwoord",
+      "body": "In Italiaans staat het bijvoeglijk naamwoord meestal NA het zelfstandig naamwoord: 'una casa grande' (een groot huis), niet 'een grote casa'. Uitzondering: bello, brutto, nuovo, vecchio, piccolo, grande mogen ook ervoor staan voor nadruk of poëtisch effect."
+    }
+  },
+  {
+    "id": 35,
+    "title": "Gevoelens",
+    "emoji": "😊",
+    "level": "A2",
+    "description": "Beschrijf hoe je je voelt.",
+    "words": [
+      "w195",
+      "w196",
+      "w197",
+      "w198",
+      "w199",
+      "w200",
+      "w201",
+      "w202"
+    ],
+    "grammar": {
+      "title": "Mi sento vs. Sono",
+      "body": "'Mi sento' = ik voel me (tijdelijk gevoel): 'Mi sento stanco.' 'Sono' = ik ben (meer permanent of objectief): 'Sono felice.' In de praktijk wisselen Italianen beide vormen vaak af voor gevoelens."
+    }
+  },
+  {
+    "id": 36,
+    "title": "Werkwoorden in actie",
+    "emoji": "⚡",
+    "level": "A2",
+    "description": "De meest gebruikte werkwoorden om actie uit te drukken.",
+    "words": [
+      "w203",
+      "w204",
+      "w205",
+      "w206",
+      "w207",
+      "w208",
+      "w209",
+      "w210"
+    ],
+    "grammar": {
+      "title": "Regelmatige werkwoorden: -are, -ere, -ire",
+      "body": "Werkwoorden op -are (parlare): parlo, parli, parla, parliamo, parlate, parlano. Op -ere (bere): bevo, bevi, beve, beviamo, bevete, bevono. Op -ire (dormire): dormo, dormi, dorme, dormiamo, dormite, dormono. Leer de ik-vorm (parlo, bevo, dormo) als eerste!"
+    }
+  },
+  {
+    "id": 37,
+    "title": "Nuttige uitdrukkingen",
+    "emoji": "💬",
+    "level": "A2",
+    "description": "Krachtige zinnen om je te redden in elke situatie.",
+    "words": [
+      "w211",
+      "w212",
+      "w213",
+      "w214",
+      "w215",
+      "w216",
+      "w217",
+      "w218"
+    ],
+    "grammar": {
+      "title": "Modale werkwoorden: volere, potere, dovere",
+      "body": "Voglio (ik wil) · Posso (ik kan/mag) · Devo (ik moet). Deze drie + infinitief zijn goud waard: 'Voglio mangiare' (ik wil eten), 'Posso pagare?' (mag ik betalen?), 'Devo andare' (ik moet gaan). Leer deze drie van buiten!"
+    }
+  },
+  {
+    "id": 38,
+    "title": "Richting wijzen",
+    "emoji": "🗺️",
+    "level": "A2",
+    "description": "De weg vragen en uitleggen.",
+    "words": [
+      "w219",
+      "w220",
+      "w221",
+      "w222",
+      "w223",
+      "w224",
+      "w225",
+      "w226"
+    ],
+    "grammar": {
+      "title": "De weg uitleggen — werkwoorden",
+      "body": "'Andare dritto' = rechtdoor gaan. 'Girare a destra/sinistra' = rechts/links afslaan. 'Prendere la prima strada' = de eerste straat nemen. 'Attraversare la piazza' = het plein oversteken. Gebruik de formele imperatief (giri, vada) voor beleefde aanwijzingen."
+    }
+  },
+  {
+    "id": 39,
+    "title": "De natuur",
+    "emoji": "🌿",
+    "level": "A2",
+    "description": "Italiaans landschap en natuur beschrijven.",
+    "words": [
+      "w227",
+      "w228",
+      "w229",
+      "w230",
+      "w231",
+      "w232",
+      "w233",
+      "w234"
+    ],
+    "grammar": {
+      "title": "Che + bijvoeglijk naamwoord — uitroepen",
+      "body": "'Che bello!' (Wat mooi!), 'Che brutto!' (Wat lelijk!), 'Che caldo!' (Wat warm!). Dit is de meest Italiaanse manier om je verwondering uit te drukken. Italianen zijn expressief — gebruik dit gerust!"
+    }
+  },
+  {
+    "id": 40,
+    "title": "Klaar voor vertrek! 🇮🇹",
+    "emoji": "✈️",
+    "level": "A2",
+    "description": "Afsluitende les: laatste uitdrukkingen voor je vakantie.",
+    "words": [
+      "w235",
+      "w236",
+      "w237",
+      "w238",
+      "w239",
+      "w240"
+    ],
+    "grammar": {
+      "title": "Gefeliciteerd — A1 afgerond!",
+      "body": "Je kent nu 240 Italiaanse woorden en de basisgrammatica van A1. Je kunt jezelf voorstellen, eten bestellen, de weg vragen, in een hotel verblijven en noodsituaties aan. Continua così! (Ga zo door!) — Volgende stap: A2!"
+    }
+  },
+  {
+    "id": 41,
+    "title": "In het café",
+    "emoji": "☕",
+    "level": "A2",
+    "description": "Bestel drankjes en vraag om de rekening als een echte Italiaan.",
+    "words": [
+      "w241",
+      "w242",
+      "w243",
+      "w244",
+      "w245",
+      "w246",
+      "w247",
+      "w248"
+    ],
+    "grammar": {
+      "title": "Bestellen — Vorrei vs. Voglio",
+      "body": "'Vorrei' (ik zou graag willen) is beleefder dan 'voglio' (ik wil): gebruik 'vorrei' bij het bestellen. 'Un caffè, per favore' = een koffie, alsjeblieft. In Italië drink je een espresso staand aan de bar — dat is sneller en goedkoper!"
+    }
+  },
+  {
+    "id": 42,
+    "title": "Al ristorante",
+    "emoji": "🍝",
+    "level": "A2",
+    "description": "Een maaltijd bestellen van antipasto tot dolce.",
+    "words": [
+      "w249",
+      "w250",
+      "w251",
+      "w252",
+      "w253",
+      "w254",
+      "w255",
+      "w256"
+    ],
+    "grammar": {
+      "title": "De maaltijdstructuur in Italië",
+      "body": "Een Italiaanse maaltijd bestaat uit: antipasto (voorgerecht), primo (pasta/risotto), secondo (vlees/vis) met contorno (bijgerecht), en dolce (dessert). Je hoeft niet alles te nemen! 'Il conto, per favore' (de rekening alsjeblieft) zeg je pas als je echt wilt betalen."
+    }
+  },
+  {
+    "id": 43,
+    "title": "Vervoer",
+    "emoji": "🚆",
+    "level": "A2",
+    "description": "Trein, bus en vliegtuig — kom overal in Italië.",
+    "words": [
+      "w257",
+      "w258",
+      "w259",
+      "w260",
+      "w261",
+      "w262",
+      "w263",
+      "w264"
+    ],
+    "grammar": {
+      "title": "Treinen in Italië — Trenitalia & Italo",
+      "body": "Italië heeft twee grote treinmaatschappijen: Trenitalia en Italo. 'Frecciarossa' = hogesnelheidstrein. Koop altijd een 'biglietto' (ticket) van tevoren en valideer het voor het instappen! 'In ritardo' = vertraging — helaas soms van toepassing."
+    }
+  },
+  {
+    "id": 44,
+    "title": "Hotel & verblijf",
+    "emoji": "🏨",
+    "level": "A2",
+    "description": "Inchecken, je kamer regelen en voorzieningen vragen.",
+    "words": [
+      "w265",
+      "w266",
+      "w267",
+      "w268",
+      "w269",
+      "w270",
+      "w271",
+      "w272"
+    ],
+    "grammar": {
+      "title": "Formele verzoeken in het hotel",
+      "body": "'Avrei bisogno di...' (ik zou... nodig hebben) is de beleefde manier om iets te vragen. 'Potrebbe...' (zou u kunnen...?) werkt ook uitstekend: 'Potrebbe darmi un altro asciugamano?' In Italië zijn hotels ingedeeld van 1 tot 5 sterren — een 'agriturismo' is een sfeervolle boerderijaccommodatie!"
+    }
+  },
+  {
+    "id": 45,
+    "title": "Familie",
+    "emoji": "👨‍👩‍👧‍👦",
+    "level": "A2",
+    "description": "Praat over je familie — Italianen hechten enorm aan la famiglia.",
+    "words": [
+      "w273",
+      "w274",
+      "w275",
+      "w276",
+      "w277",
+      "w278",
+      "w279",
+      "w280"
+    ],
+    "grammar": {
+      "title": "Bezittelijk voornaamwoord + familie",
+      "body": "Bij familieleden in enkelvoud: GEEN lidwoord! 'Mia madre' (niet 'la mia madre'). 'Mio padre', 'mia sorella', 'mio fratello'. Met lidwoord bij meervoud of bijvoeglijk naamwoord: 'la mia sorella maggiore' (mijn oudere zus). Uitzondering: 'il mio nonno' — opa en oma wél met lidwoord!"
+    }
+  },
+  {
+    "id": 46,
+    "title": "De weg vragen",
+    "emoji": "🗺️",
+    "level": "A2",
+    "description": "Specifieke wegaanwijzingen begrijpen en geven.",
+    "words": [
+      "w281",
+      "w282",
+      "w283",
+      "w284",
+      "w285",
+      "w286",
+      "w287",
+      "w288"
+    ],
+    "grammar": {
+      "title": "Formele imperatief voor wegaanwijzingen",
+      "body": "Bij de weg vragen gebruik je de formele imperatief: 'Giri a sinistra' (sla linksaf), 'Vada dritto' (ga rechtdoor), 'Prenda la prima strada' (neem de eerste straat), 'Attraversi il ponte' (steek de brug over). Informeel: 'Gira', 'Vai', 'Prendi', 'Attraversa'."
+    }
+  },
+  {
+    "id": 47,
+    "title": "Het weer",
+    "emoji": "☀️",
+    "level": "A2",
+    "description": "Praat over het weer — altijd een goed gesprekonderwerp!",
+    "words": [
+      "w289",
+      "w290",
+      "w291",
+      "w292",
+      "w293",
+      "w294",
+      "w295",
+      "w296"
+    ],
+    "grammar": {
+      "title": "Weersuitdrukkingen met 'fare' en 'esserci'",
+      "body": "'Fa caldo/freddo' = het is warm/koud (letterlijk: het maakt warmte/kou). 'C'è il sole/vento' = de zon schijnt / het waait (letterlijk: er is zon/wind). 'Piove' = het regent. 'Nevica' = het sneeuwt. 'Che tempo fa?' = hoe is het weer? (letterlijk: wat voor weer maakt het?)"
+    }
+  },
+  {
+    "id": 48,
+    "title": "Gezondheid",
+    "emoji": "🏥",
+    "level": "A2",
+    "description": "Klachten beschrijven bij de dokter of apotheek.",
+    "words": [
+      "w297",
+      "w298",
+      "w299",
+      "w300",
+      "w301",
+      "w302",
+      "w303",
+      "w304"
+    ],
+    "grammar": {
+      "title": "Pijn en klachten uitdrukken",
+      "body": "'Ho mal di...' + lichaamsdeel: 'Ho mal di testa' (hoofdpijn), 'Ho mal di stomaco' (buikpijn). 'Mi fa male...' + lichaamsdeel: 'Mi fa male la gamba' (mijn been doet pijn). 'Ho la febbre' = ik heb koorts. Noodsituatie? Bel 118 (ambulance) of 112 (algemeen noodnummer)."
+    }
+  },
+  {
+    "id": 49,
+    "title": "Activiteiten & hobby's",
+    "emoji": "🎭",
+    "level": "A2",
+    "description": "Vertel wat je graag doet in je vrije tijd.",
+    "words": [
+      "w305",
+      "w306",
+      "w307",
+      "w308",
+      "w309",
+      "w310",
+      "w311",
+      "w312"
+    ],
+    "grammar": {
+      "title": "Mi piace + infinitief",
+      "body": "'Mi piace + infinitief' = ik vind het leuk om te...: 'Mi piace nuotare' (ik zwem graag), 'Mi piace cucinare' (ik kook graag). 'Amo + infinitief' = ik ben dol op: 'Amo viaggiare!' Sterk positief. 'Non mi piace' = ik vind het niet leuk. 'Odio' = ik haat (voorzichtig gebruiken!)."
+    }
+  },
+  {
+    "id": 50,
+    "title": "Plannen maken",
+    "emoji": "📅",
+    "level": "A2",
+    "description": "Afspraken maken en over de toekomst praten.",
+    "words": [
+      "w313",
+      "w314",
+      "w315",
+      "w316",
+      "w317",
+      "w318",
+      "w319",
+      "w320"
+    ],
+    "grammar": {
+      "title": "De nabije toekomst — stare per & andare a",
+      "body": "'Sto per + infinitief' = ik sta op het punt om...: 'Sto per partire' (ik ga zo vertrekken). 'Vado a + infinitief' = ik ga... doen: 'Vado a mangiare' (ik ga eten). Voor afspraken: 'Ci vediamo domani!' (tot morgen!), 'A presto!' (tot snel!), 'A dopo!' (tot straks!)."
+    }
+  },
+  {
+    "id": 51,
+    "title": "De luchthaven",
+    "emoji": "✈️",
+    "level": "A2",
+    "description": "Alles voor een vlotte reis — inchecken, gates en boardingpassen.",
+    "words": [
+      "w561",
+      "w562",
+      "w563",
+      "w564",
+      "w565",
+      "w566",
+      "w567",
+      "w568"
+    ],
+    "grammar": {
+      "title": "Dovere + infinitief — verplichting op het vliegveld",
+      "body": "'Dovere' (moeten) + infinitief: 'Devo imbarcarmi entro venti minuti' (ik moet binnen twintig minuten instappen). 'Devo presentarmi al gate' (ik moet me melden bij de gate). Op Italiaanse vluchten wordt snel gesproken — vraag gerust 'Può ripetere?' (kunt u herhalen?)."
+    }
+  },
+  {
+    "id": 52,
+    "title": "Bij de dokter",
+    "emoji": "🤒",
+    "level": "A2",
+    "description": "Klachten beschrijven en medicijnen regelen in Italië.",
+    "words": [
+      "w569",
+      "w570",
+      "w571",
+      "w572",
+      "w573",
+      "w574",
+      "w575",
+      "w576"
+    ],
+    "grammar": {
+      "title": "Da + tijdsduur — hoe lang al?",
+      "body": "'Da' + tijdsduur geeft aan hoe lang iets al gaande is: 'Ho la febbre da tre giorni' (ik heb al drie dagen koorts). 'Sono in Italia da due settimane' (ik ben al twee weken in Italië). Let op: in het Italiaans gebruik je de tegenwoordige tijd + 'da', niet de verleden tijd zoals in het Nederlands."
+    }
+  },
+  {
+    "id": 53,
+    "title": "Beroepen",
+    "emoji": "💼",
+    "level": "A2",
+    "description": "Praat over werk en beroepen — wat doe jij voor de kost?",
+    "words": [
+      "w577",
+      "w578",
+      "w579",
+      "w580",
+      "w581",
+      "w582",
+      "w583",
+      "w584"
+    ],
+    "grammar": {
+      "title": "Lidwoorden bij beroepen: wel of geen?",
+      "body": "Na 'essere' (zijn) gebruik je GEEN lidwoord bij beroepen: 'Sono medico' (ik ben dokter). Maar met een bijvoeglijk naamwoord WEL: 'Sono un bravo medico' (ik ben een goede dokter). 'Che lavoro fai?' = wat doe jij voor werk? 'Lavoro come...' = ik werk als...: 'Lavoro come insegnante'."
+    }
+  },
+  {
+    "id": 54,
+    "title": "De natuur",
+    "emoji": "🌿",
+    "level": "A2",
+    "description": "Italiaans landschap en natuur — van de Alpen tot de Middellandse Zee.",
+    "words": [
+      "w585",
+      "w586",
+      "w587",
+      "w588",
+      "w589",
+      "w590",
+      "w591",
+      "w592"
+    ],
+    "grammar": {
+      "title": "Vergelijkingen: più…di en bellissimo",
+      "body": "Comparatief: 'Il mare è più bello della montagna' (de zee is mooier dan de berg). Onregelmatig: buono → migliore, cattivo → peggiore. Absoluut superlatief: 'bellissimo' (heel mooi, -issimo). 'La Sardegna è bellissima!' — gebruik dit volop, het klinkt als een echte Italiaan."
+    }
+  },
+  {
+    "id": 55,
+    "title": "Technologie",
+    "emoji": "💻",
+    "level": "A2",
+    "description": "De digitale wereld in het Italiaans — app, wifi en meer.",
+    "words": [
+      "w593",
+      "w594",
+      "w595",
+      "w596",
+      "w597",
+      "w598",
+      "w599",
+      "w600"
+    ],
+    "grammar": {
+      "title": "Conditioneel: potrei/potresti — beleefd vragen",
+      "body": "'Potrei' (ik zou kunnen), 'potresti' (jij zou kunnen): 'Potresti aiutarmi?' (zou jij me kunnen helpen?). Conditioneel = beleefder dan tegenwoordige tijd. 'Potrei usare il tuo charger?' = zou ik jouw oplader mogen gebruiken? Gebruik ook voor hypothetische situaties: 'Senza wifi, non potrei lavorare'."
+    }
+  },
+  {
+    "id": 56,
+    "title": "Muziek & cultuur",
+    "emoji": "🎶",
+    "level": "A2",
+    "description": "De rijke muziek- en kunstcultuur van Italië verkennen.",
+    "words": [
+      "w601",
+      "w602",
+      "w603",
+      "w604",
+      "w605",
+      "w606",
+      "w607",
+      "w608"
+    ],
+    "grammar": {
+      "title": "Non solo… ma anche — niet alleen… maar ook",
+      "body": "'Non solo… ma anche' verbindt twee elementen: 'L'Italia è famosa non solo per la pasta, ma anche per l'opera'. Andere verbindingen: 'sia… sia' (zowel… als), 'né… né' (noch… noch). Gebruik ze om je Italiaans genuanceerder te maken."
+    }
+  },
+  {
+    "id": 57,
+    "title": "Sport gevorderd",
+    "emoji": "⚽",
+    "level": "A2",
+    "description": "Sport bespreken als een echte Italiaan — van calcio tot tennis.",
+    "words": [
+      "w609",
+      "w610",
+      "w611",
+      "w612",
+      "w613",
+      "w614",
+      "w615",
+      "w616"
+    ],
+    "grammar": {
+      "title": "Stare + gerundio — bezig zijn met",
+      "body": "'Stare + gerundio' drukt uit dat iets nu aan de gang is: 'Sto guardando la partita' (ik kijk naar de wedstrijd). Gerundio: -are → -ando (guardare → guardando), -ere → -endo (correre → correndo), -ire → -endo (dormire → dormendo). 'Cosa stai facendo?' = wat ben je aan het doen?"
+    }
+  },
+  {
+    "id": 58,
+    "title": "Reizen gevorderd",
+    "emoji": "🌍",
+    "level": "A2",
+    "description": "Reisplanning, reserveringen en avontuurlijk reizen in Italië.",
+    "words": [
+      "w617",
+      "w618",
+      "w619",
+      "w620",
+      "w621",
+      "w622",
+      "w623",
+      "w624"
+    ],
+    "grammar": {
+      "title": "Congiuntivo na sperare/volere — hopen en willen",
+      "body": "'Sperare che' + congiuntivo: 'Spero che il viaggio sia bello' (ik hoop dat de reis mooi is). 'Volere che' + congiuntivo: 'Voglio che tu venga con me'. Congiuntivo presente: sia, abbia, vada, faccia. In dagelijks taalgebruik klinkt het beschaafder mét congiuntivo."
+    }
+  },
+  {
+    "id": 59,
+    "title": "Winkelen gevorderd",
+    "emoji": "🛍️",
+    "level": "A2",
+    "description": "Prijzen onderhandelen, ruilen en slim winkelen in Italië.",
+    "words": [
+      "w625",
+      "w626",
+      "w627",
+      "w628",
+      "w629",
+      "w630",
+      "w631",
+      "w632"
+    ],
+    "grammar": {
+      "title": "Directe en indirecte objectspronaamwoorden",
+      "body": "Direct object (lo/la/li/le): 'Compro il vestito' → 'Lo compro' (ik koop het). Indirect object (mi/ti/gli/le): 'Do il scontrino al commesso' → 'Gli do il scontrino'. In een winkel: 'Me lo può mostrare?' (kunt u het me laten zien?). Ze staan vóór het werkwoord of achteraan de infinitief."
+    }
+  },
+  {
+    "id": 60,
+    "title": "Stad & toerisme",
+    "emoji": "🏛️",
+    "level": "A2",
+    "description": "Bezienswaardigheden, monumenten en het echte Italia scoprire!",
+    "words": [
+      "w633",
+      "w634",
+      "w635",
+      "w636",
+      "w637",
+      "w638",
+      "w639",
+      "w640"
+    ],
+    "grammar": {
+      "title": "Passief: essere + voltooid deelwoord",
+      "body": "Passief = 'essere' + voltooid deelwoord: 'Il Colosseo è stato costruito dai Romani'. 'Venire' + deelwoord voor gewoontepassief: 'Il museo viene visitato da milioni di turisti'. 'Da' = door (handelende persoon). Italië heeft meer UNESCO-sites dan elk ander land!"
+    }
+  },
+  {
+    "id": 61,
+    "title": "Meningen geven",
+    "emoji": "💬",
+    "level": "B1",
+    "description": "Zeg wat je denkt — en doe het als een echte Italiaan.",
+    "words": [
+      "w321",
+      "w322",
+      "w323",
+      "w324",
+      "w325",
+      "w326",
+      "w327",
+      "w328"
+    ],
+    "grammar": {
+      "title": "Meningen uitdrukken in het Italiaans",
+      "body": "'Secondo me' (volgens mij) is de meest gebruikte uitdrukking. 'Penso che + congiuntivo' is formeler: 'Penso che sia bello' (ik denk dat het mooi is). In dagelijks taalgebruik zeggen Italianen ook 'Penso che è bello' — minder formeel maar heel gangbaar. 'Hai ragione!' = je hebt gelijk!"
+    }
+  },
+  {
+    "id": 62,
+    "title": "Passato prossimo",
+    "emoji": "⏮️",
+    "level": "B1",
+    "description": "Vertel wat je hebt gedaan — de voltooide tijd.",
+    "words": [
+      "w329",
+      "w330",
+      "w331",
+      "w332",
+      "w333",
+      "w334",
+      "w335",
+      "w336"
+    ],
+    "grammar": {
+      "title": "Passato prossimo — avere of essere?",
+      "body": "De voltooide tijd gebruik je met 'avere' of 'essere'. Avere voor transitive werkwoorden: 'ho mangiato', 'ho visto'. Essere voor bewegingswerkwoorden en reflexieve werkwoorden: 'sono andato', 'mi sono divertito'. Met essere past het deelwoord zich aan: 'sono andato' (man) / 'sono andata' (vrouw)."
+    }
+  },
+  {
+    "id": 63,
+    "title": "Het imperfetto",
+    "emoji": "📽️",
+    "level": "B1",
+    "description": "Beschrijf het verleden — gewoontes en sfeer van vroeger.",
+    "words": [
+      "w337",
+      "w338",
+      "w339",
+      "w340",
+      "w341",
+      "w342",
+      "w343",
+      "w344"
+    ],
+    "grammar": {
+      "title": "Imperfetto vs. passato prossimo",
+      "body": "Imperfetto gebruik je voor: gewoontes ('andavo a scuola'), beschrijvingen ('era bello'), achtergrond ('c'era molta gente'). Passato prossimo voor: eenmalige acties ('sono andato'). Klassieke combinatie: 'Mentre mangiavo, è arrivato Marco.' (terwijl ik at, arriveerde Marco — imperfetto + passato prossimo)."
+    }
+  },
+  {
+    "id": 64,
+    "title": "De toekomst",
+    "emoji": "🔮",
+    "level": "B1",
+    "description": "Plannen en voorspellingen — toekomende tijd.",
+    "words": [
+      "w345",
+      "w346",
+      "w347",
+      "w348",
+      "w349",
+      "w350",
+      "w351",
+      "w352"
+    ],
+    "grammar": {
+      "title": "Futuro semplice — onregelmatige werkwoorden",
+      "body": "Regelmatig: parlare → parlerò, finire → finirò. Onregelmatig (must-know): essere → sarò, avere → avrò, fare → farò, andare → andrò, venire → verrò, potere → potrò. Tip: Italianen gebruiken vaak de tegenwoordige tijd voor toekomstige zekerheid: 'Domani vado al mare' = morgen ga ik naar het strand."
+    }
+  },
+  {
+    "id": 65,
+    "title": "Vergelijken",
+    "emoji": "⚖️",
+    "level": "B1",
+    "description": "Vergelij k mensen, plaatsen en dingen als een pro.",
+    "words": [
+      "w353",
+      "w354",
+      "w355",
+      "w356",
+      "w357",
+      "w358",
+      "w359",
+      "w360"
+    ],
+    "grammar": {
+      "title": "Comparatief en superlatief",
+      "body": "Comparatief: 'più ... di/che' (meer dan) en 'meno ... di/che' (minder dan). Ongeregelmatig: buono → meglio/il migliore, cattivo → peggio/il peggiore, grande → maggiore, piccolo → minore. Superlatief: 'il più bello' (de mooiste). Absoluut superlatief: 'bellissimo' (heel mooi, -issimo achtervoegsel)."
+    }
+  },
+  {
+    "id": 66,
+    "title": "Verbindingswoorden",
+    "emoji": "🔗",
+    "level": "B1",
+    "description": "Zinnen koppelen en je verhaal vloeiend maken.",
+    "words": [
+      "w361",
+      "w362",
+      "w363",
+      "w364",
+      "w365",
+      "w366",
+      "w367",
+      "w368"
+    ],
+    "grammar": {
+      "title": "Coherente zinnen bouwen",
+      "body": "Verbindingswoorden maken je Italiaans vloeiend: 'però/ma' (maar), 'quindi/allora' (dus), 'invece' (in plaats van / terwijl), 'mentre' (terwijl), 'purtroppo' (helaas), 'fortunatamente' (gelukkig), 'infatti' (inderdaad), 'nonostante + zelfstandig naamwoord' (ondanks). Gebruik ze actief — ze maken je klinken als een native!"
+    }
+  },
+  {
+    "id": 67,
+    "title": "Werk & kantoor",
+    "emoji": "💼",
+    "level": "B1",
+    "description": "Italiaans op het werk — vergaderen, deadlines en contracten.",
+    "words": [
+      "w369",
+      "w370",
+      "w371",
+      "w372",
+      "w373",
+      "w374",
+      "w375",
+      "w376"
+    ],
+    "grammar": {
+      "title": "Zakelijke uitdrukkingen",
+      "body": "'Avere un colloquio' = een sollicitatiegesprek hebben. 'Essere in scadenza' = bijna verlopen / de deadline nadert. In Italië is het normaal 'Lei' te gebruiken met collega's die je niet goed kent. Handige zinnen: 'Possiamo fissare una riunione?' (kunnen we een vergadering plannen?), 'Entro quando?' (voor wanneer?)."
+    }
+  },
+  {
+    "id": 68,
+    "title": "Karaktereigenschappen",
+    "emoji": "🌟",
+    "level": "B1",
+    "description": "Beschrijf mensen en hun persoonlijkheid.",
+    "words": [
+      "w377",
+      "w378",
+      "w379",
+      "w380",
+      "w381",
+      "w382",
+      "w383",
+      "w384"
+    ],
+    "grammar": {
+      "title": "Bijvoeglijke naamwoorden — geslacht en meervoud",
+      "body": "Mannelijk enkelvoud: gentile, simpatico, onesto. Vrouwelijk enkelvoud: gentile, simpatica, onesta. Meervoud (mv): gentili, simpatici/simpatiche, onesti/oneste. Let op: woorden op -e (gentile, intelligente) veranderen alleen in meervoud (-i). Woorden op -o/-a veranderen ook in enkelvoud: simpatico (m) → simpatica (v)."
+    }
+  },
+  {
+    "id": 69,
+    "title": "Beschrijvingen",
+    "emoji": "🎭",
+    "level": "B1",
+    "description": "Geef indrukken en beschrijf hoe iets voelt.",
+    "words": [
+      "w385",
+      "w386",
+      "w387",
+      "w388",
+      "w389",
+      "w390",
+      "w391",
+      "w392"
+    ],
+    "grammar": {
+      "title": "Indrukken uitdrukken — che + bijvoeglijk naamwoord",
+      "body": "'Che + bijvoeglijk naamwoord' = wat een ...!: 'Che bello!' (wat mooi!), 'Che incredibile!' (wat ongelooflijk!), 'Che terribile!' (wat verschrikkelijk!). Deze uitroepen zijn typisch Italiaans. Je kunt ook zeggen: 'È davvero/molto/assolutamente + bijv.nw.': 'È davvero meraviglioso!' (het is echt prachtig!)."
+    }
+  },
+  {
+    "id": 70,
+    "title": "Reizen gevorderd",
+    "emoji": "🧳",
+    "level": "B1",
+    "description": "Alles voor een goed georganiseerde trip naar Italië.",
+    "words": [
+      "w393",
+      "w394",
+      "w395",
+      "w396",
+      "w397",
+      "w398",
+      "w399",
+      "w400"
+    ],
+    "grammar": {
+      "title": "Reizen — nuttige zinsconstructies",
+      "body": "'Fare la valigia' = je koffer pakken (letterlijk: de koffer maken). 'Fare il check-in' = inchecken. 'Passare dalla dogana' = door de douane gaan. 'Fare un'escursione' = een uitstapje maken. 'Cambiare i soldi' = geld wisselen. Tip: in Italië heb je een identiteitskaart of paspoort nodig, ook voor binnenlandse hotels."
+    }
+  },
+  {
+    "id": 71,
+    "title": "Koken gevorderd",
+    "emoji": "👨‍🍳",
+    "level": "B1",
+    "description": "Smaken, recepten en de geheimen van de Italiaanse keuken.",
+    "words": [
+      "w401",
+      "w402",
+      "w403",
+      "w404",
+      "w405",
+      "w406",
+      "w407",
+      "w408"
+    ],
+    "grammar": {
+      "title": "Smaken beschrijven",
+      "body": "Italiaanse basissmaken: dolce (zoet), salato (zout/hartig), amaro (bitter), piccante (pittig), acido (zuur), sapido (smaakvol). 'Al dente' = pasta die nog een beetje bite heeft — letterlijk 'op de tand'. 'Buonissimo!' = heerlijk! (superlatief). 'Che profumo!' = wat een heerlijke geur! Eten bespreken is in Italië een serieuze hobby."
+    }
+  },
+  {
+    "id": 72,
+    "title": "Technologie",
+    "emoji": "📱",
+    "level": "B1",
+    "description": "De digitale wereld in het Italiaans.",
+    "words": [
+      "w409",
+      "w410",
+      "w411",
+      "w412",
+      "w413",
+      "w414",
+      "w415",
+      "w416"
+    ],
+    "grammar": {
+      "title": "Technologische termen in het Italiaans",
+      "body": "Veel technologietermen zijn Anglicismen in het Italiaans: smartphone, tablet, wifi, email, app. Maar er zijn ook Italiaanse woorden: 'applicazione' (app), 'rete' (netwerk), 'schermo' (scherm), 'tastiera' (toetsenbord). Gebruik 'collegato/a' voor 'verbonden': 'Sono collegato al wifi' (ik ben verbonden met wifi)."
+    }
+  },
+  {
+    "id": 73,
+    "title": "Natuur & milieu",
+    "emoji": "🌿",
+    "level": "B1",
+    "description": "Praat over het milieu, duurzaamheid en de natuur.",
+    "words": [
+      "w417",
+      "w418",
+      "w419",
+      "w420",
+      "w421",
+      "w422",
+      "w423",
+      "w424"
+    ],
+    "grammar": {
+      "title": "Het milieu bespreken — si impersonale",
+      "body": "'Si + werkwoord' maakt uitspraken algemeen (onpersoonlijk): 'Si deve riciclare' (men moet recyclen / je moet recyclen). 'Bisogna + infinitief' = het is noodzakelijk om...: 'Bisogna ridurre lo spreco' (je moet verspilling verminderen). Italië heeft prachtige natuur: de Dolomieten, de Middellandse Zee, en uitgestrekte nationale parken."
+    }
+  },
+  {
+    "id": 74,
+    "title": "Gezondheid & welzijn",
+    "emoji": "🧘",
+    "level": "B1",
+    "description": "Gezond en gelukkig leven — de Italiaanse manier.",
+    "words": [
+      "w425",
+      "w426",
+      "w427",
+      "w428",
+      "w429",
+      "w430",
+      "w431",
+      "w432"
+    ],
+    "grammar": {
+      "title": "Gezondheidsadvies geven — dovere & bisognare",
+      "body": "'Dovere + infinitief' = moeten: 'Devi riposare di più' (je moet meer rusten). 'Bisogna + infinitief' = het is nodig om...: 'Bisogna fare sport' (je moet sporten). 'Stare bene/male' = goed/slecht voelen: 'Come stai? — Sto bene, grazie!' Italianen kennen 'la pausa pranzo' — de lunchpauze is heilig en duurt soms 2 uur!"
+    }
+  },
+  {
+    "id": 75,
+    "title": "Relaties & gevoelens",
+    "emoji": "❤️",
+    "level": "B1",
+    "description": "Gevoelens uitdrukken en over menselijke relaties praten.",
+    "words": [
+      "w433",
+      "w434",
+      "w435",
+      "w436",
+      "w437",
+      "w438",
+      "w439",
+      "w440"
+    ],
+    "grammar": {
+      "title": "Gevoelens uitdrukken — stare + gerundio",
+      "body": "'Stare + gerundio' = iets aan het doen zijn: 'Sto piangendo' (ik sta te huilen), 'Sto ridendo' (ik sta te lachen). 'Essere + bijv.nw.' voor gevoelens: 'Sono commosso' (ik ben ontroerd), 'Sono orgoglioso' (ik ben trots). 'Mi sento' = ik voel me: 'Mi sento felice!' (ik voel me gelukkig!). Italianen zijn expressiever dan Nederlanders — omarm dat!"
+    }
+  },
+  {
+    "id": 76,
+    "title": "Sport & competitie",
+    "emoji": "⚽",
+    "level": "B1",
+    "description": "Sport, voetbal en de competitiegeest van Italië.",
+    "words": [
+      "w441",
+      "w442",
+      "w443",
+      "w444",
+      "w445",
+      "w446",
+      "w447",
+      "w448"
+    ],
+    "grammar": {
+      "title": "Sport bespreken — stative en actieve werkwoorden",
+      "body": "'Giocare a + sport' = een sport beoefenen: 'giocare a calcio' (voetballen), 'giocare a tennis'. 'Fare + sport' = ook mogelijk: 'fare nuoto' (zwemmen), 'fare jogging'. 'Tifare per' = supporteren voor: 'Tifo per la Juventus!' Voetbal (calcio) is een nationale passie — de Serie A is een van de beste competities ter wereld."
+    }
+  },
+  {
+    "id": 77,
+    "title": "Muziek",
+    "emoji": "🎵",
+    "level": "B1",
+    "description": "De kracht van Italiaanse muziek — van opera tot pop.",
+    "words": [
+      "w449",
+      "w450",
+      "w451",
+      "w452",
+      "w453",
+      "w454",
+      "w455",
+      "w456"
+    ],
+    "grammar": {
+      "title": "Muziek en kunst bespreken",
+      "body": "'Suonare + instrument' = een instrument bespelen: 'suono il pianoforte' (ik speel piano), 'suona la chitarra' (hij/zij speelt gitaar). 'Cantare' = zingen. Italië is de bakermat van de opera: Verdi, Puccini, Rossini. Maar ook moderne Italiaanse pop (cantautorato) is de moeite waard: Battisti, De André, Cocciante."
+    }
+  },
+  {
+    "id": 78,
+    "title": "Zakelijk Italiaans",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Professioneel communiceren in het Italiaans.",
+    "words": [
+      "w457",
+      "w458",
+      "w459",
+      "w460",
+      "w461",
+      "w462",
+      "w463",
+      "w464"
+    ],
+    "grammar": {
+      "title": "Formeel vs. informeel in zakelijke context",
+      "body": "In Italië begin je altijd formeel: gebruik 'Lei' en 'Buongiorno'. Pas over op 'tu' als de Italiaan dat aangeeft. Handige zakelijke zinnen: 'Le mando un'email' (ik stuur u een e-mail), 'Possiamo fissare un appuntamento?' (kunnen we een afspraak maken?), 'In allegato troverà...' (in de bijlage vindt u...). Stiptheid is in de zakelijke wereld gebruikelijk."
+    }
+  },
+  {
+    "id": 79,
+    "title": "Kunst & cultuur",
+    "emoji": "🎨",
+    "level": "B1",
+    "description": "Italië is een schatkamer van kunst, cultuur en geschiedenis.",
+    "words": [
+      "w465",
+      "w466",
+      "w467",
+      "w468",
+      "w469",
+      "w470",
+      "w471",
+      "w472"
+    ],
+    "grammar": {
+      "title": "Cultuur bespreken — passieve constructies",
+      "body": "Passief met 'essere + participio': 'Il quadro è stato dipinto da Caravaggio' (het schilderij is geschilderd door Caravaggio). 'Essere conosciuto/famoso per' = bekend zijn om: 'Firenze è famosa per l'arte rinascimentale'. UNESCO heeft meer werelderfgoedsites in Italië dan in welk ander land ook — 58 stuks!"
+    }
+  },
+  {
+    "id": 80,
+    "title": "Dolce Vita!",
+    "emoji": "☀️",
+    "level": "B1",
+    "description": "Het Italiaanse levensgenieten — jouw B1 afsluiting.",
+    "words": [
+      "w473",
+      "w474",
+      "w475",
+      "w476",
+      "w477",
+      "w478",
+      "w479",
+      "w480"
+    ],
+    "grammar": {
+      "title": "Gefeliciteerd — B1 bereikt!",
+      "body": "Je kent nu 480 Italiaanse woorden en beheerst A1, A2 én B1! Je kunt meningen geven, verleden en toekomst beschrijven, zakelijk communiceren en cultuur bespreken. La dolce vita wacht op je — een aperitivo op een Italiaans terras, een passeggiata door een historisch centrum. Complimenti! Sei fantastico/a! 🇮🇹"
+    }
+  },
+  {
+    "id": 81,
+    "title": "Politiek & samenleving",
+    "emoji": "📰",
+    "level": "B1",
+    "description": "Praat over nieuws, politiek en maatschappelijke kwesties.",
+    "words": [
+      "w641",
+      "w642",
+      "w643",
+      "w644",
+      "w645",
+      "w646",
+      "w647",
+      "w648"
+    ],
+    "grammar": {
+      "title": "Congiuntivo na meningen — pensare che…",
+      "body": "'Penso che' + congiuntivo: 'Penso che il governo abbia sbagliato' (ik denk dat de regering het fout heeft). 'Credo che', 'ritengo che', 'mi sembra che' volgen allemaal het congiuntivo. Congiuntivo passato: abbia + participio. In journalistentaal ook 'sebbene' (hoewel) + congiuntivo."
+    }
+  },
+  {
+    "id": 82,
+    "title": "Het milieu",
+    "emoji": "🌱",
+    "level": "B1",
+    "description": "Milieu, duurzaamheid en klimaatverandering bespreken.",
+    "words": [
+      "w649",
+      "w650",
+      "w651",
+      "w652",
+      "w653",
+      "w654",
+      "w655",
+      "w656"
+    ],
+    "grammar": {
+      "title": "Noodzakelijkheid: bisogna, è necessario + infinitief",
+      "body": "'Bisogna + infinitief' = men moet (onpersoonlijk): 'Bisogna riciclare di più'. 'È necessario/importante/fondamentale + infinitief': 'È importante ridurre le emissioni'. Voor persoonlijke verplichting: 'Dobbiamo proteggere l'ambiente'. Sterk en overtuigend in debatten!"
+    }
+  },
+  {
+    "id": 83,
+    "title": "Economie",
+    "emoji": "💰",
+    "level": "B1",
+    "description": "Economische begrippen en financieel nieuws in het Italiaans.",
+    "words": [
+      "w657",
+      "w658",
+      "w659",
+      "w660",
+      "w661",
+      "w662",
+      "w663",
+      "w664"
+    ],
+    "grammar": {
+      "title": "Si impersonale — men/je (algemeen)",
+      "body": "'Si + werkwoord' maakt uitspraken algemeen: 'Si dice che l'economia stia migliorando' (men zegt dat de economie verbetert). 'Si vede che...' (men ziet dat...). Met reflexief werkwoord: 'Ci si preoccupa molto'. Si impersonale klinkt objectief en formeel — perfect voor economische analyses."
+    }
+  },
+  {
+    "id": 84,
+    "title": "Gezondheid & welzijn",
+    "emoji": "🏃",
+    "level": "B1",
+    "description": "Gezond en gelukkig leven — de Italiaanse benadering van welzijn.",
+    "words": [
+      "w665",
+      "w666",
+      "w667",
+      "w668",
+      "w669",
+      "w670",
+      "w671",
+      "w672"
+    ],
+    "grammar": {
+      "title": "Progressieve vorm: stavo + gerundio (verleden)",
+      "body": "'Stavo + gerundio' = ik was aan het...: 'Stavo meditando quando il telefono ha squillato' (ik was aan het mediteren toen de telefoon ging). Combinatie met passato prossimo voor onderbroken handeling: 'Stavo correndo quando sono caduto'. Dit is een typisch Italiaanse verteltechniek."
+    }
+  },
+  {
+    "id": 85,
+    "title": "Kunst & literatuur",
+    "emoji": "📚",
+    "level": "B1",
+    "description": "Italiaanse literatuur, kunst en cultuurgeschiedenis verkennen.",
+    "words": [
+      "w673",
+      "w674",
+      "w675",
+      "w676",
+      "w677",
+      "w678",
+      "w679",
+      "w680"
+    ],
+    "grammar": {
+      "title": "Passief met venire — gewoontepassief",
+      "body": "'Venire + voltooid deelwoord' voor regelmatig/gewoontepassief: 'I romanzi di Dante vengono studiati in tutto il mondo'. Verschil: 'essere + participio' = toestand; 'venire + participio' = actie/gewoonte. 'Questo quadro viene ammirato da milioni di visitatori' — typisch in kunstbeschrijvingen."
+    }
+  },
+  {
+    "id": 86,
+    "title": "Wetenschap",
+    "emoji": "🔬",
+    "level": "B1",
+    "description": "Wetenschappelijke ontdekkingen en onderzoek beschrijven.",
+    "words": [
+      "w681",
+      "w682",
+      "w683",
+      "w684",
+      "w685",
+      "w686",
+      "w687",
+      "w688"
+    ],
+    "grammar": {
+      "title": "Prima di, dopo di + infinitief",
+      "body": "'Prima di + infinitief' = voordat: 'Prima di analizzare i dati, bisogna raccoglierli'. 'Dopo + zelfstandig naamwoord': 'Dopo la scoperta, tutto è cambiato'. 'Senza + infinitief': 'Senza esperimentare, non si scopre nulla'. Formeel en precies taalgebruik voor wetenschappelijke context!"
+    }
+  },
+  {
+    "id": 87,
+    "title": "De samenleving",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Sociale thema's, integratie en gemeenschapswaarden bespreken.",
+    "words": [
+      "w689",
+      "w690",
+      "w691",
+      "w692",
+      "w693",
+      "w694",
+      "w695",
+      "w696"
+    ],
+    "grammar": {
+      "title": "Concessief: nonostante + congiuntivo",
+      "body": "'Nonostante + congiuntivo' = hoewel: 'Nonostante la difficoltà, la società si adatta'. Alternatieven: 'anche se + indicatief' (ook al), 'benché + congiuntivo' (ook al). 'Nonostante' klinkt formeler. In minder formele context: 'Anche se è difficile, ce la facciamo!'"
+    }
+  },
+  {
+    "id": 88,
+    "title": "Onderwijs",
+    "emoji": "🎓",
+    "level": "B1",
+    "description": "Het Italiaanse onderwijssysteem en studeren in Italië.",
+    "words": [
+      "w697",
+      "w698",
+      "w699",
+      "w700",
+      "w701",
+      "w702",
+      "w703",
+      "w704"
+    ],
+    "grammar": {
+      "title": "Indirecte rede: ha detto che…",
+      "body": "Indirecte rede verandert werkwoordstijden: 'Vado all'università' → 'Ha detto che andava all'università'. Tegenwoordige tijd → imperfetto in indirecte rede. 'Ha detto di + infinitief' als het onderwerp gelijk is: 'Ha detto di aver superato l'esame' (hij zei geslaagd te zijn). Onmisbaar in academische context!"
+    }
+  },
+  {
+    "id": 89,
+    "title": "Media & communicatie",
+    "emoji": "📱",
+    "level": "B1",
+    "description": "Media-invloed, communicatie en de digitale samenleving analyseren.",
+    "words": [
+      "w705",
+      "w706",
+      "w707",
+      "w708",
+      "w709",
+      "w710",
+      "w711",
+      "w712"
+    ],
+    "grammar": {
+      "title": "Tijdsbijzinnen: quando, mentre, dopo che",
+      "body": "'Quando' = wanneer: 'Quando guardo le notizie, mi informo'. 'Mentre' = terwijl: 'Mentre leggevo il giornale, arrivò una notifica'. 'Dopo che' = nadat: 'Dopo che ha verificato la fonte, ha condiviso la notizia'. Na 'mentre' gebruik je imperfecto, na 'dopo che' passato prossimo."
+    }
+  },
+  {
+    "id": 90,
+    "title": "Toekomst & dromen",
+    "emoji": "🔮",
+    "level": "B1",
+    "description": "Jouw B1-afsluiting — droom groot en spreek vloeiend Italiaans!",
+    "words": [
+      "w713",
+      "w714",
+      "w715",
+      "w716",
+      "w717",
+      "w718",
+      "w719",
+      "w720"
+    ],
+    "grammar": {
+      "title": "Futuro anteriore — toekomst voltooid",
+      "body": "'Futuro anteriore' = wat eerder in de toekomst zal zijn gebeurd: 'Quando avrò imparato l'italiano, viaggerò per tutta Italia'. Vorming: futuro van avere/essere + participio passato. Avrò/sarai + participio. Je kent nu 720 Italiaanse woorden — complimenti, sei fantastico/a! 🇮🇹"
+    }
+  }
+]

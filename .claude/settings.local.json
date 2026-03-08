@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(node --version:*)",
+      "Bash(bun:*)",
+      "Bash(php:*)",
+      "Bash(ipconfig getifaddr:*)",
+      "Bash(# Check if macOS firewall is on /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate # Check what interfaces Python is listening on lsof -i :3456)",
+      "Bash(# Check if directory listing is shown for subdirectories curl -s \"\"http://localhost:3456/.claude/\"\")",
+      "Bash(python3:*)",
+      "WebFetch(domain:italianopervacanza.netlify.app)",
+      "Bash(curl:*)",
+      "Bash(node --check:*)",
+      "Bash(md5 \"/Users/jim.van.stratum/Applications/Taal app/www/netlify-test.html\")",
+      "Bash(md5 \"/Users/jim.van.stratum/Applications/Taal app/italiano-per-vacanza.html\")",
+      "Bash(node -e \":*)"
+    ]
+  }
+}

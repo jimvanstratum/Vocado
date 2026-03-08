@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Italiano">
+  <meta name="theme-color" content="#ce2b37">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <title>Italiano per Vacanza</title>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    :root {
+      --bg:           #0d0d1a;
+      --surface:      #1a1a2e;
+      --surface2:     #252540;
+      --border:       #2e2e50;
+      --text:         #f0f0f5;
+      --muted:        #7070a0;
+      --accent:       #f5a623;
+      --green:        #00c851;
+      --red:          #ff3b30;
+      --blue:         #4fc3f7;
+      --it-red:       #ce2b37;
+      --it-green:     #009246;
+      --radius:       16px;
+      --safe-t:       env(safe-area-inset-top, 0px);
+      --safe-b:       env(safe-area-inset-bottom, 0px);
+      --header-grad:  linear-gradient(180deg, #1a0a0f 0%, var(--bg) 100%);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:           #f2f2f7;
+        --surface:      #ffffff;
+        --surface2:     #e5e5ea;
+        --border:       #c8c8d4;
+        --text:         #1c1c2e;
+        --muted:        #6060a0;
+        --accent:       #d4880a;
+        --green:        #00a844;
+        --blue:         #0a68c4;
+        --header-grad:  linear-gradient(180deg, #fff0e0 0%, var(--bg) 100%);
+      }
+      .lesson-card.done   { background: rgba(0,168,68,0.06); }
+      .intro-card         { background: linear-gradient(160deg, #fff6e6 0%, #f0fff4 100%) !important; }
+      .grammar-card       { background: linear-gradient(135deg, #f0fafa, #fafaf0) !important; }
+      html, body          { color-scheme: light; }
+      /* Sprint 12: home-title override staat na de basisregel (zie verderop) */
+    }
+
+    /* Sprint 10: Handmatig licht thema (data-theme="light") */
+    [data-theme="light"] {
+      --bg:           #f2f2f7;
+      --surface:      #ffffff;
+      --surface2:     #e5e5ea;
+      --border:       #c8c8d4;
+      --text:         #1c1c2e;
+      --muted:        #6060a0;
+      --accent:       #d4880a;
+      --green:        #00a844;
+      --blue:         #0a68c4;
+      --header-grad:  linear-gradient(180deg, #fff0e0 0%, var(--bg) 100%);
+      color-scheme: light;
+    }
+    [data-theme="light"] .lesson-card.done   { background: rgba(0,168,68,0.06); }
+    [data-theme="light"] .intro-card         { background: linear-gradient(160deg, #fff6e6 0%, #f0fff4 100%) !important; }
+    [data-theme="light"] .grammar-card       { background: linear-gradient(135deg, #f0fafa, #fafaf0) !important; }
+    /* Sprint 12: handmatig licht thema — donker→oranje gradiënt */
+    [data-theme="light"] .home-title {
+      background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: var(--text);
+    }
+
+    /* Sprint 10: Handmatig donker thema (data-theme="dark") — forceer donker ook op lichte systemen */
+    [data-theme="dark"] {
+      --bg:           #0d0d1a;
+      --surface:      #1a1a2e;
+      --surface2:     #252540;
+      --border:       #2e2e50;
+      --text:         #f0f0f5;
+      --muted:        #7070a0;
+      --accent:       #f5a623;
+      --green:        #00c851;
+      --header-grad:  linear-gradient(180deg, #1a0a0f 0%, var(--bg) 100%);
+      color-scheme: dark;
+    }
+    [data-theme="dark"] .lesson-card.done   { background: rgba(0,200,81,0.04); }
+    [data-theme="dark"] .intro-card         { background: linear-gradient(160deg, #0d1a0d, #0d0d1a) !important; }
+    [data-theme="dark"] .grammar-card       { background: linear-gradient(135deg, #0d1a1a, #1a1a0d) !important; }
+    [data-theme="dark"] .home-title {
+      background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    html, body { height: 100%; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      overflow: hidden; }
+
+    .screen { display: none; flex-direction: column; height: 100dvh; height: var(--app-height, 100dvh); overflow: hidden; }
+    .screen.active { display: flex; }
+    .screen-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+
+    /* BOTTOM NAV */
+    .bottom-nav { display: flex; background: var(--surface); border-top: 1px solid var(--border); padding-bottom: var(--safe-b); flex-shrink: 0; }
+    .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 10px 0; cursor: pointer; color: var(--muted); font-size: 10px; gap: 3px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
+    .nav-btn.active { color: var(--accent); }
+    .nav-btn svg { width: 22px; height: 22px; fill: currentColor; }
+
+    /* HOME */
+    .home-header { padding: calc(var(--safe-t) + 20px) 20px 4px; background: var(--header-grad); }
+    .flag-bar { display: flex; height: 5px; border-radius: 3px; overflow: hidden; width: 60px; margin-bottom: 14px; }
+    .flag-bar div { flex: 1; }
+    .flag-g { background: var(--it-green); } .flag-w { background: #fff; } .flag-r { background: var(--it-red); }
+    .home-title { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, #fff 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    /* Sprint 12: lichte modus — donker→oranje gradiënt (staat ná basisregel zodat cascade klopt) */
+    @media (prefers-color-scheme: light) {
+      .home-title { background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--text); }
+    }
+    .home-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+    /* Sprint 9.1: Cursus-voortgangsbalk (vervangt Level/XP-balk) */
+    .course-progress-section { padding: 14px 20px 0; }
+    .course-progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .cp-label { font-size: 13px; font-weight: 600; color: var(--muted); }
+    .cp-pct   { font-size: 13px; font-weight: 700; color: var(--accent); }
+    .cp-track { height: 7px; background: var(--surface2); border-radius: 4px; overflow: hidden; }
+    .cp-fill  { height: 100%; background: linear-gradient(90deg, var(--it-green), var(--accent)); border-radius: 4px; transition: width 0.5s ease; }
+
+    .quick-stats { display: flex; gap: 10px; padding: 16px 20px 0; }
+    .qs-item { flex: 1; background: var(--surface); border-radius: 12px; padding: 14px 10px; text-align: center; }
+    .qs-val { font-size: 18px; font-weight: 800; color: var(--text); }
+    .qs-label { font-size: 10px; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .review-section { padding: 16px 20px 0; }
+    .review-btn { width: 100%; padding: 14px 20px; border-radius: var(--radius); background: var(--surface); border: 2px solid var(--border); color: var(--text); font-size: 15px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: all 0.15s; text-align: left; }
+    .review-btn.has-due { border-color: var(--accent); background: rgba(245,166,35,0.1); }
+    .review-btn:active { transform: scale(0.98); }
+    .review-badge { background: var(--it-red); color: #fff; border-radius: 12px; padding: 2px 8px; font-size: 12px; font-weight: 800; display: none; align-items: center; }
+    .review-btn-icon { font-size: 20px; }
+    .review-btn-text { flex: 1; }
+    .review-btn-title { font-size: 15px; font-weight: 700; }
+    .review-btn-sub { font-size: 12px; color: var(--muted); font-weight: 400; }
+
+    .section-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; padding: 20px 20px 8px; font-weight: 600; }
+    .lesson-list { padding: 0 20px 100px; display: flex; flex-direction: column; gap: 12px; }
+
+    .lesson-card { background: var(--surface); border-radius: var(--radius); border: 1.5px solid var(--border); display: flex; align-items: center; gap: 12px; padding: 16px 16px; cursor: pointer; transition: all 0.15s; }
+    .lesson-card:active { transform: scale(0.99); background: var(--surface2); }
+    .lesson-card.done { border-color: var(--it-green); }
+    .lesson-card.locked { opacity: 0.45; cursor: default; }
+    .lesson-num { width: 36px; height: 36px; border-radius: 10px; background: var(--surface2); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: var(--muted); flex-shrink: 0; }
+    .lesson-card.done .lesson-num { background: rgba(0,200,81,0.15); color: var(--green); }
+    .lesson-card-mid { flex: 1; min-width: 0; }
+    .lesson-emoji-title { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+    .lesson-emoji { font-size: 16px; }
+    .lesson-title { font-size: 15px; font-weight: 700; }
+    .lesson-done-badge { background: var(--green); color: #000; font-size: 10px; font-weight: 800; padding: 1px 6px; border-radius: 8px; }
+    .lesson-lock { font-size: 12px; }
+    .lesson-meta { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+    .lesson-bar-wrap { height: 3px; background: var(--surface2); border-radius: 2px; overflow: hidden; }
+    .lesson-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.4s; }
+    .lesson-card-right { width: 36px; text-align: right; flex-shrink: 0; }
+    .lesson-pct { font-size: 12px; font-weight: 700; color: var(--muted); }
+    .lesson-card.done .lesson-pct { color: var(--green); }
+
+    /* LESSON HEADER */
+    .lesson-header { padding: calc(var(--safe-t) + 12px) 20px 12px; background: var(--surface); border-bottom: 1px solid var(--border); flex-shrink: 0; }
+    .lesson-header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .back-btn { width: 36px; height: 36px; background: var(--surface2); border-radius: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; border: none; color: var(--text); }
+    .back-btn svg { width: 18px; height: 18px; fill: currentColor; }
+    .lesson-header-title { flex: 1; font-size: 17px; font-weight: 800; }
+    .lesson-header-badge { background: var(--surface2); color: var(--accent); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 10px; }
+    .session-xp-pill { background: rgba(245,166,35,0.15); color: var(--accent); font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 10px; border: 1px solid rgba(245,166,35,0.3); }
+    .lesson-progress-wrap { display: flex; align-items: center; gap: 8px; }
+    .lesson-progress-track { flex: 1; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+    .lesson-progress-fill { height: 100%; background: linear-gradient(90deg, var(--it-green), var(--accent)); border-radius: 3px; transition: width 0.4s ease; }
+    .lesson-progress-text { font-size: 11px; color: var(--muted); white-space: nowrap; }
+    .lesson-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 20px; display: flex; flex-direction: column; }
+    #exercise-container { flex: 1; display: flex; flex-direction: column; }
+
+    @keyframes slideIn { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
+    .slide-in { animation: slideIn 0.25s ease; }
+
+    /* EXERCISES */
+    .ex-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; font-weight: 600; }
+
+    .flashcard-ex { perspective: 1000px; cursor: pointer; margin-bottom: 20px; }
+    .fc-card { position: relative; min-height: 200px; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); border-radius: var(--radius); }
+    .fc-card.flipped { transform: rotateY(180deg); }
+    .fc-front, .fc-back { position: absolute; width: 100%; min-height: 200px; border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .fc-front { background: var(--surface); border: 2px solid var(--border); }
+    .fc-back { background: linear-gradient(135deg, #0d1a0d, #0d0d1a); border: 2px solid var(--it-green); transform: rotateY(180deg); }
+    .fc-lang { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .fc-word { font-size: 28px; font-weight: 800; text-align: center; }
+    .fc-tap-hint { font-size: 12px; color: var(--muted); margin-top: 12px; }
+    .fc-it { font-size: 32px; font-weight: 900; color: var(--accent); text-align: center; margin-bottom: 8px; }
+    .fc-ph { font-size: 14px; color: var(--muted); font-style: italic; margin-bottom: 8px; }
+    .fc-ex { font-size: 13px; color: #aaa; text-align: center; font-style: italic; }
+    .fc-audio-btn { margin-top: 14px; background: rgba(245,166,35,0.15); border: 1px solid rgba(245,166,35,0.3); color: var(--accent); padding: 8px 16px; border-radius: 10px; font-size: 13px; cursor: pointer; }
+    .fc-actions { display: flex; gap: 10px; width: 100%; }
+    .fc-btn { flex: 1; padding: 16px 8px; border-radius: 14px; border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; transition: all 0.15s; }
+    .fc-btn:active { transform: scale(0.95); }
+    .fc-btn span { font-size: 11px; font-weight: 400; }
+    .fc-hard { background: rgba(255,59,48,0.15); color: var(--red); border: 1px solid rgba(255,59,48,0.3); }
+    .fc-ok   { background: rgba(79,195,247,0.15); color: var(--blue); border: 1px solid rgba(79,195,247,0.3); }
+    .fc-easy { background: rgba(0,200,81,0.15); color: var(--green); border: 1px solid rgba(0,200,81,0.3); }
+
+    .mc-question { margin-bottom: 20px; }
+    .mc-nl { font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+    .mc-context { font-size: 13px; color: var(--muted); font-style: italic; }
+    .mc-options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+    .mc-option { display: flex; align-items: center; gap: 12px; padding: 16px; background: var(--surface); border: 2px solid var(--border); border-radius: 14px; cursor: pointer; transition: all 0.15s; text-align: left; color: var(--text); width: 100%; }
+    .mc-option:active { transform: scale(0.99); }
+    .mc-option.disabled { pointer-events: none; }
+    .mc-option.correct { background: rgba(0,200,81,0.1); border-color: var(--green); color: #7fffb0; }
+    .mc-option.wrong   { background: rgba(255,59,48,0.1); border-color: var(--red); color: #ff9090; }
+    .mc-letter { width: 28px; height: 28px; background: var(--surface2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; color: var(--muted); }
+    .mc-option.correct .mc-letter { background: var(--green); color: #000; }
+    .mc-option.wrong   .mc-letter { background: var(--red); color: #fff; }
+    .mc-text { flex: 1; font-size: 16px; font-weight: 600; }
+    .mc-play { font-size: 18px; cursor: pointer; padding: 4px; }
+    .mc-feedback { padding: 12px 16px; border-radius: 12px; font-size: 14px; font-weight: 600; display: none; margin-bottom: 12px; }
+    .mc-feedback.show { display: block; }
+    .mc-feedback.correct { background: rgba(0,200,81,0.1); color: #7fffb0; border: 1px solid rgba(0,200,81,0.3); }
+    .mc-feedback.wrong   { background: rgba(255,59,48,0.1); color: #ff9090; border: 1px solid rgba(255,59,48,0.3); }
+
+    .type-question { margin-bottom: 20px; }
+    .type-nl { font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+    .type-context { font-size: 13px; color: var(--muted); font-style: italic; }
+    .type-input-wrap { display: flex; gap: 8px; margin-bottom: 12px; }
+    .type-input { flex: 1; padding: 16px; background: var(--surface); border: 2px solid var(--border); border-radius: 14px; color: var(--text); font-size: 20px; font-weight: 700; outline: none; transition: border-color 0.2s; }
+    .type-input:focus { border-color: var(--accent); }
+    .type-input.input-correct { border-color: var(--green); background: rgba(0,200,81,0.08); }
+    .type-input.input-close   { border-color: var(--blue);  background: rgba(79,195,247,0.08); }
+    .type-input.input-wrong   { border-color: var(--red);   background: rgba(255,59,48,0.08); }
+    @keyframes shake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-6px)} 40%,80%{transform:translateX(6px)} }
+    .shake { animation: shake 0.4s ease; }
+    .type-submit-btn { width: 56px; height: 56px; background: var(--accent); color: #000; border: none; border-radius: 14px; font-size: 20px; font-weight: 800; cursor: pointer; flex-shrink: 0; transition: all 0.15s; align-self: flex-start; }
+    .type-submit-btn:active { transform: scale(0.95); }
+    .type-hint { min-height: 32px; margin-bottom: 8px; }
+    .hint-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); padding: 6px 14px; border-radius: 10px; font-size: 13px; cursor: pointer; }
+    .hint-text { font-size: 14px; color: var(--blue); font-family: monospace; letter-spacing: 2px; }
+    .type-feedback { padding: 12px 16px; border-radius: 12px; font-size: 14px; display: none; margin-bottom: 12px; }
+    .type-feedback.show { display: block; }
+    .type-feedback.correct { background: rgba(0,200,81,0.1); color: #7fffb0; border: 1px solid rgba(0,200,81,0.3); }
+    .type-feedback.close   { background: rgba(79,195,247,0.1); color: var(--blue); border: 1px solid rgba(79,195,247,0.3); }
+    .type-feedback.wrong   { background: rgba(255,59,48,0.1); color: #ff9090; border: 1px solid rgba(255,59,48,0.3); }
+
+    .grammar-card { background: linear-gradient(135deg, #0d1a1a, #1a1a0d); border: 2px solid var(--accent); border-radius: var(--radius); padding: 24px; text-align: center; }
+    .grammar-icon { font-size: 40px; margin-bottom: 12px; }
+    .grammar-title { font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 14px; }
+    .grammar-body { font-size: 14px; color: #ccc; line-height: 1.65; text-align: left; margin-bottom: 20px; }
+
+    .ex-next-btn { width: 100%; padding: 16px; background: var(--accent); color: #000; border: none; border-radius: 14px; font-size: 16px; font-weight: 800; cursor: pointer; margin-top: 8px; transition: all 0.15s; }
+    .ex-next-btn:active { transform: scale(0.98); }
+    .grammar-ok-btn { margin-top: 0; }
+
+    /* Sprint 14: hervatscherm voor afgebroken les */
+    .lesson-resume { text-align: center; padding: 32px 20px; flex: 1; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .lr-emoji { font-size: 56px; }
+    .lr-title { font-size: 22px; font-weight: 800; color: var(--accent); }
+    .lr-pct   { font-size: 14px; color: var(--muted); }
+
+    .lesson-complete { text-align: center; padding: 20px 0; flex: 1; display: flex; flex-direction: column; }
+    .lc-emoji { font-size: 64px; margin-bottom: 12px; }
+    .lc-title { font-size: 26px; font-weight: 900; margin-bottom: 20px; color: var(--accent); }
+    .lc-stats { display: flex; gap: 12px; margin-bottom: 20px; }
+    .lc-stat { flex: 1; background: var(--surface); border-radius: 14px; padding: 16px 10px; }
+    .lc-stat-val { font-size: 24px; font-weight: 900; color: var(--accent); }
+    .lc-stat-label { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; }
+    .lc-achievements { margin-bottom: 16px; }
+    .lc-achievement { background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.3); color: var(--accent); padding: 10px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 8px; }
+    .lc-grammar-recap { background: var(--surface); border-radius: var(--radius); padding: 16px; text-align: left; margin-bottom: 20px; flex: 1; }
+    .lc-grammar-title { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 8px; }
+    .lc-grammar-body { font-size: 13px; color: #bbb; line-height: 1.6; }
+    .lc-btn { width: 100%; padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 800; cursor: pointer; margin-bottom: 10px; border: none; transition: all 0.15s; }
+    .lc-btn.primary { background: var(--accent); color: #000; }
+    .lc-btn.secondary { background: var(--surface); color: var(--text); }
+    .lc-btn:active { transform: scale(0.98); }
+
+    /* STATS */
+    .stats-header { padding: calc(var(--safe-t) + 20px) 20px 16px; }
+    .stats-header-title { font-size: 26px; font-weight: 800; }
+    .stats-header-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 20px 16px; }
+    .stat-card { background: var(--surface); border-radius: var(--radius); padding: 18px 14px; text-align: center; border: 1px solid var(--border); }
+    .stat-card-val { font-size: 32px; font-weight: 900; color: var(--accent); }
+    .stat-card-label { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; }
+    .stats-section-title { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; padding: 0 20px 10px; font-weight: 600; }
+    .stats-lesson-list { padding: 0 20px; }
+    .stats-lesson-item { background: var(--surface); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+    .sli-header { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+    .sli-pct { color: var(--accent); font-weight: 800; }
+    .sli-bar { height: 3px; background: var(--surface2); border-radius: 2px; overflow: hidden; }
+    .sli-fill { height: 100%; background: var(--accent); border-radius: 2px; }
+    .reset-btn { margin: 16px 20px; width: calc(100% - 40px); padding: 14px; background: rgba(255,59,48,0.1); color: var(--red); border: 1px solid var(--red); border-radius: 14px; font-size: 14px; font-weight: 700; cursor: pointer; }
+
+    /* ACHIEVEMENTS */
+    .ach-header { padding: calc(var(--safe-t) + 20px) 20px 16px; }
+    .ach-header-title { font-size: 26px; font-weight: 800; }
+    .achievements-list { padding: 0 20px 100px; }
+    .achievement-item { display: flex; align-items: center; gap: 14px; background: var(--surface); border-radius: 14px; padding: 16px; margin-bottom: 10px; border: 1.5px solid var(--border); }
+    .achievement-item.earned { border-color: var(--accent); background: rgba(245,166,35,0.05); }
+    .ach-emoji { font-size: 32px; }
+    .ach-label { font-size: 15px; font-weight: 700; }
+    .ach-status { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .achievement-item.earned .ach-status { color: var(--accent); }
+
+    .empty-state { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; text-align: center; gap: 12px; }
+    .empty-title { font-size: 20px; font-weight: 800; }
+    .empty-sub { font-size: 14px; color: var(--muted); }
+
+    .toast { position: fixed; bottom: calc(var(--safe-b) + 80px); left: 50%; transform: translateX(-50%) translateY(20px); background: var(--surface2); color: var(--text); padding: 10px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap; z-index: 999; }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    #loading { position: fixed; inset: 0; background: var(--bg); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; z-index: 1000; }
+    #loading.hidden { display: none; }
+    .loading-flag { display: flex; height: 8px; width: 80px; border-radius: 4px; overflow: hidden; }
+    @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+    .loading-text { font-size: 16px; color: var(--muted); animation: pulse 1.5s infinite; }
+
+    /* ── SOFT LOCK: aanbevolen les ────────────────────────────────────────── */
+    .lesson-card.recommended { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(245,166,35,0.25); }
+    .lesson-next-badge { background: var(--accent); color: #000; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 8px; flex-shrink: 0; }
+    .lesson-inprogress-badge { font-size: 9px; font-weight: 700; padding: 2px 6px; background: rgba(245,166,35,0.18); color: var(--accent); border-radius: 8px; border: 1px solid rgba(245,166,35,0.3); flex-shrink: 0; }
+
+    /* ── SECTION LABEL IN LIJST ───────────────────────────────────────────── */
+    .section-label-list { padding: 16px 0 8px; }
+
+    /* ── INSTELLINGEN ─────────────────────────────────────────────────────── */
+    .settings-header { padding: calc(var(--safe-t) + 12px) 20px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+    .settings-title { font-size: 20px; font-weight: 800; flex: 1; }
+    .settings-body { flex: 1; overflow-y: auto; padding: 20px; }
+    .settings-section { margin-bottom: 28px; }
+    .settings-section-title { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 12px; }
+    .settings-row { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); padding: 16px; margin-bottom: 10px; }
+    .settings-row-label { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .settings-row-sub { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+    .settings-btn-group { display: flex; gap: 8px; }
+    .settings-seg-btn { flex: 1; padding: 10px 6px; background: var(--surface2); border: 2px solid var(--border); border-radius: 10px; color: var(--muted); font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.15s; text-align: center; }
+    .settings-seg-btn.active { background: rgba(245,166,35,0.15); border-color: var(--accent); color: var(--accent); }
+    .settings-seg-btn:active { transform: scale(0.96); }
+    .settings-danger-btn { width: 100%; padding: 14px; background: rgba(255,59,48,0.08); color: var(--red); border: 1px solid rgba(255,59,48,0.3); border-radius: 14px; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 10px; transition: all 0.15s; }
+    .settings-danger-btn:active { transform: scale(0.98); }
+    .progress-code-area { width: 100%; margin-top: 10px; padding: 10px; background: var(--bg); border: 1.5px solid var(--border); border-radius: 10px; color: var(--text); font-size: 11px; font-family: monospace; min-height: 68px; resize: none; line-height: 1.5; }
+    .settings-version { text-align: center; font-size: 12px; color: var(--muted); padding: 8px 0 32px; }
+
+    /* Gear icon knop in home header */
+    .home-header-top { display: flex; align-items: flex-start; justify-content: space-between; }
+    .settings-icon-btn { width: 36px; height: 36px; background: var(--surface); border-radius: 10px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; margin-top: 2px; }
+    .settings-icon-btn svg { width: 18px; height: 18px; fill: var(--muted); }
+
+    /* ── PLAATSINGSTOETS ──────────────────────────────────────────────────── */
+    .placement-header { padding: calc(var(--safe-t) + 16px) 20px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .placement-body { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; }
+    #placement-container { flex: 1; display: flex; flex-direction: column; }
+
+    .placement-intro { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .placement-flag { font-size: 56px; margin-bottom: 12px; }
+    .placement-title { font-size: 22px; font-weight: 900; color: var(--accent); margin-bottom: 8px; }
+    .placement-desc { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 28px; }
+    .placement-choices { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+    .pl-choice-btn { display: flex; align-items: center; gap: 14px; padding: 16px; background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); cursor: pointer; text-align: left; color: var(--text); transition: all 0.15s; }
+    .pl-choice-btn:active { transform: scale(0.98); border-color: var(--accent); }
+    .pl-choice-emoji { font-size: 28px; flex-shrink: 0; }
+    .pl-choice-title { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+    .pl-choice-sub { font-size: 12px; color: var(--muted); }
+
+    /* Quiz vragen */
+    .pq-wrap { display: flex; flex-direction: column; flex: 1; }
+    .pq-top { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+    .pq-progress-bar { flex: 1; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+    .pq-progress-fill { height: 100%; background: linear-gradient(90deg, var(--it-green), var(--accent)); border-radius: 3px; transition: width 0.4s ease; }
+    .pq-count { font-size: 13px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+    .pq-count span { color: var(--muted); font-weight: 400; }
+    .pq-question { text-align: center; margin-bottom: 28px; }
+    .pq-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; font-weight: 600; }
+    .pq-word { font-size: 36px; font-weight: 900; color: var(--accent); margin-bottom: 6px; }
+    .pq-ph { font-size: 14px; color: var(--muted); font-style: italic; }
+    .pq-options { display: flex; flex-direction: column; gap: 10px; }
+    .pq-option { display: flex; align-items: center; gap: 12px; padding: 16px; background: var(--surface); border: 2px solid var(--border); border-radius: 14px; cursor: pointer; color: var(--text); transition: all 0.15s; text-align: left; width: 100%; }
+    .pq-option:active { transform: scale(0.99); }
+    .pq-option:disabled { pointer-events: none; }
+    .pq-option.pq-correct { background: rgba(0,200,81,0.1); border-color: var(--green); color: #7fffb0; }
+    .pq-option.pq-wrong   { background: rgba(255,59,48,0.1); border-color: var(--red);   color: #ff9090; }
+    .pq-letter { width: 28px; height: 28px; background: var(--surface2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; color: var(--muted); flex-shrink: 0; }
+    .pq-option.pq-correct .pq-letter { background: var(--green); color: #000; }
+    .pq-option.pq-wrong   .pq-letter { background: var(--red);   color: #fff; }
+    .pq-text { font-size: 16px; font-weight: 600; }
+
+    /* Resultaat */
+    .pr-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; padding-top: 10px; }
+    .pr-ring { position: relative; width: 120px; height: 120px; margin-bottom: 20px; }
+    .pr-svg { width: 120px; height: 120px; }
+    .pr-score-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .pr-score-num { font-size: 36px; font-weight: 900; color: var(--accent); line-height: 1; }
+    .pr-score-denom { font-size: 14px; color: var(--muted); }
+    .pr-msg { font-size: 22px; font-weight: 900; color: var(--accent); margin-bottom: 6px; }
+    .pr-detail { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+    .pr-rec-box { width: 100%; background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius); padding: 16px; margin-bottom: 20px; }
+    .pr-rec-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 700; }
+    .pr-rec-lesson { font-size: 28px; font-weight: 900; color: var(--accent); margin-bottom: 4px; }
+    .pr-rec-skip { font-size: 12px; color: var(--muted); }
+
+    /* ── INTRO KAART ──────────────────────────────────────────────────────── */
+    .intro-card { background: linear-gradient(160deg, #12001a 0%, #0d1a12 100%); border: 2px solid var(--accent); border-radius: var(--radius); padding: 24px 20px; display: flex; flex-direction: column; gap: 0; }
+    .intro-emoji { font-size: 52px; text-align: center; margin-bottom: 10px; }
+    .intro-title { font-size: 22px; font-weight: 900; color: var(--accent); text-align: center; margin-bottom: 6px; }
+    .intro-desc  { font-size: 13px; color: var(--muted); text-align: center; line-height: 1.5; margin-bottom: 20px; }
+    .intro-words-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 8px; }
+    .intro-words { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .intro-word-row { display: flex; align-items: center; gap: 8px; background: var(--surface); border-radius: 10px; padding: 10px 14px; }
+    .intro-it  { font-size: 15px; font-weight: 800; color: var(--accent); flex: 1; }
+    .intro-arrow { font-size: 12px; color: var(--muted); }
+    .intro-nl  { font-size: 13px; color: var(--muted); flex: 1; text-align: right; }
+    .intro-more { font-size: 12px; color: var(--muted); text-align: center; padding: 4px 0; }
+    .intro-grammar-hint { background: rgba(245,166,35,0.08); border: 1px solid rgba(245,166,35,0.2); border-radius: 10px; padding: 10px 14px; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+    .intro-grammar-hint strong { color: var(--accent); }
+    .intro-meta { display: flex; gap: 8px; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .intro-start-btn { margin-top: 0; }
+
+    /* ── LUISTER & KIES ───────────────────────────────────────────────────── */
+    .lc-audio-section { text-align: center; margin-bottom: 20px; }
+    /* Sprint 9: min-height zodat de tekst-wisselingen geen layout-shift veroorzaken */
+    .lc-play-btn { display: block; width: 100%; padding: 20px; min-height: 68px; background: linear-gradient(135deg, var(--it-red) 0%, #e05c10 100%); color: #fff; border: none; border-radius: 16px; font-size: 18px; font-weight: 800; cursor: pointer; transition: all 0.15s; letter-spacing: 0.3px; }
+    .lc-play-btn:active { transform: scale(0.97); }
+    .lc-play-btn.shake { animation: shake 0.4s ease; }
+    .lc-word-reveal { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 12px; padding: 10px 16px; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); }
+    .lc-it { font-size: 20px; font-weight: 800; color: var(--accent); }
+    .lc-ph { font-size: 13px; color: var(--muted); font-style: italic; }
+
+    /* ── WOORDVOLGORDE ────────────────────────────────────────────────────── */
+    .wo-context { font-size: 15px; color: var(--muted); font-style: italic; text-align: center; margin-bottom: 14px; line-height: 1.4; }
+    .wo-answer-area { min-height: 58px; background: var(--surface2); border: 2px dashed var(--border); border-radius: 14px; padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; transition: border-color 0.2s; }
+    .wo-answer-area:has(.wo-chip-placed) { border-color: var(--blue); border-style: solid; }
+    .wo-placeholder { color: var(--muted); font-size: 13px; font-style: italic; width: 100%; text-align: center; }
+    .wo-divider { height: 1px; background: var(--border); margin-bottom: 12px; }
+    .wo-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .wo-chip { background: var(--surface); border: 2px solid var(--border); color: var(--text); border-radius: 10px; padding: 9px 14px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.12s; line-height: 1; }
+    .wo-chip:active { transform: scale(0.94); }
+    .wo-chip:disabled { opacity: 0.6; cursor: default; }
+    .wo-chip-placed { background: rgba(79,195,247,0.12); border-color: var(--blue); color: var(--blue); }
+    .wo-correct { background: rgba(0,200,81,0.15) !important; border-color: var(--green) !important; color: var(--green) !important; }
+    .wo-wrong   { background: rgba(255,59,48,0.10) !important; border-color: var(--red)   !important; color: var(--red)   !important; }
+
+    /* ── SPRINT 5/8: DAGDOEL ──────────────────────────────────────────────── */
+    .daily-goal-section { margin: 14px 20px 0; background: var(--surface); border-radius: 14px; padding: 14px 16px; border: 1px solid var(--border); }
+    .dg-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .dg-label { font-size: 14px; color: var(--text); font-weight: 700; }
+    .dg-val   { font-size: 13px; color: var(--muted); font-weight: 600; }
+    .dg-track { height: 8px; background: var(--surface2); border-radius: 10px; overflow: hidden; }
+    .dg-fill  { height: 100%; background: var(--accent); border-radius: 10px; transition: width 0.4s ease; }
+    .dg-fill.done { background: var(--green); }
+
+    /* ── SPRINT 6/8: MILESTONE KAARTEN ──────────────────────────────────── */
+    .milestone-card { display: flex; align-items: center; gap: 12px; padding: 16px 16px; background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius); cursor: pointer; transition: all 0.15s; }
+    .milestone-card:active { transform: scale(0.99); }
+    .milestone-card.passed { border-color: var(--green); background: rgba(0,200,81,0.05); cursor: default; }
+    .milestone-card.recommended { box-shadow: 0 0 0 2px rgba(245,166,35,0.3); }
+    .milestone-icon { font-size: 24px; flex-shrink: 0; }
+    .milestone-mid  { flex: 1; min-width: 0; }
+    .milestone-title { font-size: 14px; font-weight: 800; color: var(--accent); margin-bottom: 2px; }
+    .milestone-card.passed .milestone-title { color: var(--green); }
+    .milestone-sub  { font-size: 11px; color: var(--muted); }
+    .milestone-right { flex-shrink: 0; }
+    .milestone-badge { font-size: 10px; font-weight: 800; padding: 3px 9px; border-radius: 10px; }
+    .milestone-badge.passed      { background: rgba(0,200,81,0.15); color: var(--green); }
+    .milestone-badge.aanbevolen  { background: var(--accent); color: #000; }
+    /* Sprint 12: badge voor toets die overgeslagen is via plaatsingstoets */
+    .milestone-badge.overgeslagen { background: rgba(112,112,160,0.18); color: var(--muted); }
+
+    /* Sprint 12: segment-titel boven elke deelgroep (Deel 1, Deel 2) */
+    .segment-header {
+      font-size: 11px; font-weight: 700; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.8px;
+      padding: 14px 4px 8px;
+    }
+
+    /* ── SPRINT 13: COMPACT BANNER VOOR AFGERONDE NIVEAUS ────────────────── */
+    .level-complete-banner {
+      display: flex; align-items: center; gap: 8px;
+      padding: 11px 16px;
+      background: rgba(0,200,81,0.06);
+      border: 1px solid rgba(0,200,81,0.22);
+      border-radius: var(--radius);
+      cursor: pointer; user-select: none;
+      transition: opacity 0.15s;
+      margin-top: 28px;
+    }
+    .level-complete-banner.level-sep { margin-top: 40px; }
+    .level-complete-banner:active { opacity: 0.7; }
+    .lcb-icon  { font-size: 15px; flex-shrink: 0; }
+    .lcb-name  { font-size: 14px; font-weight: 800; color: var(--green); }
+    .lcb-stats { font-size: 11px; color: var(--muted); flex: 1; }
+    .lcb-arrow { font-size: 28px; font-weight: 700; color: var(--green); margin-left: auto; flex-shrink: 0; }
+    .level-complete-content      { display: none; }
+    .level-complete-content.open { display: block; }
+
+    /* Sprint 13: ↓ Mijn positie knop in actieve niveauheader */
+    .level-jump-btn {
+      font-size: 10px; font-weight: 700;
+      color: var(--accent);
+      background: rgba(245,166,35,0.12);
+      border: 1px solid rgba(245,166,35,0.25);
+      padding: 2px 9px; border-radius: 10px;
+      cursor: pointer; margin-left: auto; flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .level-jump-btn:active { opacity: 0.7; }
+
+    /* ── SPRINT 7/8: NIVEAU-HEADERS & DONE-GROEP ─────────────────────────── */
+    /* Sprint 9.1: Alle niveau-headers krijgen scheidingslijn (ook de eerste) */
+    .level-section-header {
+      display: flex; align-items: baseline; gap: 6px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px !important;
+      margin-top: 24px;
+      padding-top: 20px !important;
+      border-top: 1px solid var(--border);
+    }
+    .level-header-name  { font-weight: 900; font-size: 16px; }
+    .level-header-range { font-size: 12px; color: var(--muted); margin-left: 8px; font-weight: 600; }
+
+    /* ── SPRINT 9: NIVEAU-SECTIE SCHEIDING ──────────────────────────────── */
+    /* Tweede en volgende niveau-secties krijgen extra ruimte bovenaan */
+    .level-section-header.level-sep {
+      margin-top: 40px;
+    }
+
+    /* ── SPRINT 9: TERUG-KNOP IN LES-VOORTGANGSBALK ─────────────────────── */
+    .ex-back-btn {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      background: var(--surface2);
+      border: none; border-radius: 8px;
+      color: var(--muted);
+      font-size: 15px; font-weight: 700;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      padding: 0;
+      transition: color 0.15s, background 0.15s;
+    }
+    .ex-back-btn:active { background: var(--border); color: var(--text); }
+
+    /* ── SPRINT 9.1: RING AUTO-ADVANCE ANIMATIE ──────────────────────────── */
+    .adv-ring { vertical-align: middle; margin-left: 6px; }
+    .adv-ring-bg   { fill: none; stroke: var(--surface2); stroke-width: 2.5; }
+    .adv-ring-fill {
+      fill: none; stroke: var(--accent); stroke-width: 2.5;
+      stroke-linecap: round;
+      transform-origin: 9px 9px;
+      transform: rotate(-90deg);
+      stroke-dasharray: 43.98;   /* 2π × 7 ≈ 43.98 */
+      stroke-dashoffset: 43.98;  /* start leeg, vul met de klok mee */
+      animation: adv-ring-fill 4s linear forwards;
+    }
+    @keyframes adv-ring-fill {
+      from { stroke-dashoffset: 43.98; }  /* leeg */
+      to   { stroke-dashoffset: 0; }       /* vol */
+    }
+
+    .done-group-toggle {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 11px 16px; margin-bottom: -4px;
+      background: var(--surface2); border-radius: 12px;
+      cursor: pointer; user-select: none;
+      border: 1px solid var(--border);
+    }
+    .done-group-toggle:active { opacity: 0.7; }
+    .done-group-text  { font-size: 13px; color: var(--muted); font-weight: 600; }
+    .done-group-arrow { font-size: 28px; color: var(--accent); margin-left: 8px; flex-shrink: 0; font-weight: 700; }
+
+    .done-group-container { display: none; padding-top: 4px; }
+    .done-group-container.open { display: flex; flex-direction: column; gap: 8px; }
+    /* Compacte weergave voor afgeronde/overgeslagen lessen */
+    .done-group-container .lesson-card { padding: 11px 14px; }
+    .done-group-container .lesson-bar-wrap { display: none; }
+    .done-group-container .lesson-meta { margin-bottom: 0; }
+    .done-group-container .lesson-card.done { border-color: rgba(0,200,81,0.3); background: rgba(0,200,81,0.04); }
+    .done-group-container .lesson-card.skipped { opacity: 0.65; }
+    .done-group-container .lesson-pct { font-size: 15px; }
+
+    /* ── SPRINT 6: HERSTEL MODAL ─────────────────────────────────────────── */
+    .restore-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 300; display: none; align-items: center; justify-content: center; padding: 24px; }
+    .restore-modal-overlay.active { display: flex; }
+    .restore-modal-box  { background: var(--surface); border-radius: 20px; padding: 28px 24px; max-width: 340px; width: 100%; text-align: center; border: 2px solid var(--accent); }
+    .restore-modal-icon  { font-size: 40px; margin-bottom: 12px; }
+    .restore-modal-title { font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
+    .restore-modal-sub   { font-size: 14px; color: var(--muted); margin-bottom: 6px; line-height: 1.4; }
+    .restore-modal-info  { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 20px; }
+    .restore-modal-btns  { display: flex; flex-direction: column; gap: 10px; }
+
+    /* ── SPRINT 6: SETTINGS FOOTNOTE ────────────────────────────────────── */
+    .settings-footnote { font-size: 11px; color: var(--muted); text-align: center; padding: 8px 0; line-height: 1.4; }
+
+    /* ── SPRINT 5: LESSON CARD STATES ────────────────────────────────────── */
+    .lesson-card.locked  { opacity: 0.4; cursor: default; }
+    .lesson-card.skipped { border-color: var(--border); background: var(--surface2); opacity: 0.8; }
+    .lesson-card.skipped .lesson-num { background: transparent; color: var(--muted); font-size: 16px; }
+    .lesson-card.skipped .lesson-title { color: var(--muted); }
+    .lesson-skip-badge   { background: rgba(112,112,160,0.2); color: var(--muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 8px; flex-shrink: 0; }
+
+    /* ── SPRINT 5: FOUTOVERZICHT ─────────────────────────────────────────── */
+    .lc-errors        { background: rgba(255,59,48,0.07); border: 1px solid rgba(255,59,48,0.25); border-radius: 14px; padding: 14px 16px; margin: 12px 0; }
+    .lc-errors-title  { font-size: 13px; font-weight: 700; color: var(--muted); margin-bottom: 10px; }
+    .lc-errors-list   { display: flex; flex-direction: column; gap: 6px; }
+    .lc-error-item    { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: var(--surface2); border-radius: 9px; }
+    .lc-error-it      { font-weight: 700; color: var(--text); font-size: 14px; }
+    .lc-error-nl      { font-size: 13px; color: var(--muted); }
+
+    /* ── SPRINT 5: HINT LETTERPANELEN ────────────────────────────────────── */
+    .hint-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .hint-tiles { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+    .hint-tile  { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 38px; background: var(--surface2); border: 1.5px solid var(--border); border-radius: 8px; font-size: 18px; font-weight: 700; color: var(--accent); }
+    .hint-space { width: 14px; border: none; background: transparent; }
+    .type-skip-btn { background: none; border: none; color: var(--muted); font-size: 13px; cursor: pointer; padding: 4px 0; text-decoration: underline; display: block; margin: 2px 0 8px; }
+    .type-skip-btn:hover { color: var(--text); }
+
+    /* ── SPRINT 5: LES-VERLATEN MODAL ────────────────────────────────────── */
+    .exit-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; display: none; align-items: center; justify-content: center; padding: 24px; }
+    .exit-modal-overlay.active { display: flex; }
+    .exit-modal-box    { background: var(--surface); border-radius: 20px; padding: 28px 24px; max-width: 340px; width: 100%; text-align: center; }
+    .exit-modal-icon   { font-size: 36px; margin-bottom: 12px; }
+    .exit-modal-title  { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .exit-modal-sub    { font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.4; }
+    .exit-modal-btns   { display: flex; flex-direction: column; gap: 10px; }
+
+    /* ── SPRINT 5: STATS SKIPPED ─────────────────────────────────────────── */
+    .sli-fill.skipped { background: var(--muted); opacity: 0.4; }
+
+    /* ── SPRINT 5: WOORDENBOEK ───────────────────────────────────────────── */
+    .dict-body    { flex: 1; overflow-y: auto; padding: 0 20px 100px; }
+    .dict-search  { width: 100%; padding: 12px 16px; background: var(--surface); border: 1.5px solid var(--border); border-radius: 14px; color: var(--text); font-size: 15px; margin-bottom: 12px; }
+    .dict-search:focus { outline: none; border-color: var(--accent); }
+    .dict-filters { display: flex; gap: 8px; margin-bottom: 14px; }
+    .dict-filter-btn { padding: 7px 14px; border-radius: 20px; border: 1.5px solid var(--border); background: var(--surface); color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; }
+    .dict-filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(245,166,35,0.08); }
+    .dict-list    { display: flex; flex-direction: column; gap: 8px; }
+    .dict-item    { background: var(--surface); border-radius: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+    .dict-item-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+    .dict-it      { font-weight: 700; color: var(--text); font-size: 15px; }
+    .dict-nl      { font-size: 13px; color: var(--muted); }
+    .dict-ph      { font-size: 11px; color: var(--muted); margin-top: 2px; font-style: italic; }
+    .dict-empty   { text-align: center; color: var(--muted); padding: 40px 0; font-size: 15px; }
+    .dict-badge   { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; flex-shrink: 0; }
+    .dict-badge.new     { background: var(--surface2); color: var(--muted); }
+    .dict-badge.seen    { background: rgba(79,195,247,0.15); color: var(--blue); }
+    .dict-badge.learned { background: rgba(0,200,81,0.15); color: var(--green); }
+
+    /* ── SPRINT 15: LICHT THEMA CONTRAST FIXES ───────────────────────────────
+       Staat ná alle basisregels zodat cascade-volgorde klopt.
+       Fix 1: correct/fout feedback in lichte modus leesbaar maken.
+       Fix 2: hardcoded grijsteksten (#aaa/#bbb/#ccc) via CSS var vervangen. */
+    @media (prefers-color-scheme: light) {
+      .mc-feedback.correct, .type-feedback.correct { color: #006b2b !important; }
+      .mc-feedback.wrong,   .type-feedback.wrong   { color: #aa0000 !important; }
+      .type-feedback.close                         { color: #0a68c4 !important; }
+      .mc-option.correct   { color: #006b2b !important; }
+      .mc-option.wrong     { color: #aa0000 !important; }
+      .pq-option.pq-correct { color: #006b2b !important; }
+      .pq-option.pq-wrong   { color: #aa0000 !important; }
+      .wo-correct { color: #006b2b !important; }
+      .grammar-body    { color: var(--muted) !important; }
+      .lc-grammar-body { color: var(--muted) !important; }
+      .fc-ex           { color: var(--muted) !important; }
+      .fc-back { background: linear-gradient(160deg, #f0fff4 0%, #e8f0ff 100%) !important; }
+    }
+    [data-theme="light"] .mc-feedback.correct,
+    [data-theme="light"] .type-feedback.correct { color: #006b2b !important; }
+    [data-theme="light"] .mc-feedback.wrong,
+    [data-theme="light"] .type-feedback.wrong   { color: #aa0000 !important; }
+    [data-theme="light"] .type-feedback.close   { color: #0a68c4 !important; }
+    [data-theme="light"] .mc-option.correct  { color: #006b2b !important; }
+    [data-theme="light"] .mc-option.wrong    { color: #aa0000 !important; }
+    [data-theme="light"] .pq-option.pq-correct { color: #006b2b !important; }
+    [data-theme="light"] .pq-option.pq-wrong   { color: #aa0000 !important; }
+    [data-theme="light"] .wo-correct { color: #006b2b !important; }
+    [data-theme="light"] .grammar-body    { color: var(--muted) !important; }
+    [data-theme="light"] .lc-grammar-body { color: var(--muted) !important; }
+    [data-theme="light"] .fc-ex           { color: var(--muted) !important; }
+    [data-theme="light"] .fc-back { background: linear-gradient(160deg, #f0fff4 0%, #e8f0ff 100%) !important; }
+  </style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="loading-flag"><div class="flag-g"></div><div class="flag-w"></div><div class="flag-r"></div></div>
+  <div class="loading-text">Italiano laden...</div>
+</div>
+
+<!-- HOME -->
+<div id="screen-home" class="screen">
+  <div class="screen-body">
+    <div class="home-header">
+      <div class="home-header-top">
+        <div>
+          <div class="flag-bar"><div class="flag-g"></div><div class="flag-w"></div><div class="flag-r"></div></div>
+          <div class="home-title">Italiano per Vacanza</div>
+          <div class="home-sub" id="home-streak">Begin vandaag!</div>
+        </div>
+        <button class="settings-icon-btn" id="settings-btn" aria-label="Instellingen">
+          <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96a6.96 6.96 0 0 0-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84a.484.484 0 0 0-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87a.49.49 0 0 0 .12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.27.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="course-progress-section">
+      <div class="course-progress-header">
+        <span class="cp-label" id="cp-label">0 van 60 lessen afgerond</span>
+        <span class="cp-pct"   id="cp-pct">0%</span>
+      </div>
+      <div class="cp-track"><div class="cp-fill" id="cp-fill" style="width:0%"></div></div>
+    </div>
+    <div class="daily-goal-section" id="daily-goal-section"></div>
+    <div class="review-section">
+      <button class="review-btn" id="review-btn">
+        <span class="review-btn-icon">🔄</span>
+        <div class="review-btn-text">
+          <div class="review-btn-title">Dagelijkse herhaling</div>
+          <div class="review-btn-sub">Herhaal woorden die je bijna vergeet</div>
+        </div>
+        <span class="review-badge" id="review-badge">0</span>
+      </button>
+    </div>
+    <div class="lesson-list" id="lesson-list"></div>
+  </div>
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
+    <button class="nav-btn" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
+    <button class="nav-btn" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
+    <button class="nav-btn" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
+  </nav>
+</div>
+
+<!-- LESSON -->
+<div id="screen-lesson" class="screen">
+  <div class="lesson-header">
+    <div class="lesson-header-top">
+      <button class="back-btn" data-back="home"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></button>
+      <div class="lesson-header-title" id="lesson-title">Les</div>
+      <div class="lesson-header-badge" id="lesson-level-badge">A1</div>
+      <div class="session-xp-pill" id="session-xp">+0 XP</div>
+    </div>
+    <div class="lesson-progress-wrap">
+      <button class="ex-back-btn" id="ex-back-btn" style="display:none" aria-label="Vorige oefening">←</button>
+      <div class="lesson-progress-track"><div class="lesson-progress-fill" id="lesson-progress-bar" style="width:0%"></div></div>
+      <div class="lesson-progress-text" id="lesson-progress-text">0/0</div>
+    </div>
+  </div>
+  <div class="lesson-body"><div id="exercise-container"></div></div>
+</div>
+
+<!-- STATS -->
+<div id="screen-stats" class="screen">
+  <div class="screen-body">
+    <div class="stats-header"><div class="stats-header-title">Voortgang</div><div class="stats-header-sub">Jouw leerstatistieken</div></div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-card-val" id="stat-seen">0</div><div class="stat-card-label">Woorden gezien</div></div>
+      <div class="stat-card"><div class="stat-card-val" id="stat-learned">0</div><div class="stat-card-label">Echt geleerd</div></div>
+      <div class="stat-card"><div class="stat-card-val" id="stat-lessons">0</div><div class="stat-card-label">Lessen voltooid</div></div>
+      <div class="stat-card"><div class="stat-card-val" id="stat-skipped">0</div><div class="stat-card-label">Overgeslagen ↷</div></div>
+      <div class="stat-card"><div class="stat-card-val" id="stat-streak">0</div><div class="stat-card-label">Dagenreeks 🔥</div></div>
+      <div class="stat-card"><div class="stat-card-val" id="stat-xp">0</div><div class="stat-card-label">XP verdiend</div></div>
+      <div class="stat-card"><div class="stat-card-val" id="stat-accuracy">–</div><div class="stat-card-label">Nauwkeurig</div></div>
+    </div>
+    <div class="stats-section-title">Per les</div>
+    <div class="stats-lesson-list" id="stats-lesson-list"></div>
+    <button class="reset-btn" id="reset-btn">Voortgang resetten</button>
+    <div style="height:80px"></div>
+  </div>
+  <nav class="bottom-nav">
+    <button class="nav-btn" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
+    <button class="nav-btn active" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
+    <button class="nav-btn" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
+    <button class="nav-btn" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
+  </nav>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div id="screen-achievements" class="screen">
+  <div class="screen-body">
+    <div class="ach-header"><div class="ach-header-title">Badges</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Verdien ze allemaal!</div></div>
+    <div class="achievements-list" id="achievements-list"></div>
+  </div>
+  <nav class="bottom-nav">
+    <button class="nav-btn" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
+    <button class="nav-btn" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
+    <button class="nav-btn active" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
+    <button class="nav-btn" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
+  </nav>
+</div>
+
+<!-- INSTELLINGEN -->
+<div id="screen-settings" class="screen">
+  <div class="settings-header">
+    <button class="back-btn" data-back="home"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></button>
+    <div class="settings-title">Instellingen</div>
+  </div>
+  <div class="settings-body">
+
+    <div class="settings-section">
+      <div class="settings-section-title">Dagelijks doel</div>
+      <div class="settings-row">
+        <div class="settings-row-label">XP per dag</div>
+        <div class="settings-row-sub">Hoeveel XP wil je dagelijks verdienen?</div>
+        <div class="settings-btn-group">
+          <button class="settings-seg-btn dagdoel-btn" data-xp="50">50 XP<br><span style="font-size:10px;font-weight:400">~5 min</span></button>
+          <button class="settings-seg-btn dagdoel-btn" data-xp="100">100 XP<br><span style="font-size:10px;font-weight:400">~10 min</span></button>
+          <button class="settings-seg-btn dagdoel-btn" data-xp="150">150 XP<br><span style="font-size:10px;font-weight:400">~15 min</span></button>
+          <button class="settings-seg-btn dagdoel-btn" data-xp="200">200 XP<br><span style="font-size:10px;font-weight:400">~20 min</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-section-title">Weergave</div>
+      <div class="settings-row">
+        <div class="settings-row-label">Helderheid</div>
+        <div class="settings-row-sub">Licht, donker of volg de systeeminstellingen.</div>
+        <div class="settings-btn-group">
+          <button class="settings-seg-btn theme-btn" data-theme="auto">☀️🌙<br><span style="font-size:10px;font-weight:400">Automatisch</span></button>
+          <button class="settings-seg-btn theme-btn" data-theme="light">☀️<br><span style="font-size:10px;font-weight:400">Licht</span></button>
+          <button class="settings-seg-btn theme-btn" data-theme="dark">🌙<br><span style="font-size:10px;font-weight:400">Donker</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-section-title">Spraaksnelheid</div>
+      <div class="settings-row">
+        <div class="settings-row-label">TTS snelheid</div>
+        <div class="settings-row-sub">Hoe snel spreekt de app Italiaans uit?</div>
+        <div class="settings-btn-group">
+          <button class="settings-seg-btn tts-rate-btn" data-rate="0.7">🐢<br><span style="font-size:10px;font-weight:400">Langzaam</span></button>
+          <button class="settings-seg-btn tts-rate-btn" data-rate="1.0">🚶<br><span style="font-size:10px;font-weight:400">Normaal</span></button>
+          <button class="settings-seg-btn tts-rate-btn" data-rate="1.3">🏃<br><span style="font-size:10px;font-weight:400">Snel</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-section-title">Niveau & toets</div>
+      <div class="settings-row">
+        <div class="settings-row-label">Plaatsingstoets</div>
+        <div class="settings-row-sub">Doe de toets opnieuw om je startpunt aan te passen.</div>
+        <button class="settings-seg-btn" id="redo-placement-btn" style="width:100%;margin-top:0">🎯 Plaatsingstoets opnieuw doen</button>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-section-title">Gegevens</div>
+
+      <!-- Exporteer voortgang als back-upcode -->
+      <div class="settings-row">
+        <div class="settings-row-label">📤 Exporteer voortgang</div>
+        <div class="settings-row-sub">Kopieer al je voortgang als een code. Plak die in de andere versie van de app — bijv. vanuit Safari naar de app op je beginscherm, of naar een ander toestel.</div>
+        <button class="settings-seg-btn" id="export-progress-btn" style="width:100%;margin-top:0">Kopieer back-upcode naar klembord</button>
+        <textarea id="export-code-output" class="progress-code-area" readonly placeholder="Code verschijnt hier als kopiëren niet lukt…" style="display:none"></textarea>
+      </div>
+
+      <!-- Importeer voortgang via geplakte code -->
+      <div class="settings-row">
+        <div class="settings-row-label">📥 Importeer voortgang</div>
+        <div class="settings-row-sub">Plak hier een eerder geëxporteerde back-upcode. Je huidige voortgang in deze versie wordt overschreven.</div>
+        <textarea id="import-code-input" class="progress-code-area" placeholder="Plak hier je back-upcode…"></textarea>
+        <button class="settings-seg-btn" id="import-progress-btn" style="width:100%;margin-top:8px">✅ Voortgang herstellen</button>
+      </div>
+
+      <!-- Herstellink (voor delen via URL) -->
+      <div class="settings-row">
+        <div class="settings-row-label">🔗 Deel als link</div>
+        <div class="settings-row-sub">Stuur een herstellink naar jezelf of een vriend. Open de link in de browser om de voortgang te importeren.</div>
+        <button class="settings-seg-btn" id="share-progress-btn" style="width:100%;margin-top:0">📤 Maak herstellink</button>
+      </div>
+
+      <button class="settings-danger-btn" id="reset-btn">🗑 Alle voortgang resetten</button>
+    </div>
+
+    <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
+    <div class="settings-version">Italiano per Vacanza · v1.16 · 90 lessen · 720 woorden</div>
+  </div>
+</div>
+
+<!-- PLAATSINGSTOETS -->
+<div id="screen-placement" class="screen">
+  <div class="placement-header">
+    <div style="flex:1; font-size:18px; font-weight:800; color:var(--accent);">🇮🇹 Italiano per Vacanza</div>
+  </div>
+  <div class="placement-body">
+    <div id="placement-container"></div>
+  </div>
+</div>
+
+<!-- WOORDENBOEK -->
+<div id="screen-dictionary" class="screen">
+  <div class="settings-header">
+    <button class="back-btn" data-back="home"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></button>
+    <div class="settings-title">Woordenboek</div>
+  </div>
+  <div class="dict-body">
+    <input type="search" id="dict-search" class="dict-search" placeholder="Zoek woorden...">
+    <div class="dict-filters">
+      <button class="dict-filter-btn active" data-level="all">Alle</button>
+      <button class="dict-filter-btn" data-level="A1">A1</button>
+      <button class="dict-filter-btn" data-level="A2">A2</button>
+      <button class="dict-filter-btn" data-level="B1">B1</button>
+    </div>
+    <div class="dict-list" id="dict-list"></div>
+  </div>
+  <nav class="bottom-nav">
+    <button class="nav-btn" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
+    <button class="nav-btn" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
+    <button class="nav-btn" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
+    <button class="nav-btn active" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
+  </nav>
+</div>
+
+<!-- LES VERLATEN MODAL -->
+<div class="exit-modal-overlay" id="exit-lesson-modal">
+  <div class="exit-modal-box">
+    <div class="exit-modal-icon">🚪</div>
+    <div class="exit-modal-title">Les verlaten?</div>
+    <div class="exit-modal-sub">Je sessie-XP gaat verloren. Woordvoortgang (SRS) is al opgeslagen.</div>
+    <div class="exit-modal-btns">
+      <button class="lc-btn primary" id="exit-lesson-stay">Doorgaan met les</button>
+      <button class="lc-btn secondary" id="exit-lesson-leave">Toch verlaten</button>
+    </div>
+  </div>
+</div>
+
+<!-- HERSTEL MODAL -->
+<div class="restore-modal-overlay" id="restore-modal">
+  <div class="restore-modal-box">
+    <div class="restore-modal-icon">🔗</div>
+    <div class="restore-modal-title">Voortgang gevonden!</div>
+    <div class="restore-modal-sub">We hebben hersteldata gevonden in de link:</div>
+    <div class="restore-modal-info" id="restore-info"></div>
+    <div class="restore-modal-btns">
+      <button class="lc-btn primary" id="restore-confirm">Ja, herstel mijn voortgang</button>
+      <button class="lc-btn secondary" id="restore-cancel">Nee, doorgaan zonder</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- iOS PWA viewport-hoogte fix: --app-height volgt window.innerHeight exact,
+     zodat de app tot onderaan vult ook zonder browserbalk (standalone modus). -->
+<script>
+  (function () {
+    function setH() {
+      document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
+    }
+    setH();
+    window.addEventListener('resize', setH);
+    // Ook na oriëntatieverandering opnieuw meten
+    window.addEventListener('orientationchange', function() { setTimeout(setH, 200); });
+  })();
+</script>
+
+<script type="module">
+  import './js/app.js?v=18';
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+  });
+</script>
+</body>
+</html>
