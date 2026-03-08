@@ -324,6 +324,18 @@
     .lesson-next-badge { background: var(--accent); color: #fff; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 8px; flex-shrink: 0; }
     @media (prefers-color-scheme: dark) { .lesson-next-badge { color: #000; } }  /* goud bg (systeem dark) → zwarte tekst */
     [data-theme="dark"] .lesson-next-badge { color: #000; }  /* lichtgroen bg (manueel dark) → zwarte tekst */
+    /* Lichte modus: donkergroene accent-achtergrond → witte tekst voor contrast */
+    [data-theme="light"] .ex-next-btn,
+    [data-theme="light"] .type-submit-btn,
+    [data-theme="light"] .lc-btn.primary,
+    [data-theme="light"] .milestone-badge.aanbevolen,
+    [data-theme="light"] .lesson-done-badge,
+    [data-theme="light"] .mc-option.correct .mc-letter,
+    [data-theme="light"] .pq-option.pq-correct .pq-letter { color: #fff; }
+    @media (prefers-color-scheme: light) {
+      .ex-next-btn, .type-submit-btn, .lc-btn.primary, .milestone-badge.aanbevolen,
+      .lesson-done-badge, .mc-option.correct .mc-letter, .pq-option.pq-correct .pq-letter { color: #fff; }
+    }
     .lesson-inprogress-badge { font-size: 9px; font-weight: 700; padding: 2px 6px; background: rgba(245,166,35,0.18); color: var(--accent); border-radius: 8px; border: 1px solid rgba(245,166,35,0.3); flex-shrink: 0; }
 
     /* ── SECTION LABEL IN LIJST ───────────────────────────────────────────── */
@@ -885,7 +897,7 @@
 <!-- PLAATSINGSTOETS -->
 <div id="screen-placement" class="screen">
   <div class="placement-header">
-    <div style="flex:1; font-size:18px; font-weight:800; color:var(--accent);">🥑 Vocado — Italiaans</div>
+    <div id="placement-logo" style="flex:1;"></div>
   </div>
   <div class="placement-body">
     <div id="placement-container"></div>
@@ -972,22 +984,27 @@
 <script>
   /* Woordlogo: fetch SVG inline zodat CSS-variabelen werken voor letter-counters */
   (async () => {
-    try {
-      const resp = await fetch('./woordlogo.svg');
-      const text = await resp.text();
-      const doc  = new DOMParser().parseFromString(text, 'image/svg+xml');
-      const svg  = doc.querySelector('svg');
-      /* Counter-paden (gaten in a, d, o) krijgen achtergrondkleur zodat ze transparant ogen */
+    function makeLogo(svgText, height) {
+      const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
+      const svg = doc.querySelector('svg');
       svg.querySelectorAll('path[fill="#000000"]').forEach(p => p.setAttribute('fill', 'var(--bg)'));
-      svg.setAttribute('height', '36');
+      svg.setAttribute('height', String(height));
       svg.removeAttribute('width');
       svg.style.cssText = 'width:auto;display:block;';
       svg.setAttribute('aria-label', 'Vocado');
       svg.setAttribute('role', 'img');
-      document.getElementById('home-title').replaceChildren(svg);
+      return svg;
+    }
+    try {
+      const resp = await fetch('./woordlogo.svg');
+      const text = await resp.text();
+      document.getElementById('home-title').replaceChildren(makeLogo(text, 36));
+      const pl = document.getElementById('placement-logo');
+      if (pl) pl.replaceChildren(makeLogo(text, 28));
     } catch(e) {
-      /* Fallback als fetch mislukt */
       document.getElementById('home-title').textContent = 'Vocado';
+      const pl = document.getElementById('placement-logo');
+      if (pl) pl.textContent = 'Vocado';
     }
   })();
 </script>
