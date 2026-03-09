@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-09 21:02 -->
+<!-- Vocado — standalone build 2026-03-09 21:10 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -3893,17 +3893,22 @@ window.addEventListener('load', () => {
     function makeLogo(svgText, height) {
       const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
       const svg = doc.querySelector('svg');
-      // #E0E4D8: achtergrondrechthoek → none (transparant), letter-counters → var(--bg)
-      // Onderscheid: rechthoek heeft GEEN bochten (C/S/Q/A), counters WEL
-      // #E0E4D8: achtergrondrechthoek → none, letter-counters → var(--bg)
-      // #354C33: woordlogo-letters starten op y > 630 → var(--green) (thema-adaptief)
-      //          avocado-karakter paden starten op y < 630 → ongemoeid laten
+      // #E0E4D8: achtergrondrechthoek → none
+      //          oogstipjes (curves, y < 630) → altijd #fff (wit in licht én donker)
+      //          letteropenings (curves, y > 630) → var(--bg) (thema-adaptief)
+      // #354C33: woordlogo-letters (y > 630) → var(--green); avocado-karakter → ongemoeid
       svg.querySelectorAll('*').forEach(el => {
         const f = (el.getAttribute('fill') || '').toLowerCase();
         if (f === '#e0e4d8') {
           const d = el.getAttribute('d') || '';
           const isRect = !/[CSQTAcsqta]/.test(d);
-          el.setAttribute('fill', isRect ? 'none' : 'var(--bg)');
+          if (isRect) {
+            el.setAttribute('fill', 'none');
+          } else {
+            const m = d.match(/^M[\d.]+[\s,]+([\d.]+)/);
+            const y = m ? parseFloat(m[1]) : 999;
+            el.setAttribute('fill', y < 630 ? '#ffffff' : 'var(--bg)');
+          }
         }
         if (f === '#354c33') {
           const d = el.getAttribute('d') || '';
