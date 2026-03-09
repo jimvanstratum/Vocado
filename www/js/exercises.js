@@ -158,7 +158,7 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
 export function renderLessonIntro(exercise, container, onComplete) {
   const { lesson, words } = exercise;
   const preview = words.slice(0, 3);
-  const estMin  = Math.max(5, Math.round(words.length * 2.2));
+  const estMin  = Math.max(2, Math.round(words.length * 0.5));
 
   container.innerHTML = `
     <div class="intro-card">
@@ -614,9 +614,8 @@ export function renderWordOrder(exercise, container, onComplete) {
         const idx  = parseInt(btn.dataset.idx);
         const tok  = available[idx];
         assembled.push(available.splice(idx, 1)[0]);
-        // Spreek chip uit; sla losse tekens over — TTS leest accenten anders letterlijk
-        // voor als "e accento grave" of "I maiuscola" i.p.v. de klank.
-        if (hasTTS && tok.replace(/[.,!?;:']/g, '').length > 1) speak(tok);
+        // Spreek chip uit; sla alleen leestekens over (pure punctuatie heeft geen uitspraak).
+        if (hasTTS && tok.replace(/[.,!?;:'"«»\-]/g, '').length > 0) speak(tok);
         rebuildUI();
         // Als alle chips geplaatst: toon controleer-knop
         if (available.length === 0 && checkBtn) {
@@ -667,8 +666,8 @@ export function renderWordOrder(exercise, container, onComplete) {
     if (isCorrect) {
       fb.className = 'mc-feedback correct show';
       fb.innerHTML = `✓ Correct! <em>"${word.ex}"</em>`;
-      // Lees de hele zin op halve snelheid voor (2× langzamer dan gebruikersinstelling)
-      if (hasTTS) setTimeout(() => speak(word.ex, Math.max(0.3, getTTSRate() * 0.5)), 400);
+      // Lees de hele zin iets langzamer voor (0.75× gebruikersinstelling)
+      if (hasTTS) setTimeout(() => speak(word.ex, Math.max(0.4, getTTSRate() * 0.75)), 400);
     } else {
       fb.className = 'mc-feedback wrong show';
       fb.innerHTML = `✗ De juiste volgorde: <strong>"${word.ex}"</strong>`;

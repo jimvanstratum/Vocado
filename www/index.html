@@ -184,20 +184,20 @@
     /* EXERCISES */
     .ex-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; font-weight: 600; }
 
-    .flashcard-ex { perspective: 1000px; cursor: pointer; margin-bottom: 20px; }
-    .fc-card { position: relative; min-height: 200px; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); border-radius: var(--radius); }
+    .flashcard-ex { perspective: 1000px; cursor: pointer; margin-bottom: 16px; }
+    .fc-card { position: relative; min-height: 176px; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); border-radius: var(--radius); }
     .fc-card.flipped { transform: rotateY(180deg); }
-    .fc-front, .fc-back { position: absolute; width: 100%; min-height: 200px; border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .fc-front, .fc-back { position: absolute; width: 100%; min-height: 176px; border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
     .fc-front { background: var(--surface); border: 2px solid var(--border); }
     .fc-back { background: linear-gradient(135deg, #0d1a0d, #0d0d1a); border: 2px solid var(--it-green); transform: rotateY(180deg); }
-    .fc-lang { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-    .fc-word { font-size: 28px; font-weight: 800; text-align: center; }
-    .fc-tap-hint { font-size: 12px; color: var(--muted); margin-top: 12px; }
-    .fc-it { font-size: 32px; font-weight: 900; color: var(--accent); text-align: center; margin-bottom: 8px; }
-    .fc-ph { font-size: 14px; color: var(--muted); font-style: italic; margin-bottom: 8px; }
-    .fc-ex { font-size: 13px; color: #aaa; text-align: center; font-style: italic; }
-    .fc-audio-btn { margin-top: 14px; background: rgba(245,166,35,0.15); border: 1px solid rgba(245,166,35,0.3); color: var(--accent); padding: 8px 16px; border-radius: 10px; font-size: 13px; cursor: pointer; }
-    .fc-actions { display: flex; gap: 10px; width: 100%; }
+    .fc-lang { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .fc-word { font-size: 26px; font-weight: 800; text-align: center; }
+    .fc-tap-hint { font-size: 12px; color: var(--muted); margin-top: 10px; }
+    .fc-it { font-size: 26px; font-weight: 900; color: var(--accent); text-align: center; margin-bottom: 4px; }
+    .fc-ph { font-size: 13px; color: var(--muted); font-style: italic; margin-bottom: 4px; }
+    .fc-ex { font-size: 12px; color: #aaa; text-align: center; font-style: italic; }
+    .fc-audio-btn { margin-top: 8px; background: rgba(245,166,35,0.15); border: 1px solid rgba(245,166,35,0.3); color: var(--accent); padding: 6px 14px; border-radius: 10px; font-size: 12px; cursor: pointer; }
+    .fc-actions { display: flex; gap: 10px; width: 100%; margin-top: 4px; }
     .fc-btn { flex: 1; padding: 16px 8px; border-radius: 14px; border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; transition: all 0.15s; }
     .fc-btn:active { transform: scale(0.95); }
     .fc-btn span { font-size: 11px; font-weight: 400; }
