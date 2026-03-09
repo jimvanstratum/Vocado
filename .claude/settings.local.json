@@ -26,7 +26,8 @@
       "Bash(ls -lt \"/Users/jim.van.stratum/Applications/Taal app/www/\"*.svg)",
       "Bash(git add vocado.html)",
       "Bash(git commit:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(git add www/icon-192.png www/icon-512.png www/index.html www/js/exercises.js vocado.html)"
     ]
   }
 }
