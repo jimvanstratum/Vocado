@@ -323,7 +323,9 @@
     .lesson-card.recommended { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(245,166,35,0.25); }
     .lesson-next-badge { background: var(--accent); color: #fff; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 8px; flex-shrink: 0; }
     @media (prefers-color-scheme: dark) { .lesson-next-badge { color: #000; } }  /* goud bg (systeem dark) → zwarte tekst */
-    [data-theme="dark"] .lesson-next-badge { color: #000; }  /* lichtgroen bg (manueel dark) → zwarte tekst */
+    [data-theme="dark"]  .lesson-next-badge { color: #000; }  /* lichtgroen bg (manueel dark) → zwarte tekst */
+    [data-theme="light"] .lesson-next-badge { color: #fff; }  /* donkergroen bg (manueel light) → witte tekst */
+    @media (prefers-color-scheme: light) { .lesson-next-badge { color: #fff; } } /* groen bg (systeem light) → witte tekst */
     /* Lichte modus: donkergroene accent-achtergrond → witte tekst voor contrast */
     [data-theme="light"] .ex-next-btn,
     [data-theme="light"] .type-submit-btn,
@@ -1057,10 +1059,17 @@
     function makeLogo(svgText, height) {
       const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
       const svg = doc.querySelector('svg');
-      // #E0E4D8 (lichtgroen achtergrond + letter-counters) → app-achtergrondkleur
-      // var(--bg) schildert over de lettervorm heen zodat de opening echt zichtbaar is
+      // #E0E4D8: achtergrondrechthoek → none (transparant), letter-counters → var(--bg)
+      // Onderscheid: rechthoek heeft GEEN bochten (C/S/Q/A), counters WEL
+      // #354C33: letters + avocado-outline → var(--green) voor leesbaarheid in elk thema
       svg.querySelectorAll('*').forEach(el => {
-        if ((el.getAttribute('fill') || '').toLowerCase() === '#e0e4d8') el.setAttribute('fill', 'var(--bg)');
+        const f = (el.getAttribute('fill') || '').toLowerCase();
+        if (f === '#e0e4d8') {
+          const d = el.getAttribute('d') || '';
+          const isRect = !/[CSQTAcsqta]/.test(d);
+          el.setAttribute('fill', isRect ? 'none' : 'var(--bg)');
+        }
+        if (f === '#354c33') el.setAttribute('fill', 'var(--green)');
       });
       svg.setAttribute('height', String(height));
       svg.removeAttribute('width');
