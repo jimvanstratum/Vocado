@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-09 20:56 -->
+<!-- Vocado — standalone build 2026-03-09 21:02 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -3895,7 +3895,9 @@ window.addEventListener('load', () => {
       const svg = doc.querySelector('svg');
       // #E0E4D8: achtergrondrechthoek → none (transparant), letter-counters → var(--bg)
       // Onderscheid: rechthoek heeft GEEN bochten (C/S/Q/A), counters WEL
-      // #354C33: letters + avocado-outline → var(--green) voor leesbaarheid in elk thema
+      // #E0E4D8: achtergrondrechthoek → none, letter-counters → var(--bg)
+      // #354C33: woordlogo-letters starten op y > 630 → var(--green) (thema-adaptief)
+      //          avocado-karakter paden starten op y < 630 → ongemoeid laten
       svg.querySelectorAll('*').forEach(el => {
         const f = (el.getAttribute('fill') || '').toLowerCase();
         if (f === '#e0e4d8') {
@@ -3903,7 +3905,13 @@ window.addEventListener('load', () => {
           const isRect = !/[CSQTAcsqta]/.test(d);
           el.setAttribute('fill', isRect ? 'none' : 'var(--bg)');
         }
-        if (f === '#354c33') el.setAttribute('fill', 'var(--green)');
+        if (f === '#354c33') {
+          const d = el.getAttribute('d') || '';
+          const m = d.match(/^M[\d.]+[\s,]+([\d.]+)/);
+          if (m && parseFloat(m[1]) > 630) {
+            el.setAttribute('fill', 'var(--green)');
+          }
+        }
       });
       svg.setAttribute('height', String(height));
       svg.removeAttribute('width');
