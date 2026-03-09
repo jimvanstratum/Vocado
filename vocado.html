@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-09 15:21 -->
+<!-- Vocado — standalone build 2026-03-09 20:40 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -114,9 +114,9 @@
     .flag-bar { display: flex; height: 5px; border-radius: 3px; overflow: hidden; width: 60px; margin-bottom: 14px; }
     .flag-bar div { flex: 1; }
     .flag-g { background: #009246; } .flag-w { background: #ffffff; } .flag-r { background: #ce2b37; }
-    .home-title { display: flex; align-items: center; }
-    .home-title svg { height: 36px; width: auto; display: block; }
-    .home-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .home-logo { width: 100%; display: flex; justify-content: center; margin-bottom: 10px; }
+    .home-logo svg { height: 72px; width: auto; display: block; }
+    .home-sub { font-size: 13px; color: var(--muted); }
 
     /* Sprint 9.1: Cursus-voortgangsbalk (vervangt Level/XP-balk) */
     .course-progress-section { padding: 14px 20px 0; }
@@ -360,9 +360,32 @@
     .settings-version { text-align: center; font-size: 12px; color: var(--muted); padding: 8px 0 32px; }
 
     /* Gear icon knop in home header */
-    .home-header-top { display: flex; align-items: flex-start; justify-content: space-between; }
-    .settings-icon-btn { width: 36px; height: 36px; background: var(--surface); border-radius: 10px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; margin-top: 2px; }
+    .home-header-bottom { display: flex; align-items: center; justify-content: space-between; }
+    .settings-icon-btn { width: 36px; height: 36px; background: var(--surface); border-radius: 10px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
     .settings-icon-btn svg { width: 18px; height: 18px; fill: var(--muted); }
+
+    /* ── TAALINSTELLINGEN ────────────────────────────────────────────────── */
+    .lang-settings-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+    .lang-settings-item { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: var(--surface2); border-radius: 12px; border: 1.5px solid var(--border); font-size: 14px; cursor: default; }
+    .lsi-name { flex: 1; font-weight: 600; color: var(--text); }
+    .lsi-check { font-size: 16px; color: var(--green); font-weight: 700; }
+    .lang-settings-active { border-color: var(--green); cursor: default; }
+    .lang-settings-soon { opacity: 0.45; }
+
+    /* ── TAALKEUZESCHERM ─────────────────────────────────────────────────── */
+    .lang-header { padding: calc(var(--safe-t) + 32px) 24px 24px; text-align: center; }
+    .lang-logo { display: flex; justify-content: center; margin-bottom: 16px; }
+    .lang-logo svg { height: 80px; width: auto; }
+    .lang-tagline { font-size: 15px; color: var(--muted); margin: 0 0 4px; }
+    .lang-grid { padding: 0 20px; display: flex; flex-direction: column; gap: 12px; }
+    .lang-card { display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: var(--surface); border-radius: 16px; border: 1.5px solid var(--border); text-align: left; cursor: pointer; width: 100%; box-sizing: border-box; }
+    .lang-flag { font-size: 32px; flex-shrink: 0; }
+    .lang-name { font-size: 17px; font-weight: 600; color: var(--text); flex: 1; }
+    .lang-level { font-size: 12px; color: var(--muted); }
+    .lang-badge { font-size: 11px; font-weight: 600; color: var(--muted); background: var(--border); padding: 3px 8px; border-radius: 8px; }
+    .lang-available { border-color: var(--green); }
+    .lang-available:active { opacity: 0.8; }
+    .lang-soon { opacity: 0.5; cursor: default; pointer-events: none; }
 
     /* ── PLAATSINGSTOETS ──────────────────────────────────────────────────── */
     .placement-header { padding: calc(var(--safe-t) + 16px) 20px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
@@ -706,12 +729,9 @@
 <div id="screen-home" class="screen">
   <div class="screen-body">
     <div class="home-header">
-      <div class="home-header-top">
-        <div>
-          <div class="flag-bar"><div class="flag-g"></div><div class="flag-w"></div><div class="flag-r"></div></div>
-          <div class="home-title" id="home-title"></div>
-          <div class="home-sub" id="home-streak">Begin vandaag!</div>
-        </div>
+      <div class="home-logo" id="home-title"></div>
+      <div class="home-header-bottom">
+        <div class="home-sub" id="home-streak">Begin vandaag!</div>
         <button class="settings-icon-btn" id="settings-btn" aria-label="Instellingen">
           <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96a6.96 6.96 0 0 0-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84a.484.484 0 0 0-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87a.49.49 0 0 0 .12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.27.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
         </button>
@@ -852,6 +872,25 @@
     </div>
 
     <div class="settings-section">
+      <div class="settings-section-title">Taal</div>
+      <div class="settings-row">
+        <div class="settings-row-label">Actieve taal</div>
+        <div class="settings-row-sub">Kies de taal die je wilt leren.</div>
+        <div class="lang-settings-list" id="lang-settings-list">
+          <button class="lang-settings-item lang-settings-active">
+            <span>🇮🇹</span><span class="lsi-name">Italiaans</span><span class="lsi-check">✓</span>
+          </button>
+          <div class="lang-settings-item lang-settings-soon">
+            <span>🇪🇸</span><span class="lsi-name">Spaans</span><span class="lang-badge">Binnenkort</span>
+          </div>
+          <div class="lang-settings-item lang-settings-soon">
+            <span>🇫🇷</span><span class="lsi-name">Frans</span><span class="lang-badge">Binnenkort</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-section">
       <div class="settings-section-title">Niveau & toets</div>
       <div class="settings-row">
         <div class="settings-row-label">Plaatsingstoets</div>
@@ -891,6 +930,33 @@
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
     <div class="settings-version">Vocado · v1.20 · Italiaans · 90 lessen · 720 woorden</div>
+  </div>
+</div>
+
+<!-- TAALKEUZESCHERM -->
+<div id="screen-lang" class="screen">
+  <div class="lang-header">
+    <div class="lang-logo" id="lang-logo"></div>
+    <p class="lang-tagline">Kies een taal om te beginnen</p>
+  </div>
+  <div class="lang-grid">
+    <button class="lang-card lang-available" id="lang-italian">
+      <span class="lang-flag">🇮🇹</span>
+      <div>
+        <div class="lang-name">Italiaans</div>
+        <div class="lang-level">A1 · A2 · B1</div>
+      </div>
+    </button>
+    <div class="lang-card lang-soon">
+      <span class="lang-flag">🇪🇸</span>
+      <div class="lang-name">Spaans</div>
+      <span class="lang-badge">Binnenkort</span>
+    </div>
+    <div class="lang-card lang-soon">
+      <span class="lang-flag">🇫🇷</span>
+      <div class="lang-name">Frans</div>
+      <span class="lang-badge">Binnenkort</span>
+    </div>
   </div>
 </div>
 
@@ -2537,9 +2603,9 @@ function navigate(screen, data = {}) {
   const el = document.getElementById(screenId);
   if (el) el.classList.add('active');
 
-  // Bottom nav: settings en placement zijn "overlay-schermen" zonder nav highlight
-  const navScreen = (['review','lesson'].includes(screen))     ? 'home'
-                  : (['settings','placement'].includes(screen)) ? ''
+  // Bottom nav: settings, placement en lang zijn "overlay-schermen" zonder nav highlight
+  const navScreen = (['review','lesson'].includes(screen))           ? 'home'
+                  : (['settings','placement','lang'].includes(screen)) ? ''
                   : screen;  // 'home', 'stats', 'achievements', 'dictionary'
   document.querySelectorAll('.nav-btn[data-screen]').forEach(b =>
     b.classList.toggle('active', navScreen !== '' && b.dataset.screen === navScreen)
@@ -2575,7 +2641,7 @@ function renderHome() {
   if (cpPct)   cpPct.textContent   = `${coursePct}%`;
   if (cpFill)  cpFill.style.width  = coursePct + '%';
 
-  $id('home-streak').textContent = streak === 0 ? 'Begin vandaag!' : `${streak} dag${streak !== 1 ? 'en' : ''} op rij 🔥`;
+  $id('home-streak').textContent = streak === 0 ? '🇮🇹 Italiaans · Begin vandaag!' : `🇮🇹 Italiaans · ${streak} dag${streak !== 1 ? 'en' : ''} op rij 🔥`;
   // Sprint 12: quick-stats verwijderd van homescreen (verplaatst naar Voortgang)
 
   // ── Dagdoel-voortgang ──────────────────────────────────────────────────────
@@ -3787,9 +3853,11 @@ async function init() {
     }
   }
 
-  // Eerste keer: plaatsingstoets tonen
+  // Taalkeuzescherm (nieuw), dan plaatsingstoets
+  $id('lang-italian')?.addEventListener('click', () => navigate('placement'));
+
   if (!isPlacementDone()) {
-    navigate('placement');
+    navigate('lang');
   } else {
     navigate('home');
   }
@@ -3818,12 +3886,16 @@ window.addEventListener('load', () => {
 </script>
 
 <script>
-  /* Woordlogo: fetch SVG inline zodat CSS-variabelen werken voor letter-counters */
+  /* Vocado groot logo: fetch SVG inline zodat CSS-variabelen werken */
   (async () => {
     function makeLogo(svgText, height) {
       const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
       const svg = doc.querySelector('svg');
-      svg.querySelectorAll('path[fill="#000000"]').forEach(p => p.setAttribute('fill', 'var(--bg)'));
+      // #E0E4D8 (lichtgroen achtergrond + letter-counters) → app-achtergrondkleur
+      // var(--bg) schildert over de lettervorm heen zodat de opening echt zichtbaar is
+      svg.querySelectorAll('*').forEach(el => {
+        if ((el.getAttribute('fill') || '').toLowerCase() === '#e0e4d8') el.setAttribute('fill', 'var(--bg)');
+      });
       svg.setAttribute('height', String(height));
       svg.removeAttribute('width');
       svg.style.cssText = 'width:auto;display:block;';
@@ -3832,15 +3904,19 @@ window.addEventListener('load', () => {
       return svg;
     }
     try {
-      const resp = await fetch('./woordlogo.svg');
+      const resp = await fetch('./Vocado groot.svg');
       const text = await resp.text();
-      document.getElementById('home-title').replaceChildren(makeLogo(text, 36));
+      document.getElementById('home-title').replaceChildren(makeLogo(text, 72));
       const pl = document.getElementById('placement-logo');
-      if (pl) pl.replaceChildren(makeLogo(text, 28));
+      if (pl) pl.replaceChildren(makeLogo(text, 48));
+      const ll = document.getElementById('lang-logo');
+      if (ll) ll.replaceChildren(makeLogo(text, 80));
     } catch(e) {
       document.getElementById('home-title').textContent = 'Vocado';
       const pl = document.getElementById('placement-logo');
       if (pl) pl.textContent = 'Vocado';
+      const ll = document.getElementById('lang-logo');
+      if (ll) ll.textContent = 'Vocado';
     }
   })();
 </script>

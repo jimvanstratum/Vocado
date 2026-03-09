@@ -132,9 +132,9 @@ export function navigate(screen, data = {}) {
   const el = document.getElementById(screenId);
   if (el) el.classList.add('active');
 
-  // Bottom nav: settings en placement zijn "overlay-schermen" zonder nav highlight
-  const navScreen = (['review','lesson'].includes(screen))     ? 'home'
-                  : (['settings','placement'].includes(screen)) ? ''
+  // Bottom nav: settings, placement en lang zijn "overlay-schermen" zonder nav highlight
+  const navScreen = (['review','lesson'].includes(screen))           ? 'home'
+                  : (['settings','placement','lang'].includes(screen)) ? ''
                   : screen;  // 'home', 'stats', 'achievements', 'dictionary'
   document.querySelectorAll('.nav-btn[data-screen]').forEach(b =>
     b.classList.toggle('active', navScreen !== '' && b.dataset.screen === navScreen)
@@ -170,7 +170,7 @@ function renderHome() {
   if (cpPct)   cpPct.textContent   = `${coursePct}%`;
   if (cpFill)  cpFill.style.width  = coursePct + '%';
 
-  $id('home-streak').textContent = streak === 0 ? 'Begin vandaag!' : `${streak} dag${streak !== 1 ? 'en' : ''} op rij 🔥`;
+  $id('home-streak').textContent = streak === 0 ? '🇮🇹 Italiaans · Begin vandaag!' : `🇮🇹 Italiaans · ${streak} dag${streak !== 1 ? 'en' : ''} op rij 🔥`;
   // Sprint 12: quick-stats verwijderd van homescreen (verplaatst naar Voortgang)
 
   // ── Dagdoel-voortgang ──────────────────────────────────────────────────────
@@ -1382,9 +1382,11 @@ async function init() {
     }
   }
 
-  // Eerste keer: plaatsingstoets tonen
+  // Taalkeuzescherm (nieuw), dan plaatsingstoets
+  $id('lang-italian')?.addEventListener('click', () => navigate('placement'));
+
   if (!isPlacementDone()) {
-    navigate('placement');
+    navigate('lang');
   } else {
     navigate('home');
   }
