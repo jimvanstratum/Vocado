@@ -23,7 +23,10 @@
       "Bash(ls ~/Downloads/*.svg)",
       "Bash(ls \"/Users/jim.van.stratum/Applications/Taal app/www/\"*.svg)",
       "Bash(ls -la \"/Users/jim.van.stratum/Applications/Taal app/www/\"*.svg)",
-      "Bash(ls -lt \"/Users/jim.van.stratum/Applications/Taal app/www/\"*.svg)"
+      "Bash(ls -lt \"/Users/jim.van.stratum/Applications/Taal app/www/\"*.svg)",
+      "Bash(git add vocado.html)",
+      "Bash(git commit:*)",
+      "Bash(git push)"
     ]
   }
 }
