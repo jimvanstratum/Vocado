@@ -130,7 +130,13 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
     queue.push({ type: 'word-order', word, isNew: false });
   });
 
-  // Review: random type, inclusief word-order en listen-type als TTS beschikbaar
+  // Zinsoefening: max 2 per les, aangeboden nadat woord al geproduceerd is
+  const scWords = newWords.filter(w => w.ex && w.exNl).slice(0, 2);
+  scWords.forEach(word => {
+    queue.push({ type: 'sentence-choice', word, isNew: false });
+  });
+
+  // Review: random type, inclusief word-order, listen-type en sentence-choice als beschikbaar
   reviewWords.forEach(word => {
     const types = ['multiple-choice', 'type'];
     if (ttsOk) {
@@ -138,6 +144,7 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
       types.push('listen-type');   // dictee als extra review-type
     }
     if (sentenceToTokens(word.ex).length >= 3) types.push('word-order');
+    if (word.ex && word.exNl) types.push('sentence-choice');
     const type = types[Math.floor(Math.random() * types.length)];
     queue.push({ type, word, isNew: false });
   });
@@ -325,6 +332,70 @@ export function renderMultipleChoice(exercise, container, allWords, onComplete) 
         fb.className = 'mc-feedback wrong show';
         fb.innerHTML = `✗ Fout. Het antwoord is: <strong>${word.it}</strong> <em>[${word.ph}]</em>`;
         if (hasTTS) setTimeout(() => speak(word.it), 500);
+      }
+
+      updateWordState(word.id, qualityFromResult(result));
+      recordAnswer(isCorrect);
+
+      const nextBtn = container.querySelector('#ex-next');
+      setupNextBtn(nextBtn, () => onComplete({ result, word, xp: isCorrect ? 4 : 1 }), isCorrect);
+    });
+  });
+}
+
+
+/**
+ * Zinsoefening — Kies de juiste Italiaanse zin bij een Nederlandse zin.
+ * Aangeboden nadat een woord al eens gezien is (isNew: false).
+ */
+export function renderSentenceChoice(exercise, container, allWords, onComplete) {
+  const { word } = exercise;
+  const hasTTS = isTTSAvailable();
+
+  const distractors = allWords
+    .filter(w => w.id !== word.id && w.ex)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3);
+  const options = shuffleEx([word, ...distractors]);
+
+  container.innerHTML = `
+    <div class="ex-label">Welke zin klopt?</div>
+    <div class="sc-nl-sentence">"${word.exNl}"</div>
+    <div class="mc-options" id="sc-options">
+      ${options.map((opt, i) => `
+        <button class="mc-option sc-option" data-id="${opt.id}" data-correct="${opt.id === word.id}">
+          <span class="mc-letter">${['A','B','C','D'][i]}</span>
+          <span class="mc-text">${opt.ex}</span>
+        </button>
+      `).join('')}
+    </div>
+    <div class="mc-feedback" id="sc-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>
+  `;
+
+  let answered = false;
+  container.querySelectorAll('.mc-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (answered) return;
+      answered = true;
+      const isCorrect = btn.dataset.correct === 'true';
+      const result = isCorrect ? 'correct' : 'wrong';
+
+      container.querySelectorAll('.mc-option').forEach(b => {
+        b.classList.add('disabled');
+        if (b.dataset.correct === 'true') b.classList.add('correct');
+        else if (b === btn) b.classList.add('wrong');
+      });
+
+      const fb = container.querySelector('#sc-feedback');
+      if (isCorrect) {
+        fb.className = 'mc-feedback correct show';
+        fb.innerHTML = `✓ Correct! <em>${word.it}</em> — "${word.ex}"`;
+        if (hasTTS) setTimeout(() => speak(word.ex), 400);
+      } else {
+        fb.className = 'mc-feedback wrong show';
+        fb.innerHTML = `✗ Fout. De vertaling is: <strong>"${word.ex}"</strong>`;
+        if (hasTTS) setTimeout(() => speak(word.ex), 500);
       }
 
       updateWordState(word.id, qualityFromResult(result));
