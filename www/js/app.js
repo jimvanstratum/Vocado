@@ -9,6 +9,60 @@ import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped,
 import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=16';
 import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=16';
 
+// ─── PWA INSTALL ──────────────────────────────────────────────────────────────
+const IS_STANDALONE = window.matchMedia('(display-mode: standalone)').matches
+                   || !!window.navigator.standalone;
+const IS_IOS        = /iPhone|iPad|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+function showInstallBanner() {
+  if (IS_STANDALONE) return;
+  if (localStorage.getItem('vocado_install_dismissed')) return;
+  const banner = document.getElementById('install-banner');
+  if (!banner || banner.style.display !== 'none') return;  // al zichtbaar
+
+  const subEl   = document.getElementById('ib-sub');
+  const btnEl   = document.getElementById('ib-action');
+  const closeEl = document.getElementById('ib-close');
+
+  if (IS_IOS) {
+    if (subEl) subEl.textContent = 'Tik op het deelicoon ↑ in Safari → "Zet op beginscherm"';
+    if (btnEl) {
+      btnEl.textContent = 'Uitleg';
+      btnEl.onclick = () => {
+        showToast('Safari → deelicoon ↑ → "Zet op beginscherm"');
+      };
+    }
+    banner.style.display = 'flex';
+  } else if (window._deferredInstallPrompt) {
+    if (subEl) subEl.textContent = 'Open sneller, werkt volledig offline';
+    if (btnEl) {
+      btnEl.textContent = 'Installeren';
+      btnEl.onclick = async () => {
+        const prompt = window._deferredInstallPrompt;
+        window._deferredInstallPrompt = null;
+        prompt.prompt();
+        const { outcome } = await prompt.userChoice;
+        if (outcome === 'accepted') {
+          localStorage.setItem('vocado_install_dismissed', '1');
+          banner.style.display = 'none';
+          showToast('✅ Vocado geïnstalleerd!');
+        } else {
+          // Prompt is consumed — reset voor volgende keer
+        }
+      };
+    }
+    banner.style.display = 'flex';
+  }
+  // Geen Android prompt beschikbaar: banner niet tonen
+
+  if (closeEl) {
+    closeEl.onclick = () => {
+      localStorage.setItem('vocado_install_dismissed', '1');
+      banner.style.display = 'none';
+    };
+  }
+}
+
 // ─── CONSTANTEN ───────────────────────────────────────────────────────────────
 const MILESTONE_POINTS = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 const MILESTONE_NAMES  = {
@@ -140,7 +194,16 @@ export function navigate(screen, data = {}) {
     b.classList.toggle('active', navScreen !== '' && b.dataset.screen === navScreen)
   );
 
-  if (screen === 'home')         renderHome();
+  if (screen === 'home') {
+    renderHome();
+    // Toon install-banner als gebruiker ≥ 1 les heeft voltooid (niet in standalone)
+    if (!IS_STANDALONE) {
+      const prog = getProgress();
+      if ((prog.completedLessons?.length ?? 0) >= 1) {
+        setTimeout(showInstallBanner, 600); // kleine vertraging na les-animatie
+      }
+    }
+  }
   if (screen === 'lesson')       startLesson(data.lessonId);
   if (screen === 'review')       startReview();
   if (screen === 'stats')        renderStats();
@@ -1272,6 +1335,43 @@ async function init() {
       showToast('Voortgang gereset');
     }
   });
+
+  // ── Installeer als app (instellingen) ─────────────────────────────────────
+  const installSection = $id('settings-install-section');
+  const installBtn     = $id('settings-install-btn');
+  const installSub     = $id('settings-install-sub');
+
+  if (IS_STANDALONE) {
+    // Al geïnstalleerd: sectie verbergen of "al geïnstalleerd" tonen
+    if (installSection) installSection.style.display = 'none';
+  } else {
+    if (IS_IOS) {
+      if (installSub) installSub.textContent = 'Tik op het deelicoon ↑ in Safari, dan "Zet op beginscherm". Opent als volwaardige app.';
+      if (installBtn) {
+        installBtn.textContent = '📋 Bekijk instructies';
+        installBtn.addEventListener('click', () => {
+          showToast('Safari → deelicoon ↑ → "Zet op beginscherm"');
+        });
+      }
+    } else {
+      installBtn?.addEventListener('click', async () => {
+        const prompt = window._deferredInstallPrompt;
+        if (prompt) {
+          window._deferredInstallPrompt = null;
+          prompt.prompt();
+          const { outcome } = await prompt.userChoice;
+          if (outcome === 'accepted') {
+            localStorage.setItem('vocado_install_dismissed', '1');
+            $id('install-banner')?.style && ($id('install-banner').style.display = 'none');
+            if (installSection) installSection.style.display = 'none';
+            showToast('✅ Vocado geïnstalleerd!');
+          }
+        } else {
+          showToast('Open Vocado in Chrome of Edge om te installeren');
+        }
+      });
+    }
+  }
 
   // Plaatsingstoets opnieuw doen (vanuit instellingen)
   $id('redo-placement-btn')?.addEventListener('click', () => {

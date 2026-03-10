@@ -95,7 +95,7 @@
     [data-theme="dark"] .intro-card         { background: linear-gradient(160deg, #0D1A11, #0A1A0D) !important; }
     [data-theme="dark"] .grammar-card       { background: linear-gradient(135deg, #0D1A14, #131A0D) !important; }
     [data-theme="dark"] .home-title svg { /* woordlogo — donkere modus via var(--bg) counters */ }
-    html, body { height: 100%; background: var(--bg); color: var(--text);
+    html, body { height: 100dvh; background: var(--bg); color: var(--text);
       font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       overflow: hidden; }
 
@@ -175,7 +175,7 @@
     .lesson-progress-track { flex: 1; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
     .lesson-progress-fill { height: 100%; background: linear-gradient(90deg, var(--it-green), var(--accent)); border-radius: 3px; transition: width 0.4s ease; }
     .lesson-progress-text { font-size: 11px; color: var(--muted); white-space: nowrap; }
-    .lesson-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 20px; display: flex; flex-direction: column; }
+    .lesson-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 20px; padding-bottom: calc(20px + var(--safe-b)); display: flex; flex-direction: column; }
     #exercise-container { flex: 1; display: flex; flex-direction: column; }
 
     @keyframes slideIn { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
@@ -346,7 +346,7 @@
     /* ── INSTELLINGEN ─────────────────────────────────────────────────────── */
     .settings-header { padding: calc(var(--safe-t) + 12px) 20px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
     .settings-title { font-size: 20px; font-weight: 800; flex: 1; }
-    .settings-body { flex: 1; overflow-y: auto; padding: 20px; }
+    .settings-body { flex: 1; overflow-y: auto; padding: 20px; padding-bottom: calc(20px + var(--safe-b)); }
     .settings-section { margin-bottom: 28px; }
     .settings-section-title { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 12px; }
     .settings-row { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); padding: 16px; margin-bottom: 10px; }
@@ -722,9 +722,38 @@
     [data-theme="light"] .lc-grammar-body { color: var(--muted) !important; }
     [data-theme="light"] .fc-ex           { color: var(--muted) !important; }
     [data-theme="light"] .fc-back { background: linear-gradient(160deg, #f0fff4 0%, #e8f0ff 100%) !important; }
+
+    /* ── PWA INSTALL BANNER ───────────────────────────────────────────────── */
+    .install-banner {
+      position: fixed; top: calc(var(--safe-t) + 8px); left: 12px; right: 12px;
+      background: var(--surface); border: 1.5px solid var(--accent); border-radius: 16px;
+      padding: 12px 14px; display: flex; align-items: center; gap: 10px;
+      z-index: 600; box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      animation: bannerSlide 0.3s ease;
+    }
+    @keyframes bannerSlide { from { opacity:0; transform:translateY(-14px); } to { opacity:1; transform:translateY(0); } }
+    .ib-icon  { font-size: 24px; flex-shrink: 0; }
+    .ib-text  { flex: 1; font-size: 13px; line-height: 1.4; color: var(--text); }
+    .ib-text strong { color: var(--accent); display: block; margin-bottom: 2px; }
+    .ib-text span   { color: var(--muted); font-size: 12px; }
+    .ib-btn   { background: var(--accent); color: #000; border: none; border-radius: 10px; padding: 9px 14px; font-size: 13px; font-weight: 800; cursor: pointer; flex-shrink: 0; white-space: nowrap; }
+    .ib-close { background: none; border: none; color: var(--muted); font-size: 20px; cursor: pointer; padding: 4px 2px; flex-shrink: 0; line-height: 1; }
+    @media (prefers-color-scheme: light) { .ib-btn { color: #fff; } }
+    [data-theme="light"] .ib-btn { color: #fff; }
   </style>
 </head>
 <body>
+
+<!-- PWA INSTALL BANNER — getoond na eerste les, verborgen als al als app geïnstalleerd -->
+<div id="install-banner" class="install-banner" style="display:none" role="complementary" aria-label="App installeren">
+  <div class="ib-icon">📲</div>
+  <div class="ib-text">
+    <strong>Zet Vocado op je beginscherm</strong>
+    <span id="ib-sub">Open sneller, werkt offline</span>
+  </div>
+  <button class="ib-btn" id="ib-action">Installeren</button>
+  <button class="ib-close" id="ib-close" aria-label="Sluiten">✕</button>
+</div>
 
 <div id="loading">
   <div class="loading-flag"><div class="flag-g"></div><div class="flag-w"></div><div class="flag-r"></div></div>
@@ -905,6 +934,15 @@
       </div>
     </div>
 
+    <div class="settings-section" id="settings-install-section">
+      <div class="settings-section-title">App installeren</div>
+      <div class="settings-row">
+        <div class="settings-row-label">📱 Zet op beginscherm</div>
+        <div class="settings-row-sub" id="settings-install-sub">Open Vocado sneller en gebruik het volledig offline als app — geen browser nodig.</div>
+        <button class="settings-seg-btn" id="settings-install-btn" style="width:100%;margin-top:0">📲 Installeer Vocado als app</button>
+      </div>
+    </div>
+
     <div class="settings-section">
       <div class="settings-section-title">Gegevens</div>
 
@@ -1041,10 +1079,17 @@
     // Ook na oriëntatieverandering opnieuw meten
     window.addEventListener('orientationchange', function() { setTimeout(setH, 200); });
   })();
+
+  // Vang Android/Chrome install-prompt zo vroeg mogelijk op (vóór module-load)
+  window._deferredInstallPrompt = null;
+  window.addEventListener('beforeinstallprompt', function(e) {
+    e.preventDefault();
+    window._deferredInstallPrompt = e;
+  });
 </script>
 
 <script type="module">
-  import './js/app.js?v=18';
+  import './js/app.js?v=19';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
