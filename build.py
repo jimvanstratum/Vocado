@@ -164,6 +164,25 @@ meta_comment = f'<!-- Vocado — standalone build {build_date} -->\n'
 html = meta_comment + html
 
 
+# ── 5b. Service worker cache-versie bumpen ─────────────────────────────────────
+# De browser vergelijkt sw.js byte-voor-byte. Als CACHE_NAME nooit verandert,
+# detecteert de browser geen nieuwe versie en blijft de oude cache actief.
+# Door de datum in CACHE_NAME op te nemen verandert sw.js bij elke dagelijkse
+# build, waardoor de PWA op het startscherm automatisch updatet na een git push.
+
+sw_path = os.path.join(WWW, 'sw.js')
+sw_old  = read(sw_path)
+cache_version = datetime.now().strftime('%Y%m%d')
+new_cache_name = f'vocado-{cache_version}'
+sw_new, sw_n = re.subn(r"const CACHE_NAME = '[^']*'",
+                        f"const CACHE_NAME = '{new_cache_name}'",
+                        sw_old)
+if sw_n and sw_new != sw_old:
+    with open(sw_path, 'w', encoding='utf-8') as f:
+        f.write(sw_new)
+    print(f'🔄  Service worker: CACHE_NAME → {new_cache_name}')
+
+
 # ── 6. Uitvoerbestand schrijven ────────────────────────────────────────────────
 
 with open(OUT, 'w', encoding='utf-8') as f:
