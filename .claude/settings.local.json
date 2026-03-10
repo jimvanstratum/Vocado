@@ -36,7 +36,10 @@
       "Bash(ssh-keyscan github.com)",
       "Bash(~/.ssh/known_hosts)",
       "Bash(git remote set-url origin https://github.com/jimvanstratum/Taal-app.git)",
-      "Bash(git config --global credential.helper osxkeychain)"
+      "Bash(git config --global credential.helper osxkeychain)",
+      "Bash(cat .github/workflows/*.yml)",
+      "WebFetch(domain:github.com)",
+      "Bash(git add www/sw.js vocado.html build.py)"
     ]
   }
 }
