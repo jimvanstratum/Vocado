@@ -172,7 +172,7 @@ html = meta_comment + html
 
 sw_path = os.path.join(WWW, 'sw.js')
 sw_old  = read(sw_path)
-cache_version = datetime.now().strftime('%Y%m%d')
+cache_version = datetime.now().strftime('%Y%m%d-%H%M')
 new_cache_name = f'vocado-{cache_version}'
 sw_new, sw_n = re.subn(r"const CACHE_NAME = '[^']*'",
                         f"const CACHE_NAME = '{new_cache_name}'",
