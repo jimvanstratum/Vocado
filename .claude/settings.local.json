@@ -27,7 +27,16 @@
       "Bash(git add vocado.html)",
       "Bash(git commit:*)",
       "Bash(git push)",
-      "Bash(git add www/icon-192.png www/icon-512.png www/index.html www/js/exercises.js vocado.html)"
+      "Bash(git add www/icon-192.png www/icon-512.png www/index.html www/js/exercises.js vocado.html)",
+      "Bash(gh auth status)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(git fetch origin)",
+      "Bash(git add www/index.html www/js/app.js vocado.html www/sw.js)",
+      "Bash(git remote set-url origin git@github.com:jimvanstratum/Taal-app.git)",
+      "Bash(ssh-keyscan github.com)",
+      "Bash(~/.ssh/known_hosts)",
+      "Bash(git remote set-url origin https://github.com/jimvanstratum/Taal-app.git)",
+      "Bash(git config --global credential.helper osxkeychain)"
     ]
   }
 }
