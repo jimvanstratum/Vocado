@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-14 20:38 -->
+<!-- Vocado — standalone build 2026-03-14 20:43 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -977,7 +977,8 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.21 · Italiaans · 90 lessen · 720 woorden</div>
+    <div class="settings-version" id="settings-version">Vocado · v1.21 · Italiaans · 90 lessen · 720 woorden</div>
+    <script>setTimeout(()=>{const el=document.getElementById('settings-version');if(el){const sa=getComputedStyle(document.documentElement).getPropertyValue('--safe-b').trim();el.textContent+=` | ih:${window.innerHeight} sa:${sa}`;}},100);</script>
   </div>
 </div>
 
