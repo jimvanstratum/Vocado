@@ -978,7 +978,7 @@
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
     <div class="settings-version" id="settings-version">Vocado · v1.21 · Italiaans · 90 lessen · 720 woorden</div>
-    <script>setTimeout(()=>{const el=document.getElementById('settings-version');if(el){const sa=getComputedStyle(document.documentElement).getPropertyValue('--safe-b').trim();el.textContent+=` | ih:${window.innerHeight} sa:${sa}`;}},100);</script>
+    <script>setTimeout(()=>{const el=document.getElementById('settings-version');if(el){const sa=getComputedStyle(document.documentElement).getPropertyValue('--safe-b').trim();const scr=document.querySelector('.screen.active');const nav=document.querySelector('.screen.active .bottom-nav');const sr=scr?scr.getBoundingClientRect():{};const nr=nav?nav.getBoundingClientRect():{};const vv=window.visualViewport;el.textContent=`v1.21 | ih:${window.innerHeight} sa:${sa} | scr:${Math.round(sr.top)}-${Math.round(sr.bottom)} | nav:${Math.round(nr.top)}-${Math.round(nr.bottom)} | vv:${vv?Math.round(vv.height):'?'}`;}},300);</script>
   </div>
 </div>
 
