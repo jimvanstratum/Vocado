@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-14 21:02 -->
+<!-- Vocado — standalone build 2026-03-14 21:25 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -95,20 +95,19 @@
     [data-theme="dark"] .intro-card         { background: linear-gradient(160deg, #0D1A11, #0A1A0D) !important; }
     [data-theme="dark"] .grammar-card       { background: linear-gradient(135deg, #0D1A14, #131A0D) !important; }
     [data-theme="dark"] .home-title svg { /* woordlogo — donkere modus via var(--bg) counters */ }
-    html, body { height: 100%; background: var(--bg); color: var(--text);
+    html, body { height: 100%; color: var(--text);
       font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       overflow: hidden; }
-    /* iOS home indicator zone (buiten layout viewport) krijgt html-achtergrond;
-       door --surface te gebruiken matcht dit de nav-balk en verdwijnt de gap */
+    /* Zowel html als body op --surface: iOS gebruikt de body-achtergrond voor de
+       home indicator zone (viewport-fit:cover). Zo matcht die zone de nav-balk. */
     html { background: var(--surface); }
+    body { background: var(--surface); }
 
     .screen { display: none; flex-direction: column; overflow: hidden; }
     .screen.active { display: flex; position: fixed; inset: 0; }
-    .screen-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-
-    /* Vangnet: dek safe-area onderin altijd af met nav-kleur */
-    body::after { content: ''; position: fixed; bottom: 0; left: 0; right: 0;
-      height: env(safe-area-inset-bottom, 0px); background: var(--surface); z-index: 5; }
+    /* Geef scherm-scroll-gebieden expliciet --bg zodat de app-achtergrond klopt */
+    .screen-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--bg); }
+    .settings-body { background: var(--bg); }
 
     /* BOTTOM NAV */
     .bottom-nav { display: flex; background: var(--surface); border-top: 1px solid var(--border); padding-bottom: env(safe-area-inset-bottom, 0px); flex-shrink: 0; z-index: 10; position: relative; }
@@ -980,7 +979,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.22 · Italiaans · 90 lessen · 720 woorden</div>
+    <div class="settings-version">Vocado · v1.23 · Italiaans · 90 lessen · 720 woorden</div>
   </div>
 </div>
 
@@ -4170,5 +4169,8 @@ window.addEventListener('load', () => {
     }
   })();
 </script>
+<!-- Safe-area fill: dekt de home indicator zone af met de nav-kleur.
+     Echte div i.p.v. body::after om iOS Safari pseudo-element bugs te vermijden. -->
+<div id="safe-fill" aria-hidden="true" style="position:fixed;bottom:0;left:0;right:0;height:env(safe-area-inset-bottom,0px);background:var(--surface);z-index:8;pointer-events:none"></div>
 </body>
 </html>
