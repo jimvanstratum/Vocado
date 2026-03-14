@@ -103,14 +103,19 @@
     html { background: var(--surface); }
     body { background: var(--surface); }
 
-    .screen { display: none; flex-direction: column; overflow: hidden; }
+    .screen { display: none; flex-direction: column; }
     .screen.active { display: flex; position: fixed; inset: 0; }
     /* Geef scherm-scroll-gebieden expliciet --bg zodat de app-achtergrond klopt */
-    .screen-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--bg); }
+    .screen-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--bg);
+      padding-bottom: calc(49px + env(safe-area-inset-bottom, 0px)); }
     .settings-body { background: var(--bg); }
 
     /* BOTTOM NAV */
-    .bottom-nav { display: flex; background: var(--surface); border-top: 1px solid var(--border); padding-bottom: env(safe-area-inset-bottom, 0px); flex-shrink: 0; z-index: 10; position: relative; }
+    /* position:fixed → containing block = viewport, dus env(safe-area-inset-bottom) lost correct op
+       los van overflow:hidden op het parent-scherm (iOS Safari bug workaround) */
+    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; display: flex;
+      background: var(--surface); border-top: 1px solid var(--border);
+      padding-bottom: env(safe-area-inset-bottom, 0px); z-index: 100; }
     .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 6px 0; cursor: pointer; color: var(--muted); font-size: 10px; gap: 3px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
     .nav-btn.active { color: var(--accent); }
     .nav-btn svg { width: 22px; height: 22px; fill: currentColor; }
@@ -979,7 +984,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.25 · Italiaans · 90 lessen · 720 woorden</div>
+    <div class="settings-version">Vocado · v1.26 · Italiaans · 90 lessen · 720 woorden</div>
   </div>
 </div>
 
