@@ -190,6 +190,8 @@ export function navigate(screen, data = {}) {
   const navScreen = (['review','lesson'].includes(screen))           ? 'home'
                   : (['settings','placement','lang'].includes(screen)) ? ''
                   : screen;  // 'home', 'stats', 'achievements', 'dictionary'
+  const showNav = !['lesson', 'review', 'settings', 'placement', 'lang'].includes(screen);
+  document.body.classList.toggle('show-nav', showNav);
   document.querySelectorAll('.nav-btn[data-screen]').forEach(b =>
     b.classList.toggle('active', navScreen !== '' && b.dataset.screen === navScreen)
   );
@@ -909,6 +911,7 @@ function startMilestoneQuiz(checkpoint) {
 
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById('screen-lesson').classList.add('active');
+  document.body.classList.remove('show-nav');
   document.querySelectorAll('.nav-btn[data-screen]').forEach(b => b.classList.remove('active'));
 
   getLessonTitle().textContent = `📋 ${MILESTONE_NAMES[checkpoint] || 'Toetsles'}`;

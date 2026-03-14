@@ -106,16 +106,18 @@
     .screen { display: none; flex-direction: column; }
     .screen.active { display: flex; position: fixed; inset: 0; }
     /* Geef scherm-scroll-gebieden expliciet --bg zodat de app-achtergrond klopt */
-    .screen-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--bg);
-      padding-bottom: calc(49px + env(safe-area-inset-bottom, 0px)); }
+    .screen-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--bg); }
     .settings-body { background: var(--bg); }
 
     /* BOTTOM NAV */
-    /* position:fixed → containing block = viewport, dus env(safe-area-inset-bottom) lost correct op
-       los van overflow:hidden op het parent-scherm (iOS Safari bug workaround) */
-    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; display: flex;
+    /* Gedeelde nav is directe <body>-child — geen fixed/overflow ancestor — zodat
+       position:fixed en env(safe-area-inset-bottom) altijd against het viewport resolveren.
+       body.show-nav class wordt via JS gezet op schermen met nav (home/stats/etc.). */
+    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; display: none;
       background: var(--surface); border-top: 1px solid var(--border);
-      padding-bottom: env(safe-area-inset-bottom, 0px); z-index: 100; }
+      padding-bottom: env(safe-area-inset-bottom, 0px); z-index: 200; }
+    body.show-nav .bottom-nav { display: flex; }
+    body.show-nav .screen-body { padding-bottom: calc(49px + env(safe-area-inset-bottom, 0px)); }
     .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 6px 0; cursor: pointer; color: var(--muted); font-size: 10px; gap: 3px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
     .nav-btn.active { color: var(--accent); }
     .nav-btn svg { width: 22px; height: 22px; fill: currentColor; }
@@ -803,12 +805,6 @@
     </div>
     <div class="lesson-list" id="lesson-list"></div>
   </div>
-  <nav class="bottom-nav">
-    <button class="nav-btn active" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
-    <button class="nav-btn" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
-    <button class="nav-btn" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
-    <button class="nav-btn" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
-  </nav>
 </div>
 
 <!-- LESSON -->
@@ -847,12 +843,6 @@
     <button class="reset-btn" id="reset-btn">Voortgang resetten</button>
     <div style="height:80px"></div>
   </div>
-  <nav class="bottom-nav">
-    <button class="nav-btn" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
-    <button class="nav-btn active" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
-    <button class="nav-btn" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
-    <button class="nav-btn" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
-  </nav>
 </div>
 
 <!-- ACHIEVEMENTS -->
@@ -861,12 +851,6 @@
     <div class="ach-header"><div class="ach-header-title">Badges</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Verdien ze allemaal!</div></div>
     <div class="achievements-list" id="achievements-list"></div>
   </div>
-  <nav class="bottom-nav">
-    <button class="nav-btn" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
-    <button class="nav-btn" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
-    <button class="nav-btn active" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
-    <button class="nav-btn" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
-  </nav>
 </div>
 
 <!-- INSTELLINGEN -->
@@ -984,7 +968,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.26 · Italiaans · 90 lessen · 720 woorden</div>
+    <div class="settings-version">Vocado · v1.27 · Italiaans · 90 lessen · 720 woorden</div>
   </div>
 </div>
 
@@ -1041,12 +1025,6 @@
     </div>
     <div class="dict-list" id="dict-list"></div>
   </div>
-  <nav class="bottom-nav">
-    <button class="nav-btn" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
-    <button class="nav-btn" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
-    <button class="nav-btn" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
-    <button class="nav-btn active" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
-  </nav>
 </div>
 
 <!-- LES VERLATEN MODAL -->
@@ -1077,6 +1055,15 @@
 </div>
 
 <div class="toast" id="toast"></div>
+
+<!-- Gedeelde navigatiebalk — directe <body>-child, nooit genest in een fixed/overflow container.
+     Hierdoor resolveren position:fixed + env(safe-area-inset-bottom) altijd tegen het viewport. -->
+<nav class="bottom-nav" id="shared-nav">
+  <button class="nav-btn" data-screen="home"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></button>
+  <button class="nav-btn" data-screen="stats"><svg viewBox="0 0 24 24"><path d="M7 17h2v-5H7v5zm4 0h2V7h-2v10zm4 0h2v-8h-2v8z"/></svg><span>Voortgang</span></button>
+  <button class="nav-btn" data-screen="achievements"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Badges</span></button>
+  <button class="nav-btn" data-screen="dictionary"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg><span>Woorden</span></button>
+</nav>
 
 <!-- iOS PWA viewport-hoogte fix: --app-height volgt window.innerHeight exact,
      zodat de app tot onderaan vult ook zonder browserbalk (standalone modus). -->
