@@ -39,7 +39,8 @@
       "Bash(git config --global credential.helper osxkeychain)",
       "Bash(cat .github/workflows/*.yml)",
       "WebFetch(domain:github.com)",
-      "Bash(git add www/sw.js vocado.html build.py)"
+      "Bash(git add www/sw.js vocado.html build.py)",
+      "Bash(grep -n \"app-height\" www/index.html www/js/*.js)"
     ]
   }
 }
