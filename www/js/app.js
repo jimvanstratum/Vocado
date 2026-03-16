@@ -1296,6 +1296,15 @@ async function init() {
 
   window.app = { navigate, showToast };
 
+  // TIJDELIJKE DIAGNOSTIEK — toont metingen op iOS standalone voor debug
+  if (IS_STANDALONE && window._diagSAB) {
+    const d = window._diagSAB;
+    const appH = document.getElementById('app')?.getBoundingClientRect().height || 0;
+    setTimeout(() => showToast(
+      `sab:${d.measured}→${d.fallback} | iH:${d.innerH} | app:${Math.round(appH)} | scr:${d.screenW}×${d.screenH}`
+    ), 1200);
+  }
+
   // Nav-knoppen
   document.querySelectorAll('.nav-btn[data-screen]').forEach(btn =>
     btn.addEventListener('click', () => navigate(btn.dataset.screen))

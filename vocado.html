@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-16 07:03 -->
+<!-- Vocado — standalone build 2026-03-16 07:23 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -118,7 +118,7 @@
        body.show-nav class gezet via JS op nav-schermen (home/stats/badges/woorden). */
     #shared-nav { display: none; flex-shrink: 0;
       background: var(--surface); border-top: 1px solid var(--border);
-      padding-bottom: env(safe-area-inset-bottom, 0px); }
+      padding-bottom: var(--sab, 0px); }
     body.show-nav #shared-nav { display: flex; }
     .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 6px 0; cursor: pointer; color: var(--muted); font-size: 10px; gap: 3px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
     .nav-btn.active { color: var(--accent); }
@@ -190,7 +190,7 @@
     .lesson-progress-track { flex: 1; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
     .lesson-progress-fill { height: 100%; background: linear-gradient(90deg, var(--it-green), var(--accent)); border-radius: 3px; transition: width 0.4s ease; }
     .lesson-progress-text { font-size: 11px; color: var(--muted); white-space: nowrap; }
-    .lesson-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 20px; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; }
+    .lesson-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 20px; padding-bottom: calc(20px + var(--sab, 0px)); display: flex; flex-direction: column; }
     #exercise-container { flex: 1; display: flex; flex-direction: column; }
 
     @keyframes slideIn { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
@@ -361,7 +361,7 @@
     /* ── INSTELLINGEN ─────────────────────────────────────────────────────── */
     .settings-header { padding: calc(var(--safe-t) + 12px) 20px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
     .settings-title { font-size: 20px; font-weight: 800; flex: 1; }
-    .settings-body { flex: 1; overflow-y: auto; padding: 20px; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); }
+    .settings-body { flex: 1; overflow-y: auto; padding: 20px; padding-bottom: calc(20px + var(--sab, 0px)); }
     .settings-section { margin-bottom: 28px; }
     .settings-section-title { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 12px; }
     .settings-row { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); padding: 16px; margin-bottom: 10px; }
@@ -973,7 +973,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.28 · Italiaans · 90 lessen · 720 woorden</div>
+    <div class="settings-version">Vocado · v1.29 · Italiaans · 90 lessen · 720 woorden</div>
   </div>
 </div>
 
@@ -1084,8 +1084,29 @@
     }
     setH();
     window.addEventListener('resize', setH);
-    // Ook na oriëntatieverandering opnieuw meten
     window.addEventListener('orientationchange', function() { setTimeout(setH, 200); });
+  })();
+
+  // Meet safe-area-inset-bottom via direct body-child (meest betrouwbaar op iOS PWA).
+  // Fallback: 34px voor iPhone met home indicator (schermhoogte >= 812pt).
+  (function () {
+    var el = document.createElement('div');
+    el.style.cssText = 'position:fixed;bottom:0;height:env(safe-area-inset-bottom,0px);width:1px;visibility:hidden;pointer-events:none';
+    document.body.appendChild(el);
+    var measured = parseInt(getComputedStyle(el).height) || 0;
+    document.body.removeChild(el);
+    var longest = Math.max(screen.width, screen.height);
+    var sab = measured > 0 ? measured : (longest >= 812 ? 34 : 0);
+    document.documentElement.style.setProperty('--sab', sab + 'px');
+
+    // TIJDELIJKE DIAGNOSTIEK — verwijder na diagnose
+    window._diagSAB = {
+      measured: measured,
+      fallback: sab,
+      screenW: screen.width,
+      screenH: screen.height,
+      innerH: window.innerHeight
+    };
   })();
 
   // Vang Android/Chrome install-prompt zo vroeg mogelijk op (vóór module-load)
@@ -3896,6 +3917,15 @@ async function init() {
   updateStreak();
 
   window.app = { navigate, showToast };
+
+  // TIJDELIJKE DIAGNOSTIEK — toont metingen op iOS standalone voor debug
+  if (IS_STANDALONE && window._diagSAB) {
+    const d = window._diagSAB;
+    const appH = document.getElementById('app')?.getBoundingClientRect().height || 0;
+    setTimeout(() => showToast(
+      `sab:${d.measured}→${d.fallback} | iH:${d.innerH} | app:${Math.round(appH)} | scr:${d.screenW}×${d.screenH}`
+    ), 1200);
+  }
 
   // Nav-knoppen
   document.querySelectorAll('.nav-btn[data-screen]').forEach(btn =>
