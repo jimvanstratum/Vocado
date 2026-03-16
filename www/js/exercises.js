@@ -686,7 +686,10 @@ export function renderWordOrder(exercise, container, onComplete) {
         const tok  = available[idx];
         assembled.push(available.splice(idx, 1)[0]);
         // Spreek chip uit; sla alleen leestekens over (pure punctuatie heeft geen uitspraak).
-        if (hasTTS && tok.replace(/[.,!?;:'"«»\-]/g, '').length > 0) speak(tok);
+        // Normaliseer voor TTS: kleine letters + strip accenten (voorkomt "e-acuut" e.d. bij
+        // losse klinkers met leesteken, en "hoofdletter X" bij beginhoofdletters).
+        const ttsTok = tok.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        if (hasTTS && ttsTok.replace(/[.,!?;:'"«»\-]/g, '').length > 0) speak(ttsTok);
         rebuildUI();
         // Als alle chips geplaatst: toon controleer-knop
         if (available.length === 0 && checkBtn) {
