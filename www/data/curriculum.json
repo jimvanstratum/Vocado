@@ -628,14 +628,14 @@
     ],
     "grammar": {
       "title": "Essere + bijvoeglijk naamwoord voor gemoedstoestand",
-      "body": "'Sono felice/triste/stanco/arrabbiato' = ik ben gelukkig/verdrietig/moe/boos. Bijvoeglijke naamwoorden passen zich aan: 'Sono stanca' (vrouw), 'Sono stanchi' (mannen mv). 'Mi sento' (ik voel me) klinkt gevoeliger: 'Mi sento un po' triste'. Gefeliciteerd — je kent nu 240 A1-woorden!"
+      "body": "'Sono felice/triste/stanco/arrabbiato' = ik ben gelukkig/verdrietig/moe/boos. Bijvoeglijke naamwoorden passen zich aan: 'Sono stanca' (vrouw), 'Sono stanchi' (mannen mv). 'Mi sento' (ik voel me) klinkt gevoeliger: 'Mi sento un po' triste'. Je kent nu al 240 Italiaanse woorden — goed bezig!"
     }
   },
   {
     "id": 31,
     "title": "Hotel & verblijf",
     "emoji": "🏨",
-    "level": "A2",
+    "level": "A1",
     "description": "Inchecken, je kamer vinden en vragen wat je nodig hebt.",
     "words": [
       "w163",
@@ -656,7 +656,7 @@
     "id": 32,
     "title": "Noodgevallen",
     "emoji": "🚨",
-    "level": "A2",
+    "level": "A1",
     "description": "Cruciale woorden voor noodsituaties — hoop dat je ze niet nodig hebt!",
     "words": [
       "w171",
@@ -677,7 +677,7 @@
     "id": 33,
     "title": "Gezondheid",
     "emoji": "🏥",
-    "level": "A2",
+    "level": "A1",
     "description": "Symptomen beschrijven bij de dokter of apotheek.",
     "words": [
       "w179",
@@ -698,7 +698,7 @@
     "id": 34,
     "title": "Beschrijvingen",
     "emoji": "✨",
-    "level": "A2",
+    "level": "A1",
     "description": "Dingen en mensen beschrijven met bijvoeglijke naamwoorden.",
     "words": [
       "w187",
@@ -719,7 +719,7 @@
     "id": 35,
     "title": "Gevoelens",
     "emoji": "😊",
-    "level": "A2",
+    "level": "A1",
     "description": "Beschrijf hoe je je voelt.",
     "words": [
       "w195",
@@ -740,7 +740,7 @@
     "id": 36,
     "title": "Werkwoorden in actie",
     "emoji": "⚡",
-    "level": "A2",
+    "level": "A1",
     "description": "De meest gebruikte werkwoorden om actie uit te drukken.",
     "words": [
       "w203",
@@ -761,7 +761,7 @@
     "id": 37,
     "title": "Nuttige uitdrukkingen",
     "emoji": "💬",
-    "level": "A2",
+    "level": "A1",
     "description": "Krachtige zinnen om je te redden in elke situatie.",
     "words": [
       "w211",
@@ -782,7 +782,7 @@
     "id": 38,
     "title": "Richting wijzen",
     "emoji": "🗺️",
-    "level": "A2",
+    "level": "A1",
     "description": "De weg vragen en uitleggen.",
     "words": [
       "w219",
@@ -803,7 +803,7 @@
     "id": 39,
     "title": "De natuur",
     "emoji": "🌿",
-    "level": "A2",
+    "level": "A1",
     "description": "Italiaans landschap en natuur beschrijven.",
     "words": [
       "w227",
@@ -824,7 +824,7 @@
     "id": 40,
     "title": "Klaar voor vertrek! 🇮🇹",
     "emoji": "✈️",
-    "level": "A2",
+    "level": "A1",
     "description": "Afsluitende les: laatste uitdrukkingen voor je vakantie.",
     "words": [
       "w235",
@@ -835,15 +835,15 @@
       "w240"
     ],
     "grammar": {
-      "title": "Gefeliciteerd — A1 afgerond!",
-      "body": "Je kent nu 240 Italiaanse woorden en de basisgrammatica van A1. Je kunt jezelf voorstellen, eten bestellen, de weg vragen, in een hotel verblijven en noodsituaties aan. Continua così! (Ga zo door!) — Volgende stap: A2!"
+      "title": "Op de helft — goed bezig!",
+      "body": "Je beheerst de basisgrammatica van Italiaans én een stevige woordenschat. Nog 20 lessen en je rondt A1 compleet af! 'Continua così!' — Ga zo door! 🇮🇹"
     }
   },
   {
     "id": 41,
     "title": "In het café",
     "emoji": "☕",
-    "level": "A2",
+    "level": "A1",
     "description": "Bestel drankjes en vraag om de rekening als een echte Italiaan.",
     "words": [
       "w241",
@@ -864,7 +864,7 @@
     "id": 42,
     "title": "Al ristorante",
     "emoji": "🍝",
-    "level": "A2",
+    "level": "A1",
     "description": "Een maaltijd bestellen van antipasto tot dolce.",
     "words": [
       "w249",
@@ -885,7 +885,7 @@
     "id": 43,
     "title": "Vervoer",
     "emoji": "🚆",
-    "level": "A2",
+    "level": "A1",
     "description": "Trein, bus en vliegtuig — kom overal in Italië.",
     "words": [
       "w257",
@@ -906,7 +906,7 @@
     "id": 44,
     "title": "Hotel & verblijf",
     "emoji": "🏨",
-    "level": "A2",
+    "level": "A1",
     "description": "Inchecken, je kamer regelen en voorzieningen vragen.",
     "words": [
       "w265",
@@ -927,7 +927,7 @@
     "id": 45,
     "title": "Familie",
     "emoji": "👨‍👩‍👧‍👦",
-    "level": "A2",
+    "level": "A1",
     "description": "Praat over je familie — Italianen hechten enorm aan la famiglia.",
     "words": [
       "w273",
@@ -948,7 +948,7 @@
     "id": 46,
     "title": "De weg vragen",
     "emoji": "🗺️",
-    "level": "A2",
+    "level": "A1",
     "description": "Specifieke wegaanwijzingen begrijpen en geven.",
     "words": [
       "w281",
@@ -969,7 +969,7 @@
     "id": 47,
     "title": "Het weer",
     "emoji": "☀️",
-    "level": "A2",
+    "level": "A1",
     "description": "Praat over het weer — altijd een goed gesprekonderwerp!",
     "words": [
       "w289",
@@ -990,7 +990,7 @@
     "id": 48,
     "title": "Gezondheid",
     "emoji": "🏥",
-    "level": "A2",
+    "level": "A1",
     "description": "Klachten beschrijven bij de dokter of apotheek.",
     "words": [
       "w297",
@@ -1011,7 +1011,7 @@
     "id": 49,
     "title": "Activiteiten & hobby's",
     "emoji": "🎭",
-    "level": "A2",
+    "level": "A1",
     "description": "Vertel wat je graag doet in je vrije tijd.",
     "words": [
       "w305",
@@ -1032,7 +1032,7 @@
     "id": 50,
     "title": "Plannen maken",
     "emoji": "📅",
-    "level": "A2",
+    "level": "A1",
     "description": "Afspraken maken en over de toekomst praten.",
     "words": [
       "w313",
@@ -1053,7 +1053,7 @@
     "id": 51,
     "title": "De luchthaven",
     "emoji": "✈️",
-    "level": "A2",
+    "level": "A1",
     "description": "Alles voor een vlotte reis — inchecken, gates en boardingpassen.",
     "words": [
       "w561",
@@ -1074,7 +1074,7 @@
     "id": 52,
     "title": "Bij de dokter",
     "emoji": "🤒",
-    "level": "A2",
+    "level": "A1",
     "description": "Klachten beschrijven en medicijnen regelen in Italië.",
     "words": [
       "w569",
@@ -1095,7 +1095,7 @@
     "id": 53,
     "title": "Beroepen",
     "emoji": "💼",
-    "level": "A2",
+    "level": "A1",
     "description": "Praat over werk en beroepen — wat doe jij voor de kost?",
     "words": [
       "w577",
@@ -1116,7 +1116,7 @@
     "id": 54,
     "title": "De natuur",
     "emoji": "🌿",
-    "level": "A2",
+    "level": "A1",
     "description": "Italiaans landschap en natuur — van de Alpen tot de Middellandse Zee.",
     "words": [
       "w585",
@@ -1137,7 +1137,7 @@
     "id": 55,
     "title": "Technologie",
     "emoji": "💻",
-    "level": "A2",
+    "level": "A1",
     "description": "De digitale wereld in het Italiaans — app, wifi en meer.",
     "words": [
       "w593",
@@ -1158,7 +1158,7 @@
     "id": 56,
     "title": "Muziek & cultuur",
     "emoji": "🎶",
-    "level": "A2",
+    "level": "A1",
     "description": "De rijke muziek- en kunstcultuur van Italië verkennen.",
     "words": [
       "w601",
@@ -1179,7 +1179,7 @@
     "id": 57,
     "title": "Sport gevorderd",
     "emoji": "⚽",
-    "level": "A2",
+    "level": "A1",
     "description": "Sport bespreken als een echte Italiaan — van calcio tot tennis.",
     "words": [
       "w609",
@@ -1200,7 +1200,7 @@
     "id": 58,
     "title": "Reizen gevorderd",
     "emoji": "🌍",
-    "level": "A2",
+    "level": "A1",
     "description": "Reisplanning, reserveringen en avontuurlijk reizen in Italië.",
     "words": [
       "w617",
@@ -1221,7 +1221,7 @@
     "id": 59,
     "title": "Winkelen gevorderd",
     "emoji": "🛍️",
-    "level": "A2",
+    "level": "A1",
     "description": "Prijzen onderhandelen, ruilen en slim winkelen in Italië.",
     "words": [
       "w625",
@@ -1242,7 +1242,7 @@
     "id": 60,
     "title": "Stad & toerisme",
     "emoji": "🏛️",
-    "level": "A2",
+    "level": "A1",
     "description": "Bezienswaardigheden, monumenten en het echte Italia scoprire!",
     "words": [
       "w633",
@@ -1256,14 +1256,14 @@
     ],
     "grammar": {
       "title": "Passief: essere + voltooid deelwoord",
-      "body": "Passief = 'essere' + voltooid deelwoord: 'Il Colosseo è stato costruito dai Romani'. 'Venire' + deelwoord voor gewoontepassief: 'Il museo viene visitato da milioni di turisti'. 'Da' = door (handelende persoon). Italië heeft meer UNESCO-sites dan elk ander land!"
+      "body": "Passief = 'essere' + voltooid deelwoord: 'Il Colosseo è stato costruito dai Romani'. 'Venire' + deelwoord voor gewoontepassief: 'Il museo viene visitato da milioni di turisti'. 'Da' = door (handelende persoon). Italië heeft meer UNESCO-sites dan elk ander land! Je kent nu ~480 Italiaanse woorden en hebt A1 afgerond — benissimo! Je kunt jezelf redden in Italië. Volgende stap: A2!"
     }
   },
   {
     "id": 61,
     "title": "Meningen geven",
     "emoji": "💬",
-    "level": "B1",
+    "level": "A2",
     "description": "Zeg wat je denkt — en doe het als een echte Italiaan.",
     "words": [
       "w321",
@@ -1284,7 +1284,7 @@
     "id": 62,
     "title": "Passato prossimo",
     "emoji": "⏮️",
-    "level": "B1",
+    "level": "A2",
     "description": "Vertel wat je hebt gedaan — de voltooide tijd.",
     "words": [
       "w329",
@@ -1305,7 +1305,7 @@
     "id": 63,
     "title": "Het imperfetto",
     "emoji": "📽️",
-    "level": "B1",
+    "level": "A2",
     "description": "Beschrijf het verleden — gewoontes en sfeer van vroeger.",
     "words": [
       "w337",
@@ -1326,7 +1326,7 @@
     "id": 64,
     "title": "De toekomst",
     "emoji": "🔮",
-    "level": "B1",
+    "level": "A2",
     "description": "Plannen en voorspellingen — toekomende tijd.",
     "words": [
       "w345",
@@ -1347,7 +1347,7 @@
     "id": 65,
     "title": "Vergelijken",
     "emoji": "⚖️",
-    "level": "B1",
+    "level": "A2",
     "description": "Vergelij k mensen, plaatsen en dingen als een pro.",
     "words": [
       "w353",
@@ -1368,7 +1368,7 @@
     "id": 66,
     "title": "Verbindingswoorden",
     "emoji": "🔗",
-    "level": "B1",
+    "level": "A2",
     "description": "Zinnen koppelen en je verhaal vloeiend maken.",
     "words": [
       "w361",
@@ -1389,7 +1389,7 @@
     "id": 67,
     "title": "Werk & kantoor",
     "emoji": "💼",
-    "level": "B1",
+    "level": "A2",
     "description": "Italiaans op het werk — vergaderen, deadlines en contracten.",
     "words": [
       "w369",
@@ -1410,7 +1410,7 @@
     "id": 68,
     "title": "Karaktereigenschappen",
     "emoji": "🌟",
-    "level": "B1",
+    "level": "A2",
     "description": "Beschrijf mensen en hun persoonlijkheid.",
     "words": [
       "w377",
@@ -1431,7 +1431,7 @@
     "id": 69,
     "title": "Beschrijvingen",
     "emoji": "🎭",
-    "level": "B1",
+    "level": "A2",
     "description": "Geef indrukken en beschrijf hoe iets voelt.",
     "words": [
       "w385",
@@ -1452,7 +1452,7 @@
     "id": 70,
     "title": "Reizen gevorderd",
     "emoji": "🧳",
-    "level": "B1",
+    "level": "A2",
     "description": "Alles voor een goed georganiseerde trip naar Italië.",
     "words": [
       "w393",
@@ -1473,7 +1473,7 @@
     "id": 71,
     "title": "Koken gevorderd",
     "emoji": "👨‍🍳",
-    "level": "B1",
+    "level": "A2",
     "description": "Smaken, recepten en de geheimen van de Italiaanse keuken.",
     "words": [
       "w401",
@@ -1494,7 +1494,7 @@
     "id": 72,
     "title": "Technologie",
     "emoji": "📱",
-    "level": "B1",
+    "level": "A2",
     "description": "De digitale wereld in het Italiaans.",
     "words": [
       "w409",
@@ -1515,7 +1515,7 @@
     "id": 73,
     "title": "Natuur & milieu",
     "emoji": "🌿",
-    "level": "B1",
+    "level": "A2",
     "description": "Praat over het milieu, duurzaamheid en de natuur.",
     "words": [
       "w417",
@@ -1536,7 +1536,7 @@
     "id": 74,
     "title": "Gezondheid & welzijn",
     "emoji": "🧘",
-    "level": "B1",
+    "level": "A2",
     "description": "Gezond en gelukkig leven — de Italiaanse manier.",
     "words": [
       "w425",
@@ -1557,7 +1557,7 @@
     "id": 75,
     "title": "Relaties & gevoelens",
     "emoji": "❤️",
-    "level": "B1",
+    "level": "A2",
     "description": "Gevoelens uitdrukken en over menselijke relaties praten.",
     "words": [
       "w433",
@@ -1578,7 +1578,7 @@
     "id": 76,
     "title": "Sport & competitie",
     "emoji": "⚽",
-    "level": "B1",
+    "level": "A2",
     "description": "Sport, voetbal en de competitiegeest van Italië.",
     "words": [
       "w441",
@@ -1599,7 +1599,7 @@
     "id": 77,
     "title": "Muziek",
     "emoji": "🎵",
-    "level": "B1",
+    "level": "A2",
     "description": "De kracht van Italiaanse muziek — van opera tot pop.",
     "words": [
       "w449",
@@ -1620,7 +1620,7 @@
     "id": 78,
     "title": "Zakelijk Italiaans",
     "emoji": "🤝",
-    "level": "B1",
+    "level": "A2",
     "description": "Professioneel communiceren in het Italiaans.",
     "words": [
       "w457",
@@ -1641,7 +1641,7 @@
     "id": 79,
     "title": "Kunst & cultuur",
     "emoji": "🎨",
-    "level": "B1",
+    "level": "A2",
     "description": "Italië is een schatkamer van kunst, cultuur en geschiedenis.",
     "words": [
       "w465",
@@ -1662,7 +1662,7 @@
     "id": 80,
     "title": "Dolce Vita!",
     "emoji": "☀️",
-    "level": "B1",
+    "level": "A2",
     "description": "Het Italiaanse levensgenieten — jouw B1 afsluiting.",
     "words": [
       "w473",
@@ -1683,7 +1683,7 @@
     "id": 81,
     "title": "Politiek & samenleving",
     "emoji": "📰",
-    "level": "B1",
+    "level": "A2",
     "description": "Praat over nieuws, politiek en maatschappelijke kwesties.",
     "words": [
       "w641",
@@ -1704,7 +1704,7 @@
     "id": 82,
     "title": "Het milieu",
     "emoji": "🌱",
-    "level": "B1",
+    "level": "A2",
     "description": "Milieu, duurzaamheid en klimaatverandering bespreken.",
     "words": [
       "w649",
@@ -1725,7 +1725,7 @@
     "id": 83,
     "title": "Economie",
     "emoji": "💰",
-    "level": "B1",
+    "level": "A2",
     "description": "Economische begrippen en financieel nieuws in het Italiaans.",
     "words": [
       "w657",
@@ -1746,7 +1746,7 @@
     "id": 84,
     "title": "Gezondheid & welzijn",
     "emoji": "🏃",
-    "level": "B1",
+    "level": "A2",
     "description": "Gezond en gelukkig leven — de Italiaanse benadering van welzijn.",
     "words": [
       "w665",
@@ -1767,7 +1767,7 @@
     "id": 85,
     "title": "Kunst & literatuur",
     "emoji": "📚",
-    "level": "B1",
+    "level": "A2",
     "description": "Italiaanse literatuur, kunst en cultuurgeschiedenis verkennen.",
     "words": [
       "w673",
@@ -1788,7 +1788,7 @@
     "id": 86,
     "title": "Wetenschap",
     "emoji": "🔬",
-    "level": "B1",
+    "level": "A2",
     "description": "Wetenschappelijke ontdekkingen en onderzoek beschrijven.",
     "words": [
       "w681",
@@ -1809,7 +1809,7 @@
     "id": 87,
     "title": "De samenleving",
     "emoji": "🤝",
-    "level": "B1",
+    "level": "A2",
     "description": "Sociale thema's, integratie en gemeenschapswaarden bespreken.",
     "words": [
       "w689",
@@ -1830,7 +1830,7 @@
     "id": 88,
     "title": "Onderwijs",
     "emoji": "🎓",
-    "level": "B1",
+    "level": "A2",
     "description": "Het Italiaanse onderwijssysteem en studeren in Italië.",
     "words": [
       "w697",
@@ -1851,7 +1851,7 @@
     "id": 89,
     "title": "Media & communicatie",
     "emoji": "📱",
-    "level": "B1",
+    "level": "A2",
     "description": "Media-invloed, communicatie en de digitale samenleving analyseren.",
     "words": [
       "w705",
@@ -1872,7 +1872,7 @@
     "id": 90,
     "title": "Toekomst & dromen",
     "emoji": "🔮",
-    "level": "B1",
+    "level": "A2",
     "description": "Jouw B1-afsluiting — droom groot en spreek vloeiend Italiaans!",
     "words": [
       "w713",

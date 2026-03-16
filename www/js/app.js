@@ -69,17 +69,17 @@ const MILESTONE_NAMES  = {
   10: 'Toetsles A1 — Blok 1 (les 1–10)',
   20: 'Toetsles A1 — Blok 2 (les 11–20)',
   30: 'Toetsles A1 — Blok 3 (les 21–30)',
-  40: 'Toetsles A2 — Blok 1 (les 31–40)',
-  50: 'Toetsles A2 — Blok 2 (les 41–50)',
-  60: 'Toetsles A2 — Blok 3 (les 51–60)',
-  70: 'Toetsles B1 — Blok 1 (les 61–70)',
-  80: 'Toetsles B1 — Blok 2 (les 71–80)',
-  90: 'Toetsles B1 — Blok 3 (les 81–90)',
+  40: 'Toetsles A1 — Blok 4 (les 31–40)',
+  50: 'Toetsles A1 — Blok 5 (les 41–50)',
+  60: 'Toetsles A1 — Blok 6 (les 51–60)',
+  70: 'Toetsles A2 — Blok 1 (les 61–70)',
+  80: 'Toetsles A2 — Blok 2 (les 71–80)',
+  90: 'Toetsles A2 — Blok 3 (les 81–90)',
 };
 
 // Kleuren en bereiken per niveau (voor sectie-headers)
-const LEVEL_COLORS = { A1: '#009246', A2: '#f5a623', B1: '#8b5cf6' };
-const LEVEL_RANGES = { A1: 'lessen 1–30', A2: 'lessen 31–60', B1: 'lessen 61–90' };
+const LEVEL_COLORS = { A1: '#009246', A2: '#f5a623' };
+const LEVEL_RANGES = { A1: 'lessen 1–60', A2: 'lessen 61–90' };
 
 // ─── SEGMENT-HELPERS (Sprint 10) ─────────────────────────────────────────────
 /** Segmentnummer van een les-id: 1=les1-10, 2=11-20, ..., 6=51-60 */
@@ -1068,14 +1068,14 @@ function renderPlacement() {
 }
 
 function startPlacementQuiz() {
-  // 15 woorden verspreid over 5 groepen van 6 A1-lessen (3 per groep)
+  // 15 woorden verspreid over 5 groepen van 12 A1-lessen (3 per groep, lessen 1–60)
   const a1Words = VOCAB.filter(w => w.level === 'A1');
   const groups  = [
-    a1Words.filter(w => w.lesson >= 1  && w.lesson <= 6),
-    a1Words.filter(w => w.lesson >= 7  && w.lesson <= 12),
-    a1Words.filter(w => w.lesson >= 13 && w.lesson <= 18),
-    a1Words.filter(w => w.lesson >= 19 && w.lesson <= 24),
-    a1Words.filter(w => w.lesson >= 25 && w.lesson <= 30),
+    a1Words.filter(w => w.lesson >= 1  && w.lesson <= 12),
+    a1Words.filter(w => w.lesson >= 13 && w.lesson <= 24),
+    a1Words.filter(w => w.lesson >= 25 && w.lesson <= 36),
+    a1Words.filter(w => w.lesson >= 37 && w.lesson <= 48),
+    a1Words.filter(w => w.lesson >= 49 && w.lesson <= 60),
   ];
   placementQuestions = groups.flatMap(g => shuffle(g).slice(0, 3)).slice(0, 15);
   placementIndex = 0;
@@ -1134,9 +1134,9 @@ function renderPlacementQuestion() {
 function showPlacementResult() {
   let skipTo = 0, startAt = 1, msg = '', detail = '';
 
-  if      (placementScore >= 13) { skipTo = 30; startAt = 31; msg = 'Uitstekend!';          detail = 'Je kent al heel wat Italiaans.'; }
-  else if (placementScore >= 10) { skipTo = 19; startAt = 20; msg = 'Goed gedaan!';         detail = 'Je hebt een stevige basis.'; }
-  else if (placementScore >= 5)  { skipTo = 9;  startAt = 10; msg = 'Mooi begin!';          detail = 'Je kent al wat woorden.'; }
+  if      (placementScore >= 13) { skipTo = 60; startAt = 61; msg = 'Uitstekend!';          detail = 'Je beheerst A1 al — ga direct naar A2!'; }
+  else if (placementScore >= 10) { skipTo = 39; startAt = 40; msg = 'Goed gedaan!';         detail = 'Je hebt een stevige basis.'; }
+  else if (placementScore >= 5)  { skipTo = 19; startAt = 20; msg = 'Mooi begin!';          detail = 'Je kent al wat woorden.'; }
   else                            { skipTo = 0;  startAt = 1;  msg = 'Begin bij de basis!';  detail = 'Geen zorgen — solide fundamenten zijn goud waard.'; }
 
   const container = $id('placement-container');

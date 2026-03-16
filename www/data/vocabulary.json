@@ -2647,7 +2647,7 @@
     "ex": "Un caffè, per favore.",
     "exNl": "Een koffie, alsjeblieft.",
     "lesson": 41,
-    "level": "A2",
+    "level": "A1",
     "cat": "café"
   },
   {
@@ -2658,7 +2658,7 @@
     "ex": "Vorrei un tè caldo.",
     "exNl": "Ik wil graag een warme thee.",
     "lesson": 41,
-    "level": "A2",
+    "level": "A1",
     "cat": "café"
   },
   {
@@ -2669,7 +2669,7 @@
     "ex": "Acqua naturale, per favore.",
     "exNl": "Plat water, alsjeblieft.",
     "lesson": 41,
-    "level": "A2",
+    "level": "A1",
     "cat": "café"
   },
   {
@@ -2680,7 +2680,7 @@
     "ex": "Un succo d'arancia, grazie.",
     "exNl": "Een sinaasappelsap, dank u.",
     "lesson": 41,
-    "level": "A2",
+    "level": "A1",
     "cat": "café"
   },
   {
@@ -2691,7 +2691,7 @@
     "ex": "Una birra fredda, per favore.",
     "exNl": "Een koud biertje, alsjeblieft.",
     "lesson": 41,
-    "level": "A2",
+    "level": "A1",
     "cat": "café"
   },
   {
@@ -2702,7 +2702,7 @@
     "ex": "Un bicchiere di vino rosso.",
     "exNl": "Een glas rode wijn.",
     "lesson": 41,
-    "level": "A2",
+    "level": "A1",
     "cat": "café"
   },
   {
@@ -2713,7 +2713,7 @@
     "ex": "Il conto, per favore.",
     "exNl": "De rekening, alsjeblieft.",
     "lesson": 41,
-    "level": "A2",
+    "level": "A1",
     "cat": "café"
   },
   {
@@ -2724,7 +2724,7 @@
     "ex": "Posso vedere il menù?",
     "exNl": "Mag ik het menu zien?",
     "lesson": 41,
-    "level": "A2",
+    "level": "A1",
     "cat": "café"
   },
   {
@@ -2735,7 +2735,7 @@
     "ex": "Un tavolo per due, per favore.",
     "exNl": "Een tafel voor twee, alsjeblieft.",
     "lesson": 42,
-    "level": "A2",
+    "level": "A1",
     "cat": "restaurant"
   },
   {
@@ -2746,7 +2746,7 @@
     "ex": "Il cameriere arriva subito.",
     "exNl": "De ober komt eraan.",
     "lesson": 42,
-    "level": "A2",
+    "level": "A1",
     "cat": "restaurant"
   },
   {
@@ -2757,7 +2757,7 @@
     "ex": "Come antipasto prendo l'insalata.",
     "exNl": "Als voorgerecht neem ik de salade.",
     "lesson": 42,
-    "level": "A2",
+    "level": "A1",
     "cat": "restaurant"
   },
   {
@@ -2768,7 +2768,7 @@
     "ex": "Per primo voglio la pasta.",
     "exNl": "Als eerste gang wil ik pasta.",
     "lesson": 42,
-    "level": "A2",
+    "level": "A1",
     "cat": "restaurant"
   },
   {
@@ -2779,7 +2779,7 @@
     "ex": "Come secondo ho il pesce.",
     "exNl": "Als hoofdgerecht neem ik vis.",
     "lesson": 42,
-    "level": "A2",
+    "level": "A1",
     "cat": "restaurant"
   },
   {
@@ -2790,7 +2790,7 @@
     "ex": "Un dolce per finire.",
     "exNl": "Een dessert om af te sluiten.",
     "lesson": 42,
-    "level": "A2",
+    "level": "A1",
     "cat": "restaurant"
   },
   {
@@ -2801,7 +2801,7 @@
     "ex": "Questo piatto è molto buono!",
     "exNl": "Dit gerecht is erg lekker!",
     "lesson": 42,
-    "level": "A2",
+    "level": "A1",
     "cat": "restaurant"
   },
   {
@@ -2812,7 +2812,7 @@
     "ex": "Ho una prenotazione per stasera.",
     "exNl": "Ik heb een reservering voor vanavond.",
     "lesson": 42,
-    "level": "A2",
+    "level": "A1",
     "cat": "restaurant"
   },
   {
@@ -2823,7 +2823,7 @@
     "ex": "Il treno parte alle nove.",
     "exNl": "De trein vertrekt om negen uur.",
     "lesson": 43,
-    "level": "A2",
+    "level": "A1",
     "cat": "vervoer"
   },
   {
@@ -2834,7 +2834,7 @@
     "ex": "L'autobus è in ritardo.",
     "exNl": "De bus heeft vertraging.",
     "lesson": 43,
-    "level": "A2",
+    "level": "A1",
     "cat": "vervoer"
   },
   {
@@ -2845,7 +2845,7 @@
     "ex": "L'aereo arriva domani.",
     "exNl": "Het vliegtuig komt morgen aan.",
     "lesson": 43,
-    "level": "A2",
+    "level": "A1",
     "cat": "vervoer"
   },
   {
@@ -2856,7 +2856,7 @@
     "ex": "Chiamo un taxi subito.",
     "exNl": "Ik bel meteen een taxi.",
     "lesson": 43,
-    "level": "A2",
+    "level": "A1",
     "cat": "vervoer"
   },
   {
@@ -2867,7 +2867,7 @@
     "ex": "Dove compro il biglietto?",
     "exNl": "Waar koop ik het ticket?",
     "lesson": 43,
-    "level": "A2",
+    "level": "A1",
     "cat": "vervoer"
   },
   {
@@ -2878,7 +2878,7 @@
     "ex": "La stazione è vicina.",
     "exNl": "Het station is dichtbij.",
     "lesson": 43,
-    "level": "A2",
+    "level": "A1",
     "cat": "vervoer"
   },
   {
@@ -2889,7 +2889,7 @@
     "ex": "L'aeroporto è lontano.",
     "exNl": "Het vliegveld is ver weg.",
     "lesson": 43,
-    "level": "A2",
+    "level": "A1",
     "cat": "vervoer"
   },
   {
@@ -2900,7 +2900,7 @@
     "ex": "L'orario di partenza è alle otto.",
     "exNl": "Het vertrektijdstip is acht uur.",
     "lesson": 43,
-    "level": "A2",
+    "level": "A1",
     "cat": "vervoer"
   },
   {
@@ -2911,7 +2911,7 @@
     "ex": "La camera è al secondo piano.",
     "exNl": "De kamer is op de tweede verdieping.",
     "lesson": 44,
-    "level": "A2",
+    "level": "A1",
     "cat": "hotel"
   },
   {
@@ -2922,7 +2922,7 @@
     "ex": "Voglio prenotare una camera.",
     "exNl": "Ik wil een kamer reserveren.",
     "lesson": 44,
-    "level": "A2",
+    "level": "A1",
     "cat": "hotel"
   },
   {
@@ -2933,7 +2933,7 @@
     "ex": "Ecco la chiave della camera.",
     "exNl": "Hier is de sleutel van de kamer.",
     "lesson": 44,
-    "level": "A2",
+    "level": "A1",
     "cat": "hotel"
   },
   {
@@ -2944,7 +2944,7 @@
     "ex": "Il bagno è in fondo al corridoio.",
     "exNl": "De badkamer is aan het einde van de gang.",
     "lesson": 44,
-    "level": "A2",
+    "level": "A1",
     "cat": "hotel"
   },
   {
@@ -2955,7 +2955,7 @@
     "ex": "La colazione è inclusa nel prezzo.",
     "exNl": "Het ontbijt is inbegrepen in de prijs.",
     "lesson": 44,
-    "level": "A2",
+    "level": "A1",
     "cat": "hotel"
   },
   {
@@ -2966,7 +2966,7 @@
     "ex": "Resto per tre notti.",
     "exNl": "Ik blijf drie nachten.",
     "lesson": 44,
-    "level": "A2",
+    "level": "A1",
     "cat": "hotel"
   },
   {
@@ -2977,7 +2977,7 @@
     "ex": "C'è una piscina in hotel?",
     "exNl": "Is er een zwembad in het hotel?",
     "lesson": 44,
-    "level": "A2",
+    "level": "A1",
     "cat": "hotel"
   },
   {
@@ -2988,7 +2988,7 @@
     "ex": "L'ascensore è a sinistra.",
     "exNl": "De lift is aan de linkerkant.",
     "lesson": 44,
-    "level": "A2",
+    "level": "A1",
     "cat": "hotel"
   },
   {
@@ -2999,7 +2999,7 @@
     "ex": "La mia famiglia è grande.",
     "exNl": "Mijn familie is groot.",
     "lesson": 45,
-    "level": "A2",
+    "level": "A1",
     "cat": "familie"
   },
   {
@@ -3010,7 +3010,7 @@
     "ex": "Mia madre si chiama Elena.",
     "exNl": "Mijn moeder heet Elena.",
     "lesson": 45,
-    "level": "A2",
+    "level": "A1",
     "cat": "familie"
   },
   {
@@ -3021,7 +3021,7 @@
     "ex": "Mio padre lavora molto.",
     "exNl": "Mijn vader werkt veel.",
     "lesson": 45,
-    "level": "A2",
+    "level": "A1",
     "cat": "familie"
   },
   {
@@ -3032,7 +3032,7 @@
     "ex": "Ho un fratello più giovane.",
     "exNl": "Ik heb een jongere broer.",
     "lesson": 45,
-    "level": "A2",
+    "level": "A1",
     "cat": "familie"
   },
   {
@@ -3043,7 +3043,7 @@
     "ex": "Mia sorella abita a Milano.",
     "exNl": "Mijn zus woont in Milaan.",
     "lesson": 45,
-    "level": "A2",
+    "level": "A1",
     "cat": "familie"
   },
   {
@@ -3054,7 +3054,7 @@
     "ex": "Il mio figlio ha otto anni.",
     "exNl": "Mijn zoon is acht jaar oud.",
     "lesson": 45,
-    "level": "A2",
+    "level": "A1",
     "cat": "familie"
   },
   {
@@ -3065,7 +3065,7 @@
     "ex": "La mia figlia studia medicina.",
     "exNl": "Mijn dochter studeert medicijnen.",
     "lesson": 45,
-    "level": "A2",
+    "level": "A1",
     "cat": "familie"
   },
   {
@@ -3076,7 +3076,7 @@
     "ex": "Il nonno racconta storie belle.",
     "exNl": "Opa vertelt mooie verhalen.",
     "lesson": 45,
-    "level": "A2",
+    "level": "A1",
     "cat": "familie"
   },
   {
@@ -3087,7 +3087,7 @@
     "ex": "Giri a destra al semaforo.",
     "exNl": "Sla rechtsaf bij het stoplicht.",
     "lesson": 46,
-    "level": "A2",
+    "level": "A1",
     "cat": "deweg"
   },
   {
@@ -3098,7 +3098,7 @@
     "ex": "All'incrocio giri a sinistra.",
     "exNl": "Bij het kruispunt sla je linksaf.",
     "lesson": 46,
-    "level": "A2",
+    "level": "A1",
     "cat": "deweg"
   },
   {
@@ -3109,7 +3109,7 @@
     "ex": "La piazza è al centro.",
     "exNl": "Het plein is in het centrum.",
     "lesson": 46,
-    "level": "A2",
+    "level": "A1",
     "cat": "deweg"
   },
   {
@@ -3120,7 +3120,7 @@
     "ex": "Prenda la prima strada a destra.",
     "exNl": "Neem de eerste straat rechts.",
     "lesson": 46,
-    "level": "A2",
+    "level": "A1",
     "cat": "deweg"
   },
   {
@@ -3131,7 +3131,7 @@
     "ex": "La fermata del bus è vicina.",
     "exNl": "De bushalte is dichtbij.",
     "lesson": 46,
-    "level": "A2",
+    "level": "A1",
     "cat": "deweg"
   },
   {
@@ -3142,7 +3142,7 @@
     "ex": "Giri a sinistra qui.",
     "exNl": "Sla hier linksaf.",
     "lesson": 46,
-    "level": "A2",
+    "level": "A1",
     "cat": "deweg"
   },
   {
@@ -3153,7 +3153,7 @@
     "ex": "Attraversi la strada.",
     "exNl": "Steek de straat over.",
     "lesson": 46,
-    "level": "A2",
+    "level": "A1",
     "cat": "deweg"
   },
   {
@@ -3164,7 +3164,7 @@
     "ex": "Attraversate il ponte.",
     "exNl": "Steek de brug over.",
     "lesson": 46,
-    "level": "A2",
+    "level": "A1",
     "cat": "deweg"
   },
   {
@@ -3175,7 +3175,7 @@
     "ex": "Oggi c'è il sole.",
     "exNl": "Vandaag schijnt de zon.",
     "lesson": 47,
-    "level": "A2",
+    "level": "A1",
     "cat": "weer"
   },
   {
@@ -3186,7 +3186,7 @@
     "ex": "Domani viene la pioggia.",
     "exNl": "Morgen komt de regen.",
     "lesson": 47,
-    "level": "A2",
+    "level": "A1",
     "cat": "weer"
   },
   {
@@ -3197,7 +3197,7 @@
     "ex": "C'è molto vento oggi.",
     "exNl": "Er is veel wind vandaag.",
     "lesson": 47,
-    "level": "A2",
+    "level": "A1",
     "cat": "weer"
   },
   {
@@ -3208,7 +3208,7 @@
     "ex": "Fa molto caldo in estate.",
     "exNl": "Het is erg warm in de zomer.",
     "lesson": 47,
-    "level": "A2",
+    "level": "A1",
     "cat": "weer"
   },
   {
@@ -3219,7 +3219,7 @@
     "ex": "Fa freddo in montagna.",
     "exNl": "Het is koud in de bergen.",
     "lesson": 47,
-    "level": "A2",
+    "level": "A1",
     "cat": "weer"
   },
   {
@@ -3230,7 +3230,7 @@
     "ex": "Il cielo è pieno di nuvole.",
     "exNl": "De lucht zit vol wolken.",
     "lesson": 47,
-    "level": "A2",
+    "level": "A1",
     "cat": "weer"
   },
   {
@@ -3241,7 +3241,7 @@
     "ex": "In montagna c'è la neve.",
     "exNl": "In de bergen ligt sneeuw.",
     "lesson": 47,
-    "level": "A2",
+    "level": "A1",
     "cat": "weer"
   },
   {
@@ -3252,7 +3252,7 @@
     "ex": "Che tempo fa oggi?",
     "exNl": "Hoe is het weer vandaag?",
     "lesson": 47,
-    "level": "A2",
+    "level": "A1",
     "cat": "weer"
   },
   {
@@ -3263,7 +3263,7 @@
     "ex": "Ho bisogno di un medico.",
     "exNl": "Ik heb een dokter nodig.",
     "lesson": 48,
-    "level": "A2",
+    "level": "A1",
     "cat": "gezondheid"
   },
   {
@@ -3274,7 +3274,7 @@
     "ex": "La farmacia è aperta.",
     "exNl": "De apotheek is open.",
     "lesson": 48,
-    "level": "A2",
+    "level": "A1",
     "cat": "gezondheid"
   },
   {
@@ -3285,7 +3285,7 @@
     "ex": "Ho un forte mal di testa.",
     "exNl": "Ik heb hevige hoofdpijn.",
     "lesson": 48,
-    "level": "A2",
+    "level": "A1",
     "cat": "gezondheid"
   },
   {
@@ -3296,7 +3296,7 @@
     "ex": "Ho la febbre da ieri.",
     "exNl": "Ik heb koorts sinds gisteren.",
     "lesson": 48,
-    "level": "A2",
+    "level": "A1",
     "cat": "gezondheid"
   },
   {
@@ -3307,7 +3307,7 @@
     "ex": "Prendo questa medicina.",
     "exNl": "Ik neem dit medicijn.",
     "lesson": 48,
-    "level": "A2",
+    "level": "A1",
     "cat": "gezondheid"
   },
   {
@@ -3318,7 +3318,7 @@
     "ex": "Mi fa male la schiena.",
     "exNl": "Mijn rug doet pijn.",
     "lesson": 48,
-    "level": "A2",
+    "level": "A1",
     "cat": "gezondheid"
   },
   {
@@ -3329,7 +3329,7 @@
     "ex": "Devo andare al pronto soccorso.",
     "exNl": "Ik moet naar de eerste hulp.",
     "lesson": 48,
-    "level": "A2",
+    "level": "A1",
     "cat": "gezondheid"
   },
   {
@@ -3340,7 +3340,7 @@
     "ex": "Ho un'allergia al glutine.",
     "exNl": "Ik heb een glutenallergie.",
     "lesson": 48,
-    "level": "A2",
+    "level": "A1",
     "cat": "gezondheid"
   },
   {
@@ -3351,7 +3351,7 @@
     "ex": "Mi piace nuotare al mare.",
     "exNl": "Ik zwem graag in de zee.",
     "lesson": 49,
-    "level": "A2",
+    "level": "A1",
     "cat": "activiteiten"
   },
   {
@@ -3362,7 +3362,7 @@
     "ex": "Leggo un libro ogni sera.",
     "exNl": "Ik lees elke avond een boek.",
     "lesson": 49,
-    "level": "A2",
+    "level": "A1",
     "cat": "activiteiten"
   },
   {
@@ -3373,7 +3373,7 @@
     "ex": "Mi piace cucinare la pasta.",
     "exNl": "Ik kook graag pasta.",
     "lesson": 49,
-    "level": "A2",
+    "level": "A1",
     "cat": "activiteiten"
   },
   {
@@ -3384,7 +3384,7 @@
     "ex": "Camminiamo sul lungomare.",
     "exNl": "We wandelen langs de kust.",
     "lesson": 49,
-    "level": "A2",
+    "level": "A1",
     "cat": "activiteiten"
   },
   {
@@ -3395,7 +3395,7 @@
     "ex": "Ascolto musica italiana.",
     "exNl": "Ik luister naar Italiaanse muziek.",
     "lesson": 49,
-    "level": "A2",
+    "level": "A1",
     "cat": "activiteiten"
   },
   {
@@ -3406,7 +3406,7 @@
     "ex": "Guardo un film stasera.",
     "exNl": "Ik kijk vanavond een film.",
     "lesson": 49,
-    "level": "A2",
+    "level": "A1",
     "cat": "activiteiten"
   },
   {
@@ -3417,7 +3417,7 @@
     "ex": "Amo viaggiare in estate.",
     "exNl": "Ik reis graag in de zomer.",
     "lesson": 49,
-    "level": "A2",
+    "level": "A1",
     "cat": "activiteiten"
   },
   {
@@ -3428,7 +3428,7 @@
     "ex": "La musica italiana è bellissima.",
     "exNl": "De Italiaanse muziek is prachtig.",
     "lesson": 49,
-    "level": "A2",
+    "level": "A1",
     "cat": "activiteiten"
   },
   {
@@ -3439,7 +3439,7 @@
     "ex": "Domani andiamo al mare.",
     "exNl": "Morgen gaan we naar het strand.",
     "lesson": 50,
-    "level": "A2",
+    "level": "A1",
     "cat": "plannen"
   },
   {
@@ -3450,7 +3450,7 @@
     "ex": "Ci vediamo dopodomani.",
     "exNl": "We zien elkaar overmorgen.",
     "lesson": 50,
-    "level": "A2",
+    "level": "A1",
     "cat": "plannen"
   },
   {
@@ -3461,7 +3461,7 @@
     "ex": "La prossima settimana parto.",
     "exNl": "Volgende week vertrek ik.",
     "lesson": 50,
-    "level": "A2",
+    "level": "A1",
     "cat": "plannen"
   },
   {
@@ -3472,7 +3472,7 @@
     "ex": "L'anno scorso ero a Roma.",
     "exNl": "Vorig jaar was ik in Rome.",
     "lesson": 50,
-    "level": "A2",
+    "level": "A1",
     "cat": "plannen"
   },
   {
@@ -3483,7 +3483,7 @@
     "ex": "Arriverò presto.",
     "exNl": "Ik kom snel.",
     "lesson": 50,
-    "level": "A2",
+    "level": "A1",
     "cat": "plannen"
   },
   {
@@ -3494,7 +3494,7 @@
     "ex": "Sono arrivato tardi.",
     "exNl": "Ik ben laat aangekomen.",
     "lesson": 50,
-    "level": "A2",
+    "level": "A1",
     "cat": "plannen"
   },
   {
@@ -3505,7 +3505,7 @@
     "ex": "Andiamo insieme in Italia!",
     "exNl": "Laten we samen naar Italië gaan!",
     "lesson": 50,
-    "level": "A2",
+    "level": "A1",
     "cat": "plannen"
   },
   {
@@ -3516,7 +3516,7 @@
     "ex": "Pianifichiamo il viaggio.",
     "exNl": "Laten we de reis plannen.",
     "lesson": 50,
-    "level": "A2",
+    "level": "A1",
     "cat": "plannen"
   },
   {
@@ -3527,7 +3527,7 @@
     "ex": "Secondo me, è una buona idea.",
     "exNl": "Volgens mij is het een goed idee.",
     "lesson": 61,
-    "level": "B1",
+    "level": "A2",
     "cat": "meningen"
   },
   {
@@ -3538,7 +3538,7 @@
     "ex": "Sono d'accordo con te!",
     "exNl": "Ik ben het met je eens!",
     "lesson": 61,
-    "level": "B1",
+    "level": "A2",
     "cat": "meningen"
   },
   {
@@ -3549,7 +3549,7 @@
     "ex": "Non sono d'accordo con questa idea.",
     "exNl": "Ik ben het niet eens met dit idee.",
     "lesson": 61,
-    "level": "B1",
+    "level": "A2",
     "cat": "meningen"
   },
   {
@@ -3560,7 +3560,7 @@
     "ex": "Dipende dal tempo che fa.",
     "exNl": "Het hangt af van het weer.",
     "lesson": 61,
-    "level": "B1",
+    "level": "A2",
     "cat": "meningen"
   },
   {
@@ -3571,7 +3571,7 @@
     "ex": "Penso che sia fantastico.",
     "exNl": "Ik denk dat het fantastisch is.",
     "lesson": 61,
-    "level": "B1",
+    "level": "A2",
     "cat": "meningen"
   },
   {
@@ -3582,7 +3582,7 @@
     "ex": "È importante parlare italiano.",
     "exNl": "Het is belangrijk om Italiaans te spreken.",
     "lesson": 61,
-    "level": "B1",
+    "level": "A2",
     "cat": "meningen"
   },
   {
@@ -3593,7 +3593,7 @@
     "ex": "Comunque, ci divertiamo!",
     "exNl": "Hoe dan ook, we hebben plezier!",
     "lesson": 61,
-    "level": "B1",
+    "level": "A2",
     "cat": "meningen"
   },
   {
@@ -3604,7 +3604,7 @@
     "ex": "In effetti, hai ragione.",
     "exNl": "Eigenlijk heb je gelijk.",
     "lesson": 61,
-    "level": "B1",
+    "level": "A2",
     "cat": "meningen"
   },
   {
@@ -3615,7 +3615,7 @@
     "ex": "Ieri ho mangiato una pizza buonissima.",
     "exNl": "Gisteren at ik een heerlijke pizza.",
     "lesson": 62,
-    "level": "B1",
+    "level": "A2",
     "cat": "passato"
   },
   {
@@ -3626,7 +3626,7 @@
     "ex": "Ho visto un film bellissimo.",
     "exNl": "Ik zag een prachtige film.",
     "lesson": 62,
-    "level": "B1",
+    "level": "A2",
     "cat": "passato"
   },
   {
@@ -3637,7 +3637,7 @@
     "ex": "Ho comprato un souvenir per te.",
     "exNl": "Ik kocht een souvenir voor jou.",
     "lesson": 62,
-    "level": "B1",
+    "level": "A2",
     "cat": "passato"
   },
   {
@@ -3648,7 +3648,7 @@
     "ex": "Ho fatto una bella passeggiata.",
     "exNl": "Ik maakte een mooie wandeling.",
     "lesson": 62,
-    "level": "B1",
+    "level": "A2",
     "cat": "passato"
   },
   {
@@ -3659,7 +3659,7 @@
     "ex": "Sono andato a Roma ieri.",
     "exNl": "Ik ging gisteren naar Rome.",
     "lesson": 62,
-    "level": "B1",
+    "level": "A2",
     "cat": "passato"
   },
   {
@@ -3670,7 +3670,7 @@
     "ex": "Sono arrivato in ritardo.",
     "exNl": "Ik ben te laat aangekomen.",
     "lesson": 62,
-    "level": "B1",
+    "level": "A2",
     "cat": "passato"
   },
   {
@@ -3681,7 +3681,7 @@
     "ex": "Sono tornato a casa tardi.",
     "exNl": "Ik ben laat thuisgekomen.",
     "lesson": 62,
-    "level": "B1",
+    "level": "A2",
     "cat": "passato"
   },
   {
@@ -3692,7 +3692,7 @@
     "ex": "Mi sono divertito tantissimo!",
     "exNl": "Ik heb enorm genoten!",
     "lesson": 62,
-    "level": "B1",
+    "level": "A2",
     "cat": "passato"
   },
   {
@@ -3703,7 +3703,7 @@
     "ex": "Quando ero giovane, andavo al mare.",
     "exNl": "Toen ik jong was, ging ik naar het strand.",
     "lesson": 63,
-    "level": "B1",
+    "level": "A2",
     "cat": "imperfetto"
   },
   {
@@ -3714,7 +3714,7 @@
     "ex": "Abitavo a Roma da piccolo.",
     "exNl": "Ik woonde in Rome toen ik klein was.",
     "lesson": 63,
-    "level": "B1",
+    "level": "A2",
     "cat": "imperfetto"
   },
   {
@@ -3725,7 +3725,7 @@
     "ex": "Andavo a scuola a piedi ogni giorno.",
     "exNl": "Ik ging elke dag lopend naar school.",
     "lesson": 63,
-    "level": "B1",
+    "level": "A2",
     "cat": "imperfetto"
   },
   {
@@ -3736,7 +3736,7 @@
     "ex": "Era una serata bellissima.",
     "exNl": "Het was een prachtige avond.",
     "lesson": 63,
-    "level": "B1",
+    "level": "A2",
     "cat": "imperfetto"
   },
   {
@@ -3747,7 +3747,7 @@
     "ex": "C'era molta gente in piazza.",
     "exNl": "Er waren veel mensen op het plein.",
     "lesson": 63,
-    "level": "B1",
+    "level": "A2",
     "cat": "imperfetto"
   },
   {
@@ -3758,7 +3758,7 @@
     "ex": "Una volta si viaggiava in treno.",
     "exNl": "Vroeger reisde men met de trein.",
     "lesson": 63,
-    "level": "B1",
+    "level": "A2",
     "cat": "imperfetto"
   },
   {
@@ -3769,7 +3769,7 @@
     "ex": "Da piccolo adoravo la pasta.",
     "exNl": "Als kind was ik dol op pasta.",
     "lesson": 63,
-    "level": "B1",
+    "level": "A2",
     "cat": "imperfetto"
   },
   {
@@ -3780,7 +3780,7 @@
     "ex": "Si usava molto il telefono fisso.",
     "exNl": "Men gebruikte veel de vaste telefoon.",
     "lesson": 63,
-    "level": "B1",
+    "level": "A2",
     "cat": "imperfetto"
   },
   {
@@ -3791,7 +3791,7 @@
     "ex": "Andrò in Italia quest'estate.",
     "exNl": "Ik ga deze zomer naar Italië.",
     "lesson": 64,
-    "level": "B1",
+    "level": "A2",
     "cat": "toekomst"
   },
   {
@@ -3802,7 +3802,7 @@
     "ex": "Sarà una vacanza fantastica!",
     "exNl": "Het wordt een fantastische vakantie!",
     "lesson": 64,
-    "level": "B1",
+    "level": "A2",
     "cat": "toekomst"
   },
   {
@@ -3813,7 +3813,7 @@
     "ex": "Farò una sorpresa ai miei amici.",
     "exNl": "Ik verras mijn vrienden.",
     "lesson": 64,
-    "level": "B1",
+    "level": "A2",
     "cat": "toekomst"
   },
   {
@@ -3824,7 +3824,7 @@
     "ex": "Probabilmente pioverà domani.",
     "exNl": "Morgen regent het waarschijnlijk.",
     "lesson": 64,
-    "level": "B1",
+    "level": "A2",
     "cat": "toekomst"
   },
   {
@@ -3835,7 +3835,7 @@
     "ex": "Forse vengo anch'io.",
     "exNl": "Misschien kom ik ook.",
     "lesson": 64,
-    "level": "B1",
+    "level": "A2",
     "cat": "toekomst"
   },
   {
@@ -3846,7 +3846,7 @@
     "ex": "Sicuramente mi divertirò!",
     "exNl": "Ik zal zeker plezier hebben!",
     "lesson": 64,
-    "level": "B1",
+    "level": "A2",
     "cat": "toekomst"
   },
   {
@@ -3857,7 +3857,7 @@
     "ex": "Arriviamo tra poco.",
     "exNl": "We komen zo aan.",
     "lesson": 64,
-    "level": "B1",
+    "level": "A2",
     "cat": "toekomst"
   },
   {
@@ -3868,7 +3868,7 @@
     "ex": "Prima o poi imparerò l'italiano.",
     "exNl": "Vroeg of laat leer ik Italiaans.",
     "lesson": 64,
-    "level": "B1",
+    "level": "A2",
     "cat": "toekomst"
   },
   {
@@ -3879,7 +3879,7 @@
     "ex": "Questo ristorante è più buono.",
     "exNl": "Dit restaurant is beter.",
     "lesson": 65,
-    "level": "B1",
+    "level": "A2",
     "cat": "vergelijken"
   },
   {
@@ -3890,7 +3890,7 @@
     "ex": "Ho meno tempo questa settimana.",
     "exNl": "Ik heb minder tijd deze week.",
     "lesson": 65,
-    "level": "B1",
+    "level": "A2",
     "cat": "vergelijken"
   },
   {
@@ -3901,7 +3901,7 @@
     "ex": "Meglio così!",
     "exNl": "Zo is het beter!",
     "lesson": 65,
-    "level": "B1",
+    "level": "A2",
     "cat": "vergelijken"
   },
   {
@@ -3912,7 +3912,7 @@
     "ex": "Peggio di così non si può.",
     "exNl": "Slechter kan het niet.",
     "lesson": 65,
-    "level": "B1",
+    "level": "A2",
     "cat": "vergelijken"
   },
   {
@@ -3923,7 +3923,7 @@
     "ex": "È il migliore gelato d'Italia!",
     "exNl": "Het is het beste ijs van Italië!",
     "lesson": 65,
-    "level": "B1",
+    "level": "A2",
     "cat": "vergelijken"
   },
   {
@@ -3934,7 +3934,7 @@
     "ex": "Parla abbastanza bene l'italiano.",
     "exNl": "Hij spreekt Italiaans redelijk goed.",
     "lesson": 65,
-    "level": "B1",
+    "level": "A2",
     "cat": "vergelijken"
   },
   {
@@ -3945,7 +3945,7 @@
     "ex": "Hai mangiato troppo!",
     "exNl": "Je hebt te veel gegeten!",
     "lesson": 65,
-    "level": "B1",
+    "level": "A2",
     "cat": "vergelijken"
   },
   {
@@ -3956,7 +3956,7 @@
     "ex": "Quanto sei bravo!",
     "exNl": "Wat ben jij goed!",
     "lesson": 65,
-    "level": "B1",
+    "level": "A2",
     "cat": "vergelijken"
   },
   {
@@ -3967,7 +3967,7 @@
     "ex": "Mi piace Roma, però fa molto caldo.",
     "exNl": "Ik vind Rome mooi, maar het is erg warm.",
     "lesson": 66,
-    "level": "B1",
+    "level": "A2",
     "cat": "verbinden"
   },
   {
@@ -3978,7 +3978,7 @@
     "ex": "Non mi sento bene, quindi resto a casa.",
     "exNl": "Ik voel me niet goed, dus ik blijf thuis.",
     "lesson": 66,
-    "level": "B1",
+    "level": "A2",
     "cat": "verbinden"
   },
   {
@@ -3989,7 +3989,7 @@
     "ex": "Invece di pizza, prendo la pasta.",
     "exNl": "In plaats van pizza neem ik pasta.",
     "lesson": 66,
-    "level": "B1",
+    "level": "A2",
     "cat": "verbinden"
   },
   {
@@ -4000,7 +4000,7 @@
     "ex": "Mentre mangiamo, parliamo.",
     "exNl": "Terwijl we eten, praten we.",
     "lesson": 66,
-    "level": "B1",
+    "level": "A2",
     "cat": "verbinden"
   },
   {
@@ -4011,7 +4011,7 @@
     "ex": "Purtroppo non posso venire.",
     "exNl": "Helaas kan ik niet komen.",
     "lesson": 66,
-    "level": "B1",
+    "level": "A2",
     "cat": "verbinden"
   },
   {
@@ -4022,7 +4022,7 @@
     "ex": "Fortunatamente, il treno era in orario.",
     "exNl": "Gelukkig was de trein op tijd.",
     "lesson": 66,
-    "level": "B1",
+    "level": "A2",
     "cat": "verbinden"
   },
   {
@@ -4033,7 +4033,7 @@
     "ex": "Infatti, avevi ragione!",
     "exNl": "Inderdaad, jij had gelijk!",
     "lesson": 66,
-    "level": "B1",
+    "level": "A2",
     "cat": "verbinden"
   },
   {
@@ -4044,7 +4044,7 @@
     "ex": "Nonostante la pioggia, siamo usciti.",
     "exNl": "Ondanks de regen zijn we uitgegaan.",
     "lesson": 66,
-    "level": "B1",
+    "level": "A2",
     "cat": "verbinden"
   },
   {
@@ -4055,7 +4055,7 @@
     "ex": "Il mio lavoro mi piace molto.",
     "exNl": "Ik vind mijn werk erg leuk.",
     "lesson": 67,
-    "level": "B1",
+    "level": "A2",
     "cat": "werk"
   },
   {
@@ -4066,7 +4066,7 @@
     "ex": "Il mio collega è molto gentile.",
     "exNl": "Mijn collega is erg vriendelijk.",
     "lesson": 67,
-    "level": "B1",
+    "level": "A2",
     "cat": "werk"
   },
   {
@@ -4077,7 +4077,7 @@
     "ex": "La riunione inizia alle nove.",
     "exNl": "De vergadering begint om negen uur.",
     "lesson": 67,
-    "level": "B1",
+    "level": "A2",
     "cat": "werk"
   },
   {
@@ -4088,7 +4088,7 @@
     "ex": "Abbiamo un nuovo progetto interessante.",
     "exNl": "We hebben een interessant nieuw project.",
     "lesson": 67,
-    "level": "B1",
+    "level": "A2",
     "cat": "werk"
   },
   {
@@ -4099,7 +4099,7 @@
     "ex": "La scadenza è venerdì prossimo.",
     "exNl": "De deadline is volgende vrijdag.",
     "lesson": 67,
-    "level": "B1",
+    "level": "A2",
     "cat": "werk"
   },
   {
@@ -4110,7 +4110,7 @@
     "ex": "Il mio stipendio è aumentato.",
     "exNl": "Mijn salaris is gestegen.",
     "lesson": 67,
-    "level": "B1",
+    "level": "A2",
     "cat": "werk"
   },
   {
@@ -4121,7 +4121,7 @@
     "ex": "Ho firmato il contratto oggi.",
     "exNl": "Ik heb vandaag het contract getekend.",
     "lesson": 67,
-    "level": "B1",
+    "level": "A2",
     "cat": "werk"
   },
   {
@@ -4132,7 +4132,7 @@
     "ex": "Ho un colloquio domani mattina.",
     "exNl": "Ik heb morgenochtend een sollicitatiegesprek.",
     "lesson": 67,
-    "level": "B1",
+    "level": "A2",
     "cat": "werk"
   },
   {
@@ -4143,7 +4143,7 @@
     "ex": "È una persona molto gentile.",
     "exNl": "Het is een heel vriendelijk persoon.",
     "lesson": 68,
-    "level": "B1",
+    "level": "A2",
     "cat": "karakter"
   },
   {
@@ -4154,7 +4154,7 @@
     "ex": "Il tuo amico è molto simpatico!",
     "exNl": "Jouw vriend is erg aardig!",
     "lesson": 68,
-    "level": "B1",
+    "level": "A2",
     "cat": "karakter"
   },
   {
@@ -4165,7 +4165,7 @@
     "ex": "Lei è molto intelligente.",
     "exNl": "Zij is erg intelligent.",
     "lesson": 68,
-    "level": "B1",
+    "level": "A2",
     "cat": "karakter"
   },
   {
@@ -4176,7 +4176,7 @@
     "ex": "Sono un po' timido con gli sconosciuti.",
     "exNl": "Ik ben een beetje verlegen bij onbekenden.",
     "lesson": 68,
-    "level": "B1",
+    "level": "A2",
     "cat": "karakter"
   },
   {
@@ -4187,7 +4187,7 @@
     "ex": "È importante essere onesto.",
     "exNl": "Het is belangrijk om eerlijk te zijn.",
     "lesson": 68,
-    "level": "B1",
+    "level": "A2",
     "cat": "karakter"
   },
   {
@@ -4198,7 +4198,7 @@
     "ex": "Bisogna essere pazienti in coda.",
     "exNl": "Je moet geduldig zijn in de rij.",
     "lesson": 68,
-    "level": "B1",
+    "level": "A2",
     "cat": "karakter"
   },
   {
@@ -4209,7 +4209,7 @@
     "ex": "I bambini sono sempre curiosi.",
     "exNl": "Kinderen zijn altijd nieuwsgierig.",
     "lesson": 68,
-    "level": "B1",
+    "level": "A2",
     "cat": "karakter"
   },
   {
@@ -4220,7 +4220,7 @@
     "ex": "Sei stato molto coraggioso!",
     "exNl": "Je was erg dapper!",
     "lesson": 68,
-    "level": "B1",
+    "level": "A2",
     "cat": "karakter"
   },
   {
@@ -4231,7 +4231,7 @@
     "ex": "Che storia incredibile!",
     "exNl": "Wat een ongelooflijk verhaal!",
     "lesson": 69,
-    "level": "B1",
+    "level": "A2",
     "cat": "beschrijvingen"
   },
   {
@@ -4242,7 +4242,7 @@
     "ex": "Il tramonto è meraviglioso.",
     "exNl": "De zonsondergang is prachtig.",
     "lesson": 69,
-    "level": "B1",
+    "level": "A2",
     "cat": "beschrijvingen"
   },
   {
@@ -4253,7 +4253,7 @@
     "ex": "Il traffico a Roma è terribile.",
     "exNl": "Het verkeer in Rome is verschrikkelijk.",
     "lesson": 69,
-    "level": "B1",
+    "level": "A2",
     "cat": "beschrijvingen"
   },
   {
@@ -4264,7 +4264,7 @@
     "ex": "Il risultato è stato sorprendente.",
     "exNl": "Het resultaat was verrassend.",
     "lesson": 69,
-    "level": "B1",
+    "level": "A2",
     "cat": "beschrijvingen"
   },
   {
@@ -4275,7 +4275,7 @@
     "ex": "Venezia è una città affascinante.",
     "exNl": "Venetië is een fascinerende stad.",
     "lesson": 69,
-    "level": "B1",
+    "level": "A2",
     "cat": "beschrijvingen"
   },
   {
@@ -4286,7 +4286,7 @@
     "ex": "Questo posto è tranquillo e bello.",
     "exNl": "Deze plek is rustig en mooi.",
     "lesson": 69,
-    "level": "B1",
+    "level": "A2",
     "cat": "beschrijvingen"
   },
   {
@@ -4297,7 +4297,7 @@
     "ex": "Il centro storico è molto affollato.",
     "exNl": "Het historisch centrum is erg druk.",
     "lesson": 69,
-    "level": "B1",
+    "level": "A2",
     "cat": "beschrijvingen"
   },
   {
@@ -4308,7 +4308,7 @@
     "ex": "La situazione è un po' complicata.",
     "exNl": "De situatie is een beetje gecompliceerd.",
     "lesson": 69,
-    "level": "B1",
+    "level": "A2",
     "cat": "beschrijvingen"
   },
   {
@@ -4319,7 +4319,7 @@
     "ex": "Ho fatto la valigia ieri sera.",
     "exNl": "Ik heb gisteren mijn koffer gepakt.",
     "lesson": 70,
-    "level": "B1",
+    "level": "A2",
     "cat": "reizen"
   },
   {
@@ -4330,7 +4330,7 @@
     "ex": "Non dimenticare il passaporto!",
     "exNl": "Vergeet het paspoort niet!",
     "lesson": 70,
-    "level": "B1",
+    "level": "A2",
     "cat": "reizen"
   },
   {
@@ -4341,7 +4341,7 @@
     "ex": "Facciamo un'escursione in montagna.",
     "exNl": "We maken een uitstapje in de bergen.",
     "lesson": 70,
-    "level": "B1",
+    "level": "A2",
     "cat": "reizen"
   },
   {
@@ -4352,7 +4352,7 @@
     "ex": "Ho comprato un souvenir a Firenze.",
     "exNl": "Ik kocht een souvenir in Florence.",
     "lesson": 70,
-    "level": "B1",
+    "level": "A2",
     "cat": "reizen"
   },
   {
@@ -4363,7 +4363,7 @@
     "ex": "Ho preparato un itinerario per il viaggio.",
     "exNl": "Ik heb een reisplan gemaakt.",
     "lesson": 70,
-    "level": "B1",
+    "level": "A2",
     "cat": "reizen"
   },
   {
@@ -4374,7 +4374,7 @@
     "ex": "Ho comprato un'assicurazione di viaggio.",
     "exNl": "Ik heb een reisverzekering gekocht.",
     "lesson": 70,
-    "level": "B1",
+    "level": "A2",
     "cat": "reizen"
   },
   {
@@ -4385,7 +4385,7 @@
     "ex": "Dobbiamo passare dalla dogana.",
     "exNl": "We moeten door de douane.",
     "lesson": 70,
-    "level": "B1",
+    "level": "A2",
     "cat": "reizen"
   },
   {
@@ -4396,7 +4396,7 @@
     "ex": "Devo fare il cambio euro-dollaro.",
     "exNl": "Ik moet euro's wisselen naar dollars.",
     "lesson": 70,
-    "level": "B1",
+    "level": "A2",
     "cat": "reizen"
   },
   {
@@ -4407,7 +4407,7 @@
     "ex": "Hai una ricetta per la carbonara?",
     "exNl": "Heb jij een recept voor carbonara?",
     "lesson": 71,
-    "level": "B1",
+    "level": "A2",
     "cat": "koken"
   },
   {
@@ -4418,7 +4418,7 @@
     "ex": "Tutti gli ingredienti sono freschi.",
     "exNl": "Alle ingrediënten zijn vers.",
     "lesson": 71,
-    "level": "B1",
+    "level": "A2",
     "cat": "koken"
   },
   {
@@ -4429,7 +4429,7 @@
     "ex": "Questo sugo è troppo piccante!",
     "exNl": "Deze saus is te pittig!",
     "lesson": 71,
-    "level": "B1",
+    "level": "A2",
     "cat": "koken"
   },
   {
@@ -4440,7 +4440,7 @@
     "ex": "Il tiramisù è dolce e cremoso.",
     "exNl": "De tiramisu is zoet en romig.",
     "lesson": 71,
-    "level": "B1",
+    "level": "A2",
     "cat": "koken"
   },
   {
@@ -4451,7 +4451,7 @@
     "ex": "Il caffè amaro mi piace.",
     "exNl": "Ik hou van bittere koffie.",
     "lesson": 71,
-    "level": "B1",
+    "level": "A2",
     "cat": "koken"
   },
   {
@@ -4462,7 +4462,7 @@
     "ex": "Il prosciutto è salato e saporito.",
     "exNl": "De ham is zout en smakelijk.",
     "lesson": 71,
-    "level": "B1",
+    "level": "A2",
     "cat": "koken"
   },
   {
@@ -4473,7 +4473,7 @@
     "ex": "Che sapore intenso!",
     "exNl": "Wat een intense smaak!",
     "lesson": 71,
-    "level": "B1",
+    "level": "A2",
     "cat": "koken"
   },
   {
@@ -4484,7 +4484,7 @@
     "ex": "Bisogna cuocere la pasta al dente.",
     "exNl": "Je moet de pasta al dente koken.",
     "lesson": 71,
-    "level": "B1",
+    "level": "A2",
     "cat": "koken"
   },
   {
@@ -4495,7 +4495,7 @@
     "ex": "Ho scaricato una nuova applicazione.",
     "exNl": "Ik heb een nieuwe app gedownload.",
     "lesson": 72,
-    "level": "B1",
+    "level": "A2",
     "cat": "technologie"
   },
   {
@@ -4506,7 +4506,7 @@
     "ex": "Puoi scaricare la mappa offline.",
     "exNl": "Je kunt de kaart offline downloaden.",
     "lesson": 72,
-    "level": "B1",
+    "level": "A2",
     "cat": "technologie"
   },
   {
@@ -4517,7 +4517,7 @@
     "ex": "Puoi condividere la foto con me?",
     "exNl": "Kun jij de foto met mij delen?",
     "lesson": 72,
-    "level": "B1",
+    "level": "A2",
     "cat": "technologie"
   },
   {
@@ -4528,7 +4528,7 @@
     "ex": "La rete wifi è molto lenta.",
     "exNl": "Het wifi-netwerk is erg traag.",
     "lesson": 72,
-    "level": "B1",
+    "level": "A2",
     "cat": "technologie"
   },
   {
@@ -4539,7 +4539,7 @@
     "ex": "Devo aggiornare il telefono.",
     "exNl": "Ik moet mijn telefoon updaten.",
     "lesson": 72,
-    "level": "B1",
+    "level": "A2",
     "cat": "technologie"
   },
   {
@@ -4550,7 +4550,7 @@
     "ex": "Viviamo in un mondo digitale.",
     "exNl": "We leven in een digitale wereld.",
     "lesson": 72,
-    "level": "B1",
+    "level": "A2",
     "cat": "technologie"
   },
   {
@@ -4561,7 +4561,7 @@
     "ex": "Facciamo una videochiamata stasera.",
     "exNl": "We maken vanavond een videogesprek.",
     "lesson": 72,
-    "level": "B1",
+    "level": "A2",
     "cat": "technologie"
   },
   {
@@ -4572,7 +4572,7 @@
     "ex": "Hai un caricatore per il telefono?",
     "exNl": "Heb jij een oplader voor de telefoon?",
     "lesson": 72,
-    "level": "B1",
+    "level": "A2",
     "cat": "technologie"
   },
   {
@@ -4583,7 +4583,7 @@
     "ex": "Dobbiamo proteggere l'ambiente.",
     "exNl": "We moeten het milieu beschermen.",
     "lesson": 73,
-    "level": "B1",
+    "level": "A2",
     "cat": "milieu"
   },
   {
@@ -4594,7 +4594,7 @@
     "ex": "È importante riciclare ogni giorno.",
     "exNl": "Het is belangrijk om elke dag te recyclen.",
     "lesson": 73,
-    "level": "B1",
+    "level": "A2",
     "cat": "milieu"
   },
   {
@@ -4605,7 +4605,7 @@
     "ex": "L'inquinamento è un problema serio.",
     "exNl": "Vervuiling is een serieus probleem.",
     "lesson": 73,
-    "level": "B1",
+    "level": "A2",
     "cat": "milieu"
   },
   {
@@ -4616,7 +4616,7 @@
     "ex": "L'energia solare è il futuro.",
     "exNl": "Zonne-energie is de toekomst.",
     "lesson": 73,
-    "level": "B1",
+    "level": "A2",
     "cat": "milieu"
   },
   {
@@ -4627,7 +4627,7 @@
     "ex": "Il clima sta cambiando rapidamente.",
     "exNl": "Het klimaat verandert snel.",
     "lesson": 73,
-    "level": "B1",
+    "level": "A2",
     "cat": "milieu"
   },
   {
@@ -4638,7 +4638,7 @@
     "ex": "Cerco prodotti sostenibili.",
     "exNl": "Ik zoek duurzame producten.",
     "lesson": 73,
-    "level": "B1",
+    "level": "A2",
     "cat": "milieu"
   },
   {
@@ -4649,7 +4649,7 @@
     "ex": "Dobbiamo ridurre lo spreco alimentare.",
     "exNl": "We moeten voedselverspilling verminderen.",
     "lesson": 73,
-    "level": "B1",
+    "level": "A2",
     "cat": "milieu"
   },
   {
@@ -4660,7 +4660,7 @@
     "ex": "Il risparmio energetico è importante.",
     "exNl": "Energiebesparing is belangrijk.",
     "lesson": 73,
-    "level": "B1",
+    "level": "A2",
     "cat": "milieu"
   },
   {
@@ -4671,7 +4671,7 @@
     "ex": "Il benessere è più importante del denaro.",
     "exNl": "Welzijn is belangrijker dan geld.",
     "lesson": 74,
-    "level": "B1",
+    "level": "A2",
     "cat": "welzijn"
   },
   {
@@ -4682,7 +4682,7 @@
     "ex": "Devo riposare di più.",
     "exNl": "Ik moet meer rusten.",
     "lesson": 74,
-    "level": "B1",
+    "level": "A2",
     "cat": "welzijn"
   },
   {
@@ -4693,7 +4693,7 @@
     "ex": "Seguo una dieta equilibrata.",
     "exNl": "Ik volg een uitgebalanceerd dieet.",
     "lesson": 74,
-    "level": "B1",
+    "level": "A2",
     "cat": "welzijn"
   },
   {
@@ -4704,7 +4704,7 @@
     "ex": "Vado in palestra tre volte a settimana.",
     "exNl": "Ik ga drie keer per week naar de sportschool.",
     "lesson": 74,
-    "level": "B1",
+    "level": "A2",
     "cat": "welzijn"
   },
   {
@@ -4715,7 +4715,7 @@
     "ex": "Lo stress fa male alla salute.",
     "exNl": "Stress is slecht voor de gezondheid.",
     "lesson": 74,
-    "level": "B1",
+    "level": "A2",
     "cat": "welzijn"
   },
   {
@@ -4726,7 +4726,7 @@
     "ex": "Meditare aiuta a rilassarsi.",
     "exNl": "Mediteren helpt om te ontspannen.",
     "lesson": 74,
-    "level": "B1",
+    "level": "A2",
     "cat": "welzijn"
   },
   {
@@ -4737,7 +4737,7 @@
     "ex": "Cerco un buon equilibrio lavoro-vita.",
     "exNl": "Ik zoek een goede balans werk-privé.",
     "lesson": 74,
-    "level": "B1",
+    "level": "A2",
     "cat": "welzijn"
   },
   {
@@ -4748,7 +4748,7 @@
     "ex": "La prevenzione è meglio della cura.",
     "exNl": "Voorkomen is beter dan genezen.",
     "lesson": 74,
-    "level": "B1",
+    "level": "A2",
     "cat": "welzijn"
   },
   {
@@ -4759,7 +4759,7 @@
     "ex": "L'amicizia è uno dei doni più belli.",
     "exNl": "Vriendschap is een van de mooiste geschenken.",
     "lesson": 75,
-    "level": "B1",
+    "level": "A2",
     "cat": "relaties"
   },
   {
@@ -4770,7 +4770,7 @@
     "ex": "La fiducia è la base di ogni rapporto.",
     "exNl": "Vertrouwen is de basis van elke relatie.",
     "lesson": 75,
-    "level": "B1",
+    "level": "A2",
     "cat": "relaties"
   },
   {
@@ -4781,7 +4781,7 @@
     "ex": "Bisogna rispettare le opinioni altrui.",
     "exNl": "Je moet de meningen van anderen respecteren.",
     "lesson": 75,
-    "level": "B1",
+    "level": "A2",
     "cat": "relaties"
   },
   {
@@ -4792,7 +4792,7 @@
     "ex": "A volte litighiamo ma poi facciamo pace.",
     "exNl": "Soms ruziën we maar dan verzoenen we ons.",
     "lesson": 75,
-    "level": "B1",
+    "level": "A2",
     "cat": "relaties"
   },
   {
@@ -4803,7 +4803,7 @@
     "ex": "È importante saper perdonare.",
     "exNl": "Het is belangrijk te kunnen vergeven.",
     "lesson": 75,
-    "level": "B1",
+    "level": "A2",
     "cat": "relaties"
   },
   {
@@ -4814,7 +4814,7 @@
     "ex": "Sono commosso da questa storia.",
     "exNl": "Ik ben ontroerd door dit verhaal.",
     "lesson": 75,
-    "level": "B1",
+    "level": "A2",
     "cat": "relaties"
   },
   {
@@ -4825,7 +4825,7 @@
     "ex": "Sono orgoglioso di te!",
     "exNl": "Ik ben trots op jou!",
     "lesson": 75,
-    "level": "B1",
+    "level": "A2",
     "cat": "relaties"
   },
   {
@@ -4836,7 +4836,7 @@
     "ex": "Mi sono innamorato dell'Italia.",
     "exNl": "Ik ben verliefd geworden op Italië.",
     "lesson": 75,
-    "level": "B1",
+    "level": "A2",
     "cat": "relaties"
   },
   {
@@ -4847,7 +4847,7 @@
     "ex": "Vogliamo vincere la partita!",
     "exNl": "We willen de wedstrijd winnen!",
     "lesson": 76,
-    "level": "B1",
+    "level": "A2",
     "cat": "sport"
   },
   {
@@ -4858,7 +4858,7 @@
     "ex": "A volte si perde, a volte si vince.",
     "exNl": "Soms verlies je, soms win je.",
     "lesson": 76,
-    "level": "B1",
+    "level": "A2",
     "cat": "sport"
   },
   {
@@ -4869,7 +4869,7 @@
     "ex": "La mia squadra del cuore è la Juventus.",
     "exNl": "Mijn favoriete team is Juventus.",
     "lesson": 76,
-    "level": "B1",
+    "level": "A2",
     "cat": "sport"
   },
   {
@@ -4880,7 +4880,7 @@
     "ex": "L'Italia ha vinto il campionato.",
     "exNl": "Italië heeft het kampioenschap gewonnen.",
     "lesson": 76,
-    "level": "B1",
+    "level": "A2",
     "cat": "sport"
   },
   {
@@ -4891,7 +4891,7 @@
     "ex": "I tifosi cantano allo stadio.",
     "exNl": "De supporters zingen in het stadion.",
     "lesson": 76,
-    "level": "B1",
+    "level": "A2",
     "cat": "sport"
   },
   {
@@ -4902,7 +4902,7 @@
     "ex": "L'allenatore prepara bene la squadra.",
     "exNl": "De trainer bereidt het team goed voor.",
     "lesson": 76,
-    "level": "B1",
+    "level": "A2",
     "cat": "sport"
   },
   {
@@ -4913,7 +4913,7 @@
     "ex": "La partita è finita in pareggio.",
     "exNl": "De wedstrijd eindigde in een gelijkspel.",
     "lesson": 76,
-    "level": "B1",
+    "level": "A2",
     "cat": "sport"
   },
   {
@@ -4924,7 +4924,7 @@
     "ex": "Ha battuto il record mondiale!",
     "exNl": "Hij heeft het wereldrecord gebroken!",
     "lesson": 76,
-    "level": "B1",
+    "level": "A2",
     "cat": "sport"
   },
   {
@@ -4935,7 +4935,7 @@
     "ex": "Questa canzone mi fa venire i brividi.",
     "exNl": "Dit lied geeft me kippenvel.",
     "lesson": 77,
-    "level": "B1",
+    "level": "A2",
     "cat": "muziek"
   },
   {
@@ -4946,7 +4946,7 @@
     "ex": "La cantante ha una voce bellissima.",
     "exNl": "De zangeres heeft een prachtige stem.",
     "lesson": 77,
-    "level": "B1",
+    "level": "A2",
     "cat": "muziek"
   },
   {
@@ -4957,7 +4957,7 @@
     "ex": "Suono la chitarra da dieci anni.",
     "exNl": "Ik speel al tien jaar gitaar.",
     "lesson": 77,
-    "level": "B1",
+    "level": "A2",
     "cat": "muziek"
   },
   {
@@ -4968,7 +4968,7 @@
     "ex": "Il ritmo di questa canzone è travolgente.",
     "exNl": "Het ritme van dit lied is meeslepend.",
     "lesson": 77,
-    "level": "B1",
+    "level": "A2",
     "cat": "muziek"
   },
   {
@@ -4979,7 +4979,7 @@
     "ex": "Il testo della canzone è molto poetico.",
     "exNl": "De tekst van het lied is erg poëtisch.",
     "lesson": 77,
-    "level": "B1",
+    "level": "A2",
     "cat": "muziek"
   },
   {
@@ -4990,7 +4990,7 @@
     "ex": "Siamo andati a un concerto ieri sera.",
     "exNl": "We gingen gisteren naar een concert.",
     "lesson": 77,
-    "level": "B1",
+    "level": "A2",
     "cat": "muziek"
   },
   {
@@ -5001,7 +5001,7 @@
     "ex": "La melodia è rimasta in testa tutto il giorno.",
     "exNl": "De melodie bleef de hele dag in mijn hoofd.",
     "lesson": 77,
-    "level": "B1",
+    "level": "A2",
     "cat": "muziek"
   },
   {
@@ -5012,7 +5012,7 @@
     "ex": "Il pubblico ha applaudito a lungo.",
     "exNl": "Het publiek applaudisseerde lang.",
     "lesson": 77,
-    "level": "B1",
+    "level": "A2",
     "cat": "muziek"
   },
   {
@@ -5023,7 +5023,7 @@
     "ex": "La nostra azienda lavora in tutta Europa.",
     "exNl": "Ons bedrijf werkt in heel Europa.",
     "lesson": 78,
-    "level": "B1",
+    "level": "A2",
     "cat": "zakelijk"
   },
   {
@@ -5034,7 +5034,7 @@
     "ex": "Ho ricevuto la fattura per email.",
     "exNl": "Ik ontving de factuur per e-mail.",
     "lesson": 78,
-    "level": "B1",
+    "level": "A2",
     "cat": "zakelijk"
   },
   {
@@ -5045,7 +5045,7 @@
     "ex": "Abbiamo ricevuto un'offerta interessante.",
     "exNl": "We hebben een interessant aanbod ontvangen.",
     "lesson": 78,
-    "level": "B1",
+    "level": "A2",
     "cat": "zakelijk"
   },
   {
@@ -5056,7 +5056,7 @@
     "ex": "Dobbiamo negoziare il prezzo.",
     "exNl": "We moeten over de prijs onderhandelen.",
     "lesson": 78,
-    "level": "B1",
+    "level": "A2",
     "cat": "zakelijk"
   },
   {
@@ -5067,7 +5067,7 @@
     "ex": "Abbiamo raggiunto un accordo.",
     "exNl": "We hebben een akkoord bereikt.",
     "lesson": 78,
-    "level": "B1",
+    "level": "A2",
     "cat": "zakelijk"
   },
   {
@@ -5078,7 +5078,7 @@
     "ex": "Il budget per il progetto è limitato.",
     "exNl": "Het budget voor het project is beperkt.",
     "lesson": 78,
-    "level": "B1",
+    "level": "A2",
     "cat": "zakelijk"
   },
   {
@@ -5089,7 +5089,7 @@
     "ex": "Il nostro obiettivo è crescere del 10%.",
     "exNl": "Ons doel is 10% te groeien.",
     "lesson": 78,
-    "level": "B1",
+    "level": "A2",
     "cat": "zakelijk"
   },
   {
@@ -5100,7 +5100,7 @@
     "ex": "Il cliente è sempre al primo posto.",
     "exNl": "De klant staat altijd op de eerste plaats.",
     "lesson": 78,
-    "level": "B1",
+    "level": "A2",
     "cat": "zakelijk"
   },
   {
@@ -5111,7 +5111,7 @@
     "ex": "La tradizione culinaria italiana è famosa.",
     "exNl": "De Italiaanse culinaire traditie is beroemd.",
     "lesson": 79,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultuur"
   },
   {
@@ -5122,7 +5122,7 @@
     "ex": "La cultura italiana mi affascina.",
     "exNl": "De Italiaanse cultuur boeit mij.",
     "lesson": 79,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultuur"
   },
   {
@@ -5133,7 +5133,7 @@
     "ex": "La storia di Roma è straordinaria.",
     "exNl": "De geschiedenis van Rome is buitengewoon.",
     "lesson": 79,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultuur"
   },
   {
@@ -5144,7 +5144,7 @@
     "ex": "Il patrimonio artistico italiano è immenso.",
     "exNl": "Het artistieke erfgoed van Italië is immens.",
     "lesson": 79,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultuur"
   },
   {
@@ -5155,7 +5155,7 @@
     "ex": "Ho una grande passione per la musica.",
     "exNl": "Ik heb een grote passie voor muziek.",
     "lesson": 79,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultuur"
   },
   {
@@ -5166,7 +5166,7 @@
     "ex": "L'arte italiana è famosa in tutto il mondo.",
     "exNl": "De Italiaanse kunst is wereldberoemd.",
     "lesson": 79,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultuur"
   },
   {
@@ -5177,7 +5177,7 @@
     "ex": "La cucina italiana conquista tutti.",
     "exNl": "De Italiaanse keuken wint iedereen voor zich.",
     "lesson": 79,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultuur"
   },
   {
@@ -5188,7 +5188,7 @@
     "ex": "Il campanile della chiesa è bellissimo.",
     "exNl": "De klokkentoren van de kerk is prachtig.",
     "lesson": 79,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultuur"
   },
   {
@@ -5199,7 +5199,7 @@
     "ex": "La dolce vita comincia qui.",
     "exNl": "Het zoete leven begint hier.",
     "lesson": 80,
-    "level": "B1",
+    "level": "A2",
     "cat": "dolcevita"
   },
   {
@@ -5210,7 +5210,7 @@
     "ex": "Prendiamo un aperitivo prima di cena.",
     "exNl": "We nemen een aperitief voor het diner.",
     "lesson": 80,
-    "level": "B1",
+    "level": "A2",
     "cat": "dolcevita"
   },
   {
@@ -5221,7 +5221,7 @@
     "ex": "Facciamo una passeggiata sul lungomare.",
     "exNl": "We maken een wandeling langs de kust.",
     "lesson": 80,
-    "level": "B1",
+    "level": "A2",
     "cat": "dolcevita"
   },
   {
@@ -5232,7 +5232,7 @@
     "ex": "Faccio un pisolino dopo pranzo.",
     "exNl": "Ik doe een dutje na de lunch.",
     "lesson": 80,
-    "level": "B1",
+    "level": "A2",
     "cat": "dolcevita"
   },
   {
@@ -5243,7 +5243,7 @@
     "ex": "Un abbraccio vale mille parole.",
     "exNl": "Een knuffel is meer waard dan duizend woorden.",
     "lesson": 80,
-    "level": "B1",
+    "level": "A2",
     "cat": "dolcevita"
   },
   {
@@ -5254,7 +5254,7 @@
     "ex": "In bocca al lupo! — Crepi!",
     "exNl": "Veel succes! — Dank je!",
     "lesson": 80,
-    "level": "B1",
+    "level": "A2",
     "cat": "dolcevita"
   },
   {
@@ -5265,7 +5265,7 @@
     "ex": "Ci mancherà questa vacanza meravigliosa!",
     "exNl": "We zullen deze prachtige vakantie missen!",
     "lesson": 80,
-    "level": "B1",
+    "level": "A2",
     "cat": "dolcevita"
   },
   {
@@ -5276,7 +5276,7 @@
     "ex": "A presto, amici! Ci vediamo in Italia!",
     "exNl": "Tot snel, vrienden! We zien elkaar in Italië!",
     "lesson": 80,
-    "level": "B1",
+    "level": "A2",
     "cat": "dolcevita"
   },
   {
@@ -6167,7 +6167,7 @@
     "ex": "Il mio volo è alle sei di mattina.",
     "exNl": "Mijn vlucht is om zes uur 's ochtends.",
     "lesson": 51,
-    "level": "A2",
+    "level": "A1",
     "cat": "aeroporto"
   },
   {
@@ -6178,7 +6178,7 @@
     "ex": "Non dimenticare il passaporto!",
     "exNl": "Vergeet het paspoort niet!",
     "lesson": 51,
-    "level": "A2",
+    "level": "A1",
     "cat": "aeroporto"
   },
   {
@@ -6189,7 +6189,7 @@
     "ex": "Ho solo il bagaglio a mano.",
     "exNl": "Ik heb alleen handbagage.",
     "lesson": 51,
-    "level": "A2",
+    "level": "A1",
     "cat": "aeroporto"
   },
   {
@@ -6200,7 +6200,7 @@
     "ex": "Il volo parte dal gate B sette.",
     "exNl": "De vlucht vertrekt van gate B7.",
     "lesson": 51,
-    "level": "A2",
+    "level": "A1",
     "cat": "aeroporto"
   },
   {
@@ -6211,7 +6211,7 @@
     "ex": "Il controllo passaporti è lento oggi.",
     "exNl": "De paspoortcontrole is vandaag traag.",
     "lesson": 51,
-    "level": "A2",
+    "level": "A1",
     "cat": "aeroporto"
   },
   {
@@ -6222,7 +6222,7 @@
     "ex": "Ci imbarchiamo tra venti minuti.",
     "exNl": "We stappen over twintig minuten in.",
     "lesson": 51,
-    "level": "A2",
+    "level": "A1",
     "cat": "aeroporto"
   },
   {
@@ -6233,7 +6233,7 @@
     "ex": "L'aereo atterra in orario.",
     "exNl": "Het vliegtuig landt op tijd.",
     "lesson": 51,
-    "level": "A2",
+    "level": "A1",
     "cat": "aeroporto"
   },
   {
@@ -6244,7 +6244,7 @@
     "ex": "L'aereo decolla con un'ora di ritardo.",
     "exNl": "Het vliegtuig stijgt op met een uur vertraging.",
     "lesson": 51,
-    "level": "A2",
+    "level": "A1",
     "cat": "aeroporto"
   },
   {
@@ -6255,7 +6255,7 @@
     "ex": "Ho la febbre a trentotto.",
     "exNl": "Ik heb 38 graden koorts.",
     "lesson": 52,
-    "level": "A2",
+    "level": "A1",
     "cat": "salute"
   },
   {
@@ -6266,7 +6266,7 @@
     "ex": "Prendo un farmaco contro il dolore.",
     "exNl": "Ik neem een pijnstiller.",
     "lesson": 52,
-    "level": "A2",
+    "level": "A1",
     "cat": "salute"
   },
   {
@@ -6277,7 +6277,7 @@
     "ex": "Ho bisogno di una ricetta medica.",
     "exNl": "Ik heb een medisch recept nodig.",
     "lesson": 52,
-    "level": "A2",
+    "level": "A1",
     "cat": "salute"
   },
   {
@@ -6288,7 +6288,7 @@
     "ex": "La farmacia è aperta tutta la notte?",
     "exNl": "Is de apotheek de hele nacht open?",
     "lesson": 52,
-    "level": "A2",
+    "level": "A1",
     "cat": "salute"
   },
   {
@@ -6299,7 +6299,7 @@
     "ex": "Devo andare al pronto soccorso.",
     "exNl": "Ik moet naar de spoedeisende hulp.",
     "lesson": 52,
-    "level": "A2",
+    "level": "A1",
     "cat": "salute"
   },
   {
@@ -6310,7 +6310,7 @@
     "ex": "Sono allergico alle noci.",
     "exNl": "Ik ben allergisch voor noten.",
     "lesson": 52,
-    "level": "A2",
+    "level": "A1",
     "cat": "salute"
   },
   {
@@ -6321,7 +6321,7 @@
     "ex": "Chiama l'ambulanza subito!",
     "exNl": "Bel de ambulance meteen!",
     "lesson": 52,
-    "level": "A2",
+    "level": "A1",
     "cat": "salute"
   },
   {
@@ -6332,7 +6332,7 @@
     "ex": "Spero di guarire presto.",
     "exNl": "Ik hoop snel te herstellen.",
     "lesson": 52,
-    "level": "A2",
+    "level": "A1",
     "cat": "salute"
   },
   {
@@ -6343,7 +6343,7 @@
     "ex": "Il mio medico è molto bravo.",
     "exNl": "Mijn dokter is heel goed.",
     "lesson": 53,
-    "level": "A2",
+    "level": "A1",
     "cat": "professioni"
   },
   {
@@ -6354,7 +6354,7 @@
     "ex": "L'insegnante spiega con pazienza.",
     "exNl": "De leraar legt geduldig uit.",
     "lesson": 53,
-    "level": "A2",
+    "level": "A1",
     "cat": "professioni"
   },
   {
@@ -6365,7 +6365,7 @@
     "ex": "Lavoro come ingegnere informatico.",
     "exNl": "Ik werk als software-ingenieur.",
     "lesson": 53,
-    "level": "A2",
+    "level": "A1",
     "cat": "professioni"
   },
   {
@@ -6376,7 +6376,7 @@
     "ex": "Il cuoco prepara la pasta fresca.",
     "exNl": "De kok bereidt verse pasta.",
     "lesson": 53,
-    "level": "A2",
+    "level": "A1",
     "cat": "professioni"
   },
   {
@@ -6387,7 +6387,7 @@
     "ex": "L'avvocato mi dà un consiglio.",
     "exNl": "De advocaat geeft me advies.",
     "lesson": 53,
-    "level": "A2",
+    "level": "A1",
     "cat": "professioni"
   },
   {
@@ -6398,7 +6398,7 @@
     "ex": "Il commerciante vende vestiti italiani.",
     "exNl": "De winkelier verkoopt Italiaanse kleding.",
     "lesson": 53,
-    "level": "A2",
+    "level": "A1",
     "cat": "professioni"
   },
   {
@@ -6409,7 +6409,7 @@
     "ex": "Il giornalista scrive un articolo importante.",
     "exNl": "De journalist schrijft een belangrijk artikel.",
     "lesson": 53,
-    "level": "A2",
+    "level": "A1",
     "cat": "professioni"
   },
   {
@@ -6420,7 +6420,7 @@
     "ex": "Il mio stipendio è aumentato quest'anno.",
     "exNl": "Mijn salaris is dit jaar gestegen.",
     "lesson": 53,
-    "level": "A2",
+    "level": "A1",
     "cat": "professioni"
   },
   {
@@ -6431,7 +6431,7 @@
     "ex": "Facciamo una passeggiata nel bosco.",
     "exNl": "We maken een wandeling in het bos.",
     "lesson": 54,
-    "level": "A2",
+    "level": "A1",
     "cat": "natura"
   },
   {
@@ -6442,7 +6442,7 @@
     "ex": "Il lago di Como è bellissimo.",
     "exNl": "Het Comomeer is prachtig.",
     "lesson": 54,
-    "level": "A2",
+    "level": "A1",
     "cat": "natura"
   },
   {
@@ -6453,7 +6453,7 @@
     "ex": "D'estate vado in montagna.",
     "exNl": "In de zomer ga ik naar de bergen.",
     "lesson": 54,
-    "level": "A2",
+    "level": "A1",
     "cat": "natura"
   },
   {
@@ -6464,7 +6464,7 @@
     "ex": "Il mare in Sicilia è azzurro.",
     "exNl": "De zee in Sicilië is azuurblauw.",
     "lesson": 54,
-    "level": "A2",
+    "level": "A1",
     "cat": "natura"
   },
   {
@@ -6475,7 +6475,7 @@
     "ex": "I fiori di primavera profumano.",
     "exNl": "De lentebloemen ruiken heerlijk.",
     "lesson": 54,
-    "level": "A2",
+    "level": "A1",
     "cat": "natura"
   },
   {
@@ -6486,7 +6486,7 @@
     "ex": "Quali animali hai a casa?",
     "exNl": "Welke dieren heb jij thuis?",
     "lesson": 54,
-    "level": "A2",
+    "level": "A1",
     "cat": "natura"
   },
   {
@@ -6497,7 +6497,7 @@
     "ex": "Il parco nazionale è enorme.",
     "exNl": "Het nationaal park is enorm.",
     "lesson": 54,
-    "level": "A2",
+    "level": "A1",
     "cat": "natura"
   },
   {
@@ -6508,7 +6508,7 @@
     "ex": "Mi piace la tranquillità della campagna.",
     "exNl": "Ik hou van de rust van het platteland.",
     "lesson": 54,
-    "level": "A2",
+    "level": "A1",
     "cat": "natura"
   },
   {
@@ -6519,7 +6519,7 @@
     "ex": "Lavoro tutto il giorno al computer.",
     "exNl": "Ik werk de hele dag achter de computer.",
     "lesson": 55,
-    "level": "A2",
+    "level": "A1",
     "cat": "tecnologia"
   },
   {
@@ -6530,7 +6530,7 @@
     "ex": "La connessione internet è lenta.",
     "exNl": "De internetverbinding is traag.",
     "lesson": 55,
-    "level": "A2",
+    "level": "A1",
     "cat": "tecnologia"
   },
   {
@@ -6541,7 +6541,7 @@
     "ex": "Scarico un'applicazione utile.",
     "exNl": "Ik download een nuttige app.",
     "lesson": 55,
-    "level": "A2",
+    "level": "A1",
     "cat": "tecnologia"
   },
   {
@@ -6552,7 +6552,7 @@
     "ex": "Cerco informazioni sul sito web.",
     "exNl": "Ik zoek informatie op de website.",
     "lesson": 55,
-    "level": "A2",
+    "level": "A1",
     "cat": "tecnologia"
   },
   {
@@ -6563,7 +6563,7 @@
     "ex": "Ho dimenticato la mia password.",
     "exNl": "Ik ben mijn wachtwoord vergeten.",
     "lesson": 55,
-    "level": "A2",
+    "level": "A1",
     "cat": "tecnologia"
   },
   {
@@ -6574,7 +6574,7 @@
     "ex": "Invia il messaggio adesso!",
     "exNl": "Stuur het bericht nu!",
     "lesson": 55,
-    "level": "A2",
+    "level": "A1",
     "cat": "tecnologia"
   },
   {
@@ -6585,7 +6585,7 @@
     "ex": "Scarico la mappa offline per il viaggio.",
     "exNl": "Ik download de kaart offline voor de reis.",
     "lesson": 55,
-    "level": "A2",
+    "level": "A1",
     "cat": "tecnologia"
   },
   {
@@ -6596,7 +6596,7 @@
     "ex": "La batteria del telefono è scarica.",
     "exNl": "De batterij van de telefoon is leeg.",
     "lesson": 55,
-    "level": "A2",
+    "level": "A1",
     "cat": "tecnologia"
   },
   {
@@ -6607,7 +6607,7 @@
     "ex": "Vado a un concerto jazz stasera.",
     "exNl": "Ik ga vanavond naar een jazzconcert.",
     "lesson": 56,
-    "level": "A2",
+    "level": "A1",
     "cat": "musica"
   },
   {
@@ -6618,7 +6618,7 @@
     "ex": "Il cantante ha una voce meravigliosa.",
     "exNl": "De zanger heeft een prachtige stem.",
     "lesson": 56,
-    "level": "A2",
+    "level": "A1",
     "cat": "musica"
   },
   {
@@ -6629,7 +6629,7 @@
     "ex": "Questa canzone mi emoziona molto.",
     "exNl": "Dit lied ontroert me veel.",
     "lesson": 56,
-    "level": "A2",
+    "level": "A1",
     "cat": "musica"
   },
   {
@@ -6640,7 +6640,7 @@
     "ex": "Il Festival di Sanremo è famoso.",
     "exNl": "Het Sanremo Festival is beroemd.",
     "lesson": 56,
-    "level": "A2",
+    "level": "A1",
     "cat": "musica"
   },
   {
@@ -6651,7 +6651,7 @@
     "ex": "Alla Scala si ascolta l'opera lirica.",
     "exNl": "In de Scala luistert men naar opera.",
     "lesson": 56,
-    "level": "A2",
+    "level": "A1",
     "cat": "musica"
   },
   {
@@ -6662,7 +6662,7 @@
     "ex": "Ti piace ballare?",
     "exNl": "Hou jij van dansen?",
     "lesson": 56,
-    "level": "A2",
+    "level": "A1",
     "cat": "musica"
   },
   {
@@ -6673,7 +6673,7 @@
     "ex": "Andiamo a teatro questo sabato.",
     "exNl": "We gaan dit weekend naar het theater.",
     "lesson": 56,
-    "level": "A2",
+    "level": "A1",
     "cat": "musica"
   },
   {
@@ -6684,7 +6684,7 @@
     "ex": "Il museo è chiuso il lunedì.",
     "exNl": "Het museum is op maandag gesloten.",
     "lesson": 56,
-    "level": "A2",
+    "level": "A1",
     "cat": "musica"
   },
   {
@@ -6695,7 +6695,7 @@
     "ex": "La mia squadra ha vinto il campionato.",
     "exNl": "Mijn team heeft het kampioenschap gewonnen.",
     "lesson": 57,
-    "level": "A2",
+    "level": "A1",
     "cat": "sport"
   },
   {
@@ -6706,7 +6706,7 @@
     "ex": "Ho l'allenamento alle sette di sera.",
     "exNl": "Ik heb training om zeven uur 's avonds.",
     "lesson": 57,
-    "level": "A2",
+    "level": "A1",
     "cat": "sport"
   },
   {
@@ -6717,7 +6717,7 @@
     "ex": "Guardo la partita di calcio in TV.",
     "exNl": "Ik kijk de voetbalwedstrijd op TV.",
     "lesson": 57,
-    "level": "A2",
+    "level": "A1",
     "cat": "sport"
   },
   {
@@ -6728,7 +6728,7 @@
     "ex": "Il campo da calcio è bagnato.",
     "exNl": "Het voetbalveld is nat.",
     "lesson": 57,
-    "level": "A2",
+    "level": "A1",
     "cat": "sport"
   },
   {
@@ -6739,7 +6739,7 @@
     "ex": "Vogliamo vincere questa partita!",
     "exNl": "We willen deze wedstrijd winnen!",
     "lesson": 57,
-    "level": "A2",
+    "level": "A1",
     "cat": "sport"
   },
   {
@@ -6750,7 +6750,7 @@
     "ex": "Non voglio perdere ancora.",
     "exNl": "Ik wil niet nog een keer verliezen.",
     "lesson": 57,
-    "level": "A2",
+    "level": "A1",
     "cat": "sport"
   },
   {
@@ -6761,7 +6761,7 @@
     "ex": "L'arbitro ha fischiato un rigore.",
     "exNl": "De scheidsrechter heeft een penalty gefloten.",
     "lesson": 57,
-    "level": "A2",
+    "level": "A1",
     "cat": "sport"
   },
   {
@@ -6772,7 +6772,7 @@
     "ex": "Qual è il risultato finale?",
     "exNl": "Wat is de einduitslag?",
     "lesson": 57,
-    "level": "A2",
+    "level": "A1",
     "cat": "sport"
   },
   {
@@ -6783,7 +6783,7 @@
     "ex": "La destinazione del nostro viaggio è Napoli.",
     "exNl": "De bestemming van onze reis is Napels.",
     "lesson": 58,
-    "level": "A2",
+    "level": "A1",
     "cat": "viaggi"
   },
   {
@@ -6794,7 +6794,7 @@
     "ex": "Ho fatto la prenotazione online.",
     "exNl": "Ik heb de reservering online gemaakt.",
     "lesson": 58,
-    "level": "A2",
+    "level": "A1",
     "cat": "viaggi"
   },
   {
@@ -6805,7 +6805,7 @@
     "ex": "Siamo turisti olandesi in vacanza.",
     "exNl": "We zijn Nederlandse toeristen op vakantie.",
     "lesson": 58,
-    "level": "A2",
+    "level": "A1",
     "cat": "viaggi"
   },
   {
@@ -6816,7 +6816,7 @@
     "ex": "La guida parla cinque lingue.",
     "exNl": "De gids spreekt vijf talen.",
     "lesson": 58,
-    "level": "A2",
+    "level": "A1",
     "cat": "viaggi"
   },
   {
@@ -6827,7 +6827,7 @@
     "ex": "Il nostro itinerario è molto interessante.",
     "exNl": "Onze reisroute is erg interessant.",
     "lesson": 58,
-    "level": "A2",
+    "level": "A1",
     "cat": "viaggi"
   },
   {
@@ -6838,7 +6838,7 @@
     "ex": "Compro un souvenir per mia figlia.",
     "exNl": "Ik koop een souvenir voor mijn dochter.",
     "lesson": 58,
-    "level": "A2",
+    "level": "A1",
     "cat": "viaggi"
   },
   {
@@ -6849,7 +6849,7 @@
     "ex": "Mi piace esplorare i vicoli storici.",
     "exNl": "Ik vind het leuk de historische steegjes te verkennen.",
     "lesson": 58,
-    "level": "A2",
+    "level": "A1",
     "cat": "viaggi"
   },
   {
@@ -6860,7 +6860,7 @@
     "ex": "Ogni viaggio è una bella avventura.",
     "exNl": "Elke reis is een mooi avontuur.",
     "lesson": 58,
-    "level": "A2",
+    "level": "A1",
     "cat": "viaggi"
   },
   {
@@ -6871,7 +6871,7 @@
     "ex": "Il negozio è chiuso la domenica.",
     "exNl": "De winkel is op zondag gesloten.",
     "lesson": 59,
-    "level": "A2",
+    "level": "A1",
     "cat": "shopping"
   },
   {
@@ -6882,7 +6882,7 @@
     "ex": "Il prezzo è troppo alto per me.",
     "exNl": "De prijs is te hoog voor mij.",
     "lesson": 59,
-    "level": "A2",
+    "level": "A1",
     "cat": "shopping"
   },
   {
@@ -6893,7 +6893,7 @@
     "ex": "C'è uno sconto del venti percento.",
     "exNl": "Er is twintig procent korting.",
     "lesson": 59,
-    "level": "A2",
+    "level": "A1",
     "cat": "shopping"
   },
   {
@@ -6904,7 +6904,7 @@
     "ex": "Posso provare questo in camerino?",
     "exNl": "Kan ik dit in de paskamer passen?",
     "lesson": 59,
-    "level": "A2",
+    "level": "A1",
     "cat": "shopping"
   },
   {
@@ -6915,7 +6915,7 @@
     "ex": "Tenga lo scontrino, per favore.",
     "exNl": "Bewaar de kassabon, alsjeblieft.",
     "lesson": 59,
-    "level": "A2",
+    "level": "A1",
     "cat": "shopping"
   },
   {
@@ -6926,7 +6926,7 @@
     "ex": "Posso rimborsare questo prodotto?",
     "exNl": "Kan ik dit product terugbetalen?",
     "lesson": 59,
-    "level": "A2",
+    "level": "A1",
     "cat": "shopping"
   },
   {
@@ -6937,7 +6937,7 @@
     "ex": "Amo fare shopping nel centro storico.",
     "exNl": "Ik vind het leuk te winkelen in het historisch centrum.",
     "lesson": 59,
-    "level": "A2",
+    "level": "A1",
     "cat": "shopping"
   },
   {
@@ -6948,7 +6948,7 @@
     "ex": "I saldi iniziano a gennaio.",
     "exNl": "De uitverkoop begint in januari.",
     "lesson": 59,
-    "level": "A2",
+    "level": "A1",
     "cat": "shopping"
   },
   {
@@ -6959,7 +6959,7 @@
     "ex": "Il Colosseo è il monumento più famoso.",
     "exNl": "Het Colosseum is het beroemdste monument.",
     "lesson": 60,
-    "level": "A2",
+    "level": "A1",
     "cat": "turismo"
   },
   {
@@ -6970,7 +6970,7 @@
     "ex": "Faccio una foto alla Fontana di Trevi.",
     "exNl": "Ik maak een foto bij de Trevi Fontein.",
     "lesson": 60,
-    "level": "A2",
+    "level": "A1",
     "cat": "turismo"
   },
   {
@@ -6981,7 +6981,7 @@
     "ex": "La piazza è piena di turisti.",
     "exNl": "Het plein is vol toeristen.",
     "lesson": 60,
-    "level": "A2",
+    "level": "A1",
     "cat": "turismo"
   },
   {
@@ -6992,7 +6992,7 @@
     "ex": "Il palazzo reale è aperto al pubblico.",
     "exNl": "Het koninklijk paleis is open voor het publiek.",
     "lesson": 60,
-    "level": "A2",
+    "level": "A1",
     "cat": "turismo"
   },
   {
@@ -7003,7 +7003,7 @@
     "ex": "La cattedrale apre alle nove.",
     "exNl": "De kathedraal opent om negen uur.",
     "lesson": 60,
-    "level": "A2",
+    "level": "A1",
     "cat": "turismo"
   },
   {
@@ -7014,7 +7014,7 @@
     "ex": "Ammiro l'arte italiana con passione.",
     "exNl": "Ik bewonder de Italiaanse kunst met passie.",
     "lesson": 60,
-    "level": "A2",
+    "level": "A1",
     "cat": "turismo"
   },
   {
@@ -7025,7 +7025,7 @@
     "ex": "Che vista meravigliosa sul mare!",
     "exNl": "Wat een prachtig uitzicht op de zee!",
     "lesson": 60,
-    "level": "A2",
+    "level": "A1",
     "cat": "turismo"
   },
   {
@@ -7036,7 +7036,7 @@
     "ex": "Facciamo una passeggiata sul lungomare.",
     "exNl": "We maken een wandeling langs de kust.",
     "lesson": 60,
-    "level": "A2",
+    "level": "A1",
     "cat": "turismo"
   },
   {
@@ -7047,7 +7047,7 @@
     "ex": "Le notizie di oggi sono preoccupanti.",
     "exNl": "Het nieuws van vandaag is zorgwekkend.",
     "lesson": 81,
-    "level": "B1",
+    "level": "A2",
     "cat": "politica"
   },
   {
@@ -7058,7 +7058,7 @@
     "ex": "Il governo ha preso una decisione importante.",
     "exNl": "De regering heeft een belangrijke beslissing genomen.",
     "lesson": 81,
-    "level": "B1",
+    "level": "A2",
     "cat": "politica"
   },
   {
@@ -7069,7 +7069,7 @@
     "ex": "Le elezioni politiche sono a giugno.",
     "exNl": "De politieke verkiezingen zijn in juni.",
     "lesson": 81,
-    "level": "B1",
+    "level": "A2",
     "cat": "politica"
   },
   {
@@ -7080,7 +7080,7 @@
     "ex": "Seguo le notizie di tutti i partiti.",
     "exNl": "Ik volg het nieuws van alle partijen.",
     "lesson": 81,
-    "level": "B1",
+    "level": "A2",
     "cat": "politica"
   },
   {
@@ -7091,7 +7091,7 @@
     "ex": "La legge è uguale per tutti i cittadini.",
     "exNl": "De wet is gelijk voor alle burgers.",
     "lesson": 81,
-    "level": "B1",
+    "level": "A2",
     "cat": "politica"
   },
   {
@@ -7102,7 +7102,7 @@
     "ex": "Il dibattito politico è molto acceso.",
     "exNl": "Het politieke debat is verhit.",
     "lesson": 81,
-    "level": "B1",
+    "level": "A2",
     "cat": "politica"
   },
   {
@@ -7113,7 +7113,7 @@
     "ex": "È importante votare alle elezioni.",
     "exNl": "Het is belangrijk te stemmen bij verkiezingen.",
     "lesson": 81,
-    "level": "B1",
+    "level": "A2",
     "cat": "politica"
   },
   {
@@ -7124,7 +7124,7 @@
     "ex": "Ogni cittadino ha i propri diritti.",
     "exNl": "Elke burger heeft zijn eigen rechten.",
     "lesson": 81,
-    "level": "B1",
+    "level": "A2",
     "cat": "politica"
   },
   {
@@ -7135,7 +7135,7 @@
     "ex": "Dobbiamo proteggere l'ambiente.",
     "exNl": "We moeten het milieu beschermen.",
     "lesson": 82,
-    "level": "B1",
+    "level": "A2",
     "cat": "ambiente"
   },
   {
@@ -7146,7 +7146,7 @@
     "ex": "Il cambiamento climatico è una realtà.",
     "exNl": "Klimaatverandering is een realiteit.",
     "lesson": 82,
-    "level": "B1",
+    "level": "A2",
     "cat": "ambiente"
   },
   {
@@ -7157,7 +7157,7 @@
     "ex": "Le energie rinnovabili sono il futuro.",
     "exNl": "Hernieuwbare energie is de toekomst.",
     "lesson": 82,
-    "level": "B1",
+    "level": "A2",
     "cat": "ambiente"
   },
   {
@@ -7168,7 +7168,7 @@
     "ex": "Bisogna riciclare più carta e plastica.",
     "exNl": "Er moet meer papier en plastic worden gerecycled.",
     "lesson": 82,
-    "level": "B1",
+    "level": "A2",
     "cat": "ambiente"
   },
   {
@@ -7179,7 +7179,7 @@
     "ex": "La biodiversità marina è minacciata.",
     "exNl": "De mariene biodiversiteit wordt bedreigd.",
     "lesson": 82,
-    "level": "B1",
+    "level": "A2",
     "cat": "ambiente"
   },
   {
@@ -7190,7 +7190,7 @@
     "ex": "Cerco uno stile di vita sostenibile.",
     "exNl": "Ik zoek een duurzame levensstijl.",
     "lesson": 82,
-    "level": "B1",
+    "level": "A2",
     "cat": "ambiente"
   },
   {
@@ -7201,7 +7201,7 @@
     "ex": "L'inquinamento dell'aria è un problema grave.",
     "exNl": "Luchtvervuiling is een ernstig probleem.",
     "lesson": 82,
-    "level": "B1",
+    "level": "A2",
     "cat": "ambiente"
   },
   {
@@ -7212,7 +7212,7 @@
     "ex": "Bisogna ridurre le emissioni di CO2.",
     "exNl": "We moeten de CO2-uitstoot verminderen.",
     "lesson": 82,
-    "level": "B1",
+    "level": "A2",
     "cat": "ambiente"
   },
   {
@@ -7223,7 +7223,7 @@
     "ex": "L'economia italiana è in ripresa.",
     "exNl": "De Italiaanse economie herstelt.",
     "lesson": 83,
-    "level": "B1",
+    "level": "A2",
     "cat": "economia"
   },
   {
@@ -7234,7 +7234,7 @@
     "ex": "Il mercato globale è sempre più competitivo.",
     "exNl": "De wereldmarkt wordt steeds competitiever.",
     "lesson": 83,
-    "level": "B1",
+    "level": "A2",
     "cat": "economia"
   },
   {
@@ -7245,7 +7245,7 @@
     "ex": "L'inflazione è alta in tutta Europa.",
     "exNl": "De inflatie is hoog in heel Europa.",
     "lesson": 83,
-    "level": "B1",
+    "level": "A2",
     "cat": "economia"
   },
   {
@@ -7256,7 +7256,7 @@
     "ex": "La disoccupazione giovanile preoccupa.",
     "exNl": "Jeugdwerkloosheid is zorgwekkend.",
     "lesson": 83,
-    "level": "B1",
+    "level": "A2",
     "cat": "economia"
   },
   {
@@ -7267,7 +7267,7 @@
     "ex": "Il PIL italiano è cresciuto del due percento.",
     "exNl": "Het Italiaanse BBP is met twee procent gegroeid.",
     "lesson": 83,
-    "level": "B1",
+    "level": "A2",
     "cat": "economia"
   },
   {
@@ -7278,7 +7278,7 @@
     "ex": "Conviene investire nelle energie verdi.",
     "exNl": "Het is verstandig te investeren in groene energie.",
     "lesson": 83,
-    "level": "B1",
+    "level": "A2",
     "cat": "economia"
   },
   {
@@ -7289,7 +7289,7 @@
     "ex": "La crisi economica ha colpito molte famiglie.",
     "exNl": "De economische crisis heeft veel gezinnen getroffen.",
     "lesson": 83,
-    "level": "B1",
+    "level": "A2",
     "cat": "economia"
   },
   {
@@ -7300,7 +7300,7 @@
     "ex": "Il risparmio energetico riduce le bollette.",
     "exNl": "Energiebesparing verlaagt de rekeningen.",
     "lesson": 83,
-    "level": "B1",
+    "level": "A2",
     "cat": "economia"
   },
   {
@@ -7311,7 +7311,7 @@
     "ex": "Il benessere mentale è fondamentale.",
     "exNl": "Mentaal welzijn is fundamenteel.",
     "lesson": 84,
-    "level": "B1",
+    "level": "A2",
     "cat": "benessere"
   },
   {
@@ -7322,7 +7322,7 @@
     "ex": "Pratico la meditazione ogni mattina.",
     "exNl": "Ik mediteer elke ochtend.",
     "lesson": 84,
-    "level": "B1",
+    "level": "A2",
     "cat": "benessere"
   },
   {
@@ -7333,7 +7333,7 @@
     "ex": "Cerco un equilibrio tra lavoro e vita privata.",
     "exNl": "Ik zoek een balans tussen werk en privéleven.",
     "lesson": 84,
-    "level": "B1",
+    "level": "A2",
     "cat": "benessere"
   },
   {
@@ -7344,7 +7344,7 @@
     "ex": "Lo stress cronico fa male alla salute.",
     "exNl": "Chronische stress schaadt de gezondheid.",
     "lesson": 84,
-    "level": "B1",
+    "level": "A2",
     "cat": "benessere"
   },
   {
@@ -7355,7 +7355,7 @@
     "ex": "La prevenzione è meglio della cura.",
     "exNl": "Preventie is beter dan genezing.",
     "lesson": 84,
-    "level": "B1",
+    "level": "A2",
     "cat": "benessere"
   },
   {
@@ -7366,7 +7366,7 @@
     "ex": "È importante nutrirsi bene e fare sport.",
     "exNl": "Het is belangrijk goed te eten en te sporten.",
     "lesson": 84,
-    "level": "B1",
+    "level": "A2",
     "cat": "benessere"
   },
   {
@@ -7377,7 +7377,7 @@
     "ex": "Sono in ottima forma fisica.",
     "exNl": "Ik ben in uitstekende lichamelijke conditie.",
     "lesson": 84,
-    "level": "B1",
+    "level": "A2",
     "cat": "benessere"
   },
   {
@@ -7388,7 +7388,7 @@
     "ex": "Ho bisogno di un po' di relax.",
     "exNl": "Ik heb een beetje ontspanning nodig.",
     "lesson": 84,
-    "level": "B1",
+    "level": "A2",
     "cat": "benessere"
   },
   {
@@ -7399,7 +7399,7 @@
     "ex": "Ho letto un romanzo fantastico di Calvino.",
     "exNl": "Ik heb een fantastische roman van Calvino gelezen.",
     "lesson": 85,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultura"
   },
   {
@@ -7410,7 +7410,7 @@
     "ex": "Dante è il padre della poesia italiana.",
     "exNl": "Dante is de vader van de Italiaanse poëzie.",
     "lesson": 85,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultura"
   },
   {
@@ -7421,7 +7421,7 @@
     "ex": "Caravaggio è un pittore geniale.",
     "exNl": "Caravaggio is een briljante schilder.",
     "lesson": 85,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultura"
   },
   {
@@ -7432,7 +7432,7 @@
     "ex": "La scultura di Michelangelo è straordinaria.",
     "exNl": "De sculptuur van Michelangelo is buitengewoon.",
     "lesson": 85,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultura"
   },
   {
@@ -7443,7 +7443,7 @@
     "ex": "Come interpreti questo dipinto?",
     "exNl": "Hoe interpreteer jij dit schilderij?",
     "lesson": 85,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultura"
   },
   {
@@ -7454,7 +7454,7 @@
     "ex": "La critica letteraria è una disciplina complessa.",
     "exNl": "Literaire kritiek is een complexe discipline.",
     "lesson": 85,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultura"
   },
   {
@@ -7465,7 +7465,7 @@
     "ex": "La Gioconda è un capolavoro assoluto.",
     "exNl": "De Mona Lisa is een absoluut meesterwerk.",
     "lesson": 85,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultura"
   },
   {
@@ -7476,7 +7476,7 @@
     "ex": "Cerco ispirazione ovunque vado.",
     "exNl": "Ik zoek inspiratie overal waar ik ga.",
     "lesson": 85,
-    "level": "B1",
+    "level": "A2",
     "cat": "cultura"
   },
   {
@@ -7487,7 +7487,7 @@
     "ex": "La ricerca scientifica avanza rapidamente.",
     "exNl": "Wetenschappelijk onderzoek vordert snel.",
     "lesson": 86,
-    "level": "B1",
+    "level": "A2",
     "cat": "scienza"
   },
   {
@@ -7498,7 +7498,7 @@
     "ex": "L'esperimento ha confermato la teoria.",
     "exNl": "Het experiment heeft de theorie bevestigd.",
     "lesson": 86,
-    "level": "B1",
+    "level": "A2",
     "cat": "scienza"
   },
   {
@@ -7509,7 +7509,7 @@
     "ex": "La teoria della relatività è rivoluzionaria.",
     "exNl": "De relativiteitstheorie is revolutionair.",
     "lesson": 86,
-    "level": "B1",
+    "level": "A2",
     "cat": "scienza"
   },
   {
@@ -7520,7 +7520,7 @@
     "ex": "I dati confermano l'ipotesi iniziale.",
     "exNl": "De gegevens bevestigen de initiële hypothese.",
     "lesson": 86,
-    "level": "B1",
+    "level": "A2",
     "cat": "scienza"
   },
   {
@@ -7531,7 +7531,7 @@
     "ex": "Galileo ha scoperto le lune di Giove.",
     "exNl": "Galileo heeft de manen van Jupiter ontdekt.",
     "lesson": 86,
-    "level": "B1",
+    "level": "A2",
     "cat": "scienza"
   },
   {
@@ -7542,7 +7542,7 @@
     "ex": "Bisogna analizzare i risultati con cura.",
     "exNl": "We moeten de resultaten zorgvuldig analyseren.",
     "lesson": 86,
-    "level": "B1",
+    "level": "A2",
     "cat": "scienza"
   },
   {
@@ -7553,7 +7553,7 @@
     "ex": "L'innovazione tecnologica accelera ogni anno.",
     "exNl": "Technologische innovatie versnelt elk jaar.",
     "lesson": 86,
-    "level": "B1",
+    "level": "A2",
     "cat": "scienza"
   },
   {
@@ -7564,7 +7564,7 @@
     "ex": "Una grande scoperta scientifica cambia il mondo.",
     "exNl": "Een grote wetenschappelijke ontdekking verandert de wereld.",
     "lesson": 86,
-    "level": "B1",
+    "level": "A2",
     "cat": "scienza"
   },
   {
@@ -7575,7 +7575,7 @@
     "ex": "La società moderna cambia rapidamente.",
     "exNl": "De moderne samenleving verandert snel.",
     "lesson": 87,
-    "level": "B1",
+    "level": "A2",
     "cat": "societa"
   },
   {
@@ -7586,7 +7586,7 @@
     "ex": "La comunità si unisce in momenti difficili.",
     "exNl": "De gemeenschap komt samen in moeilijke tijden.",
     "lesson": 87,
-    "level": "B1",
+    "level": "A2",
     "cat": "societa"
   },
   {
@@ -7597,7 +7597,7 @@
     "ex": "La diversità culturale è una grande ricchezza.",
     "exNl": "Culturele diversiteit is een grote rijkdom.",
     "lesson": 87,
-    "level": "B1",
+    "level": "A2",
     "cat": "societa"
   },
   {
@@ -7608,7 +7608,7 @@
     "ex": "L'integrazione richiede tempo e impegno.",
     "exNl": "Integratie vereist tijd en inzet.",
     "lesson": 87,
-    "level": "B1",
+    "level": "A2",
     "cat": "societa"
   },
   {
@@ -7619,7 +7619,7 @@
     "ex": "La solidarietà è fondamentale in una crisi.",
     "exNl": "Solidariteit is fundamenteel in een crisis.",
     "lesson": 87,
-    "level": "B1",
+    "level": "A2",
     "cat": "societa"
   },
   {
@@ -7630,7 +7630,7 @@
     "ex": "Faccio volontariato ogni weekend.",
     "exNl": "Ik doe elk weekend vrijwilligerswerk.",
     "lesson": 87,
-    "level": "B1",
+    "level": "A2",
     "cat": "societa"
   },
   {
@@ -7641,7 +7641,7 @@
     "ex": "Bisogna combattere i pregiudizi.",
     "exNl": "We moeten vooroordelen bestrijden.",
     "lesson": 87,
-    "level": "B1",
+    "level": "A2",
     "cat": "societa"
   },
   {
@@ -7652,7 +7652,7 @@
     "ex": "Una società che include tutti è più forte.",
     "exNl": "Een samenleving die iedereen insluit is sterker.",
     "lesson": 87,
-    "level": "B1",
+    "level": "A2",
     "cat": "societa"
   },
   {
@@ -7663,7 +7663,7 @@
     "ex": "Studio all'Università di Bologna.",
     "exNl": "Ik studeer aan de Universiteit van Bologna.",
     "lesson": 88,
-    "level": "B1",
+    "level": "A2",
     "cat": "istruzione"
   },
   {
@@ -7674,7 +7674,7 @@
     "ex": "Ho vinto una borsa di studio internazionale.",
     "exNl": "Ik heb een internationale studiebeurs gewonnen.",
     "lesson": 88,
-    "level": "B1",
+    "level": "A2",
     "cat": "istruzione"
   },
   {
@@ -7685,7 +7685,7 @@
     "ex": "Ho conseguito la laurea in lingue.",
     "exNl": "Ik heb mijn graad in talen behaald.",
     "lesson": 88,
-    "level": "B1",
+    "level": "A2",
     "cat": "istruzione"
   },
   {
@@ -7696,7 +7696,7 @@
     "ex": "La matematica è la mia materia preferita.",
     "exNl": "Wiskunde is mijn favoriete vak.",
     "lesson": 88,
-    "level": "B1",
+    "level": "A2",
     "cat": "istruzione"
   },
   {
@@ -7707,7 +7707,7 @@
     "ex": "Il professore spiega in modo chiaro.",
     "exNl": "De professor legt het duidelijk uit.",
     "lesson": 88,
-    "level": "B1",
+    "level": "A2",
     "cat": "istruzione"
   },
   {
@@ -7718,7 +7718,7 @@
     "ex": "Ho superato tutti gli esami del primo anno.",
     "exNl": "Ik heb alle examens van het eerste jaar gehaald.",
     "lesson": 88,
-    "level": "B1",
+    "level": "A2",
     "cat": "istruzione"
   },
   {
@@ -7729,7 +7729,7 @@
     "ex": "La formazione continua è essenziale nel lavoro.",
     "exNl": "Permanente educatie is essentieel in het werk.",
     "lesson": 88,
-    "level": "B1",
+    "level": "A2",
     "cat": "istruzione"
   },
   {
@@ -7740,7 +7740,7 @@
     "ex": "Non si finisce mai di imparare.",
     "exNl": "Je bent nooit uitgeleerd.",
     "lesson": 88,
-    "level": "B1",
+    "level": "A2",
     "cat": "istruzione"
   },
   {
@@ -7751,7 +7751,7 @@
     "ex": "Leggo il giornale ogni mattina a colazione.",
     "exNl": "Ik lees elke ochtend de krant bij het ontbijt.",
     "lesson": 89,
-    "level": "B1",
+    "level": "A2",
     "cat": "media"
   },
   {
@@ -7762,7 +7762,7 @@
     "ex": "Guardo poco la televisione.",
     "exNl": "Ik kijk weinig televisie.",
     "lesson": 89,
-    "level": "B1",
+    "level": "A2",
     "cat": "media"
   },
   {
@@ -7773,7 +7773,7 @@
     "ex": "I social media influenzano l'opinione pubblica.",
     "exNl": "Sociale media beïnvloeden de publieke opinie.",
     "lesson": 89,
-    "level": "B1",
+    "level": "A2",
     "cat": "media"
   },
   {
@@ -7784,7 +7784,7 @@
     "ex": "Bisogna verificare le fake news prima di condividerle.",
     "exNl": "Je moet nepnieuws controleren voordat je het deelt.",
     "lesson": 89,
-    "level": "B1",
+    "level": "A2",
     "cat": "media"
   },
   {
@@ -7795,7 +7795,7 @@
     "ex": "La RAI trasmette programmi in tutto il mondo.",
     "exNl": "RAI zendt programma's wereldwijd uit.",
     "lesson": 89,
-    "level": "B1",
+    "level": "A2",
     "cat": "media"
   },
   {
@@ -7806,7 +7806,7 @@
     "ex": "La pubblicità online è ovunque.",
     "exNl": "Onlinereclame is overal.",
     "lesson": 89,
-    "level": "B1",
+    "level": "A2",
     "cat": "media"
   },
   {
@@ -7817,7 +7817,7 @@
     "ex": "Gli influencer hanno un grande impatto.",
     "exNl": "Influencers hebben een grote impact.",
     "lesson": 89,
-    "level": "B1",
+    "level": "A2",
     "cat": "media"
   },
   {
@@ -7828,7 +7828,7 @@
     "ex": "Una buona comunicazione risolve molti problemi.",
     "exNl": "Goede communicatie lost veel problemen op.",
     "lesson": 89,
-    "level": "B1",
+    "level": "A2",
     "cat": "media"
   },
   {
@@ -7839,7 +7839,7 @@
     "ex": "Il mio sogno è vivere un anno in Italia.",
     "exNl": "Mijn droom is een jaar in Italië te leven.",
     "lesson": 90,
-    "level": "B1",
+    "level": "A2",
     "cat": "futuro"
   },
   {
@@ -7850,7 +7850,7 @@
     "ex": "Ho un grande progetto per il futuro.",
     "exNl": "Ik heb een groot plan voor de toekomst.",
     "lesson": 90,
-    "level": "B1",
+    "level": "A2",
     "cat": "futuro"
   },
   {
@@ -7861,7 +7861,7 @@
     "ex": "Spero in un futuro migliore per tutti.",
     "exNl": "Ik hoop op een betere toekomst voor iedereen.",
     "lesson": 90,
-    "level": "B1",
+    "level": "A2",
     "cat": "futuro"
   },
   {
@@ -7872,7 +7872,7 @@
     "ex": "Il cambiamento è una parte della vita.",
     "exNl": "Verandering is een deel van het leven.",
     "lesson": 90,
-    "level": "B1",
+    "level": "A2",
     "cat": "futuro"
   },
   {
@@ -7883,7 +7883,7 @@
     "ex": "Voglio realizzare i miei sogni!",
     "exNl": "Ik wil mijn dromen verwezenlijken!",
     "lesson": 90,
-    "level": "B1",
+    "level": "A2",
     "cat": "futuro"
   },
   {
@@ -7894,7 +7894,7 @@
     "ex": "Ho raggiunto il mio obiettivo principale.",
     "exNl": "Ik heb mijn hoofddoel bereikt.",
     "lesson": 90,
-    "level": "B1",
+    "level": "A2",
     "cat": "futuro"
   },
   {
@@ -7905,7 +7905,7 @@
     "ex": "Il futuro è pieno di possibilità.",
     "exNl": "De toekomst zit vol mogelijkheden.",
     "lesson": 90,
-    "level": "B1",
+    "level": "A2",
     "cat": "futuro"
   },
   {
@@ -7916,7 +7916,7 @@
     "ex": "Bravo! Hai imparato l'italiano!",
     "exNl": "Goed gedaan! Je hebt Italiaans geleerd!",
     "lesson": 90,
-    "level": "B1",
+    "level": "A2",
     "cat": "futuro"
   }
 ]
