@@ -1150,8 +1150,8 @@
       "w600"
     ],
     "grammar": {
-      "title": "Conditioneel: potrei/potresti — beleefd vragen",
-      "body": "'Potrei' (ik zou kunnen), 'potresti' (jij zou kunnen): 'Potresti aiutarmi?' (zou jij me kunnen helpen?). Conditioneel = beleefder dan tegenwoordige tijd. 'Potrei usare il tuo charger?' = zou ik jouw oplader mogen gebruiken? Gebruik ook voor hypothetische situaties: 'Senza wifi, non potrei lavorare'."
+      "title": "Beleefd vragen met potrei/vorrei",
+      "body": "'Potrei' (mag ik / zou ik kunnen) en 'vorrei' (ik zou graag willen) zijn de beleefde vormen voor verzoeken. 'Potrei avere il conto?' = Mag ik de rekening? 'Vorrei prenotare un tavolo' = Ik zou graag een tafel willen reserveren. Deze vormen zijn essentieel in restaurants, hotels en winkels — altijd vriendelijker dan de directe vorm."
     }
   },
   {
@@ -1171,8 +1171,8 @@
       "w608"
     ],
     "grammar": {
-      "title": "Non solo… ma anche — niet alleen… maar ook",
-      "body": "'Non solo… ma anche' verbindt twee elementen: 'L'Italia è famosa non solo per la pasta, ma anche per l'opera'. Andere verbindingen: 'sia… sia' (zowel… als), 'né… né' (noch… noch). Gebruik ze om je Italiaans genuanceerder te maken."
+      "title": "Verbindingswoorden: non solo… ma anche, però, quindi",
+      "body": "Verbindingswoorden maken je zinnen vloeiender. 'Non solo… ma anche' = niet alleen… maar ook. 'Però' = maar/echter: 'Mi piace Roma, però è cara'. 'Quindi' = dus: 'Ho fame, quindi mangio'. 'Anche' = ook: 'Vengo anch'io!' = Ik kom ook! Met deze woorden klink je veel natuurlijker."
     }
   },
   {
@@ -1192,8 +1192,8 @@
       "w616"
     ],
     "grammar": {
-      "title": "Stare + gerundio — bezig zijn met",
-      "body": "'Stare + gerundio' drukt uit dat iets nu aan de gang is: 'Sto guardando la partita' (ik kijk naar de wedstrijd). Gerundio: -are → -ando (guardare → guardando), -ere → -endo (correre → correndo), -ire → -endo (dormire → dormendo). 'Cosa stai facendo?' = wat ben je aan het doen?"
+      "title": "Bezig zijn met: stare + gerundio",
+      "body": "'Stare + gerundio' = bezig zijn met iets op dit moment. Vorming: stare (sto/stai/sta/stiamo/state/stanno) + gerundio (-ando/-endo). 'Sto mangiando' = ik ben aan het eten. 'Sta dormendo' = hij/zij is aan het slapen. Het gerundio is de -ando/-endo-vorm. Je herkent deze constructie vaak — productief gebruik komt later."
     }
   },
   {
@@ -1213,8 +1213,8 @@
       "w624"
     ],
     "grammar": {
-      "title": "Congiuntivo na sperare/volere — hopen en willen",
-      "body": "'Sperare che' + congiuntivo: 'Spero che il viaggio sia bello' (ik hoop dat de reis mooi is). 'Volere che' + congiuntivo: 'Voglio che tu venga con me'. Congiuntivo presente: sia, abbia, vada, faccia. In dagelijks taalgebruik klinkt het beschaafder mét congiuntivo."
+      "title": "Wensen en hopen: spero che, voglio che",
+      "body": "'Spero che' (ik hoop dat) en 'voglio che' (ik wil dat) worden gevolgd door een bijzin. In informeel Italiaans gebruik je vaak de gewone tegenwoordige tijd: 'Spero che arrivi presto' of 'Spero che arriva presto'. Beide vormen zijn gangbaar in dagelijks taalgebruik. Herkenning is nu het doel — productie volgt op B1."
     }
   },
   {
@@ -1234,8 +1234,8 @@
       "w632"
     ],
     "grammar": {
-      "title": "Directe en indirecte objectspronaamwoorden",
-      "body": "Direct object (lo/la/li/le): 'Compro il vestito' → 'Lo compro' (ik koop het). Indirect object (mi/ti/gli/le): 'Do il scontrino al commesso' → 'Gli do il scontrino'. In een winkel: 'Me lo può mostrare?' (kunt u het me laten zien?). Ze staan vóór het werkwoord of achteraan de infinitief."
+      "title": "Objectspronaamwoorden lo, la, li, le",
+      "body": "Direct objectspronaamwoorden vervangen het lijdend voorwerp. Lo = hem/het (mannelijk enkelvoud): 'Compro il libro' → 'Lo compro'. La = haar/het (vrouwelijk enkelvoud): 'Vedo Maria' → 'La vedo'. Li = hen/ze (mannelijk mv), Le = hen/ze (vrouwelijk mv). Ze staan vóór het werkwoord: 'Lo mangio' = ik eet het."
     }
   },
   {
@@ -1255,8 +1255,8 @@
       "w640"
     ],
     "grammar": {
-      "title": "Passief: essere + voltooid deelwoord",
-      "body": "Passief = 'essere' + voltooid deelwoord: 'Il Colosseo è stato costruito dai Romani'. 'Venire' + deelwoord voor gewoontepassief: 'Il museo viene visitato da milioni di turisti'. 'Da' = door (handelende persoon). Italië heeft meer UNESCO-sites dan elk ander land! Je kent nu ~480 Italiaanse woorden en hebt A1 afgerond — benissimo! Je kunt jezelf redden in Italië. Volgende stap: A2!"
+      "title": "Passief herkennen: viene costruito, è stato fatto",
+      "body": "Het passief gebruik je als de handeling belangrijker is dan wie het doet. 'Il Colosseo è stato costruito dai Romani' = Het Colosseum is gebouwd door de Romeinen. 'Viene servito' = het wordt geserveerd. Je herkent passief aan 'essere/venire + voltooid deelwoord'. In dagelijks taalgebruik is actief normaler — passief kom je vooral tegen in teksten en beschrijvingen. Je kent nu ~480 Italiaanse woorden en hebt A1 afgerond — benissimo! Je kunt jezelf redden in Italië. Volgende stap: A2!"
     }
   },
   {
@@ -1888,5 +1888,635 @@
       "title": "Futuro anteriore — toekomst voltooid",
       "body": "'Futuro anteriore' = wat eerder in de toekomst zal zijn gebeurd: 'Quando avrò imparato l'italiano, viaggerò per tutta Italia'. Vorming: futuro van avere/essere + participio passato. Avrò/sarai + participio. Je kent nu 720 Italiaanse woorden — complimenti, sei fantastico/a! 🇮🇹"
     }
+  },
+  {
+    "id": 91,
+    "title": "Tijdsuitdrukkingen — verleden",
+    "emoji": "⏮️",
+    "level": "A2",
+    "description": "Praat over wat er gisteren, vorige week of jaren geleden is gebeurd.",
+    "grammar": {
+      "title": "Tijdsaanduidingen bij het passato prossimo",
+      "body": "Tijdsuitdrukkingen staan vaak aan het begin of einde van de zin. 'Ieri ho lavorato' = Gisteren heb ik gewerkt. 'Due anni fa sono andato a Roma' = Twee jaar geleden ben ik naar Rome gegaan. 'La settimana scorsa' = vorige week, 'il mese scorso' = vorige maand, 'l'anno scorso' = vorig jaar. 'Fa' = geleden: 'tre giorni fa' = drie dagen geleden."
+    },
+    "words": [
+      "w129",
+      "w722",
+      "w723",
+      "w724",
+      "w725",
+      "w726",
+      "w342",
+      "w728"
+    ]
+  },
+  {
+    "id": 92,
+    "title": "Dagelijkse routine",
+    "emoji": "🌅",
+    "level": "A2",
+    "description": "Beschrijf je dag — van opstaan tot naar bed gaan.",
+    "grammar": {
+      "title": "Reflexieve werkwoorden in de routine",
+      "body": "Veel routinewerkwoorden zijn reflexief: 'mi alzo' (ik sta op), 'mi lavo' (ik was me), 'mi vesto' (ik kleed me aan), 'mi addormento' (ik val in slaap). Reflexief: mi/ti/si/ci/vi/si + werkwoord. 'A che ora ti alzi?' = Hoe laat sta jij op? Deze werkwoorden zijn onmisbaar voor A2."
+    },
+    "words": [
+      "w729",
+      "w730",
+      "w731",
+      "w732",
+      "w733",
+      "w734",
+      "w735",
+      "w736"
+    ]
+  },
+  {
+    "id": 93,
+    "title": "Afspraken maken",
+    "emoji": "📅",
+    "level": "A2",
+    "description": "Plan een ontmoeting, stel een tijd voor en bevestig of annuleer.",
+    "grammar": {
+      "title": "Afspraken maken — uitdrukkingen",
+      "body": "'Ci vediamo domani?' = Zien we elkaar morgen? 'Ti va di...' = Heb je zin om...? 'Ti va di andare al cinema?' = Heb je zin om naar de film te gaan? 'Sono libero/a' = ik ben vrij. 'Non posso, ho già un impegno' = ik kan niet, ik heb al iets. 'Ci sentiamo!' = we bellen/spreken elkaar! — veelgebruikte afsluiting."
+    },
+    "words": [
+      "w737",
+      "w738",
+      "w739",
+      "w740",
+      "w365",
+      "w742",
+      "w743",
+      "w744"
+    ]
+  },
+  {
+    "id": 94,
+    "title": "Plannen voor de toekomst",
+    "emoji": "🗓️",
+    "level": "A2",
+    "description": "Vertel wat je van plan bent — volgende week, volgend jaar.",
+    "grammar": {
+      "title": "Toekomst uitdrukken: futuro vs. presente",
+      "body": "In informeel Italiaans gebruik je voor nabije toekomst vaak de tegenwoordige tijd: 'Domani vado al mare' = Morgen ga ik naar het strand. Het futuro semplice gebruik je voor verdere toekomst of beloften: 'L'anno prossimo andrò in Spagna' = Volgend jaar ga ik naar Spanje. 'Penso di' + infinitief = ik ben van plan om: 'Penso di comprare una macchina'."
+    },
+    "words": [
+      "w745",
+      "w746",
+      "w747",
+      "w351",
+      "w352",
+      "w750",
+      "w751",
+      "w752"
+    ]
+  },
+  {
+    "id": 95,
+    "title": "Op de markt",
+    "emoji": "🧺",
+    "level": "A2",
+    "description": "Koop vers voedsel, vraag om het gewicht en onderhandel over de prijs.",
+    "grammar": {
+      "title": "Hoeveelheden en gewichten",
+      "body": "'Un chilo di...' = een kilo... 'Un etto di...' = 100 gram... (etto = hectogram, typisch Italiaans). 'Un litro di latte' = een liter melk. 'Mezzo chilo' = een halve kilo. 'Quanto costa?' = hoeveel kost het? 'Me ne dia due etti' = geeft u me 200 gram. Op Italiaanse markten is 'un etto' de standaardmaat voor kaas en vleeswaren."
+    },
+    "words": [
+      "w753",
+      "w754",
+      "w488",
+      "w756",
+      "w757",
+      "w758",
+      "w759",
+      "w760"
+    ]
+  },
+  {
+    "id": 96,
+    "title": "Koken & recepten",
+    "emoji": "👨‍🍳",
+    "level": "A2",
+    "description": "Volg een eenvoudig recept en bespreek ingrediënten en bereidingswijzen.",
+    "grammar": {
+      "title": "De imperatief in recepten",
+      "body": "Recepten gebruiken de imperatief (gebiedende wijs): 'Taglia la cipolla' = snijd de ui. 'Aggiungi l'olio' = voeg olie toe. 'Mescola bene' = meng goed. 'Cuoci per 20 minuti' = kook 20 minuten. Kooktermen zijn ook in informele gesprekken handig: 'Come lo fai il sugo?' = Hoe maak jij de saus?"
+    },
+    "words": [
+      "w571",
+      "w762",
+      "w763",
+      "w764",
+      "w408",
+      "w766",
+      "w767",
+      "w768"
+    ]
+  },
+  {
+    "id": 97,
+    "title": "Bioscoop & uitgaan",
+    "emoji": "🎬",
+    "level": "A2",
+    "description": "Kies een film, koop kaartjes en bespreek wat je hebt gezien.",
+    "grammar": {
+      "title": "Meningen geven over films en voorstellingen",
+      "body": "'Mi è piaciuto molto' = ik vond het erg leuk (mannelijk/onzijdig). 'Mi è piaciuta molto' = ik vond het erg leuk (vrouwelijk). 'Che film c'è stasera?' = welke film draait er vanavond? 'È già tutto esaurito' = het is al uitverkocht. 'Preferisco i film in lingua originale' = ik geef de voorkeur aan films in de originele taal."
+    },
+    "words": [
+      "w522",
+      "w770",
+      "w529",
+      "w772",
+      "w773",
+      "w774",
+      "w775",
+      "w776"
+    ]
+  },
+  {
+    "id": 98,
+    "title": "Vrienden & sociale plannen",
+    "emoji": "👫",
+    "level": "A2",
+    "description": "Spreek af met vrienden, nodig iemand uit en bespreek wat je hebt gedaan.",
+    "grammar": {
+      "title": "Uitnodigen en reageren",
+      "body": "'Ti va di venire a cena da me?' = Heb je zin om bij mij te komen eten? 'Con piacere!' = met plezier! 'Purtroppo non posso' = helaas kan ik niet. 'Ci penso e ti faccio sapere' = ik denk erover na en laat je weten. 'Porta qualcosa da bere' = neem iets te drinken mee. Sociale uitnodigingen zijn cruciaal in de Italiaanse cultuur."
+    },
+    "words": [
+      "w777",
+      "w778",
+      "w779",
+      "w780",
+      "w781",
+      "w782",
+      "w783",
+      "w784"
+    ]
+  },
+  {
+    "id": 99,
+    "title": "Huis zoeken & huren",
+    "emoji": "🏠",
+    "level": "A2",
+    "description": "Zoek een appartement, vraag naar huurprijs en beschrijf je wensen.",
+    "grammar": {
+      "title": "Beschrijven van woningen",
+      "body": "'Cerco un appartamento in affitto' = ik zoek een huurappartement. 'Quante camere ha?' = hoeveel kamers heeft het? 'È ammobiliato?' = is het gemeubileerd? 'Il canone d'affitto' = de huurprijs. 'Le spese sono incluse?' = zijn de kosten inbegrepen? Italianen wonen vaak in appartementen — 'condominio' = appartementencomplex."
+    },
+    "words": [
+      "w785",
+      "w786",
+      "w787",
+      "w788",
+      "w789",
+      "w790",
+      "w791",
+      "w792"
+    ]
+  },
+  {
+    "id": 100,
+    "title": "🎉 100 lessen!",
+    "emoji": "🏆",
+    "level": "A2",
+    "description": "Gefeliciteerd met 100 lessen! Een bijzondere mijlpaal — bespreek je prestaties.",
+    "grammar": {
+      "title": "Trots zijn — complimenten geven en ontvangen",
+      "body": "'Ce l'ho fatta!' = het is me gelukt! 'Sono orgoglioso/a di me' = ik ben trots op mezelf. 'Complimenti!' = gefeliciteerd! 'Sei bravissimo/a!' = je bent heel goed! 'Ho imparato tantissimo' = ik heb heel veel geleerd. Je beheerst nu 800 Italiaanse woorden en hebt 100 lessen afgerond. Cento lezioni — un traguardo straordinario! 🇮🇹🏆"
+    },
+    "words": [
+      "w793",
+      "w794",
+      "w795",
+      "w796",
+      "w797",
+      "w798",
+      "w799",
+      "w800"
+    ]
+  },
+  {
+    "id": 101,
+    "title": "Bij de bank",
+    "emoji": "🏦",
+    "level": "A2",
+    "description": "Open een rekening, wissel geld en begrijp bankterminologie.",
+    "grammar": {
+      "title": "Bankzaken in Italië",
+      "body": "'Vorrei aprire un conto corrente' = ik zou een betaalrekening willen openen. 'Posso fare un bonifico?' = kan ik een overboeking doen? 'Il bancomat' = de pinautomaat (ook ATM). 'Prelevare' = geld opnemen. 'Versare' = storten. 'Il saldo' = het saldo. In Italië betaalt men vaak contant — 'Si paga anche con carta?' = kan ik ook met kaart betalen?"
+    },
+    "words": [
+      "w801",
+      "w802",
+      "w803",
+      "w804",
+      "w632",
+      "w806",
+      "w807",
+      "w808"
+    ]
+  },
+  {
+    "id": 102,
+    "title": "Feestjes & gelegenheden",
+    "emoji": "🎉",
+    "level": "A2",
+    "description": "Vier verjaardagen, bruiloften en Italiaanse festiviteiten.",
+    "grammar": {
+      "title": "Wensen en gelukwensen",
+      "body": "'Auguri!' = gefeliciteerd! / veel geluk! (meest gebruikte gelukwens). 'Tanti auguri di buon compleanno!' = veel felicitaties voor je verjaardag! 'Buon anniversario!' = gelukkige verjaardag (van een evenement). 'Cin cin!' = proost! 'Alla salute!' = op de gezondheid! 'Auguri' is universeel in Italië — voor verjaardagen, Kerst, Pasen én herstellen."
+    },
+    "words": [
+      "w809",
+      "w810",
+      "w811",
+      "w812",
+      "w813",
+      "w814",
+      "w815",
+      "w816"
+    ]
+  },
+  {
+    "id": 103,
+    "title": "Klachten & problemen",
+    "emoji": "😤",
+    "level": "A2",
+    "description": "Dien een klacht in, beschrijf een probleem en vraag om oplossingen.",
+    "grammar": {
+      "title": "Een klacht uiten — beleefd maar duidelijk",
+      "body": "'C'è un problema con...' = er is een probleem met... 'Non funziona' = het werkt niet. 'È rotto/a' = het is kapot. 'Vorrei parlare con il responsabile' = ik zou de manager willen spreken. 'Chiedo un rimborso' = ik vraag om terugbetaling. In Italië is beleefd maar vasthoudend het meest effectief bij klachten."
+    },
+    "words": [
+      "w817",
+      "w818",
+      "w819",
+      "w820",
+      "w821",
+      "w822",
+      "w823",
+      "w824"
+    ]
+  },
+  {
+    "id": 104,
+    "title": "Beschrijven van mensen",
+    "emoji": "👤",
+    "level": "A2",
+    "description": "Beschrijf het uiterlijk en de persoonlijkheid van mensen gedetailleerder.",
+    "grammar": {
+      "title": "Bijvoeglijke naamwoorden voor uiterlijk",
+      "body": "Bijvoeglijke naamwoorden passen aan op geslacht en getal. 'Ha i capelli corti e ricci' = hij/zij heeft kort krullend haar. 'È di media altezza' = hij/zij is van gemiddelde lengte. 'Porta gli occhiali' = hij/zij draagt een bril. 'Sembra simpatico/a' = hij/zij lijkt aardig. 'Sembra' (lijken) + bijvoeglijk naamwoord = indruk beschrijven."
+    },
+    "words": [
+      "w825",
+      "w826",
+      "w827",
+      "w828",
+      "w829",
+      "w830",
+      "w831",
+      "w832"
+    ]
+  },
+  {
+    "id": 105,
+    "title": "Reizen plannen",
+    "emoji": "✈️",
+    "level": "A2",
+    "description": "Plan een reis, boek vervoer en accommodatie, maak een reisschema.",
+    "grammar": {
+      "title": "Toekomst met 'ho intenzione di' en 'penso di'",
+      "body": "'Ho intenzione di' + infinitief = ik ben van plan om (concreet plan). 'Penso di' + infinitief = ik denk erover om (minder zeker). 'Ho intenzione di visitare Firenze' = ik ben van plan Florence te bezoeken. 'Penso di partire in agosto' = ik denk erover om in augustus te vertrekken. 'Spero di' + infinitief = ik hoop om: 'Spero di trovare un buon albergo'."
+    },
+    "words": [
+      "w266",
+      "w621",
+      "w835",
+      "w836",
+      "w837",
+      "w563",
+      "w839",
+      "w840"
+    ]
+  },
+  {
+    "id": 106,
+    "title": "Vervoer & mobiliteit",
+    "emoji": "🚇",
+    "level": "A2",
+    "description": "Navigeer door Italiaanse steden met metro, bus en tram.",
+    "grammar": {
+      "title": "Vervoer — kaartjes en routebeschrijving",
+      "body": "'Devo prendere la metropolitana' = ik moet de metro nemen. 'Devo cambiare alla stazione centrale' = ik moet overstappen op het centraal station. 'Quante fermate?' = hoeveel haltes? 'È diretto?' = is het een directe verbinding? 'Il prossimo treno parte alle...' = de volgende trein vertrekt om... Italië heeft uitstekend openbaar vervoer — 'Trenitalia' en 'Italo' zijn de twee hoofdaanbieders."
+    },
+    "words": [
+      "w841",
+      "w842",
+      "w530",
+      "w844",
+      "w845",
+      "w533",
+      "w847",
+      "w848"
+    ]
+  },
+  {
+    "id": 107,
+    "title": "Spijt & wensen",
+    "emoji": "😔",
+    "level": "A2",
+    "description": "Druk spijt uit over het verleden en wensen voor de toekomst.",
+    "grammar": {
+      "title": "Spijt uitdrukken: avrei dovuto, mi dispiace",
+      "body": "'Mi dispiace' = het spijt me / wat jammer. 'Peccato!' = wat jammer! 'Avrei dovuto' + infinitief = ik had moeten (conditionele verleden): 'Avrei dovuto studiare di più'. 'Se potessi...' = als ik kon... (herkenning). 'Vorrei essere stato/a' = ik had willen zijn — je kunt ook simpeler: 'Avrei voluto...' = ik had willen..."
+    },
+    "words": [
+      "w849",
+      "w850",
+      "w851",
+      "w852",
+      "w853",
+      "w854",
+      "w437",
+      "w715"
+    ]
+  },
+  {
+    "id": 108,
+    "title": "Culinaire tradities",
+    "emoji": "🍝",
+    "level": "A2",
+    "description": "Ontdek de rijke Italiaanse keuken — regionale gerechten en tradities.",
+    "grammar": {
+      "title": "Regionale verschillen in Italië",
+      "body": "Italië heeft sterk regionale keuken: Noord (rijst, polenta, boter), Midden (pasta, olijfolie), Zuid (tomaat, aubergine). 'È tipico della regione' = het is typisch voor de regio. 'Si mangia molto' + gerecht + 'in' + regio. 'La cucina italiana' verschilt enorm per regio — 'ogni campanile ha la sua ricetta' = elk dorp heeft zijn eigen recept."
+    },
+    "words": [
+      "w857",
+      "w858",
+      "w859",
+      "w860",
+      "w403",
+      "w862",
+      "w863",
+      "w864"
+    ]
+  },
+  {
+    "id": 109,
+    "title": "Gezondheid & leefstijl",
+    "emoji": "🥗",
+    "level": "A2",
+    "description": "Praat over gezonde gewoonten, voeding en je leefstijl.",
+    "grammar": {
+      "title": "Frequentie uitdrukken",
+      "body": "'Ogni giorno' = elke dag. 'Due volte alla settimana' = twee keer per week. 'Una volta al mese' = één keer per maand. 'Di tanto in tanto' = van tijd tot tijd. 'Non... mai' = nooit: 'Non fumo mai'. 'Raramente' = zelden. 'Spesso' = vaak. Frequentie-uitdrukkingen zijn handig voor het beschrijven van gewoonten en routines."
+    },
+    "words": [
+      "w865",
+      "w866",
+      "w867",
+      "w667",
+      "w869",
+      "w668",
+      "w871",
+      "w665"
+    ]
+  },
+  {
+    "id": 110,
+    "title": "Sport & outdoor",
+    "emoji": "⛰️",
+    "level": "A2",
+    "description": "Praat over sport, outdoor-activiteiten en Italiaanse sportcultuur.",
+    "grammar": {
+      "title": "Giocare vs. fare — sport uitdrukken",
+      "body": "'Giocare a' + balsport: 'giocare a calcio/tennis/pallavolo'. 'Fare' + andere sport: 'fare nuoto/ciclismo/corsa/yoga'. 'Tifare per' = supporter zijn van: 'Tifo per la Juventus'. 'La Serie A' = de Italiaanse voetbalcompetitie. Het calcio (voetbal) is een nationale passie — ook als je het niet volgt, is het een cruciaal gespreksonderwerp!"
+    },
+    "words": [
+      "w873",
+      "w874",
+      "w875",
+      "w876",
+      "w877",
+      "w441",
+      "w442",
+      "w880"
+    ]
+  },
+  {
+    "id": 111,
+    "title": "Winkelen & mode",
+    "emoji": "👗",
+    "level": "A2",
+    "description": "Koop kleding, vraag om een andere maat en bespreek stijl en mode.",
+    "grammar": {
+      "title": "Passen en maten in Italië",
+      "body": "'Posso provarlo/a?' = mag ik het passen? 'Dov'è il camerino?' = waar is de paskamer? 'Ce l'avete in taglia più grande?' = heeft u het in een grotere maat? 'Questo mi sta bene?' = staat dit me goed? 'Mi sta un po' stretto' = het zit me een beetje te strak. Italiaanse maten verschillen van Nederlandse — controleer altijd de maattabel."
+    },
+    "words": [
+      "w503",
+      "w628",
+      "w883",
+      "w884",
+      "w885",
+      "w627",
+      "w887",
+      "w631"
+    ]
+  },
+  {
+    "id": 112,
+    "title": "Technologie & internet",
+    "emoji": "💻",
+    "level": "A2",
+    "description": "Praat over smartphones, apps en het digitale leven.",
+    "grammar": {
+      "title": "Technologisch woordenschat in Italiaans",
+      "body": "Veel technologische termen zijn Engels in Italiaans: 'il click', 'il file', 'lo smartphone'. Anderen zijn geïtalianiseerd: 'scaricare' = downloaden, 'caricare' = uploaden/opladen. 'Mandare un messaggio' = een bericht sturen. 'Condividere' = delen. 'La connessione' = de verbinding. 'Il WiFi' = wifi (uitgesproken als 'wi-fi'). Jongere Italianen gebruiken veel Engelse technologietermen direct."
+    },
+    "words": [
+      "w410",
+      "w890",
+      "w411",
+      "w597",
+      "w594",
+      "w894",
+      "w415",
+      "w413"
+    ]
+  },
+  {
+    "id": 113,
+    "title": "Het weer & de natuur",
+    "emoji": "🌦️",
+    "level": "A2",
+    "description": "Beschrijf het weer uitgebreider en praat over de Italiaanse natuur.",
+    "grammar": {
+      "title": "Weersomstandigheden — gevorderde uitdrukkingen",
+      "body": "'Che tempo fa?' = hoe is het weer? (standaardvraag). 'C'è la nebbia' = het is mistig. 'Tira vento' = het waait. 'Grandina' = het hagelt. 'Un temporale' = een onweersbui. 'È afoso' = het is drukkend/benauwd. Noordelijk Italië is bekend om mist ('la pianura padana'), het zuiden om droogte ('la siccità'). Het klimaat varieert enorm — van Alpijnse sneeuw tot mediterrane warmte."
+    },
+    "words": [
+      "w516",
+      "w515",
+      "w899",
+      "w900",
+      "w901",
+      "w902",
+      "w903",
+      "w904"
+    ]
+  },
+  {
+    "id": 114,
+    "title": "Werk & loopbaan",
+    "emoji": "💼",
+    "level": "A2",
+    "description": "Solliciteer, beschrijf je werkervaring en praat over je carrière.",
+    "grammar": {
+      "title": "Werkervaring beschrijven — ho lavorato come...",
+      "body": "'Lavoro come' + beroep = ik werk als... 'Ho lavorato per' + bedrijf = ik heb gewerkt voor... 'Ho X anni di esperienza' = ik heb X jaar ervaring. 'Sono disponibile a' + infinitief = ik ben beschikbaar om... 'Cerco un impiego' = ik zoek een baan. 'Un colloquio di lavoro' = een sollicitatiegesprek. Italië heeft een sterke kleine-ondernemerscultuur — 'lavorare in proprio' = voor jezelf werken."
+    },
+    "words": [
+      "w905",
+      "w906",
+      "w907",
+      "w908",
+      "w584",
+      "w910",
+      "w911",
+      "w912"
+    ]
+  },
+  {
+    "id": 115,
+    "title": "Kunst & musea",
+    "emoji": "🎨",
+    "level": "A2",
+    "description": "Bezoek een Italiaans museum, bespreek kunstwerken en culturele schatten.",
+    "grammar": {
+      "title": "Musea en kunstwerken bespreken",
+      "body": "'Questo quadro mi colpisce molto' = dit schilderij treft me heel erg. 'È stato dipinto da' + kunstenaar = het is geschilderd door... 'Risale al' + eeuw/jaar = het dateert uit... 'È esposto al' + museum = het is tentoongesteld in... Italië heeft meer UNESCO-werelderfgoedsites dan enig ander land. 'Il patrimonio culturale' = het culturele erfgoed — een trots van elke Italiaan."
+    },
+    "words": [
+      "w608",
+      "w914",
+      "w915",
+      "w676",
+      "w917",
+      "w918",
+      "w679",
+      "w920"
+    ]
+  },
+  {
+    "id": 116,
+    "title": "Italiaanse tradities",
+    "emoji": "🎭",
+    "level": "A2",
+    "description": "Verken Italiaanse feestdagen, tradities en regionale gewoonten.",
+    "grammar": {
+      "title": "Feestdagen en tradities uitleggen",
+      "body": "'Si festeggia il...' = men viert het op de... 'È tradizione fare...' = het is traditie om... 'Ferragosto' (15 augustus) = nationale vakantiedag — bijna heel Italië is dicht. 'Capodanno' = Nieuwjaar. 'Pasqua' = Pasen. 'Natale' = Kerstmis. 'La Festa della Repubblica' (2 juni) = nationale feestdag. Italianen nemen tradities serieus — regionale varianten zijn net zo belangrijk als nationale."
+    },
+    "words": [
+      "w921",
+      "w922",
+      "w923",
+      "w924",
+      "w925",
+      "w926",
+      "w927",
+      "w635"
+    ]
+  },
+  {
+    "id": 117,
+    "title": "Onderwijs & leren",
+    "emoji": "📚",
+    "level": "A2",
+    "description": "Praat over school, universiteit en het leren van talen.",
+    "grammar": {
+      "title": "Het Italiaanse schoolsysteem",
+      "body": "'La scuola elementare' = basisschool (6-11 jaar). 'La scuola media' = middelbare school onderbouw. 'Il liceo' = gymnasium/atheneum. 'L'università' = universiteit. 'Studiare' vs. 'imparare': 'studiare' = studeren/bestuderen, 'imparare' = leren/onthouden. 'Sono iscritto/a all'università' = ik ben ingeschreven aan de universiteit. Italië heeft veel prestigieuze universiteiten — Bologna (1088) is de oudste ter wereld!"
+    },
+    "words": [
+      "w929",
+      "w699",
+      "w931",
+      "w932",
+      "w698",
+      "w934",
+      "w935",
+      "w936"
+    ]
+  },
+  {
+    "id": 118,
+    "title": "Media & nieuws",
+    "emoji": "📰",
+    "level": "A2",
+    "description": "Praat over nieuws, sociale media en hoe Italianen informatie consumeren.",
+    "grammar": {
+      "title": "Nieuws bespreken — meningen over actualiteit",
+      "body": "'Ho sentito che...' = ik heb gehoord dat... 'Secondo le notizie...' = volgens het nieuws... 'È una buona/brutta notizia' = het is goed/slecht nieuws. 'Cosa ne pensi?' = wat denk jij ervan? 'Non sono d'accordo' = ik ben het er niet mee eens. Italianen volgen nieuws via televisione (RAI is de staatszender), giornali en social media. 'Il TG' (telegiornale) = het journaal."
+    },
+    "words": [
+      "w937",
+      "w705",
+      "w641",
+      "w940",
+      "w710",
+      "w942",
+      "w943",
+      "w944"
+    ]
+  },
+  {
+    "id": 119,
+    "title": "Duurzaamheid & milieu",
+    "emoji": "🌿",
+    "level": "A2",
+    "description": "Bespreek milieuvraagstukken en duurzame keuzes in het dagelijks leven.",
+    "grammar": {
+      "title": "Milieu — actueel woordgebruik",
+      "body": "'Bisogna' + infinitief = het is nodig om / men moet: 'Bisogna riciclare'. 'È importante' + infinitief: 'È importante risparmiare energia'. 'Fare la raccolta differenziata' = afval scheiden (verplicht in Italië). 'Ridurre' = verminderen, 'riusare' = hergebruiken, 'riciclare' = recyclen — le tre R. Italië heeft strenge recyclingregels — elke gemeente heeft zijn eigen systeem."
+    },
+    "words": [
+      "w418",
+      "w946",
+      "w947",
+      "w651",
+      "w949",
+      "w950",
+      "w951",
+      "w422"
+    ]
+  },
+  {
+    "id": 120,
+    "title": "🎓 A2 afgerond!",
+    "emoji": "🎓",
+    "level": "A2",
+    "description": "Je hebt A2 afgerond! Kijk terug op je leertraject en blik vooruit naar B1.",
+    "grammar": {
+      "title": "Gefeliciteerd — A2 compleet!",
+      "body": "Je beheerst nu ~960 Italiaanse woorden en de basisstructuren van A2. Je kunt je redden in alledaagse situaties: winkelen, reizen, werk, sociale contacten. A2 is het niveau waarop je echte gesprekken kunt beginnen met Italianen. 'Sono molto orgoglioso/a di te!' = ik ben heel trots op jou! Complimenti — sei fantastico/a! De volgende stap is B1: meer nuance, meer grammatica, meer zelfvertrouwen. 🇮🇹🎓"
+    },
+    "words": [
+      "w953",
+      "w954",
+      "w955",
+      "w956",
+      "w957",
+      "w209",
+      "w959",
+      "w960"
+    ]
   }
 ]

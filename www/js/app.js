@@ -74,12 +74,15 @@ const MILESTONE_NAMES  = {
   60: 'Toetsles A1 — Blok 6 (les 51–60)',
   70: 'Toetsles A2 — Blok 1 (les 61–70)',
   80: 'Toetsles A2 — Blok 2 (les 71–80)',
-  90: 'Toetsles A2 — Blok 3 (les 81–90)',
+  90:  'Toetsles A2 — Blok 3 (les 81–90)',
+  100: 'Toetsles A2 — Blok 4 (les 91–100)',
+  110: 'Toetsles A2 — Blok 5 (les 101–110)',
+  120: 'Toetsles A2 — Blok 6 (les 111–120)',
 };
 
 // Kleuren en bereiken per niveau (voor sectie-headers)
 const LEVEL_COLORS = { A1: '#009246', A2: '#f5a623' };
-const LEVEL_RANGES = { A1: 'lessen 1–60', A2: 'lessen 61–90' };
+const LEVEL_RANGES = { A1: 'lessen 1–60', A2: 'lessen 61–120' };
 
 // ─── SEGMENT-HELPERS (Sprint 10) ─────────────────────────────────────────────
 /** Segmentnummer van een les-id: 1=les1-10, 2=11-20, ..., 6=51-60 */
