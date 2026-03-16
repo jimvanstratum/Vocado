@@ -1408,17 +1408,6 @@
     "cat": "tijd"
   },
   {
-    "id": "w129",
-    "it": "ieri",
-    "nl": "gisteren",
-    "ph": "jeri",
-    "ex": "Ieri era bellissimo.",
-    "exNl": "Gisteren was het prachtig.",
-    "lesson": 16,
-    "level": "A1",
-    "cat": "tijd"
-  },
-  {
     "id": "w130",
     "it": "adesso",
     "nl": "nu / nu meteen",
@@ -2134,78 +2123,12 @@
     "cat": "beschrijvingen"
   },
   {
-    "id": "w195",
-    "it": "felice",
-    "nl": "gelukkig",
-    "ph": "felitsje",
-    "ex": "Sono molto felice.",
-    "exNl": "Ik ben erg gelukkig.",
-    "lesson": 35,
-    "level": "A1",
-    "cat": "gevoelens"
-  },
-  {
-    "id": "w196",
-    "it": "triste",
-    "nl": "verdrietig",
-    "ph": "triste",
-    "ex": "Mi sento triste.",
-    "exNl": "Ik voel me verdrietig.",
-    "lesson": 35,
-    "level": "A1",
-    "cat": "gevoelens"
-  },
-  {
-    "id": "w197",
-    "it": "stanco",
-    "nl": "moe",
-    "ph": "stanko",
-    "ex": "Sono stanco morto.",
-    "exNl": "Ik ben doodmoe.",
-    "lesson": 35,
-    "level": "A1",
-    "cat": "gevoelens"
-  },
-  {
-    "id": "w198",
-    "it": "arrabbiato",
-    "nl": "boos",
-    "ph": "arrabbja-to",
-    "ex": "Sono arrabbiato.",
-    "exNl": "Ik ben boos.",
-    "lesson": 35,
-    "level": "A1",
-    "cat": "gevoelens"
-  },
-  {
-    "id": "w199",
-    "it": "sorpreso",
-    "nl": "verrast",
-    "ph": "sorpreso",
-    "ex": "Sono sorpreso!",
-    "exNl": "Ik ben verrast!",
-    "lesson": 35,
-    "level": "A1",
-    "cat": "gevoelens"
-  },
-  {
     "id": "w200",
     "it": "annoiato",
     "nl": "verveeld",
     "ph": "annoiato",
     "ex": "Mi sento annoiato.",
     "exNl": "Ik verveel me.",
-    "lesson": 35,
-    "level": "A1",
-    "cat": "gevoelens"
-  },
-  {
-    "id": "w201",
-    "it": "preoccupato",
-    "nl": "bezorgd",
-    "ph": "preokkupato",
-    "ex": "Sono preoccupato.",
-    "exNl": "Ik maak me zorgen.",
     "lesson": 35,
     "level": "A1",
     "cat": "gevoelens"
@@ -2640,34 +2563,12 @@
     "cat": "vakantie"
   },
   {
-    "id": "w241",
-    "it": "caffè",
-    "nl": "koffie",
-    "ph": "kaffe",
-    "ex": "Un caffè, per favore.",
-    "exNl": "Een koffie, alsjeblieft.",
-    "lesson": 41,
-    "level": "A1",
-    "cat": "café"
-  },
-  {
     "id": "w242",
     "it": "tè",
     "nl": "thee",
     "ph": "tè",
     "ex": "Vorrei un tè caldo.",
     "exNl": "Ik wil graag een warme thee.",
-    "lesson": 41,
-    "level": "A1",
-    "cat": "café"
-  },
-  {
-    "id": "w243",
-    "it": "acqua",
-    "nl": "water",
-    "ph": "àkkwa",
-    "ex": "Acqua naturale, per favore.",
-    "exNl": "Plat water, alsjeblieft.",
     "lesson": 41,
     "level": "A1",
     "cat": "café"
@@ -2695,100 +2596,12 @@
     "cat": "café"
   },
   {
-    "id": "w246",
-    "it": "vino",
-    "nl": "wijn",
-    "ph": "vìno",
-    "ex": "Un bicchiere di vino rosso.",
-    "exNl": "Een glas rode wijn.",
-    "lesson": 41,
-    "level": "A1",
-    "cat": "café"
-  },
-  {
-    "id": "w247",
-    "it": "conto",
-    "nl": "rekening",
-    "ph": "kònto",
-    "ex": "Il conto, per favore.",
-    "exNl": "De rekening, alsjeblieft.",
-    "lesson": 41,
-    "level": "A1",
-    "cat": "café"
-  },
-  {
-    "id": "w248",
-    "it": "menù",
-    "nl": "menu",
-    "ph": "menù",
-    "ex": "Posso vedere il menù?",
-    "exNl": "Mag ik het menu zien?",
-    "lesson": 41,
-    "level": "A1",
-    "cat": "café"
-  },
-  {
-    "id": "w249",
-    "it": "tavolo",
-    "nl": "tafel",
-    "ph": "tàvolo",
-    "ex": "Un tavolo per due, per favore.",
-    "exNl": "Een tafel voor twee, alsjeblieft.",
-    "lesson": 42,
-    "level": "A1",
-    "cat": "restaurant"
-  },
-  {
-    "id": "w250",
-    "it": "cameriere",
-    "nl": "ober",
-    "ph": "kamerjère",
-    "ex": "Il cameriere arriva subito.",
-    "exNl": "De ober komt eraan.",
-    "lesson": 42,
-    "level": "A1",
-    "cat": "restaurant"
-  },
-  {
-    "id": "w251",
-    "it": "antipasto",
-    "nl": "voorgerecht",
-    "ph": "antipàsto",
-    "ex": "Come antipasto prendo l'insalata.",
-    "exNl": "Als voorgerecht neem ik de salade.",
-    "lesson": 42,
-    "level": "A1",
-    "cat": "restaurant"
-  },
-  {
     "id": "w252",
     "it": "primo",
     "nl": "eerste gang",
     "ph": "prìmo",
     "ex": "Per primo voglio la pasta.",
     "exNl": "Als eerste gang wil ik pasta.",
-    "lesson": 42,
-    "level": "A1",
-    "cat": "restaurant"
-  },
-  {
-    "id": "w253",
-    "it": "secondo",
-    "nl": "hoofdgerecht",
-    "ph": "sekòndo",
-    "ex": "Come secondo ho il pesce.",
-    "exNl": "Als hoofdgerecht neem ik vis.",
-    "lesson": 42,
-    "level": "A1",
-    "cat": "restaurant"
-  },
-  {
-    "id": "w254",
-    "it": "dolce",
-    "nl": "dessert",
-    "ph": "dòltsje",
-    "ex": "Un dolce per finire.",
-    "exNl": "Een dessert om af te sluiten.",
     "lesson": 42,
     "level": "A1",
     "cat": "restaurant"
@@ -2805,89 +2618,12 @@
     "cat": "restaurant"
   },
   {
-    "id": "w256",
-    "it": "prenotazione",
-    "nl": "reservering",
-    "ph": "prenotatsióne",
-    "ex": "Ho una prenotazione per stasera.",
-    "exNl": "Ik heb een reservering voor vanavond.",
-    "lesson": 42,
-    "level": "A1",
-    "cat": "restaurant"
-  },
-  {
-    "id": "w257",
-    "it": "treno",
-    "nl": "trein",
-    "ph": "trèno",
-    "ex": "Il treno parte alle nove.",
-    "exNl": "De trein vertrekt om negen uur.",
-    "lesson": 43,
-    "level": "A1",
-    "cat": "vervoer"
-  },
-  {
-    "id": "w258",
-    "it": "autobus",
-    "nl": "bus",
-    "ph": "àutobus",
-    "ex": "L'autobus è in ritardo.",
-    "exNl": "De bus heeft vertraging.",
-    "lesson": 43,
-    "level": "A1",
-    "cat": "vervoer"
-  },
-  {
-    "id": "w259",
-    "it": "aereo",
-    "nl": "vliegtuig",
-    "ph": "aèreo",
-    "ex": "L'aereo arriva domani.",
-    "exNl": "Het vliegtuig komt morgen aan.",
-    "lesson": 43,
-    "level": "A1",
-    "cat": "vervoer"
-  },
-  {
-    "id": "w260",
-    "it": "taxi",
-    "nl": "taxi",
-    "ph": "tàksi",
-    "ex": "Chiamo un taxi subito.",
-    "exNl": "Ik bel meteen een taxi.",
-    "lesson": 43,
-    "level": "A1",
-    "cat": "vervoer"
-  },
-  {
     "id": "w261",
     "it": "biglietto",
     "nl": "ticket",
     "ph": "biljèto",
     "ex": "Dove compro il biglietto?",
     "exNl": "Waar koop ik het ticket?",
-    "lesson": 43,
-    "level": "A1",
-    "cat": "vervoer"
-  },
-  {
-    "id": "w262",
-    "it": "stazione",
-    "nl": "station",
-    "ph": "statsióne",
-    "ex": "La stazione è vicina.",
-    "exNl": "Het station is dichtbij.",
-    "lesson": 43,
-    "level": "A1",
-    "cat": "vervoer"
-  },
-  {
-    "id": "w263",
-    "it": "aeroporto",
-    "nl": "vliegveld",
-    "ph": "aeropòrto",
-    "ex": "L'aeroporto è lontano.",
-    "exNl": "Het vliegveld is ver weg.",
     "lesson": 43,
     "level": "A1",
     "cat": "vervoer"
@@ -2904,17 +2640,6 @@
     "cat": "vervoer"
   },
   {
-    "id": "w265",
-    "it": "camera",
-    "nl": "hotelkamer",
-    "ph": "kàmera",
-    "ex": "La camera è al secondo piano.",
-    "exNl": "De kamer is op de tweede verdieping.",
-    "lesson": 44,
-    "level": "A1",
-    "cat": "hotel"
-  },
-  {
     "id": "w266",
     "it": "prenotare",
     "nl": "reserveren",
@@ -2926,144 +2651,12 @@
     "cat": "hotel"
   },
   {
-    "id": "w267",
-    "it": "chiave",
-    "nl": "sleutel",
-    "ph": "kjàve",
-    "ex": "Ecco la chiave della camera.",
-    "exNl": "Hier is de sleutel van de kamer.",
-    "lesson": 44,
-    "level": "A1",
-    "cat": "hotel"
-  },
-  {
-    "id": "w268",
-    "it": "bagno",
-    "nl": "badkamer",
-    "ph": "bànjo",
-    "ex": "Il bagno è in fondo al corridoio.",
-    "exNl": "De badkamer is aan het einde van de gang.",
-    "lesson": 44,
-    "level": "A1",
-    "cat": "hotel"
-  },
-  {
-    "id": "w269",
-    "it": "colazione",
-    "nl": "ontbijt",
-    "ph": "kolatsióne",
-    "ex": "La colazione è inclusa nel prezzo.",
-    "exNl": "Het ontbijt is inbegrepen in de prijs.",
-    "lesson": 44,
-    "level": "A1",
-    "cat": "hotel"
-  },
-  {
-    "id": "w270",
-    "it": "notte",
-    "nl": "nacht",
-    "ph": "nòtte",
-    "ex": "Resto per tre notti.",
-    "exNl": "Ik blijf drie nachten.",
-    "lesson": 44,
-    "level": "A1",
-    "cat": "hotel"
-  },
-  {
-    "id": "w271",
-    "it": "piscina",
-    "nl": "zwembad",
-    "ph": "pishìna",
-    "ex": "C'è una piscina in hotel?",
-    "exNl": "Is er een zwembad in het hotel?",
-    "lesson": 44,
-    "level": "A1",
-    "cat": "hotel"
-  },
-  {
-    "id": "w272",
-    "it": "ascensore",
-    "nl": "lift",
-    "ph": "ashensòre",
-    "ex": "L'ascensore è a sinistra.",
-    "exNl": "De lift is aan de linkerkant.",
-    "lesson": 44,
-    "level": "A1",
-    "cat": "hotel"
-  },
-  {
     "id": "w273",
     "it": "famiglia",
     "nl": "familie",
     "ph": "famìlja",
     "ex": "La mia famiglia è grande.",
     "exNl": "Mijn familie is groot.",
-    "lesson": 45,
-    "level": "A1",
-    "cat": "familie"
-  },
-  {
-    "id": "w274",
-    "it": "madre",
-    "nl": "moeder",
-    "ph": "màdre",
-    "ex": "Mia madre si chiama Elena.",
-    "exNl": "Mijn moeder heet Elena.",
-    "lesson": 45,
-    "level": "A1",
-    "cat": "familie"
-  },
-  {
-    "id": "w275",
-    "it": "padre",
-    "nl": "vader",
-    "ph": "pàdre",
-    "ex": "Mio padre lavora molto.",
-    "exNl": "Mijn vader werkt veel.",
-    "lesson": 45,
-    "level": "A1",
-    "cat": "familie"
-  },
-  {
-    "id": "w276",
-    "it": "fratello",
-    "nl": "broer",
-    "ph": "fratèllo",
-    "ex": "Ho un fratello più giovane.",
-    "exNl": "Ik heb een jongere broer.",
-    "lesson": 45,
-    "level": "A1",
-    "cat": "familie"
-  },
-  {
-    "id": "w277",
-    "it": "sorella",
-    "nl": "zus",
-    "ph": "sorèlla",
-    "ex": "Mia sorella abita a Milano.",
-    "exNl": "Mijn zus woont in Milaan.",
-    "lesson": 45,
-    "level": "A1",
-    "cat": "familie"
-  },
-  {
-    "id": "w278",
-    "it": "figlio",
-    "nl": "zoon",
-    "ph": "fìljo",
-    "ex": "Il mio figlio ha otto anni.",
-    "exNl": "Mijn zoon is acht jaar oud.",
-    "lesson": 45,
-    "level": "A1",
-    "cat": "familie"
-  },
-  {
-    "id": "w279",
-    "it": "figlia",
-    "nl": "dochter",
-    "ph": "fìlja",
-    "ex": "La mia figlia studia medicina.",
-    "exNl": "Mijn dochter studeert medicijnen.",
     "lesson": 45,
     "level": "A1",
     "cat": "familie"
@@ -3097,17 +2690,6 @@
     "ph": "inkròtsjo",
     "ex": "All'incrocio giri a sinistra.",
     "exNl": "Bij het kruispunt sla je linksaf.",
-    "lesson": 46,
-    "level": "A1",
-    "cat": "deweg"
-  },
-  {
-    "id": "w283",
-    "it": "piazza",
-    "nl": "plein",
-    "ph": "pjàttsa",
-    "ex": "La piazza è al centro.",
-    "exNl": "Het plein is in het centrum.",
     "lesson": 46,
     "level": "A1",
     "cat": "deweg"
@@ -3168,78 +2750,12 @@
     "cat": "deweg"
   },
   {
-    "id": "w289",
-    "it": "sole",
-    "nl": "zon",
-    "ph": "sòle",
-    "ex": "Oggi c'è il sole.",
-    "exNl": "Vandaag schijnt de zon.",
-    "lesson": 47,
-    "level": "A1",
-    "cat": "weer"
-  },
-  {
-    "id": "w290",
-    "it": "pioggia",
-    "nl": "regen",
-    "ph": "pjòddja",
-    "ex": "Domani viene la pioggia.",
-    "exNl": "Morgen komt de regen.",
-    "lesson": 47,
-    "level": "A1",
-    "cat": "weer"
-  },
-  {
-    "id": "w291",
-    "it": "vento",
-    "nl": "wind",
-    "ph": "vènto",
-    "ex": "C'è molto vento oggi.",
-    "exNl": "Er is veel wind vandaag.",
-    "lesson": 47,
-    "level": "A1",
-    "cat": "weer"
-  },
-  {
-    "id": "w292",
-    "it": "caldo",
-    "nl": "warm",
-    "ph": "kàldo",
-    "ex": "Fa molto caldo in estate.",
-    "exNl": "Het is erg warm in de zomer.",
-    "lesson": 47,
-    "level": "A1",
-    "cat": "weer"
-  },
-  {
-    "id": "w293",
-    "it": "freddo",
-    "nl": "koud",
-    "ph": "frèddo",
-    "ex": "Fa freddo in montagna.",
-    "exNl": "Het is koud in de bergen.",
-    "lesson": 47,
-    "level": "A1",
-    "cat": "weer"
-  },
-  {
     "id": "w294",
     "it": "nuvola",
     "nl": "wolk",
     "ph": "nùvola",
     "ex": "Il cielo è pieno di nuvole.",
     "exNl": "De lucht zit vol wolken.",
-    "lesson": 47,
-    "level": "A1",
-    "cat": "weer"
-  },
-  {
-    "id": "w295",
-    "it": "neve",
-    "nl": "sneeuw",
-    "ph": "nève",
-    "ex": "In montagna c'è la neve.",
-    "exNl": "In de bergen ligt sneeuw.",
     "lesson": 47,
     "level": "A1",
     "cat": "weer"
@@ -3256,78 +2772,12 @@
     "cat": "weer"
   },
   {
-    "id": "w297",
-    "it": "medico",
-    "nl": "dokter",
-    "ph": "mèdiko",
-    "ex": "Ho bisogno di un medico.",
-    "exNl": "Ik heb een dokter nodig.",
-    "lesson": 48,
-    "level": "A1",
-    "cat": "gezondheid"
-  },
-  {
-    "id": "w298",
-    "it": "farmacia",
-    "nl": "apotheek",
-    "ph": "farmàtshia",
-    "ex": "La farmacia è aperta.",
-    "exNl": "De apotheek is open.",
-    "lesson": 48,
-    "level": "A1",
-    "cat": "gezondheid"
-  },
-  {
-    "id": "w299",
-    "it": "mal di testa",
-    "nl": "hoofdpijn",
-    "ph": "mal di tèsta",
-    "ex": "Ho un forte mal di testa.",
-    "exNl": "Ik heb hevige hoofdpijn.",
-    "lesson": 48,
-    "level": "A1",
-    "cat": "gezondheid"
-  },
-  {
-    "id": "w300",
-    "it": "febbre",
-    "nl": "koorts",
-    "ph": "fèbbre",
-    "ex": "Ho la febbre da ieri.",
-    "exNl": "Ik heb koorts sinds gisteren.",
-    "lesson": 48,
-    "level": "A1",
-    "cat": "gezondheid"
-  },
-  {
     "id": "w301",
     "it": "medicina",
     "nl": "medicijn",
     "ph": "meditsìna",
     "ex": "Prendo questa medicina.",
     "exNl": "Ik neem dit medicijn.",
-    "lesson": 48,
-    "level": "A1",
-    "cat": "gezondheid"
-  },
-  {
-    "id": "w302",
-    "it": "male",
-    "nl": "pijn",
-    "ph": "màle",
-    "ex": "Mi fa male la schiena.",
-    "exNl": "Mijn rug doet pijn.",
-    "lesson": 48,
-    "level": "A1",
-    "cat": "gezondheid"
-  },
-  {
-    "id": "w303",
-    "it": "pronto soccorso",
-    "nl": "eerste hulp",
-    "ph": "prònto sokkòrso",
-    "ex": "Devo andare al pronto soccorso.",
-    "exNl": "Ik moet naar de eerste hulp.",
     "lesson": 48,
     "level": "A1",
     "cat": "gezondheid"
@@ -3342,39 +2792,6 @@
     "lesson": 48,
     "level": "A1",
     "cat": "gezondheid"
-  },
-  {
-    "id": "w305",
-    "it": "nuotare",
-    "nl": "zwemmen",
-    "ph": "nuotàre",
-    "ex": "Mi piace nuotare al mare.",
-    "exNl": "Ik zwem graag in de zee.",
-    "lesson": 49,
-    "level": "A1",
-    "cat": "activiteiten"
-  },
-  {
-    "id": "w306",
-    "it": "leggere",
-    "nl": "lezen",
-    "ph": "lèddjere",
-    "ex": "Leggo un libro ogni sera.",
-    "exNl": "Ik lees elke avond een boek.",
-    "lesson": 49,
-    "level": "A1",
-    "cat": "activiteiten"
-  },
-  {
-    "id": "w307",
-    "it": "cucinare",
-    "nl": "koken",
-    "ph": "kutsjinàre",
-    "ex": "Mi piace cucinare la pasta.",
-    "exNl": "Ik kook graag pasta.",
-    "lesson": 49,
-    "level": "A1",
-    "cat": "activiteiten"
   },
   {
     "id": "w308",
@@ -3408,39 +2825,6 @@
     "lesson": 49,
     "level": "A1",
     "cat": "activiteiten"
-  },
-  {
-    "id": "w311",
-    "it": "viaggiare",
-    "nl": "reizen",
-    "ph": "vjaddjàre",
-    "ex": "Amo viaggiare in estate.",
-    "exNl": "Ik reis graag in de zomer.",
-    "lesson": 49,
-    "level": "A1",
-    "cat": "activiteiten"
-  },
-  {
-    "id": "w312",
-    "it": "musica",
-    "nl": "muziek",
-    "ph": "mùzika",
-    "ex": "La musica italiana è bellissima.",
-    "exNl": "De Italiaanse muziek is prachtig.",
-    "lesson": 49,
-    "level": "A1",
-    "cat": "activiteiten"
-  },
-  {
-    "id": "w313",
-    "it": "domani",
-    "nl": "morgen",
-    "ph": "domàni",
-    "ex": "Domani andiamo al mare.",
-    "exNl": "Morgen gaan we naar het strand.",
-    "lesson": 50,
-    "level": "A1",
-    "cat": "plannen"
   },
   {
     "id": "w314",
@@ -4279,17 +3663,6 @@
     "cat": "beschrijvingen"
   },
   {
-    "id": "w390",
-    "it": "tranquillo",
-    "nl": "rustig / kalm",
-    "ph": "trankwìllo",
-    "ex": "Questo posto è tranquillo e bello.",
-    "exNl": "Deze plek is rustig en mooi.",
-    "lesson": 69,
-    "level": "A2",
-    "cat": "beschrijvingen"
-  },
-  {
     "id": "w391",
     "it": "affollato",
     "nl": "druk / vol mensen",
@@ -4318,17 +3691,6 @@
     "ph": "valìdja",
     "ex": "Ho fatto la valigia ieri sera.",
     "exNl": "Ik heb gisteren mijn koffer gepakt.",
-    "lesson": 70,
-    "level": "A2",
-    "cat": "reizen"
-  },
-  {
-    "id": "w394",
-    "it": "passaporto",
-    "nl": "paspoort",
-    "ph": "passapòrto",
-    "ex": "Non dimenticare il passaporto!",
-    "exNl": "Vergeet het paspoort niet!",
     "lesson": 70,
     "level": "A2",
     "cat": "reizen"
@@ -4433,17 +3795,6 @@
     "cat": "koken"
   },
   {
-    "id": "w404",
-    "it": "dolce",
-    "nl": "zoet",
-    "ph": "dòltsje",
-    "ex": "Il tiramisù è dolce e cremoso.",
-    "exNl": "De tiramisu is zoet en romig.",
-    "lesson": 71,
-    "level": "A2",
-    "cat": "koken"
-  },
-  {
     "id": "w405",
     "it": "amaro",
     "nl": "bitter",
@@ -4494,17 +3845,6 @@
     "ph": "applikatsjòne",
     "ex": "Ho scaricato una nuova applicazione.",
     "exNl": "Ik heb een nieuwe app gedownload.",
-    "lesson": 72,
-    "level": "A2",
-    "cat": "technologie"
-  },
-  {
-    "id": "w410",
-    "it": "scaricare",
-    "nl": "downloaden",
-    "ph": "skarikàre",
-    "ex": "Puoi scaricare la mappa offline.",
-    "exNl": "Je kunt de kaart offline downloaden.",
     "lesson": 72,
     "level": "A2",
     "cat": "technologie"
@@ -4587,17 +3927,6 @@
     "cat": "milieu"
   },
   {
-    "id": "w418",
-    "it": "riciclare",
-    "nl": "recyclen",
-    "ph": "ritsiklàre",
-    "ex": "È importante riciclare ogni giorno.",
-    "exNl": "Het is belangrijk om elke dag te recyclen.",
-    "lesson": 73,
-    "level": "A2",
-    "cat": "milieu"
-  },
-  {
     "id": "w419",
     "it": "inquinamento",
     "nl": "vervuiling",
@@ -4626,17 +3955,6 @@
     "ph": "klìma",
     "ex": "Il clima sta cambiando rapidamente.",
     "exNl": "Het klimaat verandert snel.",
-    "lesson": 73,
-    "level": "A2",
-    "cat": "milieu"
-  },
-  {
-    "id": "w422",
-    "it": "sostenibile",
-    "nl": "duurzaam",
-    "ph": "sostenìbile",
-    "ex": "Cerco prodotti sostenibili.",
-    "exNl": "Ik zoek duurzame producten.",
     "lesson": 73,
     "level": "A2",
     "cat": "milieu"
@@ -4675,34 +3993,12 @@
     "cat": "welzijn"
   },
   {
-    "id": "w426",
-    "it": "riposare",
-    "nl": "rusten",
-    "ph": "riposàre",
-    "ex": "Devo riposare di più.",
-    "exNl": "Ik moet meer rusten.",
-    "lesson": 74,
-    "level": "A2",
-    "cat": "welzijn"
-  },
-  {
     "id": "w427",
     "it": "dieta equilibrata",
     "nl": "uitgebalanceerd dieet",
     "ph": "djèta ekwilibràta",
     "ex": "Seguo una dieta equilibrata.",
     "exNl": "Ik volg een uitgebalanceerd dieet.",
-    "lesson": 74,
-    "level": "A2",
-    "cat": "welzijn"
-  },
-  {
-    "id": "w428",
-    "it": "palestra",
-    "nl": "sportschool / gym",
-    "ph": "palèstra",
-    "ex": "Vado in palestra tre volte a settimana.",
-    "exNl": "Ik ga drie keer per week naar de sportschool.",
     "lesson": 74,
     "level": "A2",
     "cat": "welzijn"
@@ -4838,28 +4134,6 @@
     "lesson": 75,
     "level": "A2",
     "cat": "relaties"
-  },
-  {
-    "id": "w441",
-    "it": "vincere",
-    "nl": "winnen",
-    "ph": "vìntshere",
-    "ex": "Vogliamo vincere la partita!",
-    "exNl": "We willen de wedstrijd winnen!",
-    "lesson": 76,
-    "level": "A2",
-    "cat": "sport"
-  },
-  {
-    "id": "w442",
-    "it": "perdere",
-    "nl": "verliezen",
-    "ph": "pèrdere",
-    "ex": "A volte si perde, a volte si vince.",
-    "exNl": "Soms verlies je, soms win je.",
-    "lesson": 76,
-    "level": "A2",
-    "cat": "sport"
   },
   {
     "id": "w443",
@@ -5170,17 +4444,6 @@
     "cat": "cultuur"
   },
   {
-    "id": "w471",
-    "it": "cucina",
-    "nl": "keuken / kookkunst",
-    "ph": "kutshìna",
-    "ex": "La cucina italiana conquista tutti.",
-    "exNl": "De Italiaanse keuken wint iedereen voor zich.",
-    "lesson": 79,
-    "level": "A2",
-    "cat": "cultuur"
-  },
-  {
     "id": "w472",
     "it": "campanile",
     "nl": "klokkentoren",
@@ -5368,17 +4631,6 @@
     "cat": "mercato"
   },
   {
-    "id": "w489",
-    "it": "rosa",
-    "nl": "roze",
-    "ph": "roza",
-    "ex": "Questa borsa è rosa.",
-    "exNl": "Deze tas is roze.",
-    "lesson": 22,
-    "level": "A1",
-    "cat": "colori"
-  },
-  {
     "id": "w490",
     "it": "grigio",
     "nl": "grijs",
@@ -5396,17 +4648,6 @@
     "ph": "marrone",
     "ex": "Ho i capelli marroni.",
     "exNl": "Ik heb bruin haar.",
-    "lesson": 22,
-    "level": "A1",
-    "cat": "colori"
-  },
-  {
-    "id": "w492",
-    "it": "arancione",
-    "nl": "oranje",
-    "ph": "arantsjone",
-    "ex": "Un bel tramonto arancione.",
-    "exNl": "Een mooie oranje zonsondergang.",
     "lesson": 22,
     "level": "A1",
     "cat": "colori"
@@ -5984,34 +5225,12 @@
     "cat": "casa"
   },
   {
-    "id": "w545",
-    "it": "oggi",
-    "nl": "vandaag",
-    "ph": "oddzji",
-    "ex": "Oggi è il mio compleanno!",
-    "exNl": "Vandaag is mijn verjaardag!",
-    "lesson": 29,
-    "level": "A1",
-    "cat": "calendario"
-  },
-  {
     "id": "w546",
     "it": "ieri",
     "nl": "gisteren",
     "ph": "jeri",
     "ex": "Ieri sono andato al mercato.",
     "exNl": "Gisteren ben ik naar de markt gegaan.",
-    "lesson": 29,
-    "level": "A1",
-    "cat": "calendario"
-  },
-  {
-    "id": "w547",
-    "it": "domani",
-    "nl": "morgen",
-    "ph": "domani",
-    "ex": "Domani andiamo in spiaggia.",
-    "exNl": "Morgen gaan we naar het strand.",
     "lesson": 29,
     "level": "A1",
     "cat": "calendario"
@@ -6650,17 +5869,6 @@
     "ph": "opera",
     "ex": "Alla Scala si ascolta l'opera lirica.",
     "exNl": "In de Scala luistert men naar opera.",
-    "lesson": 56,
-    "level": "A1",
-    "cat": "musica"
-  },
-  {
-    "id": "w606",
-    "it": "ballare",
-    "nl": "dansen",
-    "ph": "ballare",
-    "ex": "Ti piace ballare?",
-    "exNl": "Hou jij van dansen?",
     "lesson": 56,
     "level": "A1",
     "cat": "musica"
@@ -10008,5 +9216,885 @@
     "lesson": 120,
     "level": "A2",
     "cat": "ripasso_a2"
+  },
+  {
+    "id": "w961",
+    "it": "mezzogiorno",
+    "nl": "middag (twaalf uur)",
+    "ph": "met-tso-djor-no",
+    "ex": "A mezzogiorno mangiamo insieme.",
+    "exNl": "Om twaalf uur eten we samen.",
+    "lesson": 16,
+    "level": "A1",
+    "cat": "tijd"
+  },
+  {
+    "id": "w962",
+    "it": "a pois",
+    "nl": "gestippeld",
+    "ph": "a po-i",
+    "ex": "Ho una gonna a pois.",
+    "exNl": "Ik heb een gestippelde rok.",
+    "lesson": 22,
+    "level": "A1",
+    "cat": "kleuren"
+  },
+  {
+    "id": "w963",
+    "it": "brillante",
+    "nl": "helder / schitterend",
+    "ph": "bril-lan-te",
+    "ex": "Questo colore è molto brillante.",
+    "exNl": "Deze kleur is heel helder.",
+    "lesson": 22,
+    "level": "A1",
+    "cat": "kleuren"
+  },
+  {
+    "id": "w964",
+    "it": "il fine settimana",
+    "nl": "het weekend",
+    "ph": "il fi-ne set-ti-ma-na",
+    "ex": "Il fine settimana vado al mare.",
+    "exNl": "In het weekend ga ik naar zee.",
+    "lesson": 29,
+    "level": "A1",
+    "cat": "tijd"
+  },
+  {
+    "id": "w965",
+    "it": "l'appuntamento",
+    "nl": "de afspraak",
+    "ph": "lap-pun-ta-men-to",
+    "ex": "Ho un appuntamento alle tre.",
+    "exNl": "Ik heb om drie uur een afspraak.",
+    "lesson": 29,
+    "level": "A1",
+    "cat": "tijd"
+  },
+  {
+    "id": "w966",
+    "it": "a presto!",
+    "nl": "tot gauw!",
+    "ph": "a pres-to",
+    "ex": "Ciao, a presto!",
+    "exNl": "Dag, tot gauw!",
+    "lesson": 40,
+    "level": "A1",
+    "cat": "uitdrukkingen"
+  },
+  {
+    "id": "w967",
+    "it": "figurati!",
+    "nl": "geen dank! / doe niet zo moeilijk!",
+    "ph": "fi-gou-ra-ti",
+    "ex": "— Grazie mille! — Figurati!",
+    "exNl": "— Hartelijk dank! — Geen dank!",
+    "lesson": 40,
+    "level": "A1",
+    "cat": "uitdrukkingen"
+  },
+  {
+    "id": "w968",
+    "it": "il cappuccino",
+    "nl": "de cappuccino",
+    "ph": "il kap-put-tsji-no",
+    "ex": "Vorrei un cappuccino, per favore.",
+    "exNl": "Ik wil graag een cappuccino, alstublieft.",
+    "lesson": 41,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w969",
+    "it": "il cornetto",
+    "nl": "het croissant",
+    "ph": "il kor-net-to",
+    "ex": "Prendo un cornetto alla crema.",
+    "exNl": "Ik neem een croissant met crème.",
+    "lesson": 41,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w970",
+    "it": "l'acqua minerale",
+    "nl": "het mineraalwater",
+    "ph": "lak-kwa mi-ne-ra-le",
+    "ex": "Vorrei un'acqua minerale fresca.",
+    "exNl": "Ik wil graag koud mineraalwater.",
+    "lesson": 41,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w971",
+    "it": "il conto",
+    "nl": "de rekening",
+    "ph": "il kon-to",
+    "ex": "Posso avere il conto?",
+    "exNl": "Kan ik de rekening krijgen?",
+    "lesson": 41,
+    "level": "A1",
+    "cat": "café & restaurant"
+  },
+  {
+    "id": "w972",
+    "it": "il cameriere",
+    "nl": "de ober",
+    "ph": "il ka-me-rje-re",
+    "ex": "Il cameriere è molto gentile.",
+    "exNl": "De ober is erg vriendelijk.",
+    "lesson": 41,
+    "level": "A1",
+    "cat": "café & restaurant"
+  },
+  {
+    "id": "w973",
+    "it": "il secondo",
+    "nl": "het hoofdgerecht",
+    "ph": "il se-kon-do",
+    "ex": "Come secondo prendo il pollo.",
+    "exNl": "Als hoofdgerecht neem ik de kip.",
+    "lesson": 42,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w974",
+    "it": "l'antipasto",
+    "nl": "het voorgerecht",
+    "ph": "lan-ti-pas-to",
+    "ex": "L'antipasto è una bruschetta.",
+    "exNl": "Het voorgerecht is een bruschetta.",
+    "lesson": 42,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w975",
+    "it": "il menù",
+    "nl": "het menu",
+    "ph": "il me-nù",
+    "ex": "Posso vedere il menù?",
+    "exNl": "Mag ik het menu zien?",
+    "lesson": 42,
+    "level": "A1",
+    "cat": "café & restaurant"
+  },
+  {
+    "id": "w976",
+    "it": "la forchetta",
+    "nl": "de vork",
+    "ph": "la for-ket-ta",
+    "ex": "Dove è la forchetta?",
+    "exNl": "Waar is de vork?",
+    "lesson": 42,
+    "level": "A1",
+    "cat": "huishouden"
+  },
+  {
+    "id": "w977",
+    "it": "il piatto",
+    "nl": "het bord",
+    "ph": "il pjat-to",
+    "ex": "Il piatto è molto grande.",
+    "exNl": "Het bord is erg groot.",
+    "lesson": 42,
+    "level": "A1",
+    "cat": "huishouden"
+  },
+  {
+    "id": "w978",
+    "it": "il contorno",
+    "nl": "het bijgerecht",
+    "ph": "il kon-tor-no",
+    "ex": "Come contorno prendo le verdure.",
+    "exNl": "Als bijgerecht neem ik de groenten.",
+    "lesson": 42,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w979",
+    "it": "il treno",
+    "nl": "de trein",
+    "ph": "il tre-no",
+    "ex": "Il treno parte alle otto.",
+    "exNl": "De trein vertrekt om acht uur.",
+    "lesson": 43,
+    "level": "A1",
+    "cat": "vervoer"
+  },
+  {
+    "id": "w980",
+    "it": "l'aereo",
+    "nl": "het vliegtuig",
+    "ph": "la-e-re-o",
+    "ex": "L'aereo arriva in ritardo.",
+    "exNl": "Het vliegtuig komt te laat aan.",
+    "lesson": 43,
+    "level": "A1",
+    "cat": "vervoer"
+  },
+  {
+    "id": "w981",
+    "it": "la stazione",
+    "nl": "het station",
+    "ph": "la sta-tsjo-ne",
+    "ex": "La stazione è vicino al centro.",
+    "exNl": "Het station is vlakbij het centrum.",
+    "lesson": 43,
+    "level": "A1",
+    "cat": "vervoer"
+  },
+  {
+    "id": "w982",
+    "it": "l'autobus",
+    "nl": "de bus",
+    "ph": "lau-to-bus",
+    "ex": "Prendo l'autobus ogni giorno.",
+    "exNl": "Ik neem elke dag de bus.",
+    "lesson": 43,
+    "level": "A1",
+    "cat": "vervoer"
+  },
+  {
+    "id": "w983",
+    "it": "l'arrivo",
+    "nl": "de aankomst",
+    "ph": "lar-ri-vo",
+    "ex": "L'arrivo è previsto per le undici.",
+    "exNl": "De aankomst is voorzien voor elf uur.",
+    "lesson": 43,
+    "level": "A1",
+    "cat": "vervoer"
+  },
+  {
+    "id": "w984",
+    "it": "la camera",
+    "nl": "de kamer",
+    "ph": "la ka-me-ra",
+    "ex": "Vorrei una camera per due notti.",
+    "exNl": "Ik wil graag een kamer voor twee nachten.",
+    "lesson": 44,
+    "level": "A1",
+    "cat": "reizen"
+  },
+  {
+    "id": "w985",
+    "it": "la chiave",
+    "nl": "de sleutel",
+    "ph": "la kjа-ve",
+    "ex": "Ho dimenticato la chiave in camera.",
+    "exNl": "Ik heb de sleutel op de kamer vergeten.",
+    "lesson": 44,
+    "level": "A1",
+    "cat": "reizen"
+  },
+  {
+    "id": "w986",
+    "it": "la colazione",
+    "nl": "het ontbijt",
+    "ph": "la ko-la-tsjo-ne",
+    "ex": "La colazione è inclusa nel prezzo.",
+    "exNl": "Het ontbijt is inbegrepen in de prijs.",
+    "lesson": 44,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w987",
+    "it": "singola",
+    "nl": "eenpersoons",
+    "ph": "sin-go-la",
+    "ex": "Vorrei una camera singola.",
+    "exNl": "Ik wil graag een eenpersoonskamer.",
+    "lesson": 44,
+    "level": "A1",
+    "cat": "reizen"
+  },
+  {
+    "id": "w988",
+    "it": "l'ascensore",
+    "nl": "de lift",
+    "ph": "la-sjen-so-re",
+    "ex": "L'ascensore è a destra.",
+    "exNl": "De lift is rechts.",
+    "lesson": 44,
+    "level": "A1",
+    "cat": "gebouwen"
+  },
+  {
+    "id": "w989",
+    "it": "la mamma",
+    "nl": "de mama",
+    "ph": "la mam-ma",
+    "ex": "La mia mamma cucina benissimo.",
+    "exNl": "Mijn mama kookt geweldig.",
+    "lesson": 45,
+    "level": "A1",
+    "cat": "familie"
+  },
+  {
+    "id": "w990",
+    "it": "il papà",
+    "nl": "de papa",
+    "ph": "il pa-pà",
+    "ex": "Il mio papà lavora in banca.",
+    "exNl": "Mijn papa werkt bij de bank.",
+    "lesson": 45,
+    "level": "A1",
+    "cat": "familie"
+  },
+  {
+    "id": "w991",
+    "it": "il fratello",
+    "nl": "de broer",
+    "ph": "il fra-tel-lo",
+    "ex": "Ho un fratello più giovane.",
+    "exNl": "Ik heb een jongere broer.",
+    "lesson": 45,
+    "level": "A1",
+    "cat": "familie"
+  },
+  {
+    "id": "w992",
+    "it": "la sorella",
+    "nl": "de zus",
+    "ph": "la so-rel-la",
+    "ex": "Mia sorella abita a Milano.",
+    "exNl": "Mijn zus woont in Milaan.",
+    "lesson": 45,
+    "level": "A1",
+    "cat": "familie"
+  },
+  {
+    "id": "w993",
+    "it": "il figlio",
+    "nl": "de zoon",
+    "ph": "il fil-jo",
+    "ex": "Il loro figlio ha cinque anni.",
+    "exNl": "Hun zoon is vijf jaar oud.",
+    "lesson": 45,
+    "level": "A1",
+    "cat": "familie"
+  },
+  {
+    "id": "w994",
+    "it": "lo zio",
+    "nl": "de oom",
+    "ph": "lo dzjo",
+    "ex": "Mio zio mi porta sempre un regalo.",
+    "exNl": "Mijn oom brengt me altijd een cadeau.",
+    "lesson": 45,
+    "level": "A1",
+    "cat": "familie"
+  },
+  {
+    "id": "w995",
+    "it": "il sole",
+    "nl": "de zon",
+    "ph": "il so-le",
+    "ex": "Oggi c'è il sole.",
+    "exNl": "Vandaag schijnt de zon.",
+    "lesson": 47,
+    "level": "A1",
+    "cat": "weer"
+  },
+  {
+    "id": "w996",
+    "it": "la pioggia",
+    "nl": "de regen",
+    "ph": "la pjod-dja",
+    "ex": "La pioggia mi piace.",
+    "exNl": "Ik hou van de regen.",
+    "lesson": 47,
+    "level": "A1",
+    "cat": "weer"
+  },
+  {
+    "id": "w997",
+    "it": "la neve",
+    "nl": "de sneeuw",
+    "ph": "la ne-ve",
+    "ex": "D'inverno cade la neve.",
+    "exNl": "'s Winters valt er sneeuw.",
+    "lesson": 47,
+    "level": "A1",
+    "cat": "weer"
+  },
+  {
+    "id": "w998",
+    "it": "il mal di testa",
+    "nl": "de hoofdpijn",
+    "ph": "il mal di tes-ta",
+    "ex": "Ho un forte mal di testa.",
+    "exNl": "Ik heb erge hoofdpijn.",
+    "lesson": 48,
+    "level": "A1",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w999",
+    "it": "la tosse",
+    "nl": "de hoest",
+    "ph": "la tos-se",
+    "ex": "Ho la tosse da tre giorni.",
+    "exNl": "Ik heb al drie dagen hoest.",
+    "lesson": 48,
+    "level": "A1",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w1000",
+    "it": "il raffreddore",
+    "nl": "de verkoudheid",
+    "ph": "il raf-fred-do-re",
+    "ex": "Ho preso un raffreddore.",
+    "exNl": "Ik heb een verkoudheid opgelopen.",
+    "lesson": 48,
+    "level": "A1",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w1001",
+    "it": "il dolore",
+    "nl": "de pijn",
+    "ph": "il do-lo-re",
+    "ex": "Ho un dolore al ginocchio.",
+    "exNl": "Ik heb pijn aan mijn knie.",
+    "lesson": 48,
+    "level": "A1",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w1002",
+    "it": "finalmente",
+    "nl": "eindelijk",
+    "ph": "fi-nal-men-te",
+    "ex": "Finalmente siamo in vacanza!",
+    "exNl": "Eindelijk zijn we op vakantie!",
+    "lesson": 50,
+    "level": "A1",
+    "cat": "uitdrukkingen"
+  },
+  {
+    "id": "w1003",
+    "it": "il ritmo",
+    "nl": "het ritme",
+    "ph": "il rit-mo",
+    "ex": "Questo brano ha un ritmo fantastico.",
+    "exNl": "Dit nummer heeft een fantastisch ritme.",
+    "lesson": 56,
+    "level": "A1",
+    "cat": "kunst & cultuur"
+  },
+  {
+    "id": "w1004",
+    "it": "entusiasmante",
+    "nl": "opwindend / enthousiasmerend",
+    "ph": "en-tu-zjaz-man-te",
+    "ex": "Il viaggio è stato entusiasmante.",
+    "exNl": "De reis was opwindend.",
+    "lesson": 69,
+    "level": "A2",
+    "cat": "beschrijvingen"
+  },
+  {
+    "id": "w1005",
+    "it": "cremoso",
+    "nl": "romig",
+    "ph": "kre-mo-zo",
+    "ex": "Questa salsa è cremosa e deliziosa.",
+    "exNl": "Deze saus is romig en heerlijk.",
+    "lesson": 71,
+    "level": "A2",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w1006",
+    "it": "la tastiera",
+    "nl": "het toetsenbord",
+    "ph": "la tas-tje-ra",
+    "ex": "Ho bisogno di una nuova tastiera.",
+    "exNl": "Ik heb een nieuw toetsenbord nodig.",
+    "lesson": 72,
+    "level": "A2",
+    "cat": "technologie"
+  },
+  {
+    "id": "w1007",
+    "it": "la foresta",
+    "nl": "het bos / de jungle",
+    "ph": "la fo-res-ta",
+    "ex": "Le foreste tropicali sono in pericolo.",
+    "exNl": "De tropische bossen zijn in gevaar.",
+    "lesson": 73,
+    "level": "A2",
+    "cat": "natuur"
+  },
+  {
+    "id": "w1008",
+    "it": "il riposo",
+    "nl": "de rust",
+    "ph": "il ri-po-zo",
+    "ex": "Il corpo ha bisogno di riposo.",
+    "exNl": "Het lichaam heeft rust nodig.",
+    "lesson": 74,
+    "level": "A2",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w1009",
+    "it": "l'attività fisica",
+    "nl": "de lichamelijke activiteit",
+    "ph": "lat-ti-vi-tà fi-zi-ka",
+    "ex": "L'attività fisica migliora l'umore.",
+    "exNl": "Lichaamsbeweging verbetert de stemming.",
+    "lesson": 74,
+    "level": "A2",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w1010",
+    "it": "il gol",
+    "nl": "het doelpunt",
+    "ph": "il gol",
+    "ex": "Ha segnato un gol al novantesimo.",
+    "exNl": "Hij scoorde een doelpunt in de negentigste minuut.",
+    "lesson": 76,
+    "level": "A2",
+    "cat": "sport"
+  },
+  {
+    "id": "w1011",
+    "it": "la vittoria",
+    "nl": "de overwinning",
+    "ph": "la vit-to-rja",
+    "ex": "La vittoria è stata sorprendente.",
+    "exNl": "De overwinning was verrassend.",
+    "lesson": 76,
+    "level": "A2",
+    "cat": "sport"
+  },
+  {
+    "id": "w1012",
+    "it": "l'affresco",
+    "nl": "de fresco (muurschildering)",
+    "ph": "laf-fres-ko",
+    "ex": "L'affresco nella cappella è del Rinascimento.",
+    "exNl": "De fresco in de kapel is uit de Renaissance.",
+    "lesson": 79,
+    "level": "A2",
+    "cat": "kunst & cultuur"
+  },
+  {
+    "id": "w1013",
+    "it": "di recente",
+    "nl": "recentelijk / onlangs",
+    "ph": "di re-tsjen-te",
+    "ex": "Ho visitato Roma di recente.",
+    "exNl": "Ik heb Rome onlangs bezocht.",
+    "lesson": 91,
+    "level": "A2",
+    "cat": "tijd"
+  },
+  {
+    "id": "w1014",
+    "it": "il podio",
+    "nl": "het podium",
+    "ph": "il po-djo",
+    "ex": "È salito sul podio tra gli applausi.",
+    "exNl": "Hij besteeg het podium onder applaus.",
+    "lesson": 110,
+    "level": "A2",
+    "cat": "sport"
+  },
+  {
+    "id": "w1015",
+    "it": "la medaglia",
+    "nl": "de medaille",
+    "ph": "la me-dal-ja",
+    "ex": "Ha vinto una medaglia d'oro.",
+    "exNl": "Hij won een gouden medaille.",
+    "lesson": 110,
+    "level": "A2",
+    "cat": "sport"
+  },
+  {
+    "id": "w1016",
+    "it": "la notifica",
+    "nl": "de melding / de notificatie",
+    "ph": "la no-ti-fi-ka",
+    "ex": "Ho ricevuto una notifica dal telefono.",
+    "exNl": "Ik heb een melding van de telefoon ontvangen.",
+    "lesson": 112,
+    "level": "A2",
+    "cat": "technologie"
+  },
+  {
+    "id": "w1017",
+    "it": "il compost",
+    "nl": "het compost",
+    "ph": "il kom-post",
+    "ex": "Facciamo il compost con gli scarti di cibo.",
+    "exNl": "We maken compost van etensresten.",
+    "lesson": 119,
+    "level": "A2",
+    "cat": "milieu"
+  },
+  {
+    "id": "w1018",
+    "it": "la mobilità sostenibile",
+    "nl": "de duurzame mobiliteit",
+    "ph": "la mo-bi-li-tà sos-te-ni-bi-le",
+    "ex": "Usiamo la mobilità sostenibile ogni giorno.",
+    "exNl": "We gebruiken dagelijks duurzame mobiliteit.",
+    "lesson": 119,
+    "level": "A2",
+    "cat": "milieu"
+  },
+  {
+    "id": "w1019",
+    "it": "nervoso",
+    "nl": "nerveus",
+    "ph": "ner-vo-zo",
+    "ex": "Sono nervoso per il colloquio.",
+    "exNl": "Ik ben nerveus voor het sollicitatiegesprek.",
+    "lesson": 35,
+    "level": "A1",
+    "cat": "gevoelens"
+  },
+  {
+    "id": "w1020",
+    "it": "contento",
+    "nl": "tevreden / blij",
+    "ph": "kon-ten-to",
+    "ex": "Sono molto contento di vederti.",
+    "exNl": "Ik ben erg blij om je te zien.",
+    "lesson": 35,
+    "level": "A1",
+    "cat": "gevoelens"
+  },
+  {
+    "id": "w1021",
+    "it": "spaventato",
+    "nl": "bang / angstig",
+    "ph": "spa-ven-ta-to",
+    "ex": "Il bambino è spaventato dal buio.",
+    "exNl": "Het kind is bang van het donker.",
+    "lesson": 35,
+    "level": "A1",
+    "cat": "gevoelens"
+  },
+  {
+    "id": "w1022",
+    "it": "deluso",
+    "nl": "teleurgesteld",
+    "ph": "de-lu-zo",
+    "ex": "Sono deluso dal risultato.",
+    "exNl": "Ik ben teleurgesteld over het resultaat.",
+    "lesson": 35,
+    "level": "A1",
+    "cat": "gevoelens"
+  },
+  {
+    "id": "w1023",
+    "it": "geloso",
+    "nl": "jaloers",
+    "ph": "dge-lo-zo",
+    "ex": "Non essere geloso!",
+    "exNl": "Wees niet jaloers!",
+    "lesson": 35,
+    "level": "A1",
+    "cat": "gevoelens"
+  },
+  {
+    "id": "w1024",
+    "it": "confuso",
+    "nl": "verward",
+    "ph": "kon-fu-zo",
+    "ex": "Sono confuso da questa spiegazione.",
+    "exNl": "Ik ben verward door deze uitleg.",
+    "lesson": 35,
+    "level": "A1",
+    "cat": "gevoelens"
+  },
+  {
+    "id": "w1025",
+    "it": "la metro",
+    "nl": "de metro",
+    "ph": "la me-tro",
+    "ex": "Prendo la metro per andare in centro.",
+    "exNl": "Ik neem de metro naar het centrum.",
+    "lesson": 43,
+    "level": "A1",
+    "cat": "vervoer"
+  },
+  {
+    "id": "w1026",
+    "it": "la reception",
+    "nl": "de receptie",
+    "ph": "la re-tsjep-sjon",
+    "ex": "La reception è al piano terra.",
+    "exNl": "De receptie is op de begane grond.",
+    "lesson": 44,
+    "level": "A1",
+    "cat": "reizen"
+  },
+  {
+    "id": "w1027",
+    "it": "il parcheggio",
+    "nl": "de parkeerplaats",
+    "ph": "il par-ked-djo",
+    "ex": "C'è un parcheggio vicino all'hotel?",
+    "exNl": "Is er een parkeerplaats vlakbij het hotel?",
+    "lesson": 44,
+    "level": "A1",
+    "cat": "reizen"
+  },
+  {
+    "id": "w1028",
+    "it": "di fronte a",
+    "nl": "tegenover",
+    "ph": "di fron-te a",
+    "ex": "La banca è di fronte al supermercato.",
+    "exNl": "De bank is tegenover de supermarkt.",
+    "lesson": 46,
+    "level": "A1",
+    "cat": "navigatie"
+  },
+  {
+    "id": "w1029",
+    "it": "piovere",
+    "nl": "regenen",
+    "ph": "pjo-ve-re",
+    "ex": "Sta piovendo molto oggi.",
+    "exNl": "Het regent vandaag veel.",
+    "lesson": 47,
+    "level": "A1",
+    "cat": "weer"
+  },
+  {
+    "id": "w1030",
+    "it": "nevicare",
+    "nl": "sneeuwen",
+    "ph": "ne-vi-ka-re",
+    "ex": "In montagna nevica spesso.",
+    "exNl": "In de bergen sneeuwt het vaak.",
+    "lesson": 47,
+    "level": "A1",
+    "cat": "weer"
+  },
+  {
+    "id": "w1031",
+    "it": "la visita",
+    "nl": "het bezoek / de afspraak (bij arts)",
+    "ph": "la vi-zi-ta",
+    "ex": "Ho una visita medica domani.",
+    "exNl": "Ik heb morgen een doktersafspraak.",
+    "lesson": 48,
+    "level": "A1",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w1032",
+    "it": "fare sport",
+    "nl": "sporten",
+    "ph": "fa-re sport",
+    "ex": "Mi piace fare sport il sabato.",
+    "exNl": "Ik sport graag op zaterdag.",
+    "lesson": 49,
+    "level": "A1",
+    "cat": "activiteiten"
+  },
+  {
+    "id": "w1033",
+    "it": "giocare a calcio",
+    "nl": "voetballen",
+    "ph": "djo-ka-re a kal-tsjo",
+    "ex": "Giocavo a calcio da bambino.",
+    "exNl": "Ik voetbalde als kind.",
+    "lesson": 49,
+    "level": "A1",
+    "cat": "sport"
+  },
+  {
+    "id": "w1034",
+    "it": "andare in bicicletta",
+    "nl": "fietsen",
+    "ph": "an-da-re in bi-tsji-klet-ta",
+    "ex": "Vado in bicicletta ogni domenica.",
+    "exNl": "Ik fiets elke zondag.",
+    "lesson": 49,
+    "level": "A1",
+    "cat": "activiteiten"
+  },
+  {
+    "id": "w1035",
+    "it": "la cartina",
+    "nl": "de kaart (geografisch)",
+    "ph": "la kar-ti-na",
+    "ex": "Ho perso la cartina della città.",
+    "exNl": "Ik heb de stadskaart verloren.",
+    "lesson": 70,
+    "level": "A2",
+    "cat": "reizen"
+  },
+  {
+    "id": "w1036",
+    "it": "suonare",
+    "nl": "een instrument bespelen",
+    "ph": "suo-na-re",
+    "ex": "Suono la chitarra da anni.",
+    "exNl": "Ik speel al jaren gitaar.",
+    "lesson": 49,
+    "level": "A1",
+    "cat": "activiteiten"
+  },
+  {
+    "id": "w1037",
+    "it": "sciare",
+    "nl": "skiën",
+    "ph": "stsja-re",
+    "ex": "D'inverno andiamo a sciare.",
+    "exNl": "'s Winters gaan we skiën.",
+    "lesson": 49,
+    "level": "A1",
+    "cat": "activiteiten"
+  },
+  {
+    "id": "w1038",
+    "it": "il fiume",
+    "nl": "de rivier",
+    "ph": "il fju-me",
+    "ex": "Il Po è il fiume più lungo d'Italia.",
+    "exNl": "De Po is de langste rivier van Italië.",
+    "lesson": 73,
+    "level": "A2",
+    "cat": "natuur"
+  },
+  {
+    "id": "w1039",
+    "it": "soleggiato",
+    "nl": "zonnig",
+    "ph": "so-led-dja-to",
+    "ex": "Domani sarà soleggiato.",
+    "exNl": "Morgen wordt het zonnig.",
+    "lesson": 47,
+    "level": "A1",
+    "cat": "weer"
+  },
+  {
+    "id": "w1040",
+    "it": "la salute",
+    "nl": "de gezondheid",
+    "ph": "la sa-lu-te",
+    "ex": "La salute viene prima di tutto.",
+    "exNl": "Gezondheid gaat boven alles.",
+    "lesson": 48,
+    "level": "A1",
+    "cat": "gezondheid"
   }
 ]
