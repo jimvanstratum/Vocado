@@ -547,7 +547,17 @@ function renderHome() {
       btn.textContent = '↓ Mijn positie';
       btn.addEventListener('click', e => {
         e.stopPropagation();
-        firstActiveEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Scroll zodat firstActiveEl één kaarthoogte ónder de bovenkant uitkomt
+        const container = firstActiveEl.closest('.screen-body');
+        if (container) {
+          const elTop = firstActiveEl.getBoundingClientRect().top
+                      - container.getBoundingClientRect().top
+                      + container.scrollTop;
+          const offset = firstActiveEl.offsetHeight;
+          container.scrollTo({ top: Math.max(0, elTop - offset), behavior: 'smooth' });
+        } else {
+          firstActiveEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
       header.appendChild(btn);
     }
