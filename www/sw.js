@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocado-20260316-0723';
+const CACHE_NAME = 'vocado-20260316-1945';
 const ASSETS = [
   './',
   './index.html',

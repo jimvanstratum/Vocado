@@ -973,7 +973,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.29 · Italiaans · 90 lessen · 720 woorden</div>
+    <div class="settings-version">Vocado · v1.30 · Italiaans · 90 lessen · 720 woorden</div>
   </div>
 </div>
 
@@ -1087,26 +1087,16 @@
     window.addEventListener('orientationchange', function() { setTimeout(setH, 200); });
   })();
 
-  // Meet safe-area-inset-bottom via direct body-child (meest betrouwbaar op iOS PWA).
-  // Fallback: 34px voor iPhone met home indicator (schermhoogte >= 812pt).
+  // Meet safe-area-inset-bottom via direct body-child element.
+  // Geen fallback: env() geeft 0 terug in standalone PWA modus op iOS,
+  // omdat het flex-layout (#app fills full viewport) geen extra padding nodig heeft.
   (function () {
     var el = document.createElement('div');
     el.style.cssText = 'position:fixed;bottom:0;height:env(safe-area-inset-bottom,0px);width:1px;visibility:hidden;pointer-events:none';
     document.body.appendChild(el);
-    var measured = parseInt(getComputedStyle(el).height) || 0;
+    var sab = parseInt(getComputedStyle(el).height) || 0;
     document.body.removeChild(el);
-    var longest = Math.max(screen.width, screen.height);
-    var sab = measured > 0 ? measured : (longest >= 812 ? 34 : 0);
     document.documentElement.style.setProperty('--sab', sab + 'px');
-
-    // TIJDELIJKE DIAGNOSTIEK — verwijder na diagnose
-    window._diagSAB = {
-      measured: measured,
-      fallback: sab,
-      screenW: screen.width,
-      screenH: screen.height,
-      innerH: window.innerHeight
-    };
   })();
 
   // Vang Android/Chrome install-prompt zo vroeg mogelijk op (vóór module-load)
@@ -1118,7 +1108,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=20';
+  import './js/app.js?v=21';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
