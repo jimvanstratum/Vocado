@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-16 19:45 -->
+<!-- Vocado — standalone build 2026-03-16 20:06 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -101,10 +101,12 @@
     html { background: var(--surface); }
     body { background: var(--surface); }
 
-    /* APP SHELL — enige position:fixed container. #screens en #shared-nav zijn flex-children:
-       geen iOS-quirk met position:fixed + bottom:0 op de nav. De nav bereikt altijd y=793
-       (fysieke onderkant) omdat de flex-layout dat bepaalt, niet een iOS-geklipt bottom:0. */
-    #app { position: fixed; inset: 0; display: flex; flex-direction: column;
+    /* APP SHELL — position:fixed maar NIET bottom:0 (iOS knipt dat af op y=759).
+       Gebruikt height:var(--app-height) zodat #app altijd de volledige viewport vult (y=0→793).
+       #screens en #shared-nav zijn flex-children, geen position:fixed op de nav. */
+    #app { position: fixed; top: 0; left: 0; right: 0;
+      height: var(--app-height, 100vh);
+      display: flex; flex-direction: column;
       background: var(--surface); }
     #screens { flex: 1; position: relative; overflow: hidden; }
 
@@ -973,7 +975,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.30 · Italiaans · 90 lessen · 720 woorden</div>
+    <div class="settings-version">Vocado · v1.31 · Italiaans · 90 lessen · 720 woorden</div>
   </div>
 </div>
 
