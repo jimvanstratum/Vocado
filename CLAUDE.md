@@ -197,6 +197,59 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 
 ---
 
+## CEFR-referentie (Common European Framework of Reference)
+
+Gebruik dit als maatlat bij het plannen van content en features.
+
+### Woordenschat per niveau
+
+| Niveau | Totale woordenschat | Nieuwe woorden | Vocado nu |
+|--------|--------------------|--------------------|-----------|
+| A1 | ±500–700 | 500–700 | ~432 ⚠️ |
+| A2 | ±1.000–1.500 | +500–800 | ~435 ⚠️ |
+| B1 | ±2.500–3.000 | +1.500 | 0 |
+| B2+ | ±5.000 | +2.000 | 0 |
+
+### Grammatica per niveau
+
+| Niveau | Kernonderwerpen |
+|--------|----------------|
+| **A1** | Tegenwoordige tijd, lidwoorden, meervoud, basiszinnen, vraagzinnen, persoonlijke voornaamwoorden |
+| **A2** | Verleden tijd (basis), toekomende tijd, vergelijkingen, bijzinnen, reflexieve werkwoorden, voorkeur uitdrukken |
+| **B1** | Onvoltooid verleden tijd, perfectum, conditionele zinnen (als…dan), bijzinnen (omdat/hoewel/terwijl), indirecte rede |
+| **B2** | Subjonctief, passief productief, geavanceerde conditionalis, nuances en register |
+
+### Vaardigheden die een volledige app dekt
+
+| Vaardigheid | Vocado nu | Doel |
+|---|---|---|
+| **Lezen** | Voorbeeldzinnen per woord | Leesteksten per niveau (A1: 20–50w, A2: 50–120w, B1: 150–300w) |
+| **Luisteren** | TTS per woord/zin | Dialogen (doel: 100–200 stuks) |
+| **Schrijven** | Type-oefening (los woord) | Zinnen typen, e-mails, meningen |
+| **Spreken** | — | Uitspraakfeedback, rollenspellen |
+
+### Studietijd per niveau (Council of Europe)
+
+| Niveau | Uren studie |
+|--------|------------|
+| A1 | 80–100 uur |
+| A2 | +100 uur |
+| B1 | +200 uur |
+| B2 | +200 uur |
+| C1 | +200 uur |
+
+Tot B2 = circa **600–800 uur** totale studie.
+
+### Implicaties voor Vocado
+
+- **A1 woordtekort**: 432 vs. 500–700 doel → ~70 woorden toe te voegen
+- **A2 woordtekort**: 435 vs. 500–800 doel → ~65–365 woorden toe te voegen
+- **B1 ontbreekt volledig**: eerste prioriteit na A2-aanvulling
+- **Spreken**: buiten scope van huidige app (Web Speech API biedt geen beoordelingsfunctie)
+- **Leesteksten**: zinvolle uitbreiding voor A2/B1 — korte dialogen of paragrafen als los oefentype
+
+---
+
 ## Bekende issues
 
 - **git push credentials**: werkt niet automatisch op dit apparaat — altijd handmatig pushen
