@@ -9535,5 +9535,1228 @@
     "lesson": 48,
     "level": "A1",
     "cat": "gezondheid"
+  },
+  {
+    "id": "w1042",
+    "it": "il ponte",
+    "nl": "de brug",
+    "ph": "il PON-te",
+    "ex": "Il Ponte Vecchio è famoso a Firenze.",
+    "exNl": "De Ponte Vecchio is beroemd in Florence.",
+    "lesson": 14,
+    "level": "A1",
+    "cat": "gebouwen"
+  },
+  {
+    "id": "w1043",
+    "it": "il quartiere",
+    "nl": "de wijk",
+    "ph": "il kwar-TJER-re",
+    "ex": "Abito in un quartiere tranquillo.",
+    "exNl": "Ik woon in een rustige wijk.",
+    "lesson": 14,
+    "level": "A1",
+    "cat": "navigatie"
+  },
+  {
+    "id": "w1044",
+    "it": "la via",
+    "nl": "de straat / de weg",
+    "ph": "la VEE-a",
+    "ex": "Abito in via Roma, numero dieci.",
+    "exNl": "Ik woon in de Via Roma, nummer tien.",
+    "lesson": 14,
+    "level": "A1",
+    "cat": "navigatie"
+  },
+  {
+    "id": "w1045",
+    "it": "il semaforo",
+    "nl": "het stoplicht",
+    "ph": "il se-MA-fo-ro",
+    "ex": "Gira a sinistra al semaforo.",
+    "exNl": "Sla links af bij het stoplicht.",
+    "lesson": 38,
+    "level": "A1",
+    "cat": "navigatie"
+  },
+  {
+    "id": "w1047",
+    "it": "la lavatrice",
+    "nl": "de wasmachine",
+    "ph": "la la-va-TREE-tsje",
+    "ex": "La lavatrice è in cucina.",
+    "exNl": "De wasmachine staat in de keuken.",
+    "lesson": 8,
+    "level": "A1",
+    "cat": "huishouden"
+  },
+  {
+    "id": "w1048",
+    "it": "il frigorifero",
+    "nl": "de koelkast",
+    "ph": "il fri-go-RI-fe-ro",
+    "ex": "Il latte è nel frigorifero.",
+    "exNl": "De melk staat in de koelkast.",
+    "lesson": 8,
+    "level": "A1",
+    "cat": "huishouden"
+  },
+  {
+    "id": "w1050",
+    "it": "pulire",
+    "nl": "schoonmaken",
+    "ph": "pu-LEE-re",
+    "ex": "Pulisco la casa ogni sabato.",
+    "exNl": "Ik maak elke zaterdag het huis schoon.",
+    "lesson": 8,
+    "level": "A1",
+    "cat": "huishouden"
+  },
+  {
+    "id": "w1051",
+    "it": "aprire",
+    "nl": "openen",
+    "ph": "a-PREE-re",
+    "ex": "Apri la finestra, per favore!",
+    "exNl": "Open het raam, alsjeblieft!",
+    "lesson": 36,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1052",
+    "it": "chiudere",
+    "nl": "sluiten",
+    "ph": "KJOE-de-re",
+    "ex": "Chiudi la porta, fa freddo.",
+    "exNl": "Doe de deur dicht, het is koud.",
+    "lesson": 36,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1053",
+    "it": "cercare",
+    "nl": "zoeken",
+    "ph": "tsjer-KA-re",
+    "ex": "Cerco le mie chiavi.",
+    "exNl": "Ik zoek mijn sleutels.",
+    "lesson": 36,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1054",
+    "it": "trovare",
+    "nl": "vinden",
+    "ph": "tro-VA-re",
+    "ex": "Ho trovato il mio portafoglio!",
+    "exNl": "Ik heb mijn portemonnee gevonden!",
+    "lesson": 36,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1055",
+    "it": "lasciare",
+    "nl": "achterlaten / laten",
+    "ph": "la-SJAR-re",
+    "ex": "Lascia un messaggio dopo il segnale.",
+    "exNl": "Laat een bericht na het signaal.",
+    "lesson": 36,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1060",
+    "it": "difficile",
+    "nl": "moeilijk",
+    "ph": "di-FFI-tsji-le",
+    "ex": "L'italiano non è troppo difficile.",
+    "exNl": "Italiaans is niet te moeilijk.",
+    "lesson": 5,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1061",
+    "it": "facile",
+    "nl": "makkelijk",
+    "ph": "FA-tsji-le",
+    "ex": "Questo esercizio è molto facile.",
+    "exNl": "Deze oefening is heel makkelijk.",
+    "lesson": 5,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1062",
+    "it": "veloce",
+    "nl": "snel",
+    "ph": "ve-LO-tsje",
+    "ex": "Il treno è più veloce dell'autobus.",
+    "exNl": "De trein is sneller dan de bus.",
+    "lesson": 5,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1063",
+    "it": "lento",
+    "nl": "langzaam",
+    "ph": "LEN-to",
+    "ex": "Parla più lento, per favore.",
+    "exNl": "Praat alsjeblieft langzamer.",
+    "lesson": 5,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1064",
+    "it": "pieno",
+    "nl": "vol",
+    "ph": "PJE-no",
+    "ex": "Il treno è pieno oggi.",
+    "exNl": "De trein is vandaag vol.",
+    "lesson": 5,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1065",
+    "it": "vuoto",
+    "nl": "leeg",
+    "ph": "VWO-to",
+    "ex": "Il bicchiere è vuoto.",
+    "exNl": "Het glas is leeg.",
+    "lesson": 5,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1066",
+    "it": "la patente",
+    "nl": "het rijbewijs",
+    "ph": "la pa-TEN-te",
+    "ex": "Ho preso la patente a diciotto anni.",
+    "exNl": "Ik heb mijn rijbewijs op mijn achttiende gehaald.",
+    "lesson": 13,
+    "level": "A1",
+    "cat": "vervoer"
+  },
+  {
+    "id": "w1068",
+    "it": "il succo",
+    "nl": "het sap",
+    "ph": "il SUK-ko",
+    "ex": "Vorrei un succo d'arancia, per favore.",
+    "exNl": "Ik wil graag een sinaasappelsap.",
+    "lesson": 9,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w1069",
+    "it": "la birra",
+    "nl": "het bier",
+    "ph": "la BIR-ra",
+    "ex": "Una birra fredda, per favore.",
+    "exNl": "Een koud bier, alsjeblieft.",
+    "lesson": 9,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w1070",
+    "it": "il tè",
+    "nl": "de thee",
+    "ph": "il TE",
+    "ex": "Prendo un tè con latte.",
+    "exNl": "Ik neem een thee met melk.",
+    "lesson": 9,
+    "level": "A1",
+    "cat": "eten & drinken"
+  },
+  {
+    "id": "w1071",
+    "it": "il lavoro",
+    "nl": "het werk",
+    "ph": "il la-VO-ro",
+    "ex": "Vado al lavoro in bicicletta.",
+    "exNl": "Ik ga met de fiets naar het werk.",
+    "lesson": 53,
+    "level": "A1",
+    "cat": "werk"
+  },
+  {
+    "id": "w1072",
+    "it": "l'ufficio",
+    "nl": "het kantoor",
+    "ph": "luf-FEE-tsjo",
+    "ex": "L'ufficio è al terzo piano.",
+    "exNl": "Het kantoor is op de derde verdieping.",
+    "lesson": 53,
+    "level": "A1",
+    "cat": "werk"
+  },
+  {
+    "id": "w1074",
+    "it": "la riunione",
+    "nl": "de vergadering",
+    "ph": "la riu-NJO-ne",
+    "ex": "Ho una riunione alle dieci.",
+    "exNl": "Ik heb een vergadering om tien uur.",
+    "lesson": 53,
+    "level": "A1",
+    "cat": "werk"
+  },
+  {
+    "id": "w1075",
+    "it": "autunno",
+    "nl": "herfst",
+    "ph": "au-TUN-no",
+    "ex": "In autunno le foglie cambiano colore.",
+    "exNl": "In de herfst veranderen de bladeren van kleur.",
+    "lesson": 18,
+    "level": "A1",
+    "cat": "seizoenen"
+  },
+  {
+    "id": "w1076",
+    "it": "spegnere",
+    "nl": "uitdoen / uitzetten",
+    "ph": "SPEN-je-re",
+    "ex": "Spegni la luce quando esci.",
+    "exNl": "Doe het licht uit als je weggaat.",
+    "lesson": 8,
+    "level": "A1",
+    "cat": "huishouden"
+  },
+  {
+    "id": "w1077",
+    "it": "accendere",
+    "nl": "aanzetten / aansteken",
+    "ph": "at-TSJEN-de-re",
+    "ex": "Accendo il riscaldamento.",
+    "exNl": "Ik zet de verwarming aan.",
+    "lesson": 8,
+    "level": "A1",
+    "cat": "huishouden"
+  },
+  {
+    "id": "w1078",
+    "it": "il dente",
+    "nl": "de tand",
+    "ph": "il DEN-te",
+    "ex": "Ho mal di denti.",
+    "exNl": "Ik heb kiespijn.",
+    "lesson": 7,
+    "level": "A1",
+    "cat": "lichaam"
+  },
+  {
+    "id": "w1079",
+    "it": "il cuore",
+    "nl": "het hart",
+    "ph": "il KWO-re",
+    "ex": "Fai sport: fa bene al cuore.",
+    "exNl": "Doe aan sport: het is goed voor het hart.",
+    "lesson": 7,
+    "level": "A1",
+    "cat": "lichaam"
+  },
+  {
+    "id": "w1084",
+    "it": "la banconota",
+    "nl": "het bankbiljet",
+    "ph": "la ban-ko-NO-ta",
+    "ex": "Pago con una banconota da venti euro.",
+    "exNl": "Ik betaal met een biljet van twintig euro.",
+    "lesson": 4,
+    "level": "A1",
+    "cat": "cijfers"
+  },
+  {
+    "id": "w1085",
+    "it": "la valigia",
+    "nl": "de koffer",
+    "ph": "la va-LEE-dja",
+    "ex": "Ho perso la mia valigia!",
+    "exNl": "Ik ben mijn koffer kwijt!",
+    "lesson": 13,
+    "level": "A1",
+    "cat": "reizen"
+  },
+  {
+    "id": "w1087",
+    "it": "l'albergo",
+    "nl": "het hotel",
+    "ph": "lal-BER-go",
+    "ex": "L'albergo è vicino alla stazione.",
+    "exNl": "Het hotel is dicht bij het station.",
+    "lesson": 44,
+    "level": "A1",
+    "cat": "vakantie"
+  },
+  {
+    "id": "w1089",
+    "it": "rispondere",
+    "nl": "antwoorden",
+    "ph": "ris-PON-de-re",
+    "ex": "Rispondi al telefono, per favore.",
+    "exNl": "Neem de telefoon op, alsjeblieft.",
+    "lesson": 36,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1090",
+    "it": "chiamare",
+    "nl": "bellen / roepen",
+    "ph": "kja-MA-re",
+    "ex": "Ti chiamo stasera.",
+    "exNl": "Ik bel je vanavond.",
+    "lesson": 36,
+    "level": "A1",
+    "cat": "basis"
+  },
+  {
+    "id": "w1094",
+    "it": "stressato",
+    "nl": "gestrest",
+    "ph": "stres-SA-to",
+    "ex": "Sono molto stressato questa settimana.",
+    "exNl": "Ik ben erg gestrest deze week.",
+    "lesson": 30,
+    "level": "A1",
+    "cat": "uitdrukkingen"
+  },
+  {
+    "id": "w1095",
+    "it": "provare",
+    "nl": "proberen / passen",
+    "ph": "pro-VA-re",
+    "ex": "Posso provare questa giacca?",
+    "exNl": "Kan ik dit jasje passen?",
+    "lesson": 11,
+    "level": "A1",
+    "cat": "winkelen"
+  },
+  {
+    "id": "w1096",
+    "it": "il carrello",
+    "nl": "het winkelwagentje",
+    "ph": "il kar-REL-lo",
+    "ex": "Prendo un carrello al supermercato.",
+    "exNl": "Ik pak een winkelwagentje bij de supermarkt.",
+    "lesson": 11,
+    "level": "A1",
+    "cat": "winkelen"
+  },
+  {
+    "id": "w1097",
+    "it": "il bar",
+    "nl": "het café / de bar",
+    "ph": "il BAR",
+    "ex": "Ti aspetto al bar sotto l'ufficio.",
+    "exNl": "Ik wacht op je in het café onder het kantoor.",
+    "lesson": 10,
+    "level": "A1",
+    "cat": "café"
+  },
+  {
+    "id": "w1099",
+    "it": "mille",
+    "nl": "duizend",
+    "ph": "MIL-le",
+    "ex": "Mille euro è troppo caro!",
+    "exNl": "Duizend euro is te duur!",
+    "lesson": 4,
+    "level": "A1",
+    "cat": "cijfers"
+  },
+  {
+    "id": "w1100",
+    "it": "mezzo",
+    "nl": "half",
+    "ph": "MED-dzo",
+    "ex": "Sono le tre e mezzo.",
+    "exNl": "Het is half vier.",
+    "lesson": 16,
+    "level": "A1",
+    "cat": "tijd"
+  },
+  {
+    "id": "w1101",
+    "it": "il risotto",
+    "nl": "de risotto",
+    "ph": "il ri-SOT-to",
+    "ex": "Il risotto alla milanese è tipico del nord.",
+    "exNl": "De Milanese risotto is typisch voor het noorden.",
+    "lesson": 96,
+    "level": "A2",
+    "cat": "cucina2"
+  },
+  {
+    "id": "w1103",
+    "it": "il secondo piatto",
+    "nl": "het hoofdgerecht",
+    "ph": "il se-KON-do PJA-to",
+    "ex": "Per secondo piatto voglio la bistecca.",
+    "exNl": "Als hoofdgerecht wil ik de biefstuk.",
+    "lesson": 96,
+    "level": "A2",
+    "cat": "cucina2"
+  },
+  {
+    "id": "w1104",
+    "it": "la porzione",
+    "nl": "de portie",
+    "ph": "la por-TSJO-ne",
+    "ex": "Una porzione di spaghetti, grazie.",
+    "exNl": "Een portie spaghetti, dank je.",
+    "lesson": 96,
+    "level": "A2",
+    "cat": "cucina2"
+  },
+  {
+    "id": "w1105",
+    "it": "la galleria",
+    "nl": "de galerie",
+    "ph": "la gal-le-REE-a",
+    "ex": "La Galleria degli Uffizi è a Firenze.",
+    "exNl": "De Galleria degli Uffizi is in Florence.",
+    "lesson": 115,
+    "level": "A2",
+    "cat": "arte"
+  },
+  {
+    "id": "w1109",
+    "it": "a lungo",
+    "nl": "lang (tijdsduur)",
+    "ph": "a LUN-go",
+    "ex": "Ho aspettato a lungo.",
+    "exNl": "Ik heb lang gewacht.",
+    "lesson": 91,
+    "level": "A2",
+    "cat": "tijd"
+  },
+  {
+    "id": "w1110",
+    "it": "all'improvviso",
+    "nl": "plotseling",
+    "ph": "al-lim-prov-VEE-zo",
+    "ex": "All'improvviso ha iniziato a piovere.",
+    "exNl": "Plotseling begon het te regenen.",
+    "lesson": 91,
+    "level": "A2",
+    "cat": "tijd"
+  },
+  {
+    "id": "w1112",
+    "it": "la costa",
+    "nl": "de kust",
+    "ph": "la KOS-ta",
+    "ex": "Le coste della Sardegna sono bellissime.",
+    "exNl": "De kusten van Sardinië zijn prachtig.",
+    "lesson": 119,
+    "level": "A2",
+    "cat": "milieu"
+  },
+  {
+    "id": "w1115",
+    "it": "il profilo",
+    "nl": "het profiel",
+    "ph": "il pro-FEE-lo",
+    "ex": "Ho un profilo su LinkedIn.",
+    "exNl": "Ik heb een profiel op LinkedIn.",
+    "lesson": 112,
+    "level": "A2",
+    "cat": "tecnologia"
+  },
+  {
+    "id": "w1117",
+    "it": "il motore di ricerca",
+    "nl": "de zoekmachine",
+    "ph": "il mo-TO-re di ri-TJER-ka",
+    "ex": "Cerca su un motore di ricerca.",
+    "exNl": "Zoek op een zoekmachine.",
+    "lesson": 112,
+    "level": "A2",
+    "cat": "tecnologia"
+  },
+  {
+    "id": "w1118",
+    "it": "l'appuntamento dal medico",
+    "nl": "de doktersafspraak",
+    "ph": "lap-pun-ta-MEN-to dal ME-di-ko",
+    "ex": "Ho un appuntamento dal medico domani.",
+    "exNl": "Ik heb morgen een doktersafspraak.",
+    "lesson": 74,
+    "level": "A2",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w1119",
+    "it": "la ricetta medica",
+    "nl": "het recept (medisch)",
+    "ph": "la ri-TSJET-ta ME-di-ka",
+    "ex": "Ho bisogno di una ricetta medica.",
+    "exNl": "Ik heb een medisch recept nodig.",
+    "lesson": 74,
+    "level": "A2",
+    "cat": "gezondheid"
+  },
+  {
+    "id": "w1121",
+    "it": "la coincidenza",
+    "nl": "de overstap / het toeval",
+    "ph": "la ko-in-tshi-DEN-tsa",
+    "ex": "Ho perso la coincidenza per Roma.",
+    "exNl": "Ik heb mijn overstap naar Rome gemist.",
+    "lesson": 106,
+    "level": "A2",
+    "cat": "viaggio2"
+  },
+  {
+    "id": "w1122",
+    "it": "la sistemazione",
+    "nl": "de accommodatie",
+    "ph": "la sis-te-ma-TSJO-ne",
+    "ex": "Cerco una sistemazione economica.",
+    "exNl": "Ik zoek een goedkope accommodatie.",
+    "lesson": 99,
+    "level": "A2",
+    "cat": "viaggio2"
+  },
+  {
+    "id": "w1124",
+    "it": "il curriculum vitae",
+    "nl": "het cv",
+    "ph": "il kur-RI-ku-lum VI-te",
+    "ex": "Mando il curriculum vitae via email.",
+    "exNl": "Ik stuur mijn cv per e-mail.",
+    "lesson": 114,
+    "level": "A2",
+    "cat": "carriera"
+  },
+  {
+    "id": "w1126",
+    "it": "l'aumento",
+    "nl": "de loonsverhoging",
+    "ph": "lau-MEN-to",
+    "ex": "Ho chiesto un aumento al mio capo.",
+    "exNl": "Ik heb mijn baas om een loonsverhoging gevraagd.",
+    "lesson": 114,
+    "level": "A2",
+    "cat": "carriera"
+  },
+  {
+    "id": "w1127",
+    "it": "l'impronta ecologica",
+    "nl": "de ecologische voetafdruk",
+    "ph": "lim-PRON-ta e-ko-LO-dji-ka",
+    "ex": "Voglio ridurre la mia impronta ecologica.",
+    "exNl": "Ik wil mijn ecologische voetafdruk verkleinen.",
+    "lesson": 119,
+    "level": "A2",
+    "cat": "milieu"
+  },
+  {
+    "id": "w1128",
+    "it": "i pannelli solari",
+    "nl": "de zonnepanelen",
+    "ph": "i pan-NEL-li so-LA-ri",
+    "ex": "Abbiamo installato i pannelli solari sul tetto.",
+    "exNl": "We hebben zonnepanelen op het dak geïnstalleerd.",
+    "lesson": 119,
+    "level": "A2",
+    "cat": "milieu"
+  },
+  {
+    "id": "w1129",
+    "it": "fidanzarsi",
+    "nl": "verloofd raken",
+    "ph": "fi-dan-TSAR-si",
+    "ex": "Si sono fidanzati l'anno scorso.",
+    "exNl": "Ze zijn vorig jaar verloofd geraakt.",
+    "lesson": 98,
+    "level": "A2",
+    "cat": "relaties"
+  },
+  {
+    "id": "w1130",
+    "it": "il fidanzato",
+    "nl": "de verloofde (m)",
+    "ph": "il fi-dan-TSA-to",
+    "ex": "Il mio fidanzato si chiama Luca.",
+    "exNl": "Mijn verloofde heet Luca.",
+    "lesson": 98,
+    "level": "A2",
+    "cat": "relaties"
+  },
+  {
+    "id": "w1132",
+    "it": "l'inchiesta",
+    "nl": "het onderzoek / de reportage",
+    "ph": "lin-KJESTA",
+    "ex": "Il giornalista ha fatto un'inchiesta sul caso.",
+    "exNl": "De journalist deed een reportage over de zaak.",
+    "lesson": 118,
+    "level": "A2",
+    "cat": "media2"
+  },
+  {
+    "id": "w1133",
+    "it": "di moda",
+    "nl": "in de mode / trendy",
+    "ph": "di MO-da",
+    "ex": "Queste scarpe sono molto di moda.",
+    "exNl": "Deze schoenen zijn erg in de mode.",
+    "lesson": 111,
+    "level": "A2",
+    "cat": "moda"
+  },
+  {
+    "id": "w1134",
+    "it": "l'abito da sera",
+    "nl": "de avondjurk",
+    "ph": "LA-bi-to da SE-ra",
+    "ex": "Ho bisogno di un abito da sera per la festa.",
+    "exNl": "Ik heb een avondjurk nodig voor het feest.",
+    "lesson": 111,
+    "level": "A2",
+    "cat": "moda"
+  },
+  {
+    "id": "w1135",
+    "it": "il condominio",
+    "nl": "het appartementencomplex",
+    "ph": "il kon-do-MEE-njo",
+    "ex": "Abito in un condominio di dieci piani.",
+    "exNl": "Ik woon in een appartementencomplex van tien verdiepingen.",
+    "lesson": 99,
+    "level": "A2",
+    "cat": "stile_vita"
+  },
+  {
+    "id": "w1136",
+    "it": "l'affitto",
+    "nl": "de huur",
+    "ph": "laf-FIT-to",
+    "ex": "L'affitto di questo appartamento è alto.",
+    "exNl": "De huur van dit appartement is hoog.",
+    "lesson": 99,
+    "level": "A2",
+    "cat": "stile_vita"
+  },
+  {
+    "id": "w1140",
+    "it": "il coperchio",
+    "nl": "het deksel",
+    "ph": "il ko-PER-kjo",
+    "ex": "Metti il coperchio sulla pentola.",
+    "exNl": "Doe het deksel op de pan.",
+    "lesson": 96,
+    "level": "A2",
+    "cat": "koken"
+  },
+  {
+    "id": "w1141",
+    "it": "dettagliato",
+    "nl": "gedetailleerd",
+    "ph": "det-ta-LJA-to",
+    "ex": "Mi serve un piano dettagliato.",
+    "exNl": "Ik heb een gedetailleerd plan nodig.",
+    "lesson": 104,
+    "level": "A2",
+    "cat": "beschrijvingen"
+  },
+  {
+    "id": "w1142",
+    "it": "approfondito",
+    "nl": "diepgaand",
+    "ph": "ap-pro-fon-DEE-to",
+    "ex": "Faccio una ricerca approfondita.",
+    "exNl": "Ik doe diepgaand onderzoek.",
+    "lesson": 104,
+    "level": "A2",
+    "cat": "beschrijvingen"
+  },
+  {
+    "id": "w1144",
+    "it": "il bancomat",
+    "nl": "de geldautomaat / de bankpas",
+    "ph": "il ban-ko-MAT",
+    "ex": "Posso pagare con il bancomat?",
+    "exNl": "Kan ik met de bankpas betalen?",
+    "lesson": 101,
+    "level": "A2",
+    "cat": "banca"
+  },
+  {
+    "id": "w1145",
+    "it": "il carnevale",
+    "nl": "het carnaval",
+    "ph": "il kar-ne-VA-le",
+    "ex": "Il Carnevale di Venezia è famoso in tutto il mondo.",
+    "exNl": "Het Carnaval van Venetië is wereldberoemd.",
+    "lesson": 116,
+    "level": "A2",
+    "cat": "tradizioni"
+  },
+  {
+    "id": "w1147",
+    "it": "il noleggio",
+    "nl": "de huur / het verhuur",
+    "ph": "il no-LED-djo",
+    "ex": "Prendo una macchina a noleggio.",
+    "exNl": "Ik huur een auto.",
+    "lesson": 106,
+    "level": "A2",
+    "cat": "mobilita"
+  },
+  {
+    "id": "w1149",
+    "it": "il regista",
+    "nl": "de regisseur",
+    "ph": "il re-DJIS-ta",
+    "ex": "Il regista di questo film è Fellini.",
+    "exNl": "De regisseur van deze film is Fellini.",
+    "lesson": 97,
+    "level": "A2",
+    "cat": "cinema"
+  },
+  {
+    "id": "w1150",
+    "it": "la colonna sonora",
+    "nl": "de soundtrack",
+    "ph": "la ko-LON-na so-NO-ra",
+    "ex": "La colonna sonora del film è bellissima.",
+    "exNl": "De soundtrack van de film is prachtig.",
+    "lesson": 97,
+    "level": "A2",
+    "cat": "cinema"
+  },
+  {
+    "id": "w1151",
+    "it": "il cielo",
+    "nl": "de lucht / de hemel",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1152",
+    "it": "la luna",
+    "nl": "de maan",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1153",
+    "it": "la scala",
+    "nl": "de trap",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1154",
+    "it": "il muro",
+    "nl": "de muur",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1155",
+    "it": "il tetto",
+    "nl": "het dak",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1156",
+    "it": "la camera da letto",
+    "nl": "de slaapkamer",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1157",
+    "it": "il forno a microonde",
+    "nl": "de magnetron",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1158",
+    "it": "il bicchiere",
+    "nl": "het glas",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1159",
+    "it": "il coltello",
+    "nl": "het mes",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1160",
+    "it": "il cucchiaio",
+    "nl": "de lepel",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1161",
+    "it": "il portafoglio",
+    "nl": "de portemonnee",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1162",
+    "it": "la strada",
+    "nl": "de straat / de weg",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1163",
+    "it": "lo zaino",
+    "nl": "de rugzak",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1164",
+    "it": "il braccio",
+    "nl": "de arm",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1165",
+    "it": "il collo",
+    "nl": "de nek / de hals",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1166",
+    "it": "lo stomaco",
+    "nl": "de maag",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1167",
+    "it": "lo zucchero",
+    "nl": "de suiker",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1168",
+    "it": "il sale",
+    "nl": "het zout",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1169",
+    "it": "il pepe",
+    "nl": "de peper",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1170",
+    "it": "il burro",
+    "nl": "de boter",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1171",
+    "it": "il pollo",
+    "nl": "de kip",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1172",
+    "it": "la carne",
+    "nl": "het vlees",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1173",
+    "it": "il pesce",
+    "nl": "de vis",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1174",
+    "it": "le uova",
+    "nl": "de eieren",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1175",
+    "it": "il riso",
+    "nl": "de rijst",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1176",
+    "it": "la lampada",
+    "nl": "de lamp",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1177",
+    "it": "lo specchio",
+    "nl": "de spiegel",
+    "level": "A1",
+    "lesson": 0
+  },
+  {
+    "id": "w1178",
+    "it": "l'impiegato",
+    "nl": "de kantoormedewerker",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1179",
+    "it": "la ditta",
+    "nl": "het bedrijf / de zaak",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1180",
+    "it": "l'impresa",
+    "nl": "de onderneming",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1181",
+    "it": "il capo",
+    "nl": "de baas / de chef",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1182",
+    "it": "il collega di lavoro",
+    "nl": "de werkcollega",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1183",
+    "it": "la candidatura",
+    "nl": "de sollicitatie",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1184",
+    "it": "il marciapiede",
+    "nl": "het trottoir / de stoep",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1185",
+    "it": "la rotonda",
+    "nl": "de rotonde",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1186",
+    "it": "il distributore",
+    "nl": "het benzinestation",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1187",
+    "it": "il prato",
+    "nl": "de weide / het grasland",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1188",
+    "it": "la collina",
+    "nl": "de heuvel",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1189",
+    "it": "il canale",
+    "nl": "het kanaal",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1190",
+    "it": "la cascata",
+    "nl": "de waterval",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1191",
+    "it": "la pianura",
+    "nl": "de vlakte",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1192",
+    "it": "il vulcano",
+    "nl": "de vulkaan",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1193",
+    "it": "la scogliera",
+    "nl": "de klif / de rotskust",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1194",
+    "it": "la rivista",
+    "nl": "het tijdschrift",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1195",
+    "it": "il podcast",
+    "nl": "de podcast",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1196",
+    "it": "la serie tv",
+    "nl": "de tv-serie",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1197",
+    "it": "il documentario",
+    "nl": "de documentaire",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1198",
+    "it": "il medicinale",
+    "nl": "het geneesmiddel",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1199",
+    "it": "la visita medica",
+    "nl": "het medisch onderzoek",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1200",
+    "it": "il chirurgo",
+    "nl": "de chirurg",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1201",
+    "it": "l'infermiere",
+    "nl": "de verpleger / de verpleger",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1202",
+    "it": "il reparto",
+    "nl": "de afdeling (ziekenhuis)",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1203",
+    "it": "la diagnosi",
+    "nl": "de diagnose",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1204",
+    "it": "il dipinto",
+    "nl": "het schilderij",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1205",
+    "it": "il concorso",
+    "nl": "de wedstrijd / de competitie",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1206",
+    "it": "il premio",
+    "nl": "de prijs / de award",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1207",
+    "it": "l'attore",
+    "nl": "de acteur",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1208",
+    "it": "l'attrice",
+    "nl": "de actrice",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1209",
+    "it": "il personaggio",
+    "nl": "het personage",
+    "level": "A2",
+    "lesson": 0
+  },
+  {
+    "id": "w1210",
+    "it": "la zuppa",
+    "nl": "de soep",
+    "level": "A2",
+    "lesson": 0
   }
 ]

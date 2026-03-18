@@ -41,7 +41,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.36**, cache buster **?v=27**
+- Huidige versie: **v1.38**, cache buster **?v=29**
 
 ### Build & deploy
 
@@ -108,14 +108,14 @@ Array van woord-objecten:
 
 ### Inhoud
 - **120 lessen**: A1 = lessen 1–60, A2 = lessen 61–120
-- **867 unieke woorden**: A1 ≈ 432, A2 ≈ 435
+- **1000 unieke woorden**: A1 = 500, A2 = 500
 - **Woordtelling per les**: 8 (les 3: 10)
 
 ### Niveau-indeling (CEFR)
 | Niveau | Lessen | Woorden | CEFR-doel |
 |--------|--------|---------|-----------|
-| A1 | 1–60 | ~432 | 500–700 ✓ (aan de lage kant) |
-| A2 | 61–120 | ~435 | +500–800 ✓ |
+| A1 | 1–60 | 500 | 500–700 ✓ |
+| A2 | 61–120 | 500 | +500–800 ✓ |
 | B1 | 121+ | 0 | +1500 (niet gestart) |
 
 ### Milestone-namen (MILESTONE_NAMES in app.js)
@@ -194,6 +194,8 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.34 | Opschonen: deduplicatie, mijn-positie scroll-fix |
 | v1.35 | Grammar 57/58/60 herschreven, artikel-uniformering lessen 1–20, 51 dubbele artikel-versies verwijderd |
 | v1.36 | Directe herhaalronde: "🔁 Oefen foute woorden" knop na les en review |
+| v1.37 | Sprint 1: Grammar herschreven lessen 61, 79, 80, 81, 85, 87, 88, 90; "B1 bereikt!"-bug les 80 opgelost |
+| v1.38 | Sprint 2: Vocabulaire aangevuld tot A1=500 + A2=500 (totaal 1000 woorden) |
 
 ---
 
@@ -205,8 +207,8 @@ Gebruik dit als maatlat bij het plannen van content en features.
 
 | Niveau | Totale woordenschat | Nieuwe woorden | Vocado nu |
 |--------|--------------------|--------------------|-----------|
-| A1 | ±500–700 | 500–700 | ~432 ⚠️ |
-| A2 | ±1.000–1.500 | +500–800 | ~435 ⚠️ |
+| A1 | ±500–700 | 500–700 | 500 ✓ |
+| A2 | ±1.000–1.500 | +500–800 | 500 ✓ |
 | B1 | ±2.500–3.000 | +1.500 | 0 |
 | B2+ | ±5.000 | +2.000 | 0 |
 
