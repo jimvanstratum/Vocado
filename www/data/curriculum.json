@@ -431,10 +431,10 @@
       "w481",
       "w482",
       "w483",
-      "w484",
+      "w070",
       "w485",
-      "w486",
-      "w487",
+      "w073",
+      "w074",
       "w488"
     ],
     "grammar": {
@@ -470,13 +470,13 @@
     "level": "A1",
     "description": "Meer kledingstukken en accessoires — compleet gekleed op vakantie.",
     "words": [
-      "w497",
-      "w498",
+      "w095",
+      "w093",
       "w499",
-      "w500",
-      "w501",
-      "w502",
-      "w503",
+      "w094",
+      "w096",
+      "w098",
+      "w097",
       "w504"
     ],
     "grammar": {
@@ -491,13 +491,13 @@
     "level": "A1",
     "description": "Meer lichaamsdelen — handig bij klachten aan de dokter.",
     "words": [
-      "w505",
-      "w506",
-      "w507",
-      "w508",
+      "w056",
+      "w058",
+      "w053",
+      "w052",
       "w509",
       "w510",
-      "w511",
+      "w054",
       "w512"
     ],
     "grammar": {
@@ -513,9 +513,9 @@
     "description": "Meer weersuitdrukkingen — van wolken tot onweer.",
     "words": [
       "w513",
-      "w514",
+      "w117",
       "w515",
-      "w516",
+      "w122",
       "w517",
       "w518",
       "w519",
@@ -533,8 +533,8 @@
     "level": "A1",
     "description": "Meer activiteiten in je vrije tijd — van muziek tot tuinieren.",
     "words": [
-      "w521",
-      "w522",
+      "w148",
+      "w149",
       "w523",
       "w524",
       "w525",
@@ -576,13 +576,13 @@
     "description": "Meubels en kamers beschrijven — thuis voel je je overal.",
     "words": [
       "w537",
-      "w538",
+      "w077",
       "w539",
-      "w540",
-      "w541",
-      "w542",
-      "w543",
-      "w544"
+      "w066",
+      "w065",
+      "w064",
+      "w060",
+      "w062"
     ],
     "grammar": {
       "title": "Voorzetsels van plaats: sul, nel, sotto, davanti a…",
@@ -597,7 +597,7 @@
     "description": "Data en afspraken maken — plan je Italiaanse avontuur.",
     "words": [
       "w546",
-      "w548",
+      "w138",
       "w549",
       "w550",
       "w551",
@@ -854,8 +854,8 @@
       "w968",
       "w969",
       "w970",
-      "w971",
-      "w972"
+      "w076",
+      "w078"
     ],
     "grammar": {
       "title": "Bestellen — Vorrei vs. Voglio",
@@ -871,9 +871,9 @@
     "words": [
       "w252",
       "w255",
-      "w973",
-      "w974",
-      "w975",
+      "w081",
+      "w080",
+      "w075",
       "w976",
       "w977",
       "w978"
@@ -892,10 +892,10 @@
     "words": [
       "w261",
       "w264",
-      "w979",
-      "w980",
-      "w981",
-      "w982",
+      "w099",
+      "w102",
+      "w105",
+      "w100",
       "w983",
       "w1025"
     ],
@@ -912,7 +912,7 @@
     "description": "Inchecken, je kamer regelen en voorzieningen vragen.",
     "words": [
       "w266",
-      "w984",
+      "w061",
       "w985",
       "w986",
       "w987",
@@ -936,9 +936,9 @@
       "w280",
       "w989",
       "w990",
-      "w991",
-      "w992",
-      "w993",
+      "w045",
+      "w046",
+      "w047",
       "w994"
     ],
     "grammar": {
@@ -976,9 +976,9 @@
     "words": [
       "w294",
       "w296",
-      "w995",
-      "w996",
-      "w997",
+      "w115",
+      "w116",
+      "w118",
       "w1029",
       "w1030",
       "w1039"
@@ -1082,7 +1082,7 @@
       "w569",
       "w570",
       "w571",
-      "w572",
+      "w111",
       "w573",
       "w574",
       "w575",
@@ -1122,9 +1122,9 @@
     "description": "Italiaans landschap en natuur — van de Alpen tot de Middellandse Zee.",
     "words": [
       "w585",
-      "w586",
-      "w587",
-      "w588",
+      "w161",
+      "w160",
+      "w159",
       "w589",
       "w590",
       "w591",
@@ -1169,7 +1169,7 @@
       "w604",
       "w605",
       "w607",
-      "w608",
+      "w109",
       "w1003"
     ],
     "grammar": {
@@ -1194,8 +1194,8 @@
       "w616"
     ],
     "grammar": {
-      "title": "Bezig zijn met: stare + gerundio",
-      "body": "'Stare + gerundio' = bezig zijn met iets op dit moment. Vorming: stare (sto/stai/sta/stiamo/state/stanno) + gerundio (-ando/-endo). 'Sto mangiando' = ik ben aan het eten. 'Sta dormendo' = hij/zij is aan het slapen. Het gerundio is de -ando/-endo-vorm. Je herkent deze constructie vaak — productief gebruik komt later."
+      "title": "Dagelijkse routine: reflexieve werkwoorden",
+      "body": "Reflexieve werkwoorden beschrijven acties die je op jezelf uitvoert. Ze eindigden op -si: 'alzar-si' (opstaan), 'lavar-si' (wassen), 'vestir-si' (aankleden). Vervoeging: mi alzo / ti alzi / si alza / ci alziamo / vi alzate / si alzano. 'Mi sveglio alle sette' = ik word wakker om zeven uur. 'Si lava le mani' = hij wast zijn handen. Dit zijn vaste dagelijksroutine-woorden die je constant hoort."
     }
   },
   {
@@ -1215,8 +1215,8 @@
       "w624"
     ],
     "grammar": {
-      "title": "Wensen en hopen: spero che, voglio che",
-      "body": "'Spero che' (ik hoop dat) en 'voglio che' (ik wil dat) worden gevolgd door een bijzin. In informeel Italiaans gebruik je vaak de gewone tegenwoordige tijd: 'Spero che arrivi presto' of 'Spero che arriva presto'. Beide vormen zijn gangbaar in dagelijks taalgebruik. Herkenning is nu het doel — productie volgt op B1."
+      "title": "Voorkeur uitdrukken: preferire en mi piace di più",
+      "body": "'Preferire' = liever hebben, de voorkeur geven aan. Vervoeging: preferisco / preferisci / preferisce / preferiamo / preferite / preferiscono. 'Preferisco il treno' = ik neem liever de trein. 'Preferisco il mare alla montagna' = ik geef de voorkeur aan de zee boven de bergen. Je kunt ook zeggen: 'Mi piace di più il caffè' = ik houd meer van koffie. 'Piuttosto' = eerder/liever: 'Piuttosto andiamo a piedi' = laten we liever lopen."
     }
   },
   {
@@ -1226,9 +1226,9 @@
     "level": "A1",
     "description": "Prijzen onderhandelen, ruilen en slim winkelen in Italië.",
     "words": [
-      "w625",
-      "w626",
-      "w627",
+      "w083",
+      "w084",
+      "w087",
       "w628",
       "w629",
       "w630",
@@ -1249,7 +1249,7 @@
     "words": [
       "w633",
       "w634",
-      "w635",
+      "w107",
       "w636",
       "w637",
       "w638",
@@ -1257,8 +1257,8 @@
       "w640"
     ],
     "grammar": {
-      "title": "Passief herkennen: viene costruito, è stato fatto",
-      "body": "Het passief gebruik je als de handeling belangrijker is dan wie het doet. 'Il Colosseo è stato costruito dai Romani' = Het Colosseum is gebouwd door de Romeinen. 'Viene servito' = het wordt geserveerd. Je herkent passief aan 'essere/venire + voltooid deelwoord'. In dagelijks taalgebruik is actief normaler — passief kom je vooral tegen in teksten en beschrijvingen. Je kent nu ~480 Italiaanse woorden en hebt A1 afgerond — benissimo! Je kunt jezelf redden in Italië. Volgende stap: A2!"
+      "title": "Handige vaste uitdrukkingen",
+      "body": "Een paar onmisbare uitdrukkingen voor elke situatie: 'Come si dice...?' = Hoe zeg je...? 'Non importa' = het maakt niet uit. 'Che peccato!' = Wat jammer! 'Non c'è problema' = geen probleem. 'Dai! / Forza!' = Kom op! 'Benvenuto/a' = Welkom. 'A presto' = tot gauw. 'Comunque' = hoe dan ook / toch. Met deze zinnetjes klink je direct natuurlijker. En: proficiat — je hebt nu A1 afgerond en kent ~480 Italiaanse woorden!"
     }
   },
   {
@@ -1986,7 +1986,7 @@
       "body": "'Un chilo di...' = een kilo... 'Un etto di...' = 100 gram... (etto = hectogram, typisch Italiaans). 'Un litro di latte' = een liter melk. 'Mezzo chilo' = een halve kilo. 'Quanto costa?' = hoeveel kost het? 'Me ne dia due etti' = geeft u me 200 gram. Op Italiaanse markten is 'un etto' de standaardmaat voor kaas en vleeswaren."
     },
     "words": [
-      "w753",
+      "w090",
       "w754",
       "w488",
       "w756",
@@ -2028,7 +2028,7 @@
       "body": "'Mi è piaciuto molto' = ik vond het erg leuk (mannelijk/onzijdig). 'Mi è piaciuta molto' = ik vond het erg leuk (vrouwelijk). 'Che film c'è stasera?' = welke film draait er vanavond? 'È già tutto esaurito' = het is al uitverkocht. 'Preferisco i film in lingua originale' = ik geef de voorkeur aan films in de originele taal."
     },
     "words": [
-      "w522",
+      "w149",
       "w770",
       "w529",
       "w772",
@@ -2322,12 +2322,12 @@
       "body": "'Posso provarlo/a?' = mag ik het passen? 'Dov'è il camerino?' = waar is de paskamer? 'Ce l'avete in taglia più grande?' = heeft u het in een grotere maat? 'Questo mi sta bene?' = staat dit me goed? 'Mi sta un po' stretto' = het zit me een beetje te strak. Italiaanse maten verschillen van Nederlandse — controleer altijd de maattabel."
     },
     "words": [
-      "w503",
+      "w097",
       "w628",
       "w883",
       "w884",
       "w885",
-      "w627",
+      "w087",
       "w887",
       "w631"
     ]
@@ -2364,7 +2364,7 @@
       "body": "'Che tempo fa?' = hoe is het weer? (standaardvraag). 'C'è la nebbia' = het is mistig. 'Tira vento' = het waait. 'Grandina' = het hagelt. 'Un temporale' = een onweersbui. 'È afoso' = het is drukkend/benauwd. Noordelijk Italië is bekend om mist ('la pianura padana'), het zuiden om droogte ('la siccità'). Het klimaat varieert enorm — van Alpijnse sneeuw tot mediterrane warmte."
     },
     "words": [
-      "w516",
+      "w122",
       "w515",
       "w899",
       "w900",
@@ -2406,7 +2406,7 @@
       "body": "'Questo quadro mi colpisce molto' = dit schilderij treft me heel erg. 'È stato dipinto da' + kunstenaar = het is geschilderd door... 'Risale al' + eeuw/jaar = het dateert uit... 'È esposto al' + museum = het is tentoongesteld in... Italië heeft meer UNESCO-werelderfgoedsites dan enig ander land. 'Il patrimonio culturale' = het culturele erfgoed — een trots van elke Italiaan."
     },
     "words": [
-      "w608",
+      "w109",
       "w914",
       "w915",
       "w676",
@@ -2434,7 +2434,7 @@
       "w925",
       "w926",
       "w927",
-      "w635"
+      "w107"
     ]
   },
   {
