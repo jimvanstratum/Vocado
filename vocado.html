@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-18 22:34 -->
+<!-- Vocado — standalone build 2026-03-18 22:37 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -1077,16 +1077,25 @@
 
 <div class="toast" id="toast"></div>
 
-<!-- iOS PWA viewport-hoogte fix: --app-height volgt window.innerHeight exact,
-     zodat de app tot onderaan vult ook zonder browserbalk (standalone modus). -->
+<!-- iOS PWA viewport-hoogte fix: --app-height volgt visualViewport.height exact,
+     zodat de app tot onderaan vult ook zonder browserbalk (standalone modus).
+     visualViewport is nauwkeuriger dan window.innerHeight op iOS PWA bij refresh. -->
 <script>
   (function () {
     function setH() {
-      document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
+      var h = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
+      document.documentElement.style.setProperty('--app-height', h + 'px');
     }
+    // Directe aanroep + na eerste paint + na volledig laden (dekt refresh-timing)
     setH();
+    requestAnimationFrame(setH);
+    window.addEventListener('load', setH);
+    window.addEventListener('pageshow', setH);          // herstelt ook na bfcache
     window.addEventListener('resize', setH);
     window.addEventListener('orientationchange', function() { setTimeout(setH, 200); });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', setH);
+    }
   })();
 
   // Meet safe-area-inset-bottom via direct body-child element.
