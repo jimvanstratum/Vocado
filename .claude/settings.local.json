@@ -43,7 +43,9 @@
       "Bash(grep -n \"app-height\" www/index.html www/js/*.js)",
       "Bash(sed -i '' 's/v1\\\\.31 · Italiaans · 90 lessen/v1.32 · Italiaans · 90 lessen/' \"/Users/jim.van.stratum/Applications/Taal app/www/index.html\")",
       "Bash(sed -i '' 's/app\\\\.js?v=22/app.js?v=23/' \"/Users/jim.van.stratum/Applications/Taal app/www/index.html\")",
-      "Bash(grep -n \"^EOF$\" scripts/generate_a2.py)"
+      "Bash(grep -n \"^EOF$\" scripts/generate_a2.py)",
+      "Bash(sed -i '' 's/v1\\\\.35 · Italiaans · 120 lessen · 867 woorden/v1.36 · Italiaans · 120 lessen · 867 woorden/' www/index.html)",
+      "Bash(sed -i '' \"s|app.js?v=26|app.js?v=27|\" www/index.html)"
     ]
   }
 }
