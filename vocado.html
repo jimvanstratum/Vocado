@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-18 10:18 -->
+<!-- Vocado — standalone build 2026-03-18 22:01 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -975,7 +975,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.35 · Italiaans · 120 lessen · 867 woorden</div>
+    <div class="settings-version">Vocado · v1.36 · Italiaans · 120 lessen · 867 woorden</div>
   </div>
 </div>
 
@@ -3353,6 +3353,32 @@ function startReview() {
   renderExercise();
 }
 
+// ─── FOUTEN HERHALEN ──────────────────────────────────────────────────────────
+function startErrorRetry() {
+  const errorWords = sessionErrors
+    .map(e => VOCAB.find(w => w.it === e.it))
+    .filter(Boolean);
+  if (errorWords.length === 0) return;
+
+  isReviewMode  = true;
+  currentLesson = null;
+  sessionXP = 0; sessionCorrect = 0; sessionTotal = 0; sessionErrors = []; exerciseHistory = [];
+
+  getLessonTitle().textContent  = '🔁 Foute woorden oefenen';
+  getLevelBadge().textContent   = `${errorWords.length} woorden`;
+  getSessionXP().textContent    = '+0 XP';
+  getProgressBar().style.width  = '0%';
+  getProgressText().textContent = '0/0';
+
+  exerciseQueue = buildExerciseQueue([], errorWords, VOCAB);
+  exerciseIndex = 0;
+
+  const backBtn = $id('ex-back-btn');
+  if (backBtn) { backBtn.style.display = 'none'; backBtn.onclick = goBack; }
+
+  renderExercise();
+}
+
 // ─── OEFENING RENDEREN ────────────────────────────────────────────────────────
 function updateProgress() {
   const total = exerciseQueue.length;
@@ -3461,6 +3487,7 @@ function showLessonComplete() {
         `).join('')}
       </div>
     </div>
+    <button class="lc-btn secondary" id="lc-retry-errors">🔁 Oefen foute woorden (${sessionErrors.length})</button>
   ` : '';
 
   getExContainer().innerHTML = `
@@ -3485,6 +3512,7 @@ function showLessonComplete() {
 
   $id('lc-home').addEventListener('click', () => navigate('home'));
   $id('lc-next')?.addEventListener('click', () => navigate('lesson', { lessonId: currentLesson.id + 1 }));
+  $id('lc-retry-errors')?.addEventListener('click', startErrorRetry);
 }
 
 function showReviewComplete() {
@@ -3505,6 +3533,7 @@ function showReviewComplete() {
         `).join('')}
       </div>
     </div>
+    <button class="lc-btn secondary" id="lc-retry-errors">🔁 Oefen foute woorden (${sessionErrors.length})</button>
   ` : '';
 
   getExContainer().innerHTML = `
@@ -3525,6 +3554,7 @@ function showReviewComplete() {
     </div>
   `;
   $id('lc-home').addEventListener('click', () => navigate('home'));
+  $id('lc-retry-errors')?.addEventListener('click', startErrorRetry);
 }
 
 // ─── TOETSLES (MILESTONE QUIZ) ────────────────────────────────────────────────

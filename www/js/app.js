@@ -736,6 +736,32 @@ function startReview() {
   renderExercise();
 }
 
+// ─── FOUTEN HERHALEN ──────────────────────────────────────────────────────────
+function startErrorRetry() {
+  const errorWords = sessionErrors
+    .map(e => VOCAB.find(w => w.it === e.it))
+    .filter(Boolean);
+  if (errorWords.length === 0) return;
+
+  isReviewMode  = true;
+  currentLesson = null;
+  sessionXP = 0; sessionCorrect = 0; sessionTotal = 0; sessionErrors = []; exerciseHistory = [];
+
+  getLessonTitle().textContent  = '🔁 Foute woorden oefenen';
+  getLevelBadge().textContent   = `${errorWords.length} woorden`;
+  getSessionXP().textContent    = '+0 XP';
+  getProgressBar().style.width  = '0%';
+  getProgressText().textContent = '0/0';
+
+  exerciseQueue = buildExerciseQueue([], errorWords, VOCAB);
+  exerciseIndex = 0;
+
+  const backBtn = $id('ex-back-btn');
+  if (backBtn) { backBtn.style.display = 'none'; backBtn.onclick = goBack; }
+
+  renderExercise();
+}
+
 // ─── OEFENING RENDEREN ────────────────────────────────────────────────────────
 function updateProgress() {
   const total = exerciseQueue.length;
@@ -844,6 +870,7 @@ function showLessonComplete() {
         `).join('')}
       </div>
     </div>
+    <button class="lc-btn secondary" id="lc-retry-errors">🔁 Oefen foute woorden (${sessionErrors.length})</button>
   ` : '';
 
   getExContainer().innerHTML = `
@@ -868,6 +895,7 @@ function showLessonComplete() {
 
   $id('lc-home').addEventListener('click', () => navigate('home'));
   $id('lc-next')?.addEventListener('click', () => navigate('lesson', { lessonId: currentLesson.id + 1 }));
+  $id('lc-retry-errors')?.addEventListener('click', startErrorRetry);
 }
 
 function showReviewComplete() {
@@ -888,6 +916,7 @@ function showReviewComplete() {
         `).join('')}
       </div>
     </div>
+    <button class="lc-btn secondary" id="lc-retry-errors">🔁 Oefen foute woorden (${sessionErrors.length})</button>
   ` : '';
 
   getExContainer().innerHTML = `
@@ -908,6 +937,7 @@ function showReviewComplete() {
     </div>
   `;
   $id('lc-home').addEventListener('click', () => navigate('home'));
+  $id('lc-retry-errors')?.addEventListener('click', startErrorRetry);
 }
 
 // ─── TOETSLES (MILESTONE QUIZ) ────────────────────────────────────────────────

@@ -41,7 +41,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.35**, cache buster **?v=26**
+- Huidige versie: **v1.36**, cache buster **?v=27**
 
 ### Build & deploy
 
@@ -162,7 +162,18 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 ### Overige features
 - **Dark mode**: handmatig (donker/licht/auto) + systeem-voorkeur (`prefers-color-scheme`)
 - **Streak-teller**: aaneengesloten leerdagen, zichtbaar op homescherm
-- **SRS (SM-2)**: spaced repetition voor woordherhaling
+- **SRS (SM-2)**: spaced repetition via `srs.js`. Quality-scores per antwoord:
+  | Actie | Quality | Gevolg |
+  |---|---|---|
+  | Flashcard "Moeilijk" | 1 | interval → 1 dag, repetitions reset, easeFactor daalt |
+  | MC/type fout | 0 | interval → 1 dag, repetitions reset, easeFactor daalt sterk |
+  | MC/type bijna | 2 | interval → 1 dag, easeFactor daalt licht |
+  | Flashcard "Goed" / antwoord correct | 3–4 | interval × easeFactor (1d→6d→15d→…) |
+  | Flashcard "Makkelijk" | 5 | interval groeit snel, easeFactor stijgt |
+  - Dagelijkse herhaling (`getDueWordIds`) = alle woorden met `nextReview <= vandaag`, max 20
+  - De review is automatisch gevuld met foute/moeilijke woorden — geen extra logica nodig
+  - `sessionErrors[]` = foute woorden deze sessie (max 10, uniek op `it`-veld)
+- **Directe herhaalronde** (`startErrorRetry`): knop "🔁 Oefen foute woorden (N)" op afsluitscherm van les én review, zichtbaar als `sessionErrors.length > 0`. Start mini-sessie via `buildExerciseQueue([], errorWords, VOCAB)` met `isReviewMode = true`. Recursief: nieuwe fouten → knop verschijnt opnieuw.
 - **TTS**: Web Speech API, Italiaanse stem, accenten genormaliseerd (é → e)
 - **Milestone-quiz**: elke 10 lessen, 20 willekeurige woorden uit de voorgaande lessen
 - **Les overslaan**: gebruiker kan lessen markeren als overgeslagen
@@ -182,6 +193,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.33 | A2 uitgebreid: 30 nieuwe lessen (91–120) |
 | v1.34 | Opschonen: deduplicatie, mijn-positie scroll-fix |
 | v1.35 | Grammar 57/58/60 herschreven, artikel-uniformering lessen 1–20, 51 dubbele artikel-versies verwijderd |
+| v1.36 | Directe herhaalronde: "🔁 Oefen foute woorden" knop na les en review |
 
 ---
 
