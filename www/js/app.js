@@ -312,6 +312,7 @@ function renderHome() {
   grid.innerHTML = '';
 
   const levels = [...new Set(CURRICULUM.map(l => l.level))];
+  let globalFirstActiveLesson = null; // eerste actieve les over alle niveaus heen
   levels.forEach(level => {
     const levelLessons = CURRICULUM.filter(l => l.level === level);
 
@@ -482,8 +483,11 @@ function renderHome() {
         } else {
           card.addEventListener('click', () => navigate('lesson', { lessonId: lesson.id }));
         }
-        // Sprint 13: bijhoud eerste actieve (niet-locked) les voor ↓-knop
-        if (!firstActiveEl && !isLocked) firstActiveEl = card;
+        // Sprint 13: bijhoud eerste actieve (niet-locked) les voor ↓-knop en doorgaan-kaart
+        if (!firstActiveEl && !isLocked) {
+          firstActiveEl = card;
+          if (!globalFirstActiveLesson) globalFirstActiveLesson = lesson;
+        }
         target.appendChild(card);
       });
 
@@ -540,28 +544,27 @@ function renderHome() {
       }
     });
 
-    // Sprint 13: ↓ Mijn positie knop toevoegen aan actieve niveauheader
-    if (!isLevelComplete(level) && hasDoneGroups && firstActiveEl && header) {
-      const btn = document.createElement('button');
-      btn.className = 'level-jump-btn';
-      btn.textContent = '↓ Mijn positie';
-      btn.addEventListener('click', e => {
-        e.stopPropagation();
-        // Scroll zodat firstActiveEl één kaarthoogte ónder de bovenkant uitkomt
-        const container = firstActiveEl.closest('.screen-body');
-        if (container) {
-          const elTop = firstActiveEl.getBoundingClientRect().top
-                      - container.getBoundingClientRect().top
-                      + container.scrollTop;
-          const offset = firstActiveEl.offsetHeight;
-          container.scrollTo({ top: Math.max(0, elTop - offset), behavior: 'smooth' });
-        } else {
-          firstActiveEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-      header.appendChild(btn);
-    }
   });
+
+  // Sticky "Doorgaan"-kaart — toont de eerste actieve les over alle niveaus
+  const continueContainer = $id('continue-card-container');
+  if (continueContainer) {
+    if (globalFirstActiveLesson) {
+      continueContainer.style.display = '';
+      continueContainer.innerHTML = `
+        <div class="continue-card" id="continue-card">
+          <span class="continue-card-emoji">${globalFirstActiveLesson.emoji}</span>
+          <div class="continue-card-info">
+            <div class="continue-card-title">${globalFirstActiveLesson.title}</div>
+            <div class="continue-card-sub">Les ${globalFirstActiveLesson.id} · ${globalFirstActiveLesson.level}</div>
+          </div>
+          <button class="continue-card-btn">Doorgaan →</button>
+        </div>`;
+      $id('continue-card').addEventListener('click', () => startLesson(globalFirstActiveLesson.id));
+    } else {
+      continueContainer.style.display = 'none';
+    }
+  }
 }
 
 // ─── LES ──────────────────────────────────────────────────────────────────────
@@ -768,9 +771,38 @@ function updateProgress() {
   const pct   = total > 0 ? Math.round(exerciseIndex / total * 100) : 0;
   getProgressBar().style.width  = pct + '%';
   getProgressText().textContent = `${exerciseIndex}/${total}`;
-  // Sprint 9: toon/verberg terug-knop op basis van geschiedenis
+  // Toon terug-knop zodra er een vorige oefening is
   const backBtn = $id('ex-back-btn');
-  if (backBtn) backBtn.style.display = exerciseHistory.length > 0 ? 'flex' : 'none';
+  if (backBtn) backBtn.style.display = exerciseIndex > 0 ? 'flex' : 'none';
+}
+
+function renderLockedExercise(entry) {
+  updateProgress();
+  const container = getExContainer();
+  container.innerHTML = '';
+  container.classList.remove('slide-in');
+  void container.offsetWidth;
+  container.classList.add('slide-in');
+
+  const exercise = exerciseQueue[exerciseIndex];
+  const wordLine = exercise?.word
+    ? `<div class="locked-word">${exercise.word.it}</div>`
+    : '';
+  const badge = entry.wasWrong
+    ? '<span class="locked-badge locked-wrong">✗ Fout</span>'
+    : '<span class="locked-badge locked-correct">✓ Correct</span>';
+
+  container.innerHTML = `
+    <div class="locked-exercise-card">
+      ${badge}
+      ${wordLine}
+      <div class="locked-hint">Je hebt deze vraag al beantwoord</div>
+      <button class="lc-btn" id="locked-next-btn">Volgende →</button>
+    </div>`;
+  $id('locked-next-btn').addEventListener('click', () => {
+    exerciseIndex++;
+    renderExercise();
+  });
 }
 
 function renderExercise() {
@@ -783,6 +815,12 @@ function renderExercise() {
     } else {
       showLessonComplete();
     }
+    return;
+  }
+
+  // Eerder beantwoorde oefening (teruggenavigeerd): toon vergrendelde weergave
+  if (exerciseIndex < exerciseHistory.length) {
+    renderLockedExercise(exerciseHistory[exerciseIndex]);
     return;
   }
 
@@ -823,9 +861,13 @@ function onDone(result) {
         sessionErrors.push({ it: result.word.it, nl: result.word.nl });
       }
     }
-    // Sprint 9: sla op voor terug-knop (max 20 stappen in geheugen)
-    exerciseHistory.push({ xp: xpEarned, correct: wasCorrect });
-    if (exerciseHistory.length > 20) exerciseHistory.shift();
+    // Sla op voor terug-knop; wasWrong en wordIt voor vergrendelde weergave
+    exerciseHistory.push({
+      xp: xpEarned,
+      correct: wasCorrect,
+      wasWrong: result.result === 'wrong',
+      wordIt: result.word?.it ?? null
+    });
   }
 
   exerciseIndex++;
@@ -833,16 +875,11 @@ function onDone(result) {
   setTimeout(renderExercise, isMetaCard ? 0 : 250);
 }
 
-// Sprint 10: Ga één oefening terug (annuleer ook een lopende auto-advance timer)
+// Ga één oefening terug — antwoord blijft bewaard (vergrendelde weergave)
 function goBack() {
   cancelAdvanceTimer();   // stop pending auto-advance zodat de timer niet achteraf afvuurt
-  if (exerciseHistory.length === 0 || exerciseIndex === 0) return;
-  const last = exerciseHistory.pop();
-  sessionXP      = Math.max(0, sessionXP - last.xp);
-  sessionTotal   = Math.max(0, sessionTotal - 1);
-  if (last.correct) sessionCorrect = Math.max(0, sessionCorrect - 1);
+  if (exerciseIndex === 0) return;
   exerciseIndex--;
-  getSessionXP().textContent = `+${sessionXP} XP`;
   renderExercise();
 }
 

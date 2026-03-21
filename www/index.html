@@ -40,13 +40,13 @@
         --surface:      #FFFFFF;
         --surface2:     #E3EDE5;
         --border:       #C4D9C9;
-        --text:         #152018;
-        --muted:        #5A7D62;
-        --accent:       #3D9A52;
-        --green:        #2E9955;
+        --text:         #1E2D1C;
+        --muted:        #6D7E68;
+        --accent:       #4B6047;
+        --green:        #4B6047;
         --blue:         #0A80C4;
-        --it-red:       #D4880A;
-        --it-green:     #3D9A52;
+        --it-red:       #A2884B;
+        --it-green:     #4B6047;
         --header-grad:  linear-gradient(180deg, #E2F0E5 0%, var(--bg) 100%);
       }
       .lesson-card.done   { background: rgba(61,154,82,0.06); }
@@ -557,16 +557,21 @@
     .level-complete-content.open { display: block; }
 
     /* Sprint 13: ↓ Mijn positie knop in actieve niveauheader */
-    .level-jump-btn {
-      font-size: 10px; font-weight: 700;
-      color: var(--accent);
-      background: rgba(245,166,35,0.12);
-      border: 1px solid rgba(245,166,35,0.25);
-      padding: 2px 9px; border-radius: 10px;
-      cursor: pointer; margin-left: auto; flex-shrink: 0;
-      white-space: nowrap;
-    }
-    .level-jump-btn:active { opacity: 0.7; }
+    /* ── STICKY DOORGAAN-KAART ──────────────────────────────────────────────── */
+    #continue-card-container { padding: 0 16px; margin-bottom: 8px; position: sticky; top: 0; z-index: 10; }
+    .continue-card { background: var(--surface); border: 2px solid var(--accent);
+      border-radius: 14px; display: flex; align-items: center; gap: 12px;
+      padding: 12px 14px; cursor: pointer; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: opacity 0.15s; }
+    .continue-card:active { opacity: 0.75; }
+    .continue-card-emoji { font-size: 22px; flex-shrink: 0; }
+    .continue-card-info { flex: 1; min-width: 0; }
+    .continue-card-title { font-size: 15px; font-weight: 700; color: var(--text);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .continue-card-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .continue-card-btn { background: var(--accent); color: #fff; border: none;
+      border-radius: 10px; padding: 8px 14px; font-size: 13px; font-weight: 700;
+      cursor: pointer; flex-shrink: 0; white-space: nowrap; pointer-events: none; }
 
     /* ── SPRINT 7/8: NIVEAU-HEADERS & DONE-GROEP ─────────────────────────── */
     /* Sprint 9.1: Alle niveau-headers krijgen scheidingslijn (ook de eerste) */
@@ -668,6 +673,16 @@
     .lc-error-it      { font-weight: 700; color: var(--text); font-size: 14px; }
     .lc-error-nl      { font-size: 13px; color: var(--muted); }
 
+    /* ── VERGRENDELDE OEFENING (terug-navigatie) ─────────────────────────── */
+    .locked-exercise-card { display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 16px; flex: 1; padding: 40px 24px; text-align: center; }
+    .locked-badge { display: inline-block; padding: 6px 18px; border-radius: 20px;
+      font-size: 15px; font-weight: 800; }
+    .locked-correct { background: rgba(75,96,71,0.15); color: var(--it-green); }
+    .locked-wrong   { background: rgba(255,59,48,0.12); color: var(--red); }
+    .locked-word    { font-size: 24px; font-weight: 800; color: var(--text); }
+    .locked-hint    { font-size: 13px; color: var(--muted); }
+
     /* ── SPRINT 5: HINT LETTERPANELEN ────────────────────────────────────── */
     .hint-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
     .hint-tiles { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
@@ -689,7 +704,7 @@
     .sli-fill.skipped { background: var(--muted); opacity: 0.4; }
 
     /* ── SPRINT 5: WOORDENBOEK ───────────────────────────────────────────── */
-    .dict-body    { flex: 1; overflow-y: auto; padding: 0 20px 100px; }
+    .dict-body    { flex: 1; overflow-y: auto; padding: 16px 20px 100px; }
     .dict-search  { width: 100%; padding: 12px 16px; background: var(--surface); border: 1.5px solid var(--border); border-radius: 14px; color: var(--text); font-size: 15px; margin-bottom: 12px; }
     .dict-search:focus { outline: none; border-color: var(--accent); }
     .dict-filters { display: flex; gap: 8px; margin-bottom: 14px; }
@@ -810,6 +825,7 @@
         <span class="review-badge" id="review-badge">0</span>
       </button>
     </div>
+    <div id="continue-card-container"></div>
     <div class="lesson-list" id="lesson-list"></div>
   </div>
 </div>
@@ -975,7 +991,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.38 · Italiaans · 120 lessen · 1000 woorden</div>
+    <div class="settings-version">Vocado · v1.39 · Italiaans · 120 lessen · 1000 woorden</div>
   </div>
 </div>
 
@@ -1119,7 +1135,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=29';
+  import './js/app.js?v=30';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
