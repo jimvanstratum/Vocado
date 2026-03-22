@@ -1107,6 +1107,15 @@
     requestAnimationFrame(setH);
     setTimeout(setH, 300);
     setTimeout(setH, 800);
+    // Na SW-update-herlaad heeft iOS meer tijd nodig om de viewport te stabiliseren.
+    // sessionStorage-vlag wordt gezet vlak vóór de herlaad; bij het volgende laden
+    // plannen we extra vertraagde calls (1500ms en 3000ms) zodat iOS de juiste hoogte
+    // al heeft gerapporteerd.
+    if (sessionStorage.getItem('sw-reload')) {
+      sessionStorage.removeItem('sw-reload');
+      setTimeout(setH, 1500);
+      setTimeout(setH, 3000);
+    }
     window.addEventListener('load', setH);
     window.addEventListener('pageshow', setH);          // herstelt ook na bfcache
     window.addEventListener('resize', setH);
@@ -1143,8 +1152,10 @@
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').catch(() => {});
-      /* Herlaad automatisch zodra een nieuwe service worker de controle overneemt */
+      /* Herlaad automatisch zodra een nieuwe service worker de controle overneemt.
+         Sla een vlag op zodat de viewport-hoogte extra vertraagd gemeten wordt na herlaad. */
       navigator.serviceWorker.addEventListener('controllerchange', () => {
+        sessionStorage.setItem('sw-reload', '1');
         window.location.reload();
       });
     }
