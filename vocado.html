@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-21 08:59 -->
+<!-- Vocado — standalone build 2026-03-22 07:29 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -55,12 +55,12 @@
       html, body          { color-scheme: light; }
     }
 
-    /* Handmatig licht thema (data-theme="light") */
+    /* Handmatig licht thema (data-theme="light") — zelfde achtergronden als auto-modus */
     [data-theme="light"] {
-      --bg:           #E0E8D7;
-      --surface:      #EEF3E9;
-      --surface2:     #F7FAF4;
-      --border:       #BDC9B2;
+      --bg:           #F2F7F3;
+      --surface:      #FFFFFF;
+      --surface2:     #E3EDE5;
+      --border:       #C4D9C9;
       --text:         #1E2D1C;
       --muted:        #6D7E68;
       --accent:       #4B6047;
@@ -68,7 +68,7 @@
       --blue:         #0A80C4;
       --it-red:       #A2884B;
       --it-green:     #4B6047;
-      --header-grad:  linear-gradient(180deg, #CDD9C3 0%, var(--bg) 100%);
+      --header-grad:  linear-gradient(180deg, #E2F0E5 0%, var(--bg) 100%);
       color-scheme: light;
     }
     [data-theme="light"] .lesson-card.done   { background: rgba(61,154,82,0.06); }
@@ -558,7 +558,7 @@
 
     /* Sprint 13: ↓ Mijn positie knop in actieve niveauheader */
     /* ── STICKY DOORGAAN-KAART ──────────────────────────────────────────────── */
-    #continue-card-container { padding: 0 16px; margin-bottom: 8px; position: sticky; top: 0; z-index: 10; }
+    #continue-card-container { padding: 8px 16px 4px; position: sticky; top: 0; z-index: 10; }
     .continue-card { background: var(--surface); border: 2px solid var(--accent);
       border-radius: 14px; display: flex; align-items: center; gap: 12px;
       padding: 12px 14px; cursor: pointer; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -1102,12 +1102,15 @@
       var h = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
       document.documentElement.style.setProperty('--app-height', h + 'px');
     }
-    // Directe aanroep + na eerste paint + na volledig laden (dekt refresh-timing)
+    // Directe aanroep + meerdere vertraagde calls (dekt SW-update-herlaad timing)
     setH();
     requestAnimationFrame(setH);
+    setTimeout(setH, 300);
+    setTimeout(setH, 800);
     window.addEventListener('load', setH);
     window.addEventListener('pageshow', setH);          // herstelt ook na bfcache
     window.addEventListener('resize', setH);
+    window.addEventListener('visibilitychange', function() { if (!document.hidden) setH(); });
     window.addEventListener('orientationchange', function() { setTimeout(setH, 200); });
     if (window.visualViewport) {
       window.visualViewport.addEventListener('resize', setH);
@@ -3202,7 +3205,7 @@ function renderHome() {
           </div>
           <button class="continue-card-btn">Doorgaan →</button>
         </div>`;
-      $id('continue-card').addEventListener('click', () => startLesson(globalFirstActiveLesson.id));
+      $id('continue-card').addEventListener('click', () => navigate('lesson', { lessonId: globalFirstActiveLesson.id }));
     } else {
       continueContainer.style.display = 'none';
     }

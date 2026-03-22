@@ -560,7 +560,7 @@ function renderHome() {
           </div>
           <button class="continue-card-btn">Doorgaan →</button>
         </div>`;
-      $id('continue-card').addEventListener('click', () => startLesson(globalFirstActiveLesson.id));
+      $id('continue-card').addEventListener('click', () => navigate('lesson', { lessonId: globalFirstActiveLesson.id }));
     } else {
       continueContainer.style.display = 'none';
     }
