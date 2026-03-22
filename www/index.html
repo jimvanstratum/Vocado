@@ -105,7 +105,7 @@
        Gebruikt height:var(--app-height) zodat #app altijd de volledige viewport vult (y=0→793).
        #screens en #shared-nav zijn flex-children, geen position:fixed op de nav. */
     #app { position: fixed; top: 0; left: 0; right: 0;
-      height: var(--app-height, 100vh);
+      height: var(--app-height, 100dvh);
       display: flex; flex-direction: column;
       background: var(--surface); }
     #screens { flex: 1; position: relative; overflow: hidden; }
@@ -1150,18 +1150,27 @@
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').catch(() => {});
-      /* Toon update-banner zodra een nieuwe service worker klaar staat.
-         Geen auto-reload: de gebruiker sluit de app zelf en opent hem opnieuw,
-         zodat iOS de viewport-hoogte correct instelt bij een frisse start. */
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        var banner = document.getElementById('update-banner');
-        if (banner) banner.style.display = '';
-        var closeBtn = document.getElementById('update-banner-close');
-        if (closeBtn) closeBtn.addEventListener('click', function () {
-          banner.style.display = 'none';
+      /* SW-registratie: toon banner alleen bij een echte versiewissel.
+         controllerchange vuurt ook bij een gewone cold-start (clients.claim),
+         dus we luisteren liever op updatefound + statechange van de nieuwe worker.
+         Zo voorkomt de gebruiker nodeloze meldingen bij elke opstart. */
+      navigator.serviceWorker.register('./sw.js').then(function (reg) {
+        reg.addEventListener('updatefound', function () {
+          var newWorker = reg.installing;
+          if (!newWorker) return;
+          newWorker.addEventListener('statechange', function () {
+            if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+              // Echte update: nieuwe SW heeft de controle overgenomen
+              var banner = document.getElementById('update-banner');
+              if (banner) banner.style.display = '';
+              var closeBtn = document.getElementById('update-banner-close');
+              if (closeBtn) closeBtn.addEventListener('click', function () {
+                banner.style.display = 'none';
+              });
+            }
+          });
         });
-      });
+      }).catch(function () {});
     }
   });
 </script>
