@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-03-22 07:57 -->
+<!-- Vocado — standalone build 2026-03-22 08:01 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -1102,23 +1102,19 @@
       var h = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
       document.documentElement.style.setProperty('--app-height', h + 'px');
     }
-    // Directe aanroep + meerdere vertraagde calls (dekt SW-update-herlaad timing)
+    // Meteen instellen voor initiële render
     setH();
-    requestAnimationFrame(setH);
-    setTimeout(setH, 300);
-    setTimeout(setH, 800);
-    // Na SW-update-herlaad heeft iOS meer tijd nodig om de viewport te stabiliseren.
-    // sessionStorage-vlag wordt gezet vlak vóór de herlaad; bij het volgende laden
-    // plannen we extra vertraagde calls (1500ms en 3000ms) zodat iOS de juiste hoogte
-    // al heeft gerapporteerd.
-    if (sessionStorage.getItem('sw-reload')) {
-      sessionStorage.removeItem('sw-reload');
-      setTimeout(setH, 1500);
-      setTimeout(setH, 3000);
-    }
-    window.addEventListener('load', setH);
-    window.addEventListener('pageshow', setH);          // herstelt ook na bfcache
+    // Stabilisatie-polling: meet elke 100ms gedurende 4 seconden.
+    // iOS geeft na een SW-update-herlaad een tijdlang een verkeerde
+    // visualViewport.height terug; door te blijven meten tot de waarde
+    // verandert, vangen we dit altijd op — ongeacht wanneer iOS corrigeert.
+    var _lastH = 0, _poll = setInterval(function () {
+      var h = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+      if (h !== _lastH) { _lastH = h; document.documentElement.style.setProperty('--app-height', h + 'px'); }
+    }, 100);
+    setTimeout(function () { clearInterval(_poll); setH(); }, 4000);
     window.addEventListener('resize', setH);
+    window.addEventListener('pageshow', setH);          // herstelt ook na bfcache
     window.addEventListener('visibilitychange', function() { if (!document.hidden) setH(); });
     window.addEventListener('orientationchange', function() { setTimeout(setH, 200); });
     if (window.visualViewport) {
