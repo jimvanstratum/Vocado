@@ -558,7 +558,7 @@
 
     /* Sprint 13: ↓ Mijn positie knop in actieve niveauheader */
     /* ── STICKY DOORGAAN-KAART ──────────────────────────────────────────────── */
-    #continue-card-container { padding: 8px 16px 4px; position: sticky; top: 0; z-index: 10; }
+    #continue-card-container { padding: 8px 16px 4px; position: sticky; top: var(--safe-t); z-index: 10; }
     .continue-card { background: var(--surface); border: 2px solid var(--accent);
       border-radius: 14px; display: flex; align-items: center; gap: 12px;
       padding: 12px 14px; cursor: pointer; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -775,6 +775,16 @@
   </style>
 </head>
 <body>
+
+<!-- UPDATE BANNER — getoond zodra een nieuwe service worker klaar staat -->
+<div id="update-banner" class="install-banner" style="display:none" role="complementary" aria-label="Update beschikbaar">
+  <div class="ib-icon">🔄</div>
+  <div class="ib-text">
+    <strong>Nieuwe versie beschikbaar</strong>
+    <span>Sluit de app en open hem opnieuw</span>
+  </div>
+  <button class="ib-close" id="update-banner-close" aria-label="Sluiten">✕</button>
+</div>
 
 <!-- PWA INSTALL BANNER — getoond na eerste les, verborgen als al als app geïnstalleerd -->
 <div id="install-banner" class="install-banner" style="display:none" role="complementary" aria-label="App installeren">
@@ -1102,19 +1112,12 @@
       var h = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
       document.documentElement.style.setProperty('--app-height', h + 'px');
     }
-    // Meteen instellen voor initiële render
     setH();
-    // Stabilisatie-polling: meet elke 100ms gedurende 4 seconden.
-    // iOS geeft na een SW-update-herlaad een tijdlang een verkeerde
-    // visualViewport.height terug; door te blijven meten tot de waarde
-    // verandert, vangen we dit altijd op — ongeacht wanneer iOS corrigeert.
-    var _lastH = 0, _poll = setInterval(function () {
-      var h = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-      if (h !== _lastH) { _lastH = h; document.documentElement.style.setProperty('--app-height', h + 'px'); }
-    }, 100);
-    setTimeout(function () { clearInterval(_poll); setH(); }, 4000);
+    requestAnimationFrame(setH);
+    setTimeout(setH, 300);
+    window.addEventListener('load', setH);
+    window.addEventListener('pageshow', setH);
     window.addEventListener('resize', setH);
-    window.addEventListener('pageshow', setH);          // herstelt ook na bfcache
     window.addEventListener('visibilitychange', function() { if (!document.hidden) setH(); });
     window.addEventListener('orientationchange', function() { setTimeout(setH, 200); });
     if (window.visualViewport) {
@@ -1148,9 +1151,16 @@
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').catch(() => {});
-      /* Herlaad automatisch zodra een nieuwe service worker de controle overneemt */
+      /* Toon update-banner zodra een nieuwe service worker klaar staat.
+         Geen auto-reload: de gebruiker sluit de app zelf en opent hem opnieuw,
+         zodat iOS de viewport-hoogte correct instelt bij een frisse start. */
       navigator.serviceWorker.addEventListener('controllerchange', () => {
-        window.location.reload();
+        var banner = document.getElementById('update-banner');
+        if (banner) banner.style.display = '';
+        var closeBtn = document.getElementById('update-banner-close');
+        if (closeBtn) closeBtn.addEventListener('click', function () {
+          banner.style.display = 'none';
+        });
       });
     }
   });
