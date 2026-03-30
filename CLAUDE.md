@@ -41,7 +41,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.38**, cache buster **?v=29**
+- Huidige versie: **v1.40**, cache buster **?v=31**
 
 ### Build & deploy
 
@@ -95,20 +95,20 @@ Array van woord-objecten:
 
 ### Conventies
 
-- **Word-IDs**: `wNNN` (driecijferig, nul-padded: w001–w960, gaps mogelijk door deduplicatie)
-- **Lesson-IDs**: integers 1–120
-- **Levels**: `"A1"` (lessen 1–60) of `"A2"` (lessen 61–120)
+- **Word-IDs**: `wNNN` (w001–w1690, gaps mogelijk door deduplicatie)
+- **Lesson-IDs**: integers 1–180
+- **Levels**: `"A1"` (lessen 1–60), `"A2"` (lessen 61–120), `"B1"` (lessen 121–180)
 - **Elke les**: exact 8 woorden (uitzondering: les 3 heeft 10 vanwege cijferreeks)
 - **Zelfstandige naamwoorden**: altijd met lidwoord (`il/la/lo/l'/i/le/gli`)
 - **Grammatica**: A1-niveau = herkenning, geen productie van complexe constructies
 
 ---
 
-## Huidige staat (v1.35)
+## Huidige staat (v1.40)
 
 ### Inhoud
-- **120 lessen**: A1 = lessen 1–60, A2 = lessen 61–120
-- **1000 unieke woorden**: A1 = 500, A2 = 500
+- **180 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–180
+- **1480 woorden**: A1 = 500, A2 = 500, B1 = 480
 - **Woordtelling per les**: 8 (les 3: 10)
 
 ### Niveau-indeling (CEFR)
@@ -116,13 +116,14 @@ Array van woord-objecten:
 |--------|--------|---------|-----------|
 | A1 | 1–60 | 500 | 500–700 ✓ |
 | A2 | 61–120 | 500 | +500–800 ✓ |
-| B1 | 121+ | 0 | +1500 (niet gestart) |
+| B1 | 121–180 | 480 | +1500 (gestart, eerste 480) |
 
 ### Milestone-namen (MILESTONE_NAMES in app.js)
 
 ```javascript
 10: 'Toetsles A1 — Blok 1 (les 1–10)'  ...t/m...  60: 'Toetsles A1 — Blok 6 (les 51–60)'
 70: 'Toetsles A2 — Blok 1 (les 61–70)' ...t/m... 120: 'Toetsles A2 — Blok 6 (les 111–120)'
+130: 'Toetsles B1 — Blok 1 (les 121–130)' ...t/m... 180: 'Toetsles B1 — Blok 6 (les 171–180)'
 ```
 
 ---
@@ -196,6 +197,8 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.36 | Directe herhaalronde: "🔁 Oefen foute woorden" knop na les en review |
 | v1.37 | Sprint 1: Grammar herschreven lessen 61, 79, 80, 81, 85, 87, 88, 90; "B1 bereikt!"-bug les 80 opgelost |
 | v1.38 | Sprint 2: Vocabulaire aangevuld tot A1=500 + A2=500 (totaal 1000 woorden) |
+| v1.39 | Sprint 3: UI-fixes (terugnavigatie vergrendeld, kleurthema's, Doorgaan-kaart, SW-update-banner) |
+| v1.40 | Sprint 4: B1-content — 60 nieuwe lessen (121–180), 480 woorden, 6 grammaticablokken |
 
 ---
 
@@ -209,7 +212,7 @@ Gebruik dit als maatlat bij het plannen van content en features.
 |--------|--------------------|--------------------|-----------|
 | A1 | ±500–700 | 500–700 | 500 ✓ |
 | A2 | ±1.000–1.500 | +500–800 | 500 ✓ |
-| B1 | ±2.500–3.000 | +1.500 | 0 |
+| B1 | ±2.500–3.000 | +1.500 | 480 (gestart) |
 | B2+ | ±5.000 | +2.000 | 0 |
 
 ### Grammatica per niveau
@@ -255,19 +258,15 @@ Tot B2 = circa **600–800 uur** totale studie.
 ## Bekende issues
 
 - **git push credentials**: werkt niet automatisch op dit apparaat — altijd handmatig pushen
-- **Woordtekort A1**: 432 woorden is aan de onderkant van CEFR A1 (doel: 500–700)
-
 ---
 
 ## Gepland / toekomstige sprints
 
 | Prioriteit | Sprint | Toelichting |
 |---|---|---|
-| Hoog | **B1-content** | Lessen 121–180, ~500 nieuwe woorden, grammatica: subjonctief, indirecte rede |
-| Middel | **Foutanalyse** | Na een les tonen welke woorden fout gingen, gerichte herhaling |
-| Middel | **Voortgangsgrafiek** | Woorden per week in stats-scherm |
-| Laag | **Push-notificaties** | "Je hebt vandaag nog niet geoefend" (PWA ondersteunt dit) |
-| Laag | **Geluidseffecten** | Subtiel geluid bij goed/fout |
+| Hoog | **Spaans toevoegen** | Tweede taal naast Italiaans; zelfde lesstructuur, eigen curriculum + woordenlijst |
+| Middel | **Nieuwe oefenvormen** | Bijv. gat invullen, vervoegen, koppelen, leestekst — voornamelijk relevant voor B1 |
+| Middel | **B1-woorduitbreiding** | B1 heeft nu 480 woorden, CEFR-doel is +1500 — kan aangevuld worden met extra woorden |
 
 ---
 
