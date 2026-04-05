@@ -301,6 +301,116 @@ export function renderFillBlankType(exercise, container, onComplete) {
 }
 
 
+/**
+ * Koppelen (matching) — koppel 4 Italiaanse woorden aan hun Nederlandse vertaling.
+ * exercise.words = array van 4 woordobjecten (geselecteerd in buildExerciseQueue).
+ */
+export function renderMatching(exercise, container, onComplete) {
+  const pairs = exercise.words;
+  const hasTTS = isTTSAvailable();
+
+  const leftItems  = shuffleEx(pairs.map(w => ({ id: w.id, text: stripArticle(w.it), full: w.it })));
+  const rightItems = shuffleEx(pairs.map(w => ({ id: w.id, text: w.nl })));
+
+  let selectedLeft = null;
+  let matched = new Set();
+  let attempts = 0;
+  let errors = 0;
+
+  const rebuild = () => {
+    const leftCol  = container.querySelector('#match-left');
+    const rightCol = container.querySelector('#match-right');
+
+    leftCol.innerHTML = leftItems.map(item => {
+      const done = matched.has(item.id);
+      const sel  = selectedLeft === item.id;
+      return `<button class="match-chip ${done ? 'match-done' : ''} ${sel ? 'match-selected' : ''}" data-id="${item.id}" data-side="left" ${done ? 'disabled' : ''}>${item.text}</button>`;
+    }).join('');
+
+    rightCol.innerHTML = rightItems.map(item => {
+      const done = matched.has(item.id);
+      return `<button class="match-chip ${done ? 'match-done' : ''}" data-id="${item.id}" data-side="right" ${done ? 'disabled' : ''}>${item.text}</button>`;
+    }).join('');
+
+    // Event listeners
+    leftCol.querySelectorAll('.match-chip:not([disabled])').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedLeft = btn.dataset.id;
+        if (hasTTS) {
+          const item = leftItems.find(i => i.id === btn.dataset.id);
+          if (item) speak(item.full);
+        }
+        rebuild();
+      });
+    });
+
+    rightCol.querySelectorAll('.match-chip:not([disabled])').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!selectedLeft) return;
+        attempts++;
+        const isMatch = btn.dataset.id === selectedLeft;
+
+        if (isMatch) {
+          matched.add(selectedLeft);
+          // Flash groen
+          const leftBtn = leftCol.querySelector(`[data-id="${selectedLeft}"]`);
+          if (leftBtn) leftBtn.classList.add('match-correct');
+          btn.classList.add('match-correct');
+          selectedLeft = null;
+
+          if (matched.size === pairs.length) {
+            // Alle paren gekoppeld
+            setTimeout(() => {
+              const allCorrect = errors === 0;
+              const fb = container.querySelector('#match-feedback');
+              fb.className = 'mc-feedback correct show';
+              fb.innerHTML = allCorrect
+                ? '✓ Perfect! Alle paren correct gekoppeld.'
+                : `✓ Klaar! ${errors} fout${errors > 1 ? 'en' : ''} gemaakt.`;
+
+              const result = allCorrect ? 'correct' : 'wrong';
+              pairs.forEach(w => {
+                updateWordState(w.id, allCorrect ? 4 : 2);
+              });
+              recordAnswer(allCorrect);
+
+              const nextBtn = container.querySelector('#ex-next');
+              setupNextBtn(nextBtn, () => onComplete({ result, word: pairs[0], xp: allCorrect ? 6 : 2 }), allCorrect);
+            }, 400);
+          } else {
+            setTimeout(rebuild, 400);
+          }
+        } else {
+          errors++;
+          // Flash rood
+          const leftBtn = leftCol.querySelector(`[data-id="${selectedLeft}"]`);
+          if (leftBtn) leftBtn.classList.add('match-wrong');
+          btn.classList.add('match-wrong');
+          selectedLeft = null;
+          setTimeout(() => {
+            leftCol.querySelectorAll('.match-wrong').forEach(b => b.classList.remove('match-wrong'));
+            rightCol.querySelectorAll('.match-wrong').forEach(b => b.classList.remove('match-wrong'));
+            rebuild();
+          }, 600);
+        }
+      });
+    });
+  };
+
+  container.innerHTML = `
+    <div class="ex-label">Koppel de woorden</div>
+    <div class="match-grid">
+      <div class="match-col" id="match-left"></div>
+      <div class="match-col" id="match-right"></div>
+    </div>
+    <div class="mc-feedback" id="match-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>
+  `;
+
+  rebuild();
+}
+
+
 // ─── Queue builder ─────────────────────────────────────────────────────────────
 
 /**
@@ -345,6 +455,12 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
     queue.push({ type: 'fill-in-blank-mc', word, isNew: false });
   });
 
+  // Koppelen: 1 groepsoefening per les met 4 willekeurige woorden uit de les
+  if (newWords.length >= 4) {
+    const matchWords = shuffleEx([...newWords]).slice(0, 4);
+    queue.push({ type: 'matching', words: matchWords, isNew: false });
+  }
+
   // Review: random type, inclusief word-order, listen-type, sentence-choice en fill-in-blank-type
   reviewWords.forEach(word => {
     const types = ['multiple-choice', 'type'];
@@ -358,6 +474,12 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
     const type = types[Math.floor(Math.random() * types.length)];
     queue.push({ type, word, isNew: false });
   });
+
+  // Koppelen review: als er 4+ review-woorden zijn, voeg 1 matching-groep toe
+  if (reviewWords.length >= 4) {
+    const matchReview = shuffleEx([...reviewWords]).slice(0, 4);
+    queue.push({ type: 'matching', words: matchReview, isNew: false });
+  }
 
   // Flashcards eerst (introductie), rest geshuffled
   const flashcards = queue.filter(e => e.type === 'flashcard');
