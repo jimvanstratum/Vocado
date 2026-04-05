@@ -3780,5 +3780,2525 @@
       "w1689",
       "w1690"
     ]
+  },
+  {
+    "id": 181,
+    "title": "Passato remoto — regelmatig",
+    "emoji": "📜",
+    "level": "B1",
+    "description": "Leer de passato remoto van regelmatige werkwoorden.",
+    "grammar": {
+      "title": "Passato remoto — regelmatig",
+      "body": "De passato remoto beschrijft afgesloten handelingen in het (verre) verleden. Je vindt hem vooral in boeken, kranten en verhalen.\n\n-are → parlai, parlasti, parlò, parlammo, parlaste, parlarono\n-ere → credei (credetti), credesti, credé (credette), credemmo, credeste, crederono (credettero)\n-ire → dormii, dormisti, dormì, dormimmo, dormiste, dormirono\n\nVuistregel: in Noord-Italië gebruikt men vaker de passato prossimo; in Zuid-Italië en in geschreven taal is de passato remoto gangbaar."
+    },
+    "words": [
+      "w1691",
+      "w1692",
+      "w1693",
+      "w1694",
+      "w1695",
+      "w1696",
+      "w1697",
+      "w1698"
+    ]
+  },
+  {
+    "id": 182,
+    "title": "Passato remoto — onregelmatig",
+    "emoji": "📜",
+    "level": "B1",
+    "description": "De belangrijkste onregelmatige vormen van de passato remoto.",
+    "grammar": {
+      "title": "Passato remoto — onregelmatig",
+      "body": "Veel veelgebruikte werkwoorden zijn onregelmatig in de passato remoto. De 1e, 3e persoon enkelvoud en 3e persoon meervoud zijn afwijkend; de overige volgen het regelmatige patroon.\n\nessere → fui, fosti, fu, fummo, foste, furono\navere → ebbi, avesti, ebbe, avemmo, aveste, ebbero\nfare → feci, facesti, fece, facemmo, faceste, fecero\ndire → dissi, dicesti, disse, dicemmo, diceste, dissero\nvenire → venni, venisti, venne, venimmo, veniste, vennero"
+    },
+    "words": [
+      "w1699",
+      "w1700",
+      "w1701",
+      "w1702",
+      "w1703",
+      "w1704",
+      "w1705",
+      "w1706"
+    ]
+  },
+  {
+    "id": 183,
+    "title": "Italiaanse geschiedenis",
+    "emoji": "🏛️",
+    "level": "B1",
+    "description": "Praat over historische gebeurtenissen met de passato remoto.",
+    "grammar": {
+      "title": "Passato remoto in context",
+      "body": "De passato remoto wordt vaak gebruikt bij historische feiten:\n\nRoma fu fondata nel 753 a.C. — Rome werd gesticht in 753 v.Chr.\nDante scrisse la Divina Commedia. — Dante schreef de Goddelijke Komedie.\n\nLet op: bij persoonlijke ervaringen gebruik je in gesproken Italiaans liever de passato prossimo."
+    },
+    "words": [
+      "w1707",
+      "w1708",
+      "w1709",
+      "w1710",
+      "w1711",
+      "w1712",
+      "w1713",
+      "w1714"
+    ]
+  },
+  {
+    "id": 184,
+    "title": "Kunst & architectuur",
+    "emoji": "🎨",
+    "level": "B1",
+    "description": "Woorden over Italiaanse kunst en bouwwerken.",
+    "grammar": {
+      "title": "Kunst beschrijven",
+      "body": "Bij het beschrijven van kunst en architectuur gebruik je vaak de passato remoto (voor historische feiten) en het passief:\n\nIl Colosseo fu costruito dai Romani. — Het Colosseum werd gebouwd door de Romeinen.\nQuesto quadro fu dipinto da Caravaggio. — Dit schilderij werd geschilderd door Caravaggio."
+    },
+    "words": [
+      "w1715",
+      "w1716",
+      "w1717",
+      "w1718",
+      "w1719",
+      "w1720",
+      "w1721",
+      "w1722"
+    ]
+  },
+  {
+    "id": 185,
+    "title": "Beroemde Italianen",
+    "emoji": "🌟",
+    "level": "B1",
+    "description": "Leer over bekende Italiaanse personen en hun bijdragen.",
+    "grammar": {
+      "title": "Biografieën vertellen",
+      "body": "Bij biografieën combineer je de passato remoto met tijdsaanduidingen:\n\nLeonardo nacque nel 1452 e morì nel 1519. — Leonardo werd geboren in 1452 en stierf in 1519.\n\nnascere → nacqui, nascesti, nacque, nascemmo, nasceste, nacquero\nmorire → morii, moristi, morì, morimmo, moriste, morirono"
+    },
+    "words": [
+      "w1723",
+      "w1724",
+      "w1725",
+      "w1726",
+      "w1727",
+      "w1728",
+      "w1729",
+      "w1730"
+    ]
+  },
+  {
+    "id": 186,
+    "title": "De Renaissance",
+    "emoji": "🖼️",
+    "level": "B1",
+    "description": "De Italiaanse Renaissance en haar invloed op Europa.",
+    "grammar": {
+      "title": "Historische periodes beschrijven",
+      "body": "Gebruik de passato remoto voor historische feiten en het imperfetto voor beschrijvingen van de tijd:\n\nDurante il Rinascimento, Firenze era il centro dell'arte. — Tijdens de Renaissance was Florence het centrum van de kunst.\nMichelangelo scolpì il David nel 1504. — Michelangelo beeldhouwde de David in 1504."
+    },
+    "words": [
+      "w1731",
+      "w1732",
+      "w1733",
+      "w1734",
+      "w1735",
+      "w1736",
+      "w1737",
+      "w1738"
+    ]
+  },
+  {
+    "id": 187,
+    "title": "Moderne geschiedenis",
+    "emoji": "📰",
+    "level": "B1",
+    "description": "Italiaanse geschiedenis van de 19e en 20e eeuw.",
+    "grammar": {
+      "title": "Moderne geschiedenis vertellen",
+      "body": "Bij recente geschiedenis gebruik je zowel passato remoto (formeel/geschreven) als passato prossimo (gesproken):\n\nL'Italia fu unificata nel 1861. (passato remoto, formeel)\nL'Italia è stata unificata nel 1861. (passato prossimo, gesproken)"
+    },
+    "words": [
+      "w1739",
+      "w1740",
+      "w1741",
+      "w1742",
+      "w1743",
+      "w1744",
+      "w1745",
+      "w1746"
+    ]
+  },
+  {
+    "id": 188,
+    "title": "Tradities & feestdagen",
+    "emoji": "🎄",
+    "level": "B1",
+    "description": "Italiaanse feestdagen en tradities door het jaar heen.",
+    "grammar": {
+      "title": "Tradities beschrijven",
+      "body": "Bij tradities gebruik je vaak het presens (gewoonte) of imperfetto (vroeger):\n\nA Natale si mangia il panettone. — Met Kerst eet men panettone.\nQuando ero piccolo, a Pasqua andavamo sempre dai nonni. — Toen ik klein was, gingen we met Pasen altijd naar opa en oma."
+    },
+    "words": [
+      "w1747",
+      "w1748",
+      "w1749",
+      "w1750",
+      "w1751",
+      "w1752",
+      "w1753",
+      "w1754"
+    ]
+  },
+  {
+    "id": 189,
+    "title": "Italiaanse muziek",
+    "emoji": "🎵",
+    "level": "B1",
+    "description": "Van opera tot moderne Italiaanse muziek.",
+    "grammar": {
+      "title": "Over muziek praten",
+      "body": "Nuttige constructies bij het praten over muziek:\n\nQuesta canzone è stata scritta da… — Dit lied is geschreven door…\nMi piace ascoltare… — Ik luister graag naar…\nSuonare uno strumento — een instrument bespelen\nCantare una canzone — een lied zingen"
+    },
+    "words": [
+      "w1755",
+      "w1756",
+      "w1757",
+      "w1758",
+      "w1759",
+      "w1760",
+      "w1761",
+      "w1762"
+    ]
+  },
+  {
+    "id": 190,
+    "title": "Toetsles B1 — Blok 7",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 181–190: passato remoto & Italiaanse cultuur.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 7 (les 181–190)",
+      "body": "In dit blok heb je geleerd:\n• De passato remoto (regelmatig en onregelmatig)\n• Historische feiten beschrijven\n• Kunst, architectuur en muziek bespreken\n• Italiaanse tradities en feestdagen"
+    },
+    "words": [
+      "w1763",
+      "w1764",
+      "w1765",
+      "w1766",
+      "w1767",
+      "w1768",
+      "w1769",
+      "w1770"
+    ]
+  },
+  {
+    "id": 191,
+    "title": "Condizionale passato — vorming",
+    "emoji": "💭",
+    "level": "B1",
+    "description": "Leer de condizionale passato voor hypothetische situaties in het verleden.",
+    "grammar": {
+      "title": "Condizionale passato",
+      "body": "De condizionale passato = condizionale van avere/essere + voltooid deelwoord.\n\navrei parlato — ik zou gesproken hebben\nsarei andato/a — ik zou gegaan zijn\n\nGebruik:\n• Spijt: Avrei dovuto studiare di più. — Ik had meer moeten studeren.\n• Onvervulde wens: Sarei voluto venire. — Ik had willen komen.\n• Toekomst in het verleden: Disse che sarebbe venuto. — Hij zei dat hij zou komen."
+    },
+    "words": [
+      "w1771",
+      "w1772",
+      "w1773",
+      "w1774",
+      "w1775",
+      "w1776",
+      "w1777",
+      "w1778"
+    ]
+  },
+  {
+    "id": 192,
+    "title": "Spijt uitdrukken",
+    "emoji": "😔",
+    "level": "B1",
+    "description": "Gebruik de condizionale passato om spijt uit te drukken.",
+    "grammar": {
+      "title": "Spijt met condizionale passato",
+      "body": "Gebruik avrei dovuto / avrei potuto + infinitief voor spijt:\n\nAvrei dovuto ascoltarti. — Ik had naar je moeten luisteren.\nAvrei potuto fare di meglio. — Ik had beter kunnen doen.\nNon avrei dovuto dire quello. — Ik had dat niet moeten zeggen.\n\nVuistregel: dovere/potere/volere in condizionale passato + infinitief."
+    },
+    "words": [
+      "w1779",
+      "w1780",
+      "w1781",
+      "w1782",
+      "w1783",
+      "w1784",
+      "w1785",
+      "w1786"
+    ]
+  },
+  {
+    "id": 193,
+    "title": "Wensen in het verleden",
+    "emoji": "🌠",
+    "level": "B1",
+    "description": "Praat over dingen die je had willen doen.",
+    "grammar": {
+      "title": "Wensen met condizionale passato",
+      "body": "Avrei voluto + infinitief = ik had willen…\n\nAvrei voluto viaggiare di più. — Ik had meer willen reizen.\nSaremmo voluti restare. — We hadden willen blijven.\n\nMet magari: Magari avessi studiato medicina! — Had ik maar geneeskunde gestudeerd!"
+    },
+    "words": [
+      "w1787",
+      "w1788",
+      "w1789",
+      "w1790",
+      "w1791",
+      "w1792",
+      "w1793",
+      "w1794"
+    ]
+  },
+  {
+    "id": 194,
+    "title": "Financiën & bankzaken",
+    "emoji": "🏦",
+    "level": "B1",
+    "description": "Woordenschat voor de bank en geldzaken.",
+    "grammar": {
+      "title": "Bankzaken regelen",
+      "body": "Nuttige zinnen bij de bank:\n\nVorrei aprire un conto corrente. — Ik zou graag een lopende rekening openen.\nPosso fare un bonifico? — Kan ik een overboeking doen?\nQual è il tasso d'interesse? — Wat is de rente?"
+    },
+    "words": [
+      "w1795",
+      "w1796",
+      "w1797",
+      "w1798",
+      "w1799",
+      "w1800",
+      "w1801",
+      "w1802"
+    ]
+  },
+  {
+    "id": 195,
+    "title": "Economie & geld",
+    "emoji": "💶",
+    "level": "B1",
+    "description": "Basiswoorden over economie en de arbeidsmarkt.",
+    "grammar": {
+      "title": "Over economie praten",
+      "body": "Belangrijke economische termen:\n\nL'economia cresce / è in crescita. — De economie groeit.\nLa disoccupazione è alta / bassa. — De werkloosheid is hoog / laag.\nIl costo della vita è aumentato. — De kosten van levensonderhoud zijn gestegen."
+    },
+    "words": [
+      "w1803",
+      "w1804",
+      "w1805",
+      "w1806",
+      "w1807",
+      "w1808",
+      "w1809",
+      "w1810"
+    ]
+  },
+  {
+    "id": 196,
+    "title": "Belastingen & administratie",
+    "emoji": "📄",
+    "level": "B1",
+    "description": "Woorden voor belastingen en officiële documenten.",
+    "grammar": {
+      "title": "Administratieve taal",
+      "body": "Formele uitdrukkingen bij de overheid:\n\nDevo presentare la dichiarazione dei redditi. — Ik moet belastingaangifte doen.\nHo bisogno di un certificato di residenza. — Ik heb een bewijs van inschrijving nodig.\nDove posso richiedere il permesso di soggiorno? — Waar kan ik een verblijfsvergunning aanvragen?"
+    },
+    "words": [
+      "w1811",
+      "w1812",
+      "w1813",
+      "w1814",
+      "w1815",
+      "w1816",
+      "w1817",
+      "w1818"
+    ]
+  },
+  {
+    "id": 197,
+    "title": "Wonen & huren",
+    "emoji": "🏠",
+    "level": "B1",
+    "description": "Woordenschat voor het huren en kopen van een woning.",
+    "grammar": {
+      "title": "Een woning zoeken",
+      "body": "Nuttige zinnen bij het zoeken naar een woning:\n\nCerco un appartamento in affitto. — Ik zoek een huurappartement.\nQuant'è l'affitto mensile? — Hoeveel is de maandelijkse huur?\nLe spese sono incluse? — Zijn de servicekosten inbegrepen?\nIl contratto è di quattro anni. — Het contract is voor vier jaar."
+    },
+    "words": [
+      "w1819",
+      "w1820",
+      "w1821",
+      "w1822",
+      "w1823",
+      "w1824",
+      "w1825",
+      "w1826"
+    ]
+  },
+  {
+    "id": 198,
+    "title": "Verhuizen",
+    "emoji": "📦",
+    "level": "B1",
+    "description": "Woorden en uitdrukkingen over verhuizen.",
+    "grammar": {
+      "title": "Verhuizen beschrijven",
+      "body": "Trasferirsi = verhuizen (reflexief):\n\nMi sono trasferito/a a Roma. — Ik ben naar Rome verhuisd.\nCi trasferiremo il mese prossimo. — We verhuizen volgende maand.\n\nAndere nuttige woorden: fare i bagagli (inpakken), il trasloco (de verhuizing), sistemare (inrichten)."
+    },
+    "words": [
+      "w1827",
+      "w1828",
+      "w1829",
+      "w1830",
+      "w1831",
+      "w1832",
+      "w1833",
+      "w1834"
+    ]
+  },
+  {
+    "id": 199,
+    "title": "Buurt & omgeving",
+    "emoji": "🏘️",
+    "level": "B1",
+    "description": "Beschrijf je buurt en directe omgeving.",
+    "grammar": {
+      "title": "Je buurt beschrijven",
+      "body": "Nuttige constructies:\n\nAbito in un quartiere tranquillo. — Ik woon in een rustige buurt.\nNelle vicinanze c'è… — In de buurt is er…\nÈ ben collegato con i mezzi. — Het is goed bereikbaar met het OV.\nIl quartiere è sicuro / vivace / verde. — De buurt is veilig / levendig / groen."
+    },
+    "words": [
+      "w1835",
+      "w1836",
+      "w1837",
+      "w1838",
+      "w1839",
+      "w1840",
+      "w1841",
+      "w1842"
+    ]
+  },
+  {
+    "id": 200,
+    "title": "Toetsles B1 — Blok 8",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 191–200: condizionale passato & financiën.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 8 (les 191–200)",
+      "body": "In dit blok heb je geleerd:\n• De condizionale passato\n• Spijt en wensen in het verleden uitdrukken\n• Financiële en administratieve termen\n• Wonen, huren en verhuizen bespreken"
+    },
+    "words": [
+      "w1843",
+      "w1844",
+      "w1845",
+      "w1846",
+      "w1847",
+      "w1848",
+      "w1849",
+      "w1850"
+    ]
+  },
+  {
+    "id": 201,
+    "title": "Congiuntivo imperfetto — vorming",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "Leer het imperfetto van de congiuntivo.",
+    "grammar": {
+      "title": "Congiuntivo imperfetto",
+      "body": "De congiuntivo imperfetto gebruik je na che in het verleden, of bij onwerkelijke wensen:\n\n-are: parlassi, parlassi, parlasse, parlassimo, parlaste, parlassero\n-ere: credessi, credessi, credesse, credessimo, credeste, credessero\n-ire: dormissi, dormissi, dormisse, dormissimo, dormiste, dormissero\n\nVoorbeelden:\nPensavo che parlasse italiano. — Ik dacht dat hij Italiaans sprak.\nSe avessi tempo, viaggerei. — Als ik tijd had, zou ik reizen."
+    },
+    "words": [
+      "w1851",
+      "w1852",
+      "w1853",
+      "w1854",
+      "w1855",
+      "w1856",
+      "w1857",
+      "w1858"
+    ]
+  },
+  {
+    "id": 202,
+    "title": "Congiuntivo imperfetto — onregelmatig",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "Onregelmatige vormen van de congiuntivo imperfetto.",
+    "grammar": {
+      "title": "Onregelmatige congiuntivo imperfetto",
+      "body": "Enkele veelgebruikte onregelmatige vormen:\n\nessere: fossi, fossi, fosse, fossimo, foste, fossero\navere: avessi, avessi, avesse, avessimo, aveste, avessero\nfare: facessi…\ndire: dicessi…\nstare: stessi…\ndare: dessi…\n\nSe fossi ricco, comprerei una villa. — Als ik rijk was, zou ik een villa kopen."
+    },
+    "words": [
+      "w1859",
+      "w1860",
+      "w1861",
+      "w1862",
+      "w1863",
+      "w1864",
+      "w1865",
+      "w1866"
+    ]
+  },
+  {
+    "id": 203,
+    "title": "Twijfel & onzekerheid",
+    "emoji": "🤔",
+    "level": "B1",
+    "description": "Druk twijfel en onzekerheid uit met de congiuntivo.",
+    "grammar": {
+      "title": "Twijfel uitdrukken",
+      "body": "De congiuntivo volgt op uitdrukkingen van twijfel en onzekerheid:\n\nNon sono sicuro che sia vero. — Ik weet niet zeker of het waar is.\nDubito che venga domani. — Ik betwijfel of hij morgen komt.\nNon credo che abbia ragione. — Ik geloof niet dat hij gelijk heeft.\nÈ possibile che piova. — Het is mogelijk dat het regent."
+    },
+    "words": [
+      "w1867",
+      "w1868",
+      "w1869",
+      "w1870",
+      "w1871",
+      "w1872",
+      "w1873",
+      "w1874"
+    ]
+  },
+  {
+    "id": 204,
+    "title": "Meningen nuanceren",
+    "emoji": "💬",
+    "level": "B1",
+    "description": "Leer je mening genuanceerd uitdrukken.",
+    "grammar": {
+      "title": "Meningen nuanceren",
+      "body": "Gebruik deze structuren om je mening te nuanceren:\n\nDirei che… — Ik zou zeggen dat…\nA mio parere / Secondo me… — Naar mijn mening…\nPer quanto ne so… — Voor zover ik weet…\nDa un lato… dall'altro… — Aan de ene kant… aan de andere kant…\nNon è detto che + congiuntivo — Het staat niet vast dat…"
+    },
+    "words": [
+      "w1875",
+      "w1876",
+      "w1877",
+      "w1878",
+      "w1879",
+      "w1880",
+      "w1881",
+      "w1882"
+    ]
+  },
+  {
+    "id": 205,
+    "title": "Onderwijs & studie",
+    "emoji": "📚",
+    "level": "B1",
+    "description": "Woorden over school, studie en opleidingen.",
+    "grammar": {
+      "title": "Over onderwijs praten",
+      "body": "Het Italiaanse onderwijssysteem:\n\nla scuola elementare — de basisschool (6–11 jaar)\nla scuola media — de middelbare school (11–14 jaar)\nil liceo — het gymnasium/atheneum (14–19 jaar)\nl'università — de universiteit\n\nFrequentare la scuola — naar school gaan\nLaurearai in… — afstuderen in…"
+    },
+    "words": [
+      "w1883",
+      "w1884",
+      "w1885",
+      "w1886",
+      "w1887",
+      "w1888",
+      "w1889",
+      "w1890"
+    ]
+  },
+  {
+    "id": 206,
+    "title": "Universiteit & wetenschap",
+    "emoji": "🎓",
+    "level": "B1",
+    "description": "Praat over universitaire studies en onderzoek.",
+    "grammar": {
+      "title": "Universitaire taal",
+      "body": "Nuttige termen:\n\nla laurea triennale — de bachelor (3 jaar)\nla laurea magistrale — de master (2 jaar)\nil dottorato — de promotie, het doctoraat\nla tesi — het afstudeerwerk, de scriptie\nsostenere un esame — examen doen\nsuperare un esame — een examen halen"
+    },
+    "words": [
+      "w1891",
+      "w1892",
+      "w1893",
+      "w1894",
+      "w1895",
+      "w1896",
+      "w1897",
+      "w1898"
+    ]
+  },
+  {
+    "id": 207,
+    "title": "Lezen & schrijven",
+    "emoji": "📖",
+    "level": "B1",
+    "description": "Woordenschat over boeken, lezen en schrijven.",
+    "grammar": {
+      "title": "Over lezen en schrijven praten",
+      "body": "Nuttige uitdrukkingen:\n\nSto leggendo un romanzo di Ferrante. — Ik lees een roman van Ferrante.\nL'autore ha scritto dieci libri. — De auteur heeft tien boeken geschreven.\nIl capitolo tratta di… — Het hoofdstuk gaat over…\nConsiglio questo libro. — Ik raad dit boek aan."
+    },
+    "words": [
+      "w1899",
+      "w1900",
+      "w1901",
+      "w1902",
+      "w1903",
+      "w1904",
+      "w1905",
+      "w1906"
+    ]
+  },
+  {
+    "id": 208,
+    "title": "Examen & beoordeling",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Woorden over examens, toetsen en beoordelingen.",
+    "grammar": {
+      "title": "Examens bespreken",
+      "body": "In Italië worden cijfers op 30 punten gegeven (universiteit) of op 10 (school):\n\nHo preso 28 su 30 all'esame. — Ik haalde 28 van de 30 op het examen.\nSono stato bocciato / promosso. — Ik ben gezakt / geslaagd.\nIl voto minimo è 18/30. — Het minimumcijfer is 18/30."
+    },
+    "words": [
+      "w1907",
+      "w1908",
+      "w1909",
+      "w1910",
+      "w1911",
+      "w1912",
+      "w1913",
+      "w1914"
+    ]
+  },
+  {
+    "id": 209,
+    "title": "Taalgebruik & stijl",
+    "emoji": "✍️",
+    "level": "B1",
+    "description": "Over registers, stijl en taalgebruik.",
+    "grammar": {
+      "title": "Registers in het Italiaans",
+      "body": "Het Italiaans kent duidelijke registers:\n\nFormeel: Lei (u), Egregio Dottore, La prego di…\nInformeel: tu, Ciao!, Dai!\n\nLet op: in e-mails en brieven is het formele register veel gebruikelijker dan in het Nederlands."
+    },
+    "words": [
+      "w1915",
+      "w1916",
+      "w1917",
+      "w1918",
+      "w1919",
+      "w1920",
+      "w1921",
+      "w1922"
+    ]
+  },
+  {
+    "id": 210,
+    "title": "Toetsles B1 — Blok 9",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 201–210: congiuntivo imperfetto & onderwijs.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 9 (les 201–210)",
+      "body": "In dit blok heb je geleerd:\n• De congiuntivo imperfetto (regelmatig en onregelmatig)\n• Twijfel en onzekerheid uitdrukken\n• Meningen nuanceren\n• Onderwijs, studie en taalgebruik bespreken"
+    },
+    "words": [
+      "w1923",
+      "w1924",
+      "w1925",
+      "w1926",
+      "w1927",
+      "w1928",
+      "w1929",
+      "w1930"
+    ]
+  },
+  {
+    "id": 211,
+    "title": "Relaties & vriendschap",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Praat over vriendschappen en relaties.",
+    "grammar": {
+      "title": "Reflexieve werkwoorden in relaties",
+      "body": "Veel werkwoorden over relaties zijn reflexief of wederkerig:\n\nincontrarsi — elkaar ontmoeten\nconoscersi — elkaar leren kennen\nvedersi — elkaar zien\nlasciarsi — uit elkaar gaan\nfidarsi di — vertrouwen op\n\nCi siamo conosciuti all'università. — We hebben elkaar leren kennen op de universiteit."
+    },
+    "words": [
+      "w1931",
+      "w1932",
+      "w1933",
+      "w1934",
+      "w1935",
+      "w1936",
+      "w1937",
+      "w1938"
+    ]
+  },
+  {
+    "id": 212,
+    "title": "Liefde & romantiek",
+    "emoji": "❤️",
+    "level": "B1",
+    "description": "Woorden en uitdrukkingen over de liefde.",
+    "grammar": {
+      "title": "Over liefde praten",
+      "body": "Nuttige uitdrukkingen:\n\ninnamorarsi di — verliefd worden op\nessere innamorato/a di — verliefd zijn op\nandare d'accordo con — goed overweg kunnen met\nfare una proposta — een aanzoek doen\nTi amo / Ti voglio bene — Ik hou van je (romantisch / niet-romantisch)"
+    },
+    "words": [
+      "w1939",
+      "w1940",
+      "w1941",
+      "w1942",
+      "w1943",
+      "w1944",
+      "w1945",
+      "w1946"
+    ]
+  },
+  {
+    "id": 213,
+    "title": "Conflicten & verzoening",
+    "emoji": "🕊️",
+    "level": "B1",
+    "description": "Praat over ruzies, conflicten en verzoening.",
+    "grammar": {
+      "title": "Conflicten beschrijven",
+      "body": "Uitdrukkingen voor conflicten:\n\nlitigare con — ruziën met\nfare la pace — vrede sluiten\nchiedere scusa — excuses vragen\nandare d'accordo — het eens zijn\nnon sopportare — niet kunnen uitstaan\n\nAbbiamo litigato, ma poi abbiamo fatto la pace. — We hadden ruzie, maar daarna hebben we vrede gesloten."
+    },
+    "words": [
+      "w1947",
+      "w1948",
+      "w1949",
+      "w1950",
+      "w1951",
+      "w1952",
+      "w1953",
+      "w1954"
+    ]
+  },
+  {
+    "id": 214,
+    "title": "Karakter & persoonlijkheid",
+    "emoji": "🎭",
+    "level": "B1",
+    "description": "Beschrijf iemands karakter en persoonlijkheid.",
+    "grammar": {
+      "title": "Karaktereigenschappen",
+      "body": "Gebruik essere + aggettivo voor karakterbeschrijvingen:\n\nÈ una persona gentile e generosa. — Het is een aardig en gul persoon.\nÈ piuttosto testardo/a. — Hij/zij is nogal koppig.\n\nLet op: simpatico = sympathiek/leuk, NON het Nederlandse 'simpel'."
+    },
+    "words": [
+      "w1955",
+      "w1956",
+      "w1957",
+      "w1958",
+      "w1959",
+      "w1960",
+      "w1961",
+      "w1962"
+    ]
+  },
+  {
+    "id": 215,
+    "title": "Psychologie & gevoelens",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "Diepere gevoelens en psychologische termen.",
+    "grammar": {
+      "title": "Gevoelens uitdrukken",
+      "body": "Gebruik sentirsi + aggettivo of provare + sostantivo:\n\nMi sento felice / triste / ansioso. — Ik voel me gelukkig / verdrietig / angstig.\nProvo gioia / paura / vergogna. — Ik voel vreugde / angst / schaamte.\n\nMet congiuntivo: Sono felice che tu stia bene. — Ik ben blij dat het goed met je gaat."
+    },
+    "words": [
+      "w1963",
+      "w1964",
+      "w1965",
+      "w1966",
+      "w1967",
+      "w1968",
+      "w1969",
+      "w1970"
+    ]
+  },
+  {
+    "id": 216,
+    "title": "Dromen & ambities",
+    "emoji": "🌟",
+    "level": "B1",
+    "description": "Praat over je dromen en ambities voor de toekomst.",
+    "grammar": {
+      "title": "Dromen en plannen uitdrukken",
+      "body": "Constructies voor dromen en ambities:\n\nIl mio sogno è + infinito — Mijn droom is om…\nSpero di + infinito — Ik hoop te…\nMi piacerebbe + infinito — Ik zou graag… willen\nHo intenzione di + infinito — Ik ben van plan om…"
+    },
+    "words": [
+      "w1971",
+      "w1972",
+      "w1973",
+      "w1974",
+      "w1975",
+      "w1976",
+      "w1977",
+      "w1978"
+    ]
+  },
+  {
+    "id": 217,
+    "title": "Succes & falen",
+    "emoji": "🏆",
+    "level": "B1",
+    "description": "Woorden over succes, mislukking en doorzettingsvermogen.",
+    "grammar": {
+      "title": "Succes en falen beschrijven",
+      "body": "Nuttige werkwoorden:\n\nriuscire a + infinito — erin slagen om…\nfallire — falen, mislukken\nfarcela — het redden, het voor elkaar krijgen\narendersi — zich overgeven, opgeven\n\nCe l'ho fatta! — Ik heb het gered!\nNon mollare! — Geef niet op!"
+    },
+    "words": [
+      "w1979",
+      "w1980",
+      "w1981",
+      "w1982",
+      "w1983",
+      "w1984",
+      "w1985",
+      "w1986"
+    ]
+  },
+  {
+    "id": 218,
+    "title": "Geluk & tevredenheid",
+    "emoji": "😊",
+    "level": "B1",
+    "description": "Praat over geluk, tevredenheid en welzijn.",
+    "grammar": {
+      "title": "Over geluk praten",
+      "body": "Uitdrukkingen voor geluk en tevredenheid:\n\nSono contento/a di + infinito — Ik ben blij om…\nMi rende felice — Het maakt me gelukkig\nessere soddisfatto/a di — tevreden zijn met\ngodersi la vita — van het leven genieten\nstare bene con se stessi — lekker in je vel zitten"
+    },
+    "words": [
+      "w1987",
+      "w1988",
+      "w1989",
+      "w1990",
+      "w1991",
+      "w1992",
+      "w1993",
+      "w1994"
+    ]
+  },
+  {
+    "id": 219,
+    "title": "Stress & ontspanning",
+    "emoji": "🧘",
+    "level": "B1",
+    "description": "Woorden over stress, druk en ontspanning.",
+    "grammar": {
+      "title": "Over stress en ontspanning praten",
+      "body": "Nuttige uitdrukkingen:\n\nEssere stressato/a — gestrest zijn\nSono sotto pressione — Ik sta onder druk\nHo bisogno di rilassarmi — Ik heb ontspanning nodig\nStaccare la spina — de stekker eruit trekken (figuurlijk)\nPrendersi una pausa — een pauze nemen"
+    },
+    "words": [
+      "w1995",
+      "w1996",
+      "w1997",
+      "w1998",
+      "w1999",
+      "w2000",
+      "w2001",
+      "w2002"
+    ]
+  },
+  {
+    "id": 220,
+    "title": "Toetsles B1 — Blok 10",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 211–220: relaties & emoties.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 10 (les 211–220)",
+      "body": "In dit blok heb je geleerd:\n• Reflexieve werkwoorden in relaties\n• Over liefde, conflicten en verzoening praten\n• Karakter en gevoelens beschrijven\n• Dromen, ambities, succes en falen bespreken"
+    },
+    "words": [
+      "w2003",
+      "w2004",
+      "w2005",
+      "w2006",
+      "w2007",
+      "w2008",
+      "w2009",
+      "w2010"
+    ]
+  },
+  {
+    "id": 221,
+    "title": "Huisdieren",
+    "emoji": "🐕",
+    "level": "B1",
+    "description": "Woorden over huisdieren en dierenverzorging.",
+    "grammar": {
+      "title": "Verkleinwoorden (-ino/-etto)",
+      "body": "In het Italiaans maak je verkleinwoorden met suffixen:\n\n-ino/a: gatto → gattino (katje), cane → cagnolino (hondje)\n-etto/a: casa → casetta (huisje), gonna → gonnelletta (rokje)\n-ello/a: albero → alberello (boompje)\n-uccio/a: freddo → fredduccio (een beetje koud)\n\nVerkleinwoorden drukken ook genegenheid uit: amore → amorino"
+    },
+    "words": [
+      "w2011",
+      "w2012",
+      "w2013",
+      "w2014",
+      "w2015",
+      "w2016",
+      "w2017",
+      "w2018"
+    ]
+  },
+  {
+    "id": 222,
+    "title": "Wilde dieren",
+    "emoji": "🦁",
+    "level": "B1",
+    "description": "Dieren in het wild en in de dierentuin.",
+    "grammar": {
+      "title": "Dieren beschrijven",
+      "body": "Nuttige constructies bij dierenbeschrijvingen:\n\nÈ un animale che vive in… — Het is een dier dat leeft in…\nSi nutre di… — Het voedt zich met…\nÈ in via di estinzione — Het is met uitsterven bedreigd\nL'habitat naturale è… — De natuurlijke leefomgeving is…"
+    },
+    "words": [
+      "w2019",
+      "w2020",
+      "w2021",
+      "w2022",
+      "w2023",
+      "w2024",
+      "w2025",
+      "w2026"
+    ]
+  },
+  {
+    "id": 223,
+    "title": "Planten & tuinieren",
+    "emoji": "🌿",
+    "level": "B1",
+    "description": "Woorden over planten, bloemen en tuinieren.",
+    "grammar": {
+      "title": "Over planten praten",
+      "body": "Nuttige termen:\n\ncoltivare — kweken, verbouwen\ninnaffiare — water geven\npotare — snoeien\nfiorire — bloeien\nseminare — zaaien\nil raccolto — de oogst"
+    },
+    "words": [
+      "w2027",
+      "w2028",
+      "w2029",
+      "w2030",
+      "w2031",
+      "w2032",
+      "w2033",
+      "w2034"
+    ]
+  },
+  {
+    "id": 224,
+    "title": "Landschappen & geografie",
+    "emoji": "🏔️",
+    "level": "B1",
+    "description": "Geografische termen en landschapsbeschrijvingen.",
+    "grammar": {
+      "title": "Landschappen beschrijven",
+      "body": "Gebruik aggettivi om landschappen te beschrijven:\n\nun paesaggio mozzafiato — een adembenemend landschap\nuna vallata verde — een groene vallei\nuna costa frastagliata — een grillige kustlijn\nil terreno è pianeggiante — het terrein is vlak"
+    },
+    "words": [
+      "w2035",
+      "w2036",
+      "w2037",
+      "w2038",
+      "w2039",
+      "w2040",
+      "w2041",
+      "w2042"
+    ]
+  },
+  {
+    "id": 225,
+    "title": "De zee & het strand",
+    "emoji": "🏖️",
+    "level": "B1",
+    "description": "Woorden over de zee, het strand en watersport.",
+    "grammar": {
+      "title": "Aan zee",
+      "body": "Italiaans strandvocabulaire:\n\nandare al mare — naar zee gaan\nprendere il sole — zonnebaden\nfare il bagno — zwemmen (in zee)\nil lettino — de ligstoel\nl'ombrellone — de parasol\nla crema solare — de zonnebrand"
+    },
+    "words": [
+      "w2043",
+      "w2044",
+      "w2045",
+      "w2046",
+      "w2047",
+      "w2048",
+      "w2049",
+      "w2050"
+    ]
+  },
+  {
+    "id": 226,
+    "title": "Bergen & wandelen",
+    "emoji": "⛰️",
+    "level": "B1",
+    "description": "Woorden over bergen, wandelen en bergsporten.",
+    "grammar": {
+      "title": "In de bergen",
+      "body": "Nuttige uitdrukkingen voor bergtochten:\n\nfare un'escursione — een wandeltocht maken\nsalire in cima — naar de top klimmen\nil sentiero — het pad\nil rifugio — de berghut\nla vetta — de top\nil dislivello — het hoogteverschil"
+    },
+    "words": [
+      "w2051",
+      "w2052",
+      "w2053",
+      "w2054",
+      "w2055",
+      "w2056",
+      "w2057",
+      "w2058"
+    ]
+  },
+  {
+    "id": 227,
+    "title": "Klimaat & klimaatverandering",
+    "emoji": "🌍",
+    "level": "B1",
+    "description": "Praat over klimaat en klimaatverandering.",
+    "grammar": {
+      "title": "Over het klimaat praten",
+      "body": "Nuttige uitdrukkingen:\n\nIl clima sta cambiando. — Het klimaat verandert.\nLa temperatura media è aumentata. — De gemiddelde temperatuur is gestegen.\nBisogna ridurre le emissioni di CO₂. — We moeten de CO₂-uitstoot verminderen.\nL'effetto serra — het broeikaseffect"
+    },
+    "words": [
+      "w2059",
+      "w2060",
+      "w2061",
+      "w2062",
+      "w2063",
+      "w2064",
+      "w2065",
+      "w2066"
+    ]
+  },
+  {
+    "id": 228,
+    "title": "Duurzaamheid & recycling",
+    "emoji": "♻️",
+    "level": "B1",
+    "description": "Woorden over duurzaamheid en milieubewust leven.",
+    "grammar": {
+      "title": "Over duurzaamheid praten",
+      "body": "Afvalscheiding in Italië (raccolta differenziata):\n\nla plastica — plastic\nil vetro — glas\nla carta — papier\nl'umido — GFT-afval\nl'indifferenziato — restafval\n\nIn Italië is afvalscheiding verplicht en verschilt de regeling per gemeente."
+    },
+    "words": [
+      "w2067",
+      "w2068",
+      "w2069",
+      "w2070",
+      "w2071",
+      "w2072",
+      "w2073",
+      "w2074"
+    ]
+  },
+  {
+    "id": 229,
+    "title": "Energie & grondstoffen",
+    "emoji": "⚡",
+    "level": "B1",
+    "description": "Woorden over energie, grondstoffen en technologie.",
+    "grammar": {
+      "title": "Over energie praten",
+      "body": "Energiebronnen:\n\nl'energia solare — zonne-energie\nl'energia eolica — windenergie\nl'energia nucleare — kernenergie\ni combustibili fossili — fossiele brandstoffen\nle fonti rinnovabili — hernieuwbare bronnen\n\nL'Italia punta sulle energie rinnovabili. — Italië zet in op hernieuwbare energie."
+    },
+    "words": [
+      "w2075",
+      "w2076",
+      "w2077",
+      "w2078",
+      "w2079",
+      "w2080",
+      "w2081",
+      "w2082"
+    ]
+  },
+  {
+    "id": 230,
+    "title": "Toetsles B1 — Blok 11",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 221–230: natuur, dieren & milieu.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 11 (les 221–230)",
+      "body": "In dit blok heb je geleerd:\n• Verkleinwoorden (-ino/-etto)\n• Dieren, planten en landschappen beschrijven\n• Over klimaat, duurzaamheid en energie praten"
+    },
+    "words": [
+      "w2083",
+      "w2084",
+      "w2085",
+      "w2086",
+      "w2087",
+      "w2088",
+      "w2089",
+      "w2090"
+    ]
+  },
+  {
+    "id": 231,
+    "title": "Film & bioscoop",
+    "emoji": "🎬",
+    "level": "B1",
+    "description": "Woorden over film, bioscoop en cinema.",
+    "grammar": {
+      "title": "Over films praten",
+      "body": "Nuttige constructies:\n\nÈ un film che parla di… — Het is een film die gaat over…\nIl film è diretto da… — De film is geregisseerd door…\nÈ stato girato in Italia. — Hij is opgenomen in Italië.\nIl film mi ha commosso / fatto ridere / annoiato. — De film heeft me ontroerd / aan het lachen gemaakt / verveeld."
+    },
+    "words": [
+      "w2091",
+      "w2092",
+      "w2093",
+      "w2094",
+      "w2095",
+      "w2096",
+      "w2097",
+      "w2098"
+    ]
+  },
+  {
+    "id": 232,
+    "title": "Theater & opera",
+    "emoji": "🎭",
+    "level": "B1",
+    "description": "Woorden over theater, opera en podiumkunsten.",
+    "grammar": {
+      "title": "Theater & opera",
+      "body": "Italië is het geboorteland van de opera. Nuttige termen:\n\nil sipario — het (toneel)doek\nla prima — de première\nil bis — de toegift\nandare in scena — opgevoerd worden\nil libretto — het libretto (tekst van een opera)"
+    },
+    "words": [
+      "w2099",
+      "w2100",
+      "w2101",
+      "w2102",
+      "w2103",
+      "w2104",
+      "w2105",
+      "w2106"
+    ]
+  },
+  {
+    "id": 233,
+    "title": "Schilderkunst & musea",
+    "emoji": "🖌️",
+    "level": "B1",
+    "description": "Praat over kunst en museumbezoek.",
+    "grammar": {
+      "title": "Kunst bespreken",
+      "body": "Nuttige uitdrukkingen in een museum:\n\nQuesta opera rappresenta… — Dit werk stelt … voor.\nÈ un esempio di arte barocca. — Het is een voorbeeld van barokke kunst.\nL'ingresso costa… — De toegang kost…\nÈ vietato fare foto con il flash. — Foto's met flits zijn verboden."
+    },
+    "words": [
+      "w2107",
+      "w2108",
+      "w2109",
+      "w2110",
+      "w2111",
+      "w2112",
+      "w2113",
+      "w2114"
+    ]
+  },
+  {
+    "id": 234,
+    "title": "Fotografie & design",
+    "emoji": "📷",
+    "level": "B1",
+    "description": "Woorden over fotografie, design en esthetiek.",
+    "grammar": {
+      "title": "Over fotografie praten",
+      "body": "Nuttige termen:\n\nscattare una foto — een foto nemen\nil primo piano — de close-up\nlo sfondo — de achtergrond\nla luce naturale — het natuurlijke licht\nritoccare — retoucheren\nil bianco e nero — zwart-wit"
+    },
+    "words": [
+      "w2115",
+      "w2116",
+      "w2117",
+      "w2118",
+      "w2119",
+      "w2120",
+      "w2121",
+      "w2122"
+    ]
+  },
+  {
+    "id": 235,
+    "title": "Kranten & journalistiek",
+    "emoji": "📰",
+    "level": "B1",
+    "description": "Woorden over nieuws, kranten en journalistiek.",
+    "grammar": {
+      "title": "Krantenkoppen lezen",
+      "body": "Italiaanse krantenkoppen gebruiken vaak:\n\n• Het presens voor recente gebeurtenissen\n• Geen lidwoord: Governo approva legge (i.p.v. Il governo ha approvato la legge)\n• Condizionale voor onbevestigd nieuws: Il ministro sarebbe dimesso — De minister zou afgetreden zijn"
+    },
+    "words": [
+      "w2123",
+      "w2124",
+      "w2125",
+      "w2126",
+      "w2127",
+      "w2128",
+      "w2129",
+      "w2130"
+    ]
+  },
+  {
+    "id": 236,
+    "title": "Radio & televisie",
+    "emoji": "📺",
+    "level": "B1",
+    "description": "Woorden over radio, televisie en medialandschap.",
+    "grammar": {
+      "title": "Over media praten",
+      "body": "Het Italiaanse medialandschap:\n\nla RAI — de publieke omroep (Radiotelevisione Italiana)\nMediaset — de grootste commerciële omroep\nil telegiornale (TG) — het journaal\nil programma / la trasmissione — het programma\nin diretta — live\nin differita — uitgesteld"
+    },
+    "words": [
+      "w2131",
+      "w2132",
+      "w2133",
+      "w2134",
+      "w2135",
+      "w2136",
+      "w2137",
+      "w2138"
+    ]
+  },
+  {
+    "id": 237,
+    "title": "Reclame & marketing",
+    "emoji": "📢",
+    "level": "B1",
+    "description": "Woorden over reclame, marketing en consumentengedrag.",
+    "grammar": {
+      "title": "Reclametaal",
+      "body": "Reclame-uitdrukkingen:\n\nlo spot pubblicitario — de reclamespot\nil marchio — het merk\nlo slogan — de slogan\nil consumatore — de consument\nlanciare un prodotto — een product lanceren\nfare pubblicità — reclame maken"
+    },
+    "words": [
+      "w2139",
+      "w2140",
+      "w2141",
+      "w2142",
+      "w2143",
+      "w2144",
+      "w2145",
+      "w2146"
+    ]
+  },
+  {
+    "id": 238,
+    "title": "Mode & trends",
+    "emoji": "👗",
+    "level": "B1",
+    "description": "Woorden over de Italiaanse mode-industrie.",
+    "grammar": {
+      "title": "Over mode praten",
+      "body": "Italië is een modewereld-grootmacht. Nuttige termen:\n\nla sfilata — de modeshow\nlo stilista — de modeontwerper\nla passerella — de catwalk\nessere alla moda / fuori moda — in de mode / uit de mode zijn\nil Made in Italy — het label 'Made in Italy'"
+    },
+    "words": [
+      "w2147",
+      "w2148",
+      "w2149",
+      "w2150",
+      "w2151",
+      "w2152",
+      "w2153",
+      "w2154"
+    ]
+  },
+  {
+    "id": 239,
+    "title": "Evenementen & festivals",
+    "emoji": "🎪",
+    "level": "B1",
+    "description": "Woorden over evenementen, festivals en culturele agenda.",
+    "grammar": {
+      "title": "Evenementen beschrijven",
+      "body": "Nuttige zinnen:\n\nL'evento si svolge / si tiene il… — Het evenement vindt plaats op…\nIl festival dura tre giorni. — Het festival duurt drie dagen.\nI biglietti sono esauriti. — De kaartjes zijn uitverkocht.\nL'ingresso è gratuito / a pagamento. — De toegang is gratis / tegen betaling."
+    },
+    "words": [
+      "w2155",
+      "w2156",
+      "w2157",
+      "w2158",
+      "w2159",
+      "w2160",
+      "w2161",
+      "w2162"
+    ]
+  },
+  {
+    "id": 240,
+    "title": "Toetsles B1 — Blok 12",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 231–240: kunst, media & entertainment.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 12 (les 231–240)",
+      "body": "In dit blok heb je geleerd:\n• Over film, theater en opera praten\n• Kunst en fotografie bespreken\n• Media, reclame en mode beschrijven\n• Evenementen en festivals bespreken"
+    },
+    "words": [
+      "w2163",
+      "w2164",
+      "w2165",
+      "w2166",
+      "w2167",
+      "w2168",
+      "w2169",
+      "w2170"
+    ]
+  },
+  {
+    "id": 241,
+    "title": "Politiek — basis",
+    "emoji": "🏛️",
+    "level": "B1",
+    "description": "Leer basisbegrippen uit de politiek.",
+    "grammar": {
+      "title": "Passiva met venire",
+      "body": "Naast essere + voltooid deelwoord kun je de passiva ook met venire vormen (alleen in enkelvoudige tijden):\n\nLa legge viene approvata dal parlamento. — De wet wordt goedgekeurd door het parlement.\nIl presidente viene eletto ogni sette anni. — De president wordt elke zeven jaar gekozen.\n\nVuistregel: venire + participio = actie die nu plaatsvindt; essere + participio = toestand."
+    },
+    "words": [
+      "w2171",
+      "w2172",
+      "w2173",
+      "w2174",
+      "w2175",
+      "w2176",
+      "w2177",
+      "w2178"
+    ]
+  },
+  {
+    "id": 242,
+    "title": "Verkiezingen & democratie",
+    "emoji": "🗳️",
+    "level": "B1",
+    "description": "Woorden over verkiezingen en het democratisch proces.",
+    "grammar": {
+      "title": "Over verkiezingen praten",
+      "body": "Verkiezingsterminologie:\n\nvotare — stemmen\ncandidarsi — zich kandidaat stellen\neleggere (p.p.: eletto) — kiezen, verkiezen\nil seggio elettorale — het stembureau\nla scheda elettorale — het stembiljet\nla maggioranza / la minoranza — de meerderheid / de minderheid"
+    },
+    "words": [
+      "w2179",
+      "w2180",
+      "w2181",
+      "w2182",
+      "w2183",
+      "w2184",
+      "w2185",
+      "w2186"
+    ]
+  },
+  {
+    "id": 243,
+    "title": "Rechten & plichten",
+    "emoji": "⚖️",
+    "level": "B1",
+    "description": "Woorden over burgerrechten en plichten.",
+    "grammar": {
+      "title": "Rechten en plichten",
+      "body": "De Italiaanse grondwet garandeert fundamentele rechten:\n\nil diritto di voto — het stemrecht\nla libertà di espressione — de vrijheid van meningsuiting\nil dovere civico — de burgerplicht\nla parità di diritti — gelijke rechten\n\nTutti i cittadini hanno pari dignità sociale. — Alle burgers hebben gelijke sociale waardigheid (Art. 3 Constituzione)."
+    },
+    "words": [
+      "w2187",
+      "w2188",
+      "w2189",
+      "w2190",
+      "w2191",
+      "w2192",
+      "w2193",
+      "w2194"
+    ]
+  },
+  {
+    "id": 244,
+    "title": "Justitie & wetgeving",
+    "emoji": "⚖️",
+    "level": "B1",
+    "description": "Woorden over recht, wetgeving en justitie.",
+    "grammar": {
+      "title": "Juridische taal",
+      "body": "Basisjuridische termen:\n\nil tribunale — de rechtbank\nil giudice — de rechter\nl'avvocato — de advocaat\nla sentenza — het vonnis\nassolvere — vrijspreken\ncondannare — veroordelen"
+    },
+    "words": [
+      "w2195",
+      "w2196",
+      "w2197",
+      "w2198",
+      "w2199",
+      "w2200",
+      "w2201",
+      "w2202"
+    ]
+  },
+  {
+    "id": 245,
+    "title": "Immigratie & integratie",
+    "emoji": "🌍",
+    "level": "B1",
+    "description": "Woorden over migratie en integratie in de maatschappij.",
+    "grammar": {
+      "title": "Over migratie praten",
+      "body": "Nuttige termen:\n\nl'immigrato — de immigrant\nil rifugiato — de vluchteling\nil permesso di soggiorno — de verblijfsvergunning\nintegrarsi — zich integreren\nla multiculturalità — de multiculturaliteit"
+    },
+    "words": [
+      "w2203",
+      "w2204",
+      "w2205",
+      "w2206",
+      "w2207",
+      "w2208",
+      "w2209",
+      "w2210"
+    ]
+  },
+  {
+    "id": 246,
+    "title": "Vrijwilligerswerk & hulp",
+    "emoji": "🤲",
+    "level": "B1",
+    "description": "Woorden over vrijwilligerswerk en maatschappelijke hulp.",
+    "grammar": {
+      "title": "Over vrijwilligerswerk praten",
+      "body": "Fare volontariato = vrijwilligerswerk doen:\n\nFaccio volontariato in un'associazione. — Ik doe vrijwilligerswerk bij een organisatie.\nAiutiamo i senzatetto. — We helpen daklozen.\nDono il sangue regolarmente. — Ik doneer regelmatig bloed."
+    },
+    "words": [
+      "w2211",
+      "w2212",
+      "w2213",
+      "w2214",
+      "w2215",
+      "w2216",
+      "w2217",
+      "w2218"
+    ]
+  },
+  {
+    "id": 247,
+    "title": "Religie & geloof",
+    "emoji": "⛪",
+    "level": "B1",
+    "description": "Woorden over religie, geloof en spiritualiteit.",
+    "grammar": {
+      "title": "Over geloof praten",
+      "body": "Italië is overwegend katholiek, maar kent ook veel diversiteit:\n\ncredere in Dio — geloven in God\nessere credente / ateo / agnostico — gelovig / atheïst / agnost zijn\nfrequentare la chiesa — naar de kerk gaan\nil Vaticano — het Vaticaan"
+    },
+    "words": [
+      "w2219",
+      "w2220",
+      "w2221",
+      "w2222",
+      "w2223",
+      "w2224",
+      "w2225",
+      "w2226"
+    ]
+  },
+  {
+    "id": 248,
+    "title": "Gelijkheid & diversiteit",
+    "emoji": "🌈",
+    "level": "B1",
+    "description": "Woorden over gelijkheid, diversiteit en inclusie.",
+    "grammar": {
+      "title": "Over gelijkheid praten",
+      "body": "Nuttige uitdrukkingen:\n\nla parità di genere — gendergelijkheid\ni diritti umani — de mensenrechten\nla discriminazione — de discriminatie\nl'inclusione — de inclusie\nil rispetto — het respect\nla diversità è una ricchezza — diversiteit is een rijkdom"
+    },
+    "words": [
+      "w2227",
+      "w2228",
+      "w2229",
+      "w2230",
+      "w2231",
+      "w2232",
+      "w2233",
+      "w2234"
+    ]
+  },
+  {
+    "id": 249,
+    "title": "Oorlog & vrede",
+    "emoji": "🕊️",
+    "level": "B1",
+    "description": "Woorden over oorlog, vrede en internationale betrekkingen.",
+    "grammar": {
+      "title": "Over oorlog en vrede praten",
+      "body": "Belangrijke termen:\n\nil conflitto — het conflict\nil trattato di pace — het vredesverdrag\nle Nazioni Unite — de Verenigde Naties\nil disarmo — de ontwapening\nla diplomazia — de diplomatie\nnegoziare — onderhandelen"
+    },
+    "words": [
+      "w2235",
+      "w2236",
+      "w2237",
+      "w2238",
+      "w2239",
+      "w2240",
+      "w2241",
+      "w2242"
+    ]
+  },
+  {
+    "id": 250,
+    "title": "Toetsles B1 — Blok 13",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 241–250: maatschappij & politiek.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 13 (les 241–250)",
+      "body": "In dit blok heb je geleerd:\n• De passiva met venire\n• Over verkiezingen en democratie praten\n• Rechten, plichten en justitie\n• Immigratie, vrijwilligerswerk en maatschappelijke thema's"
+    },
+    "words": [
+      "w2243",
+      "w2244",
+      "w2245",
+      "w2246",
+      "w2247",
+      "w2248",
+      "w2249",
+      "w2250"
+    ]
+  },
+  {
+    "id": 251,
+    "title": "Solliciteren — verdieping",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Verdieping in sollicitatiebrieven en CV's.",
+    "grammar": {
+      "title": "Formele briefconventies",
+      "body": "Een formele Italiaanse brief begint met:\n\nEgregio/a Dott./Dott.ssa… — Geachte heer/mevrouw dr. …\nSpett.le Azienda — Geachte firma\n\nEn eindigt met:\nIn attesa di un Suo cortese riscontro, porgo distinti saluti.\n— In afwachting van uw antwoord, met vriendelijke groet."
+    },
+    "words": [
+      "w2251",
+      "w2252",
+      "w2253",
+      "w2254",
+      "w2255",
+      "w2256",
+      "w2257",
+      "w2258"
+    ]
+  },
+  {
+    "id": 252,
+    "title": "Het sollicitatiegesprek",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Woorden en zinnen voor een sollicitatiegesprek.",
+    "grammar": {
+      "title": "Sollicitatiegesprek",
+      "body": "Veelgestelde vragen bij een colloquio:\n\nMi parli di sé. — Vertel eens over uzelf.\nQuali sono i Suoi punti di forza? — Wat zijn uw sterke punten?\nDove si vede tra cinque anni? — Waar ziet u zichzelf over vijf jaar?\nPerché vuole lavorare per noi? — Waarom wilt u voor ons werken?"
+    },
+    "words": [
+      "w2259",
+      "w2260",
+      "w2261",
+      "w2262",
+      "w2263",
+      "w2264",
+      "w2265",
+      "w2266"
+    ]
+  },
+  {
+    "id": 253,
+    "title": "Vergaderen — verdieping",
+    "emoji": "📊",
+    "level": "B1",
+    "description": "Verdieping in vergadertaal en presentaties.",
+    "grammar": {
+      "title": "Vergaderen in het Italiaans",
+      "body": "Vergaderingen leiden:\n\nApriamo la riunione. — We openen de vergadering.\nPassiamo al punto successivo. — We gaan naar het volgende punt.\nQualcuno ha domande? — Heeft iemand vragen?\nRiassumiamo i punti principali. — We vatten de hoofdpunten samen.\nLa riunione è aggiornata a… — De vergadering is verdaagd naar…"
+    },
+    "words": [
+      "w2267",
+      "w2268",
+      "w2269",
+      "w2270",
+      "w2271",
+      "w2272",
+      "w2273",
+      "w2274"
+    ]
+  },
+  {
+    "id": 254,
+    "title": "Presentaties geven",
+    "emoji": "📈",
+    "level": "B1",
+    "description": "Woorden voor het geven van een presentatie.",
+    "grammar": {
+      "title": "Een presentatie structureren",
+      "body": "Structuurzinnen voor presentaties:\n\nOggi vorrei parlare di… — Vandaag wil ik het hebben over…\nCome potete vedere dal grafico… — Zoals u kunt zien op de grafiek…\nIn conclusione… — Ter afsluiting…\nCi sono domande? — Zijn er vragen?\nGrazie per l'attenzione. — Dank voor uw aandacht."
+    },
+    "words": [
+      "w2275",
+      "w2276",
+      "w2277",
+      "w2278",
+      "w2279",
+      "w2280",
+      "w2281",
+      "w2282"
+    ]
+  },
+  {
+    "id": 255,
+    "title": "E-mails & brieven",
+    "emoji": "✉️",
+    "level": "B1",
+    "description": "Formele en informele e-mails schrijven.",
+    "grammar": {
+      "title": "Formele e-mails",
+      "body": "Structuur van een formele Italiaanse e-mail:\n\nOggetto: Richiesta informazioni — Onderwerp: Informatieverzoek\n\nEgregio Dott. Rossi,\nLe scrivo per… — Ik schrijf u om…\nIn allegato troverà… — In de bijlage vindt u…\nResto a disposizione per… — Ik sta ter beschikking voor…\nCordiali saluti — Met vriendelijke groet"
+    },
+    "words": [
+      "w2283",
+      "w2284",
+      "w2285",
+      "w2286",
+      "w2287",
+      "w2288",
+      "w2289",
+      "w2290"
+    ]
+  },
+  {
+    "id": 256,
+    "title": "Onderhandelen",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Woorden en uitdrukkingen voor onderhandeling.",
+    "grammar": {
+      "title": "Onderhandelingstaal",
+      "body": "Nuttige onderhandelingsuitdrukkingen:\n\nLa nostra proposta è… — Ons voorstel is…\nSiamo disposti a… — We zijn bereid om…\nA quale prezzo? — Tegen welke prijs?\nPossiamo trovare un compromesso? — Kunnen we een compromis vinden?\nAffare fatto! — Deal!"
+    },
+    "words": [
+      "w2291",
+      "w2292",
+      "w2293",
+      "w2294",
+      "w2295",
+      "w2296",
+      "w2297",
+      "w2298"
+    ]
+  },
+  {
+    "id": 257,
+    "title": "Bedrijfscultuur",
+    "emoji": "🏢",
+    "level": "B1",
+    "description": "Woorden over Italiaanse bedrijfscultuur.",
+    "grammar": {
+      "title": "Italiaanse bedrijfscultuur",
+      "body": "Kenmerken van de Italiaanse bedrijfscultuur:\n\n• Persoonlijke relaties zijn heel belangrijk\n• Formeel taalgebruik (Lei) in zakelijke context\n• La pausa pranzo — de lunchpauze is vaak langer (1–2 uur)\n• Puntualità — stiptheid wordt gewaardeerd maar flexibel toegepast\n• Il networking — zakelijke relaties opbouwen via informele contacten"
+    },
+    "words": [
+      "w2299",
+      "w2300",
+      "w2301",
+      "w2302",
+      "w2303",
+      "w2304",
+      "w2305",
+      "w2306"
+    ]
+  },
+  {
+    "id": 258,
+    "title": "Import & export",
+    "emoji": "🚢",
+    "level": "B1",
+    "description": "Woorden over internationale handel.",
+    "grammar": {
+      "title": "Handelstaal",
+      "body": "'Made in Italy' is een sterk merk. Belangrijke exportsectoren:\n\nla moda — de mode\nl'alimentare — de voedingsindustrie\nil design — het design\nl'automotive — de auto-industrie\nla meccanica — de machinebouw\n\nL'Italia è il secondo paese manifatturiero d'Europa. — Italië is het tweede productieland van Europa."
+    },
+    "words": [
+      "w2307",
+      "w2308",
+      "w2309",
+      "w2310",
+      "w2311",
+      "w2312",
+      "w2313",
+      "w2314"
+    ]
+  },
+  {
+    "id": 259,
+    "title": "Klantenservice",
+    "emoji": "📞",
+    "level": "B1",
+    "description": "Woorden voor klantenservice en klachten.",
+    "grammar": {
+      "title": "Klantenservice",
+      "body": "Veelgebruikte zinnen:\n\nBuongiorno, come posso aiutarLa? — Goedendag, hoe kan ik u helpen?\nVorrei fare un reclamo. — Ik wil een klacht indienen.\nIl prodotto è difettoso. — Het product is defect.\nVorrei un rimborso. — Ik wil mijn geld terug.\nPosso parlare con il responsabile? — Kan ik de verantwoordelijke spreken?"
+    },
+    "words": [
+      "w2315",
+      "w2316",
+      "w2317",
+      "w2318",
+      "w2319",
+      "w2320",
+      "w2321",
+      "w2322"
+    ]
+  },
+  {
+    "id": 260,
+    "title": "Toetsles B1 — Blok 14",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 251–260: zakelijk Italiaans.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 14 (les 251–260)",
+      "body": "In dit blok heb je geleerd:\n• Formele brieven en e-mails schrijven\n• Solliciteren en presenteren\n• Onderhandelen en vergaderen\n• Bedrijfscultuur en internationale handel"
+    },
+    "words": [
+      "w2323",
+      "w2324",
+      "w2325",
+      "w2326",
+      "w2327",
+      "w2328",
+      "w2329",
+      "w2330"
+    ]
+  },
+  {
+    "id": 261,
+    "title": "In het ziekenhuis",
+    "emoji": "🏥",
+    "level": "B1",
+    "description": "Woordenschat voor het ziekenhuis en medische situaties.",
+    "grammar": {
+      "title": "Imperativo formale voor instructies",
+      "body": "Artsen en verpleegkundigen gebruiken de formele gebiedende wijs (Lei-vorm = congiuntivo presente):\n\nSi sieda, per favore. — Gaat u zitten, alstublieft.\nPrenda questa medicina. — Neem dit medicijn.\nRisposi profondamente. — Adem diep in.\nNon si preoccupi. — Maakt u zich geen zorgen."
+    },
+    "words": [
+      "w2331",
+      "w2332",
+      "w2333",
+      "w2334",
+      "w2335",
+      "w2336",
+      "w2337",
+      "w2338"
+    ]
+  },
+  {
+    "id": 262,
+    "title": "De apotheek",
+    "emoji": "💊",
+    "level": "B1",
+    "description": "Woorden voor de apotheek en medicijnen.",
+    "grammar": {
+      "title": "Bij de apotheek",
+      "body": "Nuttige zinnen:\n\nHo bisogno di un farmaco per… — Ik heb een medicijn nodig voor…\nÈ senza ricetta? — Is het zonder recept?\nQuante volte al giorno? — Hoe vaak per dag?\nPrima o dopo i pasti? — Voor of na de maaltijden?\nHa qualcosa per il mal di testa? — Heeft u iets tegen hoofdpijn?"
+    },
+    "words": [
+      "w2339",
+      "w2340",
+      "w2341",
+      "w2342",
+      "w2343",
+      "w2344",
+      "w2345",
+      "w2346"
+    ]
+  },
+  {
+    "id": 263,
+    "title": "Geestelijke gezondheid",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "Woorden over geestelijke gezondheid en welzijn.",
+    "grammar": {
+      "title": "Over geestelijke gezondheid praten",
+      "body": "Nuttige uitdrukkingen:\n\nSoffrire di ansia / depressione — Lijden aan angst / depressie\nAndare dallo psicologo — Naar de psycholoog gaan\nChiedere aiuto — Hulp vragen\nStare meglio / peggio — Het beter / slechter hebben\nLa salute mentale è importante quanto quella fisica. — Geestelijke gezondheid is net zo belangrijk als lichamelijke."
+    },
+    "words": [
+      "w2347",
+      "w2348",
+      "w2349",
+      "w2350",
+      "w2351",
+      "w2352",
+      "w2353",
+      "w2354"
+    ]
+  },
+  {
+    "id": 264,
+    "title": "Eerste hulp",
+    "emoji": "🚑",
+    "level": "B1",
+    "description": "Woorden en uitdrukkingen voor noodsituaties.",
+    "grammar": {
+      "title": "Noodsituaties",
+      "body": "Noodgevallen in Italië:\n\nil numero di emergenza: 112 (Europees) of 118 (ambulanza)\n\nChiamate un'ambulanza! — Bel een ambulance!\nC'è stato un incidente! — Er is een ongeluk gebeurd!\nDov'è il pronto soccorso? — Waar is de eerste hulp?\nÈ urgente! — Het is dringend!"
+    },
+    "words": [
+      "w2355",
+      "w2356",
+      "w2357",
+      "w2358",
+      "w2359",
+      "w2360",
+      "w2361",
+      "w2362"
+    ]
+  },
+  {
+    "id": 265,
+    "title": "Wetenschap — basis",
+    "emoji": "🔬",
+    "level": "B1",
+    "description": "Basiswoorden over wetenschap en onderzoek.",
+    "grammar": {
+      "title": "Over wetenschap praten",
+      "body": "Wetenschappelijk taalgebruik:\n\nLo studio dimostra che… — Het onderzoek toont aan dat…\nSecondo la ricerca… — Volgens het onderzoek…\nL'esperimento ha confermato… — Het experiment heeft bevestigd…\nLa teoria è stata verificata. — De theorie is geverifieerd."
+    },
+    "words": [
+      "w2363",
+      "w2364",
+      "w2365",
+      "w2366",
+      "w2367",
+      "w2368",
+      "w2369",
+      "w2370"
+    ]
+  },
+  {
+    "id": 266,
+    "title": "Biologie & geneeskunde",
+    "emoji": "🧬",
+    "level": "B1",
+    "description": "Woorden over biologie en medische wetenschap.",
+    "grammar": {
+      "title": "Biologische en medische termen",
+      "body": "Basistermen uit de biologie:\n\nla cellula — de cel\nil DNA — het DNA\nil gene — het gen\nil virus / il batterio — het virus / de bacterie\nil sistema immunitario — het immuunsysteem\nil vaccino — het vaccin"
+    },
+    "words": [
+      "w2371",
+      "w2372",
+      "w2373",
+      "w2374",
+      "w2375",
+      "w2376",
+      "w2377",
+      "w2378"
+    ]
+  },
+  {
+    "id": 267,
+    "title": "Wiskunde & natuurkunde",
+    "emoji": "🔢",
+    "level": "B1",
+    "description": "Basiswoorden uit wiskunde en natuurkunde.",
+    "grammar": {
+      "title": "Wiskundige termen",
+      "body": "Wiskundige bewerkingen:\n\naddizione (+) — optelling\nsottrazione (−) — aftrekking\nmoltiplicazione (×) — vermenigvuldiging\ndivisione (÷) — deling\n\nDue più tre fa cinque. — Twee plus drie is vijf.\nDieci diviso due fa cinque. — Tien gedeeld door twee is vijf."
+    },
+    "words": [
+      "w2379",
+      "w2380",
+      "w2381",
+      "w2382",
+      "w2383",
+      "w2384",
+      "w2385",
+      "w2386"
+    ]
+  },
+  {
+    "id": 268,
+    "title": "Uitvindingen & ontdekkingen",
+    "emoji": "💡",
+    "level": "B1",
+    "description": "Belangrijke uitvindingen en ontdekkingen.",
+    "grammar": {
+      "title": "Uitvindingen beschrijven",
+      "body": "Gebruik de passato remoto of passato prossimo:\n\nGalilei inventò il telescopio. — Galilei vond de telescoop uit.\nMarconi ha inventato la radio. — Marconi heeft de radio uitgevonden.\nVolta scoprì la pila elettrica. — Volta ontdekte de elektrische batterij.\n\ninventare = uitvinden | scoprire = ontdekken"
+    },
+    "words": [
+      "w2387",
+      "w2388",
+      "w2389",
+      "w2390",
+      "w2391",
+      "w2392",
+      "w2393",
+      "w2394"
+    ]
+  },
+  {
+    "id": 269,
+    "title": "Ruimtevaart & sterrenkunde",
+    "emoji": "🚀",
+    "level": "B1",
+    "description": "Woorden over de ruimte en sterrenkunde.",
+    "grammar": {
+      "title": "Over de ruimte praten",
+      "body": "Italiaanse ruimtevaarttermen:\n\nla stazione spaziale — het ruimtestation\nil lancio — de lancering\nl'astronauta — de astronaut\nil satellite — de satelliet\norbitare — in een baan draaien\n\nSamantha Cristoforetti è un'astronauta italiana. — Samantha Cristoforetti is een Italiaanse astronaut."
+    },
+    "words": [
+      "w2395",
+      "w2396",
+      "w2397",
+      "w2398",
+      "w2399",
+      "w2400",
+      "w2401",
+      "w2402"
+    ]
+  },
+  {
+    "id": 270,
+    "title": "Toetsles B1 — Blok 15",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 261–270: gezondheid & wetenschap.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 15 (les 261–270)",
+      "body": "In dit blok heb je geleerd:\n• De formele gebiedende wijs (imperativo formale)\n• Medische en farmaceutische termen\n• Geestelijke gezondheid en eerste hulp\n• Wetenschap, biologie en ruimtevaart"
+    },
+    "words": [
+      "w2403",
+      "w2404",
+      "w2405",
+      "w2406",
+      "w2407",
+      "w2408",
+      "w2409",
+      "w2410"
+    ]
+  },
+  {
+    "id": 271,
+    "title": "De kapper & schoonheid",
+    "emoji": "💇",
+    "level": "B1",
+    "description": "Woordenschat voor de kapper en schoonheidssalon.",
+    "grammar": {
+      "title": "Farsi + infinito",
+      "body": "Met farsi + infinito druk je uit dat je iets laat doen:\n\nfarsi tagliare i capelli — je haar laten knippen\nfarsi fare la barba — je laten scheren\nfarsi fare le unghie — je nagels laten doen\n\nMi faccio tagliare i capelli ogni mese. — Ik laat elke maand mijn haar knippen."
+    },
+    "words": [
+      "w2411",
+      "w2412",
+      "w2413",
+      "w2414",
+      "w2415",
+      "w2416",
+      "w2417",
+      "w2418"
+    ]
+  },
+  {
+    "id": 272,
+    "title": "De auto & garage",
+    "emoji": "🚗",
+    "level": "B1",
+    "description": "Woorden over de auto, onderhoud en de garage.",
+    "grammar": {
+      "title": "Bij de garage",
+      "body": "Nuttige zinnen:\n\nLa macchina non parte. — De auto start niet.\nHo una gomma a terra. — Ik heb een lekke band.\nDevo fare il tagliando. — Ik moet een onderhoudsbeurt laten doen.\nIl motore fa un rumore strano. — De motor maakt een raar geluid."
+    },
+    "words": [
+      "w2419",
+      "w2420",
+      "w2421",
+      "w2422",
+      "w2423",
+      "w2424",
+      "w2425",
+      "w2426"
+    ]
+  },
+  {
+    "id": 273,
+    "title": "Post & pakketjes",
+    "emoji": "📮",
+    "level": "B1",
+    "description": "Woorden over de post, pakketjes en bezorging.",
+    "grammar": {
+      "title": "Post en bezorging",
+      "body": "Nuttige zinnen:\n\nVorrei spedire un pacco. — Ik wil een pakket versturen.\nQuanto costa la spedizione? — Hoeveel kost de verzending?\nQuando arriverà? — Wanneer komt het aan?\nDevo firmare per la consegna? — Moet ik tekenen voor ontvangst?"
+    },
+    "words": [
+      "w2427",
+      "w2428",
+      "w2429",
+      "w2430",
+      "w2431",
+      "w2432",
+      "w2433",
+      "w2434"
+    ]
+  },
+  {
+    "id": 274,
+    "title": "De bank & verzekeringen",
+    "emoji": "🏦",
+    "level": "B1",
+    "description": "Bankzaken en verzekeringen regelen.",
+    "grammar": {
+      "title": "Bankzaken regelen",
+      "body": "Nuttige bankzinnen:\n\nVorrei aprire un conto. — Ik wil een rekening openen.\nVorrei fare un prelievo / un versamento. — Ik wil geld opnemen / storten.\nLa mia carta è bloccata. — Mijn pas is geblokkeerd.\nVorrei sottoscrivere un'assicurazione. — Ik wil een verzekering afsluiten."
+    },
+    "words": [
+      "w2435",
+      "w2436",
+      "w2437",
+      "w2438",
+      "w2439",
+      "w2440",
+      "w2441",
+      "w2442"
+    ]
+  },
+  {
+    "id": 275,
+    "title": "Recepten & koken verdieping",
+    "emoji": "👨‍🍳",
+    "level": "B1",
+    "description": "Verdieping in kooktermen en recepten.",
+    "grammar": {
+      "title": "Een recept volgen",
+      "body": "Italiaanse recepten gebruiken vaak de infinitief of imperativo:\n\nTagliare le cipolle a fettine. — De uien in plakjes snijden.\nFar bollire l'acqua. — Het water aan de kook brengen.\nMescolare gli ingredienti. — De ingrediënten mengen.\nCuocere a fuoco lento per 30 minuti. — 30 minuten op laag vuur koken."
+    },
+    "words": [
+      "w2443",
+      "w2444",
+      "w2445",
+      "w2446",
+      "w2447",
+      "w2448",
+      "w2449",
+      "w2450"
+    ]
+  },
+  {
+    "id": 276,
+    "title": "Huishouden & schoonmaken",
+    "emoji": "🧹",
+    "level": "B1",
+    "description": "Woorden over huishoudelijke taken.",
+    "grammar": {
+      "title": "Huishoudelijke taken",
+      "body": "Veelgebruikte werkwoorden:\n\npulire — schoonmaken\nlavare i piatti — de afwas doen\nfare il bucato — de was doen\npassare l'aspirapolvere — stofzuigen\nstirare — strijken\nsparecchiare — de tafel afruimen"
+    },
+    "words": [
+      "w2451",
+      "w2452",
+      "w2453",
+      "w2454",
+      "w2455",
+      "w2456",
+      "w2457",
+      "w2458"
+    ]
+  },
+  {
+    "id": 277,
+    "title": "Doe-het-zelf & reparatie",
+    "emoji": "🔧",
+    "level": "B1",
+    "description": "Woorden over klussen en reparaties.",
+    "grammar": {
+      "title": "Reparaties beschrijven",
+      "body": "Nuttige zinnen:\n\nDevo riparare il rubinetto. — Ik moet de kraan repareren.\nLa lampadina è fulminata. — De gloeilamp is doorgebrand.\nHo bisogno di un cacciavite / un martello. — Ik heb een schroevendraaier / hamer nodig.\nChiamo l'idraulico / l'elettricista. — Ik bel de loodgieter / elektricien."
+    },
+    "words": [
+      "w2459",
+      "w2460",
+      "w2461",
+      "w2462",
+      "w2463",
+      "w2464",
+      "w2465",
+      "w2466"
+    ]
+  },
+  {
+    "id": 278,
+    "title": "Tuinieren & buitenleven",
+    "emoji": "🌻",
+    "level": "B1",
+    "description": "Woorden over tuinieren en het buitenleven.",
+    "grammar": {
+      "title": "Over de tuin praten",
+      "body": "Tuinactiviteiten:\n\npiantare — planten\npotare — snoeien\ntagliare l'erba — het gras maaien\nraccogliere i frutti — de vruchten oogsten\nil prato — het gazon\nl'aiuola — het bloembed"
+    },
+    "words": [
+      "w2467",
+      "w2468",
+      "w2469",
+      "w2470",
+      "w2471",
+      "w2472",
+      "w2473",
+      "w2474"
+    ]
+  },
+  {
+    "id": 279,
+    "title": "Feest & vieren",
+    "emoji": "🎉",
+    "level": "B1",
+    "description": "Woorden voor feesten, uitnodigingen en vieringen.",
+    "grammar": {
+      "title": "Feesten en uitnodigen",
+      "body": "Uitnodigingen:\n\nSei invitato/a alla mia festa! — Je bent uitgenodigd op mijn feest!\nVuoi venire alla cena? — Wil je naar het diner komen?\nFesteggiamo il mio compleanno sabato. — We vieren zaterdag mijn verjaardag.\nPorto una bottiglia di vino. — Ik neem een fles wijn mee."
+    },
+    "words": [
+      "w2475",
+      "w2476",
+      "w2477",
+      "w2478",
+      "w2479",
+      "w2480",
+      "w2481",
+      "w2482"
+    ]
+  },
+  {
+    "id": 280,
+    "title": "Toetsles B1 — Blok 16",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 271–280: dagelijks leven verdieping.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 16 (les 271–280)",
+      "body": "In dit blok heb je geleerd:\n• Farsi + infinito (iets laten doen)\n• Bij de kapper, garage, post en bank\n• Koken, huishouden en klussen\n• Feesten en uitnodigen"
+    },
+    "words": [
+      "w2483",
+      "w2484",
+      "w2485",
+      "w2486",
+      "w2487",
+      "w2488",
+      "w2489",
+      "w2490"
+    ]
+  },
+  {
+    "id": 281,
+    "title": "Uitdrukkingen — deel 1",
+    "emoji": "💬",
+    "level": "B1",
+    "description": "Veelgebruikte Italiaanse uitdrukkingen met lichaamsdelen.",
+    "grammar": {
+      "title": "Idioom met lichaamsdelen",
+      "body": "Italiaanse uitdrukkingen met lichaamsdelen:\n\navere le mani in pasta — overal bij betrokken zijn\nessere in gamba — capabel zijn, pienter zijn\ncostare un occhio della testa — heel duur zijn\nnon vedere l'ora — ergens naar uitkijken\navere la testa fra le nuvole — in de wolken zijn, dromerig zijn"
+    },
+    "words": [
+      "w2491",
+      "w2492",
+      "w2493",
+      "w2494",
+      "w2495",
+      "w2496",
+      "w2497",
+      "w2498"
+    ]
+  },
+  {
+    "id": 282,
+    "title": "Uitdrukkingen — deel 2",
+    "emoji": "💬",
+    "level": "B1",
+    "description": "Meer Italiaanse uitdrukkingen voor dagelijks gebruik.",
+    "grammar": {
+      "title": "Dagelijkse uitdrukkingen",
+      "body": "Uitdrukkingen voor elke dag:\n\nIn bocca al lupo! — Succes! (antwoord: Crepi!)\nAcqua in bocca! — Mond dicht! (geheim houden)\nNon c'è due senza tre. — Alle goede dingen bestaan in drieën.\nChi dorme non piglia pesci. — Wie slaapt, vangt geen vis.\nMeglio tardi che mai. — Beter laat dan nooit."
+    },
+    "words": [
+      "w2499",
+      "w2500",
+      "w2501",
+      "w2502",
+      "w2503",
+      "w2504",
+      "w2505",
+      "w2506"
+    ]
+  },
+  {
+    "id": 283,
+    "title": "Spreekwoorden",
+    "emoji": "📜",
+    "level": "B1",
+    "description": "Bekende Italiaanse spreekwoorden en gezegden.",
+    "grammar": {
+      "title": "Italiaanse spreekwoorden",
+      "body": "Spreekwoorden zijn wijsheden die van generatie op generatie worden doorgegeven:\n\nChi va piano, va sano e va lontano. — Wie langzaam gaat, gaat gezond en komt ver.\nL'appetito vien mangiando. — De eetlust komt al etend.\nTutti i gusti son gusti. — Over smaak valt niet te twisten.\nTra il dire e il fare c'è di mezzo il mare. — Tussen zeggen en doen ligt de zee."
+    },
+    "words": [
+      "w2507",
+      "w2508",
+      "w2509",
+      "w2510",
+      "w2511",
+      "w2512",
+      "w2513",
+      "w2514"
+    ]
+  },
+  {
+    "id": 284,
+    "title": "Vaste werkwoordcombinaties",
+    "emoji": "🔗",
+    "level": "B1",
+    "description": "Verbi pronominali en vaste combinaties.",
+    "grammar": {
+      "title": "Verbi pronominali",
+      "body": "Verbi pronominali zijn werkwoorden met een vast voornaamwoord dat de betekenis verandert:\n\nfarcela — het redden (Ce la fai? — Red je het?)\nandarsene — weggaan (Me ne vado. — Ik ga weg.)\ncavarsela — zich redden (Me la cavo bene. — Ik red me goed.)\nprendersela — het kwalijk nemen (Non te la prendere! — Neem het niet kwalijk!)\nvolerci — nodig zijn (Ci vogliono due ore. — Er zijn twee uur nodig.)"
+    },
+    "words": [
+      "w2515",
+      "w2516",
+      "w2517",
+      "w2518",
+      "w2519",
+      "w2520",
+      "w2521",
+      "w2522"
+    ]
+  },
+  {
+    "id": 285,
+    "title": "Formeel schrijven",
+    "emoji": "✍️",
+    "level": "B1",
+    "description": "Formele schrijfconventies en briefstijl.",
+    "grammar": {
+      "title": "Formeel schrijven",
+      "body": "Formele schrijfconventies:\n\nSpett.le — Geachte (voor bedrijven)\nEgregio/a — Geachte (voor personen)\nLa presente per comunicarLe che… — Hierbij deel ik u mede dat…\nIn fede — Hoogachtend\nDistinti saluti — Met onderscheiden groet\n\nLet op: Lei/Suo/La worden met hoofdletter geschreven uit respect."
+    },
+    "words": [
+      "w2523",
+      "w2524",
+      "w2525",
+      "w2526",
+      "w2527",
+      "w2528",
+      "w2529",
+      "w2530"
+    ]
+  },
+  {
+    "id": 286,
+    "title": "Informeel taalgebruik",
+    "emoji": "😄",
+    "level": "B1",
+    "description": "Informeel Italiaans en veelgebruikte slang.",
+    "grammar": {
+      "title": "Informele taal",
+      "body": "Informeel Italiaans:\n\nDai! — Kom op! / Toe maar!\nBoh! — Geen idee!\nMagari! — Was het maar zo!\nFigata! — Gaaf! Cool!\nChe palle! — Wat vervelend! (grof)\nBasta! — Genoeg!\nMica male! — Niet slecht!"
+    },
+    "words": [
+      "w2531",
+      "w2532",
+      "w2533",
+      "w2534",
+      "w2535",
+      "w2536",
+      "w2537",
+      "w2538"
+    ]
+  },
+  {
+    "id": 287,
+    "title": "Telefoneren",
+    "emoji": "📱",
+    "level": "B1",
+    "description": "Woorden en uitdrukkingen voor telefoongesprekken.",
+    "grammar": {
+      "title": "Telefoneren in het Italiaans",
+      "body": "Telefoongesprekken:\n\nProonto? — Hallo? (bij het opnemen)\nVorrei parlare con… — Ik zou graag spreken met…\nChi parla? — Met wie spreek ik?\nUn momento, glielo/gliela passo. — Een moment, ik verbind u door.\nPosso lasciare un messaggio? — Kan ik een bericht achterlaten?\nLa linea è disturbata. — De verbinding is slecht."
+    },
+    "words": [
+      "w2539",
+      "w2540",
+      "w2541",
+      "w2542",
+      "w2543",
+      "w2544",
+      "w2545",
+      "w2546"
+    ]
+  },
+  {
+    "id": 288,
+    "title": "Klachten & problemen",
+    "emoji": "😤",
+    "level": "B1",
+    "description": "Woorden voor het uiten van klachten en problemen.",
+    "grammar": {
+      "title": "Klachten uiten",
+      "body": "Beleefde manieren om te klagen:\n\nMi scusi, c'è un problema con… — Neemt u me niet kwalijk, er is een probleem met…\nNon sono soddisfatto del servizio. — Ik ben niet tevreden over de service.\nVorrei parlare con il responsabile. — Ik wil de verantwoordelijke spreken.\nÈ inaccettabile. — Dit is onacceptabel.\nChiedo un rimborso. — Ik eis mijn geld terug."
+    },
+    "words": [
+      "w2547",
+      "w2548",
+      "w2549",
+      "w2550",
+      "w2551",
+      "w2552",
+      "w2553",
+      "w2554"
+    ]
+  },
+  {
+    "id": 289,
+    "title": "Complimenten & bedankjes",
+    "emoji": "🙏",
+    "level": "B1",
+    "description": "Complimenten geven en ontvangen, bedanken.",
+    "grammar": {
+      "title": "Complimenten & bedankjes",
+      "body": "Complimenten geven:\n\nComplimenti! — Gefeliciteerd! Goed gedaan!\nChe bel vestito! — Wat een mooie jurk!\nSei molto bravo/a! — Je bent heel goed!\n\nBedanken:\nGrazie mille / Grazie di cuore — Heel hartelijk bedankt\nTi sono molto grato/a — Ik ben je heel dankbaar\nNon c'è di che / Di niente — Graag gedaan"
+    },
+    "words": [
+      "w2555",
+      "w2556",
+      "w2557",
+      "w2558",
+      "w2559",
+      "w2560",
+      "w2561",
+      "w2562"
+    ]
+  },
+  {
+    "id": 290,
+    "title": "Toetsles B1 — Blok 17",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Toets over lessen 281–290: idioom & uitdrukkingen.",
+    "grammar": {
+      "title": "Toetsles B1 — Blok 17 (les 281–290)",
+      "body": "In dit blok heb je geleerd:\n• Italiaanse uitdrukkingen en spreekwoorden\n• Verbi pronominali (farcela, andarsene, etc.)\n• Formeel en informeel schrijven\n• Telefoneren, klagen en complimenteren"
+    },
+    "words": [
+      "w2563",
+      "w2564",
+      "w2565",
+      "w2566",
+      "w2567",
+      "w2568",
+      "w2569",
+      "w2570"
+    ]
+  },
+  {
+    "id": 291,
+    "title": "Verleden tijden — herhaling",
+    "emoji": "⏳",
+    "level": "B1",
+    "description": "Herhaling van alle verleden tijden: passato prossimo, imperfetto, passato remoto.",
+    "grammar": {
+      "title": "Alle verleden tijden",
+      "body": "Overzicht verleden tijden:\n\n• Passato prossimo: afgesloten handeling met link naar heden (Ho mangiato la pizza.)\n• Imperfetto: beschrijving, gewoonte, achtergrond (Quando ero piccolo, giocavo.)\n• Passato remoto: afgesloten handeling in ver verleden (Dante scrisse la Divina Commedia.)\n• Trapassato prossimo: voltooid verleden (Quando arrivai, era già partito.)\n\nVuistregel: gebruik passato prossimo in gesproken taal, passato remoto in geschreven taal en Zuid-Italië."
+    },
+    "words": [
+      "w2571",
+      "w2572",
+      "w2573",
+      "w2574",
+      "w2575",
+      "w2576",
+      "w2577",
+      "w2578"
+    ]
+  },
+  {
+    "id": 292,
+    "title": "Congiuntivo — herhaling",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "Herhaling van de congiuntivo in al zijn vormen.",
+    "grammar": {
+      "title": "Congiuntivo overzicht",
+      "body": "De congiuntivo heeft vier tijden:\n\n• Presente: Penso che sia vero. (Ik denk dat het waar is.)\n• Passato: Credo che abbia parlato. (Ik geloof dat hij gesproken heeft.)\n• Imperfetto: Pensavo che fosse vero. (Ik dacht dat het waar was.)\n• Trapassato: Credevo che avesse parlato. (Ik dacht dat hij had gesproken.)\n\nGebruik na: che + mening/emotie/twijfel/wens, conjuncties (prima che, sebbene, affinché)."
+    },
+    "words": [
+      "w2579",
+      "w2580",
+      "w2581",
+      "w2582",
+      "w2583",
+      "w2584",
+      "w2585",
+      "w2586"
+    ]
+  },
+  {
+    "id": 293,
+    "title": "Condizionale — herhaling",
+    "emoji": "💭",
+    "level": "B1",
+    "description": "Herhaling van condizionale presente en passato.",
+    "grammar": {
+      "title": "Condizionale overzicht",
+      "body": "Twee vormen:\n\n• Presente: Vorrei un caffè. (Ik zou graag een koffie willen.)\n• Passato: Avrei voluto venire. (Ik had willen komen.)\n\nGebruik:\n1. Beleefde verzoeken (vorrei, potrebbe)\n2. Wensen en verlangens (Mi piacerebbe…)\n3. Spijt (Avrei dovuto…)\n4. Hypothesen (Se avessi tempo, viaggerei.)"
+    },
+    "words": [
+      "w2587",
+      "w2588",
+      "w2589",
+      "w2590",
+      "w2591",
+      "w2592",
+      "w2593",
+      "w2594"
+    ]
+  },
+  {
+    "id": 294,
+    "title": "Periodo ipotetico — alle types",
+    "emoji": "🔀",
+    "level": "B1",
+    "description": "Alle drie de conditionele types vergeleken.",
+    "grammar": {
+      "title": "Periodo ipotetico — alle types",
+      "body": "Drie types conditionele zinnen:\n\n• Type 1 (realis): Se piove, resto a casa. — Als het regent, blijf ik thuis. (indicativo + indicativo)\n• Type 2 (irrealis heden): Se avessi tempo, viaggerei. — Als ik tijd had, zou ik reizen. (congiuntivo imperfetto + condizionale presente)\n• Type 3 (irrealis verleden): Se avessi studiato, avrei superato l'esame. — Als ik had gestudeerd, had ik het examen gehaald. (congiuntivo trapassato + condizionale passato)"
+    },
+    "words": [
+      "w2595",
+      "w2596",
+      "w2597",
+      "w2598",
+      "w2599",
+      "w2600",
+      "w2601",
+      "w2602"
+    ]
+  },
+  {
+    "id": 295,
+    "title": "Indirecte rede — verdieping",
+    "emoji": "🗣️",
+    "level": "B1",
+    "description": "Verdieping in de indirecte rede en tijdverschuiving.",
+    "grammar": {
+      "title": "Indirecte rede verdieping",
+      "body": "Bij de omzetting naar indirecte rede verschuiven tijden:\n\nDirect: \"Vengo domani.\" — Ik kom morgen.\nIndirect: Ha detto che sarebbe venuto il giorno dopo. — Hij zei dat hij de volgende dag zou komen.\n\nVerschuivingen:\npresente → imperfetto\npassato prossimo → trapassato prossimo\nfuturo → condizionale passato\ndomani → il giorno dopo\nieri → il giorno prima"
+    },
+    "words": [
+      "w2603",
+      "w2604",
+      "w2605",
+      "w2606",
+      "w2607",
+      "w2608",
+      "w2609",
+      "w2610"
+    ]
+  },
+  {
+    "id": 296,
+    "title": "Connettivi & tekststructuur",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Verbindingswoorden voor samenhangende teksten.",
+    "grammar": {
+      "title": "Connettivi testuali",
+      "body": "Verbindingswoorden voor structuur:\n\nInnanzitutto / In primo luogo — In de eerste plaats\nInoltre / Per di più — Bovendien\nTuttavia / Nonostante ciò — Echter / Desondanks\nQuindi / Perciò / Di conseguenza — Dus / Daarom\nIn conclusione / Per concludere — Tot slot\nIn sintesi — Samengevat"
+    },
+    "words": [
+      "w2611",
+      "w2612",
+      "w2613",
+      "w2614",
+      "w2615",
+      "w2616",
+      "w2617",
+      "w2618"
+    ]
+  },
+  {
+    "id": 297,
+    "title": "Woordvorming & afleidingen",
+    "emoji": "🔤",
+    "level": "B1",
+    "description": "Leer hoe Italiaanse woorden worden gevormd.",
+    "grammar": {
+      "title": "Woordvorming",
+      "body": "Italiaanse prefixen en suffixen:\n\nPrefixen:\nri- = opnieuw (riscrivere = herschrijven)\ns- = ontkenning (scontento = ontevreden)\nin-/im- = niet (impossibile = onmogelijk)\n\nSuffixen:\n-mente = bijwoord (velocemente = snel)\n-zione = actie/resultaat (educazione = onderwijs)\n-ista = beoefenaar (giornalista = journalist)\n-abile/-ibile = mogelijkheid (possibile = mogelijk)"
+    },
+    "words": [
+      "w2619",
+      "w2620",
+      "w2621",
+      "w2622",
+      "w2623",
+      "w2624",
+      "w2625",
+      "w2626"
+    ]
+  },
+  {
+    "id": 298,
+    "title": "Valse vrienden NL-IT",
+    "emoji": "⚠️",
+    "level": "B1",
+    "description": "Woorden die lijken op Nederlands maar iets anders betekenen.",
+    "grammar": {
+      "title": "Valse vrienden",
+      "body": "Pas op voor deze valse vrienden:\n\nbravo = goed/knap (NIET braaf)\nsimpatico = sympathiek/leuk (NIET simpel)\neventualmente = eventueel (NIET per ongeluk)\ncamera = kamer (NIET camera → macchina fotografica)\nfirma = handtekening (NIET bedrijf → azienda/ditta)\nnoioso = saai (NIET naïef)\nfatto = feit/gedaan (NIET vet)"
+    },
+    "words": [
+      "w2627",
+      "w2628",
+      "w2629",
+      "w2630",
+      "w2631",
+      "w2632",
+      "w2633",
+      "w2634"
+    ]
+  },
+  {
+    "id": 299,
+    "title": "Formeel register — verdieping",
+    "emoji": "👔",
+    "level": "B1",
+    "description": "Verdieping in het formele register.",
+    "grammar": {
+      "title": "Formeel vs. informeel",
+      "body": "Het formele register (Lei) is in Italië veel gebruikelijker dan in Nederland:\n\n• Winkels: il commesso zegt Lei tegen klanten\n• Kantoor: collegae gebruiken vaak Lei bij eerste contact\n• E-mails: altijd Lei tenzij je elkaar goed kent\n\nTu → Lei verschuivingen:\nCome stai? → Come sta?\nPuoi…? → Può…? / Potrebbe…?\nDimmi → Mi dica"
+    },
+    "words": [
+      "w2635",
+      "w2636",
+      "w2637",
+      "w2638",
+      "w2639",
+      "w2640",
+      "w2641",
+      "w2642"
+    ]
+  },
+  {
+    "id": 300,
+    "title": "🎓 B1 volledig afgerond!",
+    "emoji": "🎓",
+    "level": "B1",
+    "description": "Gefeliciteerd! Je hebt alle B1-lessen voltooid. Je beheerst nu meer dan 1400 Italiaanse woorden en de belangrijkste grammaticale structuren van het B1-niveau.",
+    "grammar": {
+      "title": "🎓 B1 — Complimenti!",
+      "body": "Wat je nu kunt:\n\n✓ Verleden tijden gebruiken (passato prossimo, imperfetto, passato remoto)\n✓ De congiuntivo (presente, imperfetto)\n✓ De condizionale (presente en passato)\n✓ Hypothetische zinnen (periodo ipotetico)\n✓ Indirecte rede\n✓ Formeel en informeel register\n✓ Over kunst, wetenschap, politiek en dagelijks leven praten\n✓ Italiaanse uitdrukkingen en spreekwoorden\n\nJe bent nu op B1-niveau. Complimenti e in bocca al lupo per il tuo viaggio linguistico! 🇮🇹"
+    },
+    "words": [
+      "w2643",
+      "w2644",
+      "w2645",
+      "w2646",
+      "w2647",
+      "w2648",
+      "w2649",
+      "w2650"
+    ]
   }
 ]

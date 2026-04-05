@@ -98,6 +98,209 @@ function setupNextBtn(btn, callback, autoAdvance = false) {
 }
 
 
+// ─── Gat-invullen helpers ─────────────────────────────────────────────────────
+
+/** Strip lidwoord van een Italiaans woord (il gatto → gatto). */
+function stripArticle(it) {
+  return it.replace(/^(il |la |lo |l'|i |le |gli |un |una |uno |un')/i, '').trim();
+}
+
+/**
+ * Zoek het doelwoord in de voorbeeldzin en geef de zin terug met ___ op die plek.
+ * Geeft null als het woord niet gevonden wordt.
+ */
+function makeGapSentence(word) {
+  if (!word.ex) return null;
+  const stem = stripArticle(word.it).toLowerCase();
+  if (!stem) return null;
+  // Zoek case-insensitive naar de stam in de zin
+  const re = new RegExp('\\b' + stem.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+  if (!re.test(word.ex)) return null;
+  const gapped = word.ex.replace(re, '___');
+  return gapped;
+}
+
+/**
+ * Gat-invullen (MC) — toon een zin met ___, kies het juiste woord.
+ */
+export function renderFillBlankMC(exercise, container, allWords, onComplete) {
+  const { word } = exercise;
+  const hasTTS = isTTSAvailable();
+  const gapped = makeGapSentence(word);
+  if (!gapped) {
+    // Fallback: gebruik gewone MC als gat niet gemaakt kan worden
+    renderMultipleChoice(exercise, container, allWords, onComplete);
+    return;
+  }
+
+  const stem = stripArticle(word.it);
+  // Afleiders: woorden uit dezelfde les, anders willekeurig
+  const sameLesson = allWords.filter(w => w.lesson === word.lesson && w.id !== word.id);
+  const pool = sameLesson.length >= 3 ? sameLesson : allWords.filter(w => w.id !== word.id);
+  const distractorWords = shuffleEx(pool).slice(0, 3);
+  const distractors = distractorWords.map(w => stripArticle(w.it));
+
+  const options = shuffleEx([{ text: stem, correct: true }, ...distractors.map(d => ({ text: d, correct: false }))]);
+
+  container.innerHTML = `
+    <div class="ex-label">Vul het ontbrekende woord in</div>
+    <div class="fib-hint">${word.nl}</div>
+    <div class="fib-sentence">${gapped}</div>
+    <div class="mc-options" id="fib-options">
+      ${options.map((opt, i) => `
+        <button class="mc-option" data-correct="${opt.correct}">
+          <span class="mc-letter">${['A','B','C','D'][i]}</span>
+          <span class="mc-text">${opt.text}</span>
+        </button>
+      `).join('')}
+    </div>
+    <div class="mc-feedback" id="fib-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>
+  `;
+
+  let answered = false;
+  container.querySelectorAll('.mc-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (answered) return;
+      answered = true;
+      const isCorrect = btn.dataset.correct === 'true';
+      const result = isCorrect ? 'correct' : 'wrong';
+
+      container.querySelectorAll('.mc-option').forEach(b => {
+        b.classList.add('disabled');
+        if (b.dataset.correct === 'true') b.classList.add('correct');
+        else if (b === btn) b.classList.add('wrong');
+      });
+
+      const fb = container.querySelector('#fib-feedback');
+      if (isCorrect) {
+        fb.className = 'mc-feedback correct show';
+        fb.innerHTML = `✓ Correct! <em>"${word.ex}"</em>`;
+        if (hasTTS) setTimeout(() => speak(word.ex), 400);
+      } else {
+        fb.className = 'mc-feedback wrong show';
+        fb.innerHTML = `✗ Fout. Het juiste woord is: <strong>${stem}</strong> — "${word.ex}"`;
+        if (hasTTS) setTimeout(() => speak(word.ex), 500);
+      }
+
+      updateWordState(word.id, qualityFromResult(result));
+      recordAnswer(isCorrect);
+
+      const nextBtn = container.querySelector('#ex-next');
+      setupNextBtn(nextBtn, () => onComplete({ result, word, xp: isCorrect ? 4 : 1 }), isCorrect);
+    });
+  });
+}
+
+/**
+ * Gat-invullen (type) — toon een zin met ___, typ het juiste woord.
+ */
+export function renderFillBlankType(exercise, container, onComplete) {
+  const { word } = exercise;
+  const hasTTS = isTTSAvailable();
+  const gapped = makeGapSentence(word);
+  if (!gapped) {
+    renderTypeExercise(exercise, container, onComplete);
+    return;
+  }
+
+  const stem = stripArticle(word.it);
+
+  container.innerHTML = `
+    <div class="ex-label">Vul het ontbrekende woord in</div>
+    <div class="fib-hint">${word.nl}</div>
+    <div class="fib-sentence">${gapped}</div>
+    <div class="type-input-wrap">
+      <input
+        type="text"
+        class="type-input"
+        id="fib-input"
+        placeholder="Typ het ontbrekende woord..."
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false"
+      >
+      <button class="type-submit-btn" id="fib-submit">✓</button>
+    </div>
+    <button class="type-skip-btn" id="fib-skip">Weet ik niet →</button>
+    <div class="type-feedback" id="fib-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>
+  `;
+
+  const input     = container.querySelector('#fib-input');
+  const submitBtn = container.querySelector('#fib-submit');
+  const feedback  = container.querySelector('#fib-feedback');
+  const skipBtn   = container.querySelector('#fib-skip');
+  let answered = false;
+
+  setTimeout(() => input.focus(), 100);
+
+  const checkAnswer = () => {
+    if (answered) return;
+    const typed = input.value.trim();
+    if (!typed) {
+      input.classList.add('shake');
+      setTimeout(() => input.classList.remove('shake'), 400);
+      return;
+    }
+
+    answered = true;
+    input.disabled = true;
+    submitBtn.disabled = true;
+
+    const result  = checkTypedAnswer(typed, stem);
+    const nextBtn = container.querySelector('#ex-next');
+
+    if (result === 'correct') {
+      input.classList.add('input-correct');
+      feedback.className = 'type-feedback correct show';
+      feedback.innerHTML = `✓ Correct! <em>"${word.ex}"</em>`;
+      if (hasTTS) setTimeout(() => speak(word.ex), 400);
+      updateWordState(word.id, 4);
+      recordAnswer(true);
+      setupNextBtn(nextBtn, () => onComplete({ result: 'correct', word, xp: 4 }), true);
+    } else if (result === 'close') {
+      input.classList.add('input-close');
+      feedback.className = 'type-feedback close show';
+      feedback.innerHTML = `≈ Bijna! Je schreef "<strong>${typed}</strong>", het is <strong>${stem}</strong> — "${word.ex}"`;
+      if (hasTTS) setTimeout(() => speak(word.ex), 500);
+      updateWordState(word.id, qualityFromResult('close'));
+      recordAnswer(false);
+      setupNextBtn(nextBtn, () => onComplete({ result: 'close', word, xp: 2 }), false);
+    } else {
+      input.classList.add('input-wrong');
+      feedback.className = 'type-feedback wrong show';
+      feedback.innerHTML = `✗ Het juiste woord is: <strong>${stem}</strong> — "${word.ex}"`;
+      if (hasTTS) setTimeout(() => speak(word.ex), 600);
+      updateWordState(word.id, 0);
+      recordAnswer(false);
+      setupNextBtn(nextBtn, () => onComplete({ result: 'wrong', word, xp: 1 }), false);
+    }
+  };
+
+  submitBtn.addEventListener('click', checkAnswer);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') checkAnswer(); });
+
+  skipBtn.addEventListener('click', () => {
+    if (answered) return;
+    answered = true;
+    input.disabled = true;
+    submitBtn.disabled = true;
+    skipBtn.style.display = 'none';
+    input.classList.add('input-wrong');
+    feedback.className = 'type-feedback wrong show';
+    feedback.innerHTML = `Het antwoord is: <strong>${stem}</strong> — "${word.ex}"`;
+    if (hasTTS) setTimeout(() => speak(word.ex), 400);
+    updateWordState(word.id, 0);
+    recordAnswer(false);
+    const nextBtn = container.querySelector('#ex-next');
+    nextBtn.style.display = 'block';
+    nextBtn.addEventListener('click', () => onComplete({ result: 'wrong', word, xp: 0 }));
+  });
+}
+
+
 // ─── Queue builder ─────────────────────────────────────────────────────────────
 
 /**
@@ -136,7 +339,13 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
     queue.push({ type: 'sentence-choice', word, isNew: false });
   });
 
-  // Review: random type, inclusief word-order, listen-type en sentence-choice als beschikbaar
+  // Gat-invullen (MC): max 3 per les, alleen voor woorden waar een gat gemaakt kan worden
+  const fibWords = newWords.filter(w => makeGapSentence(w) !== null).slice(0, 3);
+  fibWords.forEach(word => {
+    queue.push({ type: 'fill-in-blank-mc', word, isNew: false });
+  });
+
+  // Review: random type, inclusief word-order, listen-type, sentence-choice en fill-in-blank-type
   reviewWords.forEach(word => {
     const types = ['multiple-choice', 'type'];
     if (ttsOk) {
@@ -145,6 +354,7 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
     }
     if (sentenceToTokens(word.ex).length >= 3) types.push('word-order');
     if (word.ex && word.exNl) types.push('sentence-choice');
+    if (makeGapSentence(word) !== null) types.push('fill-in-blank-type');
     const type = types[Math.floor(Math.random() * types.length)];
     queue.push({ type, word, isNew: false });
   });

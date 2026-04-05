@@ -47,7 +47,8 @@
       "Bash(sed -i '' 's/v1\\\\.35 · Italiaans · 120 lessen · 867 woorden/v1.36 · Italiaans · 120 lessen · 867 woorden/' www/index.html)",
       "Bash(sed -i '' \"s|app.js?v=26|app.js?v=27|\" www/index.html)",
       "Bash(sed -i '' 's/v1\\\\.36 · Italiaans · 120 lessen · 867 woorden/v1.37 · Italiaans · 120 lessen · 867 woorden/' www/index.html)",
-      "Bash(sed -i '' 's/app\\\\.js?v=27/app.js?v=28/' www/index.html)"
+      "Bash(sed -i '' 's/app\\\\.js?v=27/app.js?v=28/' www/index.html)",
+      "Bash(ls -la \"/Users/jim.van.stratum/Applications/Taal app/scripts/generate_b1_block\"*.py)"
     ]
   }
 }
