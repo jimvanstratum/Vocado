@@ -64,7 +64,7 @@ function showInstallBanner() {
 }
 
 // ─── CONSTANTEN ───────────────────────────────────────────────────────────────
-const MILESTONE_POINTS = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+const MILESTONE_POINTS = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300];
 const MILESTONE_NAMES  = {
   10: 'Toetsles A1 — Blok 1 (les 1–10)',
   20: 'Toetsles A1 — Blok 2 (les 11–20)',
@@ -563,11 +563,24 @@ function renderHome() {
     });
 
   });
-
-  // Sticky "Doorgaan"-kaart — toont de eerste actieve les over alle niveaus
+  // Sticky "Doorgaan"-kaart — toont de eerste actieve les of milestone over alle niveaus
   const continueContainer = $id('continue-card-container');
   if (continueContainer) {
-    if (globalFirstActiveLesson) {
+    if (firstAvailableMilestone !== undefined) {
+      // Volgende stap is een toetsles
+      const mName = MILESTONE_NAMES[firstAvailableMilestone] || `Toetsles ${firstAvailableMilestone}`;
+      continueContainer.style.display = '';
+      continueContainer.innerHTML = `
+        <div class="continue-card" id="continue-card">
+          <span class="continue-card-emoji">📋</span>
+          <div class="continue-card-info">
+            <div class="continue-card-title">${mName}</div>
+            <div class="continue-card-sub">20 vragen · Minimaal 70%</div>
+          </div>
+          <button class="continue-card-btn">Nu doen →</button>
+        </div>`;
+      $id('continue-card').addEventListener('click', () => startMilestoneQuiz(firstAvailableMilestone));
+    } else if (globalFirstActiveLesson) {
       continueContainer.style.display = '';
       continueContainer.innerHTML = `
         <div class="continue-card" id="continue-card">
