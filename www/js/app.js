@@ -84,11 +84,23 @@ const MILESTONE_NAMES  = {
   160: 'Toetsles B1 — Blok 4 (les 151–160)',
   170: 'Toetsles B1 — Blok 5 (les 161–170)',
   180: 'Toetsles B1 — Blok 6 (les 171–180)',
+  190: 'Toetsles B1 — Blok 7 (les 181–190)',
+  200: 'Toetsles B1 — Blok 8 (les 191–200)',
+  210: 'Toetsles B1 — Blok 9 (les 201–210)',
+  220: 'Toetsles B1 — Blok 10 (les 211–220)',
+  230: 'Toetsles B1 — Blok 11 (les 221–230)',
+  240: 'Toetsles B1 — Blok 12 (les 231–240)',
+  250: 'Toetsles B1 — Blok 13 (les 241–250)',
+  260: 'Toetsles B1 — Blok 14 (les 251–260)',
+  270: 'Toetsles B1 — Blok 15 (les 261–270)',
+  280: 'Toetsles B1 — Blok 16 (les 271–280)',
+  290: 'Toetsles B1 — Blok 17 (les 281–290)',
+  300: 'Toetsles B1 — Blok 18 (les 291–300)',
 };
 
 // Kleuren en bereiken per niveau (voor sectie-headers)
 const LEVEL_COLORS = { A1: '#009246', A2: '#f5a623', B1: '#0A80C4' };
-const LEVEL_RANGES = { A1: 'lessen 1–60', A2: 'lessen 61–120', B1: 'lessen 121–180' };
+const LEVEL_RANGES = { A1: 'lessen 1–60', A2: 'lessen 61–120', B1: 'lessen 121–300' };
 
 // ─── SEGMENT-HELPERS (Sprint 10) ─────────────────────────────────────────────
 /** Segmentnummer van een les-id: 1=les1-10, 2=11-20, ..., 6=51-60 */

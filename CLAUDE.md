@@ -41,7 +41,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.40**, cache buster **?v=31**
+- Huidige versie: **v1.41**, cache buster **?v=32**
 
 ### Build & deploy
 
@@ -95,20 +95,20 @@ Array van woord-objecten:
 
 ### Conventies
 
-- **Word-IDs**: `wNNN` (w001–w1690, gaps mogelijk door deduplicatie)
-- **Lesson-IDs**: integers 1–180
-- **Levels**: `"A1"` (lessen 1–60), `"A2"` (lessen 61–120), `"B1"` (lessen 121–180)
+- **Word-IDs**: `wNNN` (w001–w2650, gaps mogelijk door deduplicatie)
+- **Lesson-IDs**: integers 1–300
+- **Levels**: `"A1"` (lessen 1–60), `"A2"` (lessen 61–120), `"B1"` (lessen 121–300)
 - **Elke les**: exact 8 woorden (uitzondering: les 3 heeft 10 vanwege cijferreeks)
 - **Zelfstandige naamwoorden**: altijd met lidwoord (`il/la/lo/l'/i/le/gli`)
 - **Grammatica**: A1-niveau = herkenning, geen productie van complexe constructies
 
 ---
 
-## Huidige staat (v1.40)
+## Huidige staat (v1.41)
 
 ### Inhoud
-- **180 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–180
-- **1480 woorden**: A1 = 500, A2 = 500, B1 = 480
+- **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
+- **2440 woorden**: A1 = 500, A2 = 500, B1 = 1440
 - **Woordtelling per les**: 8 (les 3: 10)
 
 ### Niveau-indeling (CEFR)
@@ -116,14 +116,14 @@ Array van woord-objecten:
 |--------|--------|---------|-----------|
 | A1 | 1–60 | 500 | 500–700 ✓ |
 | A2 | 61–120 | 500 | +500–800 ✓ |
-| B1 | 121–180 | 480 | +1500 (gestart, eerste 480) |
+| B1 | 121–300 | 1440 | +1500 (bijna compleet) |
 
 ### Milestone-namen (MILESTONE_NAMES in app.js)
 
 ```javascript
 10: 'Toetsles A1 — Blok 1 (les 1–10)'  ...t/m...  60: 'Toetsles A1 — Blok 6 (les 51–60)'
 70: 'Toetsles A2 — Blok 1 (les 61–70)' ...t/m... 120: 'Toetsles A2 — Blok 6 (les 111–120)'
-130: 'Toetsles B1 — Blok 1 (les 121–130)' ...t/m... 180: 'Toetsles B1 — Blok 6 (les 171–180)'
+130: 'Toetsles B1 — Blok 1 (les 121–130)' ...t/m... 300: 'Toetsles B1 — Blok 18 (les 291–300)'
 ```
 
 ---
@@ -142,12 +142,16 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | `type` | Toon Nederlandse vertaling, typ het Italiaans |
 | `word-order` | Rangschik losse woorden tot een juiste Italiaanse zin |
 | `sentence-choice` | Kies de juiste Nederlandse vertaling van een volledige zin |
+| `fill-in-blank-mc` | Zin met gat, kies het juiste woord (4 opties) |
+| `fill-in-blank-type` | Zin met gat, typ het ontbrekende woord |
+| `matching` | Koppel 4 Italiaanse woorden aan hun Nederlandse vertaling |
 | `grammar` | Grammaticakaart met uitleg (tussen oefeningen) |
 | `intro` | Les-introductiekaart (eerste kaart van elke les) |
 
 **Oefeningenrij-logica** (buildExerciseQueue in exercises.js):
 - Nieuw woord: flashcard → MC of listen-choose → type of listen-type (30% dictee als TTS beschikbaar)
-- Review-woord: random type incl. word-order, sentence-choice
+- Per les extra: max 3 word-order, max 2 sentence-choice, max 3 fill-in-blank-mc, 1 matching
+- Review-woord: random type incl. word-order, sentence-choice, fill-in-blank-type, matching
 
 ### App-schermen
 - **Home**: lessenlijst met niveau-headers, voortgangsbadges, "Mijn positie"-knop, review-badge
@@ -199,6 +203,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.38 | Sprint 2: Vocabulaire aangevuld tot A1=500 + A2=500 (totaal 1000 woorden) |
 | v1.39 | Sprint 3: UI-fixes (terugnavigatie vergrendeld, kleurthema's, Doorgaan-kaart, SW-update-banner) |
 | v1.40 | Sprint 4: B1-content — 60 nieuwe lessen (121–180), 480 woorden, 6 grammaticablokken |
+| v1.41 | Sprint 5: B1-uitbreiding (120 extra lessen 181–300, 960 woorden) + 2 nieuwe oefenvormen (gat-invullen, koppelen) |
 
 ---
 
@@ -212,7 +217,7 @@ Gebruik dit als maatlat bij het plannen van content en features.
 |--------|--------------------|--------------------|-----------|
 | A1 | ±500–700 | 500–700 | 500 ✓ |
 | A2 | ±1.000–1.500 | +500–800 | 500 ✓ |
-| B1 | ±2.500–3.000 | +1.500 | 480 (gestart) |
+| B1 | ±2.500–3.000 | +1.500 | 1440 (bijna compleet) |
 | B2+ | ±5.000 | +2.000 | 0 |
 
 ### Grammatica per niveau
@@ -265,8 +270,8 @@ Tot B2 = circa **600–800 uur** totale studie.
 | Prioriteit | Sprint | Toelichting |
 |---|---|---|
 | Hoog | **Spaans toevoegen** | Tweede taal naast Italiaans; zelfde lesstructuur, eigen curriculum + woordenlijst |
-| Middel | **Nieuwe oefenvormen** | Bijv. gat invullen, vervoegen, koppelen, leestekst — voornamelijk relevant voor B1 |
-| Middel | **B1-woorduitbreiding** | B1 heeft nu 480 woorden, CEFR-doel is +1500 — kan aangevuld worden met extra woorden |
+| Middel | **Nieuwe oefenvormen** | Bijv. vervoegen, leestekst — gat-invullen en koppelen zijn al geïmplementeerd |
+| Laag | **B1-woorduitbreiding** | B1 heeft nu 1440 woorden, CEFR-doel is +1500 — bijna compleet, ~60 woorden resterend |
 
 ---
 
