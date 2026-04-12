@@ -142,7 +142,7 @@ function checkSentenceAnswer(typed, correct) {
 /**
  * Groepeer woorden per categorie. Geeft null als er geen 2 categorieën met elk 2+ woorden zijn.
  */
-function buildCategoryGroups(words) {
+export function buildCategoryGroups(words) {
   const groups = {};
   words.forEach(w => {
     if (w.cat) (groups[w.cat] = groups[w.cat] || []).push(w);
