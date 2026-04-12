@@ -902,13 +902,14 @@ function onDone(result) {
         sessionErrors.push({ it: result.word.it, nl: result.word.nl });
       }
     }
-    // Sla op voor terug-knop; wasWrong en wordIt voor vergrendelde weergave
     exerciseHistory.push({
-      xp: xpEarned,
-      correct: wasCorrect,
+      xp: xpEarned, correct: wasCorrect,
       wasWrong: result.result === 'wrong',
-      wordIt: result.word?.it ?? null
+      wordIt: result.word?.it ?? null, isMeta: false
     });
+  } else {
+    // Meta-kaarten (intro/grammar) ook opslaan zodat history.length synchroon blijft met exerciseIndex
+    exerciseHistory.push({ xp: 0, correct: true, wasWrong: false, wordIt: null, isMeta: true });
   }
 
   exerciseIndex++;
@@ -921,6 +922,8 @@ function goBack() {
   cancelAdvanceTimer();   // stop pending auto-advance zodat de timer niet achteraf afvuurt
   if (exerciseIndex === 0) return;
   exerciseIndex--;
+  // Sla meta-kaarten (intro/grammar) over — die hebben geen antwoord om te vergrendelen
+  while (exerciseIndex > 0 && exerciseHistory[exerciseIndex]?.isMeta) exerciseIndex--;
   renderExercise();
 }
 
