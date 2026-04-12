@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocado-20260405-2108';
+const CACHE_NAME = 'vocado-20260412-1615';
 const ASSETS = [
   './',
   './index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   './woordlogo.svg',
   './icon-192.png',
   './icon-512.png',
+  './Vocado groot.svg',
   './js/app.js',
   './js/srs.js',
   './js/progress.js',

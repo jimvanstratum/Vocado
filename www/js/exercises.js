@@ -4,7 +4,7 @@
  */
 
 import { speak, isTTSAvailable, getTTSRate } from './audio.js?v=10';
-import { updateWordState, qualityFromResult } from './srs.js?v=10';
+import { updateWordState, qualityFromResult } from './srs.js?v=17';
 import { recordAnswer } from './progress.js?v=10';
 
 // ─── Auto-advance timer (annuleerbaar via goBack) ─────────────────────────────
@@ -49,8 +49,20 @@ function checkTypedAnswer(typed, correct) {
 }
 
 function getDistractors(word, allWords, count = 3) {
-  const pool = allWords.filter(w => w.id !== word.id && w.it !== word.it);
-  return [...pool].sort(() => Math.random() - 0.5).slice(0, count);
+  const notTarget = allWords.filter(w => w.id !== word.id && w.nl !== word.nl);
+
+  // Voorkeur: zelfde categorie → zelfde les → zelfde niveau → alles
+  // Zo zijn afleidende antwoorden altijd realistisch (geen 'dolfijn' bij getallen)
+  const sameCat    = word.cat ? notTarget.filter(w => w.cat === word.cat) : [];
+  const sameLesson = notTarget.filter(w => w.lesson === word.lesson);
+  const sameLevel  = notTarget.filter(w => w.level === word.level);
+
+  const pool = sameCat.length    >= count ? sameCat
+             : sameLesson.length >= count ? sameLesson
+             : sameLevel.length  >= count ? sameLevel
+             : notTarget;
+
+  return shuffleEx(pool).slice(0, count);
 }
 
 function shuffleEx(arr) {

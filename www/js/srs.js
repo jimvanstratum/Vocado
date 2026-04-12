@@ -97,6 +97,21 @@ export function getDueWordIds(allWordIds) {
   return allWordIds.filter(id => isWordDue(id));
 }
 
+/**
+ * Verschuift de volgende herhaling van een woord naar morgen, zonder het SRS-interval te wijzigen.
+ * Gebruikt voor overflow-woorden die niet in de review-sessie passen (>20).
+ */
+export function snoozeWordUntilTomorrow(wordId) {
+  const data = loadSRSData();
+  const state = data[wordId];
+  if (!state) return;
+  const nextDate = new Date();
+  nextDate.setDate(nextDate.getDate() + 1);
+  state.nextReview = nextDate.toISOString();
+  data[wordId] = state;
+  saveSRSData(data);
+}
+
 /** Geeft het percentage geleerd voor een set woord-IDs. */
 export function getLearnedPercent(wordIds) {
   if (!wordIds.length) return 0;

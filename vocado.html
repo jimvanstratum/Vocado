@@ -1,4 +1,4 @@
-<!-- Vocado — standalone build 2026-04-05 21:08 -->
+<!-- Vocado — standalone build 2026-04-12 16:15 -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -1261,6 +1261,21 @@ function getDueWordIds(allWordIds) {
   return allWordIds.filter(id => isWordDue(id));
 }
 
+/**
+ * Verschuift de volgende herhaling van een woord naar morgen, zonder het SRS-interval te wijzigen.
+ * Gebruikt voor overflow-woorden die niet in de review-sessie passen (>20).
+ */
+function snoozeWordUntilTomorrow(wordId) {
+  const data = loadSRSData();
+  const state = data[wordId];
+  if (!state) return;
+  const nextDate = new Date();
+  nextDate.setDate(nextDate.getDate() + 1);
+  state.nextReview = nextDate.toISOString();
+  data[wordId] = state;
+  saveSRSData(data);
+}
+
 /** Geeft het percentage geleerd voor een set woord-IDs. */
 function getLearnedPercent(wordIds) {
   if (!wordIds.length) return 0;
@@ -1835,8 +1850,20 @@ function checkTypedAnswer(typed, correct) {
 }
 
 function getDistractors(word, allWords, count = 3) {
-  const pool = allWords.filter(w => w.id !== word.id && w.it !== word.it);
-  return [...pool].sort(() => Math.random() - 0.5).slice(0, count);
+  const notTarget = allWords.filter(w => w.id !== word.id && w.nl !== word.nl);
+
+  // Voorkeur: zelfde categorie → zelfde les → zelfde niveau → alles
+  // Zo zijn afleidende antwoorden altijd realistisch (geen 'dolfijn' bij getallen)
+  const sameCat    = word.cat ? notTarget.filter(w => w.cat === word.cat) : [];
+  const sameLesson = notTarget.filter(w => w.lesson === word.lesson);
+  const sameLevel  = notTarget.filter(w => w.level === word.level);
+
+  const pool = sameCat.length    >= count ? sameCat
+             : sameLesson.length >= count ? sameLesson
+             : sameLevel.length  >= count ? sameLevel
+             : notTarget;
+
+  return shuffleEx(pool).slice(0, count);
 }
 
 function shuffleEx(arr) {
@@ -3742,8 +3769,12 @@ function startReview() {
   currentLesson = null;
   sessionXP = 0; sessionCorrect = 0; sessionTotal = 0; sessionErrors = []; exerciseHistory = [];
 
-  const dueWords = getDueWordIds(VOCAB.map(w => w.id))
-    .map(getWordById).filter(Boolean).slice(0, 20);
+  const allDueIds = getDueWordIds(VOCAB.map(w => w.id));
+  const dueWords  = allDueIds.map(getWordById).filter(Boolean).slice(0, 20);
+
+  // Overflow-woorden (>20) snoezen naar morgen zodat de badge na afloop leeg is
+  const reviewedIds = new Set(dueWords.map(w => w.id));
+  allDueIds.forEach(id => { if (!reviewedIds.has(id)) snoozeWordUntilTomorrow(id); });
 
   getLessonTitle().textContent  = '🔄 Dagelijkse herhaling';
   getLevelBadge().textContent   = `${dueWords.length} woorden`;

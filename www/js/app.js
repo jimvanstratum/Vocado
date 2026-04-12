@@ -4,9 +4,9 @@
  */
 
 import { initAudio, setTTSRate, stopSpeech } from './audio.js?v=16';
-import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue } from './srs.js?v=16';
+import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow } from './srs.js?v=17';
 import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson } from './progress.js?v=16';
-import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=18';
+import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=19';
 import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=16';
 
 // ─── PWA INSTALL ──────────────────────────────────────────────────────────────
@@ -743,8 +743,12 @@ function startReview() {
   currentLesson = null;
   sessionXP = 0; sessionCorrect = 0; sessionTotal = 0; sessionErrors = []; exerciseHistory = [];
 
-  const dueWords = getDueWordIds(VOCAB.map(w => w.id))
-    .map(getWordById).filter(Boolean).slice(0, 20);
+  const allDueIds = getDueWordIds(VOCAB.map(w => w.id));
+  const dueWords  = allDueIds.map(getWordById).filter(Boolean).slice(0, 20);
+
+  // Overflow-woorden (>20) snoezen naar morgen zodat de badge na afloop leeg is
+  const reviewedIds = new Set(dueWords.map(w => w.id));
+  allDueIds.forEach(id => { if (!reviewedIds.has(id)) snoozeWordUntilTomorrow(id); });
 
   getLessonTitle().textContent  = '🔄 Dagelijkse herhaling';
   getLevelBadge().textContent   = `${dueWords.length} woorden`;
