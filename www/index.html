@@ -517,6 +517,35 @@
     .match-wrong { border-color: var(--red) !important; background: rgba(255,59,48,0.10) !important; color: var(--red) !important; animation: shake 0.4s; }
     .match-done { opacity: 0.4; pointer-events: none; }
 
+    /* ── FOUT ZOEKEN (find-error) ────────────────────────────────────────── */
+    .fe-sentence { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 20px 20px; justify-content: center; }
+    .fe-chip { background: var(--surface); border: 2px solid var(--border); color: var(--text); border-radius: 10px; padding: 10px 14px; font-size: 17px; font-weight: 600; cursor: pointer; transition: all 0.15s; line-height: 1; }
+    .fe-chip:active { transform: scale(0.94); }
+    .fe-chip.disabled { pointer-events: none; }
+    .fe-chip.correct { border-color: var(--red) !important; background: rgba(255,59,48,0.12) !important; color: var(--red) !important; }
+    .fe-chip.wrong   { border-color: var(--red) !important; background: rgba(255,59,48,0.10) !important; animation: shake 0.4s; }
+    .fe-chip.highlight { border-color: var(--green) !important; background: rgba(0,200,81,0.12) !important; color: var(--green) !important; }
+    .fe-tts-btn { display: block; margin: 0 auto 4px; background: none; border: none; font-size: 22px; cursor: pointer; padding: 4px 12px; }
+
+    /* ── ZINSDICTEE (sentence-dictation) ────────────────────────────────── */
+    .sd-play-btn { display: block; margin: 0 auto 16px; background: var(--surface); border: 2px solid var(--border); color: var(--text); border-radius: 14px; padding: 14px 28px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.15s; }
+    .sd-play-btn:active { transform: scale(0.96); }
+    .sd-hint { font-size: 13px; color: var(--muted); text-align: center; margin-bottom: 12px; }
+
+    /* ── CATEGORIE SORTEREN (category-sort) ─────────────────────────────── */
+    .cs-pool { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 16px 16px; justify-content: center; min-height: 52px; }
+    .cs-chip { background: var(--surface); border: 2px solid var(--border); color: var(--text); border-radius: 12px; padding: 10px 14px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.15s; text-align: center; line-height: 1.2; }
+    .cs-chip .cs-chip-nl { display: block; font-size: 11px; font-weight: 400; color: var(--muted); margin-top: 2px; }
+    .cs-chip:active { transform: scale(0.94); }
+    .cs-chip.cs-selected { border-color: var(--blue); background: rgba(79,195,247,0.12); color: var(--blue); }
+    .cs-chip.cs-correct { border-color: var(--green) !important; background: rgba(0,200,81,0.12) !important; color: var(--green) !important; pointer-events: none; }
+    .cs-chip.cs-wrong   { border-color: var(--red) !important; background: rgba(255,59,48,0.10) !important; color: var(--red) !important; animation: shake 0.4s; pointer-events: none; }
+    .cs-buckets { display: flex; gap: 12px; padding: 0 16px 12px; }
+    .cs-bucket { flex: 1; border: 2px dashed var(--border); border-radius: 14px; padding: 10px; min-height: 100px; cursor: pointer; transition: border-color 0.2s; }
+    .cs-bucket.cs-bucket-active { border-color: var(--blue); border-style: solid; background: rgba(79,195,247,0.06); }
+    .cs-bucket-label { font-size: 13px; font-weight: 700; color: var(--muted); text-align: center; text-transform: capitalize; margin-bottom: 8px; }
+    .cs-bucket-words { display: flex; flex-direction: column; gap: 6px; }
+
     /* ── SPRINT 5/8: DAGDOEL ──────────────────────────────────────────────── */
     .daily-goal-section { margin: 14px 20px 0; background: var(--surface); border-radius: 14px; padding: 14px 16px; border: 1px solid var(--border); }
     .dg-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
@@ -1015,7 +1044,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.41 · Italiaans · 300 lessen · 2440 woorden</div>
+    <div class="settings-version">Vocado · v1.42 · Italiaans · 300 lessen · 2440 woorden</div>
   </div>
 </div>
 
@@ -1160,7 +1189,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=33';
+  import './js/app.js?v=35';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {

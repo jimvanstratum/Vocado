@@ -110,6 +110,49 @@ function setupNextBtn(btn, callback, autoAdvance = false) {
 }
 
 
+// ─── Hulpfuncties ─────────────────────────────────────────────────────────────
+
+function capitalize(str) {
+  return str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
+}
+
+/**
+ * Vergelijk getypte zin met correcte zin op woordniveau.
+ * Geeft 'correct', 'close' of 'wrong'.
+ */
+function checkSentenceAnswer(typed, correct) {
+  const t = normalize(typed);
+  const c = normalize(correct);
+  if (t === c) return 'correct';
+  const tW = t.split(/\s+/).filter(Boolean);
+  const cW = c.split(/\s+/).filter(Boolean);
+  const lenDiff = Math.abs(tW.length - cW.length);
+  if (lenDiff > 2) return 'wrong';
+  const minLen = Math.min(tW.length, cW.length);
+  let errors = lenDiff;
+  for (let i = 0; i < minLen; i++) {
+    const maxErr = Math.max(1, Math.floor(cW[i].length / 5));
+    if (levenshtein(tW[i], cW[i]) > maxErr) errors++;
+  }
+  if (errors === 0) return 'correct';
+  if (errors <= Math.ceil(cW.length / 4)) return 'close';
+  return 'wrong';
+}
+
+/**
+ * Groepeer woorden per categorie. Geeft null als er geen 2 categorieën met elk 2+ woorden zijn.
+ */
+function buildCategoryGroups(words) {
+  const groups = {};
+  words.forEach(w => {
+    if (w.cat) (groups[w.cat] = groups[w.cat] || []).push(w);
+  });
+  const valid = Object.values(groups).filter(g => g.length >= 2);
+  if (valid.length < 2) return null;
+  valid.sort((a, b) => b.length - a.length);
+  return [shuffleEx(valid[0]).slice(0, 3), shuffleEx(valid[1]).slice(0, 3)];
+}
+
 // ─── Gat-invullen helpers ─────────────────────────────────────────────────────
 
 /** Strip lidwoord van een Italiaans woord (il gatto → gatto). */
@@ -123,13 +166,16 @@ function stripArticle(it) {
  */
 function makeGapSentence(word) {
   if (!word.ex) return null;
-  const stem = stripArticle(word.it).toLowerCase();
-  if (!stem) return null;
-  // Zoek case-insensitive naar de stam in de zin
-  const re = new RegExp('\\b' + stem.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
-  if (!re.test(word.ex)) return null;
-  const gapped = word.ex.replace(re, '___');
-  return gapped;
+  const stemNorm = normalize(stripArticle(word.it));
+  if (!stemNorm) return null;
+  // Token-gebaseerd zoeken (werkt ook met geaccentueerde tekens zoals sì, è, ecc.)
+  const tokens = word.ex.match(/\S+/g) || [];
+  const idx = tokens.findIndex(t => normalize(t.replace(/[.,!?;:]/g, '')) === stemNorm);
+  if (idx === -1) return null;
+  const punct = tokens[idx].match(/[.,!?;:]+$/)?.[0] || '';
+  const result = [...tokens];
+  result[idx] = '___' + punct;
+  return result.join(' ');
 }
 
 /**
@@ -423,6 +469,253 @@ export function renderMatching(exercise, container, onComplete) {
 }
 
 
+/**
+ * Fout zoeken — toon een Italiaanse zin met één fout woord; tik op het foute woord.
+ */
+export function renderFindError(exercise, container, allWords, onComplete) {
+  const { word } = exercise;
+  const hasTTS = isTTSAvailable();
+
+  // Kies een afleider voor het doelwoord
+  const [distractor] = getDistractors(word, allWords, 1);
+  if (!distractor || !word.ex) {
+    renderMultipleChoice(exercise, container, allWords, onComplete);
+    return;
+  }
+
+  const stem = stripArticle(word.it);
+  const distractorStem = stripArticle(distractor.it);
+  const stemNorm = normalize(stem);
+
+  // Tokenize op spaties en vind het doelwoord via normalize (werkt ook met accenten)
+  const tokens = (word.ex.match(/\S+/g) || []);
+  const targetIdx = tokens.findIndex(t => normalize(t.replace(/[.,!?;:]/g, '')) === stemNorm);
+  if (targetIdx === -1) {
+    renderMultipleChoice(exercise, container, allWords, onComplete);
+    return;
+  }
+
+  // Bouw fout-zin: vervang doelwoord door afleider, behoud leestekens
+  const punct = tokens[targetIdx].match(/[.,!?;:]+$/)?.[0] || '';
+  const isCapital = /^[A-Z]/.test(tokens[targetIdx]);
+  const errorWord = (isCapital
+    ? distractorStem.charAt(0).toUpperCase() + distractorStem.slice(1)
+    : distractorStem) + punct;
+  const errorTokens = [...tokens];
+  errorTokens[targetIdx] = errorWord;
+  const wrongIdx = targetIdx;
+
+  let answered = false;
+
+  container.innerHTML = `
+    <div class="ex-label">Tik op het foute woord</div>
+    ${hasTTS ? `<button class="fe-tts-btn" id="fe-tts">🔊</button>` : ''}
+    <div class="fe-sentence" id="fe-sentence">
+      ${errorTokens.map((t, i) => `<button class="fe-chip" data-idx="${i}">${t}</button>`).join('')}
+    </div>
+    <div class="mc-feedback" id="fe-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>
+  `;
+
+  if (hasTTS) {
+    container.querySelector('#fe-tts').addEventListener('click', () => speak(errorSentence));
+    setTimeout(() => speak(errorSentence), 400);
+  }
+
+  container.querySelectorAll('.fe-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (answered) return;
+      answered = true;
+      const idx = parseInt(btn.dataset.idx);
+      const isCorrect = idx === wrongIdx;
+      const result = isCorrect ? 'correct' : 'wrong';
+
+      container.querySelectorAll('.fe-chip').forEach((b, i) => {
+        b.classList.add('disabled');
+        if (i === wrongIdx) b.classList.add('correct');
+        else if (b === btn && !isCorrect) b.classList.add('wrong');
+      });
+
+      const fb = container.querySelector('#fe-feedback');
+      fb.className = `mc-feedback ${result} show`;
+      if (isCorrect) {
+        fb.innerHTML = `✓ Goed! De juiste zin is: <em>"${word.ex}"</em>`;
+      } else {
+        fb.innerHTML = `✗ Het foute woord was <strong>${distractorStem}</strong>. Juiste zin: <em>"${word.ex}"</em>`;
+      }
+      if (hasTTS) setTimeout(() => speak(word.ex), 600);
+
+      updateWordState(word.id, qualityFromResult(result));
+      recordAnswer(isCorrect);
+      setupNextBtn(container.querySelector('#ex-next'), () => onComplete({ result, word, xp: isCorrect ? 3 : 1 }), isCorrect);
+    });
+  });
+}
+
+
+/**
+ * Zinsdictee — TTS spreekt een volledige zin; typ de Italiaanse zin.
+ * Vereist TTS; fallback naar word-order als TTS niet beschikbaar.
+ */
+export function renderSentenceDictation(exercise, container, onComplete) {
+  const { word } = exercise;
+  const hasTTS = isTTSAvailable();
+
+  if (!hasTTS || !word.ex) {
+    renderWordOrder(exercise, container, onComplete);
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="ex-label">Typ de zin die je hoort</div>
+    <button class="sd-play-btn" id="sd-tts">🔊 Speel zin af</button>
+    <div class="sd-hint">Tip: tik nogmaals op 🔊 om opnieuw te luisteren</div>
+    <div class="type-input-wrap">
+      <input class="type-input" id="sd-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Typ de Italiaanse zin...">
+    </div>
+    <button class="type-check-btn" id="sd-check">Controleer</button>
+    <div class="type-feedback" id="sd-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>
+  `;
+
+  setTimeout(() => speak(word.ex), 400);
+  container.querySelector('#sd-tts').addEventListener('click', () => speak(word.ex));
+
+  let answered = false;
+  const input = container.querySelector('#sd-input');
+  const checkBtn = container.querySelector('#sd-check');
+  const feedback = container.querySelector('#sd-feedback');
+
+  const check = () => {
+    if (answered || !input.value.trim()) return;
+    answered = true;
+    input.disabled = true;
+    checkBtn.disabled = true;
+
+    const result = checkSentenceAnswer(input.value.trim(), word.ex);
+    const isCorrect = result === 'correct';
+    const isClose = result === 'close';
+
+    input.classList.add(isCorrect ? 'input-correct' : isClose ? 'input-close' : 'input-wrong');
+    feedback.className = `type-feedback ${result} show`;
+    if (isCorrect) {
+      feedback.innerHTML = `✓ Correct! <em>"${word.ex}"</em>`;
+    } else if (isClose) {
+      feedback.innerHTML = `≈ Bijna! De juiste zin is: <strong>"${word.ex}"</strong>`;
+      setTimeout(() => speak(word.ex), 500);
+    } else {
+      feedback.innerHTML = `✗ De juiste zin is: <strong>"${word.ex}"</strong>`;
+      setTimeout(() => speak(word.ex), 600);
+    }
+
+    updateWordState(word.id, qualityFromResult(result));
+    recordAnswer(isCorrect || isClose);
+    setupNextBtn(container.querySelector('#ex-next'), () => onComplete({ result, word, xp: isCorrect ? 5 : isClose ? 2 : 1 }), isCorrect);
+  };
+
+  checkBtn.addEventListener('click', check);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+  setTimeout(() => input.focus(), 100);
+}
+
+
+/**
+ * Categorie sorteren — wijs 6 woorden (2 categorieën × 3) toe aan de juiste categorie.
+ */
+export function renderCategorySort(exercise, container, onComplete) {
+  const { words } = exercise;
+  const cats = [...new Set(words.map(w => w.cat))].slice(0, 2);
+  if (cats.length < 2) {
+    onComplete({ result: 'correct', word: words[0], xp: 2 });
+    return;
+  }
+
+  const shuffled = shuffleEx([...words]);
+  const assignments = {};
+  let selectedId = null;
+
+  container.innerHTML = `
+    <div class="ex-label">Sorteer de woorden in de juiste categorie</div>
+    <div class="cs-pool" id="cs-pool">
+      ${shuffled.map(w => `
+        <button class="cs-chip" data-id="${w.id}">
+          ${w.it}<span class="cs-chip-nl">${w.nl}</span>
+        </button>`).join('')}
+    </div>
+    <div class="cs-buckets">
+      <div class="cs-bucket" id="cs-b0" data-cat="${cats[0]}">
+        <div class="cs-bucket-label">${capitalize(cats[0])}</div>
+        <div class="cs-bucket-words" id="cs-bw0"></div>
+      </div>
+      <div class="cs-bucket" id="cs-b1" data-cat="${cats[1]}">
+        <div class="cs-bucket-label">${capitalize(cats[1])}</div>
+        <div class="cs-bucket-words" id="cs-bw1"></div>
+      </div>
+    </div>
+    <div class="mc-feedback" id="cs-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>
+  `;
+
+  const refreshChips = () => {
+    container.querySelectorAll('.cs-chip').forEach(c => {
+      c.classList.toggle('cs-selected', c.dataset.id === selectedId);
+    });
+    container.querySelectorAll('.cs-bucket').forEach(b => {
+      b.classList.toggle('cs-bucket-active', !!selectedId);
+    });
+  };
+
+  // Stap 1: selecteer een woord
+  container.querySelectorAll('.cs-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      selectedId = selectedId === chip.dataset.id ? null : chip.dataset.id;
+      refreshChips();
+    });
+  });
+
+  // Stap 2: tik op een categorie om het woord te plaatsen
+  container.querySelectorAll('.cs-bucket').forEach((bucket, bIdx) => {
+    bucket.addEventListener('click', () => {
+      if (!selectedId) return;
+      const cat = bucket.dataset.cat;
+      const w = words.find(x => x.id === selectedId);
+      if (!w) return;
+
+      assignments[selectedId] = cat;
+      selectedId = null;
+
+      // Verplaats chip naar bucket
+      const chip = container.querySelector(`.cs-chip[data-id="${w.id}"]`);
+      chip.classList.remove('cs-selected');
+      container.querySelector(`#cs-bw${bIdx}`).appendChild(chip);
+      refreshChips();
+
+      // Zijn alle woorden geplaatst?
+      if (Object.keys(assignments).length === words.length) {
+        let correct = 0;
+        words.forEach(x => {
+          const c = container.querySelector(`.cs-chip[data-id="${x.id}"]`);
+          if (assignments[x.id] === x.cat) { correct++; c.classList.add('cs-correct'); }
+          else c.classList.add('cs-wrong');
+        });
+
+        const allCorrect = correct === words.length;
+        const fb = container.querySelector('#cs-feedback');
+        fb.className = `mc-feedback ${allCorrect ? 'correct' : 'wrong'} show`;
+        fb.innerHTML = allCorrect
+          ? `✓ Perfect! Alle woorden correct gesorteerd.`
+          : `${correct} van ${words.length} correct gesorteerd.`;
+
+        words.forEach(x => updateWordState(x.id, allCorrect ? 4 : 2));
+        recordAnswer(allCorrect);
+        const result = allCorrect ? 'correct' : correct >= words.length / 2 ? 'close' : 'wrong';
+        setupNextBtn(container.querySelector('#ex-next'), () => onComplete({ result, word: words[0], xp: allCorrect ? 6 : 2 }), allCorrect);
+      }
+    });
+  });
+}
+
+
 // ─── Queue builder ─────────────────────────────────────────────────────────────
 
 /**
@@ -473,25 +766,47 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
     queue.push({ type: 'matching', words: matchWords, isNew: false });
   }
 
-  // Review: random type, inclusief word-order, listen-type, sentence-choice en fill-in-blank-type
+  // Fout zoeken: max 2 per les, voor woorden met een vindbaar doelwoord in de zin
+  const feWords = newWords.filter(w => makeGapSentence(w) !== null).slice(0, 2);
+  feWords.forEach(word => queue.push({ type: 'find-error', word, isNew: false }));
+
+  // Zinsdictee: max 2 per les, alleen als TTS beschikbaar
+  if (ttsOk) {
+    const sdWords = newWords.filter(w => w.ex).slice(0, 2);
+    sdWords.forEach(word => queue.push({ type: 'sentence-dictation', word, isNew: false }));
+  }
+
+  // Categorie sorteren: 1 per les als er 2+ categorieën zijn
+  const csGroups = buildCategoryGroups(newWords);
+  if (csGroups) queue.push({ type: 'category-sort', words: [...csGroups[0], ...csGroups[1]], isNew: false });
+
+  // Review: random type, inclusief alle oefenvormen
   reviewWords.forEach(word => {
     const types = ['multiple-choice', 'type'];
     if (ttsOk) {
       types.push('listen-choose');
-      types.push('listen-type');   // dictee als extra review-type
+      types.push('listen-type');
+      if (word.ex) types.push('sentence-dictation');
     }
     if (sentenceToTokens(word.ex).length >= 3) types.push('word-order');
     if (word.ex && word.exNl) types.push('sentence-choice');
-    if (makeGapSentence(word) !== null) types.push('fill-in-blank-type');
+    if (makeGapSentence(word) !== null) {
+      types.push('fill-in-blank-type');
+      types.push('find-error');
+    }
     const type = types[Math.floor(Math.random() * types.length)];
     queue.push({ type, word, isNew: false });
   });
 
-  // Koppelen review: als er 4+ review-woorden zijn, voeg 1 matching-groep toe
+  // Koppelen review: als er 4+ review-woorden zijn
   if (reviewWords.length >= 4) {
     const matchReview = shuffleEx([...reviewWords]).slice(0, 4);
     queue.push({ type: 'matching', words: matchReview, isNew: false });
   }
+
+  // Categorie sorteren review: als review-woorden 2+ categorieën bevatten
+  const csReview = buildCategoryGroups(reviewWords);
+  if (csReview) queue.push({ type: 'category-sort', words: [...csReview[0], ...csReview[1]], isNew: false });
 
   // Flashcards eerst (introductie), rest geshuffled
   const flashcards = queue.filter(e => e.type === 'flashcard');

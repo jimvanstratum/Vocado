@@ -6,7 +6,7 @@
 import { initAudio, setTTSRate, stopSpeech } from './audio.js?v=16';
 import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow } from './srs.js?v=17';
 import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson } from './progress.js?v=16';
-import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=19';
+import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=20';
 import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=16';
 
 // ─── PWA INSTALL ──────────────────────────────────────────────────────────────
@@ -878,8 +878,11 @@ function renderExercise() {
   else if (exercise.type === 'sentence-choice')  renderSentenceChoice(exercise, container, VOCAB, onDone);
   else if (exercise.type === 'fill-in-blank-mc') renderFillBlankMC(exercise, container, VOCAB, onDone);
   else if (exercise.type === 'fill-in-blank-type') renderFillBlankType(exercise, container, onDone);
-  else if (exercise.type === 'matching')         renderMatching(exercise, container, onDone);
-  else if (exercise.type === 'grammar')         renderGrammarCard(exercise.grammarNote, container, onDone);
+  else if (exercise.type === 'matching')            renderMatching(exercise, container, onDone);
+  else if (exercise.type === 'find-error')          renderFindError(exercise, container, VOCAB, onDone);
+  else if (exercise.type === 'sentence-dictation')  renderSentenceDictation(exercise, container, onDone);
+  else if (exercise.type === 'category-sort')       renderCategorySort(exercise, container, onDone);
+  else if (exercise.type === 'grammar')             renderGrammarCard(exercise.grammarNote, container, onDone);
 }
 
 function onDone(result) {
