@@ -1,0 +1,97 @@
+[
+  {
+    "version": "1.47",
+    "date": "2026-09-27",
+    "title": "Wat is er nieuw?",
+    "items": [
+      "Dit overzicht: bekijk in de instellingen wat er per versie is veranderd.",
+      "Na een update zie je één keer een korte melding op het homescherm."
+    ]
+  },
+  {
+    "version": "1.46",
+    "date": "2026-09-27",
+    "title": "Vervoegen in de verleden tijd",
+    "items": [
+      "De vervoeg-oefening kent nu ook de passato prossimo, met het juiste hulpwerkwoord (essere of avere).",
+      "Bij essere telt de vrouwelijke vorm ook als goed antwoord."
+    ]
+  },
+  {
+    "version": "1.45",
+    "date": "2026-09-27",
+    "title": "Twee nieuwe oefenvormen",
+    "items": [
+      "Vervoegen: kies of typ de juiste werkwoordsvorm in de tegenwoordige tijd, imperfetto of toekomende tijd. Bij een fout zie je het hele rijtje.",
+      "Leestekst: elke toetsles begint nu met een korte Italiaanse tekst en drie begripsvragen. Met een voorleesknop als je apparaat spraak ondersteunt.",
+      "Op A1 oefen je alleen de tegenwoordige tijd; de andere tijden komen vanaf A2 en B1."
+    ]
+  },
+  {
+    "version": "1.44",
+    "date": "2026-09-27",
+    "title": "Woordenschat opgeschoond",
+    "items": [
+      "451 dubbele woorden verwijderd en vervangen door veelgebruikte woorden die nog ontbraken, zoals uomo, donna, libro en dire.",
+      "Kernwoorden zijn verhuisd naar de A1- en A2-lessen, zodat je ze eerder leert.",
+      "Je voortgang op de verwijderde woorden is automatisch overgezet."
+    ]
+  },
+  {
+    "version": "1.43",
+    "date": "2026-09-27",
+    "title": "B1 compleet",
+    "items": [
+      "60 extra B1-woorden, verdeeld over de thema's van de lessen. B1 telt nu 1500 woorden."
+    ]
+  },
+  {
+    "version": "1.42",
+    "date": "2026-04-12",
+    "title": "Drie nieuwe oefenvormen",
+    "items": [
+      "Fout zoeken: tik op het foute woord in een zin.",
+      "Zinsdictee: luister naar een hele zin en typ hem na.",
+      "Categorie sorteren: verdeel woorden over de juiste categorie.",
+      "De terug-knop tijdens een les werkt nu altijd."
+    ]
+  },
+  {
+    "version": "1.41",
+    "title": "B1 uitgebreid tot 300 lessen",
+    "items": [
+      "120 nieuwe B1-lessen (181 t/m 300) met 960 woorden.",
+      "Nieuwe oefenvormen: gat-invullen en koppelen.",
+      "Meerkeuzevragen krijgen realistischere afleiders.",
+      "Verbeteringen voor Android en voor het herhaal-badge."
+    ]
+  },
+  {
+    "version": "1.40",
+    "title": "Niveau B1 toegevoegd",
+    "items": [
+      "60 nieuwe B1-lessen (121 t/m 180) met 480 woorden en zes grammaticablokken."
+    ]
+  },
+  {
+    "version": "1.39",
+    "title": "Fijnere interface",
+    "items": [
+      "Nieuwe kleurthema's, een Doorgaan-kaart op het homescherm en een melding als er een nieuwe versie klaarstaat."
+    ]
+  },
+  {
+    "version": "1.38",
+    "title": "A1 en A2 aangevuld",
+    "items": [
+      "A1 en A2 tellen nu elk 500 woorden, in lijn met de CEFR-richtlijnen."
+    ]
+  },
+  {
+    "version": "1.36",
+    "title": "Oefen je fouten meteen",
+    "items": [
+      "Na een les of herhaling kun je direct de woorden oefenen die je fout had."
+    ]
+  }
+]

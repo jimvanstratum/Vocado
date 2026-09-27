@@ -20,7 +20,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 - **Productie-build**: `vocado.html` — gegenereerd door `python3 build.py`, alles in één bestand
 - **Service Worker**: `www/sw.js` — CACHE_NAME wordt automatisch bijgewerkt bij elke `build.py`-run
 - **Hosting**: GitHub Pages
-- **Data**: drie JSON-bestanden (vocabulary, curriculum, readings), geladen via `fetch()` bij opstarten en door `build.py` inline gezet
+- **Data**: vier JSON-bestanden (vocabulary, curriculum, readings, changelog), geladen via `fetch()` bij opstarten en door `build.py` inline gezet
 - **Opslag**: `localStorage` voor voortgang (`italiano_progress_v2`) en SRS (`italiano_srs_v2`)
 
 ### Sleutelbestanden
@@ -32,6 +32,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 | `www/js/exercises.js` | Alle oefentypes (rendering + interactie) |
 | `www/data/curriculum.json` | Array van les-objecten |
 | `www/data/vocabulary.json` | Array van woord-objecten |
+| `www/data/changelog.json` | Gebruikersgerichte wijzigingen per versie, nieuwste eerst; `build.py` faalt als de bovenste versie niet gelijk is aan de versiestring |
 | `www/data/readings.json` | 30 leesteksten (één per blok van 10 lessen), gegenereerd door `scripts/build_readings.py` |
 | `www/sw.js` | Service Worker |
 | `build.py` | Bouwscript: concat → vocado.html; faalt bij dubbele `it`-waarden, dubbele IDs of lessen met onbekend woord-ID |
@@ -48,7 +49,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.46**, cache buster **?v=40**
+- Huidige versie: **v1.47**, cache buster **?v=41**
 
 ### Build & deploy
 
@@ -114,7 +115,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.46)
+## Huidige staat (v1.47)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -213,6 +214,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 - **Opnieuw doen**: les herhalen met `forceAll=true`
 - **iOS PWA install prompt**: instructie-overlay voor "Zet op beginscherm"
 - **iOS safe-area fix**: `--app-height` via `window.innerHeight` (v1.31)
+- **Wat is er nieuw?** (v1.47): modal met `changelog.json`, te openen via Instellingen › Over Vocado of door op de versieregel te tikken. Na een update verschijnt eenmalig een kaart op het homescherm (`vocado_seen_version` in localStorage); nieuwe gebruikers zien de kaart niet
 - **"Mijn positie"-knop**: springt naar eerste actieve les, met offset van één kaardhoogte
 
 ---
@@ -238,6 +240,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.47 | Wat is er nieuw?-overzicht in de interface + update-kaart op het homescherm |
 | v1.46 | Sprint 10: passato prossimo in de vervoegingsmotor (deelwoorden, essere/avere, overeenstemming) |
 | v1.45 | Sprint 9: twee nieuwe oefenvormen — vervoegen (presente/imperfetto/futuro, MC + typen) en leestekst (30 teksten, in de toetsles); root opgeruimd (oude index.html, italiano-per-vacanza.html, sw.js, manifest.json verwijderd) |
 | v1.44 | Sprint 8: deduplicatie — 451 dubbele woorden verwijderd, 451 gaten gevuld met frequente ontbrekende woorden (frequentie-analyse OpenSubtitles + simplemma); SRS-migratie oude→nieuwe IDs; uniciteitscheck in build.py. Plus A1/A2-herbalancering: 99 kernwoorden (uomo, donna, libro, dire, solo, mai, ...) van B1 naar thematisch passende A1/A2-lessen geruild met zeldzame woorden (IDs ongewijzigd) |
@@ -325,3 +328,4 @@ Tot B2 = circa **600–800 uur** totale studie.
 5. **Taal**: alle code-commentaar en gebruikersgerichte tekst in het **Nederlands**
 6. **Grammar-niveau**: A1 = herkenning, nooit productie van congiuntivo/passief/stare+gerundio
 7. **Commit-formaat**: `vX.XX — Korte beschrijving van wat er veranderd is`
+8. **Changelog**: voeg bij elke release bovenaan `www/data/changelog.json` een entry toe in gebruikerstaal (geen technische termen); de build controleert dat de versie overeenkomt

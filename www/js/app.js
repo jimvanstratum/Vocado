@@ -136,16 +136,19 @@ function isLevelComplete(level) {
 let VOCAB = [];
 let CURRICULUM = [];
 let READINGS = [];   // v1.45: leesteksten per toetsles
+let CHANGELOG = [];  // v1.47: wijzigingen per versie, nieuwste eerst
 
 async function loadData() {
-  const [vocabRes, currRes, readRes] = await Promise.all([
+  const [vocabRes, currRes, readRes, clRes] = await Promise.all([
     fetch('./data/vocabulary.json'),
     fetch('./data/curriculum.json'),
-    fetch('./data/readings.json')
+    fetch('./data/readings.json'),
+    fetch('./data/changelog.json')
   ]);
   VOCAB = await vocabRes.json();
   CURRICULUM = await currRes.json();
   READINGS = readRes.ok ? await readRes.json() : [];
+  CHANGELOG = clRes.ok ? await clRes.json() : [];
 }
 
 function getWordById(id)    { return VOCAB.find(w => w.id === id); }
@@ -242,6 +245,7 @@ export function navigate(screen, data = {}) {
 
 // ─── HOME ─────────────────────────────────────────────────────────────────────
 function renderHome() {
+  renderWhatsNew();
   // Sprint 9.1: Eenmalige opruiming van datastatus-bugs
   cleanupSkippedCompleted();   // verwijder lessen die zowel completed als skipped zijn
 
@@ -1111,6 +1115,60 @@ function resultMedal(accuracy) {
 }
 
 // ─── INSTELLINGEN ─────────────────────────────────────────────────────────────
+// ─── WAT IS ER NIEUW (v1.47) ─────────────────────────────────────────────────
+const SEEN_VERSION_KEY = 'vocado_seen_version';
+function currentVersion() { return CHANGELOG[0]?.version || null; }
+function seenVersion()    { try { return localStorage.getItem(SEEN_VERSION_KEY); } catch { return null; } }
+function markVersionSeen() { try { if (currentVersion()) localStorage.setItem(SEEN_VERSION_KEY, currentVersion()); } catch {} }
+
+function openChangelog() {
+  const body = $id('changelog-body');
+  body.innerHTML = CHANGELOG.length ? CHANGELOG.map(e => `
+    <div class="cl-entry">
+      <div class="cl-head">
+        <span class="cl-version">v${e.version}</span>
+        <span class="cl-title">${e.title}</span>
+        ${e.date ? `<span class="cl-date">${formatDateNl(e.date)}</span>` : ''}
+      </div>
+      <ul class="cl-items">${(e.items || []).map(i => `<li>${i}</li>`).join('')}</ul>
+    </div>`).join('') : '<p class="settings-row-sub">Geen wijzigingen gevonden.</p>';
+  $id('changelog-modal').style.display = 'flex';
+  markVersionSeen();
+  renderWhatsNew();
+}
+function closeChangelog() { $id('changelog-modal').style.display = 'none'; }
+function formatDateNl(iso) {
+  const [y, m, d] = iso.split('-').map(Number);
+  const months = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+  return `${d} ${months[m - 1]} ${y}`;
+}
+
+/** Eenmalige kaart op het homescherm zolang de nieuwste versie nog niet bekeken is. */
+function renderWhatsNew() {
+  const box = $id('whatsnew-container');
+  if (!box) return;
+  const latest = CHANGELOG[0];
+  const seen = seenVersion();
+  // Eerste gebruik of oudere installaties zonder markering: niet lastigvallen, alleen markeren
+  if (!latest || seen === latest.version || (seen === null && (getProgress().completedLessons || []).length === 0)) {
+    if (!seen && latest) markVersionSeen();
+    box.innerHTML = '';
+    return;
+  }
+  box.innerHTML = `
+    <div class="whatsnew-card" id="whatsnew-card">
+      <span class="whatsnew-emoji">✨</span>
+      <div class="whatsnew-info">
+        <div class="whatsnew-title">Nieuw in v${latest.version}: ${latest.title}</div>
+        <div class="whatsnew-sub">${latest.items?.[0] || ''}</div>
+      </div>
+      <button class="whatsnew-btn" id="whatsnew-open">Bekijk</button>
+      <button class="whatsnew-close" id="whatsnew-close" aria-label="Sluiten">✕</button>
+    </div>`;
+  $id('whatsnew-open').addEventListener('click', openChangelog);
+  $id('whatsnew-close').addEventListener('click', () => { markVersionSeen(); renderWhatsNew(); });
+}
+
 function renderSettings() {
   const settings = getSettings();
 
@@ -1425,6 +1483,12 @@ async function init() {
   migrateToV14();         // Sprint 14: hernummer les-IDs 21-60 naar nieuwe structuur
   migrateWordIds(ID_MAP); // v1.44: SRS-staat van verwijderde dubbele woorden overzetten
   migratePartialLessonsV144(); // v1.44: opgeslagen oefenrijen met oude IDs wissen
+  // v1.47: changelog-modal
+  $id('changelog-btn')?.addEventListener('click', openChangelog);
+  document.querySelector('.settings-version')?.addEventListener('click', openChangelog);
+  $id('changelog-close')?.addEventListener('click', closeChangelog);
+  $id('changelog-modal')?.addEventListener('click', e => { if (e.target.id === 'changelog-modal') closeChangelog(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeChangelog(); });
   migrateSettingsV10();   // Sprint 10: migreer dagdoel (10/20/30/50 → 50/100/150/200)
   const settings = getSettings();
   applyTheme(settings.theme || 'auto');  // Sprint 10: thema toepassen

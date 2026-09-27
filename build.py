@@ -56,10 +56,12 @@ print('📂  Data laden...')
 vocab      = load_json(os.path.join(WWW, 'data', 'vocabulary.json'))
 curriculum = load_json(os.path.join(WWW, 'data', 'curriculum.json'))
 readings   = load_json(os.path.join(WWW, 'data', 'readings.json'))
+changelog  = load_json(os.path.join(WWW, 'data', 'changelog.json'))
 
 vocab_js      = json.dumps(vocab,      ensure_ascii=False, separators=(',', ':'))
 curriculum_js = json.dumps(curriculum, ensure_ascii=False, separators=(',', ':'))
 readings_js   = json.dumps(readings,   ensure_ascii=False, separators=(',', ':'))
+changelog_js  = json.dumps(changelog,  ensure_ascii=False, separators=(',', ':'))
 
 print(f'    → {len(vocab)} woorden, {len(curriculum)} lessen, {len(readings)} leesteksten')
 
@@ -72,6 +74,13 @@ _bad_les = [l['id'] for l in curriculum if any(wid not in _ids for wid in l['wor
 if _dup_it or _dup_id or _bad_les:
     sys.exit(f'❌  Datafout — dubbele it: {_dup_it[:5]} | dubbele id: {_dup_id[:5]} | lessen met onbekend id: {_bad_les[:5]}')
 print('    ✓ geen dubbele woorden of IDs')
+
+# Changelog-check (v1.47): nieuwste changelog-versie moet gelijk zijn aan de versiestring in index.html
+_m = re.search(r'Vocado · v(\d+\.\d+)', read(os.path.join(WWW, 'index.html')))
+_ui_version = _m.group(1) if _m else None
+if not changelog or changelog[0].get('version') != _ui_version:
+    sys.exit(f"❌  changelog.json bovenaan v{changelog[0].get('version') if changelog else '?'}, index.html zegt v{_ui_version} — voeg een changelog-entry toe")
+print(f'    ✓ changelog bijgewerkt voor v{_ui_version}')
 
 
 # ── 2. JS modules bundelen ─────────────────────────────────────────────────────
@@ -118,6 +127,7 @@ inline_load = (
     f'  VOCAB = {vocab_js};\n'
     f'  CURRICULUM = {curriculum_js};\n'
     f'  READINGS = {readings_js};\n'
+    f'  CHANGELOG = {changelog_js};\n'
     '}'
 )
 
