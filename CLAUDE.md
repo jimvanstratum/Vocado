@@ -51,7 +51,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 python3 build.py          # genereert vocado.html + update sw.js CACHE_NAME
 git add ...
 git commit -m "vX.XX — ..."
-# git push (handmatig — credential-fout op dit apparaat)
+# git push: zie 'Bekende issues' voor de juiste credential helper
 ```
 
 ---
@@ -276,7 +276,10 @@ Tot B2 = circa **600–800 uur** totale studie.
 
 ## Bekende issues
 
-- **git push credentials**: werkt niet automatisch op dit apparaat — altijd handmatig pushen
+- **git push credentials**: de macOS-keychain levert het token van het GitHub-account `jimvanstratumbcs`, dat geen rechten heeft op `jimvanstratum/Vocado` (403). Beide accounts zijn in `gh` ingelogd. Pushen werkt zonder configuratie te wijzigen met een eenmalige credential helper:
+  ```bash
+  git -c credential.helper= -c credential.helper='!f() { echo "username=jimvanstratum"; echo "password=$(gh auth token --user jimvanstratum)"; }; f' push
+  ```
 - **Dubbele Italiaanse woorden**: 371 `it`-waarden komen meer dan één keer voor in vocabulary.json, waarvan 176 binnen hetzelfde niveau (bijv. `il conto`, `la salute`, `il regista`). Ontstaan bij de B1-generatie; eerdere deduplicaties (v1.34/v1.35) dekten alleen A1/A2. Opschonen betekent lessen opnieuw op 8 woorden brengen, dus een aparte sprint
 ---
 
