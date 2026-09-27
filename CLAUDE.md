@@ -33,17 +33,20 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 | `www/data/curriculum.json` | Array van les-objecten |
 | `www/data/vocabulary.json` | Array van woord-objecten |
 | `www/sw.js` | Service Worker |
-| `build.py` | Bouwscript: concat → vocado.html |
+| `build.py` | Bouwscript: concat → vocado.html; faalt bij dubbele `it`-waarden, dubbele IDs of lessen met onbekend woord-ID |
 | `scripts/generate_a2.py` | Script dat A2-lessen 91–120 heeft gegenereerd (al uitgevoerd) |
 | `scripts/generate_b1*.py` | Scripts die B1-lessen 121–300 hebben gegenereerd (al uitgevoerd) |
 | `scripts/add_b1_extra.py` | Script dat 60 extra B1-woorden (w2651–w2710) heeft toegevoegd (al uitgevoerd) |
+| `scripts/dedupe_b1.py` + `dedupe_b1_data.py` | Deduplicatie v1.44: 451 dubbels verwijderd, 451 gaten gevuld (w2711–w3161), genereert `www/js/idmap.js` (al uitgevoerd) |
+| `www/js/idmap.js` | Gegenereerd: verwijderd woord-ID → behouden ID, voor de eenmalige SRS-migratie |
+| `scripts/rebalance_a1.py` | A1/A2-herbalancering v1.44: 99 kernwoorden van B1 naar A1/A2 geruild met zeldzame woorden (al uitgevoerd) |
 | `vocado.html` | Productie-build — nooit handmatig bewerken |
 
 ### Versie & cache buster
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.43**, cache buster **?v=37**
+- Huidige versie: **v1.44**, cache buster **?v=38**
 
 ### Build & deploy
 
@@ -97,17 +100,19 @@ Array van woord-objecten:
 
 ### Conventies
 
-- **Word-IDs**: `wNNN` (w001–w2710, gaps mogelijk door deduplicatie)
+- **Word-IDs**: `wNNN` (w001–w3161, gaps door deduplicatie)
+- **Uniciteit**: elke `it`-waarde komt precies één keer voor (afgedwongen door `build.py` sinds v1.44)
 - **Lesson-IDs**: integers 1–300
 - **Levels**: `"A1"` (lessen 1–60), `"A2"` (lessen 61–120), `"B1"` (lessen 121–300)
 - **Elke les**: exact 8 woorden (uitzondering: les 3 heeft 10 vanwege cijferreeks)
+- **Gedeelde woorden**: sommige A1/A2-lessen delen een woord-ID (bijv. `la schiena` in les 7 en 24); het `lesson`/`level`-veld van zo'n woord wijst naar één van beide. Dit is historisch en ongewijzigd
 - **Extra woorden buiten lessen**: 193 woorden (133 A1/A2 + 60 B1) staan niet in een `words`-lijst maar hebben wel een `lesson`-nummer; ze draaien mee in de toetsles van dat blok (quizselectie op `w.lesson`) en in het woordenboek. 60 A1/A2-woorden hebben `lesson: 0` en zijn alleen in het woordenboek zichtbaar
 - **Zelfstandige naamwoorden**: altijd met lidwoord (`il/la/lo/l'/i/le/gli`)
 - **Grammatica**: A1-niveau = herkenning, geen productie van complexe constructies
 
 ---
 
-## Huidige staat (v1.43)
+## Huidige staat (v1.44)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -218,6 +223,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.44 | Sprint 8: deduplicatie — 451 dubbele woorden verwijderd, 451 gaten gevuld met frequente ontbrekende woorden (frequentie-analyse OpenSubtitles + simplemma); SRS-migratie oude→nieuwe IDs; uniciteitscheck in build.py. Plus A1/A2-herbalancering: 99 kernwoorden (uomo, donna, libro, dire, solo, mai, ...) van B1 naar thematisch passende A1/A2-lessen geruild met zeldzame woorden (IDs ongewijzigd) |
 
 ---
 
@@ -266,7 +272,8 @@ Tot B2 = circa **600–800 uur** totale studie.
 
 ### Implicaties voor Vocado
 
-- **Woordenschat A1/A2/B1**: alle drie op CEFR-doel (500 / 500 / 1500) sinds v1.43 — geen woordtekort meer
+- **Woordenschat A1/A2/B1**: alle drie op CEFR-doel (500 / 500 / 1500), sinds v1.44 zonder dubbels
+- **Frequentiedekking** (v1.44-analyse, OpenSubtitles-lemma's zonder functiewoorden): top-500 85%, top-1000 75%, top-2000 59%. Vóór v1.44 was dat 50 / 46 / 37%. Na de herbalancering zitten 99 van de meest frequente kernwoorden in A1/A2-lessen; de overige frequente woorden uit de v1.44-aanvulling (bijv. `potere`, `bastare`, `capitare`) staan bewust in B1-grammaticalessen als vervoegingsmateriaal, omdat de A1-vorm (`posso`) al bestaat
 - **B2**: niet aanwezig; pas zinvol na Spaans en leesteksten
 - **Spreken**: buiten scope van huidige app (Web Speech API biedt geen beoordelingsfunctie)
 - **Leesteksten**: zinvolle uitbreiding voor A2/B1 — korte dialogen of paragrafen als los oefentype
@@ -280,7 +287,6 @@ Tot B2 = circa **600–800 uur** totale studie.
   ```bash
   git -c credential.helper= -c credential.helper='!f() { echo "username=jimvanstratum"; echo "password=$(gh auth token --user jimvanstratum)"; }; f' push
   ```
-- **Dubbele Italiaanse woorden**: 371 `it`-waarden komen meer dan één keer voor in vocabulary.json, waarvan 176 binnen hetzelfde niveau (bijv. `il conto`, `la salute`, `il regista`). Ontstaan bij de B1-generatie; eerdere deduplicaties (v1.34/v1.35) dekten alleen A1/A2. Opschonen betekent lessen opnieuw op 8 woorden brengen, dus een aparte sprint
 ---
 
 ## Gepland / toekomstige sprints

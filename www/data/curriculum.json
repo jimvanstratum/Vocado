@@ -138,7 +138,7 @@
       "w052",
       "w053",
       "w054",
-      "w055",
+      "w2801",
       "w056",
       "w057",
       "w058"
@@ -159,7 +159,7 @@
       "w060",
       "w061",
       "w062",
-      "w063",
+      "w2754",
       "w064",
       "w065",
       "w066"
@@ -220,7 +220,7 @@
     "words": [
       "w083",
       "w084",
-      "w085",
+      "w2741",
       "w086",
       "w087",
       "w088",
@@ -265,7 +265,7 @@
       "w101",
       "w102",
       "w103",
-      "w104",
+      "w2764",
       "w105",
       "w106"
     ],
@@ -287,8 +287,8 @@
       "w110",
       "w111",
       "w112",
-      "w113",
-      "w114"
+      "w2720",
+      "w2957"
     ],
     "grammar": {
       "title": "Waar is...? — Dov'è en Dove sono",
@@ -308,7 +308,7 @@
       "w118",
       "w119",
       "w120",
-      "w121",
+      "w2908",
       "w122"
     ],
     "grammar": {
@@ -330,7 +330,7 @@
       "w127",
       "w128",
       "w130",
-      "w961"
+      "w3122"
     ],
     "grammar": {
       "title": "Hoe laat is het? — Che ora è?",
@@ -392,7 +392,7 @@
       "w150",
       "w151",
       "w152",
-      "w153",
+      "w2844",
       "w154"
     ],
     "grammar": {
@@ -410,7 +410,7 @@
       "w155",
       "w156",
       "w157",
-      "w158",
+      "w2799",
       "w159",
       "w160",
       "w161",
@@ -430,7 +430,7 @@
     "words": [
       "w481",
       "w482",
-      "w483",
+      "w2809",
       "w070",
       "w485",
       "w073",
@@ -495,8 +495,8 @@
       "w058",
       "w053",
       "w052",
-      "w509",
-      "w510",
+      "w3099",
+      "w2712",
       "w054",
       "w512"
     ],
@@ -535,9 +535,9 @@
     "words": [
       "w148",
       "w149",
-      "w523",
+      "w2842",
       "w524",
-      "w525",
+      "w3003",
       "w526",
       "w527",
       "w528"
@@ -575,7 +575,7 @@
     "level": "A1",
     "description": "Meubels en kamers beschrijven — thuis voel je je overal.",
     "words": [
-      "w537",
+      "w2903",
       "w077",
       "w539",
       "w066",
@@ -622,9 +622,9 @@
       "w555",
       "w556",
       "w557",
-      "w558",
+      "w2731",
       "w559",
-      "w560"
+      "w2730"
     ],
     "grammar": {
       "title": "Essere + bijvoeglijk naamwoord voor gemoedstoestand",
@@ -664,7 +664,7 @@
       "w173",
       "w174",
       "w175",
-      "w176",
+      "w2828",
       "w177",
       "w178"
     ],
@@ -685,7 +685,7 @@
       "w181",
       "w182",
       "w183",
-      "w184",
+      "w2783",
       "w185",
       "w186"
     ],
@@ -708,7 +708,7 @@
       "w191",
       "w192",
       "w193",
-      "w194"
+      "w2985"
     ],
     "grammar": {
       "title": "Bijvoeglijk naamwoord na het zelfstandig naamwoord",
@@ -722,12 +722,12 @@
     "level": "A1",
     "description": "Beschrijf hoe je je voelt.",
     "words": [
-      "w200",
+      "w2726",
       "w202",
       "w1019",
       "w1020",
       "w1021",
-      "w1022",
+      "w3129",
       "w1023",
       "w1024"
     ],
@@ -769,7 +769,7 @@
       "w213",
       "w214",
       "w215",
-      "w216",
+      "w2718",
       "w217",
       "w218"
     ],
@@ -810,7 +810,7 @@
       "w228",
       "w229",
       "w230",
-      "w231",
+      "w2998",
       "w232",
       "w233",
       "w234"
@@ -834,7 +834,7 @@
       "w239",
       "w240",
       "w966",
-      "w967"
+      "w2736"
     ],
     "grammar": {
       "title": "Op de helft — goed bezig!",
@@ -876,7 +876,7 @@
       "w075",
       "w976",
       "w977",
-      "w978"
+      "w2743"
     ],
     "grammar": {
       "title": "De maaltijdstructuur in Italië",
@@ -891,12 +891,12 @@
     "description": "Trein, bus en vliegtuig — kom overal in Italië.",
     "words": [
       "w261",
-      "w264",
+      "w2750",
       "w099",
       "w102",
       "w105",
       "w100",
-      "w983",
+      "w3135",
       "w1025"
     ],
     "grammar": {
@@ -915,7 +915,7 @@
       "w061",
       "w985",
       "w986",
-      "w987",
+      "w2765",
       "w988",
       "w1026",
       "w1027"
@@ -953,8 +953,8 @@
     "level": "A1",
     "description": "Specifieke wegaanwijzingen begrijpen en geven.",
     "words": [
-      "w281",
-      "w282",
+      "w2760",
+      "w2761",
       "w284",
       "w285",
       "w286",
@@ -980,7 +980,7 @@
       "w116",
       "w118",
       "w1029",
-      "w1030",
+      "w2975",
       "w1039"
     ],
     "grammar": {
@@ -1020,10 +1020,10 @@
       "w309",
       "w310",
       "w1032",
-      "w1033",
-      "w1034",
+      "w2717",
+      "w3127",
       "w1036",
-      "w1037"
+      "w2715"
     ],
     "grammar": {
       "title": "Mi piace + infinitief",
@@ -1037,13 +1037,13 @@
     "level": "A1",
     "description": "Afspraken maken en over de toekomst praten.",
     "words": [
-      "w314",
+      "w2847",
       "w315",
       "w316",
       "w317",
       "w318",
       "w319",
-      "w320",
+      "w2949",
       "w1002"
     ],
     "grammar": {
@@ -1105,7 +1105,7 @@
       "w579",
       "w580",
       "w581",
-      "w582",
+      "w2776",
       "w583",
       "w584"
     ],
@@ -1127,7 +1127,7 @@
       "w159",
       "w589",
       "w590",
-      "w591",
+      "w2997",
       "w592"
     ],
     "grammar": {
@@ -1144,12 +1144,12 @@
     "words": [
       "w593",
       "w594",
-      "w595",
+      "w2833",
       "w596",
       "w597",
       "w598",
-      "w599",
-      "w600"
+      "w2781",
+      "w2716"
     ],
     "grammar": {
       "title": "Beleefd vragen met potrei/vorrei",
@@ -1185,12 +1185,12 @@
     "description": "Sport bespreken als een echte Italiaan — van calcio tot tennis.",
     "words": [
       "w609",
-      "w610",
+      "w2806",
       "w611",
       "w612",
       "w613",
       "w614",
-      "w615",
+      "w2802",
       "w616"
     ],
     "grammar": {
@@ -1205,13 +1205,13 @@
     "level": "A1",
     "description": "Reisplanning, reserveringen en avontuurlijk reizen in Italië.",
     "words": [
-      "w617",
+      "w2752",
       "w618",
       "w619",
       "w620",
       "w621",
       "w622",
-      "w623",
+      "w2753",
       "w624"
     ],
     "grammar": {
@@ -1231,7 +1231,7 @@
       "w087",
       "w628",
       "w629",
-      "w630",
+      "w3136",
       "w631",
       "w632"
     ],
@@ -1247,7 +1247,7 @@
     "level": "A1",
     "description": "Bezienswaardigheden, monumenten en het echte Italia scoprire!",
     "words": [
-      "w633",
+      "w2884",
       "w634",
       "w107",
       "w636",
@@ -1272,10 +1272,10 @@
       "w322",
       "w323",
       "w324",
-      "w325",
+      "w2767",
       "w326",
       "w327",
-      "w328"
+      "w2927"
     ],
     "grammar": {
       "title": "Meningen uitdrukken: secondo me, penso di...",
@@ -1317,7 +1317,7 @@
       "w341",
       "w342",
       "w343",
-      "w344"
+      "w2719"
     ],
     "grammar": {
       "title": "Imperfetto vs. passato prossimo",
@@ -1336,7 +1336,7 @@
       "w347",
       "w348",
       "w349",
-      "w350",
+      "w2732",
       "w351",
       "w352"
     ],
@@ -1378,8 +1378,8 @@
       "w363",
       "w364",
       "w365",
-      "w366",
-      "w367",
+      "w2824",
+      "w2768",
       "w368"
     ],
     "grammar": {
@@ -1398,7 +1398,7 @@
       "w370",
       "w371",
       "w372",
-      "w373",
+      "w2711",
       "w374",
       "w375",
       "w376"
@@ -1416,13 +1416,13 @@
     "description": "Beschrijf mensen en hun persoonlijkheid.",
     "words": [
       "w377",
-      "w378",
+      "w2965",
       "w379",
       "w380",
       "w381",
       "w382",
-      "w383",
-      "w384"
+      "w2966",
+      "w3119"
     ],
     "grammar": {
       "title": "Bijvoeglijke naamwoorden — geslacht en meervoud",
@@ -1439,11 +1439,11 @@
       "w385",
       "w386",
       "w387",
-      "w388",
+      "w2769",
       "w389",
-      "w391",
+      "w2956",
       "w392",
-      "w1004"
+      "w2919"
     ],
     "grammar": {
       "title": "Indrukken uitdrukken — che + bijvoeglijk naamwoord",
@@ -1464,7 +1464,7 @@
       "w398",
       "w399",
       "w400",
-      "w1035"
+      "w2751"
     ],
     "grammar": {
       "title": "Reizen — nuttige zinsconstructies",
@@ -1479,13 +1479,13 @@
     "description": "Smaken, recepten en de geheimen van de Italiaanse keuken.",
     "words": [
       "w401",
-      "w402",
+      "w2810",
       "w403",
       "w405",
       "w406",
       "w407",
       "w408",
-      "w1005"
+      "w2808"
     ],
     "grammar": {
       "title": "Smaken beschrijven",
@@ -1505,8 +1505,8 @@
       "w413",
       "w414",
       "w415",
-      "w416",
-      "w1006"
+      "w3072",
+      "w3071"
     ],
     "grammar": {
       "title": "Technologische termen in het Italiaans",
@@ -1524,7 +1524,7 @@
       "w419",
       "w420",
       "w421",
-      "w423",
+      "w2817",
       "w424",
       "w1007",
       "w1038"
@@ -1546,7 +1546,7 @@
       "w429",
       "w430",
       "w431",
-      "w432",
+      "w2792",
       "w1008",
       "w1009"
     ],
@@ -1564,10 +1564,10 @@
     "words": [
       "w433",
       "w434",
-      "w435",
+      "w2894",
       "w436",
       "w437",
-      "w438",
+      "w2863",
       "w439",
       "w440"
     ],
@@ -1610,7 +1610,7 @@
       "w452",
       "w453",
       "w454",
-      "w455",
+      "w3015",
       "w456"
     ],
     "grammar": {
@@ -1669,8 +1669,8 @@
     "words": [
       "w473",
       "w474",
-      "w475",
-      "w476",
+      "w2740",
+      "w2739",
       "w477",
       "w478",
       "w479",
@@ -1838,10 +1838,10 @@
       "w697",
       "w698",
       "w699",
-      "w700",
+      "w2928",
       "w701",
       "w702",
-      "w703",
+      "w2976",
       "w704"
     ],
     "grammar": {
@@ -1881,7 +1881,7 @@
       "w714",
       "w715",
       "w716",
-      "w717",
+      "w2738",
       "w718",
       "w719",
       "w720"
@@ -1925,12 +1925,12 @@
     "words": [
       "w729",
       "w730",
-      "w731",
+      "w2714",
       "w732",
       "w733",
       "w734",
-      "w735",
-      "w736"
+      "w2744",
+      "w2713"
     ]
   },
   {
@@ -1949,8 +1949,8 @@
       "w739",
       "w740",
       "w365",
-      "w742",
-      "w743",
+      "w3124",
+      "w2722",
       "w744"
     ]
   },
@@ -1987,7 +1987,7 @@
     },
     "words": [
       "w090",
-      "w754",
+      "w2779",
       "w488",
       "w756",
       "w757",
@@ -2033,7 +2033,7 @@
       "w529",
       "w772",
       "w773",
-      "w774",
+      "w2778",
       "w775",
       "w776"
     ]
@@ -2049,12 +2049,12 @@
       "body": "'Ti va di venire a cena da me?' = Heb je zin om bij mij te komen eten? 'Con piacere!' = met plezier! 'Purtroppo non posso' = helaas kan ik niet. 'Ci penso e ti faccio sapere' = ik denk erover na en laat je weten. 'Porta qualcosa da bere' = neem iets te drinken mee. Sociale uitnodigingen zijn cruciaal in de Italiaanse cultuur."
     },
     "words": [
-      "w777",
+      "w2820",
       "w778",
       "w779",
       "w780",
       "w781",
-      "w782",
+      "w2955",
       "w783",
       "w784"
     ]
@@ -2119,7 +2119,7 @@
       "w632",
       "w806",
       "w807",
-      "w808"
+      "w2897"
     ]
   },
   {
@@ -2159,7 +2159,7 @@
       "w819",
       "w820",
       "w821",
-      "w822",
+      "w2948",
       "w823",
       "w824"
     ]
@@ -2177,12 +2177,12 @@
     "words": [
       "w825",
       "w826",
-      "w827",
-      "w828",
+      "w2963",
+      "w2960",
       "w829",
       "w830",
-      "w831",
-      "w832"
+      "w2721",
+      "w2959"
     ]
   },
   {
@@ -2224,7 +2224,7 @@
       "w845",
       "w533",
       "w847",
-      "w848"
+      "w3101"
     ]
   },
   {
@@ -2241,7 +2241,7 @@
       "w849",
       "w850",
       "w851",
-      "w852",
+      "w3125",
       "w853",
       "w854",
       "w437",
@@ -2264,7 +2264,7 @@
       "w859",
       "w860",
       "w403",
-      "w862",
+      "w2745",
       "w863",
       "w864"
     ]
@@ -2368,7 +2368,7 @@
       "w515",
       "w899",
       "w900",
-      "w901",
+      "w2818",
       "w902",
       "w903",
       "w904"
@@ -2455,7 +2455,7 @@
       "w698",
       "w934",
       "w935",
-      "w936"
+      "w2940"
     ]
   },
   {
@@ -2511,11 +2511,11 @@
       "body": "Je beheerst nu ~960 Italiaanse woorden en de basisstructuren van A2. Je kunt je redden in alledaagse situaties: winkelen, reizen, werk, sociale contacten. A2 is het niveau waarop je echte gesprekken kunt beginnen met Italianen. 'Sono molto orgoglioso/a di te!' = ik ben heel trots op jou! Complimenti — sei fantastico/a! De volgende stap is B1: meer nuance, meer grammatica, meer zelfvertrouwen. 🇮🇹🎓"
     },
     "words": [
-      "w953",
+      "w2945",
       "w954",
       "w955",
       "w956",
-      "w957",
+      "w2829",
       "w209",
       "w959",
       "w960"
@@ -2537,7 +2537,7 @@
       "w1213",
       "w1214",
       "w1215",
-      "w1216",
+      "w373",
       "w1217",
       "w1218"
     ]
@@ -2574,13 +2574,13 @@
       "body": "Het verschil:\n\n• Imperfetto = achtergrond, gewoonte, beschrijving\n  → Pioveva (het regende — toestand)\n• Passato prossimo = afgeronde actie, gebeurtenis\n  → Ho preso l'ombrello (ik pakte de paraplu — actie)\n\nCombinatie: 'Mentre dormivo, ha suonato il telefono.'\n(Terwijl ik sliep, ging de telefoon.)\n\nVuistregel: imperfetto = film (doorlopend), passato prossimo = foto (momentopname)."
     },
     "words": [
-      "w1227",
+      "w510",
       "w1228",
       "w1229",
       "w1230",
-      "w1231",
+      "w736",
       "w1232",
-      "w1233",
+      "w731",
       "w1234"
     ]
   },
@@ -2621,9 +2621,9 @@
       "w1245",
       "w1246",
       "w1247",
-      "w1248",
-      "w1249",
-      "w1250"
+      "w1037",
+      "w600",
+      "w1033"
     ]
   },
   {
@@ -2637,12 +2637,12 @@
       "body": "Een goed verhaal combineert tijden:\n\n1. Achtergrond (imperfetto): 'Era una bella giornata…'\n2. Gebeurtenis (passato prossimo): '…quando ho visto un gatto.'\n3. Beschrijving (imperfetto): 'Il gatto era nero e grande.'\n4. Volgende actie (passato prossimo): 'L'ho seguito.'\n\nDeze afwisseling maakt je verhaal levendig."
     },
     "words": [
-      "w1251",
+      "w216",
       "w1252",
       "w1253",
       "w1254",
       "w1255",
-      "w1256",
+      "w344",
       "w1257",
       "w1258"
     ]
@@ -2661,10 +2661,10 @@
       "w1259",
       "w1260",
       "w1261",
-      "w1262",
-      "w1263",
+      "w113",
+      "w831",
       "w1264",
-      "w1265",
+      "w743",
       "w1266"
     ]
   },
@@ -2679,12 +2679,12 @@
       "body": "Het weer beschrijven in drie tijden:\n\n• Nu: Oggi piove. / Fa caldo. / C'è il sole.\n• Vroeger: Ieri pioveva. / Faceva freddo.\n• Toekomst: Domani farà bel tempo.\n\nBelangrijk: 'fare' wordt veel gebruikt: fa caldo/freddo/bel tempo."
     },
     "words": [
-      "w1267",
-      "w1268",
+      "w2723",
+      "w2724",
       "w1269",
       "w1270",
       "w1271",
-      "w1272",
+      "w2725",
       "w1273",
       "w1274"
     ]
@@ -2700,14 +2700,14 @@
       "body": "Emoties en gevoelens in het verleden gebruiken de imperfetto (het is een toestand, geen actie):\n\n• Ero felice/triste/arrabbiato (ik was blij/verdrietig/boos)\n• Mi sentivo stanco/a (ik voelde me moe)\n• Avevo paura (ik was bang)\n• Mi piaceva molto (ik vond het erg leuk)\n\nMaar: 'Ho avuto paura' = ik schrok (eenmalige reactie)."
     },
     "words": [
-      "w1275",
-      "w1276",
+      "w200",
+      "w2727",
       "w1277",
       "w1278",
-      "w1279",
-      "w1280",
-      "w1281",
-      "w1282"
+      "w2728",
+      "w2729",
+      "w560",
+      "w558"
     ]
   },
   {
@@ -2723,7 +2723,7 @@
     "words": [
       "w1283",
       "w1284",
-      "w1285",
+      "w350",
       "w1286",
       "w1287",
       "w1288",
@@ -2763,7 +2763,7 @@
       "body": "De meest gebruikte onregelmatige vormen:\n\n• essere: sarei, saresti, sarebbe…\n• avere: avrei, avresti, avrebbe…\n• fare: farei, faresti, farebbe…\n• andare: andrei, andresti, andrebbe…\n• potere: potrei, potresti, potrebbe…\n• volere: vorrei, vorresti, vorrebbe…\n• dovere: dovrei, dovresti, dovrebbe…\n\n'Vorrei un caffè' is veel beleefder dan 'Voglio un caffè'."
     },
     "words": [
-      "w1299",
+      "w2733",
       "w1300",
       "w1301",
       "w1302",
@@ -2785,7 +2785,7 @@
     },
     "words": [
       "w1307",
-      "w1308",
+      "w2734",
       "w1309",
       "w1310",
       "w1311",
@@ -2805,14 +2805,14 @@
       "body": "De condizionale voor wensen en dromen:\n\n• Mi piacerebbe viaggiare. (Ik zou graag willen reizen.)\n• Vorrei vivere in Italia. (Ik zou in Italië willen wonen.)\n• Sarebbe bello… (Het zou mooi zijn…)\n• Il mio sogno sarebbe… (Mijn droom zou zijn…)\n\nCombineer met 'se potessi' (als ik kon) voor hypothetische wensen."
     },
     "words": [
-      "w1315",
-      "w1316",
-      "w1317",
-      "w1318",
+      "w2735",
+      "w967",
+      "w2737",
+      "w717",
       "w1319",
-      "w1320",
-      "w1321",
-      "w1322"
+      "w476",
+      "w475",
+      "w085"
     ]
   },
   {
@@ -2829,7 +2829,7 @@
       "w1323",
       "w1324",
       "w1325",
-      "w1326",
+      "w2742",
       "w1327",
       "w1328",
       "w1329",
@@ -2847,14 +2847,14 @@
       "body": "In een restaurant:\n\n• Vorrei ordinare… (Ik zou graag bestellen…)\n• Cosa mi consiglierebbe? (Wat zou u me aanraden?)\n• Potrei avere il conto? (Zou ik de rekening mogen?)\n• Per me… (Voor mij…)\n• Come contorno vorrei… (Als bijgerecht zou ik…)\n\nBelangrijk: in Italië betaal je vaak 'il coperto' (couvert)."
     },
     "words": [
-      "w1331",
-      "w1332",
-      "w1333",
-      "w1334",
+      "w978",
+      "w735",
+      "w862",
+      "w2746",
       "w1335",
       "w1336",
       "w1337",
-      "w1338"
+      "w2747"
     ]
   },
   {
@@ -2868,13 +2868,13 @@
       "body": "Plannen maken met de condizionale:\n\n• Potremmo andare a… (We zouden naar… kunnen gaan.)\n• Mi piacerebbe visitare… (Ik zou graag… bezoeken.)\n• Preferirei prendere il treno. (Ik zou liever de trein nemen.)\n• Dovremmo prenotare in anticipo. (We zouden van tevoren moeten boeken.)\n\nNuttig: 'Quanto costerebbe…?' (Hoeveel zou… kosten?)"
     },
     "words": [
-      "w1339",
-      "w1340",
-      "w1341",
-      "w1342",
-      "w1343",
+      "w2748",
+      "w2749",
+      "w264",
+      "w1035",
+      "w617",
       "w1344",
-      "w1345",
+      "w623",
       "w1346"
     ]
   },
@@ -2892,11 +2892,11 @@
       "w1347",
       "w1348",
       "w1349",
-      "w1350",
-      "w1351",
-      "w1352",
+      "w063",
+      "w2755",
+      "w2756",
       "w1353",
-      "w1354"
+      "w2757"
     ]
   },
   {
@@ -2910,14 +2910,14 @@
       "body": "De weg vragen en richting geven:\n\n• Potrebbe dirmi dove…? (Zou u me kunnen zeggen waar…?)\n• Come posso arrivare a…? (Hoe kan ik bij… komen?)\n• Deve prendere la prima a destra. (U moet de eerste rechts nemen.)\n• Vada dritto, poi giri a sinistra. (Ga rechtdoor, sla dan linksaf.)\n\nTreinen: 'il binario' (perron), 'la coincidenza' (overstap)."
     },
     "words": [
-      "w1355",
-      "w1356",
+      "w2758",
+      "w2759",
       "w1357",
-      "w1358",
-      "w1359",
-      "w1360",
+      "w281",
+      "w282",
+      "w2762",
       "w1361",
-      "w1362"
+      "w2763"
     ]
   },
   {
@@ -2934,9 +2934,9 @@
       "w1363",
       "w1364",
       "w1365",
-      "w1366",
-      "w1367",
-      "w1368",
+      "w104",
+      "w987",
+      "w2766",
       "w1369",
       "w1370"
     ]
@@ -2953,8 +2953,8 @@
     },
     "words": [
       "w1371",
-      "w1372",
-      "w1373",
+      "w325",
+      "w367",
       "w1374",
       "w1375",
       "w1376",
@@ -2995,7 +2995,7 @@
     },
     "words": [
       "w1387",
-      "w1388",
+      "w388",
       "w1389",
       "w1390",
       "w1391",
@@ -3015,11 +3015,11 @@
       "body": "Na emotie-uitdrukkingen volgt de congiuntivo:\n\n• Sono contento/a che tu sia qui. (Ik ben blij dat je hier bent.)\n• Mi dispiace che tu stia male. (Het spijt me dat je je slecht voelt.)\n• Ho paura che piova. (Ik ben bang dat het regent.)\n• È un peccato che non possa venire. (Het is jammer dat hij niet kan komen.)\n\nOnthoud: emotie + che = congiuntivo."
     },
     "words": [
-      "w1395",
+      "w2770",
       "w1396",
       "w1397",
       "w1398",
-      "w1399",
+      "w2771",
       "w1400",
       "w1401",
       "w1402"
@@ -3036,14 +3036,14 @@
       "body": "Over werk praten:\n\n• Lavoro come… (Ik werk als…)\n• Mi occupo di… (Ik houd me bezig met…)\n• Ho esperienza in/di… (Ik heb ervaring in/met…)\n• Cerco lavoro come… (Ik zoek werk als…)\n\nSolliciteren:\n• Vorrei candidarmi per… (Ik zou me graag kandidaat stellen voor…)\n• Ho lavorato per cinque anni come… (Ik heb vijf jaar gewerkt als…)"
     },
     "words": [
-      "w1403",
-      "w1404",
+      "w2772",
+      "w2773",
       "w1405",
       "w1406",
-      "w1407",
+      "w2774",
       "w1408",
-      "w1409",
-      "w1410"
+      "w2775",
+      "w582"
     ]
   },
   {
@@ -3057,13 +3057,13 @@
       "body": "Op het werk:\n\n• Fissare una riunione (een vergadering plannen)\n• Mandare un'e-mail (een e-mail sturen)\n• Il termine / la scadenza (de deadline)\n• Lavorare a un progetto (aan een project werken)\n\nVergadertaal:\n• Vorrei proporre… (Ik zou willen voorstellen…)\n• Siamo tutti d'accordo? (Zijn we het allemaal eens?)"
     },
     "words": [
-      "w1411",
+      "w2777",
       "w1412",
-      "w1413",
-      "w1414",
-      "w1415",
+      "w774",
+      "w754",
+      "w2780",
       "w1416",
-      "w1417",
+      "w599",
       "w1418"
     ]
   },
@@ -3078,9 +3078,9 @@
       "body": "Over vaardigheden praten:\n\n• Sono bravo/a in… (Ik ben goed in…)\n• So usare… (Ik kan… gebruiken.)\n• Ho una buona conoscenza di… (Ik heb goede kennis van…)\n• Parlo correntemente… (Ik spreek vloeiend…)\n\nLet op beroepsnamen:\n• m/v: avvocato/avvocata, ingegnere/ingegnera\n• Sommige zijn gelijk: il/la giornalista, il/la dentista"
     },
     "words": [
-      "w1419",
-      "w1420",
-      "w1421",
+      "w2782",
+      "w184",
+      "w2784",
       "w1422",
       "w1423",
       "w1424",
@@ -3120,9 +3120,9 @@
       "body": "Gevoelens:\n\n• Mi sento… (Ik voel me…)\n• Sono preoccupato/a per… (Ik maak me zorgen over…)\n• Spero che… + congiuntivo (Ik hoop dat…)\n• Temo che… + congiuntivo (Ik vrees dat…)\n\nNuances:\n• stufo/a = het zat zijn\n• deluso/a = teleurgesteld\n• sollevato/a = opgelucht\n• commosso/a = ontroerd"
     },
     "words": [
-      "w1435",
+      "w2785",
       "w1436",
-      "w1437",
+      "w2786",
       "w1438",
       "w1439",
       "w1440",
@@ -3186,7 +3186,7 @@
       "w1459",
       "w1460",
       "w1461",
-      "w1462",
+      "w2787",
       "w1463",
       "w1464",
       "w1465",
@@ -3206,8 +3206,8 @@
     "words": [
       "w1467",
       "w1468",
-      "w1469",
-      "w1470",
+      "w2788",
+      "w2789",
       "w1471",
       "w1472",
       "w1473",
@@ -3225,14 +3225,14 @@
       "body": "Bij de dokter:\n\n• Mi fa male il/la… (Mijn… doet pijn.)\n• Ho mal di testa/stomaco/gola. (Ik heb hoofd-/maag-/keelpijn.)\n• Ho la febbre. (Ik heb koorts.)\n• Da quanto tempo? (Hoe lang al?)\n• Da tre giorni. (Sinds drie dagen.)\n\nDe dokter zegt:\n• Deve prendere questa medicina. (U moet dit medicijn innemen.)\n• Le prescrivo… (Ik schrijf u… voor.)"
     },
     "words": [
-      "w1475",
-      "w1476",
-      "w1477",
+      "w2790",
+      "w2791",
+      "w432",
       "w1478",
       "w1479",
       "w1480",
-      "w1481",
-      "w1482"
+      "w2793",
+      "w2794"
     ]
   },
   {
@@ -3246,13 +3246,13 @@
       "body": "Gezondheidsadvies met de condizionale:\n\n• Dovresti fare più sport. (Je zou meer moeten sporten.)\n• Sarebbe meglio dormire 8 ore. (Het zou beter zijn om 8 uur te slapen.)\n• Bisognerebbe mangiare più verdura. (Men zou meer groente moeten eten.)\n\nGewoontes beschrijven:\n• Faccio sport tre volte a settimana. (Ik sport drie keer per week.)\n• Cerco di mangiare sano. (Ik probeer gezond te eten.)"
     },
     "words": [
-      "w1483",
+      "w2795",
       "w1484",
       "w1485",
-      "w1486",
-      "w1487",
-      "w1488",
-      "w1489",
+      "w2796",
+      "w2797",
+      "w2798",
+      "w158",
       "w1490"
     ]
   },
@@ -3268,8 +3268,8 @@
     },
     "words": [
       "w1491",
-      "w1492",
-      "w1493",
+      "w2800",
+      "w055",
       "w1494",
       "w1495",
       "w1496",
@@ -3288,14 +3288,14 @@
       "body": "Sport beoefenen:\n\n• Giocare a + sport met bal: giocare a calcio/tennis/basket\n• Fare + sport zonder bal: fare nuoto/atletica/yoga\n• Andare a + activiteit: andare a correre/sciare\n\nWedstrijden:\n• La partita (de wedstrijd)\n• Vincere/perdere/pareggiare (winnen/verliezen/gelijkspelen)\n• Il tifoso (de fan) — Faccio il tifo per… (Ik juich voor…)"
     },
     "words": [
-      "w1499",
-      "w1500",
-      "w1501",
+      "w615",
+      "w2803",
+      "w2804",
       "w1502",
-      "w1503",
+      "w2805",
       "w1504",
-      "w1505",
-      "w1506"
+      "w610",
+      "w2807"
     ]
   },
   {
@@ -3310,13 +3310,13 @@
     },
     "words": [
       "w1507",
-      "w1508",
-      "w1509",
-      "w1510",
-      "w1511",
-      "w1512",
-      "w1513",
-      "w1514"
+      "w1005",
+      "w483",
+      "w402",
+      "w2811",
+      "w2812",
+      "w2813",
+      "w2814"
     ]
   },
   {
@@ -3330,14 +3330,14 @@
       "body": "Over het milieu praten:\n\n• l'inquinamento (de vervuiling)\n• il riscaldamento globale (de opwarming van de aarde)\n• il cambiamento climatico (de klimaatverandering)\n• riciclare (recyclen)\n\nMeningen:\n• È importante che tutti riciclino. (Het is belangrijk dat iedereen recyclet.)\n• Bisogna proteggere l'ambiente. (We moeten het milieu beschermen.)"
     },
     "words": [
-      "w1515",
-      "w1516",
-      "w1517",
+      "w2815",
+      "w2816",
+      "w423",
       "w1518",
       "w1519",
       "w1520",
-      "w1521",
-      "w1522"
+      "w901",
+      "w2819"
     ]
   },
   {
@@ -3351,8 +3351,8 @@
       "body": "Wat je hebt geleerd:\n\n• Gecombineerde voornaamwoorden (me lo, glielo, ce la…)\n• Passieve vorm (essere/venire + voltooid deelwoord)\n• Medische woordenschat en bij de dokter\n• Sport, voeding en gezonde levensstijl\n• Milieu en duurzaamheid\n\nJe bent al halverwege B1 — geweldig!"
     },
     "words": [
-      "w1523",
-      "w1524",
+      "w777",
+      "w2821",
       "w1525",
       "w1526",
       "w1527",
@@ -3415,12 +3415,12 @@
     },
     "words": [
       "w1547",
-      "w1548",
+      "w2822",
       "w1549",
       "w1550",
       "w1551",
-      "w1552",
-      "w1553",
+      "w2823",
+      "w366",
       "w1554"
     ]
   },
@@ -3458,12 +3458,12 @@
     "words": [
       "w1563",
       "w1564",
-      "w1565",
-      "w1566",
-      "w1567",
-      "w1568",
+      "w2825",
+      "w2826",
+      "w2827",
+      "w176",
       "w1569",
-      "w1570"
+      "w957"
     ]
   },
   {
@@ -3498,13 +3498,13 @@
       "body": "Technologie in het dagelijks leven:\n\n• Scaricare un'app (een app downloaden)\n• Aggiornare il software (de software updaten)\n• Il caricabatterie (de oplader)\n• La connessione (de verbinding)\n• Essere online/offline (online/offline zijn)\n\n'Il digitale ha cambiato tutto.' (Het digitale heeft alles veranderd.)\n'Non funziona il Wi-Fi.' (De wifi werkt niet.)"
     },
     "words": [
-      "w1579",
-      "w1580",
+      "w2830",
+      "w2831",
       "w1581",
-      "w1582",
+      "w2832",
       "w1583",
-      "w1584",
-      "w1585",
+      "w595",
+      "w2834",
       "w1586"
     ]
   },
@@ -3519,13 +3519,13 @@
       "body": "Online communiceren:\n\n• Postare / pubblicare (posten / publiceren)\n• Condividere (delen)\n• Mettere mi piace (liken)\n• Seguire / smettere di seguire (volgen / ontvolgen)\n• Il profilo (het profiel)\n\nMeningen over sociale media:\n• Penso che i social siano utili. (Ik denk dat social media nuttig zijn.)\n• Trascorro troppo tempo online. (Ik breng te veel tijd online door.)"
     },
     "words": [
-      "w1587",
-      "w1588",
-      "w1589",
-      "w1590",
+      "w2835",
+      "w2836",
+      "w2837",
+      "w2838",
       "w1591",
-      "w1592",
-      "w1593",
+      "w2839",
+      "w2840",
       "w1594"
     ]
   },
@@ -3540,14 +3540,14 @@
       "body": "Aanbevelen en bespreken:\n\n• Ti consiglio di leggere… (Ik raad je aan om te lezen…)\n• Hai visto l'ultimo film di…? (Heb je de laatste film van… gezien?)\n• Il libro racconta la storia di… (Het boek vertelt het verhaal van…)\n• La colonna sonora è bellissima. (De soundtrack is prachtig.)\n\nGenres:\n• il romanzo (roman), il giallo (thriller), la commedia (komedie)\n• il documentario, il film d'azione (actiefilm)"
     },
     "words": [
-      "w1595",
+      "w2841",
       "w1596",
-      "w1597",
-      "w1598",
+      "w523",
+      "w2843",
       "w1599",
       "w1600",
-      "w1601",
-      "w1602"
+      "w153",
+      "w2845"
     ]
   },
   {
@@ -3561,11 +3561,11 @@
       "body": "Wat je hebt geleerd:\n\n• Stare + gerundio (progressive)\n• Bijzinnen: oorzaak, tegenstelling en tijd\n• Indirecte rede: uitspraken en vragen\n• Technologie en sociale media\n• Film, boeken en muziek bespreken\n\nJe kunt nu complexe zinnen bouwen en vertellen wat anderen zeggen!"
     },
     "words": [
-      "w1603",
-      "w1604",
+      "w2846",
+      "w314",
       "w1605",
-      "w1606",
-      "w1607",
+      "w2848",
+      "w2849",
       "w1608",
       "w1609",
       "w1610"
@@ -3646,7 +3646,7 @@
     },
     "words": [
       "w1635",
-      "w1636",
+      "w2850",
       "w1637",
       "w1638",
       "w1639",
@@ -3689,11 +3689,11 @@
     "words": [
       "w1651",
       "w1652",
-      "w1653",
-      "w1654",
-      "w1655",
-      "w1656",
-      "w1657",
+      "w2851",
+      "w2852",
+      "w2853",
+      "w2854",
+      "w2855",
       "w1658"
     ]
   },
@@ -3709,13 +3709,13 @@
     },
     "words": [
       "w1659",
-      "w1660",
+      "w2856",
       "w1661",
-      "w1662",
-      "w1663",
+      "w2857",
+      "w2858",
       "w1664",
       "w1665",
-      "w1666"
+      "w2859"
     ]
   },
   {
@@ -3734,7 +3734,7 @@
       "w1669",
       "w1670",
       "w1671",
-      "w1672",
+      "w2860",
       "w1673",
       "w1674"
     ]
@@ -3751,8 +3751,8 @@
     },
     "words": [
       "w1675",
-      "w1676",
-      "w1677",
+      "w2861",
+      "w2862",
       "w1678",
       "w1679",
       "w1680",
@@ -3792,14 +3792,14 @@
       "body": "De passato remoto beschrijft afgesloten handelingen in het (verre) verleden. Je vindt hem vooral in boeken, kranten en verhalen.\n\n-are → parlai, parlasti, parlò, parlammo, parlaste, parlarono\n-ere → credei (credetti), credesti, credé (credette), credemmo, credeste, crederono (credettero)\n-ire → dormii, dormisti, dormì, dormimmo, dormiste, dormirono\n\nVuistregel: in Noord-Italië gebruikt men vaker de passato prossimo; in Zuid-Italië en in geschreven taal is de passato remoto gangbaar."
     },
     "words": [
-      "w1691",
+      "w438",
       "w1692",
       "w1693",
-      "w1694",
-      "w1695",
+      "w2864",
+      "w2865",
       "w1696",
       "w1697",
-      "w1698"
+      "w2866"
     ]
   },
   {
@@ -3817,10 +3817,10 @@
       "w1700",
       "w1701",
       "w1702",
-      "w1703",
+      "w2867",
       "w1704",
-      "w1705",
-      "w1706"
+      "w2868",
+      "w2869"
     ]
   },
   {
@@ -3855,14 +3855,14 @@
       "body": "Bij het beschrijven van kunst en architectuur gebruik je vaak de passato remoto (voor historische feiten) en het passief:\n\nIl Colosseo fu costruito dai Romani. — Het Colosseum werd gebouwd door de Romeinen.\nQuesto quadro fu dipinto da Caravaggio. — Dit schilderij werd geschilderd door Caravaggio."
     },
     "words": [
-      "w1715",
-      "w1716",
+      "w2870",
+      "w2871",
       "w1717",
-      "w1718",
-      "w1719",
+      "w2872",
+      "w2873",
       "w1720",
-      "w1721",
-      "w1722"
+      "w2874",
+      "w2875"
     ]
   },
   {
@@ -3880,7 +3880,7 @@
       "w1724",
       "w1725",
       "w1726",
-      "w1727",
+      "w2876",
       "w1728",
       "w1729",
       "w1730"
@@ -3940,13 +3940,13 @@
     },
     "words": [
       "w1747",
-      "w1748",
-      "w1749",
+      "w2877",
+      "w2878",
       "w1750",
       "w1751",
-      "w1752",
-      "w1753",
-      "w1754"
+      "w2879",
+      "w2880",
+      "w2881"
     ]
   },
   {
@@ -3967,7 +3967,7 @@
       "w1759",
       "w1760",
       "w1761",
-      "w1762"
+      "w2882"
     ]
   },
   {
@@ -3982,9 +3982,9 @@
     },
     "words": [
       "w1763",
-      "w1764",
+      "w2883",
       "w1765",
-      "w1766",
+      "w633",
       "w1767",
       "w1768",
       "w1769",
@@ -4002,14 +4002,14 @@
       "body": "De condizionale passato = condizionale van avere/essere + voltooid deelwoord.\n\navrei parlato — ik zou gesproken hebben\nsarei andato/a — ik zou gegaan zijn\n\nGebruik:\n• Spijt: Avrei dovuto studiare di più. — Ik had meer moeten studeren.\n• Onvervulde wens: Sarei voluto venire. — Ik had willen komen.\n• Toekomst in het verleden: Disse che sarebbe venuto. — Hij zei dat hij zou komen."
     },
     "words": [
-      "w1771",
+      "w2885",
       "w1772",
       "w1773",
       "w1774",
       "w1775",
       "w1776",
       "w1777",
-      "w1778"
+      "w2886"
     ]
   },
   {
@@ -4023,13 +4023,13 @@
       "body": "Gebruik avrei dovuto / avrei potuto + infinitief voor spijt:\n\nAvrei dovuto ascoltarti. — Ik had naar je moeten luisteren.\nAvrei potuto fare di meglio. — Ik had beter kunnen doen.\nNon avrei dovuto dire quello. — Ik had dat niet moeten zeggen.\n\nVuistregel: dovere/potere/volere in condizionale passato + infinitief."
     },
     "words": [
-      "w1779",
+      "w2887",
       "w1780",
       "w1781",
       "w1782",
       "w1783",
-      "w1784",
-      "w1785",
+      "w2888",
+      "w2889",
       "w1786"
     ]
   },
@@ -4045,12 +4045,12 @@
     },
     "words": [
       "w1787",
-      "w1788",
-      "w1789",
-      "w1790",
+      "w2890",
+      "w2891",
+      "w2892",
       "w1791",
-      "w1792",
-      "w1793",
+      "w2893",
+      "w435",
       "w1794"
     ]
   },
@@ -4065,14 +4065,14 @@
       "body": "Nuttige zinnen bij de bank:\n\nVorrei aprire un conto corrente. — Ik zou graag een lopende rekening openen.\nPosso fare un bonifico? — Kan ik een overboeking doen?\nQual è il tasso d'interesse? — Wat is de rente?"
     },
     "words": [
-      "w1795",
-      "w1796",
+      "w2895",
+      "w2896",
       "w1797",
       "w1798",
       "w1799",
-      "w1800",
+      "w808",
       "w1801",
-      "w1802"
+      "w2898"
     ]
   },
   {
@@ -4086,9 +4086,9 @@
       "body": "Belangrijke economische termen:\n\nL'economia cresce / è in crescita. — De economie groeit.\nLa disoccupazione è alta / bassa. — De werkloosheid is hoog / laag.\nIl costo della vita è aumentato. — De kosten van levensonderhoud zijn gestegen."
     },
     "words": [
-      "w1803",
-      "w1804",
-      "w1805",
+      "w2899",
+      "w2900",
+      "w2901",
       "w1806",
       "w1807",
       "w1808",
@@ -4128,10 +4128,10 @@
       "body": "Nuttige zinnen bij het zoeken naar een woning:\n\nCerco un appartamento in affitto. — Ik zoek een huurappartement.\nQuant'è l'affitto mensile? — Hoeveel is de maandelijkse huur?\nLe spese sono incluse? — Zijn de servicekosten inbegrepen?\nIl contratto è di quattro anni. — Het contract is voor vier jaar."
     },
     "words": [
-      "w1819",
-      "w1820",
+      "w2902",
+      "w537",
       "w1821",
-      "w1822",
+      "w2904",
       "w1823",
       "w1824",
       "w1825",
@@ -4149,7 +4149,7 @@
       "body": "Trasferirsi = verhuizen (reflexief):\n\nMi sono trasferito/a a Roma. — Ik ben naar Rome verhuisd.\nCi trasferiremo il mese prossimo. — We verhuizen volgende maand.\n\nAndere nuttige woorden: fare i bagagli (inpakken), il trasloco (de verhuizing), sistemare (inrichten)."
     },
     "words": [
-      "w1827",
+      "w2905",
       "w1828",
       "w1829",
       "w1830",
@@ -4170,10 +4170,10 @@
       "body": "Nuttige constructies:\n\nAbito in un quartiere tranquillo. — Ik woon in een rustige buurt.\nNelle vicinanze c'è… — In de buurt is er…\nÈ ben collegato con i mezzi. — Het is goed bereikbaar met het OV.\nIl quartiere è sicuro / vivace / verde. — De buurt is veilig / levendig / groen."
     },
     "words": [
-      "w1835",
-      "w1836",
-      "w1837",
-      "w1838",
+      "w2906",
+      "w2907",
+      "w121",
+      "w2909",
       "w1839",
       "w1840",
       "w1841",
@@ -4198,7 +4198,7 @@
       "w1847",
       "w1848",
       "w1849",
-      "w1850"
+      "w2910"
     ]
   },
   {
@@ -4212,13 +4212,13 @@
       "body": "De congiuntivo imperfetto gebruik je na che in het verleden, of bij onwerkelijke wensen:\n\n-are: parlassi, parlassi, parlasse, parlassimo, parlaste, parlassero\n-ere: credessi, credessi, credesse, credessimo, credeste, credessero\n-ire: dormissi, dormissi, dormisse, dormissimo, dormiste, dormissero\n\nVoorbeelden:\nPensavo che parlasse italiano. — Ik dacht dat hij Italiaans sprak.\nSe avessi tempo, viaggerei. — Als ik tijd had, zou ik reizen."
     },
     "words": [
-      "w1851",
-      "w1852",
+      "w2911",
+      "w2912",
       "w1853",
       "w1854",
       "w1855",
       "w1856",
-      "w1857",
+      "w2913",
       "w1858"
     ]
   },
@@ -4233,14 +4233,14 @@
       "body": "Enkele veelgebruikte onregelmatige vormen:\n\nessere: fossi, fossi, fosse, fossimo, foste, fossero\navere: avessi, avessi, avesse, avessimo, aveste, avessero\nfare: facessi…\ndire: dicessi…\nstare: stessi…\ndare: dessi…\n\nSe fossi ricco, comprerei una villa. — Als ik rijk was, zou ik een villa kopen."
     },
     "words": [
-      "w1859",
-      "w1860",
-      "w1861",
+      "w2914",
+      "w2915",
+      "w2916",
       "w1862",
       "w1863",
       "w1864",
-      "w1865",
-      "w1866"
+      "w2917",
+      "w2918"
     ]
   },
   {
@@ -4254,14 +4254,14 @@
       "body": "De congiuntivo volgt op uitdrukkingen van twijfel en onzekerheid:\n\nNon sono sicuro che sia vero. — Ik weet niet zeker of het waar is.\nDubito che venga domani. — Ik betwijfel of hij morgen komt.\nNon credo che abbia ragione. — Ik geloof niet dat hij gelijk heeft.\nÈ possibile che piova. — Het is mogelijk dat het regent."
     },
     "words": [
-      "w1867",
+      "w1004",
       "w1868",
-      "w1869",
-      "w1870",
+      "w2920",
+      "w2921",
       "w1871",
       "w1872",
-      "w1873",
-      "w1874"
+      "w2922",
+      "w2923"
     ]
   },
   {
@@ -4279,10 +4279,10 @@
       "w1876",
       "w1877",
       "w1878",
-      "w1879",
-      "w1880",
-      "w1881",
-      "w1882"
+      "w2924",
+      "w2925",
+      "w2926",
+      "w328"
     ]
   },
   {
@@ -4298,8 +4298,8 @@
     "words": [
       "w1883",
       "w1884",
-      "w1885",
-      "w1886",
+      "w700",
+      "w2929",
       "w1887",
       "w1888",
       "w1889",
@@ -4317,14 +4317,14 @@
       "body": "Nuttige termen:\n\nla laurea triennale — de bachelor (3 jaar)\nla laurea magistrale — de master (2 jaar)\nil dottorato — de promotie, het doctoraat\nla tesi — het afstudeerwerk, de scriptie\nsostenere un esame — examen doen\nsuperare un esame — een examen halen"
     },
     "words": [
-      "w1891",
+      "w2930",
       "w1892",
       "w1893",
       "w1894",
       "w1895",
       "w1896",
-      "w1897",
-      "w1898"
+      "w2931",
+      "w2932"
     ]
   },
   {
@@ -4338,14 +4338,14 @@
       "body": "Nuttige uitdrukkingen:\n\nSto leggendo un romanzo di Ferrante. — Ik lees een roman van Ferrante.\nL'autore ha scritto dieci libri. — De auteur heeft tien boeken geschreven.\nIl capitolo tratta di… — Het hoofdstuk gaat over…\nConsiglio questo libro. — Ik raad dit boek aan."
     },
     "words": [
-      "w1899",
+      "w2933",
       "w1900",
-      "w1901",
-      "w1902",
+      "w2934",
+      "w2935",
       "w1903",
-      "w1904",
-      "w1905",
-      "w1906"
+      "w2936",
+      "w2937",
+      "w2938"
     ]
   },
   {
@@ -4360,13 +4360,13 @@
     },
     "words": [
       "w1907",
-      "w1908",
+      "w2939",
       "w1909",
       "w1910",
       "w1911",
-      "w1912",
-      "w1913",
-      "w1914"
+      "w936",
+      "w2941",
+      "w2942"
     ]
   },
   {
@@ -4380,14 +4380,14 @@
       "body": "Het Italiaans kent duidelijke registers:\n\nFormeel: Lei (u), Egregio Dottore, La prego di…\nInformeel: tu, Ciao!, Dai!\n\nLet op: in e-mails en brieven is het formele register veel gebruikelijker dan in het Nederlands."
     },
     "words": [
-      "w1915",
-      "w1916",
-      "w1917",
+      "w2943",
+      "w2944",
+      "w953",
       "w1918",
       "w1919",
       "w1920",
-      "w1921",
-      "w1922"
+      "w2946",
+      "w2947"
     ]
   },
   {
@@ -4402,13 +4402,13 @@
     },
     "words": [
       "w1923",
-      "w1924",
-      "w1925",
-      "w1926",
-      "w1927",
-      "w1928",
-      "w1929",
-      "w1930"
+      "w822",
+      "w320",
+      "w2950",
+      "w2951",
+      "w2952",
+      "w2953",
+      "w2954"
     ]
   },
   {
@@ -4426,10 +4426,10 @@
       "w1932",
       "w1933",
       "w1934",
-      "w1935",
-      "w1936",
+      "w782",
+      "w391",
       "w1937",
-      "w1938"
+      "w114"
     ]
   },
   {
@@ -4443,10 +4443,10 @@
       "body": "Nuttige uitdrukkingen:\n\ninnamorarsi di — verliefd worden op\nessere innamorato/a di — verliefd zijn op\nandare d'accordo con — goed overweg kunnen met\nfare una proposta — een aanzoek doen\nTi amo / Ti voglio bene — Ik hou van je (romantisch / niet-romantisch)"
     },
     "words": [
-      "w1939",
-      "w1940",
+      "w2958",
+      "w832",
       "w1941",
-      "w1942",
+      "w828",
       "w1943",
       "w1944",
       "w1945",
@@ -4464,11 +4464,11 @@
       "body": "Uitdrukkingen voor conflicten:\n\nlitigare con — ruziën met\nfare la pace — vrede sluiten\nchiedere scusa — excuses vragen\nandare d'accordo — het eens zijn\nnon sopportare — niet kunnen uitstaan\n\nAbbiamo litigato, ma poi abbiamo fatto la pace. — We hadden ruzie, maar daarna hebben we vrede gesloten."
     },
     "words": [
-      "w1947",
+      "w2961",
       "w1948",
       "w1949",
-      "w1950",
-      "w1951",
+      "w2962",
+      "w827",
       "w1952",
       "w1953",
       "w1954"
@@ -4488,10 +4488,10 @@
       "w1955",
       "w1956",
       "w1957",
-      "w1958",
+      "w2964",
       "w1959",
-      "w1960",
-      "w1961",
+      "w378",
+      "w383",
       "w1962"
     ]
   },
@@ -4527,12 +4527,12 @@
       "body": "Constructies voor dromen en ambities:\n\nIl mio sogno è + infinito — Mijn droom is om…\nSpero di + infinito — Ik hoop te…\nMi piacerebbe + infinito — Ik zou graag… willen\nHo intenzione di + infinito — Ik ben van plan om…"
     },
     "words": [
-      "w1971",
-      "w1972",
-      "w1973",
-      "w1974",
+      "w2967",
+      "w2968",
+      "w2969",
+      "w2970",
       "w1975",
-      "w1976",
+      "w2971",
       "w1977",
       "w1978"
     ]
@@ -4548,13 +4548,13 @@
       "body": "Nuttige werkwoorden:\n\nriuscire a + infinito — erin slagen om…\nfallire — falen, mislukken\nfarcela — het redden, het voor elkaar krijgen\narendersi — zich overgeven, opgeven\n\nCe l'ho fatta! — Ik heb het gered!\nNon mollare! — Geef niet op!"
     },
     "words": [
-      "w1979",
+      "w2972",
       "w1980",
       "w1981",
       "w1982",
       "w1983",
-      "w1984",
-      "w1985",
+      "w2973",
+      "w2974",
       "w1986"
     ]
   },
@@ -4575,8 +4575,8 @@
       "w1990",
       "w1991",
       "w1992",
-      "w1993",
-      "w1994"
+      "w1030",
+      "w703"
     ]
   },
   {
@@ -4590,10 +4590,10 @@
       "body": "Nuttige uitdrukkingen:\n\nEssere stressato/a — gestrest zijn\nSono sotto pressione — Ik sta onder druk\nHo bisogno di rilassarmi — Ik heb ontspanning nodig\nStaccare la spina — de stekker eruit trekken (figuurlijk)\nPrendersi una pausa — een pauze nemen"
     },
     "words": [
-      "w1995",
+      "w2977",
       "w1996",
-      "w1997",
-      "w1998",
+      "w2978",
+      "w2979",
       "w1999",
       "w2000",
       "w2001",
@@ -4616,7 +4616,7 @@
       "w2005",
       "w2006",
       "w2007",
-      "w2008",
+      "w2980",
       "w2009",
       "w2010"
     ]
@@ -4675,7 +4675,7 @@
     },
     "words": [
       "w2027",
-      "w2028",
+      "w2981",
       "w2029",
       "w2030",
       "w2031",
@@ -4695,13 +4695,13 @@
       "body": "Gebruik aggettivi om landschappen te beschrijven:\n\nun paesaggio mozzafiato — een adembenemend landschap\nuna vallata verde — een groene vallei\nuna costa frastagliata — een grillige kustlijn\nil terreno è pianeggiante — het terrein is vlak"
     },
     "words": [
-      "w2035",
-      "w2036",
+      "w2982",
+      "w2983",
       "w2037",
-      "w2038",
-      "w2039",
-      "w2040",
-      "w2041",
+      "w2984",
+      "w194",
+      "w2986",
+      "w2987",
       "w2042"
     ]
   },
@@ -4737,11 +4737,11 @@
       "body": "Nuttige uitdrukkingen voor bergtochten:\n\nfare un'escursione — een wandeltocht maken\nsalire in cima — naar de top klimmen\nil sentiero — het pad\nil rifugio — de berghut\nla vetta — de top\nil dislivello — het hoogteverschil"
     },
     "words": [
-      "w2051",
+      "w2988",
       "w2052",
       "w2053",
       "w2054",
-      "w2055",
+      "w2989",
       "w2056",
       "w2057",
       "w2058"
@@ -4758,11 +4758,11 @@
       "body": "Nuttige uitdrukkingen:\n\nIl clima sta cambiando. — Het klimaat verandert.\nLa temperatura media è aumentata. — De gemiddelde temperatuur is gestegen.\nBisogna ridurre le emissioni di CO₂. — We moeten de CO₂-uitstoot verminderen.\nL'effetto serra — het broeikaseffect"
     },
     "words": [
-      "w2059",
-      "w2060",
+      "w2990",
+      "w2991",
       "w2061",
       "w2062",
-      "w2063",
+      "w2992",
       "w2064",
       "w2065",
       "w2066"
@@ -4779,12 +4779,12 @@
       "body": "Afvalscheiding in Italië (raccolta differenziata):\n\nla plastica — plastic\nil vetro — glas\nla carta — papier\nl'umido — GFT-afval\nl'indifferenziato — restafval\n\nIn Italië is afvalscheiding verplicht en verschilt de regeling per gemeente."
     },
     "words": [
-      "w2067",
-      "w2068",
+      "w2993",
+      "w2994",
       "w2069",
-      "w2070",
+      "w2995",
       "w2071",
-      "w2072",
+      "w2996",
       "w2073",
       "w2074"
     ]
@@ -4825,9 +4825,9 @@
       "w2084",
       "w2085",
       "w2086",
-      "w2087",
+      "w591",
       "w2088",
-      "w2089",
+      "w231",
       "w2090"
     ]
   },
@@ -4842,13 +4842,13 @@
       "body": "Nuttige constructies:\n\nÈ un film che parla di… — Het is een film die gaat over…\nIl film è diretto da… — De film is geregisseerd door…\nÈ stato girato in Italia. — Hij is opgenomen in Italië.\nIl film mi ha commosso / fatto ridere / annoiato. — De film heeft me ontroerd / aan het lachen gemaakt / verveeld."
     },
     "words": [
-      "w2091",
+      "w2999",
       "w2092",
-      "w2093",
-      "w2094",
+      "w3000",
+      "w3001",
       "w2095",
-      "w2096",
-      "w2097",
+      "w3002",
+      "w525",
       "w2098"
     ]
   },
@@ -4865,7 +4865,7 @@
     "words": [
       "w2099",
       "w2100",
-      "w2101",
+      "w3004",
       "w2102",
       "w2103",
       "w2104",
@@ -4884,13 +4884,13 @@
       "body": "Nuttige uitdrukkingen in een museum:\n\nQuesta opera rappresenta… — Dit werk stelt … voor.\nÈ un esempio di arte barocca. — Het is een voorbeeld van barokke kunst.\nL'ingresso costa… — De toegang kost…\nÈ vietato fare foto con il flash. — Foto's met flits zijn verboden."
     },
     "words": [
-      "w2107",
-      "w2108",
-      "w2109",
+      "w3005",
+      "w3006",
+      "w3007",
       "w2110",
       "w2111",
-      "w2112",
-      "w2113",
+      "w3008",
+      "w3009",
       "w2114"
     ]
   },
@@ -4906,7 +4906,7 @@
     },
     "words": [
       "w2115",
-      "w2116",
+      "w3010",
       "w2117",
       "w2118",
       "w2119",
@@ -4926,10 +4926,10 @@
       "body": "Italiaanse krantenkoppen gebruiken vaak:\n\n• Het presens voor recente gebeurtenissen\n• Geen lidwoord: Governo approva legge (i.p.v. Il governo ha approvato la legge)\n• Condizionale voor onbevestigd nieuws: Il ministro sarebbe dimesso — De minister zou afgetreden zijn"
     },
     "words": [
-      "w2123",
-      "w2124",
+      "w3011",
+      "w3012",
       "w2125",
-      "w2126",
+      "w3013",
       "w2127",
       "w2128",
       "w2129",
@@ -4947,13 +4947,13 @@
       "body": "Het Italiaanse medialandschap:\n\nla RAI — de publieke omroep (Radiotelevisione Italiana)\nMediaset — de grootste commerciële omroep\nil telegiornale (TG) — het journaal\nil programma / la trasmissione — het programma\nin diretta — live\nin differita — uitgesteld"
     },
     "words": [
-      "w2131",
-      "w2132",
+      "w3014",
+      "w455",
       "w2133",
       "w2134",
       "w2135",
       "w2136",
-      "w2137",
+      "w3016",
       "w2138"
     ]
   },
@@ -4968,14 +4968,14 @@
       "body": "Reclame-uitdrukkingen:\n\nlo spot pubblicitario — de reclamespot\nil marchio — het merk\nlo slogan — de slogan\nil consumatore — de consument\nlanciare un prodotto — een product lanceren\nfare pubblicità — reclame maken"
     },
     "words": [
-      "w2139",
+      "w3017",
       "w2140",
       "w2141",
       "w2142",
       "w2143",
-      "w2144",
+      "w3018",
       "w2145",
-      "w2146"
+      "w3019"
     ]
   },
   {
@@ -5010,14 +5010,14 @@
       "body": "Nuttige zinnen:\n\nL'evento si svolge / si tiene il… — Het evenement vindt plaats op…\nIl festival dura tre giorni. — Het festival duurt drie dagen.\nI biglietti sono esauriti. — De kaartjes zijn uitverkocht.\nL'ingresso è gratuito / a pagamento. — De toegang is gratis / tegen betaling."
     },
     "words": [
-      "w2155",
+      "w3020",
       "w2156",
-      "w2157",
-      "w2158",
+      "w3021",
+      "w3022",
       "w2159",
       "w2160",
-      "w2161",
-      "w2162"
+      "w3023",
+      "w3024"
     ]
   },
   {
@@ -5031,12 +5031,12 @@
       "body": "In dit blok heb je geleerd:\n• Over film, theater en opera praten\n• Kunst en fotografie bespreken\n• Media, reclame en mode beschrijven\n• Evenementen en festivals bespreken"
     },
     "words": [
-      "w2163",
+      "w3025",
       "w2164",
       "w2165",
       "w2166",
       "w2167",
-      "w2168",
+      "w3026",
       "w2169",
       "w2170"
     ]
@@ -5053,13 +5053,13 @@
     },
     "words": [
       "w2171",
-      "w2172",
+      "w3027",
       "w2173",
       "w2174",
       "w2175",
-      "w2176",
-      "w2177",
-      "w2178"
+      "w3028",
+      "w3029",
+      "w3030"
     ]
   },
   {
@@ -5073,9 +5073,9 @@
       "body": "Verkiezingsterminologie:\n\nvotare — stemmen\ncandidarsi — zich kandidaat stellen\neleggere (p.p.: eletto) — kiezen, verkiezen\nil seggio elettorale — het stembureau\nla scheda elettorale — het stembiljet\nla maggioranza / la minoranza — de meerderheid / de minderheid"
     },
     "words": [
-      "w2179",
-      "w2180",
-      "w2181",
+      "w3031",
+      "w3032",
+      "w3033",
       "w2182",
       "w2183",
       "w2184",
@@ -5094,14 +5094,14 @@
       "body": "De Italiaanse grondwet garandeert fundamentele rechten:\n\nil diritto di voto — het stemrecht\nla libertà di espressione — de vrijheid van meningsuiting\nil dovere civico — de burgerplicht\nla parità di diritti — gelijke rechten\n\nTutti i cittadini hanno pari dignità sociale. — Alle burgers hebben gelijke sociale waardigheid (Art. 3 Constituzione)."
     },
     "words": [
-      "w2187",
+      "w3034",
       "w2188",
       "w2189",
       "w2190",
       "w2191",
       "w2192",
-      "w2193",
-      "w2194"
+      "w3035",
+      "w3036"
     ]
   },
   {
@@ -5117,7 +5117,7 @@
     "words": [
       "w2195",
       "w2196",
-      "w2197",
+      "w3037",
       "w2198",
       "w2199",
       "w2200",
@@ -5140,10 +5140,10 @@
       "w2204",
       "w2205",
       "w2206",
-      "w2207",
+      "w3038",
       "w2208",
-      "w2209",
-      "w2210"
+      "w3039",
+      "w3040"
     ]
   },
   {
@@ -5157,10 +5157,10 @@
       "body": "Fare volontariato = vrijwilligerswerk doen:\n\nFaccio volontariato in un'associazione. — Ik doe vrijwilligerswerk bij een organisatie.\nAiutiamo i senzatetto. — We helpen daklozen.\nDono il sangue regolarmente. — Ik doneer regelmatig bloed."
     },
     "words": [
-      "w2211",
+      "w3041",
       "w2212",
       "w2213",
-      "w2214",
+      "w3042",
       "w2215",
       "w2216",
       "w2217",
@@ -5179,13 +5179,13 @@
     },
     "words": [
       "w2219",
-      "w2220",
+      "w3043",
       "w2221",
       "w2222",
       "w2223",
       "w2224",
       "w2225",
-      "w2226"
+      "w3044"
     ]
   },
   {
@@ -5223,7 +5223,7 @@
       "w2235",
       "w2236",
       "w2237",
-      "w2238",
+      "w3045",
       "w2239",
       "w2240",
       "w2241",
@@ -5241,13 +5241,13 @@
       "body": "In dit blok heb je geleerd:\n• De passiva met venire\n• Over verkiezingen en democratie praten\n• Rechten, plichten en justitie\n• Immigratie, vrijwilligerswerk en maatschappelijke thema's"
     },
     "words": [
-      "w2243",
+      "w3046",
       "w2244",
       "w2245",
       "w2246",
       "w2247",
       "w2248",
-      "w2249",
+      "w3047",
       "w2250"
     ]
   },
@@ -5262,14 +5262,14 @@
       "body": "Een formele Italiaanse brief begint met:\n\nEgregio/a Dott./Dott.ssa… — Geachte heer/mevrouw dr. …\nSpett.le Azienda — Geachte firma\n\nEn eindigt met:\nIn attesa di un Suo cortese riscontro, porgo distinti saluti.\n— In afwachting van uw antwoord, met vriendelijke groet."
     },
     "words": [
-      "w2251",
+      "w3048",
       "w2252",
       "w2253",
-      "w2254",
+      "w3049",
       "w2255",
       "w2256",
-      "w2257",
-      "w2258"
+      "w3050",
+      "w3051"
     ]
   },
   {
@@ -5285,7 +5285,7 @@
     "words": [
       "w2259",
       "w2260",
-      "w2261",
+      "w3052",
       "w2262",
       "w2263",
       "w2264",
@@ -5304,14 +5304,14 @@
       "body": "Vergaderingen leiden:\n\nApriamo la riunione. — We openen de vergadering.\nPassiamo al punto successivo. — We gaan naar het volgende punt.\nQualcuno ha domande? — Heeft iemand vragen?\nRiassumiamo i punti principali. — We vatten de hoofdpunten samen.\nLa riunione è aggiornata a… — De vergadering is verdaagd naar…"
     },
     "words": [
-      "w2267",
+      "w3053",
       "w2268",
       "w2269",
       "w2270",
-      "w2271",
-      "w2272",
-      "w2273",
-      "w2274"
+      "w3054",
+      "w3055",
+      "w3056",
+      "w3057"
     ]
   },
   {
@@ -5325,13 +5325,13 @@
       "body": "Structuurzinnen voor presentaties:\n\nOggi vorrei parlare di… — Vandaag wil ik het hebben over…\nCome potete vedere dal grafico… — Zoals u kunt zien op de grafiek…\nIn conclusione… — Ter afsluiting…\nCi sono domande? — Zijn er vragen?\nGrazie per l'attenzione. — Dank voor uw aandacht."
     },
     "words": [
-      "w2275",
+      "w3058",
       "w2276",
       "w2277",
       "w2278",
       "w2279",
       "w2280",
-      "w2281",
+      "w3059",
       "w2282"
     ]
   },
@@ -5351,7 +5351,7 @@
       "w2285",
       "w2286",
       "w2287",
-      "w2288",
+      "w3060",
       "w2289",
       "w2290"
     ]
@@ -5368,12 +5368,12 @@
     },
     "words": [
       "w2291",
-      "w2292",
+      "w3061",
       "w2293",
-      "w2294",
-      "w2295",
+      "w3062",
+      "w3063",
       "w2296",
-      "w2297",
+      "w3064",
       "w2298"
     ]
   },
@@ -5391,7 +5391,7 @@
       "w2299",
       "w2300",
       "w2301",
-      "w2302",
+      "w3065",
       "w2303",
       "w2304",
       "w2305",
@@ -5416,7 +5416,7 @@
       "w2311",
       "w2312",
       "w2313",
-      "w2314"
+      "w3066"
     ]
   },
   {
@@ -5430,14 +5430,14 @@
       "body": "Veelgebruikte zinnen:\n\nBuongiorno, come posso aiutarLa? — Goedendag, hoe kan ik u helpen?\nVorrei fare un reclamo. — Ik wil een klacht indienen.\nIl prodotto è difettoso. — Het product is defect.\nVorrei un rimborso. — Ik wil mijn geld terug.\nPosso parlare con il responsabile? — Kan ik de verantwoordelijke spreken?"
     },
     "words": [
-      "w2315",
+      "w3067",
       "w2316",
       "w2317",
       "w2318",
-      "w2319",
+      "w3068",
       "w2320",
-      "w2321",
-      "w2322"
+      "w3069",
+      "w3070"
     ]
   },
   {
@@ -5454,10 +5454,10 @@
       "w2323",
       "w2324",
       "w2325",
-      "w2326",
+      "w1006",
       "w2327",
       "w2328",
-      "w2329",
+      "w416",
       "w2330"
     ]
   },
@@ -5472,14 +5472,14 @@
       "body": "Artsen en verpleegkundigen gebruiken de formele gebiedende wijs (Lei-vorm = congiuntivo presente):\n\nSi sieda, per favore. — Gaat u zitten, alstublieft.\nPrenda questa medicina. — Neem dit medicijn.\nRisposi profondamente. — Adem diep in.\nNon si preoccupi. — Maakt u zich geen zorgen."
     },
     "words": [
-      "w2331",
-      "w2332",
-      "w2333",
-      "w2334",
+      "w3073",
+      "w3074",
+      "w3075",
+      "w3076",
       "w2335",
-      "w2336",
+      "w3077",
       "w2337",
-      "w2338"
+      "w3078"
     ]
   },
   {
@@ -5493,13 +5493,13 @@
       "body": "Nuttige zinnen:\n\nHo bisogno di un farmaco per… — Ik heb een medicijn nodig voor…\nÈ senza ricetta? — Is het zonder recept?\nQuante volte al giorno? — Hoe vaak per dag?\nPrima o dopo i pasti? — Voor of na de maaltijden?\nHa qualcosa per il mal di testa? — Heeft u iets tegen hoofdpijn?"
     },
     "words": [
-      "w2339",
-      "w2340",
-      "w2341",
-      "w2342",
+      "w3079",
+      "w3080",
+      "w3081",
+      "w3082",
       "w2343",
       "w2344",
-      "w2345",
+      "w3083",
       "w2346"
     ]
   },
@@ -5520,8 +5520,8 @@
       "w2350",
       "w2351",
       "w2352",
-      "w2353",
-      "w2354"
+      "w3084",
+      "w3085"
     ]
   },
   {
@@ -5535,7 +5535,7 @@
       "body": "Noodgevallen in Italië:\n\nil numero di emergenza: 112 (Europees) of 118 (ambulanza)\n\nChiamate un'ambulanza! — Bel een ambulance!\nC'è stato un incidente! — Er is een ongeluk gebeurd!\nDov'è il pronto soccorso? — Waar is de eerste hulp?\nÈ urgente! — Het is dringend!"
     },
     "words": [
-      "w2355",
+      "w3086",
       "w2356",
       "w2357",
       "w2358",
@@ -5557,11 +5557,11 @@
     },
     "words": [
       "w2363",
-      "w2364",
-      "w2365",
+      "w3087",
+      "w3088",
       "w2366",
       "w2367",
-      "w2368",
+      "w3089",
       "w2369",
       "w2370"
     ]
@@ -5581,7 +5581,7 @@
       "w2372",
       "w2373",
       "w2374",
-      "w2375",
+      "w3090",
       "w2376",
       "w2377",
       "w2378"
@@ -5619,12 +5619,12 @@
       "body": "Gebruik de passato remoto of passato prossimo:\n\nGalilei inventò il telescopio. — Galilei vond de telescoop uit.\nMarconi ha inventato la radio. — Marconi heeft de radio uitgevonden.\nVolta scoprì la pila elettrica. — Volta ontdekte de elektrische batterij.\n\ninventare = uitvinden | scoprire = ontdekken"
     },
     "words": [
-      "w2387",
+      "w3091",
       "w2388",
-      "w2389",
+      "w3092",
       "w2390",
       "w2391",
-      "w2392",
+      "w3093",
       "w2393",
       "w2394"
     ]
@@ -5644,7 +5644,7 @@
       "w2396",
       "w2397",
       "w2398",
-      "w2399",
+      "w3094",
       "w2400",
       "w2401",
       "w2402"
@@ -5661,11 +5661,11 @@
       "body": "In dit blok heb je geleerd:\n• De formele gebiedende wijs (imperativo formale)\n• Medische en farmaceutische termen\n• Geestelijke gezondheid en eerste hulp\n• Wetenschap, biologie en ruimtevaart"
     },
     "words": [
-      "w2403",
+      "w3095",
       "w2404",
-      "w2405",
-      "w2406",
-      "w2407",
+      "w3096",
+      "w3097",
+      "w3098",
       "w2408",
       "w2409",
       "w2410"
@@ -5683,12 +5683,12 @@
     },
     "words": [
       "w2411",
-      "w2412",
+      "w509",
       "w2413",
       "w2414",
       "w2415",
       "w2416",
-      "w2417",
+      "w3100",
       "w2418"
     ]
   },
@@ -5707,7 +5707,7 @@
       "w2420",
       "w2421",
       "w2422",
-      "w2423",
+      "w848",
       "w2424",
       "w2425",
       "w2426"
@@ -5745,7 +5745,7 @@
       "body": "Nuttige bankzinnen:\n\nVorrei aprire un conto. — Ik wil een rekening openen.\nVorrei fare un prelievo / un versamento. — Ik wil geld opnemen / storten.\nLa mia carta è bloccata. — Mijn pas is geblokkeerd.\nVorrei sottoscrivere un'assicurazione. — Ik wil een verzekering afsluiten."
     },
     "words": [
-      "w2435",
+      "w3102",
       "w2436",
       "w2437",
       "w2438",
@@ -5766,13 +5766,13 @@
       "body": "Italiaanse recepten gebruiken vaak de infinitief of imperativo:\n\nTagliare le cipolle a fettine. — De uien in plakjes snijden.\nFar bollire l'acqua. — Het water aan de kook brengen.\nMescolare gli ingredienti. — De ingrediënten mengen.\nCuocere a fuoco lento per 30 minuti. — 30 minuten op laag vuur koken."
     },
     "words": [
-      "w2443",
+      "w3103",
       "w2444",
-      "w2445",
-      "w2446",
-      "w2447",
+      "w3104",
+      "w3105",
+      "w3106",
       "w2448",
-      "w2449",
+      "w3107",
       "w2450"
     ]
   },
@@ -5791,7 +5791,7 @@
       "w2452",
       "w2453",
       "w2454",
-      "w2455",
+      "w3108",
       "w2456",
       "w2457",
       "w2458"
@@ -5829,7 +5829,7 @@
       "body": "Tuinactiviteiten:\n\npiantare — planten\npotare — snoeien\ntagliare l'erba — het gras maaien\nraccogliere i frutti — de vruchten oogsten\nil prato — het gazon\nl'aiuola — het bloembed"
     },
     "words": [
-      "w2467",
+      "w3109",
       "w2468",
       "w2469",
       "w2470",
@@ -5878,7 +5878,7 @@
       "w2487",
       "w2488",
       "w2489",
-      "w2490"
+      "w3110"
     ]
   },
   {
@@ -5913,7 +5913,7 @@
       "body": "Uitdrukkingen voor elke dag:\n\nIn bocca al lupo! — Succes! (antwoord: Crepi!)\nAcqua in bocca! — Mond dicht! (geheim houden)\nNon c'è due senza tre. — Alle goede dingen bestaan in drieën.\nChi dorme non piglia pesci. — Wie slaapt, vangt geen vis.\nMeglio tardi che mai. — Beter laat dan nooit."
     },
     "words": [
-      "w2499",
+      "w3111",
       "w2500",
       "w2501",
       "w2502",
@@ -5955,7 +5955,7 @@
       "body": "Verbi pronominali zijn werkwoorden met een vast voornaamwoord dat de betekenis verandert:\n\nfarcela — het redden (Ce la fai? — Red je het?)\nandarsene — weggaan (Me ne vado. — Ik ga weg.)\ncavarsela — zich redden (Me la cavo bene. — Ik red me goed.)\nprendersela — het kwalijk nemen (Non te la prendere! — Neem het niet kwalijk!)\nvolerci — nodig zijn (Ci vogliono due ore. — Er zijn twee uur nodig.)"
     },
     "words": [
-      "w2515",
+      "w3112",
       "w2516",
       "w2517",
       "w2518",
@@ -5982,7 +5982,7 @@
       "w2526",
       "w2527",
       "w2528",
-      "w2529",
+      "w3113",
       "w2530"
     ]
   },
@@ -6023,7 +6023,7 @@
       "w2541",
       "w2542",
       "w2543",
-      "w2544",
+      "w3114",
       "w2545",
       "w2546"
     ]
@@ -6039,13 +6039,13 @@
       "body": "Beleefde manieren om te klagen:\n\nMi scusi, c'è un problema con… — Neemt u me niet kwalijk, er is een probleem met…\nNon sono soddisfatto del servizio. — Ik ben niet tevreden over de service.\nVorrei parlare con il responsabile. — Ik wil de verantwoordelijke spreken.\nÈ inaccettabile. — Dit is onacceptabel.\nChiedo un rimborso. — Ik eis mijn geld terug."
     },
     "words": [
-      "w2547",
+      "w3115",
       "w2548",
       "w2549",
       "w2550",
       "w2551",
-      "w2552",
-      "w2553",
+      "w3116",
+      "w3117",
       "w2554"
     ]
   },
@@ -6060,11 +6060,11 @@
       "body": "Complimenten geven:\n\nComplimenti! — Gefeliciteerd! Goed gedaan!\nChe bel vestito! — Wat een mooie jurk!\nSei molto bravo/a! — Je bent heel goed!\n\nBedanken:\nGrazie mille / Grazie di cuore — Heel hartelijk bedankt\nTi sono molto grato/a — Ik ben je heel dankbaar\nNon c'è di che / Di niente — Graag gedaan"
     },
     "words": [
-      "w2555",
+      "w3118",
       "w2556",
       "w2557",
       "w2558",
-      "w2559",
+      "w384",
       "w2560",
       "w2561",
       "w2562"
@@ -6086,9 +6086,9 @@
       "w2565",
       "w2566",
       "w2567",
-      "w2568",
-      "w2569",
-      "w2570"
+      "w3120",
+      "w3121",
+      "w961"
     ]
   },
   {
@@ -6102,14 +6102,14 @@
       "body": "Overzicht verleden tijden:\n\n• Passato prossimo: afgesloten handeling met link naar heden (Ho mangiato la pizza.)\n• Imperfetto: beschrijving, gewoonte, achtergrond (Quando ero piccolo, giocavo.)\n• Passato remoto: afgesloten handeling in ver verleden (Dante scrisse la Divina Commedia.)\n• Trapassato prossimo: voltooid verleden (Quando arrivai, era già partito.)\n\nVuistregel: gebruik passato prossimo in gesproken taal, passato remoto in geschreven taal en Zuid-Italië."
     },
     "words": [
-      "w2571",
+      "w3123",
       "w2572",
-      "w2573",
-      "w2574",
+      "w742",
+      "w852",
       "w2575",
-      "w2576",
-      "w2577",
-      "w2578"
+      "w3126",
+      "w1034",
+      "w3128"
     ]
   },
   {
@@ -6123,14 +6123,14 @@
       "body": "De congiuntivo heeft vier tijden:\n\n• Presente: Penso che sia vero. (Ik denk dat het waar is.)\n• Passato: Credo che abbia parlato. (Ik geloof dat hij gesproken heeft.)\n• Imperfetto: Pensavo che fosse vero. (Ik dacht dat het waar was.)\n• Trapassato: Credevo che avesse parlato. (Ik dacht dat hij had gesproken.)\n\nGebruik na: che + mening/emotie/twijfel/wens, conjuncties (prima che, sebbene, affinché)."
     },
     "words": [
-      "w2579",
-      "w2580",
-      "w2581",
+      "w1022",
+      "w3130",
+      "w3131",
       "w2582",
       "w2583",
-      "w2584",
-      "w2585",
-      "w2586"
+      "w3132",
+      "w3133",
+      "w3134"
     ]
   },
   {
@@ -6148,10 +6148,10 @@
       "w2588",
       "w2589",
       "w2590",
-      "w2591",
-      "w2592",
+      "w983",
+      "w630",
       "w2593",
-      "w2594"
+      "w3137"
     ]
   },
   {
@@ -6167,12 +6167,12 @@
     "words": [
       "w2595",
       "w2596",
-      "w2597",
-      "w2598",
+      "w3138",
+      "w3139",
       "w2599",
       "w2600",
-      "w2601",
-      "w2602"
+      "w3140",
+      "w3141"
     ]
   },
   {
@@ -6186,9 +6186,9 @@
       "body": "Bij de omzetting naar indirecte rede verschuiven tijden:\n\nDirect: \"Vengo domani.\" — Ik kom morgen.\nIndirect: Ha detto che sarebbe venuto il giorno dopo. — Hij zei dat hij de volgende dag zou komen.\n\nVerschuivingen:\npresente → imperfetto\npassato prossimo → trapassato prossimo\nfuturo → condizionale passato\ndomani → il giorno dopo\nieri → il giorno prima"
     },
     "words": [
-      "w2603",
-      "w2604",
-      "w2605",
+      "w3142",
+      "w3143",
+      "w3144",
       "w2606",
       "w2607",
       "w2608",
@@ -6208,10 +6208,10 @@
     },
     "words": [
       "w2611",
-      "w2612",
+      "w3145",
       "w2613",
-      "w2614",
-      "w2615",
+      "w3146",
+      "w3147",
       "w2616",
       "w2617",
       "w2618"
@@ -6230,11 +6230,11 @@
     "words": [
       "w2619",
       "w2620",
-      "w2621",
+      "w3148",
       "w2622",
-      "w2623",
+      "w3149",
       "w2624",
-      "w2625",
+      "w3150",
       "w2626"
     ]
   },
@@ -6249,14 +6249,14 @@
       "body": "Pas op voor deze valse vrienden:\n\nbravo = goed/knap (NIET braaf)\nsimpatico = sympathiek/leuk (NIET simpel)\neventualmente = eventueel (NIET per ongeluk)\ncamera = kamer (NIET camera → macchina fotografica)\nfirma = handtekening (NIET bedrijf → azienda/ditta)\nnoioso = saai (NIET naïef)\nfatto = feit/gedaan (NIET vet)"
     },
     "words": [
-      "w2627",
-      "w2628",
-      "w2629",
+      "w3151",
+      "w3152",
+      "w3153",
       "w2630",
       "w2631",
       "w2632",
-      "w2633",
-      "w2634"
+      "w3154",
+      "w3155"
     ]
   },
   {
@@ -6291,14 +6291,14 @@
       "body": "Wat je nu kunt:\n\n✓ Verleden tijden gebruiken (passato prossimo, imperfetto, passato remoto)\n✓ De congiuntivo (presente, imperfetto)\n✓ De condizionale (presente en passato)\n✓ Hypothetische zinnen (periodo ipotetico)\n✓ Indirecte rede\n✓ Formeel en informeel register\n✓ Over kunst, wetenschap, politiek en dagelijks leven praten\n✓ Italiaanse uitdrukkingen en spreekwoorden\n\nJe bent nu op B1-niveau. Complimenti e in bocca al lupo per il tuo viaggio linguistico! 🇮🇹"
     },
     "words": [
-      "w2643",
+      "w3156",
       "w2644",
-      "w2645",
+      "w3157",
       "w2646",
-      "w2647",
+      "w3158",
       "w2648",
-      "w2649",
-      "w2650"
+      "w3159",
+      "w3160"
     ]
   }
 ]

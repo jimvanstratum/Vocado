@@ -119,6 +119,29 @@ export function getLearnedPercent(wordIds) {
   return Math.round(learned / wordIds.length * 100);
 }
 
+/**
+ * Sprint 8 (v1.44): SRS-staat van verwijderde (dubbele) woord-IDs overzetten naar het behouden ID.
+ * idMap = { verwijderdId: behoudenId }. Bij twee bestaande staten wint die met de meeste herhalingen.
+ * Draait één keer (vlag in localStorage); zonder vlag is de functie idempotent.
+ */
+export function migrateWordIds(idMap) {
+  const FLAG = 'italiano_srs_idmap_v144';
+  try { if (localStorage.getItem(FLAG)) return false; } catch {}
+  const data = loadSRSData();
+  let moved = 0;
+  for (const [oldId, newId] of Object.entries(idMap)) {
+    const old = data[oldId];
+    if (!old) continue;
+    const cur = data[newId];
+    if (!cur || (old.totalReviews || 0) > (cur.totalReviews || 0)) data[newId] = old;
+    delete data[oldId];
+    moved++;
+  }
+  if (moved) saveSRSData(data);
+  try { localStorage.setItem(FLAG, '1'); } catch {}
+  return moved > 0;
+}
+
 /** Reset alle SRS-data. */
 export function resetSRS() {
   localStorage.removeItem(SRS_KEY);

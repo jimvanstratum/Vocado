@@ -4,8 +4,9 @@
  */
 
 import { initAudio, setTTSRate, stopSpeech } from './audio.js?v=16';
-import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow } from './srs.js?v=17';
-import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson } from './progress.js?v=16';
+import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow, migrateWordIds } from './srs.js?v=18';
+import { ID_MAP } from './idmap.js?v=1';
+import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson, migratePartialLessonsV144 } from './progress.js?v=17';
 import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=20';
 import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=16';
 
@@ -1411,6 +1412,8 @@ async function init() {
   migrateOldSkipped();    // eenmalige migratie: 0-XP completed → skipped
   migrateXPToV10();       // Sprint 10: herschaal XP naar nieuwe waarden
   migrateToV14();         // Sprint 14: hernummer les-IDs 21-60 naar nieuwe structuur
+  migrateWordIds(ID_MAP); // v1.44: SRS-staat van verwijderde dubbele woorden overzetten
+  migratePartialLessonsV144(); // v1.44: opgeslagen oefenrijen met oude IDs wissen
   migrateSettingsV10();   // Sprint 10: migreer dagdoel (10/20/30/50 → 50/100/150/200)
   const settings = getSettings();
   applyTheme(settings.theme || 'auto');  // Sprint 10: thema toepassen

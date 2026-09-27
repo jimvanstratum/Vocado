@@ -289,6 +289,18 @@ export function savePartialLesson(lessonId, pct, index, serializedQueue) {
   save(p);
 }
 
+/**
+ * Sprint 8 (v1.44): wis alle gedeeltelijke lessen één keer — hun opgeslagen oefenrij kan
+ * verwijderde (dubbele) woord-IDs bevatten. De gebruiker begint zo'n les gewoon opnieuw.
+ */
+export function migratePartialLessonsV144() {
+  const p = load();
+  if (p.partialMigratedV144) return;
+  p.partialLessons = {};
+  p.partialMigratedV144 = true;
+  save(p);
+}
+
 export function getPartialLesson(lessonId) {
   return ((load().partialLessons) || {})[lessonId] ?? null;
 }

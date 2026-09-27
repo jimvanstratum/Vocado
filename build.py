@@ -61,13 +61,23 @@ curriculum_js = json.dumps(curriculum, ensure_ascii=False, separators=(',', ':')
 
 print(f'    → {len(vocab)} woorden, {len(curriculum)} lessen')
 
+# Uniciteitscheck (v1.44): geen dubbele Italiaanse woorden of IDs, geen les die naar een onbekend ID verwijst
+from collections import Counter
+_dup_it = [k for k, n in Counter(w['it'].lower() for w in vocab).items() if n > 1]
+_dup_id = [k for k, n in Counter(w['id'] for w in vocab).items() if n > 1]
+_ids = {w['id'] for w in vocab}
+_bad_les = [l['id'] for l in curriculum if any(wid not in _ids for wid in l['words'])]
+if _dup_it or _dup_id or _bad_les:
+    sys.exit(f'❌  Datafout — dubbele it: {_dup_it[:5]} | dubbele id: {_dup_id[:5]} | lessen met onbekend id: {_bad_les[:5]}')
+print('    ✓ geen dubbele woorden of IDs')
+
 
 # ── 2. JS modules bundelen ─────────────────────────────────────────────────────
 
 print('📦  JavaScript bundelen...')
 
 # Volgorde is belangrijk: afhankelijkheden eerst
-MODULE_ORDER = ['srs.js', 'progress.js', 'settings.js', 'audio.js', 'exercises.js', 'app.js']
+MODULE_ORDER = ['idmap.js', 'srs.js', 'progress.js', 'settings.js', 'audio.js', 'exercises.js', 'app.js']
 parts = []
 
 for fname in MODULE_ORDER:
