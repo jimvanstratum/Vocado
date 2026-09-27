@@ -55,11 +55,13 @@ for name in ['icon-192.png', 'icon-512.png']:
 print('📂  Data laden...')
 vocab      = load_json(os.path.join(WWW, 'data', 'vocabulary.json'))
 curriculum = load_json(os.path.join(WWW, 'data', 'curriculum.json'))
+readings   = load_json(os.path.join(WWW, 'data', 'readings.json'))
 
 vocab_js      = json.dumps(vocab,      ensure_ascii=False, separators=(',', ':'))
 curriculum_js = json.dumps(curriculum, ensure_ascii=False, separators=(',', ':'))
+readings_js   = json.dumps(readings,   ensure_ascii=False, separators=(',', ':'))
 
-print(f'    → {len(vocab)} woorden, {len(curriculum)} lessen')
+print(f'    → {len(vocab)} woorden, {len(curriculum)} lessen, {len(readings)} leesteksten')
 
 # Uniciteitscheck (v1.44): geen dubbele Italiaanse woorden of IDs, geen les die naar een onbekend ID verwijst
 from collections import Counter
@@ -115,6 +117,7 @@ inline_load = (
     'async function loadData() {\n'
     f'  VOCAB = {vocab_js};\n'
     f'  CURRICULUM = {curriculum_js};\n'
+    f'  READINGS = {readings_js};\n'
     '}'
 )
 

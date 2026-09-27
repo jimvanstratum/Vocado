@@ -507,6 +507,32 @@
     .fib-hint { font-size: 15px; color: var(--muted); text-align: center; margin-bottom: 4px; }
     .fib-sentence { font-size: 20px; font-weight: 600; color: var(--text); text-align: center; padding: 12px 20px 20px; line-height: 1.5; }
 
+    /* ── Vervoegen (v1.45) ── */
+    .conj-card { background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; margin-bottom: 16px; }
+    .conj-inf { font-size: 28px; font-weight: 800; color: var(--text); }
+    .conj-nl { font-size: 14px; color: var(--muted); margin-top: 2px; }
+    .conj-tense { display: inline-block; margin-top: 10px; padding: 3px 10px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+    .conj-prompt { margin-top: 16px; font-size: 22px; font-weight: 700; color: var(--text); }
+    .conj-pron-big { color: var(--accent); }
+    .conj-blank { letter-spacing: 2px; color: var(--muted); }
+    .conj-hint { margin-top: 10px; font-size: 12px; color: var(--muted); }
+    .conj-paradigm { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; margin-top: 12px; font-size: 14px; text-align: left; }
+    .conj-row { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; border-bottom: 1px dashed var(--border); }
+    .conj-pron { color: var(--muted); }
+    .conj-form { font-weight: 700; color: var(--text); }
+
+    /* ── Leestekst (v1.45) ── */
+    .reading-card { background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+    .reading-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; margin-bottom: 10px; }
+    .reading-title { font-size: 20px; font-weight: 800; color: var(--text); }
+    .reading-meta { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .reading-tts { background: none; border: 1px solid var(--border); border-radius: 999px; color: var(--text); font-size: 12px; padding: 3px 10px; cursor: pointer; }
+    .reading-text { font-size: 17px; line-height: 1.65; color: var(--text); max-height: 42vh; overflow-y: auto; padding-right: 4px; }
+    .reading-text p { margin: 0 0 10px; }
+    .reading-q-num { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+    .reading-q { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    .reading-score { margin-top: 8px; font-size: 15px; }
+
     /* ── KOPPELEN (matching) ─────────────────────────────────────────────── */
     .match-grid { display: flex; gap: 12px; padding: 8px 16px; }
     .match-col { flex: 1; display: flex; flex-direction: column; gap: 10px; }
@@ -1044,7 +1070,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.44 · Italiaans · 300 lessen · 2500 woorden</div>
+    <div class="settings-version">Vocado · v1.46 · Italiaans · 300 lessen · 2500 woorden</div>
   </div>
 </div>
 
@@ -1189,7 +1215,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=38';
+  import './js/app.js?v=40';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {

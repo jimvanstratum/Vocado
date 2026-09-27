@@ -1,6 +1,7 @@
 /**
  * Exercises — Sprint 10
- * Types: flashcard, multiple-choice, listen-choose, listen-type, type, word-order, grammar, intro
+ * Types: flashcard, multiple-choice, listen-choose, listen-type, type, word-order, sentence-choice,
+ * fill-in-blank-mc/-type, matching, find-error, sentence-dictation, category-sort, conjugation, reading, grammar, intro
  */
 
 import { speak, isTTSAvailable, getTTSRate } from './audio.js?v=10';
@@ -780,6 +781,10 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
   const csGroups = buildCategoryGroups(newWords);
   if (csGroups) queue.push({ type: 'category-sort', words: [...csGroups[0], ...csGroups[1]], isNew: false });
 
+  // Vervoegen (v1.45): max 2 per les voor vervoegbare werkwoorden — eerst kiezen, dan typen
+  const conjWords = newWords.filter(w => isConjugatable(w.it)).slice(0, 2);
+  conjWords.forEach((word, i) => queue.push({ type: 'conjugation', word, isNew: false, mode: i === 0 ? 'mc' : 'type' }));
+
   // Review: random type, inclusief alle oefenvormen
   reviewWords.forEach(word => {
     const types = ['multiple-choice', 'type'];
@@ -794,6 +799,7 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
       types.push('fill-in-blank-type');
       types.push('find-error');
     }
+    if (isConjugatable(word.it)) types.push('conjugation');
     const type = types[Math.floor(Math.random() * types.length)];
     queue.push({ type, word, isNew: false });
   });
@@ -1544,4 +1550,423 @@ export function renderGrammarCard(grammarNote, container, onComplete) {
   `;
   container.querySelector('#grammar-ok')
     .addEventListener('click', () => onComplete({ result: 'grammar', xp: 1 }));
+}
+
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// Vervoegen (v1.45) — vervoegingsmotor voor presente, imperfetto en futuro
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const PRONOUNS   = ['io', 'tu', 'lui/lei', 'noi', 'voi', 'loro'];
+const REFL_PRON  = ['mi', 'ti', 'si', 'ci', 'vi', 'si'];
+const TENSE_LABELS = { presente: 'tegenwoordige tijd', passato: 'passato prossimo (voltooide tijd)', imperfetto: 'imperfetto (verleden tijd)', futuro: 'toekomende tijd' };
+
+// ── Passato prossimo (v1.46) ─────────────────────────────────────────────────
+// Voltooid deelwoord: exacte tabel → familie op achtervoegsel → regelmatig (-ato/-uto/-ito).
+// Voor -ere geldt: alleen regelmatig als het werkwoord in REGULAR_ERE staat, anders geen passato.
+const PARTICIPLES = { essere: 'stato', stare: 'stato', dare: 'dato', fare: 'fatto', dire: 'detto', bere: 'bevuto',
+  morire: 'morto', nascere: 'nato', rinascere: 'rinato', vivere: 'vissuto', sopravvivere: 'sopravvissuto', convivere: 'convissuto',
+  rimanere: 'rimasto', valere: 'valso', parere: 'parso', piacere: 'piaciuto', tacere: 'taciuto', cuocere: 'cotto',
+  spegnere: 'spento', succedere: 'successo', concedere: 'concesso', rompere: 'rotto', accorgersi: 'accorto',
+  chiedere: 'chiesto', rispondere: 'risposto', nascondere: 'nascosto', esprimere: 'espresso', discutere: 'discusso',
+  assumere: 'assunto', riassumere: 'riassunto', dividere: 'diviso', condividere: 'condiviso', esplodere: 'esploso',
+  scuotere: 'scosso', persuadere: 'persuaso', mordere: 'morso', spargere: 'sparso', friggere: 'fritto', dirigere: 'diretto',
+  aprire: 'aperto', riaprire: 'riaperto', coprire: 'coperto', scoprire: 'scoperto', ricoprire: 'ricoperto', offrire: 'offerto',
+  soffrire: 'sofferto', venire: 'venuto', avere: 'avuto', vedere: 'visto', prevedere: 'previsto', rivedere: 'rivisto',
+  bruciare: 'bruciato', assistere: 'assistito', insistere: 'insistito', esistere: 'esistito', resistere: 'resistito',
+  consistere: 'consistito', maledire: 'maledetto', benedire: 'benedetto', contraddire: 'contraddetto', soddisfare: 'soddisfatto' };
+const PART_FAMILIES = [
+  ['prendere', 'preso'], ['mettere', 'messo'], ['scrivere', 'scritto'], ['leggere', 'letto'], ['gliere', 'lto'],
+  ['durre', 'dotto'], ['porre', 'posto'], ['trarre', 'tratto'], ['giungere', 'giunto'], ['vincere', 'vinto'],
+  ['cidere', 'ciso'], ['cludere', 'cluso'], ['correre', 'corso'], ['parire', 'parso'], ['pingere', 'pinto'],
+  ['tingere', 'tinto'], ['fingere', 'finto'], ['stringere', 'stretto'], ['spingere', 'spinto'], ['piangere', 'pianto'],
+  ['ridere', 'riso'], ['chiudere', 'chiuso'], ['perdere', 'perso'], ['spendere', 'speso'], ['scendere', 'sceso'],
+  ['pendere', 'peso'], ['fendere', 'feso'], ['tendere', 'teso'], ['rendere', 'reso'], ['volgere', 'volto'],
+  ['solvere', 'solto'], ['muovere', 'mosso'], ['noscere', 'nosciuto'], ['crescere', 'cresciuto'], ['struggere', 'strutto'],
+  ['teggere', 'tetto'], ['reggere', 'retto'], ['primere', 'presso'], ['fondere', 'fuso'], ['sumere', 'sunto'],
+  ['orgere', 'orto'], ['mergere', 'merso'], ['cedere', 'ceduto'], ['tenere', 'tenuto'], ['venire', 'venuto'],
+  ['sistere', 'sistito'], ['battere', 'battuto'], ['vedere', 'visto'], ['fare', 'fatto'], ['dire', 'detto'],
+  ['chiedere', 'chiesto'], ['cendere', 'ceso'],
+];
+const REGULAR_ERE = new Set(['credere', 'ripetere', 'vendere', 'temere', 'ricevere', 'dovere', 'potere', 'volere', 'sapere',
+  'cadere', 'godere', 'godersi', 'sedere', 'premere', 'procedere', 'gemere', 'fremere', 'dolere', 'abbattere', 'dibattere',
+  'combattere', 'ricevere', 'pretendere']);
+// Hulpwerkwoord essere (intransitief: beweging, verandering, toestand); wederkerend altijd essere
+const ESSERE_VERBS = new Set(['andare', 'venire', 'arrivare', 'partire', 'entrare', 'uscire', 'tornare', 'ritornare',
+  'rientrare', 'salire', 'scendere', 'cadere', 'nascere', 'rinascere', 'morire', 'rimanere', 'restare', 'stare', 'essere',
+  'diventare', 'piacere', 'sembrare', 'apparire', 'scomparire', 'sparire', 'riuscire', 'costare', 'durare', 'mancare',
+  'esistere', 'crescere', 'intervenire', 'svenire', 'convenire', 'scappare', 'fuggire', 'sopravvivere', 'guarire',
+  'invecchiare', 'dimagrire', 'ingrassare', 'fiorire', 'accadere', 'emigrare', 'immigrare', 'atterrare', 'decollare',
+  'avanzare', 'procedere', 'giungere', 'esplodere', 'sorgere', 'comparire', 'parere', 'avvenire', 'evadere', 'emergere',
+  'scoppiare', 'impazzire', 'fallire', 'scivolare', 'affondare', 'valere', 'arrivare', 'sbocciare', 'marcire']);
+// Beide hulpwerkwoorden mogelijk of onduidelijk → geen passato prossimo in de oefening
+const AMBIG_AUX = new Set(['passare', 'cambiare', 'cominciare', 'iniziare', 'finire', 'terminare', 'continuare', 'correre',
+  'vivere', 'volare', 'migliorare', 'peggiorare', 'aumentare', 'diminuire', 'servire', 'bruciare', 'scattare', 'suonare',
+  'saltare', 'guarire', 'pesare', 'seguire', 'proseguire', 'mancare', 'bastare', 'costare', 'durare', 'esplodere']);
+const AVERE_FORMS  = ['ho', 'hai', 'ha', 'abbiamo', 'avete', 'hanno'];
+const ESSERE_FORMS = ['sono', 'sei', 'è', 'siamo', 'siete', 'sono'];
+
+/** Voltooid deelwoord (mannelijk enkelvoud) of null als het niet betrouwbaar afgeleid kan worden. */
+export function participle(inf) {
+  const { base } = splitReflexive(inf.trim());
+  if (PARTICIPLES[base]) return PARTICIPLES[base];
+  for (const [suffix, part] of PART_FAMILIES) {
+    if (base.endsWith(suffix)) return base.slice(0, -suffix.length) + part;
+  }
+  const stem = base.slice(0, -3), end = base.slice(-3);
+  if (end === 'are') return stem + 'ato';
+  if (end === 'ire') return stem + 'ito';
+  if (end === 'ere' && REGULAR_ERE.has(base)) return stem + 'uto';
+  return null;
+}
+
+function auxiliary(inf) {
+  const { base, refl } = splitReflexive(inf.trim());
+  if (refl) return 'essere';
+  if (AMBIG_AUX.has(base)) return null;
+  return ESSERE_VERBS.has(base) ? 'essere' : 'avere';
+}
+
+/** Is deze tijd betrouwbaar te vormen voor dit werkwoord? */
+export function canUseTense(inf, tense) {
+  if (tense !== 'passato') return isConjugatable(inf);
+  return isConjugatable(inf) && participle(inf) !== null && auxiliary(inf) !== null;
+}
+
+/**
+ * Passato prossimo: geaccepteerde vormen voor persoon p. De eerste is de canonieke (mannelijke) vorm;
+ * bij essere volgen de vrouwelijke varianten (andata / andate).
+ */
+function passatoForms(inf, p) {
+  const { refl } = splitReflexive(inf.trim());
+  const part = participle(inf), aux = auxiliary(inf);
+  if (!part || !aux) return [];
+  const pre = refl ? REFL_PRON[p] + ' ' : '';
+  if (aux === 'avere') return [`${pre}${AVERE_FORMS[p]} ${part}`];
+  const stem = part.slice(0, -1), plural = p >= 3;
+  const m = stem + (plural ? 'i' : 'o'), f = stem + (plural ? 'e' : 'a');
+  return [`${pre}${ESSERE_FORMS[p]} ${m}`, `${pre}${ESSERE_FORMS[p]} ${f}`];
+}
+
+/** Alle geaccepteerde antwoorden (eerste = canoniek). */
+export function conjugateAccepted(inf, p, tense = 'presente') {
+  return tense === 'passato' ? passatoForms(inf, p) : [conjugate(inf, p, tense)];
+}
+
+// -ire werkwoorden met -isc- in het presente
+const ISC_VERBS = new Set(['capire', 'pulire', 'guarire', 'finire', 'preferire', 'spedire', 'costruire', 'gestire',
+  'garantire', 'sostituire', 'stabilire', 'suggerire', 'restituire', 'arricchire', 'diminuire', 'fallire', 'fiorire',
+  'gradire', 'impedire', 'tradire', 'unire', 'riferire', 'condire', 'fornire', 'colpire', 'agire', 'chiarire',
+  'definire', 'inserire', 'obbedire', 'proibire', 'reagire', 'trasferire', 'ubbidire']);
+
+// -iare met klemtoon op de i: tu invii, noi inviamo (i blijft staan)
+const STRESSED_IARE = new Set(['inviare', 'sciare', 'spiare', 'avviare']);
+
+// Niet vervoegbaar in een oefening: onpersoonlijk, alleen 3e persoon, of geen werkwoord
+const CONJ_EXCLUDE = new Set(['benessere', 'piovere', 'nevicare', 'succedere', 'accadere', 'svolgersi', 'estinguersi',
+  'scomparire', 'dispiacere', 'importare', 'capitare', 'bastare', 'pregiarsi', 'occorrere', 'bisognare']);
+
+// Volledige onregelmatige presente-vormen
+const IRREG_PRES = {
+  essere: ['sono', 'sei', 'è', 'siamo', 'siete', 'sono'],
+  avere:  ['ho', 'hai', 'ha', 'abbiamo', 'avete', 'hanno'],
+  andare: ['vado', 'vai', 'va', 'andiamo', 'andate', 'vanno'],
+  fare:   ['faccio', 'fai', 'fa', 'facciamo', 'fate', 'fanno'],
+  stare:  ['sto', 'stai', 'sta', 'stiamo', 'state', 'stanno'],
+  dare:   ['do', 'dai', 'dà', 'diamo', 'date', 'danno'],
+  dire:   ['dico', 'dici', 'dice', 'diciamo', 'dite', 'dicono'],
+  bere:   ['bevo', 'bevi', 'beve', 'beviamo', 'bevete', 'bevono'],
+  potere: ['posso', 'puoi', 'può', 'possiamo', 'potete', 'possono'],
+  volere: ['voglio', 'vuoi', 'vuole', 'vogliamo', 'volete', 'vogliono'],
+  dovere: ['devo', 'devi', 'deve', 'dobbiamo', 'dovete', 'devono'],
+  sapere: ['so', 'sai', 'sa', 'sappiamo', 'sapete', 'sanno'],
+  uscire: ['esco', 'esci', 'esce', 'usciamo', 'uscite', 'escono'],
+  sedere: ['siedo', 'siedi', 'siede', 'sediamo', 'sedete', 'siedono'],
+  morire: ['muoio', 'muori', 'muore', 'moriamo', 'morite', 'muoiono'],
+  spegnere: ['spengo', 'spegni', 'spegne', 'spegniamo', 'spegnete', 'spengono'],
+  cuocere:  ['cuocio', 'cuoci', 'cuoce', 'cuociamo', 'cuocete', 'cuociono'],
+  riempire: ['riempio', 'riempi', 'riempie', 'riempiamo', 'riempite', 'riempiono'],
+  rimanere: ['rimango', 'rimani', 'rimane', 'rimaniamo', 'rimanete', 'rimangono'],
+  valere:   ['valgo', 'vali', 'vale', 'valiamo', 'valete', 'valgono'],
+  salire:   ['salgo', 'sali', 'sale', 'saliamo', 'salite', 'salgono'],
+  scegliere: ['scelgo', 'scegli', 'sceglie', 'scegliamo', 'scegliete', 'scelgono'],
+};
+// Werkwoordfamilies: achtervoegsel → vormen zonder voorvoegsel (mantenere = man + tenere)
+const PRES_FAMILIES = [
+  ['tenere',  ['tengo', 'tieni', 'tiene', 'teniamo', 'tenete', 'tengono']],
+  ['venire',  ['vengo', 'vieni', 'viene', 'veniamo', 'venite', 'vengono']],
+  ['porre',   ['pongo', 'poni', 'pone', 'poniamo', 'ponete', 'pongono']],
+  ['durre',   ['duco', 'duci', 'duce', 'duciamo', 'ducete', 'ducono']],
+  ['trarre',  ['traggo', 'trai', 'trae', 'traiamo', 'traete', 'traggono']],
+  ['gliere',  ['lgo', 'gli', 'glie', 'gliamo', 'gliete', 'lgono']],
+  ['parire',  ['paio', 'pari', 'pare', 'pariamo', 'parite', 'paiono']],
+  ['piacere', ['piaccio', 'piaci', 'piace', 'piacciamo', 'piacete', 'piacciono']],
+  ['uscire',  ['esco', 'esci', 'esce', 'usciamo', 'uscite', 'escono']],
+];
+const IRREG_IMPF_STEM = { essere: null, dire: 'dic', bere: 'bev', fare: 'fac', produrre: 'produc', tradurre: 'traduc',
+  proporre: 'propon', supporre: 'suppon', attrarre: 'attra', distrarre: 'distra' };
+const IRREG_FUT_STEM = { essere: 'sar', avere: 'avr', andare: 'andr', fare: 'far', stare: 'star', dare: 'dar',
+  potere: 'potr', sapere: 'sapr', vedere: 'vedr', vivere: 'vivr', cadere: 'cadr', venire: 'verr', tenere: 'terr',
+  mantenere: 'manterr', ottenere: 'otterr', sostenere: 'sosterr', ritenere: 'riterr', rimanere: 'rimarr', bere: 'berr',
+  dire: 'dir', valere: 'varr', produrre: 'produrr', tradurre: 'tradurr', proporre: 'proporr', supporre: 'supporr',
+  attrarre: 'attrarr', distrarre: 'distrarr', intervenire: 'interverr', prevenire: 'preverr', svenire: 'sverr',
+  convenire: 'converr', dovere: 'dovr', volere: 'vorr' };
+
+/** Is dit woord een enkelvoudige infinitief die de motor aankan? */
+export function isConjugatable(it) {
+  const inf = (it || '').trim();
+  if (!/^[a-zàèéìòù]+(are|ere|ire|rsi|rre)$/.test(inf)) return false;
+  return !CONJ_EXCLUDE.has(inf);
+}
+
+function splitReflexive(inf) {
+  return inf.endsWith('rsi') ? { base: inf.slice(0, -2) + 'e', refl: true } : { base: inf, refl: false };
+}
+
+function presente(base, p) {
+  if (IRREG_PRES[base]) return IRREG_PRES[base][p];
+  for (const [suffix, forms] of PRES_FAMILIES) {
+    if (base.endsWith(suffix) && base !== suffix) return base.slice(0, -suffix.length) + forms[p];
+    if (base === suffix) return forms[p];
+  }
+  const stem = base.slice(0, -3), end = base.slice(-3);
+  if (end === 'are') {
+    const cg = /[cg]$/.test(stem), iEnd = stem.endsWith('i') && !STRESSED_IARE.has(base);
+    const tu  = cg ? stem + 'hi'   : iEnd ? stem         : stem + 'i';
+    const noi = cg ? stem + 'hiamo' : stem.endsWith('i') ? stem + 'amo' : stem + 'iamo';
+    return [stem + 'o', tu, stem + 'a', noi, stem + 'ate', stem + 'ano'][p];
+  }
+  if (end === 'ere') return stem + ['o', 'i', 'e', 'iamo', 'ete', 'ono'][p];
+  if (ISC_VERBS.has(base)) return stem + ['isco', 'isci', 'isce', 'iamo', 'ite', 'iscono'][p];
+  return stem + ['o', 'i', 'e', 'iamo', 'ite', 'ono'][p];
+}
+
+function imperfetto(base, p) {
+  if (base === 'essere') return ['ero', 'eri', 'era', 'eravamo', 'eravate', 'erano'][p];
+  const irr = IRREG_IMPF_STEM[base];
+  const stem = irr || base.slice(0, -3);
+  const v = irr ? 'e' : base.slice(-3)[0];
+  return stem + [v + 'vo', v + 'vi', v + 'va', v + 'vamo', v + 'vate', v + 'vano'][p];
+}
+
+function futuro(base, p) {
+  let fstem = IRREG_FUT_STEM[base];
+  if (!fstem) {
+    const stem = base.slice(0, -3), end = base.slice(-3);
+    if (end === 'are') {
+      let s = stem;
+      if (/[cg]$/.test(s)) s += 'h';
+      else if (/(c|g|sc)i$/.test(s) && !STRESSED_IARE.has(base)) s = s.slice(0, -1);
+      fstem = s + 'er';
+    } else if (end === 'ere') fstem = stem + 'er';
+    else fstem = stem + 'ir';
+  }
+  return fstem + ['ò', 'ai', 'à', 'emo', 'ete', 'anno'][p];
+}
+
+/** Vervoeg een infinitief (incl. wederkerend) voor persoon p (0–5) in de gegeven tijd. */
+export function conjugate(inf, p, tense = 'presente') {
+  if (tense === 'passato') return passatoForms(inf, p)[0] || '';
+  const { base, refl } = splitReflexive(inf.trim());
+  const fn = tense === 'imperfetto' ? imperfetto : tense === 'futuro' ? futuro : presente;
+  const form = fn(base, p);
+  return refl ? `${REFL_PRON[p]} ${form}` : form;
+}
+
+function pickTense(word) {
+  const r = Math.random();
+  let tense = 'presente';
+  if (word.level === 'A2') {
+    // Passato prossimo vanaf les 62, futuro vanaf les 64 (volgorde van het A2-curriculum)
+    if (word.lesson >= 62 && r < 0.3) tense = 'passato';
+    else if (word.lesson >= 64 && r < 0.5) tense = 'futuro';
+  } else if (word.level === 'B1') {
+    tense = r < 0.35 ? 'presente' : r < 0.6 ? 'passato' : r < 0.8 ? 'imperfetto' : 'futuro';
+  }
+  return canUseTense(word.it, tense) ? tense : 'presente';
+}
+
+function paradigmHtml(inf, tense) {
+  const labels = tense === 'passato' ? PRONOUNS.map((pr, i) => i === 2 ? 'lui' : pr) : PRONOUNS;
+  return `<div class="conj-paradigm">${labels.map((pr, i) =>
+    `<span class="conj-row"><span class="conj-pron">${pr}</span><span class="conj-form">${conjugate(inf, i, tense)}</span></span>`).join('')}</div>`;
+}
+
+/**
+ * Vervoegen — toon infinitief + persoon + tijd; kies (MC) of typ de juiste vorm.
+ * exercise.mode: 'mc' | 'type' (anders willekeurig); exercise.person/tense optioneel.
+ */
+export function renderConjugation(exercise, container, onComplete) {
+  const { word } = exercise;
+  if (!isConjugatable(word.it)) { renderTypeExercise(exercise, container, onComplete); return; }
+  const hasTTS = isTTSAvailable();
+  const tense  = (exercise.tense && canUseTense(word.it, exercise.tense)) ? exercise.tense : pickTense(word);
+  const p      = exercise.person ?? Math.floor(Math.random() * 6);
+  const accepted = conjugateAccepted(word.it, p, tense);
+  const answer = accepted[0];
+  const useMC  = exercise.mode ? exercise.mode === 'mc' : Math.random() < 0.5;
+  const isPassato = tense === 'passato';
+  const pronounLabel = (isPassato && p === 2) ? 'lui' : PRONOUNS[p];
+  const auxHint = isPassato ? `<div class="conj-hint">hulpwerkwoord: <strong>${auxiliary(word.it)}</strong>${accepted.length > 1 ? ' · mannelijke vorm (vrouwelijk telt ook goed)' : ''}</div>` : '';
+
+  const head = `
+    <div class="ex-label">Vervoeg het werkwoord</div>
+    <div class="conj-card">
+      <div class="conj-inf">${word.it}</div>
+      <div class="conj-nl">${word.nl}</div>
+      <div class="conj-tense">${TENSE_LABELS[tense]}</div>
+      <div class="conj-prompt"><span class="conj-pron-big">${pronounLabel}</span> <span class="conj-blank">______</span></div>
+      ${auxHint}
+    </div>`;
+
+  const finish = (result, xp) => {
+    updateWordState(word.id, qualityFromResult(result === 'close' ? 'close' : result));
+    recordAnswer(result === 'correct');
+    const nextBtn = container.querySelector('#ex-next');
+    setupNextBtn(nextBtn, () => onComplete({ result, word, xp }), result === 'correct');
+  };
+
+  if (useMC) {
+    const others = [...new Set([0, 1, 2, 3, 4, 5].filter(i => i !== p).map(i => conjugate(word.it, i, tense)))]
+      .filter(f => f !== answer);
+    const options = shuffleEx([{ text: answer, correct: true }, ...shuffleEx(others).slice(0, 3).map(t => ({ text: t, correct: false }))]);
+    container.innerHTML = head + `
+      <div class="mc-options">
+        ${options.map((o, i) => `<button class="mc-option" data-correct="${o.correct}"><span class="mc-letter">${['A', 'B', 'C', 'D'][i]}</span><span class="mc-text">${o.text}</span></button>`).join('')}
+      </div>
+      <div class="mc-feedback" id="conj-feedback"></div>
+      <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>`;
+    let answered = false;
+    container.querySelectorAll('.mc-option').forEach(btn => btn.addEventListener('click', () => {
+      if (answered) return;
+      answered = true;
+      const ok = btn.dataset.correct === 'true';
+      container.querySelectorAll('.mc-option').forEach(b => {
+        b.classList.add('disabled');
+        if (b.dataset.correct === 'true') b.classList.add('correct'); else if (b === btn) b.classList.add('wrong');
+      });
+      const fb = container.querySelector('#conj-feedback');
+      fb.className = `mc-feedback ${ok ? 'correct' : 'wrong'} show`;
+      fb.innerHTML = ok ? `✓ Correct! <strong>${pronounLabel} ${answer}</strong>`
+                        : `✗ Fout. Het is: <strong>${pronounLabel} ${answer}</strong>${paradigmHtml(word.it, tense)}`;
+      if (hasTTS) setTimeout(() => speak(answer), 400);
+      finish(ok ? 'correct' : 'wrong', ok ? 4 : 1);
+    }));
+    return;
+  }
+
+  container.innerHTML = head + `
+    <div class="type-input-wrap">
+      <input type="text" class="type-input" id="conj-input" placeholder="Typ de vervoeging..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
+      <button class="type-submit-btn" id="conj-submit">✓</button>
+    </div>
+    <button class="type-skip-btn" id="conj-skip">Weet ik niet →</button>
+    <div class="type-feedback" id="conj-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>`;
+  const input = container.querySelector('#conj-input'), submit = container.querySelector('#conj-submit');
+  const fb = container.querySelector('#conj-feedback'), skip = container.querySelector('#conj-skip');
+  let answered = false;
+  setTimeout(() => input.focus(), 100);
+
+  const reveal = (result, typed) => {
+    answered = true;
+    input.disabled = true; submit.disabled = true; skip.style.display = 'none';
+    if (result === 'correct') {
+      input.classList.add('input-correct');
+      fb.className = 'type-feedback correct show';
+      const shown = accepted.find(a => a.toLowerCase() === typed.toLowerCase().replace(/\s+/g, ' ')) || answer;
+      fb.innerHTML = `✓ Perfect! <strong>${pronounLabel} ${shown}</strong>`;
+    } else if (result === 'close') {
+      input.classList.add('input-close');
+      fb.className = 'type-feedback close show';
+      fb.innerHTML = `≈ Bijna! Let op het accent: je schreef "<strong>${typed}</strong>", het is <strong>${answer}</strong>`;
+    } else {
+      input.classList.add('input-wrong');
+      fb.className = 'type-feedback wrong show';
+      fb.innerHTML = `✗ Het juiste antwoord is: <strong>${pronounLabel} ${answer}</strong>${paradigmHtml(word.it, tense)}`;
+    }
+    if (hasTTS) setTimeout(() => speak(answer), 400);
+    finish(result, result === 'correct' ? 5 : result === 'close' ? 2 : 1);
+  };
+  const check = () => {
+    if (answered) return;
+    const typed = input.value.trim();
+    if (!typed) { input.classList.add('shake'); setTimeout(() => input.classList.remove('shake'), 400); return; }
+    const t = typed.toLowerCase().replace(/\s+/g, ' ');
+    const exact = accepted.some(a => a.toLowerCase() === t);
+    const result = exact ? 'correct' : accepted.some(a => normalize(a) === normalize(typed)) ? 'close' : 'wrong';
+    reveal(result, typed);
+  };
+  submit.addEventListener('click', check);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+  skip.addEventListener('click', () => { if (!answered) reveal('wrong', ''); });
+}
+
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// Leestekst (v1.45) — korte tekst per blok met begripsvragen, in de toetsles
+// ═══════════════════════════════════════════════════════════════════════════════
+
+/**
+ * Leestekst — toon de tekst, daarna 3 meerkeuzevragen (één tegelijk).
+ * exercise.reading = { title, level, text, questions: [{ q, options: [4], answer }] }
+ */
+export function renderReading(exercise, container, onComplete) {
+  const { reading } = exercise;
+  const hasTTS = isTTSAvailable();
+  const paragraphs = reading.text.split('\n').filter(Boolean);
+  const wordCount = reading.text.split(/\s+/).filter(Boolean).length;
+
+  container.innerHTML = `
+    <div class="ex-label">Lees de tekst en beantwoord de vragen</div>
+    <div class="reading-card">
+      <div class="reading-head">
+        <div class="reading-title">${reading.title}</div>
+        <div class="reading-meta">${reading.level} · ${wordCount} woorden${hasTTS ? ' · <button class="reading-tts" id="reading-tts">🔊 Voorlezen</button>' : ''}</div>
+      </div>
+      <div class="reading-text">${paragraphs.map(pg => `<p>${pg}</p>`).join('')}</div>
+    </div>
+    <div class="reading-questions" id="reading-questions"></div>
+    <div class="mc-feedback" id="reading-feedback"></div>
+    <button class="ex-next-btn" id="ex-next" style="display:none">Volgende →</button>`;
+
+  container.querySelector('#reading-tts')?.addEventListener('click', () => speak(reading.text.replace(/\n/g, ' ')));
+
+  const qWrap = container.querySelector('#reading-questions');
+  const fb    = container.querySelector('#reading-feedback');
+  let qi = 0, score = 0;
+
+  const showQuestion = () => {
+    const q = reading.questions[qi];
+    qWrap.innerHTML = `
+      <div class="reading-q-num">Vraag ${qi + 1} van ${reading.questions.length}</div>
+      <div class="reading-q">${q.q}</div>
+      <div class="mc-options">
+        ${q.options.map((o, i) => `<button class="mc-option" data-i="${i}"><span class="mc-letter">${['A', 'B', 'C', 'D'][i]}</span><span class="mc-text">${o}</span></button>`).join('')}
+      </div>`;
+    let answered = false;
+    qWrap.querySelectorAll('.mc-option').forEach(btn => btn.addEventListener('click', () => {
+      if (answered) return;
+      answered = true;
+      const ok = Number(btn.dataset.i) === q.answer;
+      if (ok) score++;
+      qWrap.querySelectorAll('.mc-option').forEach(b => {
+        b.classList.add('disabled');
+        if (Number(b.dataset.i) === q.answer) b.classList.add('correct'); else if (b === btn) b.classList.add('wrong');
+      });
+      fb.className = `mc-feedback ${ok ? 'correct' : 'wrong'} show`;
+      fb.innerHTML = ok ? '✓ Goed gelezen!' : `✗ Het juiste antwoord: <strong>${q.options[q.answer]}</strong>`;
+      qi++;
+      if (qi < reading.questions.length) {
+        setTimeout(() => { fb.className = 'mc-feedback'; showQuestion(); }, 1400);
+      } else {
+        const total = reading.questions.length;
+        const result = score >= Math.ceil(total * 2 / 3) ? 'correct' : 'wrong';
+        fb.innerHTML += `<div class="reading-score">Je had <strong>${score} van ${total}</strong> vragen goed.</div>`;
+        recordAnswer(result === 'correct');
+        setupNextBtn(container.querySelector('#ex-next'), () => onComplete({ result, xp: score * 3 }), false);
+      }
+    }));
+  };
+  showQuestion();
 }

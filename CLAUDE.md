@@ -20,7 +20,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 - **Productie-build**: `vocado.html` — gegenereerd door `python3 build.py`, alles in één bestand
 - **Service Worker**: `www/sw.js` — CACHE_NAME wordt automatisch bijgewerkt bij elke `build.py`-run
 - **Hosting**: GitHub Pages
-- **Data**: twee JSON-bestanden, geladen via `fetch()` bij opstarten
+- **Data**: drie JSON-bestanden (vocabulary, curriculum, readings), geladen via `fetch()` bij opstarten en door `build.py` inline gezet
 - **Opslag**: `localStorage` voor voortgang (`italiano_progress_v2`) en SRS (`italiano_srs_v2`)
 
 ### Sleutelbestanden
@@ -32,6 +32,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 | `www/js/exercises.js` | Alle oefentypes (rendering + interactie) |
 | `www/data/curriculum.json` | Array van les-objecten |
 | `www/data/vocabulary.json` | Array van woord-objecten |
+| `www/data/readings.json` | 30 leesteksten (één per blok van 10 lessen), gegenereerd door `scripts/build_readings.py` |
 | `www/sw.js` | Service Worker |
 | `build.py` | Bouwscript: concat → vocado.html; faalt bij dubbele `it`-waarden, dubbele IDs of lessen met onbekend woord-ID |
 | `scripts/generate_a2.py` | Script dat A2-lessen 91–120 heeft gegenereerd (al uitgevoerd) |
@@ -40,13 +41,14 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 | `scripts/dedupe_b1.py` + `dedupe_b1_data.py` | Deduplicatie v1.44: 451 dubbels verwijderd, 451 gaten gevuld (w2711–w3161), genereert `www/js/idmap.js` (al uitgevoerd) |
 | `www/js/idmap.js` | Gegenereerd: verwijderd woord-ID → behouden ID, voor de eenmalige SRS-migratie |
 | `scripts/rebalance_a1.py` | A1/A2-herbalancering v1.44: 99 kernwoorden van B1 naar A1/A2 geruild met zeldzame woorden (al uitgevoerd) |
+| `scripts/build_readings.py` | Bron van de leesteksten; bewerk hier en draai opnieuw om `readings.json` te genereren |
 | `vocado.html` | Productie-build — nooit handmatig bewerken |
 
 ### Versie & cache buster
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.44**, cache buster **?v=38**
+- Huidige versie: **v1.46**, cache buster **?v=40**
 
 ### Build & deploy
 
@@ -112,7 +114,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.44)
+## Huidige staat (v1.46)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -156,14 +158,27 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | `find-error` | Fout zoeken: Italiaanse zin met één fout woord, tik op het foute woord (v1.42) |
 | `sentence-dictation` | Zinsdictee: TTS spreekt een hele zin uit, typ de zin (Levenshtein-tolerantie per woord); zonder TTS fallback naar word-order (v1.42) |
 | `category-sort` | Categorie sorteren: 6 woorden (2 categorieën × 3) aan de juiste categorie toewijzen (v1.42) |
+| `conjugation` | Vervoegen: infinitief + persoon + tijd, kies (MC) of typ de vorm; bij fout het volledige schema (v1.45) |
+| `reading` | Leestekst: tekst van het blok met 3 meerkeuze-begripsvragen (NL), alleen in de toetsles (v1.45) |
 | `grammar` | Grammaticakaart met uitleg (tussen oefeningen) |
 | `intro` | Les-introductiekaart (eerste kaart van elke les) |
 
 **Oefeningenrij-logica** (buildExerciseQueue in exercises.js):
 - Nieuw woord: flashcard → MC of listen-choose → type of listen-type (30% dictee als TTS beschikbaar)
 - Per les extra: max 3 word-order, max 2 sentence-choice, max 3 fill-in-blank-mc, 1 matching, max 2 find-error, max 2 sentence-dictation (alleen met TTS), 1 category-sort (als de les 2+ categorieën met elk 2+ woorden heeft)
-- Review-woord: random type incl. word-order, sentence-choice, fill-in-blank-type, find-error, sentence-dictation; plus 1 matching en 1 category-sort per review-sessie als er genoeg woorden zijn
+- Per les extra (v1.45): max 2 conjugation voor vervoegbare werkwoorden (eerst MC, dan typen)
+- Review-woord: random type incl. word-order, sentence-choice, fill-in-blank-type, find-error, sentence-dictation, conjugation; plus 1 matching en 1 category-sort per review-sessie als er genoeg woorden zijn
 - MC-afleiders komen bij voorkeur uit dezelfde categorie, daarna dezelfde les, daarna hetzelfde niveau (v1.41c)
+
+**Vervoegingsmotor** (exercises.js, v1.45/v1.46): `conjugate(inf, persoon 0–5, tijd)` voor presente, passato prossimo, imperfetto en futuro.
+- Regelmatig -are/-ere/-ire incl. spelling (-care/-gare → -chi/-ghi, -ciare/-giare → tu/noi zonder i, -isc- lijst `ISC_VERBS`), wederkerend (`mi/ti/si…`)
+- Onregelmatig: tabel `IRREG_PRES` (essere, avere, andare, dire, bere, potere, sapere, …) + families `PRES_FAMILIES` (-tenere, -venire, -porre, -durre, -trarre, -gliere, -parire, -piacere, -uscire); stammen `IRREG_IMPF_STEM`, `IRREG_FUT_STEM`
+- `CONJ_EXCLUDE`: onpersoonlijke of niet-werkwoorden (piovere, succedere, benessere, …). `isConjugatable(it)` = enkelvoudige infinitief, niet uitgesloten
+- Passato prossimo (v1.46): deelwoord via `PARTICIPLES` (tabel) → `PART_FAMILIES` (achtervoegsel, bijv. -prendere → -preso) → regelmatig; -ere alleen regelmatig als in `REGULAR_ERE`. Hulpwerkwoord: wederkerend → essere, `ESSERE_VERBS` → essere, anders avere; `AMBIG_AUX` (passare, finire, vivere, …) krijgt geen passato. Overeenstemming bij essere: canoniek mannelijk, vrouwelijke vorm telt ook goed (`conjugateAccepted`). `canUseTense(inf, tijd)` bewaakt dit
+- Tijdkeuze: A1 presente; A2 presente, passato vanaf les 62 (30%), futuro vanaf les 64 (20%); B1 presente 35% / passato 25% / imperfetto 20% / futuro 20%
+- Bij twijfel over een nieuw onregelmatig werkwoord: toevoegen aan tabel of aan `CONJ_EXCLUDE`, nooit stilzwijgend regelmatig laten vervoegen
+
+**Leesteksten** (readings.json, v1.45): `{ id, milestone, level, title, text, questions[3] }`. Wordt als eerste oefening in de toetsles van dat blok gezet (`startMilestoneQuiz`). Richtlengte A1 40–60, A2 80–120, B1 120–200 woorden. Vragen en opties in het Nederlands. Resultaat correct bij ≥ 2 van 3, XP = 3 per goed antwoord.
 
 ### App-schermen
 - **Home**: lessenlijst met niveau-headers, voortgangsbadges, "Mijn positie"-knop, review-badge
@@ -193,7 +208,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
   - `sessionErrors[]` = foute woorden deze sessie (max 10, uniek op `it`-veld)
 - **Directe herhaalronde** (`startErrorRetry`): knop "🔁 Oefen foute woorden (N)" op afsluitscherm van les én review, zichtbaar als `sessionErrors.length > 0`. Start mini-sessie via `buildExerciseQueue([], errorWords, VOCAB)` met `isReviewMode = true`. Recursief: nieuwe fouten → knop verschijnt opnieuw.
 - **TTS**: Web Speech API, Italiaanse stem, accenten genormaliseerd (é → e)
-- **Milestone-quiz**: elke 10 lessen, 20 willekeurige woorden uit de voorgaande lessen
+- **Milestone-quiz**: elke 10 lessen, leestekst van het blok + 20 willekeurige woorden uit de voorgaande lessen
 - **Les overslaan**: gebruiker kan lessen markeren als overgeslagen
 - **Opnieuw doen**: les herhalen met `forceAll=true`
 - **iOS PWA install prompt**: instructie-overlay voor "Zet op beginscherm"
@@ -223,6 +238,8 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.46 | Sprint 10: passato prossimo in de vervoegingsmotor (deelwoorden, essere/avere, overeenstemming) |
+| v1.45 | Sprint 9: twee nieuwe oefenvormen — vervoegen (presente/imperfetto/futuro, MC + typen) en leestekst (30 teksten, in de toetsles); root opgeruimd (oude index.html, italiano-per-vacanza.html, sw.js, manifest.json verwijderd) |
 | v1.44 | Sprint 8: deduplicatie — 451 dubbele woorden verwijderd, 451 gaten gevuld met frequente ontbrekende woorden (frequentie-analyse OpenSubtitles + simplemma); SRS-migratie oude→nieuwe IDs; uniciteitscheck in build.py. Plus A1/A2-herbalancering: 99 kernwoorden (uomo, donna, libro, dire, solo, mai, ...) van B1 naar thematisch passende A1/A2-lessen geruild met zeldzame woorden (IDs ongewijzigd) |
 
 ---
@@ -253,7 +270,7 @@ Gebruik dit als maatlat bij het plannen van content en features.
 
 | Vaardigheid | Vocado nu | Doel |
 |---|---|---|
-| **Lezen** | Voorbeeldzinnen per woord | Leesteksten per niveau (A1: 20–50w, A2: 50–120w, B1: 150–300w) |
+| **Lezen** | 30 leesteksten in de toetslessen (v1.45) + voorbeeldzinnen | Meer teksten per les, dialogen |
 | **Luisteren** | TTS per woord/zin | Dialogen (doel: 100–200 stuks) |
 | **Schrijven** | Type-oefening (los woord) | Zinnen typen, e-mails, meningen |
 | **Spreken** | — | Uitspraakfeedback, rollenspellen |
@@ -276,7 +293,7 @@ Tot B2 = circa **600–800 uur** totale studie.
 - **Frequentiedekking** (v1.44-analyse, OpenSubtitles-lemma's zonder functiewoorden): top-500 85%, top-1000 75%, top-2000 59%. Vóór v1.44 was dat 50 / 46 / 37%. Na de herbalancering zitten 99 van de meest frequente kernwoorden in A1/A2-lessen; de overige frequente woorden uit de v1.44-aanvulling (bijv. `potere`, `bastare`, `capitare`) staan bewust in B1-grammaticalessen als vervoegingsmateriaal, omdat de A1-vorm (`posso`) al bestaat
 - **B2**: niet aanwezig; pas zinvol na Spaans en leesteksten
 - **Spreken**: buiten scope van huidige app (Web Speech API biedt geen beoordelingsfunctie)
-- **Leesteksten**: zinvolle uitbreiding voor A2/B1 — korte dialogen of paragrafen als los oefentype
+- **Leesteksten**: sinds v1.45 één tekst per blok in de toetsles; uitbreiding naar meerdere teksten per blok of dialogen is mogelijk
 - **Schrijven**: zinsdictee (v1.42) dekt nu het typen van hele zinnen; vrije schrijfopdrachten blijven buiten scope
 
 ---
@@ -294,8 +311,8 @@ Tot B2 = circa **600–800 uur** totale studie.
 | Prioriteit | Sprint | Toelichting |
 |---|---|---|
 | Hoog | **Spaans toevoegen** | Tweede taal naast Italiaans; zelfde lesstructuur, eigen curriculum + woordenlijst. Vereist: data per taal splitsen, taalkeuze in `lang`-scherm activeren, opslag-keys per taal |
-| Middel | **Nieuwe oefenvormen** | Nog open: vervoegen, leestekst. Al geïmplementeerd: gat-invullen, koppelen, fout zoeken, zinsdictee, categorie sorteren |
-| Laag | **Opruimen root** | `index.html`, `italiano-per-vacanza.html` en `sw.js` in de root zijn restanten van vóór de `www/`-structuur; deploy gebruikt alleen `www/` |
+| Middel | **Meer leesteksten** | Nu 1 per blok (30). Optie: 1 per les of dialogen met TTS per spreker |
+| Laag | **Vervoegen uitbreiden** | Condizionale en congiuntivo presente ontbreken nog in de motor (passato prossimo sinds v1.46) |
 
 ---
 

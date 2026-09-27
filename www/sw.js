@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocado-20260927-0922';
+const CACHE_NAME = 'vocado-20260927-1242';
 const ASSETS = [
   './',
   './index.html',
@@ -17,7 +17,8 @@ const ASSETS = [
   './js/audio.js',
   './js/exercises.js',
   './data/vocabulary.json',
-  './data/curriculum.json'
+  './data/curriculum.json',
+  './data/readings.json'
 ];
 
 self.addEventListener('install', e => {

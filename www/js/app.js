@@ -7,7 +7,7 @@ import { initAudio, setTTSRate, stopSpeech } from './audio.js?v=16';
 import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow, migrateWordIds } from './srs.js?v=18';
 import { ID_MAP } from './idmap.js?v=1';
 import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson, migratePartialLessonsV144 } from './progress.js?v=17';
-import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=20';
+import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderConjugation, renderReading, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=22';
 import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=16';
 
 // ─── PWA INSTALL ──────────────────────────────────────────────────────────────
@@ -135,14 +135,17 @@ function isLevelComplete(level) {
 // ─── DATA ────────────────────────────────────────────────────────────────────
 let VOCAB = [];
 let CURRICULUM = [];
+let READINGS = [];   // v1.45: leesteksten per toetsles
 
 async function loadData() {
-  const [vocabRes, currRes] = await Promise.all([
+  const [vocabRes, currRes, readRes] = await Promise.all([
     fetch('./data/vocabulary.json'),
-    fetch('./data/curriculum.json')
+    fetch('./data/curriculum.json'),
+    fetch('./data/readings.json')
   ]);
   VOCAB = await vocabRes.json();
   CURRICULUM = await currRes.json();
+  READINGS = readRes.ok ? await readRes.json() : [];
 }
 
 function getWordById(id)    { return VOCAB.find(w => w.id === id); }
@@ -883,6 +886,8 @@ function renderExercise() {
   else if (exercise.type === 'find-error')          renderFindError(exercise, container, VOCAB, onDone);
   else if (exercise.type === 'sentence-dictation')  renderSentenceDictation(exercise, container, onDone);
   else if (exercise.type === 'category-sort')       renderCategorySort(exercise, container, onDone);
+  else if (exercise.type === 'conjugation')         renderConjugation(exercise, container, onDone);
+  else if (exercise.type === 'reading')             renderReading(exercise, container, onDone);
   else if (exercise.type === 'grammar')             renderGrammarCard(exercise.grammarNote, container, onDone);
 }
 
@@ -1046,6 +1051,12 @@ function startMilestoneQuiz(checkpoint) {
   getProgressText().textContent = '0/0';
 
   exerciseQueue = buildExerciseQueue([], quizWords, VOCAB);
+  // v1.45: leestekst van dit blok als eerste oefening van de toetsles
+  const reading = READINGS.find(r => r.milestone === checkpoint);
+  if (reading) {
+    exerciseQueue.unshift({ type: 'reading', reading, isNew: false });
+    getLevelBadge().textContent = 'leestekst + 20 vragen';
+  }
   exerciseIndex = 0;
   updateStreak();
   renderExercise();

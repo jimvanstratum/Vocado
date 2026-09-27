@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "r10",
+    "milestone": 10,
+    "level": "A1",
+    "title": "Mi chiamo Marco",
+    "text": "Ciao! Mi chiamo Marco e ho trent'anni. Sono italiano, di Bologna. Abito in una casa piccola con mia moglie Laura e nostro figlio Luca. Luca ha quattro anni.\nLa mattina bevo un caffè e mangio pane con marmellata. A pranzo mangiamo spesso la pasta. La sera andiamo al ristorante con gli amici. Buonasera e buon appetito!",
+    "questions": [
+      {
+        "q": "Waar woont Marco?",
+        "options": [
+          "In Rome",
+          "In Bologna",
+          "In Milaan",
+          "In Napels"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe oud is Luca?",
+        "options": [
+          "Drie jaar",
+          "Vier jaar",
+          "Dertig jaar",
+          "Veertien jaar"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat eet Marco bij het ontbijt?",
+        "options": [
+          "Pasta",
+          "Pizza",
+          "Brood met jam",
+          "Fruit"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r20",
+    "milestone": 20,
+    "level": "A1",
+    "title": "Una giornata a Roma",
+    "text": "Oggi è sabato. Fa bel tempo: c'è il sole e non piove. Prendo l'autobus e vado in centro.\nAl mercato compro una camicia blu e un paio di scarpe. Costano quaranta euro. Poi visito il museo con mia sorella. Alle sei torniamo a casa in treno. Domenica giochiamo a calcio nel parco.",
+    "questions": [
+      {
+        "q": "Hoe is het weer?",
+        "options": [
+          "Het regent",
+          "Het sneeuwt",
+          "Het is zonnig",
+          "Het is bewolkt"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat koopt de schrijver op de markt?",
+        "options": [
+          "Een rok en een hoed",
+          "Een blauw overhemd en schoenen",
+          "Een jas",
+          "Een fiets"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat doen ze zondag?",
+        "options": [
+          "Naar het museum",
+          "Naar de markt",
+          "Voetballen in het park",
+          "Zwemmen in zee"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r30",
+    "milestone": 30,
+    "level": "A1",
+    "title": "La casa di Anna",
+    "text": "Anna abita in un appartamento a Firenze. La casa ha una cucina, un bagno, un salotto e due camere. Il salotto è grande e ha un divano verde e una finestra sul giardino.\nAnna è felice: il suo compleanno è venerdì. Invita gli amici a cena. Compra frutta, verdura e un dolce al mercato. Il weekend è sempre tranquillo.",
+    "questions": [
+      {
+        "q": "Hoeveel slaapkamers heeft het appartement?",
+        "options": [
+          "Eén",
+          "Twee",
+          "Drie",
+          "Vier"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Welke kleur heeft de bank?",
+        "options": [
+          "Rood",
+          "Blauw",
+          "Groen",
+          "Wit"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wanneer is de verjaardag van Anna?",
+        "options": [
+          "Maandag",
+          "Woensdag",
+          "Vrijdag",
+          "Zondag"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r40",
+    "milestone": 40,
+    "level": "A1",
+    "title": "In albergo",
+    "text": "Buongiorno! Ho una prenotazione per due notti. La camera è al terzo piano, vicino all'ascensore. È piccola ma bella, con vista sul mare.\nPurtroppo ho mal di testa. Chiedo alla reception: \"Dov'è la farmacia?\" \"Sempre dritto, poi a sinistra, vicino alla chiesa.\" Grazie mille! Domani partiamo presto: ho fame e ho sete, ma sono contento.",
+    "questions": [
+      {
+        "q": "Hoeveel nachten blijft de gast?",
+        "options": [
+          "Eén nacht",
+          "Twee nachten",
+          "Drie nachten",
+          "Een week"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat is het probleem van de gast?",
+        "options": [
+          "Hoofdpijn",
+          "Koorts",
+          "Buikpijn",
+          "Een verkoudheid"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Waar is de apotheek?",
+        "options": [
+          "Rechts, naast het station",
+          "Rechtdoor en dan links, bij de kerk",
+          "In het hotel",
+          "Aan zee"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r50",
+    "milestone": 50,
+    "level": "A1",
+    "title": "Al bar con Luca",
+    "text": "Ogni mattina vado al bar con il mio amico Luca. Io prendo un cappuccino e un cornetto, lui prende un tè. Il barista è simpatico e parla sempre del tempo: oggi è nuvoloso.\nDopo il bar Luca va al lavoro in bicicletta. Io prendo il treno alle otto e mezzo. Sabato facciamo una passeggiata in montagna con la famiglia. Finalmente un po' di sport!",
+    "questions": [
+      {
+        "q": "Wat drinkt Luca?",
+        "options": [
+          "Een cappuccino",
+          "Een espresso",
+          "Thee",
+          "Water"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Hoe gaat Luca naar zijn werk?",
+        "options": [
+          "Met de trein",
+          "Met de auto",
+          "Op de fiets",
+          "Te voet"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat doen ze zaterdag?",
+        "options": [
+          "Een wandeling in de bergen",
+          "Naar de bioscoop",
+          "Voetballen",
+          "Zwemmen"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "r60",
+    "milestone": 60,
+    "level": "A1",
+    "title": "Il viaggio di Sofia",
+    "text": "Sofia è un'insegnante di Torino. Domani parte per la Sicilia. All'aeroporto controlla il passaporto e il biglietto sul telefono. L'aereo decolla alle dieci.\nIn Sicilia vuole vedere il mare, la natura e un festival di musica. Compra anche un souvenir per il nonno: un piccolo vulcano di ceramica. \"Che bello!\" dice il nonno.",
+    "questions": [
+      {
+        "q": "Wat is het beroep van Sofia?",
+        "options": [
+          "Dokter",
+          "Lerares",
+          "Kok",
+          "Ingenieur"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe laat vertrekt het vliegtuig?",
+        "options": [
+          "Om acht uur",
+          "Om tien uur",
+          "Om twaalf uur",
+          "Om zes uur"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat koopt Sofia voor haar opa?",
+        "options": [
+          "Een boek",
+          "Een keramische vulkaan",
+          "Een fles wijn",
+          "Een T-shirt"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r70",
+    "milestone": 70,
+    "level": "A2",
+    "title": "Il primo giorno di lavoro",
+    "text": "Ieri è stato il mio primo giorno di lavoro in un ufficio a Milano. Ero nervosa, ma i colleghi sono stati gentili. La mia collega Giulia mi ha spiegato il progetto: dobbiamo finire tutto prima della scadenza di venerdì.\nSecondo me il lavoro è interessante, però la riunione era troppo lunga. Il capo è simpatico e molto paziente. Quando ero studentessa, lavoravo in un bar: era più stancante ma meno complicato.\nDomani sarà una giornata piena. Probabilmente comincerò presto e finirò tardi. Comunque sono contenta: penso che questo lavoro sia meglio del vecchio.",
+    "questions": [
+      {
+        "q": "Waar werkt de schrijfster?",
+        "options": [
+          "In een bar in Rome",
+          "Op een kantoor in Milaan",
+          "Op een school",
+          "In een ziekenhuis"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wanneer is de deadline van het project?",
+        "options": [
+          "Maandag",
+          "Woensdag",
+          "Vrijdag",
+          "Volgende maand"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Hoe vergelijkt ze het oude werk met het nieuwe?",
+        "options": [
+          "Het oude was vermoeiender maar minder ingewikkeld",
+          "Het oude was makkelijker en leuker",
+          "Het nieuwe is saaier",
+          "Er is geen verschil"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "r80",
+    "milestone": 80,
+    "level": "A2",
+    "title": "Una domenica italiana",
+    "text": "La domenica in Italia è il giorno della famiglia. Da noi si cucina insieme: mia madre prepara il ragù con gli ingredienti freschi del mercato, mio padre apre una bottiglia di vino. Dopo pranzo tutti fanno un pisolino.\nNel pomeriggio facciamo una passeggiata in centro e prendiamo un aperitivo in piazza. I miei fratelli parlano di calcio: la loro squadra ha vinto la partita.\nLa sera guardo un film sul divano. Amo queste giornate lente: niente stress, solo la dolce vita.",
+    "questions": [
+      {
+        "q": "Wie maakt de ragù?",
+        "options": [
+          "De vader",
+          "De moeder",
+          "De broers",
+          "De schrijver"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat doet de familie na de lunch?",
+        "options": [
+          "Voetballen",
+          "Winkelen",
+          "Een dutje doen",
+          "Naar de bioscoop gaan"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Waarover praten de broers?",
+        "options": [
+          "Over politiek",
+          "Over voetbal",
+          "Over werk",
+          "Over muziek"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r90",
+    "milestone": 90,
+    "level": "A2",
+    "title": "Il futuro di Giulia",
+    "text": "Giulia ha diciotto anni e deve scegliere l'università. Le piacciono le scienze e vorrebbe studiare biologia a Padova. Suo padre, però, pensa che l'economia sia più utile.\n\"Il mondo cambia,\" dice Giulia. \"Il clima, l'inquinamento, le energie rinnovabili: abbiamo bisogno di scienziati.\" Legge ogni giorno le notizie online e non crede alle fake news.\nIl suo obiettivo è chiaro: una laurea, poi un lavoro in un laboratorio. Forse un giorno farà una scoperta importante. Suo padre alla fine sorride: \"Realizza il tuo sogno.\"",
+    "questions": [
+      {
+        "q": "Wat wil Giulia studeren?",
+        "options": [
+          "Economie",
+          "Biologie",
+          "Rechten",
+          "Geschiedenis"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat vindt haar vader nuttiger?",
+        "options": [
+          "Biologie",
+          "Geneeskunde",
+          "Economie",
+          "Kunst"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat is het doel van Giulia?",
+        "options": [
+          "Een eigen bedrijf",
+          "Een baan in een laboratorium",
+          "Journalist worden",
+          "Politica worden"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r100",
+    "milestone": 100,
+    "level": "A2",
+    "title": "Un appartamento nuovo",
+    "text": "Il mese scorso ho cercato un appartamento in affitto a Bologna. Non era facile: le spese erano alte e il canone spesso troppo caro. Finalmente ho trovato un bilocale ammobiliato vicino al centro.\nLa mia routine è cambiata. Mi sveglio alle sette, faccio colazione e vado al lavoro a piedi. La sera cucino: ieri ho fatto un risotto con le verdure del mercato.\nSabato ho invitato i miei amici per vedere un film. Purtroppo Marco ha dovuto disdire all'ultimo momento, ma ci siamo divertiti lo stesso.",
+    "questions": [
+      {
+        "q": "Wat voor woning heeft de schrijver gevonden?",
+        "options": [
+          "Een groot huis met tuin",
+          "Een gemeubileerde tweekamerwoning",
+          "Een kamer bij een familie",
+          "Een villa buiten de stad"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe gaat de schrijver naar het werk?",
+        "options": [
+          "Met de bus",
+          "Op de fiets",
+          "Te voet",
+          "Met de auto"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Waarom was Marco er zaterdag niet?",
+        "options": [
+          "Hij was ziek",
+          "Hij moest op het laatste moment afzeggen",
+          "Hij was op reis",
+          "Hij was het vergeten"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r110",
+    "milestone": 110,
+    "level": "A2",
+    "title": "La festa di compleanno",
+    "text": "Sabato scorso abbiamo festeggiato il compleanno di mia nonna: ottant'anni! Abbiamo organizzato tutto in segreto. Mio zio ha prenotato un ristorante con la cucina piccante della Calabria, la sua regione.\nAlla banca ho prelevato i soldi per il regalo: un viaggio a Venezia. Quando è arrivata, la nonna aveva i capelli appena fatti e gli occhiali nuovi. \"Auguri!\" abbiamo gridato tutti insieme.\nC'era un solo problema: il forno del ristorante era guasto e la torta è arrivata in ritardo. Ma la nonna ha riso e ha detto: \"Cin cin, alla salute!\"",
+    "questions": [
+      {
+        "q": "Hoe oud wordt de oma?",
+        "options": [
+          "Zeventig",
+          "Vijfenzeventig",
+          "Tachtig",
+          "Negentig"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat is het cadeau?",
+        "options": [
+          "Een bril",
+          "Een reis naar Venetië",
+          "Een taart",
+          "Een boek"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat was het probleem in het restaurant?",
+        "options": [
+          "Het eten was koud",
+          "De oven was kapot",
+          "Er was geen tafel",
+          "De ober was onbeleefd"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r120",
+    "milestone": 120,
+    "level": "A2",
+    "title": "Il Carnevale di Venezia",
+    "text": "Ogni anno a febbraio Venezia si trasforma. Il Carnevale è una tradizione antica: le persone indossano maschere e costumi eleganti e sfilano in Piazza San Marco. I saldi di gennaio sono finiti, ma i negozi vendono maschere di ogni colore.\nQuest'anno ho scattato molte foto con il telefono e le ho condivise sui social network. Un giornalista ha scritto un articolo sul festival: dice che il turismo è importante per l'economia, ma che bisogna proteggere la città dall'acqua alta.\nHo imparato una cosa: per capire l'Italia bisogna vivere le sue tradizioni. Ora sono bilingue... quasi!",
+    "questions": [
+      {
+        "q": "Wanneer is het Carnaval van Venetië?",
+        "options": [
+          "In augustus",
+          "In februari",
+          "In december",
+          "In mei"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat heeft de schrijver gedeeld op sociale media?",
+        "options": [
+          "Foto's",
+          "Een artikel",
+          "Een video",
+          "Een recept"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Waarvoor moet de stad volgens de journalist beschermd worden?",
+        "options": [
+          "Toeristen",
+          "Vervuiling",
+          "Hoogwater",
+          "Verkeer"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r130",
+    "milestone": 130,
+    "level": "B1",
+    "title": "Quando ero bambino",
+    "text": "Quando ero bambino passavo tutte le estati dai nonni, in un piccolo paese sulle colline toscane. La casa era vecchia e aveva un giardino enorme dove giocavo con mio cugino dalla mattina alla sera.\nMi ricordo bene il profumo del pane che la nonna faceva ogni domenica. Il nonno, invece, raccontava sempre le stesse storie della guerra, ma noi le ascoltavamo come se fossero nuove. Quando pioveva, restavamo in casa e leggevamo i fumetti sul divano.\nUn'estate, avevo forse nove anni, è arrivato un temporale terribile. Il vento ha rotto una finestra e la luce è andata via. Avevo paura, ma la nonna ha acceso una candela e ha cominciato a cantare. In quel momento la paura è sparita.\nOggi il paese è cambiato: ci sono più turisti e meno bambini. Eppure, ogni volta che torno, sento ancora quel profumo di pane.",
+    "questions": [
+      {
+        "q": "Waar bracht de schrijver de zomers door?",
+        "options": [
+          "Aan zee bij zijn ouders",
+          "Bij zijn grootouders in Toscane",
+          "In een stad in het noorden",
+          "Op een camping"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat deed de opa altijd?",
+        "options": [
+          "Brood bakken",
+          "Verhalen over de oorlog vertellen",
+          "Stripboeken lezen",
+          "Zingen bij onweer"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe verdween de angst tijdens het onweer?",
+        "options": [
+          "De stroom kwam terug",
+          "De oma stak een kaars aan en begon te zingen",
+          "De neef maakte grapjes",
+          "Het onweer stopte meteen"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r140",
+    "milestone": 140,
+    "level": "B1",
+    "title": "Un viaggio da sogno",
+    "text": "Se avessi più tempo, farei un viaggio lungo la costa amalfitana. Partirei da Napoli in treno e poi prenderei l'autobus che segue la strada sul mare. Dicono che la vista sia spettacolare, anche se le curve fanno paura a chi soffre il mal d'auto.\nVorrei dormire in un piccolo albergo a Positano, con una terrazza sul mare. La sera cenerei in una trattoria di pesce: potrei ordinare gli spaghetti alle vongole e un bicchiere di vino bianco locale. Il giorno dopo andrei in barca a Capri.\nUn consiglio? Sarebbe meglio prenotare in anticipo, perché in estate tutto è pieno. Inoltre, converrebbe evitare la macchina: parcheggiare è quasi impossibile e i traghetti sono più comodi.\nPer ora resta un sogno, ma l'anno prossimo potrei finalmente realizzarlo.",
+    "questions": [
+      {
+        "q": "Hoe zou de schrijver langs de kust reizen?",
+        "options": [
+          "Met een huurauto",
+          "Met de bus langs de kustweg",
+          "Te voet",
+          "Met een fiets"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat zou de schrijver in de trattoria bestellen?",
+        "options": [
+          "Pizza",
+          "Spaghetti met vongole en witte wijn",
+          "Risotto",
+          "Een salade"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Welk advies geeft de tekst?",
+        "options": [
+          "Ga in de winter",
+          "Neem altijd de auto",
+          "Boek van tevoren en vermijd de auto",
+          "Slaap in Napels"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r150",
+    "milestone": 150,
+    "level": "B1",
+    "title": "Il colloquio",
+    "text": "Lunedì Chiara ha avuto un colloquio per un posto di assistente di marketing. Pensava che fosse difficile, ma la responsabile è stata gentile e ha fatto domande chiare sulle sue competenze.\n\"Credo che lei abbia il profilo giusto,\" ha detto la responsabile, \"ma è importante che sappia lavorare in gruppo e che parli bene l'inglese.\" Chiara ha spiegato che aveva vissuto un anno a Londra e che aveva gestito i social media di un piccolo negozio.\nAlla fine del colloquio le hanno mostrato l'ufficio: una scrivania vicino alla finestra, una stampante che non funziona mai e colleghi che discutevano animatamente di un progetto. Chiara ha pensato: \"Spero che mi assumano.\"\nDue giorni dopo è arrivata la telefonata. Il contratto comincia il primo del mese. Chiara è convinta che sia l'inizio di una nuova carriera.",
+    "questions": [
+      {
+        "q": "Voor welke functie solliciteerde Chiara?",
+        "options": [
+          "Boekhouder",
+          "Assistent marketing",
+          "Lerares Engels",
+          "Verkoopster"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat vond de verantwoordelijke belangrijk?",
+        "options": [
+          "Een rijbewijs",
+          "Samenwerken en goed Engels spreken",
+          "Ervaring in Londen",
+          "Kennis van printers"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe eindigt het verhaal?",
+        "options": [
+          "Chiara wordt afgewezen",
+          "Chiara krijgt de baan",
+          "Chiara weigert het aanbod",
+          "Chiara wacht nog op antwoord"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r160",
+    "milestone": 160,
+    "level": "B1",
+    "title": "Una vita sana",
+    "text": "Da quando lavoro da casa, mi muovo meno e mangio peggio. Il medico me lo ha detto chiaramente: \"Il suo corpo ha bisogno di esercizio, non di pillole.\" Così ho deciso di cambiare abitudini.\nOgni mattina faccio una corsa di mezz'ora nel parco. All'inizio le gambe mi facevano male e il fiato era corto, ma dopo tre settimane mi sento più forte. A pranzo preparo qualcosa di semplice: verdure, un uovo, un pezzo di pane integrale. Il cioccolato lo mangio solo la domenica.\nAnche l'ambiente ne guadagna: vado al lavoro in bicicletta invece che in macchina e compro frutta e verdura al mercato, senza plastica. Lo spreco di cibo è diminuito perché faccio la lista della spesa.\nNon sono ancora un atleta, ma dormo meglio e ho più energia. Il peso? È sceso di quattro chili.",
+    "questions": [
+      {
+        "q": "Wat zei de dokter?",
+        "options": [
+          "Neem meer medicijnen",
+          "Het lichaam heeft beweging nodig",
+          "Stop met werken",
+          "Eet meer chocolade"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat doet de schrijver elke ochtend?",
+        "options": [
+          "Zwemmen",
+          "Een half uur hardlopen in het park",
+          "Fietsen naar de markt",
+          "Yoga"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Waarom is de voedselverspilling afgenomen?",
+        "options": [
+          "Hij eet minder",
+          "Hij maakt een boodschappenlijst",
+          "Hij koopt geen fruit meer",
+          "Hij eet in restaurants"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r170",
+    "milestone": 170,
+    "level": "B1",
+    "title": "Troppo tempo online",
+    "text": "Mia figlia Elena ha quindici anni e sta sempre guardando lo schermo del cellulare. Quando le chiedo cosa stia facendo, risponde che sta parlando con le amiche, anche se sono nella stessa stanza.\nIeri sera le ho detto che, secondo un articolo, i ragazzi passano in media cinque ore al giorno sui social. Lei mi ha risposto che l'articolo esagerava e che io non capivo la sua generazione. Ha aggiunto che i video le servono anche per studiare.\nBenché io sia preoccupato, so che vietare tutto non funziona. Perciò abbiamo fatto un accordo: niente telefono a tavola e nessuna notifica dopo le dieci di sera. In cambio, il sabato guardiamo insieme un film che sceglie lei.\nMentre scrivo queste righe, Elena sta leggendo un libro. Di carta. Non so quanto durerà, ma è un inizio.",
+    "questions": [
+      {
+        "q": "Hoe oud is Elena?",
+        "options": [
+          "Twaalf",
+          "Vijftien",
+          "Achttien",
+          "Twintig"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat zegt Elena over het artikel?",
+        "options": [
+          "Dat het klopt",
+          "Dat het overdrijft",
+          "Dat ze het geschreven heeft",
+          "Dat ze het niet gelezen heeft"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat hebben vader en dochter afgesproken?",
+        "options": [
+          "Geen telefoon meer",
+          "Geen telefoon aan tafel en geen meldingen na tien uur",
+          "Elke dag samen een film",
+          "Alleen video's voor school"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r180",
+    "milestone": 180,
+    "level": "B1",
+    "title": "Nord e Sud",
+    "text": "Si dice spesso che l'Italia sia un paese, ma in realtà sono almeno due. Il Nord è più industriale e più ricco; il Sud è più caldo, più lento e, secondo molti, più ospitale. Milano è la città più efficiente del paese, mentre Napoli è la più vivace.\nAnche la cucina cambia. Al Nord si mangia più burro e riso: il risotto alla milanese è il piatto più famoso. Al Sud regnano l'olio d'oliva, il pomodoro e la pasta. Un napoletano vi dirà che la sua pizza è la migliore del mondo, e probabilmente avrà ragione.\nSe aveste una settimana sola, che cosa scegliereste? Dipende da ciò che cercate: arte e design al Nord, mare e tradizioni al Sud. Se fossi in voi, farei entrambi, magari in due viaggi diversi.\nUn consiglio formale: rispettate i ritmi locali. Al Sud i negozi chiudono nel pomeriggio, e non è pigrizia: è cultura.",
+    "questions": [
+      {
+        "q": "Welke stad wordt de meest efficiënte genoemd?",
+        "options": [
+          "Rome",
+          "Napels",
+          "Milaan",
+          "Turijn"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat is typisch voor de keuken van het noorden?",
+        "options": [
+          "Olijfolie en tomaat",
+          "Boter en rijst",
+          "Pizza",
+          "Vis"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat betekent het volgens de tekst dat winkels in het zuiden 's middags sluiten?",
+        "options": [
+          "Luiheid",
+          "Economische crisis",
+          "Cultuur",
+          "Slechte organisatie"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r190",
+    "milestone": 190,
+    "level": "B1",
+    "title": "Leonardo da Vinci",
+    "text": "Leonardo nacque nel 1452 a Vinci, un piccolo paese vicino a Firenze. Era figlio di un notaio e di una contadina, e non ricevette un'istruzione classica. Eppure diventò il genio più famoso del Rinascimento.\nA quattordici anni entrò nella bottega del Verrocchio, dove imparò a dipingere e a scolpire. Nel 1482 si trasferì a Milano, alla corte di Ludovico Sforza. Lì dipinse l'Ultima Cena, un affresco che ancora oggi attira milioni di visitatori.\nLeonardo non fu solo un pittore. Riempì migliaia di pagine di disegni: macchine volanti, ponti, studi sul corpo umano. Scriveva da destra a sinistra, forse per proteggere i suoi segreti.\nNegli ultimi anni visse in Francia, ospite del re Francesco I, e morì nel 1519. La Gioconda, il suo capolavoro, si trova ancora oggi a Parigi. Lasciò un'eredità che nessun altro artista ha mai eguagliato.",
+    "questions": [
+      {
+        "q": "Wat was het beroep van de vader van Leonardo?",
+        "options": [
+          "Schilder",
+          "Notaris",
+          "Boer",
+          "Koning"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat schilderde Leonardo in Milaan?",
+        "options": [
+          "De Mona Lisa",
+          "Het Laatste Avondmaal",
+          "De Geboorte van Venus",
+          "De Sixtijnse Kapel"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Waar stierf Leonardo?",
+        "options": [
+          "In Florence",
+          "In Milaan",
+          "In Frankrijk",
+          "In Rome"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r200",
+    "milestone": 200,
+    "level": "B1",
+    "title": "Il trasloco",
+    "text": "Se avessi saputo quanto era stressante un trasloco, avrei pensato due volte prima di cambiare casa. Tutto è cominciato a marzo, quando il padrone di casa ha aumentato l'affitto. Con quel canone avremmo pagato più della metà dello stipendio.\nAbbiamo cercato per settimane. Alla fine abbiamo trovato un appartamento in periferia, più piccolo ma con un balcone. La banca ci ha concesso un piccolo prestito per la caparra e le spese.\nIl giorno del trasloco è stato un disastro: dieci scatoloni, una lavatrice che non passava dalla porta e un vicino che si lamentava del rumore. Avremmo dovuto chiamare una ditta specializzata, ma volevamo risparmiare.\nOra, tre mesi dopo, siamo felici. Il quartiere è tranquillo, i vicini ci hanno portato una torta e la sera guardiamo il tramonto dal balcone. Ne è valsa la pena.",
+    "questions": [
+      {
+        "q": "Waarom moesten ze verhuizen?",
+        "options": [
+          "Het huis was te klein",
+          "De huisbaas verhoogde de huur",
+          "Ze kregen een nieuwe baan",
+          "Het gebouw werd gesloopt"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat ging er mis op de verhuisdag?",
+        "options": [
+          "De verhuiswagen kwam niet",
+          "De wasmachine paste niet door de deur",
+          "Ze verloren de sleutels",
+          "Het regende"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe voelen ze zich drie maanden later?",
+        "options": [
+          "Ze hebben spijt",
+          "Ze willen weer verhuizen",
+          "Ze zijn gelukkig",
+          "Ze hebben ruzie met de buren"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r210",
+    "milestone": 210,
+    "level": "B1",
+    "title": "L'esame di italiano",
+    "text": "Temevo che l'esame di italiano fosse impossibile. Avevo studiato la grammatica per mesi, ma il congiuntivo mi sembrava un mistero: pensavo che nessuno lo usasse davvero. Il mio professore, invece, insisteva che fosse fondamentale.\nLa prova scritta consisteva in un riassunto di un articolo e in una lettera formale. Ho fatto un paio di errori di punteggiatura, ma il senso era chiaro. Nella prova orale l'esaminatrice mi ha chiesto di descrivere la mia città e di esprimere un'opinione sull'università.\nIl momento più difficile è stato quando mi ha chiesto: \"Se potesse cambiare una cosa del suo paese, che cosa cambierebbe?\" Ho risposto con calma, usando due congiuntivi. Lei ha sorriso.\nUna settimana dopo ho ricevuto il risultato: promossa, con un voto sufficiente per iscrivermi alla facoltà di lettere. Se non avessi studiato quel maledetto congiuntivo, non ce l'avrei mai fatta.",
+    "questions": [
+      {
+        "q": "Wat vond de schrijfster het moeilijkst aan de grammatica?",
+        "options": [
+          "De lidwoorden",
+          "Het congiuntivo",
+          "De werkwoorden op -ire",
+          "De voorzetsels"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Waaruit bestond het schriftelijke examen?",
+        "options": [
+          "Een dictee",
+          "Een samenvatting en een formele brief",
+          "Een opstel over Rome",
+          "Een vertaling"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat is het resultaat?",
+        "options": [
+          "Gezakt",
+          "Geslaagd",
+          "Uitgesteld",
+          "Onbekend"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r220",
+    "milestone": 220,
+    "level": "B1",
+    "title": "Lettera a un amico",
+    "text": "Caro Paolo,\nti scrivo perché ho bisogno di un consiglio. Da qualche mese Marta e io litighiamo per ogni sciocchezza: chi cucina, chi paga le bollette, perché torno tardi dal lavoro. Lei dice che sono diventato freddo; io penso che sia lei a essere troppo gelosa.\nLa verità è che lo stress mi sta cambiando. Al lavoro ho un capo che pretende tutto e subito, e la sera non ho più la forza di parlare. Marta si sente sola, e ha ragione.\nIeri ho fatto un passo: le ho chiesto scusa e le ho proposto un weekend in montagna, senza telefoni. Ha accettato, ma con un sorriso triste. Ho paura che sia troppo tardi.\nTu che conosci entrambi da anni, cosa faresti al posto mio? Dovrei cambiare lavoro? Oppure dovremmo parlare con uno psicologo?\nRispondimi presto, ti prego.\nUn abbraccio, Luca",
+    "questions": [
+      {
+        "q": "Waarover maken Luca en Marta ruzie?",
+        "options": [
+          "Over vakantiebestemmingen",
+          "Over kleine dagelijkse dingen",
+          "Over geld voor een huis",
+          "Over de kinderen"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat is volgens Luca de oorzaak van zijn gedrag?",
+        "options": [
+          "Zijn jaloezie",
+          "Stress door zijn werk",
+          "Zijn nieuwe vrienden",
+          "Een ziekte"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat heeft Luca aan Marta voorgesteld?",
+        "options": [
+          "Een weekend in de bergen zonder telefoons",
+          "Verhuizen naar de stad",
+          "Een etentje met vrienden",
+          "Een nieuwe baan zoeken"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "r230",
+    "milestone": 230,
+    "level": "B1",
+    "title": "Il Parco del Gran Paradiso",
+    "text": "Il Gran Paradiso è il parco nazionale più antico d'Italia: fu fondato nel 1922 per proteggere lo stambecco, un animale che all'inizio del Novecento rischiava di scomparire. Oggi nel parco vivono più di duemila stambecchi, oltre a camosci, marmotte e aquile.\nIl paesaggio è spettacolare: vette che superano i quattromila metri, ghiacciai, torrenti e boschi di larici. In primavera i prati si riempiono di fiori, mentre in autunno le foglie diventano rosse e gialle.\nIl parco, però, deve affrontare nuove sfide. Il cambiamento climatico fa sciogliere i ghiacciai e la siccità estiva colpisce le sorgenti. I guardaparco chiedono ai visitatori di rispettare i sentieri, di non lasciare rifiuti e di non dare cibo agli animali.\nChi ama camminare può scegliere tra percorsi facili nella valle e salite impegnative verso i rifugi. In ogni caso, una bussola e uno zaino con acqua e una giacca pesante sono indispensabili.",
+    "questions": [
+      {
+        "q": "Waarom werd het park opgericht?",
+        "options": [
+          "Voor toerisme",
+          "Om de steenbok te beschermen",
+          "Om skipistes aan te leggen",
+          "Om hout te winnen"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Welk probleem noemt de tekst?",
+        "options": [
+          "Te veel steenbokken",
+          "Smeltende gletsjers door klimaatverandering",
+          "Gebrek aan wandelpaden",
+          "Te weinig bezoekers"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat moeten wandelaars volgens de tekst meenemen?",
+        "options": [
+          "Een tent en een kookstel",
+          "Een kompas, water en een warme jas",
+          "Eten voor de dieren",
+          "Een fiets"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r240",
+    "milestone": 240,
+    "level": "B1",
+    "title": "La Mostra del Cinema",
+    "text": "Ogni settembre il Lido di Venezia ospita la Mostra del Cinema, il festival cinematografico più antico del mondo. Per dieci giorni la piccola isola si riempie di registi, attori, giornalisti e fan che aspettano per ore davanti al tappeto rosso.\nQuest'anno ho seguito il festival per il giornale della mia città. La prima sera ho visto un film italiano in bianco e nero, girato in un teatro abbandonato: la critica lo ha definito un capolavoro, il pubblico un po' meno. Il giorno dopo ho intervistato una giovane fotografa che espone i suoi scatti in una mostra sulla moda degli anni Sessanta.\nLa cosa più interessante, però, non sono i film ma le conversazioni: in fila per un caffè ho conosciuto un produttore spagnolo che cerca finanziamenti per un documentario sui ghiacciai.\nAlla fine il Leone d'Oro è andato a un film coreano. Il mio articolo? È uscito in prima pagina, con una foto della laguna al tramonto.",
+    "questions": [
+      {
+        "q": "Waar vindt het filmfestival plaats?",
+        "options": [
+          "In Rome",
+          "Op het Lido van Venetië",
+          "In Milaan",
+          "In Cannes"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat vond de schrijver het interessantst?",
+        "options": [
+          "De films",
+          "De gesprekken met mensen",
+          "De rode loper",
+          "Het eten"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wie won de Gouden Leeuw?",
+        "options": [
+          "Een Italiaanse film",
+          "Een Spaanse documentaire",
+          "Een Koreaanse film",
+          "Een Franse film"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r250",
+    "milestone": 250,
+    "level": "B1",
+    "title": "Volontari a Lampedusa",
+    "text": "Lampedusa è un'isola piccolissima nel Mediterraneo, più vicina all'Africa che alla Sicilia. Da anni è la prima terra che molti migranti vedono dopo un viaggio pericoloso in mare. Le leggi cambiano, i governi discutono, ma le barche continuano ad arrivare.\nMarco, un infermiere di Torino, ha passato l'estate sull'isola come volontario. \"Non faccio politica,\" dice. \"Quando una persona arriva dopo tre giorni senza acqua, ha diritto a un bicchiere d'acqua. Punto.\"\nL'associazione per cui lavora raccoglie donazioni, offre cure mediche e aiuta con i documenti per il permesso di soggiorno. Il lavoro è duro e a volte scoraggiante: mancano i fondi, e alcuni abitanti si lamentano perché il turismo soffre.\nEppure Marco ha visto anche la solidarietà: pescatori che salvano vite in mare, una parrocchia che apre le porte, ragazzi del paese che portano vestiti puliti. \"L'integrazione,\" conclude, \"comincia con un gesto semplice.\"",
+    "questions": [
+      {
+        "q": "Wat is het beroep van Marco?",
+        "options": [
+          "Advocaat",
+          "Verpleegkundige",
+          "Visser",
+          "Priester"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat doet de organisatie waarvoor Marco werkt?",
+        "options": [
+          "Politieke campagnes voeren",
+          "Donaties inzamelen, medische zorg bieden en helpen met documenten",
+          "Toeristen rondleiden",
+          "Boten bouwen"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Waarover klagen sommige bewoners?",
+        "options": [
+          "Over het weer",
+          "Dat het toerisme lijdt",
+          "Over de vissers",
+          "Over de kerk"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r260",
+    "milestone": 260,
+    "level": "B1",
+    "title": "Una riunione difficile",
+    "text": "Gentile dottoressa Ferri,\nin allegato trova il verbale della riunione di ieri con il fornitore tedesco. Come sa, la trattativa non è stata semplice.\nIl primo punto all'ordine del giorno riguardava i prezzi: il fornitore chiede un aumento del dieci per cento a causa dei costi di trasporto. Abbiamo proposto un compromesso al cinque per cento, a condizione che la consegna avvenga entro il 15 del mese. La controparte si è impegnata a darci una conferma scritta entro venerdì.\nIl secondo punto era il reclamo del cliente di Bologna sul carico danneggiato in dogana. Ho assicurato al cliente un rimborso completo e ho chiesto al nostro ufficio spedizioni di verificare l'imballaggio.\nLe suggerisco di partecipare alla prossima presentazione: il direttore commerciale vorrebbe discutere la strategia per l'export in Francia.\nResto a disposizione per qualsiasi chiarimento.\nCordiali saluti,\nAndrea Conti",
+    "questions": [
+      {
+        "q": "Wat vraagt de leverancier?",
+        "options": [
+          "Een korting van tien procent",
+          "Een prijsverhoging van tien procent",
+          "Een langere levertermijn",
+          "Een nieuw contract"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat is het voorstel van Andrea?",
+        "options": [
+          "Vijf procent, mits levering vóór de vijftiende",
+          "Geen verhoging",
+          "Tien procent zonder voorwaarden",
+          "Een andere leverancier"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Wat is er gebeurd met de lading voor de klant in Bologna?",
+        "options": [
+          "Ze is te laat geleverd",
+          "Ze is bij de douane beschadigd",
+          "Ze is verdwenen",
+          "Ze is naar Frankrijk gestuurd"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r270",
+    "milestone": 270,
+    "level": "B1",
+    "title": "Samantha Cristoforetti",
+    "text": "Samantha Cristoforetti è la prima donna italiana ad aver volato nello spazio. Nata a Milano nel 1977, da bambina guardava le stelle dalle montagne del Trentino e sognava di diventare astronauta. Ha studiato ingegneria, è entrata nell'Aeronautica Militare come pilota e nel 2009 è stata scelta dall'Agenzia Spaziale Europea.\nNel 2014 è partita per la Stazione Spaziale Internazionale, dove è rimasta quasi duecento giorni. Lì ha condotto esperimenti scientifici sul corpo umano: come reagiscono i muscoli, le ossa e il cervello senza gravità. Ha anche preparato il primo espresso nello spazio, con una macchina progettata da un'azienda italiana.\nNel 2022 è tornata in orbita, questa volta come comandante della stazione. Nei suoi libri racconta che la cosa più difficile non è il decollo, ma la pazienza: anni di studio e di prove per pochi mesi tra le stelle.\nOggi è un simbolo per molte ragazze che vogliono studiare scienza. Il suo messaggio è semplice: \"Non esistono sogni troppo grandi.\"",
+    "questions": [
+      {
+        "q": "Wat studeerde Samantha Cristoforetti?",
+        "options": [
+          "Geneeskunde",
+          "Ingenieurswetenschappen",
+          "Biologie",
+          "Sterrenkunde"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat onderzocht ze op het ruimtestation?",
+        "options": [
+          "Het klimaat op aarde",
+          "Hoe het menselijk lichaam reageert zonder zwaartekracht",
+          "Nieuwe raketten",
+          "Planten in de ruimte"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat is volgens haar het moeilijkst?",
+        "options": [
+          "De lancering",
+          "Het geduld tijdens de jarenlange voorbereiding",
+          "Het eten in de ruimte",
+          "De terugkeer"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r280",
+    "milestone": 280,
+    "level": "B1",
+    "title": "Una giornata piena",
+    "text": "Sabato scorso avevo una lista infinita di cose da fare. Alle otto ero già dal meccanico: la macchina aveva bisogno del tagliando e una gomma era quasi a terra. \"Torni alle cinque,\" mi ha detto.\nSono andata a piedi alla posta per ritirare una raccomandata della banca: la nuova polizza dell'assicurazione. In fila ho incontrato la mia vicina, che mi ha ricordato la festa di quartiere della sera.\nA casa ho passato l'aspirapolvere, lavato i pavimenti e riparato finalmente la mensola in cucina con il trapano di mio fratello. Nel pomeriggio ho annaffiato le piante sul balcone e piantato i pomodori.\nAlle cinque la macchina era pronta, ma il conto era più alto del previsto. Pazienza. Alla festa ho portato una teglia di lasagne e per fortuna erano deliziose. A mezzanotte ero stanca morta, ma soddisfatta: la lista era finita.",
+    "questions": [
+      {
+        "q": "Waarom moest de auto naar de garage?",
+        "options": [
+          "Voor een nieuw kenteken",
+          "Voor een onderhoudsbeurt en een bijna lekke band",
+          "Voor de verzekering",
+          "Voor een ongeluk"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat haalde de schrijfster op bij het postkantoor?",
+        "options": [
+          "Een pakket",
+          "Een aangetekende brief van de bank",
+          "Een boek",
+          "Een cadeau"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat bracht ze mee naar het buurtfeest?",
+        "options": [
+          "Een taart",
+          "Een ovenschaal lasagne",
+          "Wijn",
+          "Tomaten"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r290",
+    "milestone": 290,
+    "level": "B1",
+    "title": "Una telefonata",
+    "text": "\"Pronto, sono Giovanni. Potrei parlare con la signora Ricci?\"\n\"Un attimo, gliela passo... Mi dispiace, la linea è disturbata. Può richiamare tra cinque minuti?\"\nGiovanni richiama. Deve fare un reclamo: il frigorifero che ha comprato la settimana scorsa non funziona e il negozio continua a rimandare la riparazione. Ha deciso di chiamare direttamente la responsabile.\n\"Buongiorno, signora Ricci. La chiamo perché sono al verde di pazienza,\" scherza. Poi diventa serio: \"Il frigorifero è rotto, ho perso un sacco di cibo e nessuno mi risponde. Chi dorme non piglia pesci, e io non voglio più aspettare.\"\nLa signora Ricci si scusa di cuore e promette un tecnico entro domani, più un rimborso per il cibo. \"Meglio tardi che mai,\" risponde Giovanni. \"Grazie mille, e in bocca al lupo con gli altri clienti!\"\n\"Crepi!\" ride la signora Ricci.",
+    "questions": [
+      {
+        "q": "Waarom belt Giovanni?",
+        "options": [
+          "Om een koelkast te bestellen",
+          "Om een klacht in te dienen over een kapotte koelkast",
+          "Om een baan te vragen",
+          "Om een afspraak te verzetten"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat belooft mevrouw Ricci?",
+        "options": [
+          "Een nieuwe koelkast volgende maand",
+          "Een technicus vóór morgen en een terugbetaling",
+          "Niets",
+          "Een korting op een volgende aankoop"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat betekent \"in bocca al lupo\" in dit gesprek?",
+        "options": [
+          "Eet smakelijk",
+          "Succes",
+          "Tot ziens",
+          "Het spijt me"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r300",
+    "milestone": 300,
+    "level": "B1",
+    "title": "Lettera di un'insegnante",
+    "text": "Gentili studenti,\nsiete arrivati alla fine del livello B1 e vorrei ringraziarvi per il vostro impegno. Quando abbiamo cominciato, molti di voi credevano che l'italiano fosse solo \"pizza, pasta e mandolino\". Oggi sapete raccontare un ricordo con l'imperfetto, esprimere un dubbio con il congiuntivo e scrivere una lettera formale senza confondere i registri.\nVi ricordo alcune insidie che ci hanno fatto ridere in classe: la \"fattoria\" non è una fabbrica, i \"parenti\" non sono i genitori e \"attuale\" non vuol dire \"in tutti i telegiornali\". Sono i falsi amici: piccoli tranelli che rendono la lingua più viva.\nChe cosa vi consiglierei adesso? Leggete un romanzo, guardate un film senza sottotitoli, telefonate a un amico italiano anche se avete paura di sbagliare. Se aveste studiato solo la grammatica, non sareste arrivati fin qui; siete arrivati perché avete osato parlare.\nVi auguro di cuore un futuro pieno di parole nuove. In bocca al lupo!\nCon affetto,\nla vostra insegnante",
+    "questions": [
+      {
+        "q": "Wat dachten veel studenten aan het begin?",
+        "options": [
+          "Dat Italiaans onmogelijk was",
+          "Dat Italiaans alleen over pizza, pasta en mandoline ging",
+          "Dat ze het al spraken",
+          "Dat de lerares streng was"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat betekent \"la fattoria\" volgens de brief?",
+        "options": [
+          "De fabriek",
+          "De boerderij",
+          "De familie",
+          "Het huis"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat raadt de lerares aan?",
+        "options": [
+          "Alleen grammatica studeren",
+          "Lezen, films zonder ondertiteling kijken en durven praten",
+          "Naar Italië verhuizen",
+          "Een nieuw boek kopen"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+]
