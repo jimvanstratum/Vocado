@@ -35,13 +35,15 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 | `www/sw.js` | Service Worker |
 | `build.py` | Bouwscript: concat → vocado.html |
 | `scripts/generate_a2.py` | Script dat A2-lessen 91–120 heeft gegenereerd (al uitgevoerd) |
+| `scripts/generate_b1*.py` | Scripts die B1-lessen 121–300 hebben gegenereerd (al uitgevoerd) |
+| `scripts/add_b1_extra.py` | Script dat 60 extra B1-woorden (w2651–w2710) heeft toegevoegd (al uitgevoerd) |
 | `vocado.html` | Productie-build — nooit handmatig bewerken |
 
 ### Versie & cache buster
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.41**, cache buster **?v=32**
+- Huidige versie: **v1.43**, cache buster **?v=37**
 
 ### Build & deploy
 
@@ -95,20 +97,21 @@ Array van woord-objecten:
 
 ### Conventies
 
-- **Word-IDs**: `wNNN` (w001–w2650, gaps mogelijk door deduplicatie)
+- **Word-IDs**: `wNNN` (w001–w2710, gaps mogelijk door deduplicatie)
 - **Lesson-IDs**: integers 1–300
 - **Levels**: `"A1"` (lessen 1–60), `"A2"` (lessen 61–120), `"B1"` (lessen 121–300)
 - **Elke les**: exact 8 woorden (uitzondering: les 3 heeft 10 vanwege cijferreeks)
+- **Extra woorden buiten lessen**: 193 woorden (133 A1/A2 + 60 B1) staan niet in een `words`-lijst maar hebben wel een `lesson`-nummer; ze draaien mee in de toetsles van dat blok (quizselectie op `w.lesson`) en in het woordenboek. 60 A1/A2-woorden hebben `lesson: 0` en zijn alleen in het woordenboek zichtbaar
 - **Zelfstandige naamwoorden**: altijd met lidwoord (`il/la/lo/l'/i/le/gli`)
 - **Grammatica**: A1-niveau = herkenning, geen productie van complexe constructies
 
 ---
 
-## Huidige staat (v1.41)
+## Huidige staat (v1.43)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
-- **2440 woorden**: A1 = 500, A2 = 500, B1 = 1440
+- **2500 woorden**: A1 = 500, A2 = 500, B1 = 1500
 - **Woordtelling per les**: 8 (les 3: 10)
 
 ### Niveau-indeling (CEFR)
@@ -116,7 +119,7 @@ Array van woord-objecten:
 |--------|--------|---------|-----------|
 | A1 | 1–60 | 500 | 500–700 ✓ |
 | A2 | 61–120 | 500 | +500–800 ✓ |
-| B1 | 121–300 | 1440 | +1500 (bijna compleet) |
+| B1 | 121–300 | 1500 | +1500 ✓ |
 
 ### Milestone-namen (MILESTONE_NAMES in app.js)
 
@@ -145,13 +148,17 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | `fill-in-blank-mc` | Zin met gat, kies het juiste woord (4 opties) |
 | `fill-in-blank-type` | Zin met gat, typ het ontbrekende woord |
 | `matching` | Koppel 4 Italiaanse woorden aan hun Nederlandse vertaling |
+| `find-error` | Fout zoeken: Italiaanse zin met één fout woord, tik op het foute woord (v1.42) |
+| `sentence-dictation` | Zinsdictee: TTS spreekt een hele zin uit, typ de zin (Levenshtein-tolerantie per woord); zonder TTS fallback naar word-order (v1.42) |
+| `category-sort` | Categorie sorteren: 6 woorden (2 categorieën × 3) aan de juiste categorie toewijzen (v1.42) |
 | `grammar` | Grammaticakaart met uitleg (tussen oefeningen) |
 | `intro` | Les-introductiekaart (eerste kaart van elke les) |
 
 **Oefeningenrij-logica** (buildExerciseQueue in exercises.js):
 - Nieuw woord: flashcard → MC of listen-choose → type of listen-type (30% dictee als TTS beschikbaar)
-- Per les extra: max 3 word-order, max 2 sentence-choice, max 3 fill-in-blank-mc, 1 matching
-- Review-woord: random type incl. word-order, sentence-choice, fill-in-blank-type, matching
+- Per les extra: max 3 word-order, max 2 sentence-choice, max 3 fill-in-blank-mc, 1 matching, max 2 find-error, max 2 sentence-dictation (alleen met TTS), 1 category-sort (als de les 2+ categorieën met elk 2+ woorden heeft)
+- Review-woord: random type incl. word-order, sentence-choice, fill-in-blank-type, find-error, sentence-dictation; plus 1 matching en 1 category-sort per review-sessie als er genoeg woorden zijn
+- MC-afleiders komen bij voorkeur uit dezelfde categorie, daarna dezelfde les, daarna hetzelfde niveau (v1.41c)
 
 ### App-schermen
 - **Home**: lessenlijst met niveau-headers, voortgangsbadges, "Mijn positie"-knop, review-badge
@@ -176,6 +183,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
   | Flashcard "Goed" / antwoord correct | 3–4 | interval × easeFactor (1d→6d→15d→…) |
   | Flashcard "Makkelijk" | 5 | interval groeit snel, easeFactor stijgt |
   - Dagelijkse herhaling (`getDueWordIds`) = alle woorden met `nextReview <= vandaag`, max 20
+  - Overflow (>20 vervallen woorden) wordt na de sessie met `snoozeWordUntilTomorrow` naar morgen verschoven zodat de review-badge leeg is (v1.41c)
   - De review is automatisch gevuld met foute/moeilijke woorden — geen extra logica nodig
   - `sessionErrors[]` = foute woorden deze sessie (max 10, uniek op `it`-veld)
 - **Directe herhaalronde** (`startErrorRetry`): knop "🔁 Oefen foute woorden (N)" op afsluitscherm van les én review, zichtbaar als `sessionErrors.length > 0`. Start mini-sessie via `buildExerciseQueue([], errorWords, VOCAB)` met `isReviewMode = true`. Recursief: nieuwe fouten → knop verschijnt opnieuw.
@@ -204,6 +212,12 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.39 | Sprint 3: UI-fixes (terugnavigatie vergrendeld, kleurthema's, Doorgaan-kaart, SW-update-banner) |
 | v1.40 | Sprint 4: B1-content — 60 nieuwe lessen (121–180), 480 woorden, 6 grammaticablokken |
 | v1.41 | Sprint 5: B1-uitbreiding (120 extra lessen 181–300, 960 woorden) + 2 nieuwe oefenvormen (gat-invullen, koppelen) |
+| v1.41b | Doorgaan-kaart toont toetsles; MILESTONE_POINTS uitgebreid tot 300 |
+| v1.41c | Android PWA fix (manifest id/scope), review-badge leeg na sessie (overflow gesnoozed), MC-afleiders uit zelfde categorie, logo offline gecached |
+| v1.42 | Sprint 6: drie nieuwe oefenvormen — fout zoeken, zinsdictee, categorie sorteren |
+| v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
+| v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
+| v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
 
 ---
 
@@ -217,7 +231,7 @@ Gebruik dit als maatlat bij het plannen van content en features.
 |--------|--------------------|--------------------|-----------|
 | A1 | ±500–700 | 500–700 | 500 ✓ |
 | A2 | ±1.000–1.500 | +500–800 | 500 ✓ |
-| B1 | ±2.500–3.000 | +1.500 | 1440 (bijna compleet) |
+| B1 | ±2.500–3.000 | +1.500 | 1500 ✓ |
 | B2+ | ±5.000 | +2.000 | 0 |
 
 ### Grammatica per niveau
@@ -252,26 +266,27 @@ Tot B2 = circa **600–800 uur** totale studie.
 
 ### Implicaties voor Vocado
 
-- **A1 woordtekort**: 432 vs. 500–700 doel → ~70 woorden toe te voegen
-- **A2 woordtekort**: 435 vs. 500–800 doel → ~65–365 woorden toe te voegen
-- **B1 ontbreekt volledig**: eerste prioriteit na A2-aanvulling
+- **Woordenschat A1/A2/B1**: alle drie op CEFR-doel (500 / 500 / 1500) sinds v1.43 — geen woordtekort meer
+- **B2**: niet aanwezig; pas zinvol na Spaans en leesteksten
 - **Spreken**: buiten scope van huidige app (Web Speech API biedt geen beoordelingsfunctie)
 - **Leesteksten**: zinvolle uitbreiding voor A2/B1 — korte dialogen of paragrafen als los oefentype
+- **Schrijven**: zinsdictee (v1.42) dekt nu het typen van hele zinnen; vrije schrijfopdrachten blijven buiten scope
 
 ---
 
 ## Bekende issues
 
 - **git push credentials**: werkt niet automatisch op dit apparaat — altijd handmatig pushen
+- **Dubbele Italiaanse woorden**: 371 `it`-waarden komen meer dan één keer voor in vocabulary.json, waarvan 176 binnen hetzelfde niveau (bijv. `il conto`, `la salute`, `il regista`). Ontstaan bij de B1-generatie; eerdere deduplicaties (v1.34/v1.35) dekten alleen A1/A2. Opschonen betekent lessen opnieuw op 8 woorden brengen, dus een aparte sprint
 ---
 
 ## Gepland / toekomstige sprints
 
 | Prioriteit | Sprint | Toelichting |
 |---|---|---|
-| Hoog | **Spaans toevoegen** | Tweede taal naast Italiaans; zelfde lesstructuur, eigen curriculum + woordenlijst |
-| Middel | **Nieuwe oefenvormen** | Bijv. vervoegen, leestekst — gat-invullen en koppelen zijn al geïmplementeerd |
-| Laag | **B1-woorduitbreiding** | B1 heeft nu 1440 woorden, CEFR-doel is +1500 — bijna compleet, ~60 woorden resterend |
+| Hoog | **Spaans toevoegen** | Tweede taal naast Italiaans; zelfde lesstructuur, eigen curriculum + woordenlijst. Vereist: data per taal splitsen, taalkeuze in `lang`-scherm activeren, opslag-keys per taal |
+| Middel | **Nieuwe oefenvormen** | Nog open: vervoegen, leestekst. Al geïmplementeerd: gat-invullen, koppelen, fout zoeken, zinsdictee, categorie sorteren |
+| Laag | **Opruimen root** | `index.html`, `italiano-per-vacanza.html` en `sw.js` in de root zijn restanten van vóór de `www/`-structuur; deploy gebruikt alleen `www/` |
 
 ---
 
