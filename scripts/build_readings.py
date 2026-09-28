@@ -9,7 +9,7 @@ Draai opnieuw na het bewerken van dit bestand: python3 scripts/build_readings.py
 import json
 from pathlib import Path
 
-OUT = Path(__file__).parent.parent / 'www' / 'data' / 'readings.json'
+OUT = Path(__file__).parent.parent / 'www' / 'data' / 'it' / 'readings.json'
 
 def R(milestone, level, title, text, *qs):
     return {'id': f'r{milestone}', 'milestone': milestone, 'level': level, 'title': title, 'text': text.strip(),

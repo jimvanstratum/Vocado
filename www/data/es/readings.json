@@ -1,0 +1,236 @@
+[
+  {
+    "id": "r10",
+    "milestone": 10,
+    "level": "A1",
+    "title": "Me llamo Carlos",
+    "text": "¡Hola! Me llamo Carlos y tengo treinta años. Soy español, de Sevilla. Vivo en una casa pequeña con mi mujer Laura y nuestro hijo Pablo. Pablo tiene cuatro años.\nPor la mañana tomo un café con leche y como pan con tomate. Al mediodía comemos en casa. Por la noche vamos al restaurante con los amigos. ¡Buenas noches y buen provecho!",
+    "questions": [
+      {
+        "q": "Waar woont Carlos?",
+        "options": [
+          "In Madrid",
+          "In Sevilla",
+          "In Barcelona",
+          "In Valencia"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe oud is Pablo?",
+        "options": [
+          "Drie jaar",
+          "Vier jaar",
+          "Dertig jaar",
+          "Veertien jaar"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat eet Carlos 's ochtends?",
+        "options": [
+          "Paella",
+          "Tortilla",
+          "Brood met tomaat",
+          "Fruit"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r20",
+    "milestone": 20,
+    "level": "A1",
+    "title": "Un sábado en Madrid",
+    "text": "Hoy es sábado. Hace buen tiempo: hay sol y no llueve. Tomo el metro y voy al centro.\nEn el mercado compro una camisa azul y unos zapatos. Cuestan cuarenta euros. Después visito el museo con mi hermana. A las seis volvemos a casa en autobús. El domingo jugamos al fútbol en el parque.",
+    "questions": [
+      {
+        "q": "Hoe is het weer?",
+        "options": [
+          "Het regent",
+          "Het sneeuwt",
+          "Het is zonnig",
+          "Het is bewolkt"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat koopt de schrijver op de markt?",
+        "options": [
+          "Een rok en een hoed",
+          "Een blauw overhemd en schoenen",
+          "Een jas",
+          "Een fiets"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe gaan ze naar huis?",
+        "options": [
+          "Met de metro",
+          "Met de bus",
+          "Te voet",
+          "Met de taxi"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r30",
+    "milestone": 30,
+    "level": "A1",
+    "title": "La casa de Ana",
+    "text": "Ana vive en un piso en Valencia. La casa tiene una cocina, un baño, un salón y dos dormitorios. El salón es grande y tiene un sofá verde y una ventana grande.\nAna está contenta: su cumpleaños es el viernes. Invita a sus amigos a cenar. Compra fruta, verdura y un postre en el mercado. El fin de semana es siempre tranquilo.",
+    "questions": [
+      {
+        "q": "Hoeveel slaapkamers heeft de woning?",
+        "options": [
+          "Eén",
+          "Twee",
+          "Drie",
+          "Vier"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Welke kleur heeft de bank?",
+        "options": [
+          "Rood",
+          "Blauw",
+          "Groen",
+          "Wit"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wanneer is de verjaardag van Ana?",
+        "options": [
+          "Maandag",
+          "Woensdag",
+          "Vrijdag",
+          "Zondag"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r40",
+    "milestone": 40,
+    "level": "A1",
+    "title": "En el hotel",
+    "text": "¡Buenos días! Tengo una reserva para dos noches. La habitación está en el tercer piso, cerca del ascensor. Es pequeña pero bonita, con vistas al mar.\nTengo dolor de cabeza. Pregunto en recepción: \"¿Dónde está la farmacia?\" \"Todo recto y después a la izquierda, al lado de la iglesia.\" ¡Muchas gracias! Mañana salimos temprano: tengo hambre y tengo sed, pero estoy contento.",
+    "questions": [
+      {
+        "q": "Hoeveel nachten blijft de gast?",
+        "options": [
+          "Eén nacht",
+          "Twee nachten",
+          "Drie nachten",
+          "Een week"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat is het probleem van de gast?",
+        "options": [
+          "Hoofdpijn",
+          "Koorts",
+          "Buikpijn",
+          "Een verkoudheid"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Waar is de apotheek?",
+        "options": [
+          "Rechts, naast het station",
+          "Rechtdoor en dan links, bij de kerk",
+          "In het hotel",
+          "Aan zee"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r50",
+    "milestone": 50,
+    "level": "A1",
+    "title": "En el bar con Luis",
+    "text": "Cada mañana voy al bar con mi amigo Luis. Yo tomo un café con leche y un churro, él toma un té. El camarero es simpático y siempre habla del tiempo: hoy está nublado.\nDespués del bar, Luis va al trabajo en bicicleta. Yo tomo el tren a las ocho y media. El sábado hacemos una excursión a la montaña con la familia. ¡Por fin un poco de deporte!",
+    "questions": [
+      {
+        "q": "Wat drinkt Luis?",
+        "options": [
+          "Een koffie met melk",
+          "Een espresso",
+          "Thee",
+          "Water"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Hoe gaat Luis naar zijn werk?",
+        "options": [
+          "Met de trein",
+          "Met de auto",
+          "Op de fiets",
+          "Te voet"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat doen ze zaterdag?",
+        "options": [
+          "Een uitstapje naar de bergen",
+          "Naar de bioscoop",
+          "Voetballen",
+          "Zwemmen"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "r60",
+    "milestone": 60,
+    "level": "A1",
+    "title": "El viaje de Sofía",
+    "text": "Sofía es profesora en Bilbao. Mañana viaja a Mallorca. En el aeropuerto enseña el pasaporte y el billete en el móvil. El avión despega a las diez.\nEn Mallorca quiere ver el mar, la naturaleza y un concierto de flamenco. También compra un recuerdo para su abuelo: un pequeño castillo de cerámica. \"¡Qué bonito!\", dice el abuelo.",
+    "questions": [
+      {
+        "q": "Wat is het beroep van Sofía?",
+        "options": [
+          "Dokter",
+          "Lerares",
+          "Kok",
+          "Ingenieur"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe laat stijgt het vliegtuig op?",
+        "options": [
+          "Om acht uur",
+          "Om tien uur",
+          "Om twaalf uur",
+          "Om zes uur"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat koopt Sofía voor haar opa?",
+        "options": [
+          "Een boek",
+          "Een keramisch kasteel",
+          "Een fles wijn",
+          "Een T-shirt"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+]

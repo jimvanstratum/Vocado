@@ -1,3 +1,4 @@
+import { getLang } from './lang.js?v=1';
 /**
  * Settings — gebruikersinstellingen opslaan en ophalen.
  * Sprint 10: thema (auto/licht/donker), dagdoel in minuten.
@@ -34,5 +35,6 @@ export function migrateSettingsV10() {
   saveSettings({ dagdoel: newDagdoel, settingsMigratedV10: true });
 }
 
-export function isPlacementDone()  { return getSettings().placementDone; }
-export function markPlacementDone(){ saveSettings({ placementDone: true }); }
+// v1.48: plaatsingstoets per taal (Italiaans houdt de oude sleutel 'placementDone')
+export function isPlacementDone()  { return !!getSettings()[getLang().keys.placement]; }
+export function markPlacementDone(){ saveSettings({ [getLang().keys.placement]: true }); }

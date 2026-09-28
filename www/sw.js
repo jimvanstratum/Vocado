@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocado-20260927-1303';
+const CACHE_NAME = 'vocado-20260927-1935';
 const ASSETS = [
   './',
   './index.html',
@@ -10,15 +10,20 @@ const ASSETS = [
   './icon-512.png',
   './Vocado groot.svg',
   './js/app.js',
+  './js/lang.js',
+  './js/conjugation_es.js',
   './js/srs.js',
   './js/idmap.js',
   './js/progress.js',
   './js/settings.js',
   './js/audio.js',
   './js/exercises.js',
-  './data/vocabulary.json',
-  './data/curriculum.json',
-  './data/readings.json',
+  './data/it/vocabulary.json',
+  './data/it/curriculum.json',
+  './data/it/readings.json',
+  './data/es/vocabulary.json',
+  './data/es/curriculum.json',
+  './data/es/readings.json',
   './data/changelog.json'
 ];
 

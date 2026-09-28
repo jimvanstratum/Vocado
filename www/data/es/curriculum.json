@@ -1,0 +1,1264 @@
+[
+  {
+    "id": 1,
+    "title": "Begroetingen",
+    "emoji": "👋",
+    "level": "A1",
+    "description": "De eerste woorden om iemand te begroeten en te bedanken.",
+    "grammar": {
+      "title": "Tú of usted — informeel of formeel?",
+      "body": "In het Spaans zeg je \"tú\" tegen vrienden en familie en \"usted\" tegen onbekenden en ouderen. Bij usted gebruik je de werkwoordsvorm van hij/zij: ¿Cómo está usted?"
+    },
+    "words": [
+      "e001",
+      "e002",
+      "e003",
+      "e004",
+      "e005",
+      "e006",
+      "e007",
+      "e008"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Stel je voor",
+    "emoji": "🤝",
+    "level": "A1",
+    "description": "Zeg wie je bent en vraag hoe het gaat.",
+    "grammar": {
+      "title": "Ser en estar — twee keer \"zijn\"",
+      "body": "Het Spaans heeft twee werkwoorden voor zijn. \"Ser\" voor wie of wat iets is (soy holandés), \"estar\" voor hoe of waar iets is (estoy bien, estoy en Madrid)."
+    },
+    "words": [
+      "e009",
+      "e010",
+      "e011",
+      "e012",
+      "e013",
+      "e014",
+      "e015",
+      "e016"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Cijfers 1-10",
+    "emoji": "🔢",
+    "level": "A1",
+    "description": "Tellen tot tien.",
+    "grammar": {
+      "title": "Getallen gebruiken",
+      "body": "Getallen veranderen niet, behalve \"uno\": vóór een mannelijk woord wordt het \"un\" (un libro) en vóór een vrouwelijk woord \"una\" (una casa)."
+    },
+    "words": [
+      "e017",
+      "e018",
+      "e019",
+      "e020",
+      "e021",
+      "e022",
+      "e023",
+      "e024",
+      "e025",
+      "e026"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Hogere cijfers & prijzen",
+    "emoji": "💶",
+    "level": "A1",
+    "description": "Grotere getallen en vragen wat iets kost.",
+    "grammar": {
+      "title": "Samengestelde getallen",
+      "body": "Van 16 tot 29 schrijf je getallen aan elkaar: dieciséis, veintiuno. Vanaf 31 gebruik je \"y\": treinta y uno, cuarenta y dos."
+    },
+    "words": [
+      "e027",
+      "e028",
+      "e029",
+      "e030",
+      "e031",
+      "e032",
+      "e033",
+      "e034"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Kleuren",
+    "emoji": "🎨",
+    "level": "A1",
+    "description": "De basiskleuren.",
+    "grammar": {
+      "title": "Bijvoeglijke naamwoorden passen zich aan",
+      "body": "Kleuren op -o veranderen mee met het woord: el coche rojo, la casa roja, los coches rojos. Kleuren op -e of een medeklinker (verde, azul, gris) veranderen alleen in het meervoud."
+    },
+    "words": [
+      "e035",
+      "e036",
+      "e037",
+      "e038",
+      "e039",
+      "e040",
+      "e041",
+      "e042"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Familie",
+    "emoji": "👨‍👩‍👧‍👦",
+    "level": "A1",
+    "description": "Je naaste familie benoemen.",
+    "grammar": {
+      "title": "Bezittelijke voornaamwoorden",
+      "body": "mi (mijn), tu (jouw), su (zijn/haar/uw), nuestro (ons). In het meervoud krijgen ze een -s: mis padres, tus hermanos."
+    },
+    "words": [
+      "e043",
+      "e044",
+      "e045",
+      "e046",
+      "e047",
+      "e048",
+      "e049",
+      "e050"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Het lichaam",
+    "emoji": "🫀",
+    "level": "A1",
+    "description": "Lichaamsdelen — handig bij de dokter en in noodgevallen.",
+    "grammar": {
+      "title": "Lidwoorden: el, la, los, las",
+      "body": "\"El\" voor mannelijke woorden (el pie), \"la\" voor vrouwelijke (la mano). Meervoud: los, las. Let op: la mano is vrouwelijk, el día is mannelijk."
+    },
+    "words": [
+      "e051",
+      "e052",
+      "e053",
+      "e054",
+      "e055",
+      "e056",
+      "e057",
+      "e058"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Thuis",
+    "emoji": "🏠",
+    "level": "A1",
+    "description": "De kamers en delen van een huis.",
+    "grammar": {
+      "title": "Er is / er zijn — hay",
+      "body": "Het woord \"hay\" betekent zowel \"er is\" als \"er zijn\": Hay una cocina grande. Hay dos dormitorios. Het verandert nooit."
+    },
+    "words": [
+      "e059",
+      "e060",
+      "e061",
+      "e062",
+      "e063",
+      "e064",
+      "e065",
+      "e066"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Eten & drinken",
+    "emoji": "🍝",
+    "level": "A1",
+    "description": "De basis van eten en drinken.",
+    "grammar": {
+      "title": "Onbepaald lidwoord: un, una",
+      "body": "\"Un\" voor mannelijke woorden (un café), \"una\" voor vrouwelijke (una cerveza). Meervoud: unos, unas (een paar)."
+    },
+    "words": [
+      "e067",
+      "e068",
+      "e069",
+      "e070",
+      "e071",
+      "e072",
+      "e073",
+      "e074"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "In het restaurant",
+    "emoji": "🍽️",
+    "level": "A1",
+    "description": "Bestellen en betalen in een restaurant.",
+    "grammar": {
+      "title": "Voorkeuren uitdrukken met \"quisiera\"",
+      "body": "\"Quisiera\" (ik zou graag willen) is de beleefde vorm van \"quiero\" (ik wil): Quisiera una mesa para dos. Ook heel gebruikelijk: \"¿Me pone...?\" (Geeft u mij...?)."
+    },
+    "words": [
+      "e075",
+      "e076",
+      "e077",
+      "e078",
+      "e079",
+      "e080",
+      "e081",
+      "e082"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Winkelen",
+    "emoji": "🛍️",
+    "level": "A1",
+    "description": "Woorden voor in de winkel en op de markt.",
+    "grammar": {
+      "title": "Aanwijzende voornaamwoorden: este / ese / aquel",
+      "body": "\"Este\" is dit (dichtbij), \"ese\" is dat (bij de ander), \"aquel\" is dat daar (ver weg). Ze passen zich aan: esta camisa, estos zapatos."
+    },
+    "words": [
+      "e083",
+      "e084",
+      "e085",
+      "e086",
+      "e087",
+      "e088",
+      "e089",
+      "e090"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Kleding",
+    "emoji": "👗",
+    "level": "A1",
+    "description": "Kledingstukken en maten.",
+    "grammar": {
+      "title": "Meervoud van zelfstandige naamwoorden",
+      "body": "Eindigt een woord op een klinker, dan krijgt het -s (camisa → camisas). Eindigt het op een medeklinker, dan -es (pantalón → pantalones)."
+    },
+    "words": [
+      "e091",
+      "e092",
+      "e093",
+      "e094",
+      "e095",
+      "e096",
+      "e097",
+      "e098"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Transport",
+    "emoji": "🚌",
+    "level": "A1",
+    "description": "Vervoermiddelen en het station.",
+    "grammar": {
+      "title": "Voorzetsels: en, con, a",
+      "body": "\"En\" = in/met (en tren, en Madrid), \"con\" = met (con mi amigo), \"a\" = naar (voy a Barcelona). Let op: a + el = al (voy al aeropuerto)."
+    },
+    "words": [
+      "e099",
+      "e100",
+      "e101",
+      "e102",
+      "e103",
+      "e104",
+      "e105",
+      "e106"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "In de stad",
+    "emoji": "🏛️",
+    "level": "A1",
+    "description": "Belangrijke plekken in de stad.",
+    "grammar": {
+      "title": "Waar is...? — ¿Dónde está?",
+      "body": "Voor plaatsen gebruik je altijd \"estar\": ¿Dónde está la farmacia? Meervoud: ¿Dónde están los baños?"
+    },
+    "words": [
+      "e107",
+      "e108",
+      "e109",
+      "e110",
+      "e111",
+      "e112",
+      "e113",
+      "e114"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Het weer",
+    "emoji": "⛅",
+    "level": "A1",
+    "description": "Over het weer praten.",
+    "grammar": {
+      "title": "Weer uitdrukken met \"hace\" en \"hay\"",
+      "body": "Voor het weer gebruik je vaak \"hace\": hace calor, hace frío, hace sol. Met \"hay\" zeg je dat iets er is: hay viento, hay nubes. Regenen is een werkwoord: llueve."
+    },
+    "words": [
+      "e115",
+      "e116",
+      "e117",
+      "e118",
+      "e119",
+      "e120",
+      "e121",
+      "e122"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Tijdsaanduidingen",
+    "emoji": "⏰",
+    "level": "A1",
+    "description": "Delen van de dag en \"nu\".",
+    "grammar": {
+      "title": "Hoe laat is het? — ¿Qué hora es?",
+      "body": "Es la una (één uur), son las dos (twee uur). Halve uren: son las tres y media. Kwart: y cuarto / menos cuarto."
+    },
+    "words": [
+      "e123",
+      "e124",
+      "e125",
+      "e126",
+      "e127",
+      "e128",
+      "e129",
+      "e130"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Dagen van de week",
+    "emoji": "📅",
+    "level": "A1",
+    "description": "De zeven dagen.",
+    "grammar": {
+      "title": "Dagen met lidwoord",
+      "body": "Dagen zijn mannelijk en krijgen \"el\" als je \"op\" bedoelt: el lunes = op maandag. Meervoud \"los lunes\" = elke maandag. Geen hoofdletter."
+    },
+    "words": [
+      "e131",
+      "e132",
+      "e133",
+      "e134",
+      "e135",
+      "e136",
+      "e137",
+      "e138"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Maanden & seizoenen",
+    "emoji": "🌸",
+    "level": "A1",
+    "description": "Maanden en seizoenen benoemen.",
+    "grammar": {
+      "title": "En + maand / seizoen",
+      "body": "\"En enero\" (in januari), \"en verano\" (in de zomer). Maanden hebben geen hoofdletter en geen lidwoord."
+    },
+    "words": [
+      "e139",
+      "e140",
+      "e141",
+      "e142",
+      "e143",
+      "e144",
+      "e145",
+      "e146"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Vrije tijd & hobby's",
+    "emoji": "🎭",
+    "level": "A1",
+    "description": "Vertellen wat je leuk vindt.",
+    "grammar": {
+      "title": "Me gusta — ik vind het leuk",
+      "body": "\"Me gusta\" + enkelvoud of werkwoord (me gusta leer), \"me gustan\" + meervoud (me gustan los libros). Letterlijk: het bevalt mij."
+    },
+    "words": [
+      "e147",
+      "e148",
+      "e149",
+      "e150",
+      "e151",
+      "e152",
+      "e153",
+      "e154"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Sport & natuur",
+    "emoji": "⛵",
+    "level": "A1",
+    "description": "Sport en de natuur om je heen.",
+    "grammar": {
+      "title": "Hacer deporte — sport doen",
+      "body": "\"Hacer deporte\" is sporten. Voor een balsport gebruik je \"jugar a\": juego al fútbol. Let op de klinkerwisseling: jugar → juego."
+    },
+    "words": [
+      "e155",
+      "e156",
+      "e157",
+      "e158",
+      "e159",
+      "e160",
+      "e161",
+      "e162"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "De markt",
+    "emoji": "🛒",
+    "level": "A1",
+    "description": "Boodschappen doen op de markt.",
+    "grammar": {
+      "title": "Hoeveelheden: un kilo de, medio kilo de",
+      "body": "Op de markt vraag je met \"de\": un kilo de tomates, medio kilo de queso, un litro de leche. \"¿Algo más?\" (Nog iets?) — \"No, nada más.\""
+    },
+    "words": [
+      "e163",
+      "e164",
+      "e165",
+      "e166",
+      "e167",
+      "e168",
+      "e169",
+      "e170"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Meer kleuren",
+    "emoji": "🎨",
+    "level": "A1",
+    "description": "Extra kleuren en beschrijvingen.",
+    "grammar": {
+      "title": "Kleuren die nooit veranderen",
+      "body": "Kleuren die van een voorwerp komen (naranja, rosa, violeta) veranderen niet mee: los coches naranja. \"Claro\" en \"oscuro\" blijven ook gelijk: azul claro, verde oscuro."
+    },
+    "words": [
+      "e171",
+      "e172",
+      "e173",
+      "e174",
+      "e175",
+      "e176",
+      "e177",
+      "e178"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Kleding 2",
+    "emoji": "👗",
+    "level": "A1",
+    "description": "Meer kleding en je aankleden.",
+    "grammar": {
+      "title": "Wederkerende werkwoorden: vestirse, ponerse",
+      "body": "Me visto (ik kleed me aan), te vistes, se viste. \"Ponerse\" is aantrekken: me pongo el abrigo. Het voornaamwoord staat vóór het werkwoord."
+    },
+    "words": [
+      "e179",
+      "e180",
+      "e181",
+      "e182",
+      "e183",
+      "e184",
+      "e185",
+      "e186"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Het lichaam 2",
+    "emoji": "🫁",
+    "level": "A1",
+    "description": "Meer lichaamsdelen en pijn.",
+    "grammar": {
+      "title": "Pijn uitdrukken: me duele / me duelen",
+      "body": "\"Me duele la cabeza\" (mijn hoofd doet pijn), \"me duelen los pies\" (mijn voeten doen pijn). Het werkwoord past zich aan het lichaamsdeel aan, niet aan de persoon."
+    },
+    "words": [
+      "e187",
+      "e188",
+      "e189",
+      "e190",
+      "e191",
+      "e192",
+      "e193",
+      "e194"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Het weer 2",
+    "emoji": "🌤️",
+    "level": "A1",
+    "description": "Weersvoorspelling en seizoenen.",
+    "grammar": {
+      "title": "Onpersoonlijke werkwoorden voor het weer",
+      "body": "Llueve (het regent), nieva (het sneeuwt), hace viento (het waait). Deze werkwoorden staan altijd in de derde persoon."
+    },
+    "words": [
+      "e195",
+      "e196",
+      "e197",
+      "e198",
+      "e199",
+      "e200",
+      "e201",
+      "e202"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Hobby's 2",
+    "emoji": "🎵",
+    "level": "A1",
+    "description": "Meer vrijetijdsactiviteiten.",
+    "grammar": {
+      "title": "Me gusta + infinitief of zelfstandig naamwoord",
+      "body": "\"Me gusta pintar\" (ik schilder graag), \"me gusta el jardín\". Om sterker te zeggen: \"me encanta\". Vragen: ¿Qué te gusta hacer?"
+    },
+    "words": [
+      "e203",
+      "e204",
+      "e205",
+      "e206",
+      "e207",
+      "e208",
+      "e209",
+      "e210"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Vervoer 2",
+    "emoji": "🚌",
+    "level": "A1",
+    "description": "Reizen met trein en metro.",
+    "grammar": {
+      "title": "Ir a / ir en",
+      "body": "\"Ir a\" + bestemming: voy a Madrid. \"Ir en\" + vervoermiddel: voy en tren. Uitzondering: a pie (te voet)."
+    },
+    "words": [
+      "e211",
+      "e212",
+      "e213",
+      "e214",
+      "e215",
+      "e216",
+      "e217",
+      "e218"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Huis & meubels",
+    "emoji": "🏠",
+    "level": "A1",
+    "description": "Meubels en waar ze staan.",
+    "grammar": {
+      "title": "Voorzetsels van plaats: en, sobre, debajo de, delante de",
+      "body": "El libro está en la mesa (op/in), sobre la mesa (op), debajo de la cama (onder), delante de la puerta (voor), detrás de (achter)."
+    },
+    "words": [
+      "e219",
+      "e220",
+      "e221",
+      "e222",
+      "e223",
+      "e224",
+      "e225",
+      "e226"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Kalender & afspraken",
+    "emoji": "📅",
+    "level": "A1",
+    "description": "Data en afspraken maken.",
+    "grammar": {
+      "title": "Data uitdrukken: el + getal + de + maand",
+      "body": "Hoy es el quince de marzo. De eerste dag: el uno (of el primero) de mayo. Vragen: ¿Qué día es hoy?"
+    },
+    "words": [
+      "e227",
+      "e228",
+      "e229",
+      "e230",
+      "e231",
+      "e232",
+      "e233",
+      "e234"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Gevoelens",
+    "emoji": "😊",
+    "level": "A1",
+    "description": "Zeggen hoe je je voelt.",
+    "grammar": {
+      "title": "Estar + bijvoeglijk naamwoord voor gemoedstoestand",
+      "body": "Voor tijdelijke gevoelens gebruik je \"estar\": estoy contento, estás triste, está enfadada. Het bijvoeglijk naamwoord past zich aan: contento/contenta."
+    },
+    "words": [
+      "e235",
+      "e236",
+      "e237",
+      "e238",
+      "e239",
+      "e240",
+      "e241",
+      "e242"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Hotel & verblijf",
+    "emoji": "🏨",
+    "level": "A1",
+    "description": "Inchecken en vragen stellen in het hotel.",
+    "grammar": {
+      "title": "Poder — kunnen / mogen",
+      "body": "\"¿Puedo...?\" (mag ik) en \"¿Puede...?\" (kunt u) zijn de beleefde manier om iets te vragen: ¿Puede ayudarme? Let op: poder → puedo, puedes, puede."
+    },
+    "words": [
+      "e243",
+      "e244",
+      "e245",
+      "e246",
+      "e247",
+      "e248",
+      "e249",
+      "e250"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Noodgevallen",
+    "emoji": "🚨",
+    "level": "A1",
+    "description": "Hulp vragen in een noodsituatie.",
+    "grammar": {
+      "title": "De gebiedende wijs in noodgevallen",
+      "body": "¡Llame a la policía! (Belt u de politie!) ¡Ayúdeme! (Help me!) Het noodnummer in Spanje is 112."
+    },
+    "words": [
+      "e251",
+      "e252",
+      "e253",
+      "e254",
+      "e255",
+      "e256",
+      "e257",
+      "e258"
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Gezondheid",
+    "emoji": "🏥",
+    "level": "A1",
+    "description": "Klachten uitleggen bij de dokter.",
+    "grammar": {
+      "title": "Tener + klacht",
+      "body": "Tengo fiebre (ik heb koorts), tengo dolor de cabeza (ik heb hoofdpijn), tengo frío. Zich voelen: me siento mal / bien."
+    },
+    "words": [
+      "e259",
+      "e260",
+      "e261",
+      "e262",
+      "e263",
+      "e264",
+      "e265",
+      "e266"
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Beschrijvingen",
+    "emoji": "✨",
+    "level": "A1",
+    "description": "Dingen en mensen beschrijven.",
+    "grammar": {
+      "title": "Bijvoeglijk naamwoord na het zelfstandig naamwoord",
+      "body": "In het Spaans staat het bijvoeglijk naamwoord meestal achter het woord: una casa grande, un coche nuevo. \"Bueno\" en \"malo\" kunnen ervoor: un buen día."
+    },
+    "words": [
+      "e267",
+      "e268",
+      "e269",
+      "e270",
+      "e271",
+      "e272",
+      "e273",
+      "e274"
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Gevoelens 2",
+    "emoji": "😊",
+    "level": "A1",
+    "description": "Diepere gevoelens uitdrukken.",
+    "grammar": {
+      "title": "Me siento vs. Estoy",
+      "body": "\"Me siento\" (ik voel me) + bijvoeglijk naamwoord: me siento nervioso. \"Estoy\" werkt ook: estoy nervioso. \"Tener miedo\" is bang zijn."
+    },
+    "words": [
+      "e275",
+      "e276",
+      "e277",
+      "e278",
+      "e279",
+      "e280",
+      "e281",
+      "e282"
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Werkwoorden in actie",
+    "emoji": "⚡",
+    "level": "A1",
+    "description": "De belangrijkste werkwoorden.",
+    "grammar": {
+      "title": "Regelmatige werkwoorden: -ar, -er, -ir",
+      "body": "Hablar: hablo, hablas, habla, hablamos, habláis, hablan. Comer: como, comes, come, comemos, coméis, comen. Vivir: vivo, vives, vive, vivimos, vivís, viven."
+    },
+    "words": [
+      "e283",
+      "e284",
+      "e285",
+      "e286",
+      "e287",
+      "e288",
+      "e289",
+      "e290"
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Nuttige uitdrukkingen",
+    "emoji": "💬",
+    "level": "A1",
+    "description": "Korte zinnen die je elke dag gebruikt.",
+    "grammar": {
+      "title": "Modale werkwoorden: querer, poder, tener que",
+      "body": "Quiero (ik wil), puedo (ik kan), tengo que (ik moet) + infinitief: Tengo que trabajar. Quiero comer. ¿Puedo entrar?"
+    },
+    "words": [
+      "e291",
+      "e292",
+      "e293",
+      "e294",
+      "e295",
+      "e296",
+      "e297",
+      "e298"
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Richting wijzen",
+    "emoji": "🗺️",
+    "level": "A1",
+    "description": "De weg vragen en uitleggen.",
+    "grammar": {
+      "title": "De weg uitleggen — werkwoorden",
+      "body": "Siga todo recto (ga rechtdoor), gire a la izquierda (sla linksaf), cruce la plaza (steek het plein over). Beleefde gebiedende wijs op -a/-e."
+    },
+    "words": [
+      "e299",
+      "e300",
+      "e301",
+      "e302",
+      "e303",
+      "e304",
+      "e305",
+      "e306"
+    ]
+  },
+  {
+    "id": 39,
+    "title": "De natuur",
+    "emoji": "🌿",
+    "level": "A1",
+    "description": "Landschap en natuur.",
+    "grammar": {
+      "title": "Uitroepen met ¡Qué...!",
+      "body": "¡Qué bonito! (Wat mooi!), ¡Qué calor! (Wat een hitte!), ¡Qué paisaje! Let op de omgekeerde uitroeptekens aan het begin."
+    },
+    "words": [
+      "e307",
+      "e308",
+      "e309",
+      "e310",
+      "e311",
+      "e312",
+      "e313",
+      "e314"
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Klaar voor vertrek! 🇪🇸",
+    "emoji": "✈️",
+    "level": "A1",
+    "description": "Vaste uitdrukkingen voor onderweg — je bent op de helft!",
+    "grammar": {
+      "title": "Op de helft — goed bezig!",
+      "body": "Je kent nu ruim 300 woorden. Deze uitdrukkingen hoor je overal in Spanje. ¡Buen viaje!"
+    },
+    "words": [
+      "e315",
+      "e316",
+      "e317",
+      "e318",
+      "e319",
+      "e320",
+      "e321",
+      "e322"
+    ]
+  },
+  {
+    "id": 41,
+    "title": "In het café",
+    "emoji": "☕",
+    "level": "A1",
+    "description": "Bestellen in een Spaanse bar.",
+    "grammar": {
+      "title": "Bestellen — ¿Me pone...?",
+      "body": "In een bar zeg je \"¿Me pone un café?\" of \"Un café, por favor\". Koffiesoorten: café solo (espresso), café con leche, cortado (met een beetje melk)."
+    },
+    "words": [
+      "e323",
+      "e324",
+      "e325",
+      "e326",
+      "e327",
+      "e328",
+      "e329",
+      "e330"
+    ]
+  },
+  {
+    "id": 42,
+    "title": "En el restaurante",
+    "emoji": "🍝",
+    "level": "A1",
+    "description": "Een volledige maaltijd in Spanje.",
+    "grammar": {
+      "title": "De maaltijdstructuur in Spanje",
+      "body": "Spanjaarden lunchen laat (14–15 uur) en dineren rond 21–22 uur. Een \"menú del día\" is een vast dagmenu met primer plato, segundo plato en postre."
+    },
+    "words": [
+      "e331",
+      "e332",
+      "e333",
+      "e334",
+      "e335",
+      "e336",
+      "e337",
+      "e338"
+    ]
+  },
+  {
+    "id": 43,
+    "title": "Vervoer",
+    "emoji": "🚆",
+    "level": "A1",
+    "description": "Treinen en vliegen in Spanje.",
+    "grammar": {
+      "title": "Treinen in Spanje — Renfe & AVE",
+      "body": "De hogesnelheidstrein heet AVE. Een kaartje koop je \"de ida\" (enkel) of \"de ida y vuelta\" (retour). Reserveren is vaak verplicht."
+    },
+    "words": [
+      "e339",
+      "e340",
+      "e341",
+      "e342",
+      "e343",
+      "e344",
+      "e345",
+      "e346"
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Hotel & verblijf 2",
+    "emoji": "🏨",
+    "level": "A1",
+    "description": "Beleefd vragen in het hotel.",
+    "grammar": {
+      "title": "Formele verzoeken in het hotel",
+      "body": "Met \"usted\" ben je beleefd: ¿Podría darme la llave? (Zou u mij de sleutel kunnen geven?) ¿Tiene una habitación libre?"
+    },
+    "words": [
+      "e347",
+      "e348",
+      "e349",
+      "e350",
+      "e351",
+      "e352",
+      "e353",
+      "e354"
+    ]
+  },
+  {
+    "id": 45,
+    "title": "Familie 2",
+    "emoji": "👨‍👩‍👧‍👦",
+    "level": "A1",
+    "description": "De bredere familie.",
+    "grammar": {
+      "title": "Bezittelijk voornaamwoord + familie",
+      "body": "Mi abuelo, mis abuelos, tu tía, sus primos. \"Los padres\" betekent de ouders, \"los hijos\" de kinderen (zonen én dochters)."
+    },
+    "words": [
+      "e355",
+      "e356",
+      "e357",
+      "e358",
+      "e359",
+      "e360",
+      "e361",
+      "e362"
+    ]
+  },
+  {
+    "id": 46,
+    "title": "De weg vragen",
+    "emoji": "🗺️",
+    "level": "A1",
+    "description": "De weg vragen aan een voorbijganger.",
+    "grammar": {
+      "title": "Beleefde gebiedende wijs",
+      "body": "Tegen onbekenden: siga (ga door), gire (sla af), cruce (steek over), tome (neem). Perdone, ¿cómo llego a la estación?"
+    },
+    "words": [
+      "e363",
+      "e364",
+      "e365",
+      "e366",
+      "e367",
+      "e368",
+      "e369",
+      "e370"
+    ]
+  },
+  {
+    "id": 47,
+    "title": "Het weer 3",
+    "emoji": "☀️",
+    "level": "A1",
+    "description": "Praten over het weer van vandaag.",
+    "grammar": {
+      "title": "Weersuitdrukkingen met \"hacer\" en \"estar\"",
+      "body": "Hace buen tiempo / mal tiempo. Está nublado (het is bewolkt), está lloviendo (het regent nu). ¿Qué tiempo hace?"
+    },
+    "words": [
+      "e371",
+      "e372",
+      "e373",
+      "e374",
+      "e375",
+      "e376",
+      "e377",
+      "e378"
+    ]
+  },
+  {
+    "id": 48,
+    "title": "Gezondheid 2",
+    "emoji": "🏥",
+    "level": "A1",
+    "description": "Bij de apotheek.",
+    "grammar": {
+      "title": "Pijn en klachten uitdrukken",
+      "body": "Estoy resfriado (ik ben verkouden), tengo tos (ik hoest), soy alérgico a... (ik ben allergisch voor). Bij de apotheek: ¿Tiene algo para el dolor de cabeza?"
+    },
+    "words": [
+      "e379",
+      "e380",
+      "e381",
+      "e382",
+      "e383",
+      "e384",
+      "e385",
+      "e386"
+    ]
+  },
+  {
+    "id": 49,
+    "title": "Activiteiten & hobby's",
+    "emoji": "🎭",
+    "level": "A1",
+    "description": "Hoe vaak doe je iets?",
+    "grammar": {
+      "title": "Frequentie: siempre, a menudo, nunca",
+      "body": "Siempre (altijd), a menudo (vaak), a veces (soms), nunca (nooit). \"Nunca\" met dubbele ontkenning: no voy nunca."
+    },
+    "words": [
+      "e387",
+      "e388",
+      "e389",
+      "e390",
+      "e391",
+      "e392",
+      "e393",
+      "e394"
+    ]
+  },
+  {
+    "id": 50,
+    "title": "Plannen maken",
+    "emoji": "📅",
+    "level": "A1",
+    "description": "Over de nabije toekomst praten.",
+    "grammar": {
+      "title": "De nabije toekomst — ir a + infinitief",
+      "body": "Voy a comer (ik ga eten), vamos a viajar (we gaan reizen). Zo praat je over plannen zonder de toekomende tijd te kennen."
+    },
+    "words": [
+      "e395",
+      "e396",
+      "e397",
+      "e398",
+      "e399",
+      "e400",
+      "e401",
+      "e402"
+    ]
+  },
+  {
+    "id": 51,
+    "title": "De luchthaven",
+    "emoji": "✈️",
+    "level": "A1",
+    "description": "Op het vliegveld.",
+    "grammar": {
+      "title": "Tener que + infinitief — verplichting",
+      "body": "Tengo que facturar la maleta (ik moet de koffer inchecken). Tienes que enseñar el pasaporte. \"Hay que\" is onpersoonlijk: hay que esperar."
+    },
+    "words": [
+      "e403",
+      "e404",
+      "e405",
+      "e406",
+      "e407",
+      "e408",
+      "e409",
+      "e410"
+    ]
+  },
+  {
+    "id": 52,
+    "title": "Bij de dokter",
+    "emoji": "🤒",
+    "level": "A1",
+    "description": "Een gesprek bij de dokter.",
+    "grammar": {
+      "title": "Desde hace + tijdsduur — hoe lang al?",
+      "body": "Tengo fiebre desde hace dos días (ik heb al twee dagen koorts). ¿Desde cuándo? (Sinds wanneer?)"
+    },
+    "words": [
+      "e411",
+      "e412",
+      "e413",
+      "e414",
+      "e415",
+      "e416",
+      "e417",
+      "e418"
+    ]
+  },
+  {
+    "id": 53,
+    "title": "Beroepen",
+    "emoji": "💼",
+    "level": "A1",
+    "description": "Vertellen wat je doet.",
+    "grammar": {
+      "title": "Beroepen zonder lidwoord",
+      "body": "Soy médico, es profesora (zonder \"un/una\"). Vrouwelijke vormen: el profesor / la profesora, el camarero / la camarera."
+    },
+    "words": [
+      "e419",
+      "e420",
+      "e421",
+      "e422",
+      "e423",
+      "e424",
+      "e425",
+      "e426"
+    ]
+  },
+  {
+    "id": 54,
+    "title": "De natuur 2",
+    "emoji": "🌿",
+    "level": "A1",
+    "description": "Dieren en landschap.",
+    "grammar": {
+      "title": "Vergelijkingen: más… que en -ísimo",
+      "body": "El río es más largo que el lago (langer dan). Overtreffend: el más largo. Versterking met -ísimo: grandísimo, bellísimo."
+    },
+    "words": [
+      "e427",
+      "e428",
+      "e429",
+      "e430",
+      "e431",
+      "e432",
+      "e433",
+      "e434"
+    ]
+  },
+  {
+    "id": 55,
+    "title": "Technologie",
+    "emoji": "💻",
+    "level": "A1",
+    "description": "Telefoon en internet.",
+    "grammar": {
+      "title": "Beleefd vragen met podría",
+      "body": "¿Podría darme la contraseña del wifi? (Zou u mij het wifi-wachtwoord kunnen geven?) \"Podría\" is de beleefde vorm van \"puede\"."
+    },
+    "words": [
+      "e435",
+      "e436",
+      "e437",
+      "e438",
+      "e439",
+      "e440",
+      "e441",
+      "e442"
+    ]
+  },
+  {
+    "id": 56,
+    "title": "Muziek & cultuur",
+    "emoji": "🎶",
+    "level": "A1",
+    "description": "Uitgaan en cultuur.",
+    "grammar": {
+      "title": "Verbindingswoorden: pero, también, entonces",
+      "body": "Pero (maar), también (ook), entonces (dus/dan), porque (omdat). Me gusta el flamenco, pero también el rock."
+    },
+    "words": [
+      "e443",
+      "e444",
+      "e445",
+      "e446",
+      "e447",
+      "e448",
+      "e449",
+      "e450"
+    ]
+  },
+  {
+    "id": 57,
+    "title": "Sport gevorderd",
+    "emoji": "⚽",
+    "level": "A1",
+    "description": "Voetbal en wedstrijden.",
+    "grammar": {
+      "title": "Dagelijkse routine: wederkerende werkwoorden",
+      "body": "Me levanto (ik sta op), me ducho (ik douche), me acuesto (ik ga naar bed). Vóór het werkwoord: me, te, se, nos, os, se."
+    },
+    "words": [
+      "e451",
+      "e452",
+      "e453",
+      "e454",
+      "e455",
+      "e456",
+      "e457",
+      "e458"
+    ]
+  },
+  {
+    "id": 58,
+    "title": "Reizen gevorderd",
+    "emoji": "🌍",
+    "level": "A1",
+    "description": "Op reis in Spanje en Latijns-Amerika.",
+    "grammar": {
+      "title": "Voorkeur uitdrukken: preferir",
+      "body": "Prefiero el tren (ik heb liever de trein). Prefiero viajar en verano. Let op: preferir → prefiero, prefieres, prefiere."
+    },
+    "words": [
+      "e459",
+      "e460",
+      "e461",
+      "e462",
+      "e463",
+      "e464",
+      "e465",
+      "e466"
+    ]
+  },
+  {
+    "id": 59,
+    "title": "Winkelen gevorderd",
+    "emoji": "🛍️",
+    "level": "A1",
+    "description": "Passen, ruilen en betalen.",
+    "grammar": {
+      "title": "Objectspronomen: lo, la, los, las",
+      "body": "¿La camisa? La quiero (ik wil hem). ¿Los zapatos? Los compro. Het voornaamwoord staat vóór het werkwoord."
+    },
+    "words": [
+      "e467",
+      "e468",
+      "e469",
+      "e470",
+      "e471",
+      "e472",
+      "e473",
+      "e474"
+    ]
+  },
+  {
+    "id": 60,
+    "title": "Stad & toerisme",
+    "emoji": "🏛️",
+    "level": "A1",
+    "description": "Bezienswaardigheden en A1 afgerond!",
+    "grammar": {
+      "title": "Handige vaste uitdrukkingen",
+      "body": "Je hebt A1 afgerond: 60 lessen en 480 woorden. Onthoud: ¡Enhorabuena! (gefeliciteerd), ¡Vale! (oké), ¡No pasa nada! (geeft niet)."
+    },
+    "words": [
+      "e475",
+      "e476",
+      "e477",
+      "e478",
+      "e479",
+      "e480",
+      "e481",
+      "e482"
+    ]
+  }
+]

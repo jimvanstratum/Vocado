@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#0D1A11">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="./icon-192.png">
-  <title>Vocado — Italiaans</title>
+  <title>Vocado</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -379,13 +379,6 @@
     .settings-version { text-align: center; font-size: 12px; color: var(--muted); padding: 8px 0 32px; cursor: pointer; }
 
     /* ── Wat is er nieuw (v1.47) ── */
-    .whatsnew-card { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius); padding: 12px 14px; margin: 0 0 14px; }
-    .whatsnew-emoji { font-size: 22px; }
-    .whatsnew-info { flex: 1; min-width: 0; }
-    .whatsnew-title { font-size: 14px; font-weight: 700; color: var(--text); }
-    .whatsnew-sub { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .whatsnew-btn { background: var(--accent); color: #fff; border: none; border-radius: 999px; padding: 8px 12px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
-    .whatsnew-close { background: none; border: none; color: var(--muted); font-size: 16px; cursor: pointer; padding: 4px; }
     .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 1000; display: flex; align-items: flex-end; justify-content: center; padding: 0; }
     @media (min-width: 600px) { .modal-backdrop { align-items: center; padding: 24px; } }
     .modal { background: var(--bg); color: var(--text); width: 100%; max-width: 560px; max-height: 88vh; border-radius: var(--radius) var(--radius) 0 0; display: flex; flex-direction: column; box-shadow: 0 -8px 40px rgba(0,0,0,.35); }
@@ -919,7 +912,6 @@
       <div class="cp-track"><div class="cp-fill" id="cp-fill" style="width:0%"></div></div>
     </div>
     <div class="daily-goal-section" id="daily-goal-section"></div>
-    <div id="whatsnew-container"></div>
     <div class="review-section">
       <button class="review-btn" id="review-btn">
         <span class="review-btn-icon">🔄</span>
@@ -1020,7 +1012,7 @@
       <div class="settings-section-title">Spraaksnelheid</div>
       <div class="settings-row">
         <div class="settings-row-label">TTS snelheid</div>
-        <div class="settings-row-sub">Hoe snel spreekt de app Italiaans uit?</div>
+        <div class="settings-row-sub">Hoe snel spreekt de app de taal uit?</div>
         <div class="settings-btn-group">
           <button class="settings-seg-btn tts-rate-btn" data-rate="0.7">🐢<br><span style="font-size:10px;font-weight:400">Langzaam</span></button>
           <button class="settings-seg-btn tts-rate-btn" data-rate="1.0">🚶<br><span style="font-size:10px;font-weight:400">Normaal</span></button>
@@ -1033,14 +1025,8 @@
       <div class="settings-section-title">Taal</div>
       <div class="settings-row">
         <div class="settings-row-label">Actieve taal</div>
-        <div class="settings-row-sub">Kies de taal die je wilt leren.</div>
+        <div class="settings-row-sub">Kies de taal die je wilt leren. Je voortgang wordt per taal bewaard.</div>
         <div class="lang-settings-list" id="lang-settings-list">
-          <button class="lang-settings-item lang-settings-active">
-            <span>🇮🇹</span><span class="lsi-name">Italiaans</span><span class="lsi-check">✓</span>
-          </button>
-          <div class="lang-settings-item lang-settings-soon">
-            <span>🇪🇸</span><span class="lsi-name">Spaans</span><span class="lang-badge">Binnenkort</span>
-          </div>
           <div class="lang-settings-item lang-settings-soon">
             <span>🇫🇷</span><span class="lsi-name">Frans</span><span class="lang-badge">Binnenkort</span>
           </div>
@@ -1105,7 +1091,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.47 · Italiaans · 300 lessen · 2500 woorden</div>
+    <div class="settings-version">Vocado · v1.48 <span id="version-detail"></span></div>
   </div>
 </div>
 
@@ -1126,25 +1112,7 @@
     <div class="lang-logo" id="lang-logo"></div>
     <p class="lang-tagline">Kies een taal om te beginnen</p>
   </div>
-  <div class="lang-grid">
-    <button class="lang-card lang-available" id="lang-italian">
-      <span class="lang-flag">🇮🇹</span>
-      <div>
-        <div class="lang-name">Italiaans</div>
-        <div class="lang-level">A1 · A2 · B1</div>
-      </div>
-    </button>
-    <div class="lang-card lang-soon">
-      <span class="lang-flag">🇪🇸</span>
-      <div class="lang-name">Spaans</div>
-      <span class="lang-badge">Binnenkort</span>
-    </div>
-    <div class="lang-card lang-soon">
-      <span class="lang-flag">🇫🇷</span>
-      <div class="lang-name">Frans</div>
-      <span class="lang-badge">Binnenkort</span>
-    </div>
-  </div>
+  <div class="lang-grid" id="lang-grid"></div>
 </div>
 
 <!-- PLAATSINGSTOETS -->
@@ -1261,7 +1229,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=41';
+  import './js/app.js?v=42';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {

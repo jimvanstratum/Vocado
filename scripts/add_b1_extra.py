@@ -11,7 +11,7 @@ IDs: w2651–w2710.
 import json, re, sys
 from pathlib import Path
 
-BASE = Path(__file__).parent.parent / 'www' / 'data'
+BASE = Path(__file__).parent.parent / 'www' / 'data' / 'it'
 VOCAB_FILE = BASE / 'vocabulary.json'
 CURR_FILE  = BASE / 'curriculum.json'
 START_ID = 2651

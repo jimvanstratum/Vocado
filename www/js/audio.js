@@ -3,8 +3,10 @@
  * Werkt met de ingebouwde Web Speech API.
  */
 
+import { getLang } from './lang.js?v=1';
+
 let ttsReady = false;
-let itVoice = null;
+let itVoice = null;   // stem van de actieve taal
 let _globalRate = 0.85; // instelbare snelheid via settings
 
 /** Initialiseer TTS en zoek de beste Italiaanse stem. */
@@ -14,9 +16,10 @@ export function initAudio() {
   const tryFindVoice = () => {
     const voices = window.speechSynthesis.getVoices();
     // Zoek Italiaanse stem, bij voorkeur een native (niet 'compact') stem
-    itVoice = voices.find(v => v.lang === 'it-IT' && !v.name.includes('compact'))
-           || voices.find(v => v.lang === 'it-IT')
-           || voices.find(v => v.lang.startsWith('it'))
+    const code = getLang().tts, short = code.split('-')[0];
+    itVoice = voices.find(v => v.lang === code && !v.name.includes('compact'))
+           || voices.find(v => v.lang === code)
+           || voices.find(v => v.lang.startsWith(short))
            || null;
     ttsReady = true;
   };
@@ -50,7 +53,7 @@ export function speak(text, overrideRate) {
   window.speechSynthesis.cancel();
 
   const utter = new SpeechSynthesisUtterance(text);
-  utter.lang  = 'it-IT';
+  utter.lang  = getLang().tts;
   utter.rate  = rate;
   utter.pitch = 1;
   utter.volume = 1;

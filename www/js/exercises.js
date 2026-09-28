@@ -7,6 +7,8 @@
 import { speak, isTTSAvailable, getTTSRate } from './audio.js?v=10';
 import { updateWordState, qualityFromResult } from './srs.js?v=17';
 import { recordAnswer } from './progress.js?v=10';
+import { getLang } from './lang.js?v=1';
+import { ES_PRONOUNS, ES_TENSE_LABELS, esIsConjugatable, esCanUseTense, esConjugateAccepted } from './conjugation_es.js?v=1';
 
 // ─── Auto-advance timer (annuleerbaar via goBack) ─────────────────────────────
 let _pendingAdvanceTimer = null;
@@ -158,7 +160,7 @@ export function buildCategoryGroups(words) {
 
 /** Strip lidwoord van een Italiaans woord (il gatto → gatto). */
 function stripArticle(it) {
-  return it.replace(/^(il |la |lo |l'|i |le |gli |un |una |uno |un')/i, '').trim();
+  return it.replace(getLang().articleRe, '').trim();
 }
 
 /**
@@ -572,7 +574,7 @@ export function renderSentenceDictation(exercise, container, onComplete) {
     <button class="sd-play-btn" id="sd-tts">🔊 Speel zin af</button>
     <div class="sd-hint">Tip: tik nogmaals op 🔊 om opnieuw te luisteren</div>
     <div class="type-input-wrap">
-      <input class="type-input" id="sd-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Typ de Italiaanse zin...">
+      <input class="type-input" id="sd-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Typ de ${getLang().adj} zin...">
     </div>
     <button class="type-check-btn" id="sd-check">Controleer</button>
     <div class="type-feedback" id="sd-feedback"></div>
@@ -782,7 +784,7 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
   if (csGroups) queue.push({ type: 'category-sort', words: [...csGroups[0], ...csGroups[1]], isNew: false });
 
   // Vervoegen (v1.45): max 2 per les voor vervoegbare werkwoorden — eerst kiezen, dan typen
-  const conjWords = newWords.filter(w => isConjugatable(w.it)).slice(0, 2);
+  const conjWords = newWords.filter(w => conjEngine().is(w.it)).slice(0, 2);
   conjWords.forEach((word, i) => queue.push({ type: 'conjugation', word, isNew: false, mode: i === 0 ? 'mc' : 'type' }));
 
   // Review: random type, inclusief alle oefenvormen
@@ -799,7 +801,7 @@ export function buildExerciseQueue(newWords, reviewWords, allWords) {
       types.push('fill-in-blank-type');
       types.push('find-error');
     }
-    if (isConjugatable(word.it)) types.push('conjugation');
+    if (conjEngine().is(word.it)) types.push('conjugation');
     const type = types[Math.floor(Math.random() * types.length)];
     queue.push({ type, word, isNew: false });
   });
@@ -879,7 +881,7 @@ export function renderFlashcard(exercise, container, onComplete) {
   const hasTTS = isTTSAvailable();
 
   container.innerHTML = `
-    <div class="ex-label">Vertaal naar Italiaans</div>
+    <div class="ex-label">Vertaal naar ${getLang().name}</div>
     <div class="flashcard-ex" id="fc-scene">
       <div class="fc-card" id="fc-card">
         <div class="fc-front">
@@ -888,7 +890,7 @@ export function renderFlashcard(exercise, container, onComplete) {
           <div class="fc-tap-hint">Tik om te onthullen</div>
         </div>
         <div class="fc-back">
-          <div class="fc-lang">Italiaans</div>
+          <div class="fc-lang">${getLang().name}</div>
           <div class="fc-it">${word.it}</div>
           <div class="fc-ph">[${word.ph}]</div>
           <div class="fc-ex">"${word.ex}"</div>
@@ -949,7 +951,7 @@ export function renderMultipleChoice(exercise, container, allWords, onComplete) 
   const hasTTS   = isTTSAvailable();
 
   container.innerHTML = `
-    <div class="ex-label">Wat is de Italiaanse vertaling?</div>
+    <div class="ex-label">Wat is de ${getLang().adj} vertaling?</div>
     <div class="mc-question">
       <div class="mc-nl">${word.nl}</div>
       ${word.exNl ? `<div class="mc-context">"${word.exNl}"</div>` : ''}
@@ -1174,7 +1176,7 @@ export function renderTypeExercise(exercise, container, onComplete) {
   const hasTTS = isTTSAvailable();
 
   container.innerHTML = `
-    <div class="ex-label">Typ het Italiaanse woord</div>
+    <div class="ex-label">Typ het ${getLang().adj} woord</div>
     <div class="type-question">
       <div class="type-nl">${word.nl}</div>
       ${word.exNl ? `<div class="type-context">"${word.exNl}"</div>` : ''}
@@ -1184,7 +1186,7 @@ export function renderTypeExercise(exercise, container, onComplete) {
         type="text"
         class="type-input"
         id="type-input"
-        placeholder="Typ hier in het Italiaans..."
+        placeholder="Typ hier in het ${getLang().name}..."
         autocomplete="off"
         autocorrect="off"
         autocapitalize="none"
@@ -1432,7 +1434,7 @@ export function renderListenType(exercise, container, onComplete) {
   const hasTTS   = isTTSAvailable();
 
   container.innerHTML = `
-    <div class="ex-label">Wat hoor je? Typ het Italiaanse woord</div>
+    <div class="ex-label">Wat hoor je? Typ het ${getLang().adj} woord</div>
 
     <div class="lc-audio-section">
       <button class="lc-play-btn" id="lt-play">🔊 Afspelen</button>
@@ -1712,7 +1714,16 @@ const IRREG_FUT_STEM = { essere: 'sar', avere: 'avr', andare: 'andr', fare: 'far
   attrarre: 'attrarr', distrarre: 'distrarr', intervenire: 'interverr', prevenire: 'preverr', svenire: 'sverr',
   convenire: 'converr', dovere: 'dovr', volere: 'vorr' };
 
-/** Is dit woord een enkelvoudige infinitief die de motor aankan? */
+/** Actieve vervoegingsmotor (v1.48): Italiaans (hier) of Spaans (conjugation_es.js). */
+function conjEngine() {
+  return getLang().code === 'es'
+    ? { pronouns: ES_PRONOUNS, labels: ES_TENSE_LABELS, is: esIsConjugatable, can: esCanUseTense,
+        accepted: esConjugateAccepted, aux: () => 'haber', passatoPronoun: p => ES_PRONOUNS[p] }
+    : { pronouns: PRONOUNS, labels: TENSE_LABELS, is: isConjugatable, can: canUseTense,
+        accepted: conjugateAccepted, aux: auxiliary, passatoPronoun: p => (p === 2 ? 'lui' : PRONOUNS[p]) };
+}
+
+/** Is dit woord een enkelvoudige infinitief die de (Italiaanse) motor aankan? */
 export function isConjugatable(it) {
   const inf = (it || '').trim();
   if (!/^[a-zàèéìòù]+(are|ere|ire|rsi|rre)$/.test(inf)) return false;
@@ -1783,13 +1794,14 @@ function pickTense(word) {
   } else if (word.level === 'B1') {
     tense = r < 0.35 ? 'presente' : r < 0.6 ? 'passato' : r < 0.8 ? 'imperfetto' : 'futuro';
   }
-  return canUseTense(word.it, tense) ? tense : 'presente';
+  return conjEngine().can(word.it, tense) ? tense : 'presente';
 }
 
 function paradigmHtml(inf, tense) {
-  const labels = tense === 'passato' ? PRONOUNS.map((pr, i) => i === 2 ? 'lui' : pr) : PRONOUNS;
+  const E = conjEngine();
+  const labels = E.pronouns.map((pr, i) => tense === 'passato' ? E.passatoPronoun(i) : pr);
   return `<div class="conj-paradigm">${labels.map((pr, i) =>
-    `<span class="conj-row"><span class="conj-pron">${pr}</span><span class="conj-form">${conjugate(inf, i, tense)}</span></span>`).join('')}</div>`;
+    `<span class="conj-row"><span class="conj-pron">${pr}</span><span class="conj-form">${E.accepted(inf, i, tense)[0]}</span></span>`).join('')}</div>`;
 }
 
 /**
@@ -1798,23 +1810,24 @@ function paradigmHtml(inf, tense) {
  */
 export function renderConjugation(exercise, container, onComplete) {
   const { word } = exercise;
-  if (!isConjugatable(word.it)) { renderTypeExercise(exercise, container, onComplete); return; }
+  const E = conjEngine();
+  if (!E.is(word.it)) { renderTypeExercise(exercise, container, onComplete); return; }
   const hasTTS = isTTSAvailable();
-  const tense  = (exercise.tense && canUseTense(word.it, exercise.tense)) ? exercise.tense : pickTense(word);
+  const tense  = (exercise.tense && E.can(word.it, exercise.tense)) ? exercise.tense : pickTense(word);
   const p      = exercise.person ?? Math.floor(Math.random() * 6);
-  const accepted = conjugateAccepted(word.it, p, tense);
+  const accepted = E.accepted(word.it, p, tense);
   const answer = accepted[0];
   const useMC  = exercise.mode ? exercise.mode === 'mc' : Math.random() < 0.5;
   const isPassato = tense === 'passato';
-  const pronounLabel = (isPassato && p === 2) ? 'lui' : PRONOUNS[p];
-  const auxHint = isPassato ? `<div class="conj-hint">hulpwerkwoord: <strong>${auxiliary(word.it)}</strong>${accepted.length > 1 ? ' · mannelijke vorm (vrouwelijk telt ook goed)' : ''}</div>` : '';
+  const pronounLabel = isPassato ? E.passatoPronoun(p) : E.pronouns[p];
+  const auxHint = isPassato ? `<div class="conj-hint">hulpwerkwoord: <strong>${E.aux(word.it)}</strong>${accepted.length > 1 ? ' · mannelijke vorm (vrouwelijk telt ook goed)' : ''}</div>` : '';
 
   const head = `
     <div class="ex-label">Vervoeg het werkwoord</div>
     <div class="conj-card">
       <div class="conj-inf">${word.it}</div>
       <div class="conj-nl">${word.nl}</div>
-      <div class="conj-tense">${TENSE_LABELS[tense]}</div>
+      <div class="conj-tense">${E.labels[tense]}</div>
       <div class="conj-prompt"><span class="conj-pron-big">${pronounLabel}</span> <span class="conj-blank">______</span></div>
       ${auxHint}
     </div>`;
@@ -1827,7 +1840,7 @@ export function renderConjugation(exercise, container, onComplete) {
   };
 
   if (useMC) {
-    const others = [...new Set([0, 1, 2, 3, 4, 5].filter(i => i !== p).map(i => conjugate(word.it, i, tense)))]
+    const others = [...new Set([0, 1, 2, 3, 4, 5].filter(i => i !== p).map(i => E.accepted(word.it, i, tense)[0]))]
       .filter(f => f !== answer);
     const options = shuffleEx([{ text: answer, correct: true }, ...shuffleEx(others).slice(0, 3).map(t => ({ text: t, correct: false }))]);
     container.innerHTML = head + `

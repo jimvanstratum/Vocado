@@ -7,7 +7,7 @@ Update dit bestand aan het einde van elke sprint.
 
 ## Wat is Vocado?
 
-Vocado is een Nederlandse PWA (Progressive Web App) waarmee gebruikers Italiaans leren via gestructureerde lessen, flashcards en oefeningen. De app is volledig offline bruikbaar via een Service Worker en werkt als geïnstalleerde app op iOS (Safari → "Zet op beginscherm").
+Vocado is een Nederlandse PWA (Progressive Web App) waarmee gebruikers Italiaans en (sinds v1.48) Spaans leren via gestructureerde lessen, flashcards en oefeningen. De app is volledig offline bruikbaar via een Service Worker en werkt als geïnstalleerde app op iOS (Safari → "Zet op beginscherm").
 
 De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
@@ -20,22 +20,25 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 - **Productie-build**: `vocado.html` — gegenereerd door `python3 build.py`, alles in één bestand
 - **Service Worker**: `www/sw.js` — CACHE_NAME wordt automatisch bijgewerkt bij elke `build.py`-run
 - **Hosting**: GitHub Pages
-- **Data**: vier JSON-bestanden (vocabulary, curriculum, readings, changelog), geladen via `fetch()` bij opstarten en door `build.py` inline gezet
-- **Opslag**: `localStorage` voor voortgang (`italiano_progress_v2`) en SRS (`italiano_srs_v2`)
+- **Data**: per taal drie JSON-bestanden in `www/data/<code>/` (vocabulary, curriculum, readings) + gedeelde `changelog.json`, geladen via `fetch()` bij opstarten en door `build.py` inline gezet
+- **Opslag**: `localStorage` per taal — Italiaans: `italiano_progress_v2` / `italiano_srs_v2` (ongewijzigd), Spaans: `vocado_es_progress_v1` / `vocado_es_srs_v1`; actieve taal in `vocado_active_lang`; instellingen gedeeld (`italiano_settings_v1`, plaatsingstoets per taal)
 
 ### Sleutelbestanden
 
 | Bestand | Inhoud |
 |---|---|
 | `www/index.html` | HTML-structuur + alle CSS + versiestring + cache buster |
-| `www/js/app.js` | App-logica: navigatie, lesweergave, SRS, statistieken, plaatsingstoets |
+| `www/js/app.js` | App-logica: navigatie, lesweergave, SRS, statistieken, plaatsingstoets, taalkeuze |
+| `www/js/lang.js` | Taalconfiguratie `LANGS` (naam, vlag, TTS-code, lidwoorden, opslagsleutels) + actieve taal |
+| `www/js/conjugation_es.js` | Spaanse vervoegingsmotor (presente, perfecto, imperfecto, futuro) |
 | `www/js/exercises.js` | Alle oefentypes (rendering + interactie) |
-| `www/data/curriculum.json` | Array van les-objecten |
-| `www/data/vocabulary.json` | Array van woord-objecten |
+| `www/data/it/curriculum.json` | Array van les-objecten (Italiaans) |
+| `www/data/es/…` | Spaanse data: 60 A1-lessen, 482 woorden (IDs `e001`…), 6 leesteksten — gegenereerd door `scripts/generate_es_a1.py` en `build_readings_es.py` |
+| `www/data/it/vocabulary.json` | Array van woord-objecten (Italiaans) |
 | `www/data/changelog.json` | Gebruikersgerichte wijzigingen per versie, nieuwste eerst; `build.py` faalt als de bovenste versie niet gelijk is aan de versiestring |
-| `www/data/readings.json` | 30 leesteksten (één per blok van 10 lessen), gegenereerd door `scripts/build_readings.py` |
+| `www/data/it/readings.json` | 30 leesteksten (één per blok van 10 lessen), gegenereerd door `scripts/build_readings.py` |
 | `www/sw.js` | Service Worker |
-| `build.py` | Bouwscript: concat → vocado.html; faalt bij dubbele `it`-waarden, dubbele IDs of lessen met onbekend woord-ID |
+| `build.py` | Bouwscript: concat → vocado.html; bundelt beide talen inline (`DATA_BY_LANG`); faalt bij dubbele `it`-waarden, dubbele IDs, lessen met onbekend woord-ID of ontbrekende changelog-entry |
 | `scripts/generate_a2.py` | Script dat A2-lessen 91–120 heeft gegenereerd (al uitgevoerd) |
 | `scripts/generate_b1*.py` | Scripts die B1-lessen 121–300 hebben gegenereerd (al uitgevoerd) |
 | `scripts/add_b1_extra.py` | Script dat 60 extra B1-woorden (w2651–w2710) heeft toegevoegd (al uitgevoerd) |
@@ -49,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.47**, cache buster **?v=41**
+- Huidige versie: **v1.48**, cache buster **?v=42**
 
 ### Build & deploy
 
@@ -101,6 +104,15 @@ Array van woord-objecten:
 }
 ```
 
+### Meertaligheid (v1.48)
+
+- Het veld `it` in vocabulary.json bevat het doeltaalwoord, ook voor Spaans (veldnaam is historisch)
+- Alle UI-teksten halen taalnaam/vlag uit `getLang()`; nooit meer 'Italiaans' hardcoden
+- Taal wisselen = `setActiveLangCode()` + `location.reload()`; data en opslag worden dan opnieuw geladen
+- Vervoegen: `conjEngine()` in exercises.js kiest de Italiaanse of Spaanse motor; tijd-sleutels zijn gedeeld (`presente`, `passato`, `imperfetto`, `futuro`)
+- Spaans A1 spiegelt de Italiaanse A1-thema's (les 1–60), zodat plaatsingstoets en toetslessen zonder aanpassing werken
+- Toetsles-punten en niveaubereiken worden uit het actieve curriculum afgeleid (`activeMilestonePoints()`, `levelRange()`)
+
 ### Conventies
 
 - **Word-IDs**: `wNNN` (w001–w3161, gaps door deduplicatie)
@@ -115,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.47)
+## Huidige staat (v1.48)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -190,7 +202,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 - **Achievements**: badge-systeem met vergrendelde/behaalde badges
 - **Settings**: thema, TTS-snelheid, dagdoel, data-reset
 - **Placement**: plaatsingstoets (15 vragen, 5 groepen van A1-lessen)
-- **Lang**: taalinstelling (alleen Italiaans momenteel)
+- **Lang**: taalkeuze bij eerste start (Italiaans, Spaans; Frans 'binnenkort'); wisselen via Instellingen › Taal
 
 ### Overige features
 - **Dark mode**: handmatig (donker/licht/auto) + systeem-voorkeur (`prefers-color-scheme`)
@@ -214,7 +226,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 - **Opnieuw doen**: les herhalen met `forceAll=true`
 - **iOS PWA install prompt**: instructie-overlay voor "Zet op beginscherm"
 - **iOS safe-area fix**: `--app-height` via `window.innerHeight` (v1.31)
-- **Wat is er nieuw?** (v1.47): modal met `changelog.json`, te openen via Instellingen › Over Vocado of door op de versieregel te tikken. Na een update verschijnt eenmalig een kaart op het homescherm (`vocado_seen_version` in localStorage); nieuwe gebruikers zien de kaart niet
+- **Wat is er nieuw?** (v1.47): modal met `changelog.json`, te openen via Instellingen › Over Vocado of door op de versieregel te tikken. De homescherm-kaart is in v1.48 op verzoek verwijderd
 - **"Mijn positie"-knop**: springt naar eerste actieve les, met offset van één kaardhoogte
 
 ---
@@ -240,6 +252,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.48 | Sprint 11: Spaans toegevoegd (A1: 60 lessen, 482 woorden, 6 leesteksten, eigen vervoegingsmotor); app meertalig (data, opslag, TTS, teksten per taal); update-kaart op homescherm verwijderd |
 | v1.47 | Wat is er nieuw?-overzicht in de interface + update-kaart op het homescherm |
 | v1.46 | Sprint 10: passato prossimo in de vervoegingsmotor (deelwoorden, essere/avere, overeenstemming) |
 | v1.45 | Sprint 9: twee nieuwe oefenvormen — vervoegen (presente/imperfetto/futuro, MC + typen) en leestekst (30 teksten, in de toetsles); root opgeruimd (oude index.html, italiano-per-vacanza.html, sw.js, manifest.json verwijderd) |
@@ -313,7 +326,7 @@ Tot B2 = circa **600–800 uur** totale studie.
 
 | Prioriteit | Sprint | Toelichting |
 |---|---|---|
-| Hoog | **Spaans toevoegen** | Tweede taal naast Italiaans; zelfde lesstructuur, eigen curriculum + woordenlijst. Vereist: data per taal splitsen, taalkeuze in `lang`-scherm activeren, opslag-keys per taal |
+| Hoog | **Spaans A2 en B1** | A1 is af (v1.48). A2 (les 61–120) en B1 volgen; zelfde aanpak als Italiaans: generatiescript per blok, leesteksten per toetsles |
 | Middel | **Meer leesteksten** | Nu 1 per blok (30). Optie: 1 per les of dialogen met TTS per spreker |
 | Laag | **Vervoegen uitbreiden** | Condizionale en congiuntivo presente ontbreken nog in de motor (passato prossimo sinds v1.46) |
 

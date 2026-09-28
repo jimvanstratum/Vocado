@@ -3,12 +3,13 @@
  * Sprint 10: segment-locking, thema, XP-migratie, vorige-knop fix.
  */
 
-import { initAudio, setTTSRate, stopSpeech } from './audio.js?v=16';
-import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow, migrateWordIds } from './srs.js?v=18';
+import { initAudio, setTTSRate, stopSpeech } from './audio.js?v=17';
+import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow, migrateWordIds } from './srs.js?v=19';
 import { ID_MAP } from './idmap.js?v=1';
-import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson, migratePartialLessonsV144 } from './progress.js?v=17';
-import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderConjugation, renderReading, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=22';
-import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=16';
+import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson, migratePartialLessonsV144 } from './progress.js?v=18';
+import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderConjugation, renderReading, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=23';
+import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=17';
+import { LANGS, getLang, setActiveLangCode, hasChosenLang } from './lang.js?v=1';
 
 // ─── PWA INSTALL ──────────────────────────────────────────────────────────────
 const IS_STANDALONE = window.matchMedia('(display-mode: standalone)').matches
@@ -101,7 +102,16 @@ const MILESTONE_NAMES  = {
 
 // Kleuren en bereiken per niveau (voor sectie-headers)
 const LEVEL_COLORS = { A1: '#009246', A2: '#f5a623', B1: '#0A80C4' };
-const LEVEL_RANGES = { A1: 'lessen 1–60', A2: 'lessen 61–120', B1: 'lessen 121–300' };
+/** Lesbereik van een niveau, afgeleid uit het curriculum van de actieve taal (v1.48). */
+function levelRange(level) {
+  const ids = CURRICULUM.filter(l => l.level === level).map(l => l.id);
+  return ids.length ? `lessen ${Math.min(...ids)}–${Math.max(...ids)}` : '';
+}
+/** Toetsles-punten die in het actieve curriculum bestaan (Spaans heeft er minder). */
+function activeMilestonePoints() {
+  const max = CURRICULUM.length ? Math.max(...CURRICULUM.map(l => l.id)) : 0;
+  return MILESTONE_POINTS.filter(cp => cp <= max);
+}
 
 // ─── SEGMENT-HELPERS (Sprint 10) ─────────────────────────────────────────────
 /** Segmentnummer van een les-id: 1=les1-10, 2=11-20, ..., 6=51-60 */
@@ -139,10 +149,11 @@ let READINGS = [];   // v1.45: leesteksten per toetsles
 let CHANGELOG = [];  // v1.47: wijzigingen per versie, nieuwste eerst
 
 async function loadData() {
+  const code = getLang().code;
   const [vocabRes, currRes, readRes, clRes] = await Promise.all([
-    fetch('./data/vocabulary.json'),
-    fetch('./data/curriculum.json'),
-    fetch('./data/readings.json'),
+    fetch(`./data/${code}/vocabulary.json`),
+    fetch(`./data/${code}/curriculum.json`),
+    fetch(`./data/${code}/readings.json`),
     fetch('./data/changelog.json')
   ]);
   VOCAB = await vocabRes.json();
@@ -245,7 +256,6 @@ export function navigate(screen, data = {}) {
 
 // ─── HOME ─────────────────────────────────────────────────────────────────────
 function renderHome() {
-  renderWhatsNew();
   // Sprint 9.1: Eenmalige opruiming van datastatus-bugs
   cleanupSkippedCompleted();   // verwijder lessen die zowel completed als skipped zijn
 
@@ -264,7 +274,7 @@ function renderHome() {
   if (cpPct)   cpPct.textContent   = `${coursePct}%`;
   if (cpFill)  cpFill.style.width  = coursePct + '%';
 
-  $id('home-streak').textContent = streak === 0 ? '🇮🇹 Italiaans · Begin vandaag!' : `🇮🇹 Italiaans · ${streak} dag${streak !== 1 ? 'en' : ''} op rij 🔥`;
+  $id('home-streak').textContent = streak === 0 ? `${getLang().flag} ${getLang().name} · Begin vandaag!` : `${getLang().flag} ${getLang().name} · ${streak} dag${streak !== 1 ? 'en' : ''} op rij 🔥`;
   // Sprint 12: quick-stats verwijderd van homescreen (verplaatst naar Voortgang)
 
   // ── Dagdoel-voortgang ──────────────────────────────────────────────────────
@@ -302,7 +312,7 @@ function renderHome() {
   // 1. Alle lessen overgeslagen (plaatsingstoets → A1 overslaan) → unblock hogere niveaus
   // 2. Voltooide lessen voorbij dit milestone (voortgang van vóór segment-locking, Sprint 10)
   // 3. 80%+ écht voltooid in blok en daarna nog lessen gedaan
-  MILESTONE_POINTS.forEach(cp => {
+  activeMilestonePoints().forEach(cp => {
     if (isMilestonePassed(cp)) return;
     const segStart   = cp - 9;
     const segLessons = CURRICULUM.filter(l => l.id >= segStart && l.id <= cp);
@@ -318,7 +328,7 @@ function renderHome() {
   });
 
   // Sprint 10: eerste beschikbare milestone (segment volledig + ontgrendeld + niet gehaald)
-  const firstAvailableMilestone = MILESTONE_POINTS.find(cp => {
+  const firstAvailableMilestone = activeMilestonePoints().find(cp => {
     if (isMilestonePassed(cp)) return false;
     const segNum = getSegmentNum(cp);
     return isSegmentUnlocked(segNum) && isSegmentComplete(segNum);
@@ -358,7 +368,7 @@ function renderHome() {
       banner.className = 'level-complete-banner' + (isFirstLevel ? '' : ' level-sep');
       banner.innerHTML = `
         <span class="lcb-icon">✅</span>
-        <span class="lcb-name">${level} Italiaans</span>
+        <span class="lcb-name">${level} ${getLang().name}</span>
         <span class="lcb-stats">${levelLessons.length} lessen · ${segNums13.length} toetsen</span>
         <span class="lcb-arrow">${isExpanded ? '▾' : '▸'}</span>
       `;
@@ -377,7 +387,7 @@ function renderHome() {
       header = document.createElement('div');
       header.className = 'section-label section-label-list level-section-header' + (isFirstLevel ? '' : ' level-sep');
       header.style.borderLeftColor = LEVEL_COLORS[level] || 'var(--accent)';
-      header.innerHTML = `<span class="level-header-name" style="color:${LEVEL_COLORS[level] || 'var(--accent)'}">${level}</span> Italiaans <span class="level-header-range">${LEVEL_RANGES[level] || ''}</span>`;
+      header.innerHTML = `<span class="level-header-name" style="color:${LEVEL_COLORS[level] || 'var(--accent)'}">${level}</span> ${getLang().name} <span class="level-header-range">${levelRange(level)}</span>`;
       grid.appendChild(header);
       target = grid;
     }
@@ -1134,7 +1144,6 @@ function openChangelog() {
     </div>`).join('') : '<p class="settings-row-sub">Geen wijzigingen gevonden.</p>';
   $id('changelog-modal').style.display = 'flex';
   markVersionSeen();
-  renderWhatsNew();
 }
 function closeChangelog() { $id('changelog-modal').style.display = 'none'; }
 function formatDateNl(iso) {
@@ -1143,34 +1152,9 @@ function formatDateNl(iso) {
   return `${d} ${months[m - 1]} ${y}`;
 }
 
-/** Eenmalige kaart op het homescherm zolang de nieuwste versie nog niet bekeken is. */
-function renderWhatsNew() {
-  const box = $id('whatsnew-container');
-  if (!box) return;
-  const latest = CHANGELOG[0];
-  const seen = seenVersion();
-  // Eerste gebruik of oudere installaties zonder markering: niet lastigvallen, alleen markeren
-  if (!latest || seen === latest.version || (seen === null && (getProgress().completedLessons || []).length === 0)) {
-    if (!seen && latest) markVersionSeen();
-    box.innerHTML = '';
-    return;
-  }
-  box.innerHTML = `
-    <div class="whatsnew-card" id="whatsnew-card">
-      <span class="whatsnew-emoji">✨</span>
-      <div class="whatsnew-info">
-        <div class="whatsnew-title">Nieuw in v${latest.version}: ${latest.title}</div>
-        <div class="whatsnew-sub">${latest.items?.[0] || ''}</div>
-      </div>
-      <button class="whatsnew-btn" id="whatsnew-open">Bekijk</button>
-      <button class="whatsnew-close" id="whatsnew-close" aria-label="Sluiten">✕</button>
-    </div>`;
-  $id('whatsnew-open').addEventListener('click', openChangelog);
-  $id('whatsnew-close').addEventListener('click', () => { markVersionSeen(); renderWhatsNew(); });
-}
-
 function renderSettings() {
   const settings = getSettings();
+  renderLangSettings();
 
   // Dagdoel-knoppen activeren (Sprint 10: waarden in minuten)
   document.querySelectorAll('.dagdoel-btn').forEach(btn => {
@@ -1224,8 +1208,8 @@ function renderPlacement() {
   const container = $id('placement-container');
   container.innerHTML = `
     <div class="placement-intro">
-      <div class="placement-flag">🇮🇹</div>
-      <h2 class="placement-title">Hoe goed is jouw Italiaans?</h2>
+      <div class="placement-flag">${getLang().flag}</div>
+      <h2 class="placement-title">Hoe goed is jouw ${getLang().name}?</h2>
       <p class="placement-desc">Wij zoeken de beste startplek voor jou. Sla lessen over die je al kent, of begin gewoon bij het begin.</p>
       <div class="placement-choices">
         <button class="pl-choice-btn" id="pl-new">
@@ -1245,7 +1229,7 @@ function renderPlacement() {
         <button class="pl-choice-btn" id="pl-exp">
           <span class="pl-choice-emoji">🎓</span>
           <div>
-            <div class="pl-choice-title">Ik spreek al wat Italiaans</div>
+            <div class="pl-choice-title">Ik spreek al wat ${getLang().name}</div>
             <div class="pl-choice-sub">Doe de korte toets (15 vragen)</div>
           </div>
         </button>
@@ -1475,9 +1459,53 @@ export function showToast(msg) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
 }
 
+// ─── TAALKEUZE (v1.48) ────────────────────────────────────────────────────────
+function chooseLang(code) {
+  setActiveLangCode(code);
+  if (code === _loadedLang) navigate(isPlacementDone() ? 'home' : 'placement');
+  else location.reload();   // data en opslag van de andere taal laden
+}
+let _loadedLang = null;
+
+function renderLangScreen() {
+  const grid = $id('lang-grid');
+  if (!grid) return;
+  grid.innerHTML = Object.values(LANGS).map(L => `
+    <button class="lang-card lang-available" data-lang="${L.code}">
+      <span class="lang-flag">${L.flag}</span>
+      <div>
+        <div class="lang-name">${L.name}</div>
+        <div class="lang-level">${L.levels}</div>
+      </div>
+    </button>`).join('') + `
+    <div class="lang-card lang-soon">
+      <span class="lang-flag">🇫🇷</span>
+      <div class="lang-name">Frans</div>
+      <span class="lang-badge">Binnenkort</span>
+    </div>`;
+  grid.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => chooseLang(b.dataset.lang)));
+}
+
+function renderLangSettings() {
+  const list = $id('lang-settings-list');
+  if (!list) return;
+  const active = getLang().code;
+  list.innerHTML = Object.values(LANGS).map(L => `
+    <button class="lang-settings-item ${L.code === active ? 'lang-settings-active' : ''}" data-lang="${L.code}">
+      <span>${L.flag}</span><span class="lsi-name">${L.name}</span>${L.code === active ? '<span class="lsi-check">✓</span>' : `<span class="lang-badge">${L.levels}</span>`}
+    </button>`).join('') + `
+    <div class="lang-settings-item lang-settings-soon">
+      <span>🇫🇷</span><span class="lsi-name">Frans</span><span class="lang-badge">Binnenkort</span>
+    </div>`;
+  list.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.lang !== active) { setActiveLangCode(b.dataset.lang); location.reload(); }
+  }));
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 async function init() {
   await loadData();
+  _loadedLang = getLang().code;
   migrateOldSkipped();    // eenmalige migratie: 0-XP completed → skipped
   migrateXPToV10();       // Sprint 10: herschaal XP naar nieuwe waarden
   migrateToV14();         // Sprint 14: hernummer les-IDs 21-60 naar nieuwe structuur
@@ -1535,7 +1563,7 @@ async function init() {
   $id('reset-btn')?.addEventListener('click', () => {
     if (confirm('Weet je zeker dat je alle voortgang wilt resetten? Dit kan niet ongedaan worden.')) {
       resetProgress();
-      localStorage.removeItem('italiano_srs_v2');
+      localStorage.removeItem(getLang().keys.srs);
       navigate('home');
       showToast('Voortgang gereset');
     }
@@ -1602,7 +1630,7 @@ async function init() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Italiaans voor op vakantie — mijn voortgang',
+          title: getLang().name + ' — mijn Vocado-voortgang',
           text:  `Ik heb ${prog.completedLessons.length} lessen voltooid en ${prog.xp} XP verdiend!`,
           url
         });
@@ -1619,7 +1647,7 @@ async function init() {
 
   // ── Exporteer voortgang als back-upcode ────────────────────────────────────
   $id('export-progress-btn')?.addEventListener('click', async () => {
-    const raw  = localStorage.getItem('italiano_progress_v2') || '{}';
+    const raw  = localStorage.getItem(getLang().keys.progress) || '{}';
     const code = btoa(unescape(encodeURIComponent(raw)));
     const out  = $id('export-code-output');
     try {
@@ -1652,7 +1680,7 @@ async function init() {
         `Voortgang herstellen?\n\n${lessen} lessen voltooid · ${xp} XP\n\nJe huidige voortgang wordt overschreven.`
       );
       if (ok) {
-        localStorage.setItem('italiano_progress_v2', json);
+        localStorage.setItem(getLang().keys.progress, json);
         showToast('✅ Voortgang hersteld!');
         setTimeout(() => location.reload(), 800);
       }
@@ -1673,7 +1701,7 @@ async function init() {
           if (el) el.textContent = `${data.completedLessons.length} lessen voltooid · ${data.xp || 0} XP`;
           modal.classList.add('active');
           $id('restore-confirm')?.addEventListener('click', () => {
-            localStorage.setItem('italiano_progress_v2', JSON.stringify(data));
+            localStorage.setItem(getLang().keys.progress, JSON.stringify(data));
             history.replaceState(null, '', location.pathname);
             location.reload();
           });
@@ -1689,13 +1717,24 @@ async function init() {
   }
 
   // Taalkeuzescherm (nieuw), dan plaatsingstoets
-  $id('lang-italian')?.addEventListener('click', () => navigate('placement'));
+  renderLangScreen();
+  // Versieregel + titel per taal
+  const L = getLang();
+  document.title = `Vocado — ${L.name}`;
+  const vd = $id('version-detail');
+  if (vd) vd.textContent = `· ${L.name} · ${CURRICULUM.length} lessen · ${VOCAB.length} woorden`;
+  // Woordenboek: niveaufilters verbergen die deze taal niet heeft
+  const present = new Set(VOCAB.map(w => w.level));
+  document.querySelectorAll('.dict-filter-btn[data-level]').forEach(b => {
+    if (b.dataset.level !== 'all' && !present.has(b.dataset.level)) b.style.display = 'none';
+  });
 
-  if (!isPlacementDone()) {
-    navigate('lang');
-  } else {
-    navigate('home');
-  }
+  // Bestaande Italiaanse gebruikers (van vóór v1.48) hebben nooit een taal gekozen: neem Italiaans aan
+  if (!hasChosenLang() && isPlacementDone()) setActiveLangCode('it');
+
+  if (!hasChosenLang())        navigate('lang');
+  else if (!isPlacementDone()) navigate('placement');
+  else                         navigate('home');
 }
 
 init().catch(err => {

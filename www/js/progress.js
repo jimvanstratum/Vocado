@@ -2,7 +2,10 @@
  * Progress — beheer van voortgang, XP, streak en voltooide lessen.
  */
 
-const PROG_KEY = 'italiano_progress_v2';
+import { getLang } from './lang.js?v=1';
+
+/** Opslagsleutel van de actieve taal (v1.48: voortgang per taal). */
+function PROG_KEY_() { return getLang().keys.progress; }
 
 const PROG_DEFAULTS = {
   xp: 0,
@@ -26,13 +29,13 @@ const PROG_DEFAULTS = {
 
 function load() {
   try {
-    const raw = localStorage.getItem(PROG_KEY);
+    const raw = localStorage.getItem(PROG_KEY_());
     return raw ? { ...PROG_DEFAULTS, ...JSON.parse(raw) } : { ...PROG_DEFAULTS };
   } catch { return { ...PROG_DEFAULTS }; }
 }
 
 function save(data) {
-  try { localStorage.setItem(PROG_KEY, JSON.stringify(data)); } catch {}
+  try { localStorage.setItem(PROG_KEY_(), JSON.stringify(data)); } catch {}
 }
 
 export function getProgress() { return load(); }
@@ -201,7 +204,7 @@ export function getAchievements() {
 }
 
 export function resetProgress() {
-  localStorage.removeItem(PROG_KEY);
+  localStorage.removeItem(PROG_KEY_());
 }
 
 export function getSkippedCount() {

@@ -53,27 +53,33 @@ for name in ['icon-192.png', 'icon-512.png']:
 # ── 1. Data inladen ────────────────────────────────────────────────────────────
 
 print('📂  Data laden...')
-vocab      = load_json(os.path.join(WWW, 'data', 'vocabulary.json'))
-curriculum = load_json(os.path.join(WWW, 'data', 'curriculum.json'))
-readings   = load_json(os.path.join(WWW, 'data', 'readings.json'))
+# v1.48: data per taal (www/data/<code>/), changelog is gedeeld
+LANG_CODES = ['it', 'es']
+data_by_lang = {}
+for _code in LANG_CODES:
+    _d = os.path.join(WWW, 'data', _code)
+    data_by_lang[_code] = {
+        'vocab':      load_json(os.path.join(_d, 'vocabulary.json')),
+        'curriculum': load_json(os.path.join(_d, 'curriculum.json')),
+        'readings':   load_json(os.path.join(_d, 'readings.json')),
+    }
+    print(f"    → {_code}: {len(data_by_lang[_code]['vocab'])} woorden, {len(data_by_lang[_code]['curriculum'])} lessen, {len(data_by_lang[_code]['readings'])} leesteksten")
 changelog  = load_json(os.path.join(WWW, 'data', 'changelog.json'))
-
-vocab_js      = json.dumps(vocab,      ensure_ascii=False, separators=(',', ':'))
-curriculum_js = json.dumps(curriculum, ensure_ascii=False, separators=(',', ':'))
-readings_js   = json.dumps(readings,   ensure_ascii=False, separators=(',', ':'))
-changelog_js  = json.dumps(changelog,  ensure_ascii=False, separators=(',', ':'))
-
-print(f'    → {len(vocab)} woorden, {len(curriculum)} lessen, {len(readings)} leesteksten')
+vocab, curriculum = data_by_lang['it']['vocab'], data_by_lang['it']['curriculum']   # voor de checks hieronder
+data_js      = json.dumps(data_by_lang, ensure_ascii=False, separators=(',', ':'))
+changelog_js = json.dumps(changelog,    ensure_ascii=False, separators=(',', ':'))
 
 # Uniciteitscheck (v1.44): geen dubbele Italiaanse woorden of IDs, geen les die naar een onbekend ID verwijst
 from collections import Counter
-_dup_it = [k for k, n in Counter(w['it'].lower() for w in vocab).items() if n > 1]
-_dup_id = [k for k, n in Counter(w['id'] for w in vocab).items() if n > 1]
-_ids = {w['id'] for w in vocab}
-_bad_les = [l['id'] for l in curriculum if any(wid not in _ids for wid in l['words'])]
-if _dup_it or _dup_id or _bad_les:
-    sys.exit(f'❌  Datafout — dubbele it: {_dup_it[:5]} | dubbele id: {_dup_id[:5]} | lessen met onbekend id: {_bad_les[:5]}')
-print('    ✓ geen dubbele woorden of IDs')
+for _code, _d in data_by_lang.items():
+    _v, _c = _d['vocab'], _d['curriculum']
+    _dup_it = [k for k, n in Counter(w['it'].lower() for w in _v).items() if n > 1]
+    _dup_id = [k for k, n in Counter(w['id'] for w in _v).items() if n > 1]
+    _ids = {w['id'] for w in _v}
+    _bad_les = [l['id'] for l in _c if any(wid not in _ids for wid in l['words'])]
+    if _dup_it or _dup_id or _bad_les:
+        sys.exit(f'❌  Datafout ({_code}) — dubbele it: {_dup_it[:5]} | dubbele id: {_dup_id[:5]} | lessen met onbekend id: {_bad_les[:5]}')
+print('    ✓ geen dubbele woorden of IDs (alle talen)')
 
 # Changelog-check (v1.47): nieuwste changelog-versie moet gelijk zijn aan de versiestring in index.html
 _m = re.search(r'Vocado · v(\d+\.\d+)', read(os.path.join(WWW, 'index.html')))
@@ -88,7 +94,7 @@ print(f'    ✓ changelog bijgewerkt voor v{_ui_version}')
 print('📦  JavaScript bundelen...')
 
 # Volgorde is belangrijk: afhankelijkheden eerst
-MODULE_ORDER = ['idmap.js', 'srs.js', 'progress.js', 'settings.js', 'audio.js', 'exercises.js', 'app.js']
+MODULE_ORDER = ['lang.js', 'idmap.js', 'srs.js', 'progress.js', 'settings.js', 'audio.js', 'conjugation_es.js', 'exercises.js', 'app.js']
 parts = []
 
 for fname in MODULE_ORDER:
@@ -123,11 +129,11 @@ bundle = '\n'.join(parts)
 print('💉  Data inlinen...')
 
 inline_load = (
+    f'const DATA_BY_LANG = {data_js};\n'
+    f'const CHANGELOG_DATA = {changelog_js};\n'
     'async function loadData() {\n'
-    f'  VOCAB = {vocab_js};\n'
-    f'  CURRICULUM = {curriculum_js};\n'
-    f'  READINGS = {readings_js};\n'
-    f'  CHANGELOG = {changelog_js};\n'
+    '  const _d = DATA_BY_LANG[getLang().code] || DATA_BY_LANG.it;\n'
+    '  VOCAB = _d.vocab; CURRICULUM = _d.curriculum; READINGS = _d.readings; CHANGELOG = CHANGELOG_DATA;\n'
     '}'
 )
 
@@ -141,7 +147,7 @@ bundle, n = re.subn(
 if n == 0:
     print('⚠️   loadData() niet gevonden — controleer app.js')
 else:
-    print(f'    → loadData() vervangen door {(len(vocab_js)+len(curriculum_js))//1024} KB inline data')
+    print(f'    → loadData() vervangen door {(len(data_js)+len(changelog_js))//1024} KB inline data')
 
 
 # ── 4. HTML laden en aanpassen ─────────────────────────────────────────────────

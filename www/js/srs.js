@@ -4,16 +4,19 @@
  * Quality: 0=totaal fout, 1=fout maar herkend, 2=fout maar makkelijk, 3=goed met moeite, 4=goed, 5=perfect
  */
 
-const SRS_KEY = 'italiano_srs_v2';
+import { getLang } from './lang.js?v=1';
+
+/** Opslagsleutel van de actieve taal (v1.48: SRS per taal). */
+function SRS_KEY_() { return getLang().keys.srs; }
 
 function loadSRSData() {
   try {
-    return JSON.parse(localStorage.getItem(SRS_KEY) || '{}');
+    return JSON.parse(localStorage.getItem(SRS_KEY_()) || '{}');
   } catch { return {}; }
 }
 
 function saveSRSData(data) {
-  try { localStorage.setItem(SRS_KEY, JSON.stringify(data)); } catch {}
+  try { localStorage.setItem(SRS_KEY_(), JSON.stringify(data)); } catch {}
 }
 
 /** Geeft de huidige SRS-staat van een woord. */
@@ -125,6 +128,7 @@ export function getLearnedPercent(wordIds) {
  * Draait één keer (vlag in localStorage); zonder vlag is de functie idempotent.
  */
 export function migrateWordIds(idMap) {
+  if (getLang().code !== 'it') return false;   // migratie geldt alleen voor de Italiaanse woordenlijst
   const FLAG = 'italiano_srs_idmap_v144';
   try { if (localStorage.getItem(FLAG)) return false; } catch {}
   const data = loadSRSData();
@@ -144,7 +148,7 @@ export function migrateWordIds(idMap) {
 
 /** Reset alle SRS-data. */
 export function resetSRS() {
-  localStorage.removeItem(SRS_KEY);
+  localStorage.removeItem(SRS_KEY_());
 }
 
 /**

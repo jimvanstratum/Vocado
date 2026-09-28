@@ -14,7 +14,7 @@ import json, re, sys
 from pathlib import Path
 from collections import Counter
 
-BASE = Path(__file__).parent.parent / 'www' / 'data'
+BASE = Path(__file__).parent.parent / 'www' / 'data' / 'it'
 VOCAB_FILE, CURR_FILE = BASE / 'vocabulary.json', BASE / 'curriculum.json'
 
 SWAPS = [
