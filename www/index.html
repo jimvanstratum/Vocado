@@ -104,13 +104,11 @@
     /* APP SHELL — position:fixed maar NIET bottom:0 (iOS knipt dat af op y=759).
        Gebruikt height:var(--app-height) zodat #app altijd de volledige viewport vult (y=0→793).
        #screens en #shared-nav zijn flex-children, geen position:fixed op de nav. */
-    #app { position: fixed; top: 0; left: 0; right: 0;
-      height: var(--app-height, 100dvh);
+    /* v1.50: #app vult altijd het hele scherm (inset:0). De JS-hoogtemeting (--app-height) wordt niet
+       meer gebruikt voor de layout: op iOS gaf die na een herlaad soms een te kleine waarde. */
+    #app { position: fixed; inset: 0;
       display: flex; flex-direction: column;
       background: var(--surface); }
-    /* v1.49: in de geïnstalleerde app (standalone) is er geen browserbalk — dan vult #app het scherm
-       via bottom:0 en is de JS-hoogtemeting niet nodig (die gaf na een herlaad soms een te kleine waarde). */
-    html.standalone #app { bottom: 0; height: auto; }
     #screens { flex: 1; position: relative; overflow: hidden; }
 
     /* Schermen — position:absolute binnen #screens (relatief container), GEEN position:fixed */
@@ -121,10 +119,12 @@
 
     /* BOTTOM NAV — flex-child van #app, GEEN position:fixed.
        body.show-nav class gezet via JS op nav-schermen (home/stats/badges/woorden). */
-    #shared-nav { display: none; flex-shrink: 0;
+    /* v1.50: menubalk altijd vast aan de onderkant van het scherm, met ruimte voor de iPhone-balk */
+    #shared-nav { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
       background: var(--surface); border-top: 1px solid var(--border);
-      padding-bottom: var(--sab, 0px); }
+      padding-bottom: max(var(--sab, 0px), env(safe-area-inset-bottom, 0px)); }
     body.show-nav #shared-nav { display: flex; }
+    body.show-nav .screen-body { padding-bottom: calc(56px + max(var(--sab, 0px), env(safe-area-inset-bottom, 0px))); }
     .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 6px 0; cursor: pointer; color: var(--muted); font-size: 10px; gap: 3px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
     .nav-btn.active { color: var(--accent); }
     .nav-btn svg { width: 22px; height: 22px; fill: currentColor; }
@@ -335,7 +335,7 @@
 
     #loading { position: fixed; inset: 0; background: var(--bg); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; z-index: 1000; }
     #loading.hidden { display: none; }
-    .loading-logo { width: 72px; height: 72px; }
+    .loading-logo { height: 110px; width: auto; }
     .loading-spinner { width: 28px; height: 28px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
     @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
@@ -892,7 +892,7 @@
 </div>
 
 <div id="loading">
-  <img class="loading-logo" src="./avocado.svg" alt="">
+  <img class="loading-logo" src="./Vocado groot.svg" alt="Vocado">
   <div class="loading-spinner" aria-hidden="true"></div>
   <div class="loading-text">Vocado laden…</div>
 </div>
@@ -1102,7 +1102,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.49 <span id="version-detail"></span></div>
+    <div class="settings-version">Vocado · v1.50 <span id="version-detail"></span></div>
   </div>
 </div>
 
@@ -1260,7 +1260,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=43';
+  import './js/app.js?v=44';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {

@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.50",
+    "date": "2026-09-28",
+    "title": "Menubalk altijd onderaan",
+    "items": [
+      "De menubalk zit nu vast aan de onderkant van het scherm, ook op iPhone en ook na het wisselen van taal.",
+      "Het laadscherm gebruikt hetzelfde Vocado-logo als het homescherm."
+    ]
+  },
+  {
     "version": "1.49",
     "date": "2026-09-28",
     "title": "Taal wisselen vanaf het homescherm",

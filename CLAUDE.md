@@ -52,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.49**, cache buster **?v=43**
+- Huidige versie: **v1.50**, cache buster **?v=44**
 
 ### Build & deploy
 
@@ -127,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.49)
+## Huidige staat (v1.50)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -225,7 +225,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 - **Les overslaan**: gebruiker kan lessen markeren als overgeslagen
 - **Opnieuw doen**: les herhalen met `forceAll=true`
 - **iOS PWA install prompt**: instructie-overlay voor "Zet op beginscherm"
-- **iOS viewport**: in de browser volgt `--app-height` de `visualViewport` (v1.31); in de geïnstalleerde app (standalone) krijgt `<html>` de class `standalone` en vult `#app` het scherm via `bottom:0` zonder JS-meting (v1.49, fix voor lege ruimte onder de menubalk na herladen)
+- **iOS viewport** (v1.50): `#app` is `position:fixed; inset:0` en de menubalk `#shared-nav` is `position:fixed; bottom:0` met safe-area-padding; schermen krijgen `padding-bottom` als de balk zichtbaar is. De JS-meting `--app-height` bestaat nog maar stuurt de layout niet meer (gaf op iOS na herladen een te kleine waarde)
 - **Wat is er nieuw?** (v1.47): modal met `changelog.json`, te openen via Instellingen › Over Vocado of door op de versieregel te tikken. De homescherm-kaart is in v1.48 op verzoek verwijderd
 - **"Mijn positie"-knop**: springt naar eerste actieve les, met offset van één kaardhoogte
 
@@ -252,6 +252,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.50 | Menubalk vast onderaan (fixed), app-shell inset:0, laadscherm met het echte Vocado-logo |
 | v1.49 | Taalknop op het homescherm (modal), standalone-hoogtefix iPhone, Vocado-laadscherm i.p.v. Italiaanse vlag, laatste 'Italiano'-teksten weg |
 | v1.48 | Sprint 11: Spaans toegevoegd (A1: 60 lessen, 482 woorden, 6 leesteksten, eigen vervoegingsmotor); app meertalig (data, opslag, TTS, teksten per taal); update-kaart op homescherm verwijderd |
 | v1.47 | Wat is er nieuw?-overzicht in de interface + update-kaart op het homescherm |
