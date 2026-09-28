@@ -52,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.48**, cache buster **?v=42**
+- Huidige versie: **v1.49**, cache buster **?v=43**
 
 ### Build & deploy
 
@@ -127,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.48)
+## Huidige staat (v1.49)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -202,7 +202,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 - **Achievements**: badge-systeem met vergrendelde/behaalde badges
 - **Settings**: thema, TTS-snelheid, dagdoel, data-reset
 - **Placement**: plaatsingstoets (15 vragen, 5 groepen van A1-lessen)
-- **Lang**: taalkeuze bij eerste start (Italiaans, Spaans; Frans 'binnenkort'); wisselen via Instellingen › Taal
+- **Lang**: taalkeuze bij eerste start (Italiaans, Spaans; Frans 'binnenkort'); wisselen via de vlagknop op het homescherm of Instellingen › Taal
 
 ### Overige features
 - **Dark mode**: handmatig (donker/licht/auto) + systeem-voorkeur (`prefers-color-scheme`)
@@ -225,7 +225,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 - **Les overslaan**: gebruiker kan lessen markeren als overgeslagen
 - **Opnieuw doen**: les herhalen met `forceAll=true`
 - **iOS PWA install prompt**: instructie-overlay voor "Zet op beginscherm"
-- **iOS safe-area fix**: `--app-height` via `window.innerHeight` (v1.31)
+- **iOS viewport**: in de browser volgt `--app-height` de `visualViewport` (v1.31); in de geïnstalleerde app (standalone) krijgt `<html>` de class `standalone` en vult `#app` het scherm via `bottom:0` zonder JS-meting (v1.49, fix voor lege ruimte onder de menubalk na herladen)
 - **Wat is er nieuw?** (v1.47): modal met `changelog.json`, te openen via Instellingen › Over Vocado of door op de versieregel te tikken. De homescherm-kaart is in v1.48 op verzoek verwijderd
 - **"Mijn positie"-knop**: springt naar eerste actieve les, met offset van één kaardhoogte
 
@@ -252,6 +252,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.49 | Taalknop op het homescherm (modal), standalone-hoogtefix iPhone, Vocado-laadscherm i.p.v. Italiaanse vlag, laatste 'Italiano'-teksten weg |
 | v1.48 | Sprint 11: Spaans toegevoegd (A1: 60 lessen, 482 woorden, 6 leesteksten, eigen vervoegingsmotor); app meertalig (data, opslag, TTS, teksten per taal); update-kaart op homescherm verwijderd |
 | v1.47 | Wat is er nieuw?-overzicht in de interface + update-kaart op het homescherm |
 | v1.46 | Sprint 10: passato prossimo in de vervoegingsmotor (deelwoorden, essere/avere, overeenstemming) |

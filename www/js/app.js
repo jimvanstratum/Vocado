@@ -1486,8 +1486,8 @@ function renderLangScreen() {
   grid.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => chooseLang(b.dataset.lang)));
 }
 
-function renderLangSettings() {
-  const list = $id('lang-settings-list');
+function renderLangSettings(listId = 'lang-settings-list') {
+  const list = $id(listId);
   if (!list) return;
   const active = getLang().code;
   list.innerHTML = Object.values(LANGS).map(L => `
@@ -1502,6 +1502,13 @@ function renderLangSettings() {
   }));
 }
 
+/** v1.49: taal wisselen vanaf het homescherm (knop met vlag naast de instellingen). */
+function openLangModal() {
+  renderLangSettings('lang-modal-list');
+  $id('lang-modal').style.display = 'flex';
+}
+function closeLangModal() { $id('lang-modal').style.display = 'none'; }
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 async function init() {
   await loadData();
@@ -1513,6 +1520,10 @@ async function init() {
   migratePartialLessonsV144(); // v1.44: opgeslagen oefenrijen met oude IDs wissen
   // v1.47: changelog-modal
   $id('changelog-btn')?.addEventListener('click', openChangelog);
+  $id('lang-btn')?.addEventListener('click', openLangModal);
+  $id('lang-modal-close')?.addEventListener('click', closeLangModal);
+  $id('lang-modal')?.addEventListener('click', e => { if (e.target.id === 'lang-modal') closeLangModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLangModal(); });
   document.querySelector('.settings-version')?.addEventListener('click', openChangelog);
   $id('changelog-close')?.addEventListener('click', closeChangelog);
   $id('changelog-modal')?.addEventListener('click', e => { if (e.target.id === 'changelog-modal') closeChangelog(); });
@@ -1721,6 +1732,8 @@ async function init() {
   // Versieregel + titel per taal
   const L = getLang();
   document.title = `Vocado — ${L.name}`;
+  const lf = $id('lang-btn-flag');
+  if (lf) lf.textContent = L.flag;
   const vd = $id('version-detail');
   if (vd) vd.textContent = `· ${L.name} · ${CURRICULUM.length} lessen · ${VOCAB.length} woorden`;
   // Woordenboek: niveaufilters verbergen die deze taal niet heeft

@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.49",
+    "date": "2026-09-28",
+    "title": "Taal wisselen vanaf het homescherm",
+    "items": [
+      "Naast het tandwiel staat nu een vlagknop: tik erop om van taal te wisselen.",
+      "De geïnstalleerde app vult op iPhone weer het hele scherm; de menubalk staat onderaan.",
+      "Nieuw laadscherm met het Vocado-logo."
+    ]
+  },
+  {
     "version": "1.48",
     "date": "2026-09-27",
     "title": "Spaans is er!",

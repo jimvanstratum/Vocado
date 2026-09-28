@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Italiano">
+  <meta name="apple-mobile-web-app-title" content="Vocado">
   <meta name="theme-color" content="#0D1A11">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="./icon-192.png">
@@ -108,6 +108,9 @@
       height: var(--app-height, 100dvh);
       display: flex; flex-direction: column;
       background: var(--surface); }
+    /* v1.49: in de geïnstalleerde app (standalone) is er geen browserbalk — dan vult #app het scherm
+       via bottom:0 en is de JS-hoogtemeting niet nodig (die gaf na een herlaad soms een te kleine waarde). */
+    html.standalone #app { bottom: 0; height: auto; }
     #screens { flex: 1; position: relative; overflow: hidden; }
 
     /* Schermen — position:absolute binnen #screens (relatief container), GEEN position:fixed */
@@ -332,9 +335,11 @@
 
     #loading { position: fixed; inset: 0; background: var(--bg); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; z-index: 1000; }
     #loading.hidden { display: none; }
-    .loading-flag { display: flex; height: 8px; width: 80px; border-radius: 4px; overflow: hidden; }
+    .loading-logo { width: 72px; height: 72px; }
+    .loading-spinner { width: 28px; height: 28px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
     @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
-    .loading-text { font-size: 16px; color: var(--muted); animation: pulse 1.5s infinite; }
+    .loading-text { font-size: 14px; color: var(--muted); animation: pulse 1.5s infinite; }
 
     /* ── SOFT LOCK: aanbevolen les ────────────────────────────────────────── */
     .lesson-card.recommended { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(245,166,35,0.25); }
@@ -398,6 +403,8 @@
 
     /* Gear icon knop in home header */
     .home-header-bottom { display: flex; align-items: center; justify-content: space-between; }
+    .home-header-btns { display: flex; gap: 8px; }
+    #lang-btn { font-size: 18px; }
     .settings-icon-btn { width: 36px; height: 36px; background: var(--surface); border-radius: 10px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
     .settings-icon-btn svg { width: 18px; height: 18px; fill: var(--muted); }
 
@@ -885,8 +892,9 @@
 </div>
 
 <div id="loading">
-  <div class="loading-flag"><div class="flag-g"></div><div class="flag-w"></div><div class="flag-r"></div></div>
-  <div class="loading-text">Italiano laden...</div>
+  <img class="loading-logo" src="./avocado.svg" alt="">
+  <div class="loading-spinner" aria-hidden="true"></div>
+  <div class="loading-text">Vocado laden…</div>
 </div>
 
 <div id="app">
@@ -899,9 +907,12 @@
       <div class="home-logo" id="home-title"></div>
       <div class="home-header-bottom">
         <div class="home-sub" id="home-streak">Begin vandaag!</div>
-        <button class="settings-icon-btn" id="settings-btn" aria-label="Instellingen">
+        <div class="home-header-btns">
+          <button class="settings-icon-btn" id="lang-btn" aria-label="Taal wisselen"><span id="lang-btn-flag">🌍</span></button>
+          <button class="settings-icon-btn" id="settings-btn" aria-label="Instellingen">
           <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96a6.96 6.96 0 0 0-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84a.484.484 0 0 0-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87a.49.49 0 0 0 .12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.27.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
         </button>
+        </div>
       </div>
     </div>
     <div class="course-progress-section">
@@ -1091,7 +1102,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.48 <span id="version-detail"></span></div>
+    <div class="settings-version">Vocado · v1.49 <span id="version-detail"></span></div>
   </div>
 </div>
 
@@ -1103,6 +1114,20 @@
       <button class="modal-close" id="changelog-close" aria-label="Sluiten">✕</button>
     </div>
     <div class="modal-body" id="changelog-body"></div>
+  </div>
+</div>
+
+<!-- TAAL WISSELEN (v1.49) -->
+<div id="lang-modal" class="modal-backdrop" style="display:none" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="modal-title" id="lang-modal-title">🌍 Taal wisselen</div>
+      <button class="modal-close" id="lang-modal-close" aria-label="Sluiten">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="settings-row-sub">Je voortgang wordt per taal bewaard.</p>
+      <div class="lang-settings-list" id="lang-modal-list"></div>
+    </div>
   </div>
 </div>
 
@@ -1195,9 +1220,15 @@
       var h = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
       document.documentElement.style.setProperty('--app-height', h + 'px');
     }
+    // v1.49: standalone (geïnstalleerde app) → CSS vult het scherm, meting alleen als fallback
+    var standalone = (window.navigator.standalone === true) ||
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+    if (standalone) document.documentElement.classList.add('standalone');
     setH();
     requestAnimationFrame(setH);
     setTimeout(setH, 300);
+    setTimeout(setH, 1000);
+    setTimeout(setH, 2500);
     window.addEventListener('load', setH);
     window.addEventListener('pageshow', setH);
     window.addEventListener('resize', setH);
@@ -1229,7 +1260,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=42';
+  import './js/app.js?v=43';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
