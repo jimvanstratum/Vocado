@@ -1,5 +1,25 @@
 [
   {
+    "version": "1.52",
+    "date": "2026-09-28",
+    "title": "Hoogte op iPhone en taalwissel",
+    "items": [
+      "De geïnstalleerde app gebruikt nu de echte schermhoogte, zodat de menubalk onderaan staat, ook na een herlaad.",
+      "Taal wisselen gebeurt zonder de app te herladen.",
+      "Het laadscherm toont het app-icoon."
+    ]
+  },
+  {
+    "version": "1.51",
+    "date": "2026-09-28",
+    "title": "Updates gaan vanzelf",
+    "items": [
+      "Een nieuwe versie wordt automatisch toegepast; je hoeft de app niet meer af te sluiten.",
+      "Zit je midden in een les of toets, dan wacht de update tot je die afsluit. Met de knop \"Nu bijwerken\" kun je eerder.",
+      "De app controleert op updates zodra je hem weer opent."
+    ]
+  },
+  {
     "version": "1.50",
     "date": "2026-09-28",
     "title": "Menubalk altijd onderaan",

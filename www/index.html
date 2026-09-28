@@ -104,9 +104,11 @@
     /* APP SHELL — position:fixed maar NIET bottom:0 (iOS knipt dat af op y=759).
        Gebruikt height:var(--app-height) zodat #app altijd de volledige viewport vult (y=0→793).
        #screens en #shared-nav zijn flex-children, geen position:fixed op de nav. */
-    /* v1.50: #app vult altijd het hele scherm (inset:0). De JS-hoogtemeting (--app-height) wordt niet
-       meer gebruikt voor de layout: op iOS gaf die na een herlaad soms een te kleine waarde. */
-    #app { position: fixed; inset: 0;
+    /* v1.52: #app is precies --app-height hoog. Die waarde is het maximum van alle viewport-metingen en,
+       in de geïnstalleerde app, de echte schermhoogte — iOS meldt na een herlaad in standalone-modus
+       soms een te kleine viewport (fantoom-werkbalk); position:fixed;bottom:0 volgt die fout, de schermhoogte niet. */
+    #app { position: fixed; top: 0; left: 0; right: 0;
+      height: var(--app-height, 100dvh);
       display: flex; flex-direction: column;
       background: var(--surface); }
     #screens { flex: 1; position: relative; overflow: hidden; }
@@ -119,12 +121,11 @@
 
     /* BOTTOM NAV — flex-child van #app, GEEN position:fixed.
        body.show-nav class gezet via JS op nav-schermen (home/stats/badges/woorden). */
-    /* v1.50: menubalk altijd vast aan de onderkant van het scherm, met ruimte voor de iPhone-balk */
-    #shared-nav { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    /* Menubalk: laatste flex-kind van #app, dus altijd op --app-height (onderkant scherm) */
+    #shared-nav { display: none; flex-shrink: 0;
       background: var(--surface); border-top: 1px solid var(--border);
       padding-bottom: max(var(--sab, 0px), env(safe-area-inset-bottom, 0px)); }
     body.show-nav #shared-nav { display: flex; }
-    body.show-nav .screen-body { padding-bottom: calc(56px + max(var(--sab, 0px), env(safe-area-inset-bottom, 0px))); }
     .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 6px 0; cursor: pointer; color: var(--muted); font-size: 10px; gap: 3px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
     .nav-btn.active { color: var(--accent); }
     .nav-btn svg { width: 22px; height: 22px; fill: currentColor; }
@@ -335,7 +336,7 @@
 
     #loading { position: fixed; inset: 0; background: var(--bg); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; z-index: 1000; }
     #loading.hidden { display: none; }
-    .loading-logo { height: 110px; width: auto; }
+    .loading-logo { width: 120px; height: 120px; border-radius: 28px; }
     .loading-spinner { width: 28px; height: 28px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
     @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
@@ -875,8 +876,9 @@
   <div class="ib-icon">🔄</div>
   <div class="ib-text">
     <strong>Nieuwe versie beschikbaar</strong>
-    <span>Sluit de app en open hem opnieuw</span>
+    <span>Wordt toegepast zodra je deze les afsluit</span>
   </div>
+  <button class="ib-btn" id="update-banner-now">Nu bijwerken</button>
   <button class="ib-close" id="update-banner-close" aria-label="Sluiten">✕</button>
 </div>
 
@@ -892,7 +894,7 @@
 </div>
 
 <div id="loading">
-  <img class="loading-logo" src="./Vocado groot.svg" alt="Vocado">
+  <img class="loading-logo" src="./icon.svg" alt="Vocado">
   <div class="loading-spinner" aria-hidden="true"></div>
   <div class="loading-text">Vocado laden…</div>
 </div>
@@ -1102,7 +1104,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.50 <span id="version-detail"></span></div>
+    <div class="settings-version">Vocado · v1.52 <span id="version-detail"></span></div>
   </div>
 </div>
 
@@ -1216,13 +1218,22 @@
      visualViewport is nauwkeuriger dan window.innerHeight op iOS PWA bij refresh. -->
 <script>
   (function () {
-    function setH() {
-      var h = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
-      document.documentElement.style.setProperty('--app-height', h + 'px');
-    }
-    // v1.49: standalone (geïnstalleerde app) → CSS vult het scherm, meting alleen als fallback
     var standalone = (window.navigator.standalone === true) ||
       (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+    function setH() {
+      // Maximum van alle metingen: iOS meldt er na een herlaad soms één te klein
+      var h = Math.max(
+        (window.visualViewport && window.visualViewport.height) || 0,
+        window.innerHeight || 0,
+        (document.documentElement && document.documentElement.clientHeight) || 0);
+      if (standalone && window.screen) {
+        // Geïnstalleerde app: de webview vult het hele scherm, dus de schermhoogte is de ondergrens
+        var portrait = !window.matchMedia || window.matchMedia('(orientation: portrait)').matches;
+        var sh = portrait ? Math.max(screen.height, screen.width) : Math.min(screen.height, screen.width);
+        if (sh > h) h = sh;
+      }
+      if (h > 0) document.documentElement.style.setProperty('--app-height', h + 'px');
+    }
     if (standalone) document.documentElement.classList.add('standalone');
     setH();
     requestAnimationFrame(setH);
@@ -1260,7 +1271,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=44';
+  import './js/app.js?v=46';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
@@ -1268,19 +1279,32 @@
          controllerchange vuurt ook bij een gewone cold-start (clients.claim),
          dus we luisteren liever op updatefound + statechange van de nieuwe worker.
          Zo voorkomt de gebruiker nodeloze meldingen bij elke opstart. */
+      /* v1.51: automatisch bijwerken. Zodra de nieuwe worker actief is, herlaadt de app zichzelf —
+         behalve midden in een les/herhaling/toets: dan wacht de update tot het scherm verlaten wordt
+         (app.js navigate() kijkt naar window._vocadoUpdatePending) en toont de banner met 'Nu bijwerken'. */
+      function inSession() {
+        return ['screen-lesson', 'screen-placement'].some(function (id) {
+          var el = document.getElementById(id); return el && el.classList.contains('active');
+        });
+      }
+      window.applyPendingUpdate = function () { window._vocadoUpdatePending = false; location.reload(); };
       navigator.serviceWorker.register('./sw.js').then(function (reg) {
+        // Controleer op updates zodra de app weer op de voorgrond komt
+        document.addEventListener('visibilitychange', function () { if (!document.hidden) reg.update().catch(function () {}); });
         reg.addEventListener('updatefound', function () {
           var newWorker = reg.installing;
           if (!newWorker) return;
           newWorker.addEventListener('statechange', function () {
             if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
               // Echte update: nieuwe SW heeft de controle overgenomen
+              if (!inSession()) { location.reload(); return; }
+              window._vocadoUpdatePending = true;
               var banner = document.getElementById('update-banner');
               if (banner) banner.style.display = '';
+              var nowBtn = document.getElementById('update-banner-now');
+              if (nowBtn) nowBtn.addEventListener('click', window.applyPendingUpdate);
               var closeBtn = document.getElementById('update-banner-close');
-              if (closeBtn) closeBtn.addEventListener('click', function () {
-                banner.style.display = 'none';
-              });
+              if (closeBtn) closeBtn.addEventListener('click', function () { banner.style.display = 'none'; });
             }
           });
         });

@@ -206,6 +206,12 @@ function getLevelBadge()    { return $id('lesson-level-badge'); }
 export function navigate(screen, data = {}) {
   stopSpeech();
 
+  // v1.51: uitgestelde app-update toepassen zodra de gebruiker een les/toets verlaat
+  if (window._vocadoUpdatePending && !['lesson', 'review', 'placement'].includes(screen)) {
+    window.applyPendingUpdate?.();
+    return;
+  }
+
   // Sprint 12/16: sla gedeeltelijke lesvoortgang + queue op bij verlaten van een actieve les
   if (currentLesson && !isMilestoneMode && exerciseIndex > 0
       && exerciseQueue.length > 0 && exerciseIndex < exerciseQueue.length) {
@@ -1460,12 +1466,38 @@ export function showToast(msg) {
 }
 
 // ─── TAALKEUZE (v1.48) ────────────────────────────────────────────────────────
-function chooseLang(code) {
-  setActiveLangCode(code);
-  if (code === _loadedLang) navigate(isPlacementDone() ? 'home' : 'placement');
-  else location.reload();   // data en opslag van de andere taal laden
-}
 let _loadedLang = null;
+
+/** v1.52: taal wisselen zonder herlaad (een herlaad gaf op iOS een verkeerde viewport-hoogte). */
+async function switchLang(code) {
+  if (!LANGS[code]) return;
+  setActiveLangCode(code);
+  closeLangModal();
+  if (code !== _loadedLang) {
+    await loadData();
+    _loadedLang = code;
+    initAudio();   // stem van de nieuwe taal
+    currentLesson = null; isMilestoneMode = false; isReviewMode = false;
+    exerciseQueue = []; exerciseIndex = 0; exerciseHistory = [];
+  }
+  applyLangUI();
+  navigate(isPlacementDone() ? 'home' : 'placement');
+}
+function chooseLang(code) { switchLang(code); }
+
+/** Titel, versieregel, vlagknop en woordenboekfilters van de actieve taal. */
+function applyLangUI() {
+  const L = getLang();
+  document.title = `Vocado — ${L.name}`;
+  const lf = $id('lang-btn-flag');
+  if (lf) lf.textContent = L.flag;
+  const vd = $id('version-detail');
+  if (vd) vd.textContent = `· ${L.name} · ${CURRICULUM.length} lessen · ${VOCAB.length} woorden`;
+  const present = new Set(VOCAB.map(w => w.level));
+  document.querySelectorAll('.dict-filter-btn[data-level]').forEach(b => {
+    b.style.display = (b.dataset.level !== 'all' && !present.has(b.dataset.level)) ? 'none' : '';
+  });
+}
 
 function renderLangScreen() {
   const grid = $id('lang-grid');
@@ -1498,7 +1530,7 @@ function renderLangSettings(listId = 'lang-settings-list') {
       <span>🇫🇷</span><span class="lsi-name">Frans</span><span class="lang-badge">Binnenkort</span>
     </div>`;
   list.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => {
-    if (b.dataset.lang !== active) { setActiveLangCode(b.dataset.lang); location.reload(); }
+    if (b.dataset.lang !== active) switchLang(b.dataset.lang);
   }));
 }
 
@@ -1729,18 +1761,7 @@ async function init() {
 
   // Taalkeuzescherm (nieuw), dan plaatsingstoets
   renderLangScreen();
-  // Versieregel + titel per taal
-  const L = getLang();
-  document.title = `Vocado — ${L.name}`;
-  const lf = $id('lang-btn-flag');
-  if (lf) lf.textContent = L.flag;
-  const vd = $id('version-detail');
-  if (vd) vd.textContent = `· ${L.name} · ${CURRICULUM.length} lessen · ${VOCAB.length} woorden`;
-  // Woordenboek: niveaufilters verbergen die deze taal niet heeft
-  const present = new Set(VOCAB.map(w => w.level));
-  document.querySelectorAll('.dict-filter-btn[data-level]').forEach(b => {
-    if (b.dataset.level !== 'all' && !present.has(b.dataset.level)) b.style.display = 'none';
-  });
+  applyLangUI();
 
   // Bestaande Italiaanse gebruikers (van vóór v1.48) hebben nooit een taal gekozen: neem Italiaans aan
   if (!hasChosenLang() && isPlacementDone()) setActiveLangCode('it');
