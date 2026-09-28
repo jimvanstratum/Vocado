@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.55",
+    "date": "2026-09-28",
+    "title": "Menubalk echt onderaan op iPhone",
+    "items": [
+      "De statusbalk is niet meer doorzichtig. Daardoor knipt iOS de onderkant van de app niet meer af en staat de menubalk tegen de onderrand.",
+      "De statusbalk krijgt dezelfde kleur als de koptekst."
+    ]
+  },
+  {
     "version": "1.54",
     "date": "2026-09-28",
     "title": "Menulabels weer zichtbaar",

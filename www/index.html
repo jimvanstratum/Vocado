@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- v1.55: 'default' i.p.v. 'black-translucent'. Met een doorzichtige statusbalk geeft iOS 18 de
+       geïnstalleerde app een viewport van schermhoogte min statusbalk (852−59=793), maar tekent die vanaf
+       de bovenrand: de onderste 59 punten zijn dood gebied en safe-area-inset-bottom wordt 0. Met 'default'
+       begint de pagina onder de statusbalk en loopt ze door tot de onderrand. -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Vocado">
-  <meta name="theme-color" content="#0D1A11">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E2F0E5">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#060E08">
+  <meta name="theme-color" content="#E2F0E5">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="./icon-192.png">
   <title>Vocado</title>
@@ -125,6 +131,8 @@
     #shared-nav { display: none; flex-shrink: 0;
       background: var(--surface); border-top: 1px solid var(--border);
       padding-bottom: max(var(--sab, 0px), env(safe-area-inset-bottom, 0px)); }
+    /* Geïnstalleerde app: minimaal wat ruimte boven de thuisbalk, ook als iOS geen onderrand meldt */
+    html.standalone #shared-nav { padding-bottom: max(var(--sab, 0px), env(safe-area-inset-bottom, 0px), 14px); }
     body.show-nav #shared-nav { display: flex; }
     .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 10px 0 6px; cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 600; gap: 4px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
     .nav-btn.active { color: var(--accent); }
@@ -1111,7 +1119,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.54 <span id="version-detail"></span></div>
+    <div class="settings-version">Vocado · v1.55 <span id="version-detail"></span></div>
   </div>
 </div>
 
@@ -1285,7 +1293,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=48';
+  import './js/app.js?v=49';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
