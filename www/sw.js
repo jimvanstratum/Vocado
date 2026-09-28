@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocado-20260928-1945';
+const CACHE_NAME = 'vocado-20260928-2015';
 const ASSETS = [
   './',
   './index.html',
@@ -29,7 +29,9 @@ const ASSETS = [
 
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE_NAME).then(c => c.addAll(ASSETS))
+    // v1.57: HTTP-cache omzeilen bij het voorcachen, anders kan een nieuwe SW vlak na een release
+    // nog verouderde data (max-age van GitHub Pages) inpakken
+    caches.open(CACHE_NAME).then(c => c.addAll(ASSETS.map(u => new Request(u, { cache: 'reload' }))))
   );
   self.skipWaiting();
 });

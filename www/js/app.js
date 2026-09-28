@@ -9,7 +9,7 @@ import { ID_MAP } from './idmap.js?v=1';
 import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson, migratePartialLessonsV144 } from './progress.js?v=18';
 import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderConjugation, renderReading, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=23';
 import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=17';
-import { LANGS, getLang, setActiveLangCode, hasChosenLang } from './lang.js?v=1';
+import { LANGS, getLang, setActiveLangCode, hasChosenLang } from './lang.js?v=2';
 
 // ─── PWA INSTALL ──────────────────────────────────────────────────────────────
 const IS_STANDALONE = window.matchMedia('(display-mode: standalone)').matches

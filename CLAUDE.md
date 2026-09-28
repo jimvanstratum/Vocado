@@ -19,7 +19,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 - **Bronbestanden**: `www/` (index.html, js/, data/)
 - **Productie-build**: `vocado.html` — gegenereerd door `python3 build.py`, alles in één bestand
 - **Service Worker**: `www/sw.js` — CACHE_NAME wordt automatisch bijgewerkt bij elke `build.py`-run
-- **Hosting**: GitHub Pages
+- **Hosting**: GitHub Pages onder `https://jimvanstratum.github.io/Vocado/`. De hoofdmap `jimvanstratum.github.io` is een apart repository (alleen `index.html`) dat doorstuurt naar `/Vocado/`; bestaande iPhone-snelkoppelingen wijzen daar sinds v1.55/1.56 naartoe (iOS las het oude manifest met `start_url: /`). Niet verwijderen, anders 404 op de telefoon
 - **Data**: per taal drie JSON-bestanden in `www/data/<code>/` (vocabulary, curriculum, readings) + gedeelde `changelog.json`, geladen via `fetch()` bij opstarten en door `build.py` inline gezet
 - **Opslag**: `localStorage` per taal — Italiaans: `italiano_progress_v2` / `italiano_srs_v2` (ongewijzigd), Spaans: `vocado_es_progress_v1` / `vocado_es_srs_v1`; actieve taal in `vocado_active_lang`; instellingen gedeeld (`italiano_settings_v1`, plaatsingstoets per taal)
 
@@ -33,7 +33,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 | `www/js/conjugation_es.js` | Spaanse vervoegingsmotor (presente, perfecto, imperfecto, futuro) |
 | `www/js/exercises.js` | Alle oefentypes (rendering + interactie) |
 | `www/data/it/curriculum.json` | Array van les-objecten (Italiaans) |
-| `www/data/es/…` | Spaanse data: 60 A1-lessen, 482 woorden (IDs `e001`…), 6 leesteksten — gegenereerd door `scripts/generate_es_a1.py` en `build_readings_es.py` |
+| `www/data/es/…` | Spaanse data: A1 (les 1–60, 482 woorden) + A2 (les 61–120, 480 woorden), IDs `e001`…, 12 leesteksten — gegenereerd door `scripts/generate_es_a1.py`, `generate_es_a2.py` en `build_readings_es.py` |
 | `www/data/it/vocabulary.json` | Array van woord-objecten (Italiaans) |
 | `www/data/changelog.json` | Gebruikersgerichte wijzigingen per versie, nieuwste eerst; `build.py` faalt als de bovenste versie niet gelijk is aan de versiestring |
 | `www/data/it/readings.json` | 30 leesteksten (één per blok van 10 lessen), gegenereerd door `scripts/build_readings.py` |
@@ -52,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.56**, cache buster **?v=50**
+- Huidige versie: **v1.57**, cache buster **?v=51**
 
 ### Build & deploy
 
@@ -127,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.56)
+## Huidige staat (v1.57)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -254,6 +254,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.57 | Sprint 12: Spaans A2 — 60 lessen (61–120), 480 woorden, 6 leesteksten; pretérito indefinido in les 91. SW-voorcache met `cache: 'reload'` (geen verouderde data na release) |
 | v1.56 | Manifest: `id`/`start_url`/`scope` relatief (`./`) i.p.v. `/` — de site staat onder `/Vocado/`, `/` gaf een GitHub-404; herstellink via `new URL('./', location.href)` |
 | v1.55 | Statusbalk op `default` (iOS 18 knipte 59 punten onderaan af bij translucent); theme-color per kleurenschema |
 | v1.54 | Hoogte: grootste ooit gemelde viewport i.p.v. schermhoogte (menulabels weer zichtbaar); schermdiagnose in instellingen |
@@ -337,7 +338,7 @@ Tot B2 = circa **600–800 uur** totale studie.
 
 | Prioriteit | Sprint | Toelichting |
 |---|---|---|
-| Hoog | **Spaans A2 en B1** | A1 is af (v1.48). A2 (les 61–120) en B1 volgen; zelfde aanpak als Italiaans: generatiescript per blok, leesteksten per toetsles |
+| Hoog | **Spaans B1** | A1 en A2 zijn af (v1.48/v1.57). B1 (les 121–300) volgt in blokken van 60 lessen, zelfde aanpak: generatiescript, leesteksten per toetsles; Spaanse motor uitbreiden met subjuntivo |
 | Middel | **Meer leesteksten** | Nu 1 per blok (30). Optie: 1 per les of dialogen met TTS per spreker |
 | Laag | **Vervoegen uitbreiden** | Condizionale en congiuntivo presente ontbreken nog in de motor (passato prossimo sinds v1.46) |
 

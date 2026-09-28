@@ -232,5 +232,239 @@
         "answer": 1
       }
     ]
+  },
+  {
+    "id": "r70",
+    "milestone": 70,
+    "level": "A2",
+    "title": "El primer día de trabajo",
+    "text": "Ayer fue mi primer día de trabajo en una empresa de Barcelona. Estaba nerviosa, pero mis compañeros fueron muy amables. Mi compañera Marta me explicó el proyecto: tenemos que terminar todo antes de la reunión del viernes.\nEn mi opinión, el trabajo es interesante, pero la reunión fue demasiado larga. El jefe es simpático y muy paciente. Cuando era estudiante, trabajaba en un bar: era más cansado, aunque menos complicado.\nMañana será un día largo. Probablemente empezaré pronto y terminaré tarde. De todos modos, estoy contenta: creo que este trabajo es mejor que el anterior.",
+    "questions": [
+      {
+        "q": "Waar werkt de schrijfster?",
+        "options": [
+          "In een bar in Madrid",
+          "Bij een bedrijf in Barcelona",
+          "Op een school",
+          "In een ziekenhuis"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wanneer moet het project klaar zijn?",
+        "options": [
+          "Maandag",
+          "Woensdag",
+          "Voor de vergadering van vrijdag",
+          "Volgende maand"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Hoe vergelijkt ze het oude werk met het nieuwe?",
+        "options": [
+          "Het oude was vermoeiender maar minder ingewikkeld",
+          "Het oude was makkelijker en leuker",
+          "Het nieuwe is saaier",
+          "Er is geen verschil"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "r80",
+    "milestone": 80,
+    "level": "A2",
+    "title": "Un domingo en familia",
+    "text": "El domingo en España es el día de la familia. En mi casa cocinamos juntos: mi madre prepara la paella con ingredientes frescos del mercado y mi padre abre una botella de vino de la casa. Después de comer viene la sobremesa: charlamos durante dos horas y luego todos hacen la siesta.\nPor la tarde damos un paseo por el centro y tomamos el aperitivo en la plaza. Mis hermanos hablan de fútbol: su equipo ganó el partido y marcó tres goles.\nPor la noche veo una película en el sofá. Me encantan estos días tranquilos: sin estrés, solo la buena vida.",
+    "questions": [
+      {
+        "q": "Wie maakt de paella?",
+        "options": [
+          "De vader",
+          "De moeder",
+          "De broers",
+          "De schrijver"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat gebeurt er na het eten?",
+        "options": [
+          "Iedereen gaat voetballen",
+          "Ze gaan winkelen",
+          "Natafelen en dan siësta",
+          "Ze gaan naar de bioscoop"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Waarover praten de broers?",
+        "options": [
+          "Over politiek",
+          "Over voetbal",
+          "Over werk",
+          "Over muziek"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r90",
+    "milestone": 90,
+    "level": "A2",
+    "title": "El futuro de Lucía",
+    "text": "Lucía tiene dieciocho años y tiene que elegir carrera. Le gustan las ciencias y quiere estudiar biología en Valencia. Su padre, sin embargo, cree que la economía es más útil.\n\"El mundo cambia\", dice Lucía. \"El clima, la contaminación, las energías renovables: necesitamos científicos\". Lee las noticias cada día y no se fía de las noticias falsas.\nSu meta está clara: sacar el título y después trabajar en un laboratorio. Quizás un día haga un gran descubrimiento. Al final su padre sonríe: \"Confía en tu sueño\".",
+    "questions": [
+      {
+        "q": "Wat wil Lucía studeren?",
+        "options": [
+          "Economie",
+          "Biologie",
+          "Rechten",
+          "Geschiedenis"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat vindt haar vader nuttiger?",
+        "options": [
+          "Biologie",
+          "Geneeskunde",
+          "Economie",
+          "Kunst"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat is het doel van Lucía?",
+        "options": [
+          "Een eigen bedrijf",
+          "Werken in een laboratorium",
+          "Journalist worden",
+          "Politica worden"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r100",
+    "milestone": 100,
+    "level": "A2",
+    "title": "Un piso nuevo",
+    "text": "El mes pasado busqué un piso de alquiler en Madrid. No fue fácil: los gastos eran altos y el alquiler casi siempre demasiado caro. Por fin encontré un piso amueblado cerca del centro y pagué la fianza.\nMi rutina ha cambiado. Me despierto a las siete, desayuno y voy al trabajo andando. Por la noche cocino: ayer hice una tortilla con patatas del mercado.\nEl sábado invité a mis amigos a ver una película. Por desgracia, Carlos tuvo que cancelar en el último momento, pero nos divertimos igual.",
+    "questions": [
+      {
+        "q": "Wat voor woning heeft de schrijver gevonden?",
+        "options": [
+          "Een groot huis met tuin",
+          "Een gemeubileerd appartement bij het centrum",
+          "Een kamer bij een familie",
+          "Een villa buiten de stad"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe gaat de schrijver naar het werk?",
+        "options": [
+          "Met de bus",
+          "Op de fiets",
+          "Te voet",
+          "Met de auto"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Waarom was Carlos er zaterdag niet?",
+        "options": [
+          "Hij was ziek",
+          "Hij moest op het laatste moment afzeggen",
+          "Hij was op reis",
+          "Hij was het vergeten"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r110",
+    "milestone": 110,
+    "level": "A2",
+    "title": "La fiesta de cumpleaños",
+    "text": "El sábado pasado celebramos el cumpleaños de mi abuela: ¡ochenta años! Lo organizamos todo en secreto. Mi tío reservó un restaurante de cocina gallega, con marisco fresco.\nSaqué dinero del cajero para el regalo: un viaje a Sevilla. Cuando llegó, la abuela llevaba el pelo recién arreglado y gafas nuevas. \"¡Felicidades!\", gritamos todos juntos.\nSolo hubo un problema: el horno del restaurante tenía una avería y la tarta llegó tarde. Pero la abuela se rio y dijo: \"¡Salud, y que cumplas muchos más!\"",
+    "questions": [
+      {
+        "q": "Hoe oud wordt de oma?",
+        "options": [
+          "Zeventig",
+          "Vijfenzeventig",
+          "Tachtig",
+          "Negentig"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat is het cadeau?",
+        "options": [
+          "Een bril",
+          "Een reis naar Sevilla",
+          "Een taart",
+          "Een boek"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat was het probleem in het restaurant?",
+        "options": [
+          "Het eten was koud",
+          "De oven was kapot",
+          "Er was geen tafel",
+          "De ober was onbeleefd"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r120",
+    "milestone": 120,
+    "level": "A2",
+    "title": "Las Fallas de Valencia",
+    "text": "Cada año en marzo, Valencia se transforma. Las Fallas son una tradición muy antigua: los vecinos construyen enormes figuras de cartón y madera, y la última noche las queman en la calle. Hay fuegos artificiales, música y mucha gente en la plaza mayor.\nEste año subí muchas fotos a las redes sociales. Un periodista escribió un reportaje sobre la fiesta: según él, el turismo es importante para la economía, pero hay que reducir la basura y proteger el medio ambiente.\nHe aprendido una cosa: para entender España, hay que vivir sus tradiciones. Ahora comprendo las noticias, me expreso mejor y estoy listo para el siguiente paso: el B1.",
+    "questions": [
+      {
+        "q": "Wanneer zijn de Fallas?",
+        "options": [
+          "In augustus",
+          "In maart",
+          "In december",
+          "In mei"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat gebeurt er met de figuren op de laatste avond?",
+        "options": [
+          "Ze worden verkocht",
+          "Ze worden verbrand",
+          "Ze gaan naar een museum",
+          "Ze worden weggegooid"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Waar moet volgens de journalist op gelet worden?",
+        "options": [
+          "Op de toeristen",
+          "Op afval en het milieu",
+          "Op de muziek",
+          "Op het verkeer"
+        ],
+        "answer": 1
+      }
+    ]
   }
 ]

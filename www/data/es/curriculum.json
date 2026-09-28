@@ -1260,5 +1260,1265 @@
       "e481",
       "e482"
     ]
+  },
+  {
+    "id": 61,
+    "title": "Meningen geven",
+    "emoji": "💬",
+    "level": "A2",
+    "description": "Zeg wat je vindt en reageer op anderen.",
+    "grammar": {
+      "title": "Meningen uitdrukken: creo que, me parece que",
+      "body": "\"Creo que\" (ik denk dat) en \"me parece que\" (het lijkt mij dat) + zin. Eens: estoy de acuerdo. Oneens: no estoy de acuerdo. Twijfel: depende."
+    },
+    "words": [
+      "e483",
+      "e484",
+      "e485",
+      "e486",
+      "e487",
+      "e488",
+      "e489",
+      "e490"
+    ]
+  },
+  {
+    "id": 62,
+    "title": "Pretérito perfecto",
+    "emoji": "⏮️",
+    "level": "A2",
+    "description": "Vertellen wat je vandaag of onlangs hebt gedaan.",
+    "grammar": {
+      "title": "Pretérito perfecto: haber + deelwoord",
+      "body": "He comido, has visto, ha ido. Het deelwoord: -ar → -ado, -er/-ir → -ido. Onregelmatig: hecho, dicho, visto, puesto, escrito, vuelto. Gebruik: hoy, esta semana, este año."
+    },
+    "words": [
+      "e491",
+      "e492",
+      "e493",
+      "e494",
+      "e495",
+      "e496",
+      "e497",
+      "e498"
+    ]
+  },
+  {
+    "id": 63,
+    "title": "Het imperfecto",
+    "emoji": "📽️",
+    "level": "A2",
+    "description": "Beschrijven hoe het vroeger was.",
+    "grammar": {
+      "title": "Pretérito imperfecto: gewoontes en beschrijvingen",
+      "body": "-ar: hablaba, hablabas, hablaba; -er/-ir: comía, vivía. Onregelmatig: era (ser), iba (ir), veía (ver). Voor gewoontes en achtergrond: cuando era pequeño, vivía en Cádiz."
+    },
+    "words": [
+      "e499",
+      "e500",
+      "e501",
+      "e502",
+      "e503",
+      "e504",
+      "e505",
+      "e506"
+    ]
+  },
+  {
+    "id": 64,
+    "title": "De toekomst",
+    "emoji": "🔮",
+    "level": "A2",
+    "description": "Praten over wat er gaat komen.",
+    "grammar": {
+      "title": "Futuro simple: onregelmatige stammen",
+      "body": "Regelmatig: hablaré, comerás, vivirá. Onregelmatige stammen: tendr- (tener), har- (hacer), podr- (poder), saldr- (salir), vendr- (venir), dir- (decir), sabr- (saber), pondr- (poner)."
+    },
+    "words": [
+      "e507",
+      "e508",
+      "e509",
+      "e510",
+      "e511",
+      "e512",
+      "e513",
+      "e514"
+    ]
+  },
+  {
+    "id": 65,
+    "title": "Vergelijken",
+    "emoji": "⚖️",
+    "level": "A2",
+    "description": "Dingen met elkaar vergelijken.",
+    "grammar": {
+      "title": "Comparatief en superlatief",
+      "body": "Más ... que (meer dan), menos ... que (minder dan), tan ... como (even ... als). Overtreffend: el más ..., la mejor. Onregelmatig: mejor, peor, mayor, menor."
+    },
+    "words": [
+      "e515",
+      "e516",
+      "e517",
+      "e518",
+      "e519",
+      "e520",
+      "e521",
+      "e522"
+    ]
+  },
+  {
+    "id": 66,
+    "title": "Verbindingswoorden",
+    "emoji": "🔗",
+    "level": "A2",
+    "description": "Zinnen aan elkaar knopen.",
+    "grammar": {
+      "title": "Samenhangende zinnen bouwen",
+      "body": "Pero (maar), por eso (daarom), sin embargo (echter), mientras (terwijl), aunque (hoewel), además (bovendien). Ze staan meestal aan het begin van de bijzin."
+    },
+    "words": [
+      "e523",
+      "e524",
+      "e525",
+      "e526",
+      "e527",
+      "e528",
+      "e529",
+      "e530"
+    ]
+  },
+  {
+    "id": 67,
+    "title": "Werk & kantoor",
+    "emoji": "💼",
+    "level": "A2",
+    "description": "Praten over je werk.",
+    "grammar": {
+      "title": "Zakelijke uitdrukkingen",
+      "body": "Trabajo en / trabajo como (ik werk bij / als). Tengo una reunión a las diez. Con \"usted\" tegen klanten en de baas: ¿Podría enviarme el contrato?"
+    },
+    "words": [
+      "e531",
+      "e532",
+      "e533",
+      "e534",
+      "e535",
+      "e536",
+      "e537",
+      "e538"
+    ]
+  },
+  {
+    "id": 68,
+    "title": "Karaktereigenschappen",
+    "emoji": "🌟",
+    "level": "A2",
+    "description": "Iemands karakter beschrijven.",
+    "grammar": {
+      "title": "Bijvoeglijke naamwoorden: geslacht en meervoud",
+      "body": "Simpático/simpática/simpáticos. Op -e of medeklinker gelijk voor m/v: inteligente, amable. \"Ser\" voor karakter (es tímido), \"estar\" voor stemming (está nervioso)."
+    },
+    "words": [
+      "e539",
+      "e540",
+      "e541",
+      "e542",
+      "e543",
+      "e544",
+      "e545",
+      "e546"
+    ]
+  },
+  {
+    "id": 69,
+    "title": "Beschrijvingen",
+    "emoji": "🎭",
+    "level": "A2",
+    "description": "Indrukken en gevoelens over dingen.",
+    "grammar": {
+      "title": "Uitroepen: ¡Qué + bijvoeglijk naamwoord!",
+      "body": "¡Qué bonito! ¡Qué interesante! ¡Qué raro! Met zelfstandig naamwoord: ¡Qué ciudad tan bonita! Let op de omgekeerde uitroeptekens."
+    },
+    "words": [
+      "e547",
+      "e548",
+      "e549",
+      "e550",
+      "e551",
+      "e552",
+      "e553",
+      "e554"
+    ]
+  },
+  {
+    "id": 70,
+    "title": "Reizen gevorderd",
+    "emoji": "🧳",
+    "level": "A2",
+    "description": "Praktische reiswoorden.",
+    "grammar": {
+      "title": "Reizen: nuttige zinsconstructies",
+      "body": "¿A qué hora sale el próximo tren? ¿Cuánto tarda? Hay que hacer transbordo (overstappen). Necesito cambiar dinero."
+    },
+    "words": [
+      "e555",
+      "e556",
+      "e557",
+      "e558",
+      "e559",
+      "e560",
+      "e561",
+      "e562"
+    ]
+  },
+  {
+    "id": 71,
+    "title": "Koken gevorderd",
+    "emoji": "👨‍🍳",
+    "level": "A2",
+    "description": "Smaken en bereiding beschrijven.",
+    "grammar": {
+      "title": "Smaken beschrijven",
+      "body": "Está dulce / salado / picante / amargo. \"Estar\" voor hoe iets smaakt vandaag, \"ser\" voor hoe het altijd is: el limón es ácido."
+    },
+    "words": [
+      "e563",
+      "e564",
+      "e565",
+      "e566",
+      "e567",
+      "e568",
+      "e569",
+      "e570"
+    ]
+  },
+  {
+    "id": 72,
+    "title": "Technologie",
+    "emoji": "📱",
+    "level": "A2",
+    "description": "Digitale woorden van elke dag.",
+    "grammar": {
+      "title": "Technologische termen in het Spaans",
+      "body": "Veel woorden zijn vertaald: la aplicación (app), la contraseña (wachtwoord), descargar (downloaden). \"Wifi\" en \"internet\" blijven gelijk, uitgesproken op zijn Spaans."
+    },
+    "words": [
+      "e571",
+      "e572",
+      "e573",
+      "e574",
+      "e575",
+      "e576",
+      "e577",
+      "e578"
+    ]
+  },
+  {
+    "id": 73,
+    "title": "Natuur & milieu",
+    "emoji": "🌿",
+    "level": "A2",
+    "description": "Over de natuur en het milieu praten.",
+    "grammar": {
+      "title": "Onpersoonlijk \"se\"",
+      "body": "\"Se\" + werkwoord in de derde persoon voor \"men\": se recicla el vidrio (men recyclet glas), se puede ahorrar energía. Meervoud als het onderwerp meervoud is: se reciclan las botellas."
+    },
+    "words": [
+      "e579",
+      "e580",
+      "e581",
+      "e582",
+      "e583",
+      "e584",
+      "e585",
+      "e586"
+    ]
+  },
+  {
+    "id": 74,
+    "title": "Gezondheid & welzijn",
+    "emoji": "🧘",
+    "level": "A2",
+    "description": "Adviezen voor een gezond leven.",
+    "grammar": {
+      "title": "Advies geven: deber en hay que",
+      "body": "Debes descansar (je moet rusten), hay que beber agua (men moet water drinken). \"Deberías\" is zachter: je zou moeten."
+    },
+    "words": [
+      "e587",
+      "e588",
+      "e589",
+      "e590",
+      "e591",
+      "e592",
+      "e593",
+      "e594"
+    ]
+  },
+  {
+    "id": 75,
+    "title": "Relaties & gevoelens",
+    "emoji": "❤️",
+    "level": "A2",
+    "description": "Vriendschap, liefde en ruzie.",
+    "grammar": {
+      "title": "Bezig zijn met: estar + gerundio",
+      "body": "Estoy pensando en ti (ik ben aan jou aan het denken). Gerundio: -ar → -ando, -er/-ir → -iendo. Onregelmatig: leyendo, durmiendo, diciendo."
+    },
+    "words": [
+      "e595",
+      "e596",
+      "e597",
+      "e598",
+      "e599",
+      "e600",
+      "e601",
+      "e602"
+    ]
+  },
+  {
+    "id": 76,
+    "title": "Sport & competitie",
+    "emoji": "⚽",
+    "level": "A2",
+    "description": "Over wedstrijden en uitslagen praten.",
+    "grammar": {
+      "title": "Sport bespreken",
+      "body": "Ganar (winnen), perder (verliezen), empatar (gelijkspelen). ¿Cómo quedó el partido? — Dos a uno. Ser de + team: soy del Barça."
+    },
+    "words": [
+      "e603",
+      "e604",
+      "e605",
+      "e606",
+      "e607",
+      "e608",
+      "e609",
+      "e610"
+    ]
+  },
+  {
+    "id": 77,
+    "title": "Muziek",
+    "emoji": "🎵",
+    "level": "A2",
+    "description": "Muziek en optredens.",
+    "grammar": {
+      "title": "Muziek bespreken",
+      "body": "Me encanta esta canción. ¿Quién la canta? Tocar un instrumento (bespelen), cantar (zingen), la letra (de songtekst)."
+    },
+    "words": [
+      "e611",
+      "e612",
+      "e613",
+      "e614",
+      "e615",
+      "e616",
+      "e617",
+      "e618"
+    ]
+  },
+  {
+    "id": 78,
+    "title": "Zakelijk Spaans",
+    "emoji": "🤝",
+    "level": "A2",
+    "description": "Zakelijke woorden en formeel contact.",
+    "grammar": {
+      "title": "Formeel vs. informeel in zakelijke context",
+      "body": "Zakelijk gebruik je \"usted\": ¿Podría enviarme la factura? Estimado señor / Estimada señora in brieven, afsluiten met \"Atentamente\"."
+    },
+    "words": [
+      "e619",
+      "e620",
+      "e621",
+      "e622",
+      "e623",
+      "e624",
+      "e625",
+      "e626"
+    ]
+  },
+  {
+    "id": 79,
+    "title": "Kunst & cultuur",
+    "emoji": "🎨",
+    "level": "A2",
+    "description": "Over kunst en erfgoed praten.",
+    "grammar": {
+      "title": "Kunstwerken beschrijven",
+      "body": "Famoso por (beroemd om), pintado por (geschilderd door), construido en (gebouwd in). Fue pintado por Velázquez en 1656."
+    },
+    "words": [
+      "e627",
+      "e628",
+      "e629",
+      "e630",
+      "e631",
+      "e632",
+      "e633",
+      "e634"
+    ]
+  },
+  {
+    "id": 80,
+    "title": "¡Fiesta!",
+    "emoji": "☀️",
+    "level": "A2",
+    "description": "Halverwege A2: de Spaanse levensstijl.",
+    "grammar": {
+      "title": "A2 halverwege: het goede leven",
+      "body": "Je kent nu ruim 600 woorden. Deze uitdrukkingen horen bij het Spaanse leven: la siesta, la sobremesa (natafelen), ir de tapas."
+    },
+    "words": [
+      "e635",
+      "e636",
+      "e637",
+      "e638",
+      "e639",
+      "e640",
+      "e641",
+      "e642"
+    ]
+  },
+  {
+    "id": 81,
+    "title": "Politiek & samenleving",
+    "emoji": "📰",
+    "level": "A2",
+    "description": "Over nieuws en politiek praten.",
+    "grammar": {
+      "title": "Meningen over de maatschappij",
+      "body": "A mi parecer (naar mijn mening), estoy a favor de / en contra de (ik ben voor / tegen). Me parece bien / mal que + subjuntivo komt pas in B1."
+    },
+    "words": [
+      "e643",
+      "e644",
+      "e645",
+      "e646",
+      "e647",
+      "e648",
+      "e649",
+      "e650"
+    ]
+  },
+  {
+    "id": 82,
+    "title": "Het milieu",
+    "emoji": "🌱",
+    "level": "A2",
+    "description": "Duurzaamheid en klimaat.",
+    "grammar": {
+      "title": "Noodzaak: hay que, es necesario + infinitief",
+      "body": "Hay que reciclar (men moet recyclen). Es necesario reducir el plástico. \"Tener que\" is persoonlijk: tenemos que ahorrar agua."
+    },
+    "words": [
+      "e651",
+      "e652",
+      "e653",
+      "e654",
+      "e655",
+      "e656",
+      "e657",
+      "e658"
+    ]
+  },
+  {
+    "id": 83,
+    "title": "Economie",
+    "emoji": "💰",
+    "level": "A2",
+    "description": "Economische onderwerpen begrijpen.",
+    "grammar": {
+      "title": "Onpersoonlijk \"se\" in het nieuws",
+      "body": "Se dice que (men zegt dat), se espera que (verwacht wordt dat), se necesita (er is nodig). Handig om nieuwsberichten te begrijpen."
+    },
+    "words": [
+      "e659",
+      "e660",
+      "e661",
+      "e662",
+      "e663",
+      "e664",
+      "e665",
+      "e666"
+    ]
+  },
+  {
+    "id": 84,
+    "title": "Gezondheid & welzijn 2",
+    "emoji": "🏃",
+    "level": "A2",
+    "description": "Praten over hoe je je voelt en wat je deed.",
+    "grammar": {
+      "title": "Bezig zijn in het verleden: estaba + gerundio",
+      "body": "Estaba corriendo cuando me llamaste (ik was aan het hardlopen toen je belde). Imperfecto van estar + gerundio."
+    },
+    "words": [
+      "e667",
+      "e668",
+      "e669",
+      "e670",
+      "e671",
+      "e672",
+      "e673",
+      "e674"
+    ]
+  },
+  {
+    "id": 85,
+    "title": "Kunst & literatuur",
+    "emoji": "📚",
+    "level": "A2",
+    "description": "Over boeken en kunst praten.",
+    "grammar": {
+      "title": "Kunst en literatuur beschrijven",
+      "body": "Trata de (gaat over), está escrito por (is geschreven door), me hizo pensar (zette me aan het denken). El libro trata de una familia en Madrid."
+    },
+    "words": [
+      "e675",
+      "e676",
+      "e677",
+      "e678",
+      "e679",
+      "e680",
+      "e681",
+      "e682"
+    ]
+  },
+  {
+    "id": 86,
+    "title": "Wetenschap",
+    "emoji": "🔬",
+    "level": "A2",
+    "description": "Wetenschappelijke woorden.",
+    "grammar": {
+      "title": "Antes de / después de + infinitief",
+      "body": "Antes de comer (voor het eten), después de estudiar (na het studeren). Het werkwoord blijft in de infinitief."
+    },
+    "words": [
+      "e683",
+      "e684",
+      "e685",
+      "e686",
+      "e687",
+      "e688",
+      "e689",
+      "e690"
+    ]
+  },
+  {
+    "id": 87,
+    "title": "De samenleving",
+    "emoji": "🤝",
+    "level": "A2",
+    "description": "Samenleven en verschillen.",
+    "grammar": {
+      "title": "Toegeving uitdrukken: aunque, sin embargo",
+      "body": "Aunque es difícil, lo intento (hoewel het moeilijk is, probeer ik het). Sin embargo (echter) verbindt twee zinnen: Es caro; sin embargo, vale la pena."
+    },
+    "words": [
+      "e691",
+      "e692",
+      "e693",
+      "e694",
+      "e695",
+      "e696",
+      "e697",
+      "e698"
+    ]
+  },
+  {
+    "id": 88,
+    "title": "Onderwijs",
+    "emoji": "🎓",
+    "level": "A2",
+    "description": "Over studeren en school praten.",
+    "grammar": {
+      "title": "Doorvertellen: dijo que, me preguntó si",
+      "body": "Dijo que venía (hij zei dat hij kwam). Me preguntó si tenía tiempo (hij vroeg me of ik tijd had). De tijd schuift een stap terug."
+    },
+    "words": [
+      "e699",
+      "e700",
+      "e701",
+      "e702",
+      "e703",
+      "e704",
+      "e705",
+      "e706"
+    ]
+  },
+  {
+    "id": 89,
+    "title": "Media & communicatie",
+    "emoji": "📱",
+    "level": "A2",
+    "description": "Nieuws, sociale media en reclame.",
+    "grammar": {
+      "title": "Tijdsbijzinnen: cuando, mientras, después de que",
+      "body": "Cuando llego a casa, veo las noticias. Mientras como, leo el periódico. Bij toekomst volgt na \"cuando\" de subjuntivo (B1)."
+    },
+    "words": [
+      "e707",
+      "e708",
+      "e709",
+      "e710",
+      "e711",
+      "e712",
+      "e713",
+      "e714"
+    ]
+  },
+  {
+    "id": 90,
+    "title": "Toekomst & dromen",
+    "emoji": "🔮",
+    "level": "A2",
+    "description": "Over plannen en dromen praten.",
+    "grammar": {
+      "title": "Plannen: tengo la intención de, espero",
+      "body": "Tengo la intención de viajar (ik ben van plan te reizen). Espero encontrar trabajo (ik hoop werk te vinden). Sueño con vivir en España."
+    },
+    "words": [
+      "e715",
+      "e716",
+      "e717",
+      "e718",
+      "e719",
+      "e720",
+      "e721",
+      "e722"
+    ]
+  },
+  {
+    "id": 91,
+    "title": "Pretérito indefinido",
+    "emoji": "⏮️",
+    "level": "A2",
+    "description": "Vertellen wat er op een bepaald moment gebeurde.",
+    "grammar": {
+      "title": "Pretérito indefinido: afgeronde acties",
+      "body": "Ayer comí, la semana pasada fui. Regelmatig: -ar → -é, -aste, -ó, -amos, -asteis, -aron; -er/-ir → -í, -iste, -ió, -imos, -isteis, -ieron. Onregelmatig: fui (ser/ir), hice, tuve, estuve, dije."
+    },
+    "words": [
+      "e723",
+      "e724",
+      "e725",
+      "e726",
+      "e727",
+      "e728",
+      "e729",
+      "e730"
+    ]
+  },
+  {
+    "id": 92,
+    "title": "Dagelijkse routine",
+    "emoji": "🌅",
+    "level": "A2",
+    "description": "Je dag beschrijven.",
+    "grammar": {
+      "title": "Wederkerende werkwoorden in de routine",
+      "body": "Me despierto, me levanto, me ducho, me visto, me acuesto. Klinkerwisseling: despertarse → me despierto, acostarse → me acuesto."
+    },
+    "words": [
+      "e731",
+      "e732",
+      "e733",
+      "e734",
+      "e735",
+      "e736",
+      "e737",
+      "e738"
+    ]
+  },
+  {
+    "id": 93,
+    "title": "Afspraken maken",
+    "emoji": "📅",
+    "level": "A2",
+    "description": "Iets afspreken met iemand.",
+    "grammar": {
+      "title": "Afspraken maken: uitdrukkingen",
+      "body": "¿Quedamos el sábado? (Zullen we zaterdag afspreken?) ¿Te apetece ir al cine? (Heb je zin om naar de bioscoop te gaan?) Vale, ¡hasta entonces!"
+    },
+    "words": [
+      "e739",
+      "e740",
+      "e741",
+      "e742",
+      "e743",
+      "e744",
+      "e745",
+      "e746"
+    ]
+  },
+  {
+    "id": 94,
+    "title": "Plannen voor de toekomst",
+    "emoji": "🗓️",
+    "level": "A2",
+    "description": "Toekomstplannen uitdrukken.",
+    "grammar": {
+      "title": "Toekomst: futuro vs. ir a + infinitief",
+      "body": "Voor concrete plannen \"ir a\": voy a estudiar. Voor voorspellingen en beloftes het futuro: estudiaré. Beide zijn correct in gesprekken."
+    },
+    "words": [
+      "e747",
+      "e748",
+      "e749",
+      "e750",
+      "e751",
+      "e752",
+      "e753",
+      "e754"
+    ]
+  },
+  {
+    "id": 95,
+    "title": "Op de markt",
+    "emoji": "🧺",
+    "level": "A2",
+    "description": "Hoeveelheden vragen op de markt.",
+    "grammar": {
+      "title": "Hoeveelheden en gewichten",
+      "body": "Un kilo de, medio kilo de, cuarto kilo de, una docena de, un litro de. ¿Me pone un kilo de naranjas? — ¿Algo más? — Nada más, gracias."
+    },
+    "words": [
+      "e755",
+      "e756",
+      "e757",
+      "e758",
+      "e759",
+      "e760",
+      "e761",
+      "e762"
+    ]
+  },
+  {
+    "id": 96,
+    "title": "Koken & recepten",
+    "emoji": "👨‍🍳",
+    "level": "A2",
+    "description": "Een recept volgen.",
+    "grammar": {
+      "title": "De gebiedende wijs in recepten",
+      "body": "Corta (snijd), mezcla (meng), añade (voeg toe), cuece (kook). Tú-vorm = derde persoon presente. Onregelmatig: pon (poner), haz (hacer)."
+    },
+    "words": [
+      "e763",
+      "e764",
+      "e765",
+      "e766",
+      "e767",
+      "e768",
+      "e769",
+      "e770"
+    ]
+  },
+  {
+    "id": 97,
+    "title": "Bioscoop & uitgaan",
+    "emoji": "🎬",
+    "level": "A2",
+    "description": "Over films en uitgaan praten.",
+    "grammar": {
+      "title": "Meningen over films",
+      "body": "Me gustó mucho (ik vond het heel leuk), me encantó (ik vond het geweldig), me aburrió (het verveelde me). ¿De qué trata? (Waar gaat het over?)"
+    },
+    "words": [
+      "e771",
+      "e772",
+      "e773",
+      "e774",
+      "e775",
+      "e776",
+      "e777",
+      "e778"
+    ]
+  },
+  {
+    "id": 98,
+    "title": "Vrienden & sociale plannen",
+    "emoji": "👫",
+    "level": "A2",
+    "description": "Uitnodigen en reageren.",
+    "grammar": {
+      "title": "Uitnodigen en reageren",
+      "body": "¿Quieres venir? (Wil je komen?) ¿Vienes con nosotros? Ja: ¡Claro! ¡Con mucho gusto! Nee: Lo siento, no puedo. Otro día, ¿vale?"
+    },
+    "words": [
+      "e779",
+      "e780",
+      "e781",
+      "e782",
+      "e783",
+      "e784",
+      "e785",
+      "e786"
+    ]
+  },
+  {
+    "id": 99,
+    "title": "Huis zoeken & huren",
+    "emoji": "🏠",
+    "level": "A2",
+    "description": "Een woning huren.",
+    "grammar": {
+      "title": "Woningen beschrijven",
+      "body": "Un piso de dos habitaciones, amueblado, con terraza. ¿Cuánto es el alquiler? ¿Los gastos están incluidos? Se alquila (te huur)."
+    },
+    "words": [
+      "e787",
+      "e788",
+      "e789",
+      "e790",
+      "e791",
+      "e792",
+      "e793",
+      "e794"
+    ]
+  },
+  {
+    "id": 100,
+    "title": "🎉 100 lessen!",
+    "emoji": "🏆",
+    "level": "A2",
+    "description": "Honderd lessen: goed bezig!",
+    "grammar": {
+      "title": "Trots zijn: complimenten geven en ontvangen",
+      "body": "¡Enhorabuena! ¡Qué bien hablas! Antwoorden: Gracias, todavía estoy aprendiendo. Estar orgulloso de (trots zijn op)."
+    },
+    "words": [
+      "e795",
+      "e796",
+      "e797",
+      "e798",
+      "e799",
+      "e800",
+      "e801",
+      "e802"
+    ]
+  },
+  {
+    "id": 101,
+    "title": "Bij de bank",
+    "emoji": "🏦",
+    "level": "A2",
+    "description": "Bankzaken regelen.",
+    "grammar": {
+      "title": "Bankzaken in Spanje",
+      "body": "Quiero abrir una cuenta (een rekening openen). Sacar dinero (geld opnemen), ingresar (storten), hacer una transferencia (overboeken). Het pinapparaat heet \"el cajero\"."
+    },
+    "words": [
+      "e803",
+      "e804",
+      "e805",
+      "e806",
+      "e807",
+      "e808",
+      "e809",
+      "e810"
+    ]
+  },
+  {
+    "id": 102,
+    "title": "Feestjes & gelegenheden",
+    "emoji": "🎉",
+    "level": "A2",
+    "description": "Feestvieren en gelukwensen.",
+    "grammar": {
+      "title": "Wensen en gelukwensen",
+      "body": "¡Felicidades! (gefeliciteerd), ¡Feliz cumpleaños!, ¡Enhorabuena! (bij een prestatie), ¡Que lo pases bien! (veel plezier), ¡Salud! (proost)."
+    },
+    "words": [
+      "e811",
+      "e812",
+      "e813",
+      "e814",
+      "e815",
+      "e816",
+      "e817",
+      "e818"
+    ]
+  },
+  {
+    "id": 103,
+    "title": "Klachten & problemen",
+    "emoji": "😤",
+    "level": "A2",
+    "description": "Een klacht indienen.",
+    "grammar": {
+      "title": "Een klacht uiten: beleefd maar duidelijk",
+      "body": "Perdone, tengo un problema con... (Pardon, ik heb een probleem met...). Quisiera una solución. ¿Puedo hablar con el responsable?"
+    },
+    "words": [
+      "e819",
+      "e820",
+      "e821",
+      "e822",
+      "e823",
+      "e824",
+      "e825",
+      "e826"
+    ]
+  },
+  {
+    "id": 104,
+    "title": "Beschrijven van mensen",
+    "emoji": "👤",
+    "level": "A2",
+    "description": "Het uiterlijk van mensen beschrijven.",
+    "grammar": {
+      "title": "Bijvoeglijke naamwoorden voor uiterlijk",
+      "body": "Tiene el pelo rubio / moreno / largo. Lleva gafas (draagt een bril). Es alto y delgado. \"Ser\" voor uiterlijk, \"llevar\" voor wat iemand draagt."
+    },
+    "words": [
+      "e827",
+      "e828",
+      "e829",
+      "e830",
+      "e831",
+      "e832",
+      "e833",
+      "e834"
+    ]
+  },
+  {
+    "id": 105,
+    "title": "Reizen plannen",
+    "emoji": "✈️",
+    "level": "A2",
+    "description": "Een reis voorbereiden.",
+    "grammar": {
+      "title": "Plannen: tengo pensado, pienso",
+      "body": "Tengo pensado ir a Perú (ik ben van plan naar Peru te gaan). Pienso quedarme una semana. Voy a reservar el hotel hoy."
+    },
+    "words": [
+      "e835",
+      "e836",
+      "e837",
+      "e838",
+      "e839",
+      "e840",
+      "e841",
+      "e842"
+    ]
+  },
+  {
+    "id": 106,
+    "title": "Vervoer & mobiliteit",
+    "emoji": "🚇",
+    "level": "A2",
+    "description": "Openbaar vervoer en de auto.",
+    "grammar": {
+      "title": "Vervoer: kaartjes en routebeschrijving",
+      "body": "¿Dónde compro el billete? Hay que hacer transbordo en Sol (overstappen). ¿Cuánto tarda? Con retraso / a tiempo."
+    },
+    "words": [
+      "e843",
+      "e844",
+      "e845",
+      "e846",
+      "e847",
+      "e848",
+      "e849",
+      "e850"
+    ]
+  },
+  {
+    "id": 107,
+    "title": "Spijt & wensen",
+    "emoji": "😔",
+    "level": "A2",
+    "description": "Spijt en wensen uitdrukken.",
+    "grammar": {
+      "title": "Spijt uitdrukken: tendría que haber, ojalá",
+      "body": "Tendría que haber estudiado más (ik had meer moeten studeren). ¡Ojalá! (hopelijk / was het maar zo). Me arrepiento de (ik heb spijt van)."
+    },
+    "words": [
+      "e851",
+      "e852",
+      "e853",
+      "e854",
+      "e855",
+      "e856",
+      "e857",
+      "e858"
+    ]
+  },
+  {
+    "id": 108,
+    "title": "Culinaire tradities",
+    "emoji": "🍝",
+    "level": "A2",
+    "description": "De Spaanse keuken per regio.",
+    "grammar": {
+      "title": "Regionale verschillen in Spanje",
+      "body": "Elke regio heeft eigen gerechten: paella (Valencia), pulpo (Galicia), gazpacho (Andalusië), pintxos (Baskenland). \"Es típico de\" = het is typisch voor."
+    },
+    "words": [
+      "e859",
+      "e860",
+      "e861",
+      "e862",
+      "e863",
+      "e864",
+      "e865",
+      "e866"
+    ]
+  },
+  {
+    "id": 109,
+    "title": "Gezondheid & leefstijl",
+    "emoji": "🥗",
+    "level": "A2",
+    "description": "Gezonde gewoontes.",
+    "grammar": {
+      "title": "Frequentie uitdrukken",
+      "body": "Siempre, casi siempre, a menudo, a veces, casi nunca, nunca. Dos veces por semana (twee keer per week), todos los días (elke dag)."
+    },
+    "words": [
+      "e867",
+      "e868",
+      "e869",
+      "e870",
+      "e871",
+      "e872",
+      "e873",
+      "e874"
+    ]
+  },
+  {
+    "id": 110,
+    "title": "Sport & outdoor",
+    "emoji": "⛰️",
+    "level": "A2",
+    "description": "Buitensport en wedstrijden.",
+    "grammar": {
+      "title": "Jugar vs. hacer vs. practicar",
+      "body": "Jugar al fútbol / al tenis (balsporten). Hacer senderismo / yoga. Practicar deporte (sport beoefenen). Montar en bici (fietsen)."
+    },
+    "words": [
+      "e875",
+      "e876",
+      "e877",
+      "e878",
+      "e879",
+      "e880",
+      "e881",
+      "e882"
+    ]
+  },
+  {
+    "id": 111,
+    "title": "Winkelen & mode",
+    "emoji": "👗",
+    "level": "A2",
+    "description": "Kleding passen en kopen.",
+    "grammar": {
+      "title": "Passen en maten in Spanje",
+      "body": "¿Puedo probármelo? (Mag ik het passen?) Me queda bien / mal (het staat me goed / slecht). Me queda pequeño / grande. ¿Lo tiene en otra talla?"
+    },
+    "words": [
+      "e883",
+      "e884",
+      "e885",
+      "e886",
+      "e887",
+      "e888",
+      "e889",
+      "e890"
+    ]
+  },
+  {
+    "id": 112,
+    "title": "Technologie & internet",
+    "emoji": "💻",
+    "level": "A2",
+    "description": "Online communiceren.",
+    "grammar": {
+      "title": "Technologische woordenschat",
+      "body": "Subir una foto (uploaden), bajar / descargar (downloaden), la nube (de cloud), el enlace (de link). Muchos términos ingleses se usan también: el wifi, el email."
+    },
+    "words": [
+      "e891",
+      "e892",
+      "e893",
+      "e894",
+      "e895",
+      "e896",
+      "e897",
+      "e898"
+    ]
+  },
+  {
+    "id": 113,
+    "title": "Het weer & de natuur",
+    "emoji": "🌦️",
+    "level": "A2",
+    "description": "Weer en landschap in detail.",
+    "grammar": {
+      "title": "Weersomstandigheden: gevorderde uitdrukkingen",
+      "body": "Hace un calor sofocante (het is benauwd heet). Está nublado. Hay tormenta. Ha caído una helada. El tiempo está loco (het weer is gek)."
+    },
+    "words": [
+      "e899",
+      "e900",
+      "e901",
+      "e902",
+      "e903",
+      "e904",
+      "e905",
+      "e906"
+    ]
+  },
+  {
+    "id": 114,
+    "title": "Werk & loopbaan",
+    "emoji": "💼",
+    "level": "A2",
+    "description": "Over je loopbaan praten.",
+    "grammar": {
+      "title": "Werkervaring beschrijven: he trabajado como",
+      "body": "He trabajado como camarero (ik heb als ober gewerkt). Trabajé tres años en Madrid (afgerond: indefinido). Tengo experiencia en ventas."
+    },
+    "words": [
+      "e907",
+      "e908",
+      "e909",
+      "e910",
+      "e911",
+      "e912",
+      "e913",
+      "e914"
+    ]
+  },
+  {
+    "id": 115,
+    "title": "Kunst & musea",
+    "emoji": "🎨",
+    "level": "A2",
+    "description": "Musea bezoeken.",
+    "grammar": {
+      "title": "Musea en kunstwerken bespreken",
+      "body": "¿A qué hora abre el museo? La entrada es gratis los domingos. Fue pintado en el siglo XVII. Me impresionó (het maakte indruk op me)."
+    },
+    "words": [
+      "e915",
+      "e916",
+      "e917",
+      "e918",
+      "e919",
+      "e920",
+      "e921",
+      "e922"
+    ]
+  },
+  {
+    "id": 116,
+    "title": "Spaanse tradities",
+    "emoji": "🎭",
+    "level": "A2",
+    "description": "Feestdagen en tradities in Spanje.",
+    "grammar": {
+      "title": "Feestdagen en tradities uitleggen",
+      "body": "Se celebra en (het wordt gevierd in), es tradición (het is traditie). Nochevieja: twaalf druiven om middernacht. Semana Santa: processies. Reyes Magos: cadeaus op 6 januari."
+    },
+    "words": [
+      "e923",
+      "e924",
+      "e925",
+      "e926",
+      "e927",
+      "e928",
+      "e929",
+      "e930"
+    ]
+  },
+  {
+    "id": 117,
+    "title": "Onderwijs & leren",
+    "emoji": "📚",
+    "level": "A2",
+    "description": "Over leren en examens.",
+    "grammar": {
+      "title": "Het Spaanse schoolsysteem",
+      "body": "Primaria, la ESO (secundaria), el bachillerato, la universidad. Matricularse (zich inschrijven), hacer un examen, sacar buena nota (een goed cijfer halen)."
+    },
+    "words": [
+      "e931",
+      "e932",
+      "e933",
+      "e934",
+      "e935",
+      "e936",
+      "e937",
+      "e938"
+    ]
+  },
+  {
+    "id": 118,
+    "title": "Media & nieuws",
+    "emoji": "📰",
+    "level": "A2",
+    "description": "Nieuws volgen en bespreken.",
+    "grammar": {
+      "title": "Nieuws bespreken",
+      "body": "¿Has oído la noticia? Según el periódico (volgens de krant). Me parece increíble que... Seguir a alguien (volgen) en redes sociales."
+    },
+    "words": [
+      "e939",
+      "e940",
+      "e941",
+      "e942",
+      "e943",
+      "e944",
+      "e945",
+      "e946"
+    ]
+  },
+  {
+    "id": 119,
+    "title": "Duurzaamheid & milieu",
+    "emoji": "🌿",
+    "level": "A2",
+    "description": "Duurzaam leven in de praktijk.",
+    "grammar": {
+      "title": "Milieu: actueel woordgebruik",
+      "body": "Reciclar, reutilizar, reducir (de drie R's). La huella de carbono (de koolstofvoetafdruk). Ir en bici en vez de en coche."
+    },
+    "words": [
+      "e947",
+      "e948",
+      "e949",
+      "e950",
+      "e951",
+      "e952",
+      "e953",
+      "e954"
+    ]
+  },
+  {
+    "id": 120,
+    "title": "🎓 A2 afgerond!",
+    "emoji": "🎓",
+    "level": "A2",
+    "description": "Gefeliciteerd: A2 compleet!",
+    "grammar": {
+      "title": "Gefeliciteerd: A2 compleet!",
+      "body": "Je kent nu bijna 1000 Spaanse woorden en de belangrijkste verleden en toekomende tijden. Volgende stap: B1, met de subjuntivo en langere teksten. ¡Enhorabuena!"
+    },
+    "words": [
+      "e955",
+      "e956",
+      "e957",
+      "e958",
+      "e959",
+      "e960",
+      "e961",
+      "e962"
+    ]
   }
 ]

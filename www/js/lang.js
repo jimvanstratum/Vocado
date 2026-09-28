@@ -11,7 +11,7 @@ export const LANGS = {
     keys: { progress: 'italiano_progress_v2', srs: 'italiano_srs_v2', placement: 'placementDone' },
   },
   es: {
-    code: 'es', name: 'Spaans', adj: 'Spaanse', flag: '🇪🇸', tts: 'es-ES', levels: 'A1',
+    code: 'es', name: 'Spaans', adj: 'Spaanse', flag: '🇪🇸', tts: 'es-ES', levels: 'A1 · A2',
     articleRe: /^(el |la |los |las |un |una |unos |unas )/i,
     articleHint: 'Lidwoorden: el, la, los, las',
     keys: { progress: 'vocado_es_progress_v1', srs: 'vocado_es_srs_v1', placement: 'placementDone_es' },
