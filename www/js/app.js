@@ -262,6 +262,11 @@ export function navigate(screen, data = {}) {
 
 // ─── HOME ─────────────────────────────────────────────────────────────────────
 function renderHome() {
+  // v1.54: meetwaarden van de menubalk bewaren voor de schermdiagnose (op instellingen is de balk verborgen)
+  setTimeout(() => {
+    const r = $id('shared-nav')?.getBoundingClientRect(), l = document.querySelector('.nav-btn span')?.getBoundingClientRect();
+    if (r && r.height) window._navDiag = { navTop: Math.round(r.top), navBottom: Math.round(r.bottom), labelBottom: Math.round(l?.bottom || 0) };
+  }, 400);
   // Sprint 9.1: Eenmalige opruiming van datastatus-bugs
   cleanupSkippedCompleted();   // verwijder lessen die zowel completed als skipped zijn
 
@@ -1553,6 +1558,24 @@ async function init() {
   // v1.47: changelog-modal
   $id('changelog-btn')?.addEventListener('click', openChangelog);
   $id('lang-btn')?.addEventListener('click', openLangModal);
+  // v1.54: schermdiagnose
+  $id('diag-btn')?.addEventListener('click', () => {
+    const out = $id('diag-out');
+    const nd = window._navDiag || {};
+    const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+    const lines = [
+      `versie: ${$id('version-detail') ? 'v' + document.querySelector('.settings-version').textContent.match(/v([\d.]+)/)?.[1] : '?'}`,
+      `standalone: ${document.documentElement.classList.contains('standalone')}`,
+      `screen: ${screen.width} × ${screen.height}`,
+      `innerHeight: ${window.innerHeight} · clientHeight: ${document.documentElement.clientHeight}`,
+      `visualViewport: ${window.visualViewport ? Math.round(window.visualViewport.height) : '-'}`,
+      `--app-height: ${css('--app-height')} · --sab: ${css('--sab')} · --safe-t: ${css('--safe-t')}`,
+      `menubalk (homescherm): top ${nd.navTop ?? '-'} · bottom ${nd.navBottom ?? '-'} · label bottom ${nd.labelBottom ?? '-'}`,
+      `UA: ${navigator.userAgent.slice(0, 80)}`,
+    ];
+    out.textContent = lines.join('\n');
+    out.style.display = out.style.display === 'none' ? '' : 'none';
+  });
   $id('lang-modal-close')?.addEventListener('click', closeLangModal);
   $id('lang-modal')?.addEventListener('click', e => { if (e.target.id === 'lang-modal') closeLangModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLangModal(); });

@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.54",
+    "date": "2026-09-28",
+    "title": "Menulabels weer zichtbaar",
+    "items": [
+      "De tekst onder de menu-iconen viel op iPhone net buiten beeld; de hoogteberekening is gecorrigeerd.",
+      "Nieuw in Instellingen › Over Vocado: een schermdiagnose met meetwaarden, voor als de weergave ooit weer afwijkt."
+    ]
+  },
+  {
     "version": "1.53",
     "date": "2026-09-28",
     "title": "Grotere menuknoppen en stillere updates",
