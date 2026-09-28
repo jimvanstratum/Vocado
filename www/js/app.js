@@ -1691,7 +1691,7 @@ async function init() {
       achievements:     prog.achievements    || []
     };
     const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(compactData))));
-    const url     = `${location.origin}${location.pathname}?herstel=${encoded}`;
+    const url     = `${new URL('./', location.href).href}?herstel=${encoded}`;
 
     if (navigator.share) {
       try {

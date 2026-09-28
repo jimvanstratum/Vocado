@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.56",
+    "date": "2026-09-28",
+    "title": "Opstartadres gecorrigeerd",
+    "items": [
+      "De app wees bij het opstarten naar de hoofdmap van de site in plaats van naar de eigen map, wat een 404-pagina kon geven. Dat is hersteld.",
+      "Herstellinks wijzen altijd naar de juiste map."
+    ]
+  },
+  {
     "version": "1.55",
     "date": "2026-09-28",
     "title": "Menubalk echt onderaan op iPhone",

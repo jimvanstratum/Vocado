@@ -52,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.55**, cache buster **?v=49**
+- Huidige versie: **v1.56**, cache buster **?v=50**
 
 ### Build & deploy
 
@@ -127,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.55)
+## Huidige staat (v1.56)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -254,6 +254,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.56 | Manifest: `id`/`start_url`/`scope` relatief (`./`) i.p.v. `/` — de site staat onder `/Vocado/`, `/` gaf een GitHub-404; herstellink via `new URL('./', location.href)` |
 | v1.55 | Statusbalk op `default` (iOS 18 knipte 59 punten onderaan af bij translucent); theme-color per kleurenschema |
 | v1.54 | Hoogte: grootste ooit gemelde viewport i.p.v. schermhoogte (menulabels weer zichtbaar); schermdiagnose in instellingen |
 | v1.53 | Menuknoppen groter; update via `controllerchange` + periodieke check; laadscherm met hetzelfde achtergrondloze logo als het homescherm |
@@ -325,6 +326,7 @@ Tot B2 = circa **600–800 uur** totale studie.
 
 ## Bekende issues
 
+- **Manifest-paden**: GitHub Pages serveert de app onder `/Vocado/`; `start_url`, `scope` en `id` in `www/manifest.json` moeten relatief blijven (`./`). Absolute `/` wijst naar de gebruikersroot en geeft een 404 (v1.56)
 - **git push credentials**: de macOS-keychain levert het token van het GitHub-account `jimvanstratumbcs`, dat geen rechten heeft op `jimvanstratum/Vocado` (403). Beide accounts zijn in `gh` ingelogd. Pushen werkt zonder configuratie te wijzigen met een eenmalige credential helper:
   ```bash
   git -c credential.helper= -c credential.helper='!f() { echo "username=jimvanstratum"; echo "password=$(gh auth token --user jimvanstratum)"; }; f' push

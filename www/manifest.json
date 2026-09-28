@@ -1,10 +1,10 @@
 {
-  "id": "/",
+  "id": "./",
   "name": "Vocado",
   "short_name": "Vocado",
-  "description": "Leer een taal voor je vakantie — Italiaans A1/A2/B1",
-  "start_url": "/",
-  "scope": "/",
+  "description": "Leer een taal voor je vakantie — Italiaans en Spaans",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#0D1A11",
   "theme_color": "#0D1A11",
@@ -35,6 +35,9 @@
       "purpose": "maskable"
     }
   ],
-  "categories": ["education", "lifestyle"],
+  "categories": [
+    "education",
+    "lifestyle"
+  ],
   "lang": "nl"
 }
