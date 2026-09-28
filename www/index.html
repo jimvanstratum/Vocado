@@ -126,9 +126,9 @@
       background: var(--surface); border-top: 1px solid var(--border);
       padding-bottom: max(var(--sab, 0px), env(safe-area-inset-bottom, 0px)); }
     body.show-nav #shared-nav { display: flex; }
-    .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 6px 0; cursor: pointer; color: var(--muted); font-size: 10px; gap: 3px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
+    .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 10px 0 6px; cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 600; gap: 4px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
     .nav-btn.active { color: var(--accent); }
-    .nav-btn svg { width: 22px; height: 22px; fill: currentColor; }
+    .nav-btn svg { width: 28px; height: 28px; fill: currentColor; }
 
     /* HOME */
     .home-header { padding: calc(var(--safe-t) + 20px) 20px 4px; background: var(--header-grad); }
@@ -336,7 +336,7 @@
 
     #loading { position: fixed; inset: 0; background: var(--bg); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; z-index: 1000; }
     #loading.hidden { display: none; }
-    .loading-logo { width: 120px; height: 120px; border-radius: 28px; }
+    .loading-logo { height: 96px; display: flex; justify-content: center; }
     .loading-spinner { width: 28px; height: 28px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
     @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
@@ -894,7 +894,7 @@
 </div>
 
 <div id="loading">
-  <img class="loading-logo" src="./icon.svg" alt="Vocado">
+  <div class="loading-logo" id="loading-logo" aria-label="Vocado"></div>
   <div class="loading-spinner" aria-hidden="true"></div>
   <div class="loading-text">Vocado laden…</div>
 </div>
@@ -1104,7 +1104,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.52 <span id="version-detail"></span></div>
+    <div class="settings-version">Vocado · v1.53 <span id="version-detail"></span></div>
   </div>
 </div>
 
@@ -1271,7 +1271,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=46';
+  import './js/app.js?v=47';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {
@@ -1288,26 +1288,33 @@
         });
       }
       window.applyPendingUpdate = function () { window._vocadoUpdatePending = false; location.reload(); };
+      /* v1.53: 'controllerchange' is het betrouwbare signaal dat een nieuwe versie de controle heeft
+         overgenomen (skipWaiting + clients.claim in sw.js). Alleen als er al een controller wás, is het
+         een echte update; bij de allereerste installatie niet herladen. */
+      var prevController = navigator.serviceWorker.controller;
+      var refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        var firstInstall = !prevController;   // verse installatie: pagina had nog geen controller
+        prevController = navigator.serviceWorker.controller;
+        if (firstInstall || refreshing) return;
+        refreshing = true;
+        if (!inSession()) { location.reload(); return; }
+        // Midden in een les/toets: uitstellen tot het scherm verlaten wordt
+        window._vocadoUpdatePending = true;
+        refreshing = false;
+        var banner = document.getElementById('update-banner');
+        if (banner) banner.style.display = '';
+        var nowBtn = document.getElementById('update-banner-now');
+        if (nowBtn) nowBtn.addEventListener('click', window.applyPendingUpdate);
+        var closeBtn = document.getElementById('update-banner-close');
+        if (closeBtn) closeBtn.addEventListener('click', function () { banner.style.display = 'none'; });
+      });
       navigator.serviceWorker.register('./sw.js').then(function (reg) {
-        // Controleer op updates zodra de app weer op de voorgrond komt
-        document.addEventListener('visibilitychange', function () { if (!document.hidden) reg.update().catch(function () {}); });
-        reg.addEventListener('updatefound', function () {
-          var newWorker = reg.installing;
-          if (!newWorker) return;
-          newWorker.addEventListener('statechange', function () {
-            if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
-              // Echte update: nieuwe SW heeft de controle overgenomen
-              if (!inSession()) { location.reload(); return; }
-              window._vocadoUpdatePending = true;
-              var banner = document.getElementById('update-banner');
-              if (banner) banner.style.display = '';
-              var nowBtn = document.getElementById('update-banner-now');
-              if (nowBtn) nowBtn.addEventListener('click', window.applyPendingUpdate);
-              var closeBtn = document.getElementById('update-banner-close');
-              if (closeBtn) closeBtn.addEventListener('click', function () { banner.style.display = 'none'; });
-            }
-          });
-        });
+        var check = function () { reg.update().catch(function () {}); };
+        // Controleer op updates bij terugkeer naar de voorgrond en elk half uur
+        document.addEventListener('visibilitychange', function () { if (!document.hidden) check(); });
+        setInterval(check, 30 * 60 * 1000);
+        setTimeout(check, 5000);
       }).catch(function () {});
     }
   });
@@ -1355,6 +1362,8 @@
       const resp = await fetch('./Vocado groot.svg');
       const text = await resp.text();
       document.getElementById('home-title').replaceChildren(makeLogo(text, 72));
+      const lo = document.getElementById('loading-logo');
+      if (lo) lo.replaceChildren(makeLogo(text, 96));
       const pl = document.getElementById('placement-logo');
       if (pl) pl.replaceChildren(makeLogo(text, 48));
       const ll = document.getElementById('lang-logo');

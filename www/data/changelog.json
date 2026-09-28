@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.53",
+    "date": "2026-09-28",
+    "title": "Grotere menuknoppen en stillere updates",
+    "items": [
+      "De knoppen in de menubalk zijn groter.",
+      "Updates worden betrouwbaarder gevonden en stil toegepast; alleen midden in een les zie je nog een melding.",
+      "Het laadscherm toont het poppetje en de naam, zonder achtergrond."
+    ]
+  },
+  {
     "version": "1.52",
     "date": "2026-09-28",
     "title": "Hoogte op iPhone en taalwissel",
