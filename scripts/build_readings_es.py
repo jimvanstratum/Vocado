@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""build_readings_es.py — Spaanse leesteksten A1/A2/B1 (v1.48–v1.59): één per blok, in de toetsles. Zelfde formaat als build_readings.py."""
+"""build_readings_es.py — Spaanse leesteksten A1/A2/B1 (v1.48–v1.60): één per blok, in de toetsles. Zelfde formaat als build_readings.py."""
 import json
 from pathlib import Path
 OUT = Path(__file__).parent.parent / 'www' / 'data' / 'es' / 'readings.json'
@@ -194,6 +194,56 @@ Al salir, mi amiga me preguntó qué me había parecido. Le dije que, si me lo h
   ('Waarom keek de schrijver jarenlang nagesynchroniseerde films?', ['Omdat ondertitels verboden waren', 'Omdat dat in Spanje normaal is en de stemmen vertrouwd klonken', 'Omdat hij geen Engels sprak', 'Omdat de bioscoop goedkoper was'], 1),
   ('Wat was moeilijk in het eerste halfuur?', ['De zaal was te koud', 'Hij las de ondertitels te snel en miste de gebaren; het accent was lastig', 'De film had geen geluid', 'Zijn vriendin praatte de hele tijd'], 1),
   ('Hoe vaak gaat de schrijver nu naar die bioscoop?', ['Nooit meer', 'Een keer per jaar', 'Bijna elke week', 'Alleen met vakantie'], 2)),
+R(250, 'B1', 'Votar por primera vez', """
+El domingo pasado voté por primera vez. Cumplí dieciocho años en marzo y, sinceramente, hasta hace poco la política me parecía un asunto de adultos aburridos. Mis padres discutían sobre los candidatos durante la cena y yo me ponía los auriculares.
+Todo cambió cuando en el instituto organizaron un debate con representantes de varios partidos. Les hicimos preguntas sobre la vivienda, el clima y el precio de la universidad, y me di cuenta de que esas decisiones también me afectaban a mí. Leí los programas, comparé propuestas y hasta discutí con mi abuelo, que vota al mismo partido desde la Transición.
+En el colegio electoral había una cola larga. Cuando metí la papeleta en la urna, el presidente de la mesa dijo en voz alta: "Vota". Fue solo un segundo, pero sentí que, por fin, formaba parte de algo más grande que yo. Si no hubiera ido a aquel debate, probablemente me habría quedado en casa.
+""",
+  ('Wat vond de schrijver vroeger van politiek?', ['Fascinerend', 'Iets voor saaie volwassenen', 'Te moeilijk', 'Alleen interessant op tv'], 1),
+  ('Wat veranderde zijn houding?', ['Een film', 'Een debat op school met vertegenwoordigers van partijen', 'Een ruzie met zijn opa', 'Een reis naar Madrid'], 1),
+  ('Wat gebeurde er bij het stembureau?', ['Hij mocht niet stemmen', 'Hij stond in een lange rij en voelde zich deel van iets groters', 'Hij vergat zijn identiteitsbewijs', 'Hij stemde blanco'], 1)),
+R(260, 'B1', 'La entrevista que casi sale mal', """
+Hace un mes me llamaron para una entrevista en una empresa de exportación de aceite. Había preparado respuestas para todas las preguntas típicas: mis puntos fuertes, mis puntos débiles, por qué quería trabajar allí. Incluso había ensayado delante del espejo.
+El día de la entrevista todo empezó a torcerse. Perdí el autobús, llegué con diez minutos de retraso y, para colmo, me había dejado el currículum en casa. La directora de recursos humanos me miró con cara seria. Pensé que ya estaba todo perdido.
+Entonces decidí ser sincero. Le pedí disculpas, le expliqué lo ocurrido sin excusas y le propuse enviarle el currículum esa misma tarde. Para mi sorpresa, sonrió: "En este trabajo hay que resolver problemas con los clientes cada día. Acaba de demostrarme que sabe hacerlo". Dos semanas después firmé el contrato. Ahora, cuando algo sale mal, recuerdo que la honestidad también es una competencia profesional.
+""",
+  ('Hoe had de schrijver zich voorbereid?', ['Helemaal niet', 'Met antwoorden op standaardvragen, zelfs voor de spiegel', 'Alleen door het bedrijf te googelen', 'Door een vriend te bellen'], 1),
+  ('Wat ging er mis op de dag zelf?', ['De bus was te vroeg', 'Hij miste de bus, kwam te laat en vergat zijn cv', 'Het gesprek werd afgezegd', 'Hij had het verkeerde adres'], 1),
+  ('Waarom kreeg hij toch de baan?', ['Hij had de beste opleiding', 'Hij kende de directeur', 'Hij toonde dat hij eerlijk problemen kan oplossen', 'Niemand anders had gesolliciteerd'], 2)),
+R(270, 'B1', 'Una noche en urgencias', """
+Era medianoche cuando mi hijo pequeño empezó a tener fiebre muy alta. Le di un jarabe, pero no bajaba, y cuando vi que respiraba con dificultad, no lo pensé más: cogimos el coche y fuimos a urgencias.
+En la sala de espera había mucha gente. Una enfermera nos atendió enseguida: le tomó la temperatura, le midió el oxígeno y nos dijo con calma que no nos preocupáramos, que lo verían pronto. Media hora después, una médica joven lo examinó. "Respire hondo, campeón", le decía, y mi hijo, asustado, obedecía. Le hicieron una radiografía y un análisis de sangre.
+El diagnóstico fue una infección respiratoria. Nos recetaron un antibiótico y nos explicaron la dosis exacta. A las cuatro de la mañana ya estábamos en casa. Al día siguiente, agotada pero aliviada, pensé en todas las personas que trabajan de noche para que los demás podamos dormir tranquilos. No se lo agradecemos lo suficiente.
+""",
+  ('Waarom ging de moeder naar de spoedeisende hulp?', ['Het kind had buikpijn', 'De koorts daalde niet en het kind ademde moeilijk', 'Het kind was gevallen', 'De apotheek was dicht'], 1),
+  ('Wat deed de verpleegkundige eerst?', ['Ze gaf meteen antibiotica', 'Ze mat temperatuur en zuurstof en stelde hen gerust', 'Ze stuurde hen naar huis', 'Ze maakte een röntgenfoto'], 1),
+  ('Waar dacht de moeder de volgende dag aan?', ['Aan de rekening', 'Aan de mensen die nachtdiensten draaien voor anderen', 'Aan een nieuwe auto', 'Aan vakantie'], 1)),
+R(280, 'B1', 'La fiesta sorpresa que no fue sorpresa', """
+Mi hermana cumplía cuarenta años y decidimos organizarle una fiesta sorpresa. Durante semanas lo planeamos todo en secreto: reservamos el jardín de un amigo, encargamos una tarta enorme y enviamos invitaciones a cincuenta personas con una instrucción clara: "No digáis nada".
+El día anterior me pasé la tarde en la cocina picando cebolla, sofriendo pimientos y horneando empanadas. Mi cuñado arregló la valla del jardín, colgó luces entre los árboles y hasta cortó el césped. Todo estaba perfecto.
+El sábado, cuando mi hermana entró y gritamos "¡Sorpresa!", ella se echó a reír: lo sabía desde hacía dos semanas. Nuestra tía, que habla por los codos, se lo había contado sin querer en la peluquería. Al principio me enfadé, pero ella me abrazó y me dijo que fingir sorpresa durante quince días había sido el mejor regalo. Lo pasamos en grande hasta las tres de la mañana.
+""",
+  ('Hoe bereidden ze het feest voor?', ['In één dag', 'Wekenlang in het geheim, met tuin, taart en uitnodigingen', 'Via een feestbureau', 'Ze deden niets bijzonders'], 1),
+  ('Hoe wist de zus van het feest?', ['Ze las een bericht', 'De tante had het per ongeluk verteld bij de kapper', 'Ze zag de taart', 'De zwager verklapte het'], 1),
+  ('Hoe reageerde de zus uiteindelijk?', ['Ze was boos', 'Ze vertrok vroeg', 'Ze lachte en zei dat doen alsof het beste cadeau was', 'Ze wilde het feest afzeggen'], 2)),
+R(290, 'B1', 'Lo que aprendí hablando por teléfono', """
+Cuando empecé a trabajar en atención al cliente, lo que más miedo me daba era el teléfono. Entender a alguien sin verle la cara, con ruido de fondo y a veces con acento andaluz o argentino, me parecía imposible. Las primeras semanas pedía que me repitieran todo y colgaba agotado.
+Mi compañera Rosa, que lleva veinte años en el puesto, me dio tres consejos. Primero: no tengas miedo de decir "¿me lo puede repetir, por favor?". Segundo: resume lo que has entendido antes de actuar. Tercero: cuando un cliente está enfadado, no es contigo; va al grano, pide disculpas y ofrece una solución.
+Hoy ya no me tiembla la voz cuando suena el teléfono. Incluso he aprendido a reconocer las expresiones de cada región: en Canarias dicen "guagua" para el autobús y en Argentina "vos" en lugar de "tú". Rosa tenía razón: hablar bien por teléfono no es cuestión de oído, sino de paciencia. Y, como dice el refrán, la práctica hace al maestro.
+""",
+  ('Wat vond de schrijver aanvankelijk het moeilijkst?', ['De computer', 'Mensen verstaan aan de telefoon zonder gezicht, met lawaai en accenten', 'De werktijden', 'Zijn collega Rosa'], 1),
+  ('Welk advies gaf Rosa over boze klanten?', ['Ophangen', 'Terugschreeuwen', 'Beseffen dat het niet persoonlijk is, excuses aanbieden en een oplossing bieden', 'Doorverbinden met de baas'], 2),
+  ('Wat betekent "guagua" op de Canarische Eilanden?', ['Trein', 'Bus', 'Taxi', 'Fiets'], 1)),
+R(300, 'B1', 'Carta a quien empieza', """
+Querido futuro estudiante de español:
+Si estás leyendo esto, acabas de terminar el nivel B1, o estás a punto de hacerlo. Enhorabuena. Yo también pasé por aquí, y me habría gustado que alguien me hubiera contado lo que ahora sé.
+Habrá días en los que pienses que no avanzas. Confundirás el indefinido con el imperfecto, dirás "estoy embarazado" cuando quieras decir que estás avergonzado y te quedarás en blanco en medio de una frase. No pasa nada. Cada error es una lección que no olvidarás.
+Habla aunque te dé vergüenza. Pregunta "¿cómo se dice?" sin miedo. Lee periódicos, escucha canciones, ve películas en versión original. Y, sobre todo, busca personas: el español no vive en los libros, sino en las conversaciones de un bar, en una carta de una abuela o en una llamada con un amigo de Buenos Aires.
+Cuando dentro de unos meses te desenvuelvas sin pensar, recuerda este momento. Has recorrido un largo camino. Ahora, a por el B2.
+""",
+  ('Aan wie is de brief gericht?', ['Aan een leraar', 'Aan iemand die net B1 heeft afgerond of bijna', 'Aan een vriend in Buenos Aires', 'Aan een uitgever'], 1),
+  ('Welke fout noemt de schrijver als voorbeeld?', ['Het verkeerd uitspreken van de r', '"Estoy embarazado" zeggen in plaats van beschaamd', 'Verkeerde lidwoorden', 'Te snel spreken'], 1),
+  ('Waar leeft het Spaans volgens de schrijver vooral?', ['In grammaticaboeken', 'In examens', 'In gesprekken met mensen', 'In woordenboeken'], 2)),
 ]
 for r in READINGS:
     n = len(r['text'].split()); lo, hi = {'A1': (35, 80), 'A2': (80, 140), 'B1': (110, 200)}[r['level']]; assert lo <= n <= hi, (r['id'], n)

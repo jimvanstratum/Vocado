@@ -33,7 +33,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 | `www/js/conjugation_es.js` | Spaanse vervoegingsmotor (presente, perfecto, imperfecto, futuro, indefinido, condicional, subjuntivo presente, pluscuamperfecto, imperfecto de subjuntivo `subj_imperf`); `esPickTense(word)` kiest de tijd per niveau/les |
 | `www/js/exercises.js` | Alle oefentypes (rendering + interactie) |
 | `www/data/it/curriculum.json` | Array van les-objecten (Italiaans) |
-| `www/data/es/…` | Spaanse data: A1 (les 1–60, 482 woorden) + A2 (les 61–120, 480 woorden) + B1 blok 1 (les 121–180) en blok 2 (les 181–240), 960 B1-woorden, IDs `e001`–`e1922`, 24 leesteksten — gegenereerd door `scripts/generate_es_a1.py`, `generate_es_a2.py`, `generate_es_b1.py`, `generate_es_b1_blok2.py` en `build_readings_es.py`. Elk script vervangt alleen zijn eigen lesbereik |
+| `www/data/es/…` | Spaanse data, compleet: A1 (les 1–60, 482 woorden), A2 (les 61–120, 480), B1 (les 121–300, 1440), totaal 300 lessen / 2402 woorden, IDs `e001`–`e2402`, 30 leesteksten — gegenereerd door `scripts/generate_es_a1.py`, `generate_es_a2.py`, `generate_es_b1.py` (121–180), `generate_es_b1_blok2.py` (181–240), `generate_es_b1_blok3.py` (241–300) en `build_readings_es.py`. Elk script vervangt alleen zijn eigen lesbereik |
 | `www/data/it/vocabulary.json` | Array van woord-objecten (Italiaans) |
 | `www/data/changelog.json` | Gebruikersgerichte wijzigingen per versie, nieuwste eerst; `build.py` faalt als de bovenste versie niet gelijk is aan de versiestring |
 | `www/data/it/readings.json` | 30 leesteksten (één per blok van 10 lessen), gegenereerd door `scripts/build_readings.py` |
@@ -52,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.59**, cache buster **?v=53**
+- Huidige versie: **v1.60**, cache buster **?v=54**
 
 ### Build & deploy
 
@@ -127,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.59)
+## Huidige staat (v1.60)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -254,6 +254,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.60 | Sprint 15: Spaans B1 blok 3 — 60 lessen (241–300), 480 woorden, 6 leesteksten; Spaans compleet (300 lessen, 2402 woorden) |
 | v1.59 | Sprint 14: Spaans B1 blok 2 — 60 lessen (181–240), 480 woorden, 6 leesteksten; motor + pluscuamperfecto en imperfecto de subjuntivo |
 | v1.58 | Sprint 13: Spaans B1 blok 1 — 60 lessen (121–180), 480 woorden, 6 leesteksten; Spaanse motor uitgebreid met indefinido, condicional en subjuntivo presente (`esPickTense`) |
 | v1.57 | Sprint 12: Spaans A2 — 60 lessen (61–120), 480 woorden, 6 leesteksten; pretérito indefinido in les 91. SW-voorcache met `cache: 'reload'` (geen verouderde data na release) |
@@ -340,9 +341,10 @@ Tot B2 = circa **600–800 uur** totale studie.
 
 | Prioriteit | Sprint | Toelichting |
 |---|---|---|
-| Hoog | **Spaans B1 blok 3** | Blok 1 en 2 (les 121–240) zijn af (v1.58/v1.59). Nog te doen: les 241–300 (480 woorden, 6 leesteksten), zelfde aanpak als `scripts/generate_es_b1_blok2.py` (FIRST/LAST = 241/300). Thema's spiegelen Italiaans 241–300; les 300 = 'B1 afgerond'. Botsingscontrole: scratch-helper `chk.py` vergelijkt kandidaten met de bestaande lijst vóór het schrijven |
+| Hoog | **Italiaanse vervoegingsmotor gelijktrekken** | Condizionale en congiuntivo presente ontbreken in de Italiaanse motor, terwijl de B1-lessen ze al behandelen en de Spaanse motor ze wel heeft. Klein werk met directe winst voor bestaande lessen |
+| Middel | **Frans** | Staat als 'binnenkort' in het taalkeuzescherm. Architectuur is klaar; nodig: `www/data/fr/`, LANGS-entry in lang.js, eigen vervoegingsmotor, A1 = 60 lessen / 480 woorden (zelfde generator-aanpak als Spaans) |
 | Middel | **Meer leesteksten** | Nu 1 per blok (30). Optie: 1 per les of dialogen met TTS per spreker |
-| Laag | **Vervoegen uitbreiden** | Condizionale en congiuntivo presente ontbreken nog in de motor (passato prossimo sinds v1.46) |
+| Laag | **B2** | Italiaans en Spaans zijn beide compleet t/m B1 (300 lessen); B2 is de volgende inhoudelijke stap na leesteksten/Frans |
 
 ---
 

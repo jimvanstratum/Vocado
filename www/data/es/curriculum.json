@@ -5040,5 +5040,1265 @@
       "e1921",
       "e1922"
     ]
+  },
+  {
+    "id": 241,
+    "title": "Politiek — basis",
+    "emoji": "🏛️",
+    "level": "B1",
+    "description": "De passieve vorm met ser en se.",
+    "grammar": {
+      "title": "Passiva met ser en pasiva refleja",
+      "body": "Ser + participio: La ley fue aprobada por el Parlamento. Pasiva refleja (vaker): Se aprobó la ley. Se eligen los diputados cada cuatro años. Herkenning volstaat op B1."
+    },
+    "words": [
+      "e1923",
+      "e1924",
+      "e1925",
+      "e1926",
+      "e1927",
+      "e1928",
+      "e1929",
+      "e1930"
+    ]
+  },
+  {
+    "id": 242,
+    "title": "Verkiezingen & democratie",
+    "emoji": "🗳️",
+    "level": "B1",
+    "description": "Over verkiezingen praten.",
+    "grammar": {
+      "title": "Over verkiezingen praten",
+      "body": "Votar, las elecciones generales / municipales, la campaña electoral, el candidato, la mayoría absoluta, la abstención, el escaño (de zetel), la urna (de stembus)."
+    },
+    "words": [
+      "e1931",
+      "e1932",
+      "e1933",
+      "e1934",
+      "e1935",
+      "e1936",
+      "e1937",
+      "e1938"
+    ]
+  },
+  {
+    "id": 243,
+    "title": "Rechten & plichten",
+    "emoji": "⚖️",
+    "level": "B1",
+    "description": "Rechten en plichten.",
+    "grammar": {
+      "title": "Rechten en plichten",
+      "body": "Tener derecho a (recht hebben op), estar obligado a (verplicht zijn), la igualdad ante la ley, la libertad de expresión, el deber (de plicht), cumplir con (nakomen)."
+    },
+    "words": [
+      "e1939",
+      "e1940",
+      "e1941",
+      "e1942",
+      "e1943",
+      "e1944",
+      "e1945",
+      "e1946"
+    ]
+  },
+  {
+    "id": 244,
+    "title": "Justitie & wetgeving",
+    "emoji": "⚖️",
+    "level": "B1",
+    "description": "Juridische taal.",
+    "grammar": {
+      "title": "Juridische taal",
+      "body": "El juez (de rechter), el abogado, el juicio (het proces), el acusado, la sentencia (het vonnis), condenar, absolver (vrijspreken), la multa, denunciar (aangifte doen)."
+    },
+    "words": [
+      "e1947",
+      "e1948",
+      "e1949",
+      "e1950",
+      "e1951",
+      "e1952",
+      "e1953",
+      "e1954"
+    ]
+  },
+  {
+    "id": 245,
+    "title": "Immigratie & integratie",
+    "emoji": "🌍",
+    "level": "B1",
+    "description": "Over migratie praten.",
+    "grammar": {
+      "title": "Over migratie praten",
+      "body": "Emigrar / inmigrar, el inmigrante, el refugiado, el permiso de residencia (de verblijfsvergunning), integrarse, la nacionalidad, el país de origen, la acogida (de opvang)."
+    },
+    "words": [
+      "e1955",
+      "e1956",
+      "e1957",
+      "e1958",
+      "e1959",
+      "e1960",
+      "e1961",
+      "e1962"
+    ]
+  },
+  {
+    "id": 246,
+    "title": "Vrijwilligerswerk & hulp",
+    "emoji": "🤲",
+    "level": "B1",
+    "description": "Over vrijwilligerswerk praten.",
+    "grammar": {
+      "title": "Over vrijwilligerswerk praten",
+      "body": "Hacer voluntariado, la ONG (de ngo), la asociación, recaudar fondos (geld inzamelen), donar, echar una mano (een handje helpen), el comedor social (de gaarkeuken)."
+    },
+    "words": [
+      "e1963",
+      "e1964",
+      "e1965",
+      "e1966",
+      "e1967",
+      "e1968",
+      "e1969",
+      "e1970"
+    ]
+  },
+  {
+    "id": 247,
+    "title": "Religie & geloof",
+    "emoji": "⛪",
+    "level": "B1",
+    "description": "Over geloof praten.",
+    "grammar": {
+      "title": "Over geloof praten",
+      "body": "Creer en (geloven in), ser creyente / ateo / agnóstico, rezar (bidden), la misa, la fe (het geloof), la peregrinación, el Camino de Santiago, respetar las creencias."
+    },
+    "words": [
+      "e1971",
+      "e1972",
+      "e1973",
+      "e1974",
+      "e1975",
+      "e1976",
+      "e1977",
+      "e1978"
+    ]
+  },
+  {
+    "id": 248,
+    "title": "Gelijkheid & diversiteit",
+    "emoji": "🌈",
+    "level": "B1",
+    "description": "Over gelijkheid praten.",
+    "grammar": {
+      "title": "Over gelijkheid praten",
+      "body": "La igualdad de género, la brecha salarial (de loonkloof), la discriminación, el prejuicio, la diversidad, el colectivo, luchar por, visibilizar."
+    },
+    "words": [
+      "e1979",
+      "e1980",
+      "e1981",
+      "e1982",
+      "e1983",
+      "e1984",
+      "e1985",
+      "e1986"
+    ]
+  },
+  {
+    "id": 249,
+    "title": "Oorlog & vrede",
+    "emoji": "🕊️",
+    "level": "B1",
+    "description": "Over oorlog en vrede praten.",
+    "grammar": {
+      "title": "Over oorlog en vrede praten",
+      "body": "Estallar (uitbreken), el conflicto armado, el ejército, el soldado, la víctima, el alto el fuego (het staakt-het-vuren), negociar la paz, la reconciliación."
+    },
+    "words": [
+      "e1987",
+      "e1988",
+      "e1989",
+      "e1990",
+      "e1991",
+      "e1992",
+      "e1993",
+      "e1994"
+    ]
+  },
+  {
+    "id": 250,
+    "title": "Toetsles B1 — Blok 13",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 13.",
+    "grammar": {
+      "title": "Samenvatting Blok 13",
+      "body": "Je herkent de passieve vorm en kunt over politiek, recht, migratie en samenleving praten. In de toets: een leestekst en 20 woorden uit lessen 241–249."
+    },
+    "words": [
+      "e1995",
+      "e1996",
+      "e1997",
+      "e1998",
+      "e1999",
+      "e2000",
+      "e2001",
+      "e2002"
+    ]
+  },
+  {
+    "id": 251,
+    "title": "Solliciteren — verdieping",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Formele briefconventies.",
+    "grammar": {
+      "title": "Formele briefconventies",
+      "body": "Estimado/a señor/a: … Me dirijo a usted para … Adjunto mi currículum. Quedo a su disposición. Atentamente / Un cordial saludo. La carta de presentación (de motivatiebrief)."
+    },
+    "words": [
+      "e2003",
+      "e2004",
+      "e2005",
+      "e2006",
+      "e2007",
+      "e2008",
+      "e2009",
+      "e2010"
+    ]
+  },
+  {
+    "id": 252,
+    "title": "Het sollicitatiegesprek",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Sollicitatiegesprek.",
+    "grammar": {
+      "title": "Sollicitatiegesprek",
+      "body": "Hábleme de usted. ¿Cuáles son sus puntos fuertes y débiles? ¿Por qué quiere trabajar aquí? Tengo experiencia en… Se me da bien (ik ben goed in). Trabajar bajo presión."
+    },
+    "words": [
+      "e2011",
+      "e2012",
+      "e2013",
+      "e2014",
+      "e2015",
+      "e2016",
+      "e2017",
+      "e2018"
+    ]
+  },
+  {
+    "id": 253,
+    "title": "Vergaderen — verdieping",
+    "emoji": "📊",
+    "level": "B1",
+    "description": "Vergaderen in het Spaans.",
+    "grammar": {
+      "title": "Vergaderen in het Spaans",
+      "body": "El orden del día (de agenda), el acta (de notulen), tomar la palabra, pasar al siguiente punto, llegar a un consenso, aplazar (uitstellen), los ruegos y preguntas (de rondvraag)."
+    },
+    "words": [
+      "e2019",
+      "e2020",
+      "e2021",
+      "e2022",
+      "e2023",
+      "e2024",
+      "e2025",
+      "e2026"
+    ]
+  },
+  {
+    "id": 254,
+    "title": "Presentaties geven",
+    "emoji": "📈",
+    "level": "B1",
+    "description": "Een presentatie structureren.",
+    "grammar": {
+      "title": "Een presentatie structureren",
+      "body": "En primer lugar… A continuación… Por último… Como pueden ver en la diapositiva (dia)… Para resumir… ¿Alguna pregunta? Los datos muestran que…"
+    },
+    "words": [
+      "e2027",
+      "e2028",
+      "e2029",
+      "e2030",
+      "e2031",
+      "e2032",
+      "e2033",
+      "e2034"
+    ]
+  },
+  {
+    "id": 255,
+    "title": "E-mails & brieven",
+    "emoji": "✉️",
+    "level": "B1",
+    "description": "Formele e-mails.",
+    "grammar": {
+      "title": "Formele e-mails",
+      "body": "Asunto (onderwerp), en relación con (met betrekking tot), le escribo para, le agradecería que (ik zou het op prijs stellen als) + subjuntivo, a la espera de su respuesta, reenviar (doorsturen)."
+    },
+    "words": [
+      "e2035",
+      "e2036",
+      "e2037",
+      "e2038",
+      "e2039",
+      "e2040",
+      "e2041",
+      "e2042"
+    ]
+  },
+  {
+    "id": 256,
+    "title": "Onderhandelen",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Onderhandelingstaal.",
+    "grammar": {
+      "title": "Onderhandelingstaal",
+      "body": "Hacer una oferta, la contraoferta, estar dispuesto a (bereid zijn), ceder en, llegar a un acuerdo, las condiciones, el plazo de entrega (de levertijd), el descuento por volumen."
+    },
+    "words": [
+      "e2043",
+      "e2044",
+      "e2045",
+      "e2046",
+      "e2047",
+      "e2048",
+      "e2049",
+      "e2050"
+    ]
+  },
+  {
+    "id": 257,
+    "title": "Bedrijfscultuur",
+    "emoji": "🏢",
+    "level": "B1",
+    "description": "Spaanse bedrijfscultuur.",
+    "grammar": {
+      "title": "Spaanse bedrijfscultuur",
+      "body": "La jornada partida (gesplitste werkdag met lange lunchpauze), la jornada intensiva (doorlopend, in de zomer), el tuteo in het bedrijf, la sobremesa, la conciliación (werk-privébalans), el enchufe (kruiwagen)."
+    },
+    "words": [
+      "e2051",
+      "e2052",
+      "e2053",
+      "e2054",
+      "e2055",
+      "e2056",
+      "e2057",
+      "e2058"
+    ]
+  },
+  {
+    "id": 258,
+    "title": "Import & export",
+    "emoji": "🚢",
+    "level": "B1",
+    "description": "Handelstaal.",
+    "grammar": {
+      "title": "Handelstaal",
+      "body": "Importar / exportar, la aduana (de douane), el arancel (het invoerrecht), la mercancía (de goederen), el proveedor, el envío, la factura proforma, el transporte marítimo."
+    },
+    "words": [
+      "e2059",
+      "e2060",
+      "e2061",
+      "e2062",
+      "e2063",
+      "e2064",
+      "e2065",
+      "e2066"
+    ]
+  },
+  {
+    "id": 259,
+    "title": "Klantenservice",
+    "emoji": "📞",
+    "level": "B1",
+    "description": "Klantenservice.",
+    "grammar": {
+      "title": "Klantenservice",
+      "body": "¿En qué puedo ayudarle? Le paso con (ik verbind u door met)… La reclamación (de klacht), el número de pedido, la garantía, devolver, el reembolso, disculpe las molestias."
+    },
+    "words": [
+      "e2067",
+      "e2068",
+      "e2069",
+      "e2070",
+      "e2071",
+      "e2072",
+      "e2073",
+      "e2074"
+    ]
+  },
+  {
+    "id": 260,
+    "title": "Toetsles B1 — Blok 14",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 14.",
+    "grammar": {
+      "title": "Samenvatting Blok 14",
+      "body": "Je kunt solliciteren, vergaderen, presenteren, onderhandelen en zakelijk schrijven in het Spaans. In de toets: een leestekst en 20 woorden uit lessen 251–259."
+    },
+    "words": [
+      "e2075",
+      "e2076",
+      "e2077",
+      "e2078",
+      "e2079",
+      "e2080",
+      "e2081",
+      "e2082"
+    ]
+  },
+  {
+    "id": 261,
+    "title": "In het ziekenhuis",
+    "emoji": "🏥",
+    "level": "B1",
+    "description": "Imperativo formal voor instructies.",
+    "grammar": {
+      "title": "Imperativo formal (usted) voor instructies",
+      "body": "Vorm = subjuntivo presente: Respire hondo. Siéntese. No se mueva. Tome una pastilla cada ocho horas. Met voornaamwoorden: Quítese la camisa; ontkennend: No se la quite."
+    },
+    "words": [
+      "e2083",
+      "e2084",
+      "e2085",
+      "e2086",
+      "e2087",
+      "e2088",
+      "e2089",
+      "e2090"
+    ]
+  },
+  {
+    "id": 262,
+    "title": "De apotheek",
+    "emoji": "💊",
+    "level": "B1",
+    "description": "Bij de apotheek.",
+    "grammar": {
+      "title": "Bij de apotheek",
+      "body": "Con receta / sin receta (op / zonder recept), el prospecto (de bijsluiter), la dosis, los efectos secundarios, el genérico, el jarabe (de drank/siroop), la pomada (de zalf)."
+    },
+    "words": [
+      "e2091",
+      "e2092",
+      "e2093",
+      "e2094",
+      "e2095",
+      "e2096",
+      "e2097",
+      "e2098"
+    ]
+  },
+  {
+    "id": 263,
+    "title": "Geestelijke gezondheid",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "Over geestelijke gezondheid praten.",
+    "grammar": {
+      "title": "Over geestelijke gezondheid praten",
+      "body": "La salud mental, la ansiedad, la depresión, el psicólogo, el psiquiatra, pedir ayuda, el ataque de pánico, el agotamiento (uitputting), cuidarse."
+    },
+    "words": [
+      "e2099",
+      "e2100",
+      "e2101",
+      "e2102",
+      "e2103",
+      "e2104",
+      "e2105",
+      "e2106"
+    ]
+  },
+  {
+    "id": 264,
+    "title": "Eerste hulp",
+    "emoji": "🚑",
+    "level": "B1",
+    "description": "Noodsituaties.",
+    "grammar": {
+      "title": "Noodsituaties",
+      "body": "¡Llame al 112! Está inconsciente (bewusteloos). Se ha desmayado (flauwgevallen). Está sangrando. El botiquín (de EHBO-doos), la herida, la quemadura, la ambulancia, urgencias."
+    },
+    "words": [
+      "e2107",
+      "e2108",
+      "e2109",
+      "e2110",
+      "e2111",
+      "e2112",
+      "e2113",
+      "e2114"
+    ]
+  },
+  {
+    "id": 265,
+    "title": "Wetenschap — basis",
+    "emoji": "🔬",
+    "level": "B1",
+    "description": "Over wetenschap praten.",
+    "grammar": {
+      "title": "Over wetenschap praten",
+      "body": "El científico, el experimento, la teoría, demostrar, el descubrimiento, el método científico, los datos, la prueba (het bewijs), según un estudio reciente."
+    },
+    "words": [
+      "e2115",
+      "e2116",
+      "e2117",
+      "e2118",
+      "e2119",
+      "e2120",
+      "e2121",
+      "e2122"
+    ]
+  },
+  {
+    "id": 266,
+    "title": "Biologie & geneeskunde",
+    "emoji": "🧬",
+    "level": "B1",
+    "description": "Biologische en medische termen.",
+    "grammar": {
+      "title": "Biologische en medische termen",
+      "body": "La célula (de cel), el gen, el ADN, la vacuna, el virus, la bacteria, el sistema inmunitario, el tratamiento, el ensayo clínico (de klinische proef)."
+    },
+    "words": [
+      "e2123",
+      "e2124",
+      "e2125",
+      "e2126",
+      "e2127",
+      "e2128",
+      "e2129",
+      "e2130"
+    ]
+  },
+  {
+    "id": 267,
+    "title": "Wiskunde & natuurkunde",
+    "emoji": "🔢",
+    "level": "B1",
+    "description": "Wiskundige termen.",
+    "grammar": {
+      "title": "Wiskundige termen",
+      "body": "Sumar, restar, multiplicar, dividir. La mitad, el doble, el triple, el porcentaje, la fórmula, la ecuación, la gravedad, la velocidad, la energía."
+    },
+    "words": [
+      "e2131",
+      "e2132",
+      "e2133",
+      "e2134",
+      "e2135",
+      "e2136",
+      "e2137",
+      "e2138"
+    ]
+  },
+  {
+    "id": 268,
+    "title": "Uitvindingen & ontdekkingen",
+    "emoji": "💡",
+    "level": "B1",
+    "description": "Uitvindingen beschrijven.",
+    "grammar": {
+      "title": "Uitvindingen beschrijven",
+      "body": "Inventar, el inventor, la patente, servir para (dienen om), funcionar con, revolucionar. Fue inventado por… (passief). El submarino de Isaac Peral, la fregona (de dweil met emmer) is een Spaanse uitvinding."
+    },
+    "words": [
+      "e2139",
+      "e2140",
+      "e2141",
+      "e2142",
+      "e2143",
+      "e2144",
+      "e2145",
+      "e2146"
+    ]
+  },
+  {
+    "id": 269,
+    "title": "Ruimtevaart & sterrenkunde",
+    "emoji": "🚀",
+    "level": "B1",
+    "description": "Over de ruimte praten.",
+    "grammar": {
+      "title": "Over de ruimte praten",
+      "body": "El universo, la galaxia, el planeta, la estrella, el satélite, el cohete (de raket), el astronauta, la órbita, el telescopio, el eclipse, la Vía Láctea."
+    },
+    "words": [
+      "e2147",
+      "e2148",
+      "e2149",
+      "e2150",
+      "e2151",
+      "e2152",
+      "e2153",
+      "e2154"
+    ]
+  },
+  {
+    "id": 270,
+    "title": "Toetsles B1 — Blok 15",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 15.",
+    "grammar": {
+      "title": "Samenvatting Blok 15",
+      "body": "Je kent de formele gebiedende wijs en kunt over gezondheid, wetenschap en techniek praten. In de toets: een leestekst en 20 woorden uit lessen 261–269."
+    },
+    "words": [
+      "e2155",
+      "e2156",
+      "e2157",
+      "e2158",
+      "e2159",
+      "e2160",
+      "e2161",
+      "e2162"
+    ]
+  },
+  {
+    "id": 271,
+    "title": "De kapper & schoonheid",
+    "emoji": "💇",
+    "level": "B1",
+    "description": "Hacer + infinitivo / dejarse + infinitivo.",
+    "grammar": {
+      "title": "Hacer / dejarse + infinitivo",
+      "body": "Iets laten doen: Me corto el pelo (ik laat mijn haar knippen), me dejo crecer la barba, se hace la manicura, hacerse un tatuaje. Letterlijk reflexief, geen \"laten\"."
+    },
+    "words": [
+      "e2163",
+      "e2164",
+      "e2165",
+      "e2166",
+      "e2167",
+      "e2168",
+      "e2169",
+      "e2170"
+    ]
+  },
+  {
+    "id": 272,
+    "title": "De auto & garage",
+    "emoji": "🚗",
+    "level": "B1",
+    "description": "Bij de garage.",
+    "grammar": {
+      "title": "Bij de garage",
+      "body": "El taller (de garage), la avería (de pech), el motor, los frenos, la rueda de repuesto, la ITV (de apk), el seguro a todo riesgo, pinchar (lek rijden), la grúa (de takelwagen)."
+    },
+    "words": [
+      "e2171",
+      "e2172",
+      "e2173",
+      "e2174",
+      "e2175",
+      "e2176",
+      "e2177",
+      "e2178"
+    ]
+  },
+  {
+    "id": 273,
+    "title": "Post & pakketjes",
+    "emoji": "📮",
+    "level": "B1",
+    "description": "Post en bezorging.",
+    "grammar": {
+      "title": "Post en bezorging",
+      "body": "Correos (de posterijen), el sello, el sobre, el paquete, certificado (aangetekend), el remitente, el código postal, el repartidor (de bezorger), recoger en la oficina."
+    },
+    "words": [
+      "e2179",
+      "e2180",
+      "e2181",
+      "e2182",
+      "e2183",
+      "e2184",
+      "e2185",
+      "e2186"
+    ]
+  },
+  {
+    "id": 274,
+    "title": "De bank & verzekeringen",
+    "emoji": "🏦",
+    "level": "B1",
+    "description": "Verzekeringen regelen.",
+    "grammar": {
+      "title": "Verzekeringen regelen",
+      "body": "La póliza (de polis), la prima (de premie), la cobertura (de dekking), la franquicia (het eigen risico), el siniestro (de schade), dar parte (schade melden), el seguro de hogar / de vida."
+    },
+    "words": [
+      "e2187",
+      "e2188",
+      "e2189",
+      "e2190",
+      "e2191",
+      "e2192",
+      "e2193",
+      "e2194"
+    ]
+  },
+  {
+    "id": 275,
+    "title": "Recepten & koken verdieping",
+    "emoji": "👨‍🍳",
+    "level": "B1",
+    "description": "Een recept volgen.",
+    "grammar": {
+      "title": "Een recept volgen",
+      "body": "Werkwoorden in het recept: picar (fijnhakken), sofreír (fruiten), hervir, freír, hornear, remover (roeren), añadir, sazonar (kruiden), a fuego lento (op laag vuur)."
+    },
+    "words": [
+      "e2195",
+      "e2196",
+      "e2197",
+      "e2198",
+      "e2199",
+      "e2200",
+      "e2201",
+      "e2202"
+    ]
+  },
+  {
+    "id": 276,
+    "title": "Huishouden & schoonmaken",
+    "emoji": "🧹",
+    "level": "B1",
+    "description": "Huishoudelijke taken.",
+    "grammar": {
+      "title": "Huishoudelijke taken",
+      "body": "Barrer (vegen), fregar el suelo (dweilen), fregar los platos, pasar la aspiradora, quitar el polvo, tender la ropa (de was ophangen), planchar, sacar la basura."
+    },
+    "words": [
+      "e2203",
+      "e2204",
+      "e2205",
+      "e2206",
+      "e2207",
+      "e2208",
+      "e2209",
+      "e2210"
+    ]
+  },
+  {
+    "id": 277,
+    "title": "Doe-het-zelf & reparatie",
+    "emoji": "🔧",
+    "level": "B1",
+    "description": "Reparaties beschrijven.",
+    "grammar": {
+      "title": "Reparaties beschrijven",
+      "body": "Está roto / estropeado (kapot), arreglar, el destornillador (de schroevendraaier), el martillo, el taladro (de boor), el clavo, el tornillo, colgar un cuadro, el fontanero."
+    },
+    "words": [
+      "e2211",
+      "e2212",
+      "e2213",
+      "e2214",
+      "e2215",
+      "e2216",
+      "e2217",
+      "e2218"
+    ]
+  },
+  {
+    "id": 278,
+    "title": "Tuinieren & buitenleven",
+    "emoji": "🌻",
+    "level": "B1",
+    "description": "Over de tuin praten.",
+    "grammar": {
+      "title": "Over de tuin praten",
+      "body": "El césped (het gazon), cortar el césped, la manguera (de tuinslang), la barbacoa, la hamaca, el cobertizo (het schuurtje), la valla (het hek), sembrar (zaaien)."
+    },
+    "words": [
+      "e2219",
+      "e2220",
+      "e2221",
+      "e2222",
+      "e2223",
+      "e2224",
+      "e2225",
+      "e2226"
+    ]
+  },
+  {
+    "id": 279,
+    "title": "Feest & vieren",
+    "emoji": "🎉",
+    "level": "B1",
+    "description": "Feesten en uitnodigen.",
+    "grammar": {
+      "title": "Feesten en uitnodigen",
+      "body": "Dar una fiesta, invitar a, brindar por (toosten op), ¡salud!, la sorpresa, el anfitrión (de gastheer), los invitados, pasarlo en grande (het geweldig naar je zin hebben)."
+    },
+    "words": [
+      "e2227",
+      "e2228",
+      "e2229",
+      "e2230",
+      "e2231",
+      "e2232",
+      "e2233",
+      "e2234"
+    ]
+  },
+  {
+    "id": 280,
+    "title": "Toetsles B1 — Blok 16",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 16.",
+    "grammar": {
+      "title": "Samenvatting Blok 16",
+      "body": "Je kent hacer/dejarse + infinitivo en kunt praktische zaken regelen: auto, post, verzekering, keuken, huishouden, klussen en feesten. In de toets: een leestekst en 20 woorden uit lessen 271–279."
+    },
+    "words": [
+      "e2235",
+      "e2236",
+      "e2237",
+      "e2238",
+      "e2239",
+      "e2240",
+      "e2241",
+      "e2242"
+    ]
+  },
+  {
+    "id": 281,
+    "title": "Uitdrukkingen — deel 1",
+    "emoji": "💬",
+    "level": "B1",
+    "description": "Idioom met lichaamsdelen.",
+    "grammar": {
+      "title": "Idioom met lichaamsdelen",
+      "body": "Costar un ojo de la cara (een rib uit je lijf kosten), no tener pelos en la lengua (geen blad voor de mond nemen), estar hasta las narices (het spuugzat zijn), tomar el pelo (voor de gek houden)."
+    },
+    "words": [
+      "e2243",
+      "e2244",
+      "e2245",
+      "e2246",
+      "e2247",
+      "e2248",
+      "e2249",
+      "e2250"
+    ]
+  },
+  {
+    "id": 282,
+    "title": "Uitdrukkingen — deel 2",
+    "emoji": "💬",
+    "level": "B1",
+    "description": "Dagelijkse uitdrukkingen.",
+    "grammar": {
+      "title": "Dagelijkse uitdrukkingen",
+      "body": "Estar en las nubes, ser pan comido (een eitje zijn), ponerse las pilas (de handen uit de mouwen steken), dar en el clavo (de spijker op de kop slaan), estar como una cabra (knettergek zijn)."
+    },
+    "words": [
+      "e2251",
+      "e2252",
+      "e2253",
+      "e2254",
+      "e2255",
+      "e2256",
+      "e2257",
+      "e2258"
+    ]
+  },
+  {
+    "id": 283,
+    "title": "Spreekwoorden",
+    "emoji": "📜",
+    "level": "B1",
+    "description": "Spaanse spreekwoorden.",
+    "grammar": {
+      "title": "Spaanse spreekwoorden",
+      "body": "Más vale tarde que nunca. No hay mal que por bien no venga (elk nadeel heeft zijn voordeel). A quien madruga, Dios le ayuda (de morgenstond heeft goud in de mond). En boca cerrada no entran moscas."
+    },
+    "words": [
+      "e2259",
+      "e2260",
+      "e2261",
+      "e2262",
+      "e2263",
+      "e2264",
+      "e2265",
+      "e2266"
+    ]
+  },
+  {
+    "id": 284,
+    "title": "Vaste werkwoordcombinaties",
+    "emoji": "🔗",
+    "level": "B1",
+    "description": "Verbos pronominales met andere betekenis.",
+    "grammar": {
+      "title": "Verbos pronominales",
+      "body": "Sommige werkwoorden veranderen van betekenis met se: ir (gaan) / irse (weggaan), dormir / dormirse (in slaap vallen), quedar (afspreken) / quedarse (blijven), llevar / llevarse (meenemen), acordar / acordarse de (zich herinneren)."
+    },
+    "words": [
+      "e2267",
+      "e2268",
+      "e2269",
+      "e2270",
+      "e2271",
+      "e2272",
+      "e2273",
+      "e2274"
+    ]
+  },
+  {
+    "id": 285,
+    "title": "Formeel schrijven",
+    "emoji": "✍️",
+    "level": "B1",
+    "description": "Formeel schrijven.",
+    "grammar": {
+      "title": "Formeel schrijven",
+      "body": "Por la presente (hierbij), le comunico que, en virtud de (krachtens), sin otro particular (zonder verder iets), reciba un cordial saludo, les rogamos disculpen, lo antes posible (zo spoedig mogelijk)."
+    },
+    "words": [
+      "e2275",
+      "e2276",
+      "e2277",
+      "e2278",
+      "e2279",
+      "e2280",
+      "e2281",
+      "e2282"
+    ]
+  },
+  {
+    "id": 286,
+    "title": "Informeel taalgebruik",
+    "emoji": "😄",
+    "level": "B1",
+    "description": "Informele taal.",
+    "grammar": {
+      "title": "Informele taal",
+      "body": "Spreektaal: guay (cool), flipar (versteld staan), currar (werken), la pasta (poen), el finde (weekend), quedar (afspreken), ¡qué fuerte! (niet te geloven!), vale."
+    },
+    "words": [
+      "e2283",
+      "e2284",
+      "e2285",
+      "e2286",
+      "e2287",
+      "e2288",
+      "e2289",
+      "e2290"
+    ]
+  },
+  {
+    "id": 287,
+    "title": "Telefoneren",
+    "emoji": "📱",
+    "level": "B1",
+    "description": "Telefoneren in het Spaans.",
+    "grammar": {
+      "title": "Telefoneren in het Spaans",
+      "body": "¿Diga? / ¿Dígame? (hallo, bij opnemen). ¿De parte de quién? (met wie spreek ik?). Un momento, no cuelgue (hang niet op). Se ha equivocado de número. Le devuelvo la llamada."
+    },
+    "words": [
+      "e2291",
+      "e2292",
+      "e2293",
+      "e2294",
+      "e2295",
+      "e2296",
+      "e2297",
+      "e2298"
+    ]
+  },
+  {
+    "id": 288,
+    "title": "Klachten & problemen",
+    "emoji": "😤",
+    "level": "B1",
+    "description": "Klachten uiten.",
+    "grammar": {
+      "title": "Klachten uiten",
+      "body": "Quería quejarme de (ik wil klagen over), esto es inaceptable, exijo (ik eis), no es la primera vez que, ¿me puede atender el responsable?, quiero que me devuelvan el dinero."
+    },
+    "words": [
+      "e2299",
+      "e2300",
+      "e2301",
+      "e2302",
+      "e2303",
+      "e2304",
+      "e2305",
+      "e2306"
+    ]
+  },
+  {
+    "id": 289,
+    "title": "Complimenten & bedankjes",
+    "emoji": "🙏",
+    "level": "B1",
+    "description": "Complimenten en bedankjes.",
+    "grammar": {
+      "title": "Complimenten & bedankjes",
+      "body": "¡Qué bien te queda! ¡Enhorabuena! Te lo agradezco de corazón (ik dank je van harte). No tenías que haberte molestado. Es todo un detalle (dat is heel attent). No hay de qué (graag gedaan)."
+    },
+    "words": [
+      "e2307",
+      "e2308",
+      "e2309",
+      "e2310",
+      "e2311",
+      "e2312",
+      "e2313",
+      "e2314"
+    ]
+  },
+  {
+    "id": 290,
+    "title": "Toetsles B1 — Blok 17",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 17.",
+    "grammar": {
+      "title": "Samenvatting Blok 17",
+      "body": "Je kent idioom, spreekwoorden, pronominale werkwoorden en de registers formeel, informeel en telefonisch. In de toets: een leestekst en 20 woorden uit lessen 281–289."
+    },
+    "words": [
+      "e2315",
+      "e2316",
+      "e2317",
+      "e2318",
+      "e2319",
+      "e2320",
+      "e2321",
+      "e2322"
+    ]
+  },
+  {
+    "id": 291,
+    "title": "Verleden tijden — herhaling",
+    "emoji": "⏳",
+    "level": "B1",
+    "description": "Alle verleden tijden.",
+    "grammar": {
+      "title": "Alle verleden tijden",
+      "body": "Perfecto (hoy, esta semana: he comido), indefinido (ayer: comí), imperfecto (achtergrond, gewoonte: comía), pluscuamperfecto (eerder dan: había comido). Signaalwoorden kiezen de tijd."
+    },
+    "words": [
+      "e2323",
+      "e2324",
+      "e2325",
+      "e2326",
+      "e2327",
+      "e2328",
+      "e2329",
+      "e2330"
+    ]
+  },
+  {
+    "id": 292,
+    "title": "Subjuntivo — herhaling",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "Subjuntivo overzicht.",
+    "grammar": {
+      "title": "Subjuntivo overzicht",
+      "body": "Na wens (quiero que), emotie (me alegro de que), twijfel (dudo que), onpersoonlijk (es importante que), doel (para que), toekomst in bijzin (cuando llegues), ontkende mening (no creo que). Presente en imperfecto."
+    },
+    "words": [
+      "e2331",
+      "e2332",
+      "e2333",
+      "e2334",
+      "e2335",
+      "e2336",
+      "e2337",
+      "e2338"
+    ]
+  },
+  {
+    "id": 293,
+    "title": "Condicional — herhaling",
+    "emoji": "💭",
+    "level": "B1",
+    "description": "Condicional overzicht.",
+    "grammar": {
+      "title": "Condicional overzicht",
+      "body": "Beleefdheid (¿Podría…?), advies (Yo que tú, iría), wens (Me gustaría), vermoeden in het verleden (Serían las diez), irreëel (Si pudiera, viajaría), toekomst in het verleden (Dijo que vendría)."
+    },
+    "words": [
+      "e2339",
+      "e2340",
+      "e2341",
+      "e2342",
+      "e2343",
+      "e2344",
+      "e2345",
+      "e2346"
+    ]
+  },
+  {
+    "id": 294,
+    "title": "Voorwaardelijke zinnen — alle types",
+    "emoji": "🔀",
+    "level": "B1",
+    "description": "Si-zinnen: reëel, irreëel, verleden.",
+    "grammar": {
+      "title": "Si-zinnen: alle types",
+      "body": "Type 1: Si tengo tiempo, voy. Type 2: Si tuviera tiempo, iría. Type 3: Si hubiera tenido tiempo, habría ido. Gemengd: Si hubiera estudiado, ahora tendría trabajo."
+    },
+    "words": [
+      "e2347",
+      "e2348",
+      "e2349",
+      "e2350",
+      "e2351",
+      "e2352",
+      "e2353",
+      "e2354"
+    ]
+  },
+  {
+    "id": 295,
+    "title": "Indirecte rede — verdieping",
+    "emoji": "🗣️",
+    "level": "B1",
+    "description": "Indirecte rede met bevelen en vragen.",
+    "grammar": {
+      "title": "Indirecte rede verdieping",
+      "body": "Bevelen: \"Ven\" → Me dijo que viniera (subjuntivo). Vragen: \"¿Vienes?\" → Me preguntó si venía. Tijd en plaats verschuiven: hoy → aquel día, aquí → allí, mañana → al día siguiente."
+    },
+    "words": [
+      "e2355",
+      "e2356",
+      "e2357",
+      "e2358",
+      "e2359",
+      "e2360",
+      "e2361",
+      "e2362"
+    ]
+  },
+  {
+    "id": 296,
+    "title": "Connectoren & tekststructuur",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Conectores textuales.",
+    "grammar": {
+      "title": "Conectores textuales",
+      "body": "Opsommen: en primer lugar, además, asimismo. Tegenstellen: sin embargo, no obstante, en cambio. Gevolg: por consiguiente, así pues. Afsluiten: en definitiva, en resumen, en conclusión."
+    },
+    "words": [
+      "e2363",
+      "e2364",
+      "e2365",
+      "e2366",
+      "e2367",
+      "e2368",
+      "e2369",
+      "e2370"
+    ]
+  },
+  {
+    "id": 297,
+    "title": "Woordvorming & afleidingen",
+    "emoji": "🔤",
+    "level": "B1",
+    "description": "Woordvorming.",
+    "grammar": {
+      "title": "Woordvorming",
+      "body": "Achtervoegsels: -ción (acción), -dad (felicidad), -miento (crecimiento), -ero (panadero), -able (amable), -oso (famoso), -mente (rápidamente). Voorvoegsels: des- (deshacer), in-/im- (imposible), re- (rehacer)."
+    },
+    "words": [
+      "e2371",
+      "e2372",
+      "e2373",
+      "e2374",
+      "e2375",
+      "e2376",
+      "e2377",
+      "e2378"
+    ]
+  },
+  {
+    "id": 298,
+    "title": "Valse vrienden NL-ES",
+    "emoji": "⚠️",
+    "level": "B1",
+    "description": "Valse vrienden.",
+    "grammar": {
+      "title": "Valse vrienden",
+      "body": "Woorden die lijken op Nederlands maar iets anders betekenen: constipado (verkouden, niet verstopt), embarazada (zwanger, niet in verlegenheid), actual (huidig), éxito (succes), largo (lang), carta (brief)."
+    },
+    "words": [
+      "e2379",
+      "e2380",
+      "e2381",
+      "e2382",
+      "e2383",
+      "e2384",
+      "e2385",
+      "e2386"
+    ]
+  },
+  {
+    "id": 299,
+    "title": "Formeel register — verdieping",
+    "emoji": "👔",
+    "level": "B1",
+    "description": "Formeel vs. informeel.",
+    "grammar": {
+      "title": "Formeel vs. informeel",
+      "body": "Informeel → formeel: ¿Qué tal? → ¿Cómo está usted?; vale → de acuerdo; oye → disculpe; gracias → se lo agradezco; un montón → una gran cantidad; cosas → asuntos."
+    },
+    "words": [
+      "e2387",
+      "e2388",
+      "e2389",
+      "e2390",
+      "e2391",
+      "e2392",
+      "e2393",
+      "e2394"
+    ]
+  },
+  {
+    "id": 300,
+    "title": "🎓 B1 volledig afgerond!",
+    "emoji": "🎓",
+    "level": "B1",
+    "description": "Gefeliciteerd: Spaans B1 is compleet!",
+    "grammar": {
+      "title": "🎓 B1 — ¡Enhorabuena!",
+      "body": "Je hebt 300 lessen en meer dan 2400 Spaanse woorden achter de rug: alle tijden van de indicativo, de subjuntivo presente en imperfecto, de condicional, voorwaardelijke zinnen, indirecte rede en de registers. ¡Lo has conseguido!"
+    },
+    "words": [
+      "e2395",
+      "e2396",
+      "e2397",
+      "e2398",
+      "e2399",
+      "e2400",
+      "e2401",
+      "e2402"
+    ]
   }
 ]
