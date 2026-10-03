@@ -8,7 +8,7 @@ import { speak, isTTSAvailable, getTTSRate } from './audio.js?v=10';
 import { updateWordState, qualityFromResult } from './srs.js?v=17';
 import { recordAnswer } from './progress.js?v=10';
 import { getLang } from './lang.js?v=1';
-import { ES_PRONOUNS, ES_TENSE_LABELS, esIsConjugatable, esCanUseTense, esConjugateAccepted, esPickTense } from './conjugation_es.js?v=2';
+import { ES_PRONOUNS, ES_TENSE_LABELS, esIsConjugatable, esCanUseTense, esConjugateAccepted, esPickTense } from './conjugation_es.js?v=3';
 
 // ─── Auto-advance timer (annuleerbaar via goBack) ─────────────────────────────
 let _pendingAdvanceTimer = null;

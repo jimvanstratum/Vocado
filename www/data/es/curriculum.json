@@ -3780,5 +3780,1265 @@
       "e1441",
       "e1442"
     ]
+  },
+  {
+    "id": 181,
+    "title": "Pluscuamperfecto — vorming",
+    "emoji": "📜",
+    "level": "B1",
+    "description": "Wat er al gebeurd was vóór iets anders.",
+    "grammar": {
+      "title": "Pretérito pluscuamperfecto",
+      "body": "Había + participio: había comido (ik had gegeten), habías salido, habíamos visto. Gebruik: een handeling die vóór een andere handeling in het verleden plaatsvond: Cuando llegué, ya se habían ido."
+    },
+    "words": [
+      "e1443",
+      "e1444",
+      "e1445",
+      "e1446",
+      "e1447",
+      "e1448",
+      "e1449",
+      "e1450"
+    ]
+  },
+  {
+    "id": 182,
+    "title": "Pluscuamperfecto in verhalen",
+    "emoji": "📜",
+    "level": "B1",
+    "description": "Volgorde van gebeurtenissen vertellen.",
+    "grammar": {
+      "title": "Pluscuamperfecto in verhalen",
+      "body": "Combineer indefinido (de gebeurtenis) met pluscuamperfecto (wat eraan voorafging): Perdió el tren porque se había dormido. Signaalwoorden: ya, todavía no, antes, nunca."
+    },
+    "words": [
+      "e1451",
+      "e1452",
+      "e1453",
+      "e1454",
+      "e1455",
+      "e1456",
+      "e1457",
+      "e1458"
+    ]
+  },
+  {
+    "id": 183,
+    "title": "Spaanse geschiedenis",
+    "emoji": "🏛️",
+    "level": "B1",
+    "description": "Van de Romeinen tot de Reconquista.",
+    "grammar": {
+      "title": "Geschiedenis vertellen",
+      "body": "Historische feiten in het indefinido: Los romanos llegaron en el siglo III a. C. Achtergrond in het imperfecto: La península estaba dividida en reinos. Eeuwen met Romeinse cijfers: el siglo XV."
+    },
+    "words": [
+      "e1459",
+      "e1460",
+      "e1461",
+      "e1462",
+      "e1463",
+      "e1464",
+      "e1465",
+      "e1466"
+    ]
+  },
+  {
+    "id": 184,
+    "title": "Kunst & architectuur",
+    "emoji": "🎨",
+    "level": "B1",
+    "description": "Gebouwen en kunstwerken beschrijven.",
+    "grammar": {
+      "title": "Kunst beschrijven",
+      "body": "Estilos: románico, gótico, barroco, modernista. La Alhambra fue construida por los nazaríes (passief met ser + participio, in herkenning)."
+    },
+    "words": [
+      "e1467",
+      "e1468",
+      "e1469",
+      "e1470",
+      "e1471",
+      "e1472",
+      "e1473",
+      "e1474"
+    ]
+  },
+  {
+    "id": 185,
+    "title": "Beroemde Spanjaarden",
+    "emoji": "🌟",
+    "level": "B1",
+    "description": "Biografieën vertellen.",
+    "grammar": {
+      "title": "Biografieën vertellen",
+      "body": "Nació en 1881 en Málaga. Se trasladó a París. Murió en 1973. Levensloop in het indefinido; omstandigheden in het imperfecto: Era muy joven cuando pintó su primer cuadro."
+    },
+    "words": [
+      "e1475",
+      "e1476",
+      "e1477",
+      "e1478",
+      "e1479",
+      "e1480",
+      "e1481",
+      "e1482"
+    ]
+  },
+  {
+    "id": 186,
+    "title": "El Siglo de Oro",
+    "emoji": "🖼️",
+    "level": "B1",
+    "description": "De Gouden Eeuw van de Spaanse cultuur.",
+    "grammar": {
+      "title": "Historische periodes beschrijven",
+      "body": "Durante el Siglo de Oro (siglos XVI–XVII) florecieron la literatura y la pintura: Cervantes, Lope de Vega, Velázquez. Durante + periode; a lo largo de (in de loop van)."
+    },
+    "words": [
+      "e1483",
+      "e1484",
+      "e1485",
+      "e1486",
+      "e1487",
+      "e1488",
+      "e1489",
+      "e1490"
+    ]
+  },
+  {
+    "id": 187,
+    "title": "Moderne geschiedenis",
+    "emoji": "📰",
+    "level": "B1",
+    "description": "De twintigste eeuw in Spanje.",
+    "grammar": {
+      "title": "Moderne geschiedenis vertellen",
+      "body": "La Guerra Civil (1936–1939), la dictadura, la Transición, la Constitución de 1978. Tras (na): Tras la muerte de Franco, España se convirtió en una democracia."
+    },
+    "words": [
+      "e1491",
+      "e1492",
+      "e1493",
+      "e1494",
+      "e1495",
+      "e1496",
+      "e1497",
+      "e1498"
+    ]
+  },
+  {
+    "id": 188,
+    "title": "Tradities & feestdagen",
+    "emoji": "🎄",
+    "level": "B1",
+    "description": "Spaanse feesten door het jaar.",
+    "grammar": {
+      "title": "Tradities beschrijven",
+      "body": "Se celebra (men viert), se come, se regala: onpersoonlijk \"se\" voor gebruiken. Nochebuena, Nochevieja, los Reyes Magos, Semana Santa, San Juan."
+    },
+    "words": [
+      "e1499",
+      "e1500",
+      "e1501",
+      "e1502",
+      "e1503",
+      "e1504",
+      "e1505",
+      "e1506"
+    ]
+  },
+  {
+    "id": 189,
+    "title": "Spaanse muziek",
+    "emoji": "🎵",
+    "level": "B1",
+    "description": "Van flamenco tot pop.",
+    "grammar": {
+      "title": "Over muziek praten",
+      "body": "El flamenco tiene tres elementos: el cante, el baile y el toque. Me pone la piel de gallina (ik krijg er kippenvel van). Tocar un instrumento, cantar, componer."
+    },
+    "words": [
+      "e1507",
+      "e1508",
+      "e1509",
+      "e1510",
+      "e1511",
+      "e1512",
+      "e1513",
+      "e1514"
+    ]
+  },
+  {
+    "id": 190,
+    "title": "Toetsles B1 — Blok 7",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 7.",
+    "grammar": {
+      "title": "Samenvatting Blok 7",
+      "body": "Je kent het pluscuamperfecto en kunt geschiedenis, kunst en biografieën vertellen. In de toets: een leestekst en 20 woorden uit lessen 181–189."
+    },
+    "words": [
+      "e1515",
+      "e1516",
+      "e1517",
+      "e1518",
+      "e1519",
+      "e1520",
+      "e1521",
+      "e1522"
+    ]
+  },
+  {
+    "id": 191,
+    "title": "Condicional compuesto — vorming",
+    "emoji": "💭",
+    "level": "B1",
+    "description": "Wat je gedaan zou hebben.",
+    "grammar": {
+      "title": "Condicional compuesto",
+      "body": "Habría + participio: habría ido (ik zou zijn gegaan), habrías dicho, habríamos comprado. Gebruik: irreële gevolgen in het verleden en vermoedens over het verleden."
+    },
+    "words": [
+      "e1523",
+      "e1524",
+      "e1525",
+      "e1526",
+      "e1527",
+      "e1528",
+      "e1529",
+      "e1530"
+    ]
+  },
+  {
+    "id": 192,
+    "title": "Spijt uitdrukken",
+    "emoji": "😔",
+    "level": "B1",
+    "description": "Terugkijken op wat anders had gekund.",
+    "grammar": {
+      "title": "Spijt met condicional compuesto",
+      "body": "Debería haber + participio (ik had moeten): Debería haber estudiado más. Tendría que haber llamado. Arrepentirse de (spijt hebben van)."
+    },
+    "words": [
+      "e1531",
+      "e1532",
+      "e1533",
+      "e1534",
+      "e1535",
+      "e1536",
+      "e1537",
+      "e1538"
+    ]
+  },
+  {
+    "id": 193,
+    "title": "Wensen in het verleden",
+    "emoji": "🌠",
+    "level": "B1",
+    "description": "Wat je graag anders had gezien.",
+    "grammar": {
+      "title": "Wensen met ojalá + pluscuamperfecto de subjuntivo",
+      "body": "Ojalá hubiera + participio (had ik maar): Ojalá hubiera estudiado medicina. Me habría gustado + infinitivo (ik had graag willen): Me habría gustado conocerla."
+    },
+    "words": [
+      "e1539",
+      "e1540",
+      "e1541",
+      "e1542",
+      "e1543",
+      "e1544",
+      "e1545",
+      "e1546"
+    ]
+  },
+  {
+    "id": 194,
+    "title": "Financiën & bankzaken",
+    "emoji": "🏦",
+    "level": "B1",
+    "description": "Bij de bank.",
+    "grammar": {
+      "title": "Bankzaken regelen",
+      "body": "Abrir una cuenta, sacar dinero del cajero, hacer una transferencia, pedir un préstamo. La comisión (de kosten), el saldo (het saldo), el tipo de interés (de rente)."
+    },
+    "words": [
+      "e1547",
+      "e1548",
+      "e1549",
+      "e1550",
+      "e1551",
+      "e1552",
+      "e1553",
+      "e1554"
+    ]
+  },
+  {
+    "id": 195,
+    "title": "Economie & geld",
+    "emoji": "💶",
+    "level": "B1",
+    "description": "Over economie praten.",
+    "grammar": {
+      "title": "Over economie praten",
+      "body": "La inflación sube, los precios bajan, el paro aumenta. Woordvorming: crecer → el crecimiento, invertir → la inversión, ahorrar → el ahorro."
+    },
+    "words": [
+      "e1555",
+      "e1556",
+      "e1557",
+      "e1558",
+      "e1559",
+      "e1560",
+      "e1561",
+      "e1562"
+    ]
+  },
+  {
+    "id": 196,
+    "title": "Belastingen & administratie",
+    "emoji": "📄",
+    "level": "B1",
+    "description": "Formulieren en loketten.",
+    "grammar": {
+      "title": "Administratieve taal",
+      "body": "Rellenar un formulario, presentar la declaración de la renta, pedir cita previa, el DNI, el NIE (buitenlandersnummer), el empadronamiento (inschrijving bij de gemeente)."
+    },
+    "words": [
+      "e1563",
+      "e1564",
+      "e1565",
+      "e1566",
+      "e1567",
+      "e1568",
+      "e1569",
+      "e1570"
+    ]
+  },
+  {
+    "id": 197,
+    "title": "Wonen & huren",
+    "emoji": "🏠",
+    "level": "B1",
+    "description": "Een woning zoeken.",
+    "grammar": {
+      "title": "Een woning zoeken",
+      "body": "Piso en alquiler, se vende, el casero (de huisbaas), el inquilino (de huurder), la fianza (de borg), gastos incluidos (inclusief kosten)."
+    },
+    "words": [
+      "e1571",
+      "e1572",
+      "e1573",
+      "e1574",
+      "e1575",
+      "e1576",
+      "e1577",
+      "e1578"
+    ]
+  },
+  {
+    "id": 198,
+    "title": "Verhuizen",
+    "emoji": "📦",
+    "level": "B1",
+    "description": "Een verhuizing beschrijven.",
+    "grammar": {
+      "title": "Verhuizen beschrijven",
+      "body": "Hacer la mudanza, embalar (inpakken), desembalar, la furgoneta, el trastero (de berging). Nos mudamos la semana que viene."
+    },
+    "words": [
+      "e1579",
+      "e1580",
+      "e1581",
+      "e1582",
+      "e1583",
+      "e1584",
+      "e1585",
+      "e1586"
+    ]
+  },
+  {
+    "id": 199,
+    "title": "Buurt & omgeving",
+    "emoji": "🏘️",
+    "level": "B1",
+    "description": "Je buurt beschrijven.",
+    "grammar": {
+      "title": "Je buurt beschrijven",
+      "body": "El barrio es tranquilo / animado / céntrico. Está bien comunicado (goed bereikbaar). A dos pasos de (op een steenworp van). Los vecinos son majos."
+    },
+    "words": [
+      "e1587",
+      "e1588",
+      "e1589",
+      "e1590",
+      "e1591",
+      "e1592",
+      "e1593",
+      "e1594"
+    ]
+  },
+  {
+    "id": 200,
+    "title": "Toetsles B1 — Blok 8",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 8.",
+    "grammar": {
+      "title": "Samenvatting Blok 8",
+      "body": "Je kent de condicional compuesto, kunt spijt en wensen uitdrukken en bank-, woon- en administratieve zaken regelen. In de toets: een leestekst en 20 woorden uit lessen 191–199."
+    },
+    "words": [
+      "e1595",
+      "e1596",
+      "e1597",
+      "e1598",
+      "e1599",
+      "e1600",
+      "e1601",
+      "e1602"
+    ]
+  },
+  {
+    "id": 201,
+    "title": "Imperfecto de subjuntivo — vorming",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "De verleden tijd van de subjuntivo.",
+    "grammar": {
+      "title": "Imperfecto de subjuntivo",
+      "body": "Vorming: indefinido ellos (hablaron) → stam hablar- + -ra: hablara, hablaras, hablara, habláramos, hablarais, hablaran. Ook -se is mogelijk (hablase). Gebruik na verleden hoofdzin: Quería que vinieras."
+    },
+    "words": [
+      "e1603",
+      "e1604",
+      "e1605",
+      "e1606",
+      "e1607",
+      "e1608",
+      "e1609",
+      "e1610"
+    ]
+  },
+  {
+    "id": 202,
+    "title": "Imperfecto de subjuntivo — onregelmatig",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "De onregelmatige stammen.",
+    "grammar": {
+      "title": "Onregelmatige imperfecto de subjuntivo",
+      "body": "Van de onregelmatige indefinido: tener → tuvieron → tuviera; estar → estuviera; poder → pudiera; decir → dijera; traer → trajera; ir/ser → fuera; haber → hubiera; hacer → hiciera."
+    },
+    "words": [
+      "e1611",
+      "e1612",
+      "e1613",
+      "e1614",
+      "e1615",
+      "e1616",
+      "e1617",
+      "e1618"
+    ]
+  },
+  {
+    "id": 203,
+    "title": "Twijfel & onzekerheid",
+    "emoji": "🤔",
+    "level": "B1",
+    "description": "Twijfel uitdrukken.",
+    "grammar": {
+      "title": "Twijfel uitdrukken",
+      "body": "Dudo que + subjuntivo. No estoy seguro de que + subjuntivo. Quizás / tal vez / puede que + subjuntivo. A lo mejor + indicativo (uitzondering!)."
+    },
+    "words": [
+      "e1619",
+      "e1620",
+      "e1621",
+      "e1622",
+      "e1623",
+      "e1624",
+      "e1625",
+      "e1626"
+    ]
+  },
+  {
+    "id": 204,
+    "title": "Meningen nuanceren",
+    "emoji": "💬",
+    "level": "B1",
+    "description": "Genuanceerd je mening geven.",
+    "grammar": {
+      "title": "Meningen nuanceren",
+      "body": "Hasta cierto punto (tot op zekere hoogte), en parte, no del todo (niet helemaal), depende de, por un lado… por otro (enerzijds… anderzijds), no cabe duda de que (het lijdt geen twijfel dat)."
+    },
+    "words": [
+      "e1627",
+      "e1628",
+      "e1629",
+      "e1630",
+      "e1631",
+      "e1632",
+      "e1633",
+      "e1634"
+    ]
+  },
+  {
+    "id": 205,
+    "title": "Onderwijs & studie",
+    "emoji": "📚",
+    "level": "B1",
+    "description": "Over onderwijs praten.",
+    "grammar": {
+      "title": "Over onderwijs praten",
+      "body": "La educación primaria, secundaria, el bachillerato, la formación profesional. Aprobar (slagen), suspender (zakken), repetir curso (blijven zitten), sacar buenas notas."
+    },
+    "words": [
+      "e1635",
+      "e1636",
+      "e1637",
+      "e1638",
+      "e1639",
+      "e1640",
+      "e1641",
+      "e1642"
+    ]
+  },
+  {
+    "id": 206,
+    "title": "Universiteit & wetenschap",
+    "emoji": "🎓",
+    "level": "B1",
+    "description": "Universitaire taal.",
+    "grammar": {
+      "title": "Universitaire taal",
+      "body": "La carrera (de studie), el grado, el máster, el doctorado, la beca (de beurs), la matrícula (de inschrijving), la facultad, el catedrático (de hoogleraar)."
+    },
+    "words": [
+      "e1643",
+      "e1644",
+      "e1645",
+      "e1646",
+      "e1647",
+      "e1648",
+      "e1649",
+      "e1650"
+    ]
+  },
+  {
+    "id": 207,
+    "title": "Lezen & schrijven",
+    "emoji": "📖",
+    "level": "B1",
+    "description": "Over teksten praten.",
+    "grammar": {
+      "title": "Over lezen en schrijven praten",
+      "body": "Redactar (opstellen), el borrador (de kladversie), corregir, el párrafo, la ortografía, el ensayo. Leer entre líneas (tussen de regels lezen)."
+    },
+    "words": [
+      "e1651",
+      "e1652",
+      "e1653",
+      "e1654",
+      "e1655",
+      "e1656",
+      "e1657",
+      "e1658"
+    ]
+  },
+  {
+    "id": 208,
+    "title": "Examen & beoordeling",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Examens bespreken.",
+    "grammar": {
+      "title": "Examens bespreken",
+      "body": "Presentarse a un examen, el examen oral/escrito, la convocatoria (de examenronde), la recuperación (het herexamen), estar nervioso, quedarse en blanco (een black-out hebben)."
+    },
+    "words": [
+      "e1659",
+      "e1660",
+      "e1661",
+      "e1662",
+      "e1663",
+      "e1664",
+      "e1665",
+      "e1666"
+    ]
+  },
+  {
+    "id": 209,
+    "title": "Taalgebruik & stijl",
+    "emoji": "✍️",
+    "level": "B1",
+    "description": "Registers in het Spaans.",
+    "grammar": {
+      "title": "Registers in het Spaans",
+      "body": "Coloquial (spreektaal), culto (verzorgd), vulgar, técnico. Spreektaal: mola (is gaaf), tío/tía (joh), vale (oké). Formeel: le ruego (ik verzoek u), atentamente."
+    },
+    "words": [
+      "e1667",
+      "e1668",
+      "e1669",
+      "e1670",
+      "e1671",
+      "e1672",
+      "e1673",
+      "e1674"
+    ]
+  },
+  {
+    "id": 210,
+    "title": "Toetsles B1 — Blok 9",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 9.",
+    "grammar": {
+      "title": "Samenvatting Blok 9",
+      "body": "Je kent het imperfecto de subjuntivo, kunt twijfel en nuances uitdrukken en over onderwijs en taal praten. In de toets: een leestekst en 20 woorden uit lessen 201–209."
+    },
+    "words": [
+      "e1675",
+      "e1676",
+      "e1677",
+      "e1678",
+      "e1679",
+      "e1680",
+      "e1681",
+      "e1682"
+    ]
+  },
+  {
+    "id": 211,
+    "title": "Relaties & vriendschap",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Wederkerige werkwoorden.",
+    "grammar": {
+      "title": "Wederkerige werkwoorden in relaties",
+      "body": "Nos conocimos (we leerden elkaar kennen), se llevan bien (ze kunnen goed met elkaar opschieten), se pelean, se reconcilian. Llevarse bien/mal con."
+    },
+    "words": [
+      "e1683",
+      "e1684",
+      "e1685",
+      "e1686",
+      "e1687",
+      "e1688",
+      "e1689",
+      "e1690"
+    ]
+  },
+  {
+    "id": 212,
+    "title": "Liefde & romantiek",
+    "emoji": "❤️",
+    "level": "B1",
+    "description": "Over liefde praten.",
+    "grammar": {
+      "title": "Over liefde praten",
+      "body": "Enamorarse de (verliefd worden op), estar enamorado de, salir con (verkering hebben met), la pareja, comprometerse (zich verloven), casarse con."
+    },
+    "words": [
+      "e1691",
+      "e1692",
+      "e1693",
+      "e1694",
+      "e1695",
+      "e1696",
+      "e1697",
+      "e1698"
+    ]
+  },
+  {
+    "id": 213,
+    "title": "Conflicten & verzoening",
+    "emoji": "🕊️",
+    "level": "B1",
+    "description": "Ruzie en het goedmaken.",
+    "grammar": {
+      "title": "Conflicten beschrijven",
+      "body": "Discutir (ruziën), pelearse, enfadarse con, hacer las paces (het goedmaken), pedir perdón, perdonar, reconciliarse, el malentendido."
+    },
+    "words": [
+      "e1699",
+      "e1700",
+      "e1701",
+      "e1702",
+      "e1703",
+      "e1704",
+      "e1705",
+      "e1706"
+    ]
+  },
+  {
+    "id": 214,
+    "title": "Karakter & persoonlijkheid",
+    "emoji": "🎭",
+    "level": "B1",
+    "description": "Karaktereigenschappen.",
+    "grammar": {
+      "title": "Karaktereigenschappen",
+      "body": "Ser + eigenschap: es terco (koppig), es cabezota, es generoso, es tacaño (gierig), es sensato (verstandig), es orgulloso. Tener mal genio (een slecht humeur hebben)."
+    },
+    "words": [
+      "e1707",
+      "e1708",
+      "e1709",
+      "e1710",
+      "e1711",
+      "e1712",
+      "e1713",
+      "e1714"
+    ]
+  },
+  {
+    "id": 215,
+    "title": "Psychologie & gevoelens",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "Gevoelens uitdrukken.",
+    "grammar": {
+      "title": "Gevoelens uitdrukken",
+      "body": "Me da vergüenza (ik schaam me), me da rabia (ik word er boos van), me pone nervioso, me siento + bijvoeglijk naamwoord. Sentirse identificado con."
+    },
+    "words": [
+      "e1715",
+      "e1716",
+      "e1717",
+      "e1718",
+      "e1719",
+      "e1720",
+      "e1721",
+      "e1722"
+    ]
+  },
+  {
+    "id": 216,
+    "title": "Dromen & ambities",
+    "emoji": "🌟",
+    "level": "B1",
+    "description": "Dromen en plannen uitdrukken.",
+    "grammar": {
+      "title": "Dromen en plannen uitdrukken",
+      "body": "Mi sueño es + infinitivo. Aspirar a (streven naar), lograr (bereiken), perseguir un sueño, ponerse una meta, a largo plazo (op lange termijn)."
+    },
+    "words": [
+      "e1723",
+      "e1724",
+      "e1725",
+      "e1726",
+      "e1727",
+      "e1728",
+      "e1729",
+      "e1730"
+    ]
+  },
+  {
+    "id": 217,
+    "title": "Succes & falen",
+    "emoji": "🏆",
+    "level": "B1",
+    "description": "Succes en falen beschrijven.",
+    "grammar": {
+      "title": "Succes en falen beschrijven",
+      "body": "Tener éxito, triunfar, fracasar (mislukken), el fracaso, rendirse (opgeven), volver a intentarlo, aprender de los errores, salir adelante (erbovenop komen)."
+    },
+    "words": [
+      "e1731",
+      "e1732",
+      "e1733",
+      "e1734",
+      "e1735",
+      "e1736",
+      "e1737",
+      "e1738"
+    ]
+  },
+  {
+    "id": 218,
+    "title": "Geluk & tevredenheid",
+    "emoji": "😊",
+    "level": "B1",
+    "description": "Over geluk praten.",
+    "grammar": {
+      "title": "Over geluk praten",
+      "body": "Ser feliz vs. estar contento. Disfrutar de (genieten van), agradecer (dankbaar zijn), valorar (waarderen), conformarse con (genoegen nemen met), estar a gusto (zich op zijn gemak voelen)."
+    },
+    "words": [
+      "e1739",
+      "e1740",
+      "e1741",
+      "e1742",
+      "e1743",
+      "e1744",
+      "e1745",
+      "e1746"
+    ]
+  },
+  {
+    "id": 219,
+    "title": "Stress & ontspanning",
+    "emoji": "🧘",
+    "level": "B1",
+    "description": "Over stress en ontspanning praten.",
+    "grammar": {
+      "title": "Over stress en ontspanning praten",
+      "body": "Estar estresado, agobiarse (zich overweldigd voelen), estar quemado (opgebrand zijn), desconectar, relajarse, tomarse un respiro (even pauze nemen)."
+    },
+    "words": [
+      "e1747",
+      "e1748",
+      "e1749",
+      "e1750",
+      "e1751",
+      "e1752",
+      "e1753",
+      "e1754"
+    ]
+  },
+  {
+    "id": 220,
+    "title": "Toetsles B1 — Blok 10",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 10.",
+    "grammar": {
+      "title": "Samenvatting Blok 10",
+      "body": "Je kunt relaties, karakter, gevoelens, dromen en succes beschrijven. In de toets: een leestekst en 20 woorden uit lessen 211–219."
+    },
+    "words": [
+      "e1755",
+      "e1756",
+      "e1757",
+      "e1758",
+      "e1759",
+      "e1760",
+      "e1761",
+      "e1762"
+    ]
+  },
+  {
+    "id": 221,
+    "title": "Huisdieren",
+    "emoji": "🐕",
+    "level": "B1",
+    "description": "Verkleinwoorden -ito/-illo.",
+    "grammar": {
+      "title": "Verkleinwoorden (-ito / -illo)",
+      "body": "Perro → perrito, gato → gatito, casa → casita, pan → panecillo, pequeño → pequeñito. Ook liefkozend: abuelita, Juanito. Let op spelling: poco → poquito."
+    },
+    "words": [
+      "e1763",
+      "e1764",
+      "e1765",
+      "e1766",
+      "e1767",
+      "e1768",
+      "e1769",
+      "e1770"
+    ]
+  },
+  {
+    "id": 222,
+    "title": "Wilde dieren",
+    "emoji": "🦁",
+    "level": "B1",
+    "description": "Dieren beschrijven.",
+    "grammar": {
+      "title": "Dieren beschrijven",
+      "body": "El león es feroz, el elefante es enorme, la tortuga es lenta. En peligro de extinción (met uitsterven bedreigd), salvaje (wild), la especie (de soort)."
+    },
+    "words": [
+      "e1771",
+      "e1772",
+      "e1773",
+      "e1774",
+      "e1775",
+      "e1776",
+      "e1777",
+      "e1778"
+    ]
+  },
+  {
+    "id": 223,
+    "title": "Planten & tuinieren",
+    "emoji": "🌿",
+    "level": "B1",
+    "description": "Over planten praten.",
+    "grammar": {
+      "title": "Over planten praten",
+      "body": "Regar (water geven), plantar, podar (snoeien), la semilla (het zaad), la raíz, florecer, marchitarse (verwelken). Tener buena mano con las plantas (groene vingers hebben)."
+    },
+    "words": [
+      "e1779",
+      "e1780",
+      "e1781",
+      "e1782",
+      "e1783",
+      "e1784",
+      "e1785",
+      "e1786"
+    ]
+  },
+  {
+    "id": 224,
+    "title": "Landschappen & geografie",
+    "emoji": "🏔️",
+    "level": "B1",
+    "description": "Landschappen beschrijven.",
+    "grammar": {
+      "title": "Landschappen beschrijven",
+      "body": "La meseta (de hoogvlakte), el valle, la llanura (de vlakte), la cordillera, el acantilado (de klif), la península. El paisaje es árido / verde / montañoso."
+    },
+    "words": [
+      "e1787",
+      "e1788",
+      "e1789",
+      "e1790",
+      "e1791",
+      "e1792",
+      "e1793",
+      "e1794"
+    ]
+  },
+  {
+    "id": 225,
+    "title": "De zee & het strand",
+    "emoji": "🏖️",
+    "level": "B1",
+    "description": "Aan zee.",
+    "grammar": {
+      "title": "Aan zee",
+      "body": "La marea alta/baja (vloed/eb), la ola, la orilla (de oever/vloedlijn), la arena, bucear (duiken), la sombrilla (de parasol), hacer pie (kunnen staan in het water)."
+    },
+    "words": [
+      "e1795",
+      "e1796",
+      "e1797",
+      "e1798",
+      "e1799",
+      "e1800",
+      "e1801",
+      "e1802"
+    ]
+  },
+  {
+    "id": 226,
+    "title": "Bergen & wandelen",
+    "emoji": "⛰️",
+    "level": "B1",
+    "description": "In de bergen.",
+    "grammar": {
+      "title": "In de bergen",
+      "body": "Hacer senderismo, la ruta, el sendero (het pad), la cima (de top), el refugio (de berghut), la pendiente (de helling), la mochila. Está señalizado (het is bewegwijzerd)."
+    },
+    "words": [
+      "e1803",
+      "e1804",
+      "e1805",
+      "e1806",
+      "e1807",
+      "e1808",
+      "e1809",
+      "e1810"
+    ]
+  },
+  {
+    "id": 227,
+    "title": "Klimaat & klimaatverandering",
+    "emoji": "🌍",
+    "level": "B1",
+    "description": "Over het klimaat praten.",
+    "grammar": {
+      "title": "Over het klimaat praten",
+      "body": "El calentamiento global, el efecto invernadero (het broeikaseffect), la sequía (de droogte), la ola de calor, el deshielo (het smelten), las emisiones."
+    },
+    "words": [
+      "e1811",
+      "e1812",
+      "e1813",
+      "e1814",
+      "e1815",
+      "e1816",
+      "e1817",
+      "e1818"
+    ]
+  },
+  {
+    "id": 228,
+    "title": "Duurzaamheid & recycling",
+    "emoji": "♻️",
+    "level": "B1",
+    "description": "Over duurzaamheid praten.",
+    "grammar": {
+      "title": "Over duurzaamheid praten",
+      "body": "Reciclar, reutilizar, reducir. El contenedor amarillo (plastic), azul (papier), verde (glas), marrón (gft). Sostenible, el residuo (het afval), el envase (de verpakking)."
+    },
+    "words": [
+      "e1819",
+      "e1820",
+      "e1821",
+      "e1822",
+      "e1823",
+      "e1824",
+      "e1825",
+      "e1826"
+    ]
+  },
+  {
+    "id": 229,
+    "title": "Energie & grondstoffen",
+    "emoji": "⚡",
+    "level": "B1",
+    "description": "Over energie praten.",
+    "grammar": {
+      "title": "Over energie praten",
+      "body": "Las energías renovables: solar, eólica (wind), hidráulica. Los combustibles fósiles, el petróleo, el gas natural, la central nuclear, el consumo, ahorrar energía."
+    },
+    "words": [
+      "e1827",
+      "e1828",
+      "e1829",
+      "e1830",
+      "e1831",
+      "e1832",
+      "e1833",
+      "e1834"
+    ]
+  },
+  {
+    "id": 230,
+    "title": "Toetsles B1 — Blok 11",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 11.",
+    "grammar": {
+      "title": "Samenvatting Blok 11",
+      "body": "Je kent de verkleinwoorden en kunt dieren, natuur, klimaat en energie bespreken. In de toets: een leestekst en 20 woorden uit lessen 221–229."
+    },
+    "words": [
+      "e1835",
+      "e1836",
+      "e1837",
+      "e1838",
+      "e1839",
+      "e1840",
+      "e1841",
+      "e1842"
+    ]
+  },
+  {
+    "id": 231,
+    "title": "Film & bioscoop",
+    "emoji": "🎬",
+    "level": "B1",
+    "description": "Over films praten.",
+    "grammar": {
+      "title": "Over films praten",
+      "body": "El estreno (de première), la taquilla (de kassa), el reparto (de cast), el guion (het script), doblada (nagesynchroniseerd), en versión original subtitulada (V.O.S.)."
+    },
+    "words": [
+      "e1843",
+      "e1844",
+      "e1845",
+      "e1846",
+      "e1847",
+      "e1848",
+      "e1849",
+      "e1850"
+    ]
+  },
+  {
+    "id": 232,
+    "title": "Theater & zarzuela",
+    "emoji": "🎭",
+    "level": "B1",
+    "description": "Theater en opera.",
+    "grammar": {
+      "title": "Theater & opera",
+      "body": "La función (de voorstelling), el escenario (het podium), el telón (het doek), el intermedio (de pauze), el aplauso, la zarzuela (Spaanse operette), el papel (de rol)."
+    },
+    "words": [
+      "e1851",
+      "e1852",
+      "e1853",
+      "e1854",
+      "e1855",
+      "e1856",
+      "e1857",
+      "e1858"
+    ]
+  },
+  {
+    "id": 233,
+    "title": "Schilderkunst & musea",
+    "emoji": "🖌️",
+    "level": "B1",
+    "description": "Kunst bespreken.",
+    "grammar": {
+      "title": "Kunst bespreken",
+      "body": "El lienzo (het doek), el óleo (olieverf), la acuarela, el retrato, el paisaje, la exposición, el bodegón (het stilleven). Representa / transmite / evoca."
+    },
+    "words": [
+      "e1859",
+      "e1860",
+      "e1861",
+      "e1862",
+      "e1863",
+      "e1864",
+      "e1865",
+      "e1866"
+    ]
+  },
+  {
+    "id": 234,
+    "title": "Fotografie & design",
+    "emoji": "📷",
+    "level": "B1",
+    "description": "Over fotografie praten.",
+    "grammar": {
+      "title": "Over fotografie praten",
+      "body": "Enfocar (scherpstellen), el encuadre (de kadrering), la luz natural, el primer plano (de close-up), retocar (bewerken), el diseño gráfico, el logotipo."
+    },
+    "words": [
+      "e1867",
+      "e1868",
+      "e1869",
+      "e1870",
+      "e1871",
+      "e1872",
+      "e1873",
+      "e1874"
+    ]
+  },
+  {
+    "id": 235,
+    "title": "Kranten & journalistiek",
+    "emoji": "📰",
+    "level": "B1",
+    "description": "Krantenkoppen lezen.",
+    "grammar": {
+      "title": "Krantenkoppen lezen",
+      "body": "El titular (de kop), la portada (de voorpagina), la sección, el editorial, la fuente (de bron), la rueda de prensa (de persconferentie), según fuentes oficiales."
+    },
+    "words": [
+      "e1875",
+      "e1876",
+      "e1877",
+      "e1878",
+      "e1879",
+      "e1880",
+      "e1881",
+      "e1882"
+    ]
+  },
+  {
+    "id": 236,
+    "title": "Radio & televisie",
+    "emoji": "📺",
+    "level": "B1",
+    "description": "Over media praten.",
+    "grammar": {
+      "title": "Over media praten",
+      "body": "El telediario (het journaal), la cadena (de zender), el presentador, la audiencia (het kijkerspubliek), en directo (live), el concurso (de spelshow), hacer zapping."
+    },
+    "words": [
+      "e1883",
+      "e1884",
+      "e1885",
+      "e1886",
+      "e1887",
+      "e1888",
+      "e1889",
+      "e1890"
+    ]
+  },
+  {
+    "id": 237,
+    "title": "Reclame & marketing",
+    "emoji": "📢",
+    "level": "B1",
+    "description": "Reclametaal.",
+    "grammar": {
+      "title": "Reclametaal",
+      "body": "El anuncio, la campaña publicitaria, el eslogan, la marca (het merk), el consumidor, la oferta, ¡no te lo pierdas! (mis het niet!), por tiempo limitado."
+    },
+    "words": [
+      "e1891",
+      "e1892",
+      "e1893",
+      "e1894",
+      "e1895",
+      "e1896",
+      "e1897",
+      "e1898"
+    ]
+  },
+  {
+    "id": 238,
+    "title": "Mode & trends",
+    "emoji": "👗",
+    "level": "B1",
+    "description": "Over mode praten.",
+    "grammar": {
+      "title": "Over mode praten",
+      "body": "Estar de moda, pasado de moda (uit de mode), la tendencia, la temporada (het seizoen), el diseñador, la pasarela (de catwalk), quedar bien/mal (goed/slecht staan)."
+    },
+    "words": [
+      "e1899",
+      "e1900",
+      "e1901",
+      "e1902",
+      "e1903",
+      "e1904",
+      "e1905",
+      "e1906"
+    ]
+  },
+  {
+    "id": 239,
+    "title": "Evenementen & festivals",
+    "emoji": "🎪",
+    "level": "B1",
+    "description": "Evenementen beschrijven.",
+    "grammar": {
+      "title": "Evenementen beschrijven",
+      "body": "El cartel (de line-up/affiche), la entrada agotada (uitverkocht), el aforo (de capaciteit), el recinto (het terrein), la actuación (het optreden), el ambiente."
+    },
+    "words": [
+      "e1907",
+      "e1908",
+      "e1909",
+      "e1910",
+      "e1911",
+      "e1912",
+      "e1913",
+      "e1914"
+    ]
+  },
+  {
+    "id": 240,
+    "title": "Toetsles B1 — Blok 12",
+    "emoji": "📋",
+    "level": "B1",
+    "description": "Samenvatting van blok 12.",
+    "grammar": {
+      "title": "Samenvatting Blok 12",
+      "body": "Je kunt over film, theater, kunst, media, reclame, mode en evenementen praten. In de toets: een leestekst en 20 woorden uit lessen 231–239. Hiermee is B1 blok 2 afgerond."
+    },
+    "words": [
+      "e1915",
+      "e1916",
+      "e1917",
+      "e1918",
+      "e1919",
+      "e1920",
+      "e1921",
+      "e1922"
+    ]
   }
 ]

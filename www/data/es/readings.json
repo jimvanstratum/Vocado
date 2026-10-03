@@ -700,5 +700,239 @@
         "answer": 1
       }
     ]
+  },
+  {
+    "id": "r190",
+    "milestone": 190,
+    "level": "B1",
+    "title": "Las tres culturas de Toledo",
+    "text": "El verano pasado visité Toledo con mi hermano. Antes de ir, había leído que durante la Edad Media convivieron allí cristianos, musulmanes y judíos, y quería comprobarlo con mis propios ojos.\nNada más llegar entendí por qué la llaman la ciudad de las tres culturas. En pocos metros pasamos de una mezquita del siglo X a una sinagoga y después a la catedral gótica. Nuestra guía nos explicó que, cuando el rey Alfonso X fundó la Escuela de Traductores, los sabios de las tres religiones ya habían trabajado juntos durante décadas para traducir textos árabes al latín.\nLo que más me impresionó fue una pequeña iglesia que antes había sido mezquita. Mi hermano, que nunca había mostrado interés por la historia, se quedó callado un buen rato. \"Ojalá hubiéramos venido antes\", me dijo al salir.",
+    "questions": [
+      {
+        "q": "Wat had de schrijver vóór de reis gelezen?",
+        "options": [
+          "Dat Toledo de hoofdstad van Spanje was",
+          "Dat drie culturen er in de middeleeuwen samenleefden",
+          "Dat de kathedraal gesloten was",
+          "Dat er geen gidsen waren"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat vertelde de gids over de Escuela de Traductores?",
+        "options": [
+          "Dat Alfonso X haar sloot",
+          "Dat geleerden van drie religies al decennia samenwerkten",
+          "Dat er alleen Latijn werd gesproken",
+          "Dat ze in de kathedraal zat"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe reageerde de broer?",
+        "options": [
+          "Hij verveelde zich",
+          "Hij wilde snel weg",
+          "Hij werd stil en wenste dat ze eerder waren gekomen",
+          "Hij kocht een boek"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r200",
+    "milestone": 200,
+    "level": "B1",
+    "title": "El piso que no alquilamos",
+    "text": "Cuando Marta y yo decidimos vivir juntos, pensábamos que encontrar piso sería fácil. Nos equivocamos. En tres semanas vimos doce pisos: unos eran oscuros, otros estaban mal comunicados y el único que nos gustó costaba casi todo nuestro sueldo.\nAl final encontramos uno céntrico, reformado y con gastos incluidos. El casero parecía amable, pero el contrato tenía una cláusula extraña: la fianza no se devolvería si nos íbamos antes de dos años. Marta quería firmar de todos modos. Yo le pedí que esperara un día.\nEsa noche llamé a un amigo abogado. Me dijo que, de haber firmado, habríamos perdido más de dos mil euros. Al día siguiente rechazamos el piso. Ahora vivimos en las afueras, en un barrio tranquilo, y pagamos la mitad. Debería haber confiado antes en mi intuición, pero al menos aprendimos a leer la letra pequeña.",
+    "questions": [
+      {
+        "q": "Wat was het probleem met de meeste appartementen?",
+        "options": [
+          "Ze waren te groot",
+          "Ze waren donker, slecht bereikbaar of te duur",
+          "Ze lagen te ver van het werk van Marta",
+          "Ze waren al verhuurd"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat stond er in de vreemde clausule?",
+        "options": [
+          "De huur zou elk jaar stijgen",
+          "Huisdieren waren verboden",
+          "De borg werd niet terugbetaald bij vertrek binnen twee jaar",
+          "De huisbaas mocht altijd binnenkomen"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Hoeveel betalen ze nu?",
+        "options": [
+          "Hetzelfde",
+          "Het dubbele",
+          "De helft",
+          "Niets, ze wonen bij familie"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "r210",
+    "milestone": 210,
+    "level": "B1",
+    "title": "La profesora que cambió mi vida",
+    "text": "En el instituto yo era un alumno mediocre. Sacaba notas justas, no entregaba los deberes a tiempo y mis padres ya no sabían qué hacer conmigo. Nadie creía que fuera a terminar el bachillerato.\nEntonces llegó Carmen, la nueva profesora de literatura. El primer día nos pidió que escribiéramos una página sobre algo que nos importara de verdad. Yo escribí sobre mi abuelo, que había sido pastor en los Pirineos. Al devolverme el texto, me dijo que tenía talento y que sería una pena que no lo aprovechara.\nNo fue magia. Seguí suspendiendo matemáticas y tuve que ir a la recuperación de septiembre. Pero por primera vez alguien esperaba algo de mí, y eso lo cambió todo. Hoy soy periodista. Hace poco escribí a Carmen para darle las gracias. Me contestó que no recordaba aquel texto, pero que se alegraba mucho de que yo sí.",
+    "questions": [
+      {
+        "q": "Hoe was de schrijver als leerling?",
+        "options": [
+          "Uitstekend",
+          "Middelmatig, met matige cijfers en te laat huiswerk",
+          "Afwezig",
+          "De beste van de klas in wiskunde"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat vroeg Carmen op de eerste dag?",
+        "options": [
+          "Een toets te maken",
+          "Een gedicht uit het hoofd te leren",
+          "Een pagina te schrijven over iets dat echt belangrijk voor hen was",
+          "Een boek samen te vatten"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat antwoordde Carmen op zijn bedankje?",
+        "options": [
+          "Dat ze de tekst nog precies wist",
+          "Dat ze het niet meer wist, maar blij was dat hij het wel wist",
+          "Dat ze geen tijd had",
+          "Dat hij beter wiskunde had kunnen studeren"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r220",
+    "milestone": 220,
+    "level": "B1",
+    "title": "Dos amigos y una discusión",
+    "text": "Pablo y yo somos amigos desde la escuela primaria. Siempre nos habíamos llevado bien, hasta que el año pasado discutimos por una tontería: él había olvidado mi cumpleaños y yo le dije cosas que no sentía. Él se ofendió, yo también, y durante cuatro meses no nos hablamos.\nDurante ese tiempo me di cuenta de lo mucho que lo echaba de menos. Varias veces quise llamarlo, pero el orgullo me lo impedía. Mi hermana, que es muy sensata, me dijo que si yo no daba el primer paso, quizá lo perdería para siempre.\nAl final le escribí un mensaje largo pidiéndole perdón. Me contestó en cinco minutos: él también se arrepentía y no sabía cómo acercarse. Hicimos las paces en el bar de siempre. Ahora, cuando uno de los dos se enfada, respiramos hondo y hablamos antes de que el malentendido crezca. Aprendimos que la amistad vale más que tener razón.",
+    "questions": [
+      {
+        "q": "Waarom kregen de vrienden ruzie?",
+        "options": [
+          "Over geld",
+          "Omdat Pablo de verjaardag vergat en de schrijver te harde dingen zei",
+          "Omdat ze voor verschillende clubs waren",
+          "Over een meisje"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat hield de schrijver tegen om te bellen?",
+        "options": [
+          "Hij had geen telefoon",
+          "Zijn zus verbood het",
+          "Zijn trots",
+          "Hij was verhuisd"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Wat doen ze nu als een van beiden boos wordt?",
+        "options": [
+          "Ze praten een maand niet",
+          "Ze halen diep adem en praten voordat het misverstand groeit",
+          "Ze bellen de zus",
+          "Ze schrijven lange berichten"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r230",
+    "milestone": 230,
+    "level": "B1",
+    "title": "El pueblo que recuperó su río",
+    "text": "Hace veinte años, el río que pasa por mi pueblo estaba prácticamente muerto. Una fábrica de papel vertía sus residuos sin control, el agua olía mal y hacía décadas que nadie se bañaba en él. Los mayores contaban que, de jóvenes, habían pescado truchas allí, pero a nosotros nos parecía una leyenda.\nTodo cambió cuando un grupo de vecinos, entre ellos mi madre, empezó a recoger firmas y a denunciar la situación. Al principio nadie les hacía caso. La fábrica daba trabajo a medio pueblo y muchos temían que cerrara si se endurecían las normas.\nCon el tiempo consiguieron que la empresa instalara una depuradora y que el ayuntamiento plantara árboles en las orillas. El agua tardó años en limpiarse, pero hoy el río vuelve a tener vida: hay garzas, nutrias y, sí, truchas. Cada verano los niños se bañan donde antes nadie se atrevía a acercarse. Si aquellos vecinos no hubieran insistido, el río seguiría siendo una cloaca.",
+    "questions": [
+      {
+        "q": "Waarom was de rivier twintig jaar geleden bijna dood?",
+        "options": [
+          "Door droogte",
+          "Door een papierfabriek die ongecontroleerd afval loosde",
+          "Door toeristen",
+          "Door een dam"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Waarom luisterde niemand aanvankelijk naar de buurtbewoners?",
+        "options": [
+          "Ze hadden geen handtekeningen",
+          "De fabriek gaf werk aan het halve dorp en men vreesde sluiting",
+          "De burgemeester was op vakantie",
+          "Het water was al schoon"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat is er nu in de rivier te zien?",
+        "options": [
+          "Alleen algen",
+          "Reigers, otters en forellen",
+          "Boten van de fabriek",
+          "Niets, hij is drooggevallen"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "r240",
+    "milestone": 240,
+    "level": "B1",
+    "title": "Una noche de cine en versión original",
+    "text": "Durante años vi todas las películas dobladas al español. Me parecía lo normal: en España casi todo se dobla, y las voces de los actores de doblaje me resultaban tan familiares como las de mis amigos. Hasta que una amiga me arrastró a un pequeño cine del centro que solo proyecta películas en versión original subtitulada.\nLa primera media hora fue incómoda. Leía los subtítulos tan deprisa que me perdía los gestos de los actores y, para colmo, el protagonista hablaba con un acento que me costaba entender. Pero poco a poco algo cambió: empecé a escuchar la música de la lengua, los silencios, la ironía que el doblaje a veces borra.\nAl salir, mi amiga me preguntó qué me había parecido. Le dije que, si me lo hubiera propuesto un año antes, habría dicho que no. Ahora voy casi todas las semanas. He descubierto que ver cine en versión original es también una forma de viajar: por un par de horas vives en otra lengua sin salir de tu ciudad.",
+    "questions": [
+      {
+        "q": "Waarom keek de schrijver jarenlang nagesynchroniseerde films?",
+        "options": [
+          "Omdat ondertitels verboden waren",
+          "Omdat dat in Spanje normaal is en de stemmen vertrouwd klonken",
+          "Omdat hij geen Engels sprak",
+          "Omdat de bioscoop goedkoper was"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Wat was moeilijk in het eerste halfuur?",
+        "options": [
+          "De zaal was te koud",
+          "Hij las de ondertitels te snel en miste de gebaren; het accent was lastig",
+          "De film had geen geluid",
+          "Zijn vriendin praatte de hele tijd"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hoe vaak gaat de schrijver nu naar die bioscoop?",
+        "options": [
+          "Nooit meer",
+          "Een keer per jaar",
+          "Bijna elke week",
+          "Alleen met vakantie"
+        ],
+        "answer": 2
+      }
+    ]
   }
 ]

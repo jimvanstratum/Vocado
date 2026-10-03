@@ -10,6 +10,7 @@ export const ES_TENSE_LABELS = {
   imperfetto: 'pretérito imperfecto (verleden tijd)', futuro: 'toekomende tijd',
   indefinido: 'pretérito indefinido (verleden tijd)', condicional: 'condicional (zou-vorm)',
   subjuntivo: 'subjuntivo presente',
+  pluscuamperfecto: 'pretérito pluscuamperfecto (voltooid verleden tijd)', subj_imperf: 'imperfecto de subjuntivo',
 };
 
 // Onpersoonlijke of 3e-persoonsconstructies: niet als oefening
@@ -212,6 +213,19 @@ export function esParticiple(inf) {
 function perfecto(inf, p) {
   return `${HABER[p]} ${esParticiple(inf)}`;
 }
+const HABIA = ['había', 'habías', 'había', 'habíamos', 'habíais', 'habían'];
+function pluscuamperfecto(inf, p) {
+  return `${HABIA[p]} ${esParticiple(inf)}`;
+}
+/** Imperfecto de subjuntivo (-ra): stam = indefinido ellos zonder -ron (hablaron → habla-, tuvieron → tuvie-, fueron → fue-). */
+function subjImperf(base, p) {
+  const stem = indefinido(base, 5).replace(/ron$/, '');
+  if (p === 3) {   // accent op de klinker vóór -ramos: habláramos, tuviéramos, fuéramos
+    const acc = { a: 'á', e: 'é', i: 'í', o: 'ó', u: 'ú' };
+    return stem.slice(0, -1) + acc[stem.slice(-1)] + 'ramos';
+  }
+  return stem + ['ra', 'ras', 'ra', 'ramos', 'rais', 'ran'][p];
+}
 
 export function esCanUseTense(inf, tense) { return esIsConjugatable(inf) && (tense in ES_TENSE_LABELS); }
 
@@ -222,8 +236,9 @@ export function esPickTense(word) {
   if (L === 'A1') return 'presente';
   if (L === 'A2') return pick([['presente', 0.4], ['passato', n >= 62 ? 0.2 : 0], ['imperfetto', n >= 63 ? 0.15 : 0],
                                ['futuro', n >= 64 ? 0.15 : 0], ['indefinido', n >= 91 ? 0.1 : 0]]);
-  return pick([['presente', 0.2], ['passato', 0.15], ['imperfetto', 0.15], ['indefinido', 0.15], ['futuro', 0.1],
-               ['condicional', n >= 131 ? 0.1 : 0], ['subjuntivo', n >= 141 ? 0.15 : 0]]);
+  return pick([['presente', 0.15], ['passato', 0.12], ['imperfetto', 0.13], ['indefinido', 0.13], ['futuro', 0.1],
+               ['condicional', n >= 131 ? 0.1 : 0], ['subjuntivo', n >= 141 ? 0.12 : 0],
+               ['pluscuamperfecto', n >= 181 ? 0.07 : 0], ['subj_imperf', n >= 201 ? 0.08 : 0]]);
 }
 
 /** Geaccepteerde antwoorden voor persoon p (eerste = canoniek). */
@@ -231,7 +246,8 @@ export function esConjugateAccepted(inf, p, tense = 'presente') {
   const { base, refl } = split(inf);
   const pre = refl ? REFL[p] + ' ' : '';
   if (tense === 'passato') return [pre + perfecto(base, p)];
-  const fn = { imperfetto: imperfecto, futuro, indefinido, condicional, subjuntivo }[tense] || presente;
+  if (tense === 'pluscuamperfecto') return [pre + pluscuamperfecto(base, p)];
+  const fn = { imperfetto: imperfecto, futuro, indefinido, condicional, subjuntivo, subj_imperf: subjImperf }[tense] || presente;
   return [pre + fn(base, p)];
 }
 export function esConjugate(inf, p, tense = 'presente') { return esConjugateAccepted(inf, p, tense)[0]; }

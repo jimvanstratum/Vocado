@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""build_readings_es.py — Spaanse leesteksten A1/A2/B1 (v1.48–v1.58): één per blok, in de toetsles. Zelfde formaat als build_readings.py."""
+"""build_readings_es.py — Spaanse leesteksten A1/A2/B1 (v1.48–v1.59): één per blok, in de toetsles. Zelfde formaat als build_readings.py."""
 import json
 from pathlib import Path
 OUT = Path(__file__).parent.parent / 'www' / 'data' / 'es' / 'readings.json'
@@ -146,9 +146,57 @@ Hoy leo noticias, sigo series sin subtítulos y tengo amigos con los que solo ha
   ('Wat dacht de schrijver aan het begin over een taal leren?', ['Dat het een kwestie van woordenlijsten was', 'Dat het onmogelijk was', 'Dat het snel zou gaan', 'Dat het saai zou zijn'], 0),
   ('Hoe kijkt de schrijver nu tegen de subjuntivo aan?', ['Nog steeds onmogelijk', 'Bijna natuurlijk', 'Onbelangrijk', 'Te moeilijk om te gebruiken'], 1),
   ('Wat vindt de schrijver van fouten maken?', ['Het is beschamend', 'Ze horen bij de reis', 'Het moet vermeden worden', 'Het betekent dat je opnieuw moet beginnen'], 1)),
+R(190, 'B1', 'Las tres culturas de Toledo', """
+El verano pasado visité Toledo con mi hermano. Antes de ir, había leído que durante la Edad Media convivieron allí cristianos, musulmanes y judíos, y quería comprobarlo con mis propios ojos.
+Nada más llegar entendí por qué la llaman la ciudad de las tres culturas. En pocos metros pasamos de una mezquita del siglo X a una sinagoga y después a la catedral gótica. Nuestra guía nos explicó que, cuando el rey Alfonso X fundó la Escuela de Traductores, los sabios de las tres religiones ya habían trabajado juntos durante décadas para traducir textos árabes al latín.
+Lo que más me impresionó fue una pequeña iglesia que antes había sido mezquita. Mi hermano, que nunca había mostrado interés por la historia, se quedó callado un buen rato. "Ojalá hubiéramos venido antes", me dijo al salir.
+""",
+  ('Wat had de schrijver vóór de reis gelezen?', ['Dat Toledo de hoofdstad van Spanje was', 'Dat drie culturen er in de middeleeuwen samenleefden', 'Dat de kathedraal gesloten was', 'Dat er geen gidsen waren'], 1),
+  ('Wat vertelde de gids over de Escuela de Traductores?', ['Dat Alfonso X haar sloot', 'Dat geleerden van drie religies al decennia samenwerkten', 'Dat er alleen Latijn werd gesproken', 'Dat ze in de kathedraal zat'], 1),
+  ('Hoe reageerde de broer?', ['Hij verveelde zich', 'Hij wilde snel weg', 'Hij werd stil en wenste dat ze eerder waren gekomen', 'Hij kocht een boek'], 2)),
+R(200, 'B1', 'El piso que no alquilamos', """
+Cuando Marta y yo decidimos vivir juntos, pensábamos que encontrar piso sería fácil. Nos equivocamos. En tres semanas vimos doce pisos: unos eran oscuros, otros estaban mal comunicados y el único que nos gustó costaba casi todo nuestro sueldo.
+Al final encontramos uno céntrico, reformado y con gastos incluidos. El casero parecía amable, pero el contrato tenía una cláusula extraña: la fianza no se devolvería si nos íbamos antes de dos años. Marta quería firmar de todos modos. Yo le pedí que esperara un día.
+Esa noche llamé a un amigo abogado. Me dijo que, de haber firmado, habríamos perdido más de dos mil euros. Al día siguiente rechazamos el piso. Ahora vivimos en las afueras, en un barrio tranquilo, y pagamos la mitad. Debería haber confiado antes en mi intuición, pero al menos aprendimos a leer la letra pequeña.
+""",
+  ('Wat was het probleem met de meeste appartementen?', ['Ze waren te groot', 'Ze waren donker, slecht bereikbaar of te duur', 'Ze lagen te ver van het werk van Marta', 'Ze waren al verhuurd'], 1),
+  ('Wat stond er in de vreemde clausule?', ['De huur zou elk jaar stijgen', 'Huisdieren waren verboden', 'De borg werd niet terugbetaald bij vertrek binnen twee jaar', 'De huisbaas mocht altijd binnenkomen'], 2),
+  ('Hoeveel betalen ze nu?', ['Hetzelfde', 'Het dubbele', 'De helft', 'Niets, ze wonen bij familie'], 2)),
+R(210, 'B1', 'La profesora que cambió mi vida', """
+En el instituto yo era un alumno mediocre. Sacaba notas justas, no entregaba los deberes a tiempo y mis padres ya no sabían qué hacer conmigo. Nadie creía que fuera a terminar el bachillerato.
+Entonces llegó Carmen, la nueva profesora de literatura. El primer día nos pidió que escribiéramos una página sobre algo que nos importara de verdad. Yo escribí sobre mi abuelo, que había sido pastor en los Pirineos. Al devolverme el texto, me dijo que tenía talento y que sería una pena que no lo aprovechara.
+No fue magia. Seguí suspendiendo matemáticas y tuve que ir a la recuperación de septiembre. Pero por primera vez alguien esperaba algo de mí, y eso lo cambió todo. Hoy soy periodista. Hace poco escribí a Carmen para darle las gracias. Me contestó que no recordaba aquel texto, pero que se alegraba mucho de que yo sí.
+""",
+  ('Hoe was de schrijver als leerling?', ['Uitstekend', 'Middelmatig, met matige cijfers en te laat huiswerk', 'Afwezig', 'De beste van de klas in wiskunde'], 1),
+  ('Wat vroeg Carmen op de eerste dag?', ['Een toets te maken', 'Een gedicht uit het hoofd te leren', 'Een pagina te schrijven over iets dat echt belangrijk voor hen was', 'Een boek samen te vatten'], 2),
+  ('Wat antwoordde Carmen op zijn bedankje?', ['Dat ze de tekst nog precies wist', 'Dat ze het niet meer wist, maar blij was dat hij het wel wist', 'Dat ze geen tijd had', 'Dat hij beter wiskunde had kunnen studeren'], 1)),
+R(220, 'B1', 'Dos amigos y una discusión', """
+Pablo y yo somos amigos desde la escuela primaria. Siempre nos habíamos llevado bien, hasta que el año pasado discutimos por una tontería: él había olvidado mi cumpleaños y yo le dije cosas que no sentía. Él se ofendió, yo también, y durante cuatro meses no nos hablamos.
+Durante ese tiempo me di cuenta de lo mucho que lo echaba de menos. Varias veces quise llamarlo, pero el orgullo me lo impedía. Mi hermana, que es muy sensata, me dijo que si yo no daba el primer paso, quizá lo perdería para siempre.
+Al final le escribí un mensaje largo pidiéndole perdón. Me contestó en cinco minutos: él también se arrepentía y no sabía cómo acercarse. Hicimos las paces en el bar de siempre. Ahora, cuando uno de los dos se enfada, respiramos hondo y hablamos antes de que el malentendido crezca. Aprendimos que la amistad vale más que tener razón.
+""",
+  ('Waarom kregen de vrienden ruzie?', ['Over geld', 'Omdat Pablo de verjaardag vergat en de schrijver te harde dingen zei', 'Omdat ze voor verschillende clubs waren', 'Over een meisje'], 1),
+  ('Wat hield de schrijver tegen om te bellen?', ['Hij had geen telefoon', 'Zijn zus verbood het', 'Zijn trots', 'Hij was verhuisd'], 2),
+  ('Wat doen ze nu als een van beiden boos wordt?', ['Ze praten een maand niet', 'Ze halen diep adem en praten voordat het misverstand groeit', 'Ze bellen de zus', 'Ze schrijven lange berichten'], 1)),
+R(230, 'B1', 'El pueblo que recuperó su río', """
+Hace veinte años, el río que pasa por mi pueblo estaba prácticamente muerto. Una fábrica de papel vertía sus residuos sin control, el agua olía mal y hacía décadas que nadie se bañaba en él. Los mayores contaban que, de jóvenes, habían pescado truchas allí, pero a nosotros nos parecía una leyenda.
+Todo cambió cuando un grupo de vecinos, entre ellos mi madre, empezó a recoger firmas y a denunciar la situación. Al principio nadie les hacía caso. La fábrica daba trabajo a medio pueblo y muchos temían que cerrara si se endurecían las normas.
+Con el tiempo consiguieron que la empresa instalara una depuradora y que el ayuntamiento plantara árboles en las orillas. El agua tardó años en limpiarse, pero hoy el río vuelve a tener vida: hay garzas, nutrias y, sí, truchas. Cada verano los niños se bañan donde antes nadie se atrevía a acercarse. Si aquellos vecinos no hubieran insistido, el río seguiría siendo una cloaca.
+""",
+  ('Waarom was de rivier twintig jaar geleden bijna dood?', ['Door droogte', 'Door een papierfabriek die ongecontroleerd afval loosde', 'Door toeristen', 'Door een dam'], 1),
+  ('Waarom luisterde niemand aanvankelijk naar de buurtbewoners?', ['Ze hadden geen handtekeningen', 'De fabriek gaf werk aan het halve dorp en men vreesde sluiting', 'De burgemeester was op vakantie', 'Het water was al schoon'], 1),
+  ('Wat is er nu in de rivier te zien?', ['Alleen algen', 'Reigers, otters en forellen', 'Boten van de fabriek', 'Niets, hij is drooggevallen'], 1)),
+R(240, 'B1', 'Una noche de cine en versión original', """
+Durante años vi todas las películas dobladas al español. Me parecía lo normal: en España casi todo se dobla, y las voces de los actores de doblaje me resultaban tan familiares como las de mis amigos. Hasta que una amiga me arrastró a un pequeño cine del centro que solo proyecta películas en versión original subtitulada.
+La primera media hora fue incómoda. Leía los subtítulos tan deprisa que me perdía los gestos de los actores y, para colmo, el protagonista hablaba con un acento que me costaba entender. Pero poco a poco algo cambió: empecé a escuchar la música de la lengua, los silencios, la ironía que el doblaje a veces borra.
+Al salir, mi amiga me preguntó qué me había parecido. Le dije que, si me lo hubiera propuesto un año antes, habría dicho que no. Ahora voy casi todas las semanas. He descubierto que ver cine en versión original es también una forma de viajar: por un par de horas vives en otra lengua sin salir de tu ciudad.
+""",
+  ('Waarom keek de schrijver jarenlang nagesynchroniseerde films?', ['Omdat ondertitels verboden waren', 'Omdat dat in Spanje normaal is en de stemmen vertrouwd klonken', 'Omdat hij geen Engels sprak', 'Omdat de bioscoop goedkoper was'], 1),
+  ('Wat was moeilijk in het eerste halfuur?', ['De zaal was te koud', 'Hij las de ondertitels te snel en miste de gebaren; het accent was lastig', 'De film had geen geluid', 'Zijn vriendin praatte de hele tijd'], 1),
+  ('Hoe vaak gaat de schrijver nu naar die bioscoop?', ['Nooit meer', 'Een keer per jaar', 'Bijna elke week', 'Alleen met vakantie'], 2)),
 ]
 for r in READINGS:
-    n = len(r['text'].split()); lo, hi = {'A1': (35, 80), 'A2': (80, 140), 'B1': (110, 190)}[r['level']]; assert lo <= n <= hi, (r['id'], n)
+    n = len(r['text'].split()); lo, hi = {'A1': (35, 80), 'A2': (80, 140), 'B1': (110, 200)}[r['level']]; assert lo <= n <= hi, (r['id'], n)
     assert all(len(q['options']) == 4 and 0 <= q['answer'] < 4 for q in r['questions'])
 OUT.write_text(json.dumps(READINGS, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(f'{len(READINGS)} Spaanse leesteksten → {OUT.name}')

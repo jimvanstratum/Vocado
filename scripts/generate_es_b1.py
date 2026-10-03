@@ -3,7 +3,7 @@
 """
 generate_es_b1.py — Spaans B1 (v1.58: blok 1, lessen 121–180). Thema-opbouw gespiegeld aan Italiaans B1,
 met Spaanse grammatica (imperfecto/indefinido, condicional, subjuntivo, estilo indirecto, hipótesis).
-Voegt toe aan de bestaande Spaanse data (A1/A2 blijven; eerdere B1-entries worden vervangen).
+Voegt toe aan de bestaande Spaanse data (alleen les 121–180 wordt vervangen; blok 2/3 hebben eigen scripts).
 Draai opnieuw na bewerken: python3 scripts/generate_es_b1.py
 Formaat: L(id, emoji, title, description, grammar_title, grammar_body, [ (es, nl, ph, ex, exNl, cat) × 8 ])
 """
@@ -623,7 +623,7 @@ from collections import Counter
 assert [l['id'] for l in LESSONS] == list(range(121, 181)), 'les-IDs'
 vocab = json.load(open(OUT / 'vocabulary.json', encoding='utf-8'))
 curriculum = json.load(open(OUT / 'curriculum.json', encoding='utf-8'))
-vocab = [w for w in vocab if w['level'] != 'B1']; curriculum = [l for l in curriculum if l['level'] != 'B1']
+vocab = [w for w in vocab if not 121 <= w['lesson'] <= 180]; curriculum = [l for l in curriculum if not 121 <= l['id'] <= 180]   # alleen blok 1 vervangen
 ART = re.compile(r"^(?:(?:el|la|los|las|un|una|unos|unas)\s+)", re.I)
 norm = lambda s: ART.sub('', s.lower()).strip()
 existing = {norm(w['it']) for w in vocab}
