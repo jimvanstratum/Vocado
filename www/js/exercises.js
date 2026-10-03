@@ -8,7 +8,7 @@ import { speak, isTTSAvailable, getTTSRate } from './audio.js?v=10';
 import { updateWordState, qualityFromResult } from './srs.js?v=17';
 import { recordAnswer } from './progress.js?v=10';
 import { getLang } from './lang.js?v=1';
-import { ES_PRONOUNS, ES_TENSE_LABELS, esIsConjugatable, esCanUseTense, esConjugateAccepted } from './conjugation_es.js?v=1';
+import { ES_PRONOUNS, ES_TENSE_LABELS, esIsConjugatable, esCanUseTense, esConjugateAccepted, esPickTense } from './conjugation_es.js?v=2';
 
 // ─── Auto-advance timer (annuleerbaar via goBack) ─────────────────────────────
 let _pendingAdvanceTimer = null;
@@ -1718,9 +1718,9 @@ const IRREG_FUT_STEM = { essere: 'sar', avere: 'avr', andare: 'andr', fare: 'far
 function conjEngine() {
   return getLang().code === 'es'
     ? { pronouns: ES_PRONOUNS, labels: ES_TENSE_LABELS, is: esIsConjugatable, can: esCanUseTense,
-        accepted: esConjugateAccepted, aux: () => 'haber', passatoPronoun: p => ES_PRONOUNS[p] }
+        accepted: esConjugateAccepted, aux: () => 'haber', passatoPronoun: p => ES_PRONOUNS[p], pick: esPickTense }
     : { pronouns: PRONOUNS, labels: TENSE_LABELS, is: isConjugatable, can: canUseTense,
-        accepted: conjugateAccepted, aux: auxiliary, passatoPronoun: p => (p === 2 ? 'lui' : PRONOUNS[p]) };
+        accepted: conjugateAccepted, aux: auxiliary, passatoPronoun: p => (p === 2 ? 'lui' : PRONOUNS[p]), pick: null };
 }
 
 /** Is dit woord een enkelvoudige infinitief die de (Italiaanse) motor aankan? */
@@ -1785,6 +1785,8 @@ export function conjugate(inf, p, tense = 'presente') {
 }
 
 function pickTense(word) {
+  const E = conjEngine();
+  if (E.pick) { const t = E.pick(word); return E.can(word.it, t) ? t : 'presente'; }
   const r = Math.random();
   let tense = 'presente';
   if (word.level === 'A2') {

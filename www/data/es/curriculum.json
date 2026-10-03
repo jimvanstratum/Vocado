@@ -2520,5 +2520,1265 @@
       "e961",
       "e962"
     ]
+  },
+  {
+    "id": 121,
+    "title": "Imperfecto — verdieping",
+    "emoji": "⏳",
+    "level": "B1",
+    "description": "Het verleden beschrijven: achtergrond, gewoontes en herinneringen.",
+    "grammar": {
+      "title": "Imperfecto: gebruik in verhalen",
+      "body": "Het imperfecto schetst de achtergrond: Era de noche y llovía. Gewoontes: Cuando era niño, solía jugar en la calle. Beschrijvingen: Mi abuela tenía el pelo blanco."
+    },
+    "words": [
+      "e963",
+      "e964",
+      "e965",
+      "e966",
+      "e967",
+      "e968",
+      "e969",
+      "e970"
+    ]
+  },
+  {
+    "id": 122,
+    "title": "Indefinido — onregelmatig",
+    "emoji": "🔀",
+    "level": "B1",
+    "description": "De sterke verleden tijden: tuve, hice, dije, traduje.",
+    "grammar": {
+      "title": "Onregelmatige pretérito indefinido",
+      "body": "Sterke stammen zonder accent: tuve, estuve, pude, puse, supe, hice, quise, vine, dije, traje. Uitgangen: -e, -iste, -o, -imos, -isteis, -ieron (na j: dijeron, tradujeron)."
+    },
+    "words": [
+      "e971",
+      "e972",
+      "e973",
+      "e974",
+      "e975",
+      "e976",
+      "e977",
+      "e978"
+    ]
+  },
+  {
+    "id": 123,
+    "title": "Imperfecto vs. indefinido",
+    "emoji": "⚖️",
+    "level": "B1",
+    "description": "Achtergrond tegenover gebeurtenis.",
+    "grammar": {
+      "title": "Imperfecto vs. indefinido",
+      "body": "Imperfecto = achtergrond, gewoonte, beschrijving; indefinido = afgeronde gebeurtenis. Dormía cuando sonó el teléfono (ik sliep toen de telefoon ging)."
+    },
+    "words": [
+      "e979",
+      "e980",
+      "e981",
+      "e982",
+      "e983",
+      "e984",
+      "e985",
+      "e986"
+    ]
+  },
+  {
+    "id": 124,
+    "title": "Herinneringen",
+    "emoji": "💭",
+    "level": "B1",
+    "description": "Vertellen over vroeger.",
+    "grammar": {
+      "title": "Herinneringen vertellen met het imperfecto",
+      "body": "Me acuerdo de que... (ik herinner me dat). En aquella época (in die tijd). Solíamos ir a la playa (we gingen altijd naar het strand)."
+    },
+    "words": [
+      "e987",
+      "e988",
+      "e989",
+      "e990",
+      "e991",
+      "e992",
+      "e993",
+      "e994"
+    ]
+  },
+  {
+    "id": 125,
+    "title": "Gewoontes vroeger",
+    "emoji": "🔄",
+    "level": "B1",
+    "description": "Wat je vroeger altijd deed.",
+    "grammar": {
+      "title": "Gewoontes beschrijven: soler + infinitief",
+      "body": "Solía levantarme temprano (ik stond altijd vroeg op). De vez en cuando (af en toe), a diario (dagelijks), casi nunca."
+    },
+    "words": [
+      "e995",
+      "e996",
+      "e997",
+      "e998",
+      "e999",
+      "e1000",
+      "e1001",
+      "e1002"
+    ]
+  },
+  {
+    "id": 126,
+    "title": "Verhalen vertellen — deel 1",
+    "emoji": "📖",
+    "level": "B1",
+    "description": "Een verhaal opbouwen.",
+    "grammar": {
+      "title": "Vertelstructuur",
+      "body": "Érase una vez (er was eens). La historia tiene lugar en (speelt zich af in). El protagonista (de hoofdpersoon). Al principio... luego... al final."
+    },
+    "words": [
+      "e1003",
+      "e1004",
+      "e1005",
+      "e1006",
+      "e1007",
+      "e1008",
+      "e1009",
+      "e1010"
+    ]
+  },
+  {
+    "id": 127,
+    "title": "Verhalen vertellen — deel 2",
+    "emoji": "📚",
+    "level": "B1",
+    "description": "Verbindingswoorden in verhalen.",
+    "grammar": {
+      "title": "Verbindingswoorden in verhalen",
+      "body": "Luego / después (daarna), a continuación (vervolgens), finalmente (uiteindelijk), por suerte (gelukkig), sin embargo (echter)."
+    },
+    "words": [
+      "e1011",
+      "e1012",
+      "e1013",
+      "e1014",
+      "e1015",
+      "e1016",
+      "e1017",
+      "e1018"
+    ]
+  },
+  {
+    "id": 128,
+    "title": "Het weer beschrijven",
+    "emoji": "🌦️",
+    "level": "B1",
+    "description": "Het weer in verhalen en voorspellingen.",
+    "grammar": {
+      "title": "Weer in verschillende tijden",
+      "body": "Llovía (het regende), llovió (het heeft geregend), lloverá (het zal regenen). Hacía frío, hubo tormenta, habrá niebla."
+    },
+    "words": [
+      "e1019",
+      "e1020",
+      "e1021",
+      "e1022",
+      "e1023",
+      "e1024",
+      "e1025",
+      "e1026"
+    ]
+  },
+  {
+    "id": 129,
+    "title": "Emoties in het verleden",
+    "emoji": "😢",
+    "level": "B1",
+    "description": "Gevoelens beschrijven in het imperfecto.",
+    "grammar": {
+      "title": "Emoties met het imperfecto",
+      "body": "Estaba nervioso (ik was nerveus), tenía miedo (ik was bang), me sentía aliviado. Voor een plotselinge emotie het indefinido: me alegré mucho."
+    },
+    "words": [
+      "e1027",
+      "e1028",
+      "e1029",
+      "e1030",
+      "e1031",
+      "e1032",
+      "e1033",
+      "e1034"
+    ]
+  },
+  {
+    "id": 130,
+    "title": "Toetsles — Blok 1",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Samenvatting van blok 1.",
+    "grammar": {
+      "title": "Samenvatting Blok 1",
+      "body": "Je kent nu het verschil tussen imperfecto en indefinido en de belangrijkste onregelmatige vormen. In de toets: 20 woorden uit lessen 121–129."
+    },
+    "words": [
+      "e1035",
+      "e1036",
+      "e1037",
+      "e1038",
+      "e1039",
+      "e1040",
+      "e1041",
+      "e1042"
+    ]
+  },
+  {
+    "id": 131,
+    "title": "Condicional — regelmatig",
+    "emoji": "🌟",
+    "level": "B1",
+    "description": "De zou-vorm: wensen en beleefdheid.",
+    "grammar": {
+      "title": "Condicional simple: vorming",
+      "body": "Infinitief + -ía, -ías, -ía, -íamos, -íais, -ían: hablaría, comería, viviría. Gebruik: wensen (me gustaría), beleefdheid (¿podría?), advies (yo que tú, iría)."
+    },
+    "words": [
+      "e1043",
+      "e1044",
+      "e1045",
+      "e1046",
+      "e1047",
+      "e1048",
+      "e1049",
+      "e1050"
+    ]
+  },
+  {
+    "id": 132,
+    "title": "Condicional — onregelmatig",
+    "emoji": "✨",
+    "level": "B1",
+    "description": "Onregelmatige stammen: tendría, haría, podría.",
+    "grammar": {
+      "title": "Onregelmatige condicional",
+      "body": "Dezelfde stammen als het futuro: tendr-, har-, podr-, pondr-, saldr-, vendr-, dir-, sabr-, querr-, habr-, cabr-, valdr-. Podría ayudarte (ik zou je kunnen helpen)."
+    },
+    "words": [
+      "e1051",
+      "e1052",
+      "e1053",
+      "e1054",
+      "e1055",
+      "e1056",
+      "e1057",
+      "e1058"
+    ]
+  },
+  {
+    "id": 133,
+    "title": "Beleefd verzoeken",
+    "emoji": "🎩",
+    "level": "B1",
+    "description": "Iets vragen zonder bot te zijn.",
+    "grammar": {
+      "title": "Beleefde verzoeken",
+      "body": "¿Podría...? ¿Le importaría...? (Zou u het erg vinden om...?) ¿Me haría el favor de...? Altijd met usted tegen onbekenden."
+    },
+    "words": [
+      "e1059",
+      "e1060",
+      "e1061",
+      "e1062",
+      "e1063",
+      "e1064",
+      "e1065",
+      "e1066"
+    ]
+  },
+  {
+    "id": 134,
+    "title": "Wensen & dromen",
+    "emoji": "🌈",
+    "level": "B1",
+    "description": "Dromen en verlangens uitdrukken.",
+    "grammar": {
+      "title": "Wensen uitdrukken",
+      "body": "Me gustaría + infinitief (ik zou graag willen). Ojalá + subjuntivo (was het maar zo). Sueño con (ik droom van). Llegar a ser (worden)."
+    },
+    "words": [
+      "e1067",
+      "e1068",
+      "e1069",
+      "e1070",
+      "e1071",
+      "e1072",
+      "e1073",
+      "e1074"
+    ]
+  },
+  {
+    "id": 135,
+    "title": "Advies geven",
+    "emoji": "💡",
+    "level": "B1",
+    "description": "Raad geven met de condicional.",
+    "grammar": {
+      "title": "Advies met de condicional",
+      "body": "Yo que tú / en tu lugar + condicional: Yo que tú, aceptaría. Deberías (je zou moeten). Te aconsejo que + subjuntivo komt in les 141."
+    },
+    "words": [
+      "e1075",
+      "e1076",
+      "e1077",
+      "e1078",
+      "e1079",
+      "e1080",
+      "e1081",
+      "e1082"
+    ]
+  },
+  {
+    "id": 136,
+    "title": "Op restaurant",
+    "emoji": "🍽️",
+    "level": "B1",
+    "description": "Beleefd bestellen en betalen.",
+    "grammar": {
+      "title": "Beleefde restauranttaal",
+      "body": "Quisiéramos una mesa para cuatro. ¿Nos podría traer la carta de vinos? ¿Está incluido el servicio? La propina no es obligatoria en España."
+    },
+    "words": [
+      "e1083",
+      "e1084",
+      "e1085",
+      "e1086",
+      "e1087",
+      "e1088",
+      "e1089",
+      "e1090"
+    ]
+  },
+  {
+    "id": 137,
+    "title": "Reisplannen maken",
+    "emoji": "✈️",
+    "level": "B1",
+    "description": "Een reis plannen en bespreken.",
+    "grammar": {
+      "title": "Reisplannen bespreken",
+      "body": "Iríamos en barco (we zouden per boot gaan). Habría que reservar con antelación. ¿Qué ruta seguiríais? Me encantaría hacer un crucero."
+    },
+    "words": [
+      "e1091",
+      "e1092",
+      "e1093",
+      "e1094",
+      "e1095",
+      "e1096",
+      "e1097",
+      "e1098"
+    ]
+  },
+  {
+    "id": 138,
+    "title": "Accommodatie",
+    "emoji": "🏨",
+    "level": "B1",
+    "description": "Kamers, klachten en wensen in het hotel.",
+    "grammar": {
+      "title": "In het hotel",
+      "body": "¿Tendrían una habitación con vistas al mar? ¿El desayuno está incluido? Quisiera presentar una queja (een klacht indienen)."
+    },
+    "words": [
+      "e1099",
+      "e1100",
+      "e1101",
+      "e1102",
+      "e1103",
+      "e1104",
+      "e1105",
+      "e1106"
+    ]
+  },
+  {
+    "id": 139,
+    "title": "Vervoer & richting",
+    "emoji": "🚆",
+    "level": "B1",
+    "description": "Onderweg met de auto en het openbaar vervoer.",
+    "grammar": {
+      "title": "Vervoer en richting",
+      "body": "Gire en la rotonda (neem de rotonde), coja la autopista, adelante con cuidado (haal voorzichtig in). Despacio (langzaam)."
+    },
+    "words": [
+      "e1107",
+      "e1108",
+      "e1109",
+      "e1110",
+      "e1111",
+      "e1112",
+      "e1113",
+      "e1114"
+    ]
+  },
+  {
+    "id": 140,
+    "title": "Toetsles — Blok 2",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Samenvatting van blok 2.",
+    "grammar": {
+      "title": "Samenvatting Blok 2",
+      "body": "Je kent nu de condicional, regelmatig en onregelmatig, en gebruikt hem voor wensen, beleefdheid en advies. In de toets: 20 woorden uit lessen 131–139."
+    },
+    "words": [
+      "e1115",
+      "e1116",
+      "e1117",
+      "e1118",
+      "e1119",
+      "e1120",
+      "e1121",
+      "e1122"
+    ]
+  },
+  {
+    "id": 141,
+    "title": "Subjuntivo — introductie",
+    "emoji": "🧠",
+    "level": "B1",
+    "description": "De aanvoegende wijs na twijfel, wens en noodzaak.",
+    "grammar": {
+      "title": "Subjuntivo presente: introductie",
+      "body": "Vorming: yo-stam + tegengestelde uitgang: hablar → hable, comer → coma, vivir → viva. Na: quiero que, es necesario que, dudo que, es posible que. No creo que sea verdad."
+    },
+    "words": [
+      "e1123",
+      "e1124",
+      "e1125",
+      "e1126",
+      "e1127",
+      "e1128",
+      "e1129",
+      "e1130"
+    ]
+  },
+  {
+    "id": 142,
+    "title": "Subjuntivo — onregelmatig",
+    "emoji": "🔮",
+    "level": "B1",
+    "description": "Onregelmatige vormen en voegwoorden die de subjuntivo eisen.",
+    "grammar": {
+      "title": "Onregelmatige subjuntivo",
+      "body": "Sea (ser), esté (estar), vaya (ir), haya (haber), sepa (saber), dé (dar), tenga, haga, ponga, venga, diga. Na: para que, antes de que, a menos que, con tal de que, aunque."
+    },
+    "words": [
+      "e1131",
+      "e1132",
+      "e1133",
+      "e1134",
+      "e1135",
+      "e1136",
+      "e1137",
+      "e1138"
+    ]
+  },
+  {
+    "id": 143,
+    "title": "Meningen geven",
+    "emoji": "💬",
+    "level": "B1",
+    "description": "Meningen met en zonder subjuntivo.",
+    "grammar": {
+      "title": "Meningen met subjuntivo",
+      "body": "Creo que + indicativo (creo que tiene razón), no creo que + subjuntivo (no creo que tenga razón). Me parece que / no me parece que werkt hetzelfde."
+    },
+    "words": [
+      "e1139",
+      "e1140",
+      "e1141",
+      "e1142",
+      "e1143",
+      "e1144",
+      "e1145",
+      "e1146"
+    ]
+  },
+  {
+    "id": 144,
+    "title": "Emoties & subjuntivo",
+    "emoji": "❤️",
+    "level": "B1",
+    "description": "Gevoelens over wat een ander doet.",
+    "grammar": {
+      "title": "Emoties + subjuntivo",
+      "body": "Me alegro de que vengas (ik ben blij dat je komt). Siento que estés enfermo. Me molesta que grites. Es una pena que no puedas venir."
+    },
+    "words": [
+      "e1147",
+      "e1148",
+      "e1149",
+      "e1150",
+      "e1151",
+      "e1152",
+      "e1153",
+      "e1154"
+    ]
+  },
+  {
+    "id": 145,
+    "title": "Werk & solliciteren",
+    "emoji": "💼",
+    "level": "B1",
+    "description": "Solliciteren en loopbaan.",
+    "grammar": {
+      "title": "Werktaal",
+      "body": "Solicitar un puesto (een functie aanvragen), el candidato ideal, tener experiencia en, despedir (ontslaan), el salario (het salaris)."
+    },
+    "words": [
+      "e1155",
+      "e1156",
+      "e1157",
+      "e1158",
+      "e1159",
+      "e1160",
+      "e1161",
+      "e1162"
+    ]
+  },
+  {
+    "id": 146,
+    "title": "Op kantoor",
+    "emoji": "🖥️",
+    "level": "B1",
+    "description": "Kantoor- en vergadertaal.",
+    "grammar": {
+      "title": "Kantoor- en vergadertaal",
+      "body": "Tenemos una reunión a las diez. ¿Me envías el informe? La fecha límite es el viernes. Hay que hacer una presentación."
+    },
+    "words": [
+      "e1163",
+      "e1164",
+      "e1165",
+      "e1166",
+      "e1167",
+      "e1168",
+      "e1169",
+      "e1170"
+    ]
+  },
+  {
+    "id": 147,
+    "title": "Beroepen & vaardigheden",
+    "emoji": "👷",
+    "level": "B1",
+    "description": "Over beroepen en competenties praten.",
+    "grammar": {
+      "title": "Beroepen en vaardigheden",
+      "body": "Ser competente en, tener habilidad para, estar cualificado para. El contable, el arquitecto, el fontanero, el electricista."
+    },
+    "words": [
+      "e1171",
+      "e1172",
+      "e1173",
+      "e1174",
+      "e1175",
+      "e1176",
+      "e1177",
+      "e1178"
+    ]
+  },
+  {
+    "id": 148,
+    "title": "Discussiëren",
+    "emoji": "🗣️",
+    "level": "B1",
+    "description": "Argumenteren en tegenspreken.",
+    "grammar": {
+      "title": "Discussietaal",
+      "body": "Por un lado... por otro lado (enerzijds... anderzijds). En primer lugar, además, en conclusión. Admito que, pero... No exageres."
+    },
+    "words": [
+      "e1179",
+      "e1180",
+      "e1181",
+      "e1182",
+      "e1183",
+      "e1184",
+      "e1185",
+      "e1186"
+    ]
+  },
+  {
+    "id": 149,
+    "title": "Gevoelens uitdrukken",
+    "emoji": "🎭",
+    "level": "B1",
+    "description": "Stemming en karakter beschrijven.",
+    "grammar": {
+      "title": "Gevoelens en gemoedstoestand",
+      "body": "Estar de buen / mal humor. Tener paciencia, tener valor. Soportar (verdragen), quejarse de (klagen over)."
+    },
+    "words": [
+      "e1187",
+      "e1188",
+      "e1189",
+      "e1190",
+      "e1191",
+      "e1192",
+      "e1193",
+      "e1194"
+    ]
+  },
+  {
+    "id": 150,
+    "title": "Toetsles — Blok 3",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Samenvatting van blok 3.",
+    "grammar": {
+      "title": "Samenvatting Blok 3",
+      "body": "Je kent de subjuntivo presente na twijfel, wens, emotie en voegwoorden als para que en antes de que. In de toets: 20 woorden uit lessen 141–149."
+    },
+    "words": [
+      "e1195",
+      "e1196",
+      "e1197",
+      "e1198",
+      "e1199",
+      "e1200",
+      "e1201",
+      "e1202"
+    ]
+  },
+  {
+    "id": 151,
+    "title": "Pronombres combinados",
+    "emoji": "🔗",
+    "level": "B1",
+    "description": "Twee voornaamwoorden tegelijk: se lo, me la.",
+    "grammar": {
+      "title": "Gecombineerde voornaamwoorden",
+      "body": "Indirect + direct: me lo, te la, nos los. \"Le/les\" + lo/la wordt \"se\": Se lo di (ik gaf het hem). Aan een infinitief plakken: quiero dártelo."
+    },
+    "words": [
+      "e1203",
+      "e1204",
+      "e1205",
+      "e1206",
+      "e1207",
+      "e1208",
+      "e1209",
+      "e1210"
+    ]
+  },
+  {
+    "id": 152,
+    "title": "Pronombres — oefening",
+    "emoji": "🎯",
+    "level": "B1",
+    "description": "Nog meer werkwoorden met twee voornaamwoorden.",
+    "grammar": {
+      "title": "Gecombineerde voornaamwoorden in de praktijk",
+      "body": "Bij gebiedende wijs achteraan: dámelo (geef het mij), tráemela. Bij ontkenning ervoor: no me lo des."
+    },
+    "words": [
+      "e1211",
+      "e1212",
+      "e1213",
+      "e1214",
+      "e1215",
+      "e1216",
+      "e1217",
+      "e1218"
+    ]
+  },
+  {
+    "id": 153,
+    "title": "Passieve vorm",
+    "emoji": "🔄",
+    "level": "B1",
+    "description": "De lijdende vorm en de pasiva refleja.",
+    "grammar": {
+      "title": "De passieve vorm",
+      "body": "Ser + participio: El puente fue construido en 1920 (het deelwoord past zich aan). Vaker de pasiva refleja: Se construyó el puente en 1920. Se venden pisos."
+    },
+    "words": [
+      "e1219",
+      "e1220",
+      "e1221",
+      "e1222",
+      "e1223",
+      "e1224",
+      "e1225",
+      "e1226"
+    ]
+  },
+  {
+    "id": 154,
+    "title": "Bij de dokter",
+    "emoji": "🏥",
+    "level": "B1",
+    "description": "Medische gesprekken.",
+    "grammar": {
+      "title": "Medische taal",
+      "body": "¿Qué le pasa? Me duele... desde hace... El médico receta un tratamiento. Es grave / no es grave. Hay que hacer pruebas."
+    },
+    "words": [
+      "e1227",
+      "e1228",
+      "e1229",
+      "e1230",
+      "e1231",
+      "e1232",
+      "e1233",
+      "e1234"
+    ]
+  },
+  {
+    "id": 155,
+    "title": "Gezondheid & welzijn",
+    "emoji": "🧘",
+    "level": "B1",
+    "description": "Gezond leven en advies.",
+    "grammar": {
+      "title": "Gezondheidsadvies",
+      "body": "Es importante que duermas bien (subjuntivo na advies). Te recomiendo que hagas ejercicio. Una dieta equilibrada, el peso ideal."
+    },
+    "words": [
+      "e1235",
+      "e1236",
+      "e1237",
+      "e1238",
+      "e1239",
+      "e1240",
+      "e1241",
+      "e1242"
+    ]
+  },
+  {
+    "id": 156,
+    "title": "Het lichaam",
+    "emoji": "🦴",
+    "level": "B1",
+    "description": "Meer lichaamsdelen.",
+    "grammar": {
+      "title": "Lichaamsdelen en beschrijvingen",
+      "body": "Me duele el hombro. Me he torcido el tobillo (ik heb mijn enkel verzwikt). Tengo la piel seca. Los pulmones, el hígado, el corazón."
+    },
+    "words": [
+      "e1243",
+      "e1244",
+      "e1245",
+      "e1246",
+      "e1247",
+      "e1248",
+      "e1249",
+      "e1250"
+    ]
+  },
+  {
+    "id": 157,
+    "title": "Sport & beweging",
+    "emoji": "⚽",
+    "level": "B1",
+    "description": "Over sport praten.",
+    "grammar": {
+      "title": "Over sport praten",
+      "body": "Empatar (gelijkspelen), el campeón, el entrenamiento (de training). El árbitro pitó falta. Los hinchas animan al equipo."
+    },
+    "words": [
+      "e1251",
+      "e1252",
+      "e1253",
+      "e1254",
+      "e1255",
+      "e1256",
+      "e1257",
+      "e1258"
+    ]
+  },
+  {
+    "id": 158,
+    "title": "Voeding & koken",
+    "emoji": "🍳",
+    "level": "B1",
+    "description": "Kooktaal en voedsel.",
+    "grammar": {
+      "title": "Kooktaal",
+      "body": "Cocer a fuego lento (op laag vuur koken), añadir una pizca de sal (een snufje zout). Está crudo / hecho / quemado."
+    },
+    "words": [
+      "e1259",
+      "e1260",
+      "e1261",
+      "e1262",
+      "e1263",
+      "e1264",
+      "e1265",
+      "e1266"
+    ]
+  },
+  {
+    "id": 159,
+    "title": "Milieu & natuur",
+    "emoji": "🌍",
+    "level": "B1",
+    "description": "Milieuproblemen bespreken.",
+    "grammar": {
+      "title": "Milieutaal",
+      "body": "El calentamiento global, el desperdicio de alimentos, las energías renovables. Es urgente que reduzcamos las emisiones (subjuntivo)."
+    },
+    "words": [
+      "e1267",
+      "e1268",
+      "e1269",
+      "e1270",
+      "e1271",
+      "e1272",
+      "e1273",
+      "e1274"
+    ]
+  },
+  {
+    "id": 160,
+    "title": "Toetsles — Blok 4",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Samenvatting van blok 4.",
+    "grammar": {
+      "title": "Samenvatting Blok 4",
+      "body": "Je kent de gecombineerde voornaamwoorden, de passieve vorm en de woordenschat rond gezondheid, sport en milieu. In de toets: 20 woorden uit lessen 151–159."
+    },
+    "words": [
+      "e1275",
+      "e1276",
+      "e1277",
+      "e1278",
+      "e1279",
+      "e1280",
+      "e1281",
+      "e1282"
+    ]
+  },
+  {
+    "id": 161,
+    "title": "Estar + gerundio",
+    "emoji": "🔄",
+    "level": "B1",
+    "description": "Wat er nu aan de hand is.",
+    "grammar": {
+      "title": "Estar + gerundio (progressief)",
+      "body": "Estoy hablando (ik ben aan het praten). Gerundio: -ando / -iendo; onregelmatig: leyendo, durmiendo, diciendo, pidiendo, yendo. Ook in het verleden: estaba comiendo."
+    },
+    "words": [
+      "e1283",
+      "e1284",
+      "e1285",
+      "e1286",
+      "e1287",
+      "e1288",
+      "e1289",
+      "e1290"
+    ]
+  },
+  {
+    "id": 162,
+    "title": "Bijzinnen — oorzaak & reden",
+    "emoji": "🔗",
+    "level": "B1",
+    "description": "Redenen geven.",
+    "grammar": {
+      "title": "Causale bijzinnen",
+      "body": "Porque (omdat), ya que / puesto que (aangezien), como (aangezien, aan het begin), debido a (vanwege), por lo tanto (dus), por eso (daarom)."
+    },
+    "words": [
+      "e1291",
+      "e1292",
+      "e1293",
+      "e1294",
+      "e1295",
+      "e1296",
+      "e1297",
+      "e1298"
+    ]
+  },
+  {
+    "id": 163,
+    "title": "Bijzinnen — tegenstelling",
+    "emoji": "↔️",
+    "level": "B1",
+    "description": "Tegenstellingen uitdrukken.",
+    "grammar": {
+      "title": "Concessieve bijzinnen",
+      "body": "Aunque + indicativo (feit) of + subjuntivo (mogelijkheid). A pesar de + zelfstandig naamwoord. Ni siquiera (zelfs niet). Más bien (eerder)."
+    },
+    "words": [
+      "e1299",
+      "e1300",
+      "e1301",
+      "e1302",
+      "e1303",
+      "e1304",
+      "e1305",
+      "e1306"
+    ]
+  },
+  {
+    "id": 164,
+    "title": "Bijzinnen — tijd",
+    "emoji": "⏰",
+    "level": "B1",
+    "description": "Tijdsrelaties tussen gebeurtenissen.",
+    "grammar": {
+      "title": "Temporele bijzinnen",
+      "body": "Antes de que + subjuntivo, después de que, en cuanto (zodra), hasta que (totdat), cada vez que (telkens wanneer). Bij toekomst altijd subjuntivo: cuando llegues."
+    },
+    "words": [
+      "e1307",
+      "e1308",
+      "e1309",
+      "e1310",
+      "e1311",
+      "e1312",
+      "e1313",
+      "e1314"
+    ]
+  },
+  {
+    "id": 165,
+    "title": "Estilo indirecto — basis",
+    "emoji": "🗨️",
+    "level": "B1",
+    "description": "Doorvertellen wat iemand zei.",
+    "grammar": {
+      "title": "Indirecte rede",
+      "body": "Dijo que + tijdverschuiving: presente → imperfecto (dijo que estaba cansado), indefinido → pluscuamperfecto (dijo que había llegado), futuro → condicional (dijo que vendría)."
+    },
+    "words": [
+      "e1315",
+      "e1316",
+      "e1317",
+      "e1318",
+      "e1319",
+      "e1320",
+      "e1321",
+      "e1322"
+    ]
+  },
+  {
+    "id": 166,
+    "title": "Estilo indirecto — vragen",
+    "emoji": "❓",
+    "level": "B1",
+    "description": "Vragen doorvertellen.",
+    "grammar": {
+      "title": "Indirecte vragen",
+      "body": "Me preguntó si venía (of ik kwam). Me preguntó dónde vivía / cuándo llegaría. Quería saber qué hacía."
+    },
+    "words": [
+      "e1323",
+      "e1324",
+      "e1325",
+      "e1326",
+      "e1327",
+      "e1328",
+      "e1329",
+      "e1330"
+    ]
+  },
+  {
+    "id": 167,
+    "title": "Technologie & internet",
+    "emoji": "💻",
+    "level": "B1",
+    "description": "Digitale woordenschat.",
+    "grammar": {
+      "title": "Digitale woordenschat",
+      "body": "El cargador (de oplader), el dispositivo (het apparaat), hacer clic (klikken), conectarse a la red. Se me ha colgado el ordenador (mijn computer is vastgelopen)."
+    },
+    "words": [
+      "e1331",
+      "e1332",
+      "e1333",
+      "e1334",
+      "e1335",
+      "e1336",
+      "e1337",
+      "e1338"
+    ]
+  },
+  {
+    "id": 168,
+    "title": "Sociale media",
+    "emoji": "📱",
+    "level": "B1",
+    "description": "Praten over online leven.",
+    "grammar": {
+      "title": "Sociale mediataal",
+      "body": "Publicar (posten), borrar (verwijderen), el contenido, la privacidad. Me etiquetaron en una foto (ze hebben me getagd)."
+    },
+    "words": [
+      "e1339",
+      "e1340",
+      "e1341",
+      "e1342",
+      "e1343",
+      "e1344",
+      "e1345",
+      "e1346"
+    ]
+  },
+  {
+    "id": 169,
+    "title": "Film, boeken & muziek",
+    "emoji": "🎬",
+    "level": "B1",
+    "description": "Over entertainment praten.",
+    "grammar": {
+      "title": "Over entertainment praten",
+      "body": "El género (het genre), la comedia, la novela policíaca (detective). Trata de (gaat over). Me engancha (het grijpt me)."
+    },
+    "words": [
+      "e1347",
+      "e1348",
+      "e1349",
+      "e1350",
+      "e1351",
+      "e1352",
+      "e1353",
+      "e1354"
+    ]
+  },
+  {
+    "id": 170,
+    "title": "Toetsles — Blok 5",
+    "emoji": "📝",
+    "level": "B1",
+    "description": "Samenvatting van blok 5.",
+    "grammar": {
+      "title": "Samenvatting Blok 5",
+      "body": "Je kent estar + gerundio, de bijzinnen van oorzaak, tegenstelling en tijd, en de indirecte rede. In de toets: 20 woorden uit lessen 161–169."
+    },
+    "words": [
+      "e1355",
+      "e1356",
+      "e1357",
+      "e1358",
+      "e1359",
+      "e1360",
+      "e1361",
+      "e1362"
+    ]
+  },
+  {
+    "id": 171,
+    "title": "Vergelijkingen",
+    "emoji": "📊",
+    "level": "B1",
+    "description": "Vergelijken op B1-niveau.",
+    "grammar": {
+      "title": "Comparativo",
+      "body": "Mayor/menor (ouder/jonger, groter/kleiner), superior/inferior, igual que (gelijk aan), diferente de (anders dan). Cuanto más..., más... (hoe meer..., hoe meer...)."
+    },
+    "words": [
+      "e1363",
+      "e1364",
+      "e1365",
+      "e1366",
+      "e1367",
+      "e1368",
+      "e1369",
+      "e1370"
+    ]
+  },
+  {
+    "id": 172,
+    "title": "Superlatieven",
+    "emoji": "🏆",
+    "level": "B1",
+    "description": "De overtreffende trap en -ísimo.",
+    "grammar": {
+      "title": "Superlativo relativo en absoluto",
+      "body": "Relatief: el más alto de la clase. Absoluut: altísimo, buenísimo, rapidísimo. Onregelmatig: óptimo, pésimo, máximo, mínimo."
+    },
+    "words": [
+      "e1371",
+      "e1372",
+      "e1373",
+      "e1374",
+      "e1375",
+      "e1376",
+      "e1377",
+      "e1378"
+    ]
+  },
+  {
+    "id": 173,
+    "title": "Hypothese — type 1",
+    "emoji": "🔮",
+    "level": "B1",
+    "description": "Reële voorwaarden: si + presente.",
+    "grammar": {
+      "title": "Voorwaardelijke zin type 1 (reëel)",
+      "body": "Si + presente, presente/futuro: Si llueve, no salimos. Si tengo tiempo, te llamaré. Nooit futuro na \"si\"."
+    },
+    "words": [
+      "e1379",
+      "e1380",
+      "e1381",
+      "e1382",
+      "e1383",
+      "e1384",
+      "e1385",
+      "e1386"
+    ]
+  },
+  {
+    "id": 174,
+    "title": "Hypothese — type 2",
+    "emoji": "💫",
+    "level": "B1",
+    "description": "Irreële voorwaarden: si + imperfecto de subjuntivo.",
+    "grammar": {
+      "title": "Voorwaardelijke zin type 2 (irreëel)",
+      "body": "Si + imperfecto de subjuntivo, condicional: Si tuviera dinero, viajaría. Vorming: indefinido ellos (tuvieron) → tuviera, tuvieras, tuviera, tuviéramos, tuvierais, tuvieran."
+    },
+    "words": [
+      "e1387",
+      "e1388",
+      "e1389",
+      "e1390",
+      "e1391",
+      "e1392",
+      "e1393",
+      "e1394"
+    ]
+  },
+  {
+    "id": 175,
+    "title": "Formeel & informeel",
+    "emoji": "👔",
+    "level": "B1",
+    "description": "Register: tú, usted en beleefdheid.",
+    "grammar": {
+      "title": "Register: formeel vs. informeel",
+      "body": "Tutear (je zeggen) vs. tratar de usted (u zeggen). In Spanje is \"tú\" gebruikelijk, ook op het werk; \"usted\" bij ouderen, klanten en officiële situaties."
+    },
+    "words": [
+      "e1395",
+      "e1396",
+      "e1397",
+      "e1398",
+      "e1399",
+      "e1400",
+      "e1401",
+      "e1402"
+    ]
+  },
+  {
+    "id": 176,
+    "title": "Spaanse regio's",
+    "emoji": "🗺️",
+    "level": "B1",
+    "description": "De geografie van Spanje.",
+    "grammar": {
+      "title": "Spaanse geografie",
+      "body": "España tiene diecisiete comunidades autónomas. Cada una tiene su capital, y algunas su propia lengua: catalán, gallego, euskera."
+    },
+    "words": [
+      "e1403",
+      "e1404",
+      "e1405",
+      "e1406",
+      "e1407",
+      "e1408",
+      "e1409",
+      "e1410"
+    ]
+  },
+  {
+    "id": 177,
+    "title": "Spaanse keuken verdieping",
+    "emoji": "🍝",
+    "level": "B1",
+    "description": "Regionale specialiteiten.",
+    "grammar": {
+      "title": "Regionale keuken",
+      "body": "La especialidad de la casa. El aceite de oliva virgen extra. El jamón ibérico, el pulpo a la gallega, la fabada asturiana."
+    },
+    "words": [
+      "e1411",
+      "e1412",
+      "e1413",
+      "e1414",
+      "e1415",
+      "e1416",
+      "e1417",
+      "e1418"
+    ]
+  },
+  {
+    "id": 178,
+    "title": "Cultuur & etiquette",
+    "emoji": "🤝",
+    "level": "B1",
+    "description": "Omgangsvormen in Spanje.",
+    "grammar": {
+      "title": "Spaanse etiquette",
+      "body": "Dos besos al saludar (twee kussen bij het begroeten). Llegar un poco tarde es normal. Se come tarde. Ser hospitalario (gastvrij)."
+    },
+    "words": [
+      "e1419",
+      "e1420",
+      "e1421",
+      "e1422",
+      "e1423",
+      "e1424",
+      "e1425",
+      "e1426"
+    ]
+  },
+  {
+    "id": 179,
+    "title": "Toekomstplannen",
+    "emoji": "🚀",
+    "level": "B1",
+    "description": "Over je doelen praten.",
+    "grammar": {
+      "title": "Over de toekomst praten",
+      "body": "Tengo la intención de (ik ben van plan), mi objetivo es, me propongo (ik neem me voor). Con determinación y constancia (met vastberadenheid en volharding)."
+    },
+    "words": [
+      "e1427",
+      "e1428",
+      "e1429",
+      "e1430",
+      "e1431",
+      "e1432",
+      "e1433",
+      "e1434"
+    ]
+  },
+  {
+    "id": 180,
+    "title": "🎓 B1 blok 1 afgerond!",
+    "emoji": "🎓",
+    "level": "B1",
+    "description": "Gefeliciteerd: het eerste B1-blok is compleet!",
+    "grammar": {
+      "title": "Gefeliciteerd: B1 blok 1 compleet!",
+      "body": "Je beheerst nu het imperfecto, het indefinido, de condicional, de subjuntivo presente en de voorwaardelijke zinnen. Meer dan 1400 Spaanse woorden. ¡Enhorabuena, sigue así!"
+    },
+    "words": [
+      "e1435",
+      "e1436",
+      "e1437",
+      "e1438",
+      "e1439",
+      "e1440",
+      "e1441",
+      "e1442"
+    ]
   }
 ]

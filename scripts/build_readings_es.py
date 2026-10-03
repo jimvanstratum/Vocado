@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""build_readings_es.py — Spaanse leesteksten A1 (v1.48): één per blok, in de toetsles. Zelfde formaat als build_readings.py."""
+"""build_readings_es.py — Spaanse leesteksten A1/A2/B1 (v1.48–v1.58): één per blok, in de toetsles. Zelfde formaat als build_readings.py."""
 import json
 from pathlib import Path
 OUT = Path(__file__).parent.parent / 'www' / 'data' / 'es' / 'readings.json'
@@ -98,9 +98,57 @@ He aprendido una cosa: para entender España, hay que vivir sus tradiciones. Aho
   ('Wanneer zijn de Fallas?', ['In augustus', 'In maart', 'In december', 'In mei'], 1),
   ("Wat gebeurt er met de figuren op de laatste avond?", ['Ze worden verkocht', 'Ze worden verbrand', 'Ze gaan naar een museum', 'Ze worden weggegooid'], 1),
   ('Waar moet volgens de journalist op gelet worden?', ['Op de toeristen', 'Op afval en het milieu', 'Op de muziek', 'Op het verkeer'], 1)),
+R(130, 'B1', 'Una mudanza inesperada', """
+Hace dos años, Elena vivía en Madrid y trabajaba en una oficina del centro. Cada mañana cogía el metro a las ocho, tomaba un café en el mismo bar y llegaba al trabajo siempre puntual. Tenía una vida cómoda, pero sentía que le faltaba algo.
+Un día, su empresa le ofreció un puesto en Sevilla. Al principio dudó: no conocía a nadie allí y su familia estaba en Madrid. Sin embargo, aceptó. "Si no lo intento ahora, nunca lo haré", pensó.
+Hoy Elena vive en un piso con balcón cerca del río. Dice que fue la mejor decisión de su vida: ha hecho nuevos amigos, ha aprendido a bailar sevillanas y ya no echa de menos el metro. Solo echa de menos el bar de siempre.
+""",
+  ('Wat deed Elena elke ochtend in Madrid?', ['Ze fietste naar kantoor', 'Ze nam de metro en dronk koffie in dezelfde bar', 'Ze werkte thuis', 'Ze ging naar het zwembad'], 1),
+  ('Waarom twijfelde ze over het aanbod?', ['Het salaris was te laag', 'Ze kende niemand in Sevilla en haar familie was in Madrid', 'Ze hield niet van warmte', 'Haar baas was tegen'], 1),
+  ('Wat mist ze nog uit Madrid?', ['De metro', 'Haar kantoor', 'De bar van altijd', 'Niets'], 2)),
+R(140, 'B1', 'Si pudiera elegir', """
+El otro día mi amiga Nuria me preguntó qué haría si me tocara la lotería. Le dije que dejaría de trabajar, viajaría por Sudamérica y compraría una casa junto al mar. Ella se rio: "Te aburrirías en un mes".
+Quizá tenga razón. Me gusta mi trabajo, aunque a veces sea estresante. Lo que de verdad cambiaría sería el tiempo: trabajaría menos horas para poder leer, cocinar y ver a mis padres más a menudo.
+Nuria, en cambio, no cambiaría casi nada. Solo le gustaría que su jefe la escuchara más. Es curioso: cuando imaginamos otra vida, casi siempre deseamos cosas pequeñas. Ojalá fuera tan fácil conseguirlas sin necesidad de un premio.
+""",
+  ('Wat zou de schrijver doen met een loterijprijs?', ['Een bedrijf beginnen', 'Stoppen met werken, reizen en een huis aan zee kopen', 'Alles sparen', 'Naar Madrid verhuizen'], 1),
+  ('Wat zou de schrijver écht willen veranderen?', ['Zijn baan', 'Zijn stad', 'De tijd: minder uren werken', 'Zijn vrienden'], 2),
+  ('Wat zou Nuria graag willen?', ['Een nieuw huis', 'Dat haar baas beter naar haar luistert', 'Een lange reis', 'Meer geld'], 1)),
+R(150, 'B1', 'Teletrabajo: ¿sí o no?', """
+Desde hace un año, Javier trabaja desde casa tres días a la semana. Al principio le encantaba: no perdía tiempo en el tráfico, comía mejor y podía recoger a sus hijos del colegio. Su jefa, sin embargo, no estaba convencida de que el equipo rindiera igual.
+Con el tiempo aparecieron los problemas. Javier tenía la sensación de que nunca desconectaba: contestaba correos por la noche y las reuniones por videollamada eran interminables. Además, echaba de menos las charlas con los compañeros en la cafetería.
+Ahora la empresa ha encontrado un equilibrio: dos días en la oficina para reunirse y planificar, y el resto en casa para concentrarse. Javier cree que es lo mejor de los dos mundos, siempre que todos respeten los horarios. "El teletrabajo funciona si la confianza es mutua", dice.
+""",
+  ('Wat vond Javier aanvankelijk prettig aan thuiswerken?', ['Hij verdiende meer', 'Geen verkeer, beter eten en de kinderen ophalen', 'Hij hoefde niet te vergaderen', 'Hij kon later opstaan'], 1),
+  ('Welk probleem ontstond na verloop van tijd?', ['Slechte internetverbinding', 'Hij kon nooit loskoppelen van het werk', 'Hij werd ontslagen', 'Zijn kinderen stoorden hem'], 1),
+  ('Wat is de oplossing van het bedrijf?', ['Iedereen weer volledig naar kantoor', 'Twee dagen kantoor, de rest thuis', 'Alleen nog thuiswerken', 'Kortere werkdagen'], 1)),
+R(160, 'B1', 'La ciudad sin coches', """
+Hace unos años, el ayuntamiento de mi ciudad decidió cerrar el centro al tráfico. Muchos comerciantes protestaron: temían que los clientes dejaran de venir. Los vecinos, en cambio, estaban divididos. Algunos querían menos ruido y aire más limpio; otros pensaban que sería imposible llegar al trabajo.
+El primer año fue difícil. Faltaban aparcamientos en las afueras y el transporte público no era suficiente. Pero poco a poco la ciudad cambió: se plantaron árboles, se ampliaron las aceras y aparecieron terrazas donde antes había atascos.
+Hoy nadie quiere volver atrás. Las tiendas venden más que antes, los niños juegan en las plazas y el nivel de contaminación ha bajado mucho. Según un estudio reciente, es una de las ciudades más saludables del país. A veces, para mejorar, hay que atreverse a cambiar.
+""",
+  ('Waar waren de winkeliers bang voor?', ['Hogere belastingen', 'Dat klanten zouden wegblijven', 'Meer lawaai', 'Minder parkeerplaatsen voor henzelf'], 1),
+  ('Wat ontbrak er het eerste jaar?', ['Bomen en terrassen', 'Parkeerplaatsen en voldoende openbaar vervoer', 'Fietspaden', 'Winkels'], 1),
+  ('Hoe is de situatie nu?', ['De winkels verkopen minder', 'Niemand wil terug naar vroeger', 'De vervuiling is toegenomen', 'Het centrum is weer open voor auto\'s'], 1)),
+R(170, 'B1', 'Una entrevista con la abuela', """
+Para un trabajo de clase, entrevisté a mi abuela sobre su juventud. Me contó que había nacido en un pueblo pequeño de Extremadura y que de niña ayudaba en el campo mientras sus hermanos iban a la escuela. Me dijo que no había tenido la oportunidad de estudiar, aunque siempre le había gustado leer.
+Le pregunté si se había arrepentido de algo. Me respondió que no, porque cada época tiene sus dificultades. A los veinte años se casó y se fue a Barcelona, donde trabajó en una fábrica textil durante treinta años. "Estábamos cansadas, pero éramos jóvenes y nos reíamos mucho", recordó.
+Al final me preguntó qué quería ser yo de mayor. Le contesté que todavía no lo sabía. Ella sonrió y me dijo que eso no importaba, siempre que siguiera aprendiendo. Creo que fue la mejor entrevista que he hecho nunca.
+""",
+  ('Waar werd de oma geboren?', ['In Barcelona', 'In een klein dorp in Extremadura', 'In Madrid', 'In Sevilla'], 1),
+  ('Waarom kon zij niet studeren?', ['Ze wilde niet', 'Ze hielp op het land terwijl haar broers naar school gingen', 'Er was geen school', 'Ze was ziek'], 1),
+  ('Wat antwoordde de oma op de vraag naar spijt?', ['Dat ze veel spijt had', 'Dat ze geen spijt had, elke tijd heeft zijn moeilijkheden', 'Dat ze liever in het dorp was gebleven', 'Dat ze niet wilde antwoorden'], 1)),
+R(180, 'B1', 'Aprender un idioma es un viaje', """
+Cuando empecé a estudiar español, pensaba que sería cuestión de aprender listas de palabras. Pronto descubrí que un idioma es mucho más: es una forma de mirar el mundo. Si hubiera sabido lo largo que sería el camino, quizá me habría asustado. Pero cada paso valió la pena.
+Al principio entendía poco y hablaba con miedo. Con el tiempo aprendí a pedir en un restaurante, a contar lo que había hecho el fin de semana y a expresar lo que haría si tuviera más tiempo. Descubrí el subjuntivo, que al principio parecía imposible y ahora me parece casi natural.
+Hoy leo noticias, sigo series sin subtítulos y tengo amigos con los que solo hablo español. Todavía cometo errores, pero ya no me importan: forman parte del viaje. Si tú también has llegado hasta aquí, enhorabuena. El siguiente bloque te espera. ¡Sigue adelante!
+""",
+  ('Wat dacht de schrijver aan het begin over een taal leren?', ['Dat het een kwestie van woordenlijsten was', 'Dat het onmogelijk was', 'Dat het snel zou gaan', 'Dat het saai zou zijn'], 0),
+  ('Hoe kijkt de schrijver nu tegen de subjuntivo aan?', ['Nog steeds onmogelijk', 'Bijna natuurlijk', 'Onbelangrijk', 'Te moeilijk om te gebruiken'], 1),
+  ('Wat vindt de schrijver van fouten maken?', ['Het is beschamend', 'Ze horen bij de reis', 'Het moet vermeden worden', 'Het betekent dat je opnieuw moet beginnen'], 1)),
 ]
 for r in READINGS:
-    n = len(r['text'].split()); lo, hi = (35, 80) if r['level'] == 'A1' else (80, 140); assert lo <= n <= hi, (r['id'], n)
+    n = len(r['text'].split()); lo, hi = {'A1': (35, 80), 'A2': (80, 140), 'B1': (110, 190)}[r['level']]; assert lo <= n <= hi, (r['id'], n)
     assert all(len(q['options']) == 4 and 0 <= q['answer'] < 4 for q in r['questions'])
 OUT.write_text(json.dumps(READINGS, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(f'{len(READINGS)} Spaanse leesteksten → {OUT.name}')

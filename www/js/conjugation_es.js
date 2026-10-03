@@ -8,6 +8,8 @@ const REFL = ['me', 'te', 'se', 'nos', 'os', 'se'];
 export const ES_TENSE_LABELS = {
   presente: 'tegenwoordige tijd', passato: 'pretérito perfecto (voltooide tijd)',
   imperfetto: 'pretérito imperfecto (verleden tijd)', futuro: 'toekomende tijd',
+  indefinido: 'pretérito indefinido (verleden tijd)', condicional: 'condicional (zou-vorm)',
+  subjuntivo: 'subjuntivo presente',
 };
 
 // Onpersoonlijke of 3e-persoonsconstructies: niet als oefening
@@ -61,6 +63,93 @@ const PARTICIPLES = { hacer: 'hecho', decir: 'dicho', ver: 'visto', poner: 'pues
   devolver: 'devuelto', freír: 'frito', imprimir: 'impreso', satisfacer: 'satisfecho', describir: 'descrito',
   componer: 'compuesto', deshacer: 'deshecho', envolver: 'envuelto', absolver: 'absuelto', suponer: 'supuesto',
   proponer: 'propuesto', rehacer: 'rehecho', prever: 'previsto', inscribir: 'inscrito', suscribir: 'suscrito' };
+// ── v1.58: pretérito indefinido, condicional, subjuntivo presente ────────────
+// Sterke preterita: stam + -e, -iste, -o, -imos, -isteis, -ieron (na j: -eron)
+const STRONG_PRET = { tener: 'tuv', estar: 'estuv', andar: 'anduv', poder: 'pud', poner: 'pus', saber: 'sup', hacer: 'hic',
+  querer: 'quis', venir: 'vin', decir: 'dij', traer: 'traj', haber: 'hub', caber: 'cup', conducir: 'conduj',
+  traducir: 'traduj', producir: 'produj', mantener: 'mantuv', obtener: 'obtuv', contener: 'contuv', detener: 'detuv',
+  suponer: 'supus', componer: 'compus', proponer: 'propus', deshacer: 'deshic', satisfacer: 'satisfic', convenir: 'convin',
+  distraer: 'distraj', atraer: 'atraj' };
+const IRREG_PRET = { ser: ['fui', 'fuiste', 'fue', 'fuimos', 'fuisteis', 'fueron'], ir: ['fui', 'fuiste', 'fue', 'fuimos', 'fuisteis', 'fueron'],
+  dar: ['di', 'diste', 'dio', 'dimos', 'disteis', 'dieron'], ver: ['vi', 'viste', 'vio', 'vimos', 'visteis', 'vieron'] };
+// -ir werkwoorden met klinkerwisseling in 3e persoon indefinido (e→i, o→u) en in nosotros/vosotros subjuntivo
+const IR_STEM_PRET = { pedir: ['e', 'i'], servir: ['e', 'i'], repetir: ['e', 'i'], seguir: ['e', 'i'], vestir: ['e', 'i'],
+  conseguir: ['e', 'i'], elegir: ['e', 'i'], reír: ['e', 'i'], sonreír: ['e', 'i'], corregir: ['e', 'i'], despedir: ['e', 'i'],
+  medir: ['e', 'i'], freír: ['e', 'i'], impedir: ['e', 'i'], competir: ['e', 'i'], perseguir: ['e', 'i'], sentir: ['e', 'i'],
+  preferir: ['e', 'i'], divertir: ['e', 'i'], mentir: ['e', 'i'], convertir: ['e', 'i'], hervir: ['e', 'i'], sugerir: ['e', 'i'],
+  advertir: ['e', 'i'], referir: ['e', 'i'], dormir: ['o', 'u'], morir: ['o', 'u'] };
+const IRREG_SUBJ = { ser: ['sea', 'seas', 'sea', 'seamos', 'seáis', 'sean'], estar: ['esté', 'estés', 'esté', 'estemos', 'estéis', 'estén'],
+  ir: ['vaya', 'vayas', 'vaya', 'vayamos', 'vayáis', 'vayan'], haber: ['haya', 'hayas', 'haya', 'hayamos', 'hayáis', 'hayan'],
+  saber: ['sepa', 'sepas', 'sepa', 'sepamos', 'sepáis', 'sepan'], dar: ['dé', 'des', 'dé', 'demos', 'deis', 'den'] };
+
+function swapStem(stem, from, to) {
+  const i = stem.lastIndexOf(from);
+  return i < 0 ? stem : stem.slice(0, i) + to + stem.slice(i + from.length);
+}
+function indefinido(base, p) {
+  if (IRREG_PRET[base]) return IRREG_PRET[base][p];
+  const strong = STRONG_PRET[base];
+  if (strong) {
+    const E = ['e', 'iste', 'o', 'imos', 'isteis', strong.endsWith('j') ? 'eron' : 'ieron'];
+    if (base === 'hacer' && p === 2) return 'hizo';
+    return strong + E[p];
+  }
+  const end = endingOf(base);
+  let stem = stemOf(base);
+  if (end === 'ar') {
+    if (p === 0) {
+      if (stem.endsWith('c')) return stem.slice(0, -1) + 'qué';
+      if (stem.endsWith('g')) return stem + 'ué';
+      if (stem.endsWith('z')) return stem.slice(0, -1) + 'cé';
+    }
+    return stem + ['é', 'aste', 'ó', 'amos', 'asteis', 'aron'][p];
+  }
+  const sc = IR_STEM_PRET[base];
+  if (sc && (p === 2 || p === 5)) stem = swapStem(stem, sc[0], sc[1]);
+  // klinker + -ió/-ieron → -yó/-yeron (leyó, oyó, cayó, construyó); reír: rio/rieron
+  if ((p === 2 || p === 5) && /[aeiou]$/.test(stem) && !base.endsWith('guir')) {
+    if (base.endsWith('eír')) return stem.slice(0, -1) + (p === 2 ? 'io' : 'ieron');   // rio, rieron
+    return stem + (p === 2 ? 'yó' : 'yeron');
+  }
+  // stam op a/e/o: accent op de i (leíste, oíste, caímos)
+  const acc = /[aeo]$/.test(stem);
+  return stem + ['í', acc ? 'íste' : 'iste', 'ió', acc ? 'ímos' : 'imos', acc ? 'ísteis' : 'isteis', 'ieron'][p];
+}
+function condicional(base, p) {
+  let stem = IRREG_FUT_STEM[base];
+  if (!stem) for (const k of Object.keys(IRREG_FUT_STEM)) if (base.endsWith(k) && base !== k) { stem = base.slice(0, -k.length) + IRREG_FUT_STEM[k]; break; }
+  if (!stem) stem = base.replace(/ír$/, 'ir');
+  return stem + ['ía', 'ías', 'ía', 'íamos', 'íais', 'ían'][p];
+}
+function subjuntivo(base, p) {
+  if (IRREG_SUBJ[base]) return IRREG_SUBJ[base][p];
+  const end = endingOf(base);
+  // stam uit de yo-vorm (tengo → teng-, conozco → conozc-, construyo → construy-)
+  const yo = presente(base, 0);
+  const yoStem = yo.endsWith('oy') ? yo.slice(0, -2) : yo.slice(0, -1);
+  const irregularYo = !!(IRREG_YO[base] || IRREG_PRES[base]);
+  let stem = yoStem;
+  if (p === 3 || p === 4) {
+    if (irregularYo) {
+      stem = yoStem;                     // tengamos, hagamos, digamos, veamos, oigamos, elijamos, sigamos
+    } else {
+      // klinkerwisseling ie/ue verdwijnt in nosotros/vosotros, behalve -ir (e→i, o→u)
+      stem = stemOf(base);
+      const sc = IR_STEM_PRET[base];
+      if (sc) stem = swapStem(stem, sc[0], sc[1]);                                  // durmamos, pidamos, sintamos
+      if (/[aeiou]c[ei]r$/.test(base)) stem = stemOf(base).slice(0, -1) + 'zc';      // conozcamos
+      if (base.endsWith('uir') && !base.endsWith('guir')) stem = stemOf(base) + 'y'; // construyamos
+    }
+  }
+  if (end === 'ar') {
+    if (stem.endsWith('c')) stem = stem.slice(0, -1) + 'qu';
+    else if (stem.endsWith('g')) stem += 'u';
+    else if (stem.endsWith('z')) stem = stem.slice(0, -1) + 'c';
+    return stem + ['e', 'es', 'e', 'emos', 'éis', 'en'][p];
+  }
+  return stem + ['a', 'as', 'a', 'amos', 'áis', 'an'][p];
+}
+
 const PART_FAMILIES = [['poner', 'puesto'], ['hacer', 'hecho'], ['decir', 'dicho'], ['scribir', 'scrito'], ['volver', 'vuelto'],
   ['cubrir', 'cubierto'], ['solver', 'suelto'], ['abrir', 'abierto']];
 const HABER = ['he', 'has', 'ha', 'hemos', 'habéis', 'han'];
@@ -124,14 +213,25 @@ function perfecto(inf, p) {
   return `${HABER[p]} ${esParticiple(inf)}`;
 }
 
-export function esCanUseTense(inf, tense) { return esIsConjugatable(inf); }
+export function esCanUseTense(inf, tense) { return esIsConjugatable(inf) && (tense in ES_TENSE_LABELS); }
+
+/** Tijdkeuze per niveau (volgorde van het Spaanse curriculum). */
+export function esPickTense(word) {
+  const r = Math.random(), L = word.level, n = word.lesson;
+  const pick = (opts) => { let acc = 0; for (const [t, w] of opts) { acc += w; if (r < acc) return t; } return 'presente'; };
+  if (L === 'A1') return 'presente';
+  if (L === 'A2') return pick([['presente', 0.4], ['passato', n >= 62 ? 0.2 : 0], ['imperfetto', n >= 63 ? 0.15 : 0],
+                               ['futuro', n >= 64 ? 0.15 : 0], ['indefinido', n >= 91 ? 0.1 : 0]]);
+  return pick([['presente', 0.2], ['passato', 0.15], ['imperfetto', 0.15], ['indefinido', 0.15], ['futuro', 0.1],
+               ['condicional', n >= 131 ? 0.1 : 0], ['subjuntivo', n >= 141 ? 0.15 : 0]]);
+}
 
 /** Geaccepteerde antwoorden voor persoon p (eerste = canoniek). */
 export function esConjugateAccepted(inf, p, tense = 'presente') {
   const { base, refl } = split(inf);
   const pre = refl ? REFL[p] + ' ' : '';
   if (tense === 'passato') return [pre + perfecto(base, p)];
-  const fn = tense === 'imperfetto' ? imperfecto : tense === 'futuro' ? futuro : presente;
+  const fn = { imperfetto: imperfecto, futuro, indefinido, condicional, subjuntivo }[tense] || presente;
   return [pre + fn(base, p)];
 }
 export function esConjugate(inf, p, tense = 'presente') { return esConjugateAccepted(inf, p, tense)[0]; }

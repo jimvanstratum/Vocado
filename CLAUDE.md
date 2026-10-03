@@ -30,10 +30,10 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 | `www/index.html` | HTML-structuur + alle CSS + versiestring + cache buster |
 | `www/js/app.js` | App-logica: navigatie, lesweergave, SRS, statistieken, plaatsingstoets, taalkeuze |
 | `www/js/lang.js` | Taalconfiguratie `LANGS` (naam, vlag, TTS-code, lidwoorden, opslagsleutels) + actieve taal |
-| `www/js/conjugation_es.js` | Spaanse vervoegingsmotor (presente, perfecto, imperfecto, futuro) |
+| `www/js/conjugation_es.js` | Spaanse vervoegingsmotor (presente, perfecto, imperfecto, futuro, indefinido, condicional, subjuntivo presente); `esPickTense(word)` kiest de tijd per niveau/les |
 | `www/js/exercises.js` | Alle oefentypes (rendering + interactie) |
 | `www/data/it/curriculum.json` | Array van les-objecten (Italiaans) |
-| `www/data/es/…` | Spaanse data: A1 (les 1–60, 482 woorden) + A2 (les 61–120, 480 woorden), IDs `e001`…, 12 leesteksten — gegenereerd door `scripts/generate_es_a1.py`, `generate_es_a2.py` en `build_readings_es.py` |
+| `www/data/es/…` | Spaanse data: A1 (les 1–60, 482 woorden) + A2 (les 61–120, 480 woorden) + B1 blok 1 (les 121–180, 480 woorden), IDs `e001`–`e999`+, 18 leesteksten — gegenereerd door `scripts/generate_es_a1.py`, `generate_es_a2.py`, `generate_es_b1.py` en `build_readings_es.py` |
 | `www/data/it/vocabulary.json` | Array van woord-objecten (Italiaans) |
 | `www/data/changelog.json` | Gebruikersgerichte wijzigingen per versie, nieuwste eerst; `build.py` faalt als de bovenste versie niet gelijk is aan de versiestring |
 | `www/data/it/readings.json` | 30 leesteksten (één per blok van 10 lessen), gegenereerd door `scripts/build_readings.py` |
@@ -52,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.57**, cache buster **?v=51**
+- Huidige versie: **v1.58**, cache buster **?v=52**
 
 ### Build & deploy
 
@@ -109,7 +109,7 @@ Array van woord-objecten:
 - Het veld `it` in vocabulary.json bevat het doeltaalwoord, ook voor Spaans (veldnaam is historisch)
 - Alle UI-teksten halen taalnaam/vlag uit `getLang()`; nooit meer 'Italiaans' hardcoden
 - Taal wisselen = `switchLang(code)` in app.js: `setActiveLangCode()`, `loadData()`, `initAudio()`, `applyLangUI()`, `navigate()` — zonder herlaad (v1.52)
-- Vervoegen: `conjEngine()` in exercises.js kiest de Italiaanse of Spaanse motor; tijd-sleutels zijn gedeeld (`presente`, `passato`, `imperfetto`, `futuro`)
+- Vervoegen: `conjEngine()` in exercises.js kiest de Italiaanse of Spaanse motor; tijd-sleutels zijn gedeeld (`presente`, `passato`, `imperfetto`, `futuro`); Spaans heeft extra `indefinido`, `condicional`, `subjuntivo` en een eigen tijdkeuze (`E.pick` → `esPickTense`)
 - Spaans A1 spiegelt de Italiaanse A1-thema's (les 1–60), zodat plaatsingstoets en toetslessen zonder aanpassing werken
 - Toetsles-punten en niveaubereiken worden uit het actieve curriculum afgeleid (`activeMilestonePoints()`, `levelRange()`)
 
@@ -127,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.57)
+## Huidige staat (v1.58)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -254,6 +254,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.58 | Sprint 13: Spaans B1 blok 1 — 60 lessen (121–180), 480 woorden, 6 leesteksten; Spaanse motor uitgebreid met indefinido, condicional en subjuntivo presente (`esPickTense`) |
 | v1.57 | Sprint 12: Spaans A2 — 60 lessen (61–120), 480 woorden, 6 leesteksten; pretérito indefinido in les 91. SW-voorcache met `cache: 'reload'` (geen verouderde data na release) |
 | v1.56 | Manifest: `id`/`start_url`/`scope` relatief (`./`) i.p.v. `/` — de site staat onder `/Vocado/`, `/` gaf een GitHub-404; herstellink via `new URL('./', location.href)` |
 | v1.55 | Statusbalk op `default` (iOS 18 knipte 59 punten onderaan af bij translucent); theme-color per kleurenschema |
@@ -338,7 +339,7 @@ Tot B2 = circa **600–800 uur** totale studie.
 
 | Prioriteit | Sprint | Toelichting |
 |---|---|---|
-| Hoog | **Spaans B1** | A1 en A2 zijn af (v1.48/v1.57). B1 (les 121–300) volgt in blokken van 60 lessen, zelfde aanpak: generatiescript, leesteksten per toetsles; Spaanse motor uitbreiden met subjuntivo |
+| Hoog | **Spaans B1 blok 2 en 3** | Blok 1 (les 121–180) is af (v1.58). Nog te doen: les 181–240 en 241–300 (2 × 480 woorden, 2 × 6 leesteksten), zelfde aanpak als `scripts/generate_es_b1.py` (B1-entries per blok vervangen: filter dan op les-bereik i.p.v. op level). Motor: imperfecto de subjuntivo en pluscuamperfecto zijn kandidaten |
 | Middel | **Meer leesteksten** | Nu 1 per blok (30). Optie: 1 per les of dialogen met TTS per spreker |
 | Laag | **Vervoegen uitbreiden** | Condizionale en congiuntivo presente ontbreken nog in de motor (passato prossimo sinds v1.46) |
 
