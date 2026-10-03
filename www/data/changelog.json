@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.61",
+    "date": "2026-10-03",
+    "title": "Onderkant weer in beeld op iPhone",
+    "items": [
+      "De menubalk viel op iPhone onderaan buiten beeld doordat de app een eerder gemeten, te grote schermhoogte bleef gebruiken. De app volgt nu altijd de actuele hoogte.",
+      "De menubalk houdt iets meer afstand tot de home-indicator."
+    ]
+  },
+  {
     "version": "1.60",
     "date": "2026-10-03",
     "title": "Spaans B1 compleet",

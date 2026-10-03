@@ -133,6 +133,8 @@
       padding-bottom: max(var(--sab, 0px), env(safe-area-inset-bottom, 0px)); }
     /* Geïnstalleerde app: minimaal wat ruimte boven de thuisbalk, ook als iOS geen onderrand meldt */
     html.standalone #shared-nav { padding-bottom: max(var(--sab, 0px), env(safe-area-inset-bottom, 0px), 14px); }
+    /* v1.61: iOS meldt in de geïnstalleerde app safe-area-inset-bottom = 0 terwijl de home-indicator wél in beeld is */
+    html.ios-standalone #shared-nav { padding-bottom: max(var(--sab, 0px), env(safe-area-inset-bottom, 0px), 30px); }
     body.show-nav #shared-nav { display: flex; }
     .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 10px 0 6px; cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 600; gap: 4px; transition: color 0.15s; position: relative; user-select: none; background: none; border: none; }
     .nav-btn.active { color: var(--accent); }
@@ -1119,7 +1121,7 @@
     </div>
 
     <p class="settings-footnote">Niveaus zijn gebaseerd op CEFR-richtlijnen, niet gecertificeerd.</p>
-    <div class="settings-version">Vocado · v1.60 <span id="version-detail"></span></div>
+    <div class="settings-version">Vocado · v1.61 <span id="version-detail"></span></div>
   </div>
 </div>
 
@@ -1235,28 +1237,27 @@
   (function () {
     var standalone = (window.navigator.standalone === true) ||
       (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
-    /* v1.54: hoogte = maximum van alle metingen. In de geïnstalleerde app onthouden we bovendien de
-       grootste hoogte die iOS ooit voor dit scherm heeft gemeld (per oriëntatie): na een herlaad meldt
-       iOS soms een te kleine viewport (fantoom-werkbalk), maar nooit een te grote. De schermhoogte zelf
-       is géén goede ondergrens: de pagina begint onder de statusbalk (v1.52/1.53 sneden zo de labels af). */
+    /* v1.61: hoogte = maximum van de live metingen, en niets anders. De v1.54-aanpak (grootste ooit
+       gemelde hoogte per scherm onthouden) ging stuk: iOS meldde één keer 852 (volledig scherm) en daarna
+       structureel 793 (scherm minus statusbalk) — de onderste 59 punten vielen zo permanent buiten beeld.
+       De metingen worden bij elke resize/pageshow/visibilitychange herhaald, dus een tijdelijk te kleine
+       waarde na een herlaad herstelt zichzelf. Oude opgeslagen waarden worden opgeruimd. */
     function setH() {
       var h = Math.max(
         (window.visualViewport && window.visualViewport.height) || 0,
         window.innerHeight || 0,
         (document.documentElement && document.documentElement.clientHeight) || 0);
-      if (standalone && window.screen) {
-        var portrait = !window.matchMedia || window.matchMedia('(orientation: portrait)').matches;
-        var key = 'vocado_vh_' + screen.width + 'x' + screen.height + (portrait ? 'p' : 'l');
-        var stored = 0;
-        try { stored = parseInt(localStorage.getItem(key), 10) || 0; } catch (e) {}
-        var cap = Math.max(screen.width, screen.height);
-        if (h > stored && h <= cap) { stored = h; try { localStorage.setItem(key, String(h)); } catch (e) {} }
-        if (stored > h) h = stored;
-      }
       if (h > 0) document.documentElement.style.setProperty('--app-height', h + 'px');
       window._vocadoH = h;
     }
+    try {
+      for (var i = localStorage.length - 1; i >= 0; i--) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf('vocado_vh_') === 0) localStorage.removeItem(k);
+      }
+    } catch (e) {}
     if (standalone) document.documentElement.classList.add('standalone');
+    if (window.navigator.standalone === true) document.documentElement.classList.add('ios-standalone');
     setH();
     requestAnimationFrame(setH);
     setTimeout(setH, 300);
@@ -1293,7 +1294,7 @@
 </script>
 
 <script type="module">
-  import './js/app.js?v=54';
+  import './js/app.js?v=55';
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loading').classList.add('hidden'), 600);
     if ('serviceWorker' in navigator) {

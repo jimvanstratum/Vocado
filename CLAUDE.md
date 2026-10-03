@@ -52,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.60**, cache buster **?v=54**
+- Huidige versie: **v1.61**, cache buster **?v=55**
 
 ### Build & deploy
 
@@ -127,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.60)
+## Huidige staat (v1.61)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -227,7 +227,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 - **iOS PWA install prompt**: instructie-overlay voor "Zet op beginscherm"
 - **Automatisch bijwerken** (v1.51/v1.53): index.html luistert op `controllerchange` (alleen als er al een controller was) en herlaadt direct; in les/herhaling/toets uitgesteld via `window._vocadoUpdatePending` (banner met 'Nu bijwerken', `navigate()` past toe bij verlaten). Update-check: 5 s na start, bij `visibilitychange` en elk half uur
 - **iOS statusbalk** (v1.55): `apple-mobile-web-app-status-bar-style` staat op `default`, niet `black-translucent`. Met translucent gaf iOS 18.7 (iPhone 16) de geïnstalleerde app een viewport van 852−59=793 punten, getekend vanaf de bovenrand: 59 dode punten onderaan en `safe-area-inset-bottom` = 0. Gemeten via de schermdiagnose. `theme-color` (light/dark) kleurt de statusbalk als de koptekst
-- **iOS viewport** (v1.54): `#app` is `position:fixed; top:0; height: var(--app-height)`, menubalk is flex-kind onderaan. `--app-height` = max(visualViewport, innerHeight, clientHeight); in standalone-modus bovendien de grootste ooit gemelde hoogte per scherm/oriëntatie (`localStorage vocado_vh_<w>x<h>p|l`), omdat iOS na een herlaad soms te klein meldt maar nooit te groot. Niet `screen.height` gebruiken: de pagina begint onder de statusbalk, dus dat is ~47 px te veel (v1.52/1.53 sneden zo de menulabels af). `position:fixed; bottom:0` volgt de foute meting (v1.50). Diagnose: Instellingen › Over Vocado › Schermdiagnose
+- **iOS viewport** (v1.61): `#app` is `position:fixed; top:0; height: var(--app-height)`, menubalk is flex-kind onderaan. `--app-height` = max(visualViewport, innerHeight, clientHeight), live, opnieuw gemeten bij resize/pageshow/visibilitychange. **Nooit een gemeten hoogte opslaan of `screen.height` gebruiken**: v1.52/1.53 (schermhoogte) en v1.54–1.60 (grootste ooit gemelde hoogte in `localStorage vocado_vh_*`) sneden de onderkant af, want op de iPhone 16 met iOS 18.7 is de zichtbare pagina 793 van 852 punten (onder de statusbalk) en meldde iOS slechts eenmalig 852. Oude `vocado_vh_*`-sleutels worden bij start verwijderd. `position:fixed; bottom:0` volgt de foute meting (v1.50). In de iOS-app (`html.ios-standalone`, `navigator.standalone === true`) krijgt de menubalk minimaal 30 px onderpadding omdat `safe-area-inset-bottom` daar 0 meet terwijl de home-indicator in beeld is. Diagnose: Instellingen › Over Vocado › Schermdiagnose
 - **Wat is er nieuw?** (v1.47): modal met `changelog.json`, te openen via Instellingen › Over Vocado of door op de versieregel te tikken. De homescherm-kaart is in v1.48 op verzoek verwijderd
 - **"Mijn positie"-knop**: springt naar eerste actieve les, met offset van één kaardhoogte
 
@@ -254,6 +254,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.61 | iPhone: onderkant viel buiten beeld — opgeslagen maximumhoogte (v1.54) verwijderd, hoogte volgt live meting; 30 px nav-padding in iOS-app |
 | v1.60 | Sprint 15: Spaans B1 blok 3 — 60 lessen (241–300), 480 woorden, 6 leesteksten; Spaans compleet (300 lessen, 2402 woorden) |
 | v1.59 | Sprint 14: Spaans B1 blok 2 — 60 lessen (181–240), 480 woorden, 6 leesteksten; motor + pluscuamperfecto en imperfecto de subjuntivo |
 | v1.58 | Sprint 13: Spaans B1 blok 1 — 60 lessen (121–180), 480 woorden, 6 leesteksten; Spaanse motor uitgebreid met indefinido, condicional en subjuntivo presente (`esPickTense`) |
