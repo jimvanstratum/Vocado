@@ -2,7 +2,7 @@
  * Progress — beheer van voortgang, XP, streak en voltooide lessen.
  */
 
-import { getLang } from './lang.js?v=1';
+import { getLang } from './lang.js?v=2';
 
 /** Opslagsleutel van de actieve taal (v1.48: voortgang per taal). */
 function PROG_KEY_() { return getLang().keys.progress; }

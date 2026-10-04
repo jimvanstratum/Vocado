@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.62",
+    "date": "2026-10-04",
+    "title": "Geluid op Android hersteld",
+    "items": [
+      "Op Android (Chrome en Samsung Internet) bleef de uitspraak soms stil of werd een afgebroken zin herhaald. De spraakmodule is herschreven en wacht nu kort tussen stoppen en opnieuw spreken.",
+      "De ingestelde spreeksnelheid en de gekozen stem werden op de website-versie niet doorgegeven aan de oefeningen. Dat is hersteld.",
+      "Heeft je toestel geen stem voor de gekozen taal, dan krijg je daar nu één keer een melding over."
+    ]
+  },
+  {
     "version": "1.61",
     "date": "2026-10-03",
     "title": "Onderkant weer in beeld op iPhone",

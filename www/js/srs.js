@@ -4,7 +4,7 @@
  * Quality: 0=totaal fout, 1=fout maar herkend, 2=fout maar makkelijk, 3=goed met moeite, 4=goed, 5=perfect
  */
 
-import { getLang } from './lang.js?v=1';
+import { getLang } from './lang.js?v=2';
 
 /** Opslagsleutel van de actieve taal (v1.48: SRS per taal). */
 function SRS_KEY_() { return getLang().keys.srs; }

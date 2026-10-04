@@ -1,4 +1,4 @@
-import { getLang } from './lang.js?v=1';
+import { getLang } from './lang.js?v=2';
 /**
  * Settings — gebruikersinstellingen opslaan en ophalen.
  * Sprint 10: thema (auto/licht/donker), dagdoel in minuten.

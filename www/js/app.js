@@ -3,12 +3,12 @@
  * Sprint 10: segment-locking, thema, XP-migratie, vorige-knop fix.
  */
 
-import { initAudio, setTTSRate, stopSpeech } from './audio.js?v=17';
-import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow, migrateWordIds } from './srs.js?v=19';
+import { initAudio, setTTSRate, stopSpeech } from './audio.js?v=18';
+import { isWordSeen, isWordLearned, getDueWordIds, getLearnedPercent, isWordDue, snoozeWordUntilTomorrow, migrateWordIds } from './srs.js?v=20';
 import { ID_MAP } from './idmap.js?v=1';
-import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson, migratePartialLessonsV144 } from './progress.js?v=18';
-import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderConjugation, renderReading, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=25';
-import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=17';
+import { getProgress, addXP, completeLesson, isLessonCompleted, isLessonSkipped, skipLesson, getSkippedCount, getStreak, updateStreak, getAccuracy, getAchievements, checkAchievements, resetProgress, addTodayXP, getTodayXP, passMilestone, isMilestonePassed, skipMilestone, isMilestoneSkipped, unpassMilestone, migrateOldSkipped, cleanupSkippedCompleted, migrateXPToV10, migrateToV14, savePartialLesson, getPartialLesson, clearPartialLesson, migratePartialLessonsV144 } from './progress.js?v=19';
+import { buildExerciseQueue, renderLessonIntro, renderFlashcard, renderMultipleChoice, renderListenChoose, renderListenType, renderTypeExercise, renderWordOrder, renderSentenceChoice, renderFillBlankMC, renderFillBlankType, renderMatching, renderFindError, renderSentenceDictation, renderCategorySort, renderConjugation, renderReading, renderGrammarCard, cancelAdvanceTimer } from './exercises.js?v=26';
+import { getSettings, saveSettings, isPlacementDone, markPlacementDone, migrateSettingsV10 } from './settings.js?v=18';
 import { LANGS, getLang, setActiveLangCode, hasChosenLang } from './lang.js?v=2';
 
 // ─── PWA INSTALL ──────────────────────────────────────────────────────────────
@@ -1469,6 +1469,12 @@ export function showToast(msg) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
 }
+
+// v1.62: het toestel heeft geen stem voor de actieve taal (Android zonder taalpakket)
+window.addEventListener('vocado-tts-unavailable', e => {
+  const name = e.detail?.name || 'deze taal';
+  showToast(`Geen ${name.replace(/s$/, 'se')} stem op dit toestel — installeer die via Instellingen › Tekst-naar-spraak`);
+});
 
 // ─── TAALKEUZE (v1.48) ────────────────────────────────────────────────────────
 let _loadedLang = null;

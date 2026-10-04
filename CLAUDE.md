@@ -52,7 +52,7 @@ De doelgroep is Nederlandssprekend. Alle UI-tekst is in het Nederlands.
 
 - Versiestring in `www/index.html`: `Vocado · v1.XX · Italiaans · N lessen · M woorden`
 - Cache buster: `import './js/app.js?v=N';` — verhoog N bij elke release
-- Huidige versie: **v1.61**, cache buster **?v=55**
+- Huidige versie: **v1.62**, cache buster **?v=56**
 
 ### Build & deploy
 
@@ -127,7 +127,7 @@ Array van woord-objecten:
 
 ---
 
-## Huidige staat (v1.61)
+## Huidige staat (v1.62)
 
 ### Inhoud
 - **300 lessen**: A1 = lessen 1–60, A2 = lessen 61–120, B1 = lessen 121–300
@@ -220,7 +220,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
   - De review is automatisch gevuld met foute/moeilijke woorden — geen extra logica nodig
   - `sessionErrors[]` = foute woorden deze sessie (max 10, uniek op `it`-veld)
 - **Directe herhaalronde** (`startErrorRetry`): knop "🔁 Oefen foute woorden (N)" op afsluitscherm van les én review, zichtbaar als `sessionErrors.length > 0`. Start mini-sessie via `buildExerciseQueue([], errorWords, VOCAB)` met `isReviewMode = true`. Recursief: nieuwe fouten → knop verschijnt opnieuw.
-- **TTS**: Web Speech API, Italiaanse stem, accenten genormaliseerd (é → e)
+- **TTS** (audio.js, v1.62): Web Speech API, stem per taal (`getLang().tts`), lazy gezocht omdat stemmen asynchroon laden; `es_ES`-notatie met underscore wordt genormaliseerd. Android-eigenaardigheden: `speak()` direct na `cancel()` wordt soms genegeerd (→ 80 ms pauze), `cancel()` vuurt `onerror` met `interrupted`/`canceled` (→ nooit herhalen, anders eindeloze loop), utterance-referentie vasthouden tegen GC. Ontbrekende taal → event `vocado-tts-unavailable` → toast in app.js
 - **Milestone-quiz**: elke 10 lessen, leestekst van het blok + 20 willekeurige woorden uit de voorgaande lessen
 - **Les overslaan**: gebruiker kan lessen markeren als overgeslagen
 - **Opnieuw doen**: les herhalen met `forceAll=true`
@@ -254,6 +254,7 @@ Controleer deze lijst vóór je een feature voorstelt — stel niets voor dat er
 | v1.42b | Fix: buildCategoryGroups geëxporteerd voor category-sort |
 | v1.42c | Fix terug-knop: meta-kaarten in history opgeslagen zodat de lock altijd werkt |
 | v1.43 | Sprint 7: 60 extra B1-woorden (B1 = 1500, CEFR-doel gehaald) + CLAUDE.md bijgewerkt |
+| v1.62 | Android-geluid: audio.js herschreven (cancel/speak-race, geen retry na interrupted, lazy stemkeuze, melding bij ontbrekende taal); module-imports gelijkgetrokken (één instantie per module); SW `ignoreSearch` |
 | v1.61 | iPhone: onderkant viel buiten beeld — opgeslagen maximumhoogte (v1.54) verwijderd, hoogte volgt live meting; 30 px nav-padding in iOS-app |
 | v1.60 | Sprint 15: Spaans B1 blok 3 — 60 lessen (241–300), 480 woorden, 6 leesteksten; Spaans compleet (300 lessen, 2402 woorden) |
 | v1.59 | Sprint 14: Spaans B1 blok 2 — 60 lessen (181–240), 480 woorden, 6 leesteksten; motor + pluscuamperfecto en imperfecto de subjuntivo |
@@ -359,3 +360,4 @@ Tot B2 = circa **600–800 uur** totale studie.
 6. **Grammar-niveau**: A1 = herkenning, nooit productie van congiuntivo/passief/stare+gerundio
 7. **Commit-formaat**: `vX.XX — Korte beschrijving van wat er veranderd is`
 8. **Changelog**: voeg bij elke release bovenaan `www/data/changelog.json` een entry toe in gebruikerstaal (geen technische termen); de build controleert dat de versie overeenkomt
+9. **Module-imports**: elke module moet overal met **hetzelfde** `?v=N` worden geïmporteerd (app.js, exercises.js, srs.js, …). Verschillende versienummers geven twee module-instanties met eigen state — zo bereikten de stemkeuze en de TTS-snelheid de oefeningen nooit (ontdekt in v1.62). Bij een wijziging: het nummer in álle importerende bestanden ophogen. De productie-build bundelt alles en heeft hier geen last van, GitHub Pages serveert losse modules wél

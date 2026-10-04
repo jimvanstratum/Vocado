@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocado-20261003-2113';
+const CACHE_NAME = 'vocado-20261004-1945';
 const ASSETS = [
   './',
   './index.html',
@@ -49,7 +49,8 @@ self.addEventListener('fetch', e => {
   // Alleen GET-requests cachen
   if (e.request.method !== 'GET') return;
   e.respondWith(
-    caches.match(e.request).then(cached => {
+    // ignoreSearch: module-imports dragen een ?v=N cache buster; de voorcache kent de kale paden
+    caches.match(e.request, { ignoreSearch: true }).then(cached => {
       if (cached) return cached;
       return fetch(e.request).then(response => {
         // Sla succesvolle responses op in cache
